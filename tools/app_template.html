@@ -178,6 +178,14 @@ ul.clean.danger li::before{background:var(--danger)}
 .spgroup{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px;font-family:var(--ui);font-weight:700;color:var(--gild-hi);font-size:1.02rem}
 .spgroup:first-child{margin-top:0}
 .spgroup small{font-weight:400;color:var(--mute);font-family:var(--body);font-size:.88rem}
+.skbox{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:12px 14px;margin-bottom:16px;border-color:#4a6a7a;background:linear-gradient(90deg,rgba(143,208,255,.08),transparent)}
+.skbox .big{font-family:var(--display);font-weight:900;font-size:2rem;color:#cfe9ff;line-height:1;text-align:center;min-width:64px}
+.skbox .big small{display:block;font-family:var(--ui);font-size:.7rem;font-weight:700;color:var(--mute);letter-spacing:.06em;margin-top:4px}
+.skbox .types{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
+.skbox .types span{padding:2px 8px;border:1px solid #4a6a7a;font-family:var(--ui);font-size:.82rem;color:#cfe9ff}
+.skbox p{margin:0;color:var(--text);font-size:.93rem}
+.sb-skel{display:flex;gap:8px;align-items:baseline;font-family:var(--ui);font-size:.86rem;color:var(--mute)}
+.sb-skel b{color:#cfe9ff;font-size:1rem}
 .spnote{padding:12px 14px;margin-bottom:16px;border-color:#8a6a38;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(200,165,106,.1),transparent)}
 .spnote b{font-family:var(--display);color:var(--gild-hi);font-size:1rem}
 .spnote p{margin:0;color:var(--text)}
@@ -679,16 +687,20 @@ function itemCard(it) {
     ${it.note || it.price != null ? `<div class="runes" style="color:var(--gild-hi)">${it.note ? esc(it.note) : ""}${it.price != null ? `${it.note ? " · " : ""}${fmtPrice(it.price)}` : ""}</div>` : ""}
   </article>`;
 }
+function skelBox(p) {
+  const s = p.skeletons; if (!s) return "";
+  return `<div class="skbox frame"><div class="big">${esc(s.n)}<small>ESQUELETOS</small></div><div>${s.types.length ? `<div class="types">${s.types.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}<p>${esc(s.note)}</p></div></div>`;
+}
 function gemGrid(p, useLv, detailed) {
   const early = p.gems.filter(g => g.until), main = p.gems.filter(g => !g.until);
   const hideEarly = useLv && early.length && S.lv >= early[0].until;
   const df = gemDiff(p); const cards = list => `<div class="gems stagger">${list.map(g => gemCard(g, df, detailed)).join("")}</div>`;
-  let mainHtml = cards(main);
+  let mainHtml = skelBox(p) + cards(main);
   if (main.some(g => g.sp)) {
     const core = main.filter(g => g.sp === "core").sort((a, b) => a.pr - b.pr), rest = main.filter(g => !g.sp);
     const free = main.filter(g => g.sp === "free"), opt = main.filter(g => g.sp === "opt").sort((a, b) => a.pr - b.pr);
     const res = [...core, ...rest];
-    mainHtml = `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
+    mainHtml = skelBox(p) + `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
       (res.length ? `<div class="spgroup">1 · Reservam Spirit <small>${core.length ? "ative nesta ordem; se o Spirit ficar negativo, desligue o último" : "companions e auras"}</small></div>${cards(res)}` : "") +
       (free.length ? `<div class="spgroup">2 · Não reservam Spirit <small>use sempre</small></div>${cards(free)}` : "") +
       (opt.length ? `<div class="spgroup">3 · Só se sobrar Spirit <small>entram depois, quando você ganhar mais Spirit</small></div>${cards(opt)}` : "");
@@ -743,6 +755,7 @@ function renderSide() {
         <div class="row"><span>Nv ${S.lv} · ${S.mode === "cheap" ? "modo barato" : "modo completo"}</span><span>${prog}% da fase</span></div>
         <div class="ph">${esc(p.name)} <small class="label">· ${esc(p.tag)}</small></div>
         <div class="sb-prog"><i style="width:${prog}%"></i></div>
+        ${p.skeletons ? `<div class="sb-skel" data-gotab="skills" title="${esc(p.skeletons.note)}">Esqueletos: <b>${esc(p.skeletons.n)}</b> ${esc(p.skeletons.types.join(" · ").slice(0, 60))}</div>` : ""}
         <div class="sb-carry">${carryGem && gemImg(carryGem.skill) ? `<img src="${gemImg(carryGem.skill)}" alt="">` : "<span></span>"}<div><b>${esc(p.carry)}</b><small>${next ? `Próxima fase: ${esc(next.name)} (Nv ${next.lv[0]})` : "Fase final"}</small></div></div>
       </div>
       ${sideSec("steps", "Próximos passos", nextMs.length, nextMs.map(m => { const k = "ms:" + m.lv; return `<label class="sb-step ${S.done[k] ? "done" : ""}"><input type="checkbox" data-key="${k}" ${S.done[k] ? "checked" : ""}><span><b>Nv ${m.lv}</b> · ${esc(m.t)}</span></label>`; }).join("") || '<span class="label">Você chegou ao topo.</span>')}

@@ -200,4 +200,6 @@ UI = [
 ('${lvBased ? ` (nível ${S.lv})` : ""}', '${lvBased ? ` (level ${S.lv})` : ""}'),
 (">da próxima fase<", ">from next phase<"),
 
+("<small>ESQUELETOS</small>", "<small>SKELETONS</small>"),
+('title="${esc(p.skeletons.note)}">Esqueletos: <b>', 'title="${esc(p.skeletons.note)}">Skeletons: <b>'),
 ]

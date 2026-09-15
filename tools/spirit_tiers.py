@@ -109,6 +109,21 @@ def apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS):
             elif base.startswith("Wild Protector"):
                 tag(g, "free", 0, "Ascendência")
 
+
+    # ---------------------------------------------------------------- quantos esqueletos usar
+    SK = {
+     "a1": ("0", [], "Ainda sem minions: Twister faz o dano."),
+     "a2": ("0", [], "Ainda sem esqueletos. Só o urso da ascendência (Wild Protector)."),
+     "a3": ("1", ["Skeletal Warrior"], "Só 1 esqueleto vivo: ele existe para o Pain Offering espetar. Mais esqueletos não aumentam o dano do macaco nesta fase e tiram Spirit do 2º beast."),
+     "a4": ("1", ["Skeletal Warrior OU Skeletal Arsonist"], "Continua 1 só. Com ~210 Spirit não cabe o segundo junto com Silverfist + aura + Withering Presence. Se você já usa o Arsonist, deixe o Warrior desligado."),
+     "int": ("2 → até 5", ["Skeletal Warrior", "+ Skeletal Arsonist", "+ Skeletal Sniper", "+ Skeletal Frost Mage", "+ Skeletal Reaver"], "Comece com 2 (Warrior + Arsonist) depois do Lythara: libera o Danse Macabre. Depois adicione 1 de cada tipo, um por vez, enquanto couber no Spirit. O Muster conta TIPOS: 1 de cada tipo basta, repetir o mesmo tipo não dá mais dano."),
+     "ea": ("2 → até 4", ["Skeletal Warrior", "Skeletal Cleric", "+ Skeletal Sniper (se couber)", "+ Skeletal Reaver (se couber)"], "Warrior e Cleric são obrigatórios (alvo do Pain Offering + cura/revive). Sniper e Reaver só se sobrar Spirit, 1 de cada."),
+     "t15": ("1", ["Skeletal Cleric"], "O Rattling Sceptre sai para o Effigy, então sai o Warrior. Fica só o Cleric como alvo do Pain Offering (Sacrificial Lamb II + Tecrod's Revenge)."),
+     "mm": ("1", ["Skeletal Cleric"], "Igual ao T15: só o Cleric. O resto do Spirit vai para companions."),
+    }
+    for pid, (n, types, note) in SK.items():
+        PH[pid]["skeletons"] = {"n": n, "types": types, "note": note}
+
     # ---------------------------------------------------------------- textos que dependiam de 2 esqueletos
     MILESTONES[35] = "TROCA: tire Twister/Whirling. Entram 1 Skeletal Warrior (alvo do Pain Offering) + Pain Offering + Unearth."
     MILESTONES[40] = "Azak Bog: Ignagduk (+30 Spirit). Agora cabe o 2º beast (aura)."
