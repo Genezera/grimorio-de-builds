@@ -16,7 +16,7 @@ UI = [
 ("Barato<small>começar com pouco no trade</small>", "Budget<small>start cheap on trade</small>"),
 ("Completo<small>build como deve ser</small>", "Full<small>the build as intended</small>"),
 ('aria-label="Seu build agora"', 'aria-label="Your build now"'),
-('aria-label="Idioma"', 'aria-label="Language"'),
+
 ('trickCat: "Todos"', 'trickCat: "All"'),
 ('[["agora","Agora"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]]',
  '[["agora","Now"],["meta","Meta & Optimizations"],["uniques","Uniques"],["arvore","Passive Tree"],["rota","Route 1→100"],["skills","Skills & Supports"],["gear","Items"],["zoo","Zoo & Spirit"],["asc","Ascendancy"],["quests","Quests"],["tricks","Pro Tricks"],["atlas","Atlas"],["diag","Troubleshooting"],["fontes","Sources"]]'),
