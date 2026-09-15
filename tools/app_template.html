@@ -169,6 +169,31 @@ ul.clean.danger li::before{background:var(--danger)}
 .gem .name{font-family:var(--ui);font-weight:700;font-size:1.1rem;color:var(--gem);line-height:1.15}
 .gem.carry .name{color:#9FE7E1}
 .gem .role{font-size:.9rem;color:var(--mute)}
+.spc{display:inline-block;margin-top:5px;padding:2px 8px;font-family:var(--ui);font-size:.76rem;font-weight:700;border:1px solid var(--edge2);color:var(--mute)}
+.spc.core{border-color:#8a6a38;color:var(--gild-hi);background:rgba(200,165,106,.1)}
+.spc.free{border-color:#2f5b4c;color:#8fd9b8}
+.spc.opt{border-style:dashed;color:var(--faint)}
+.gem.optional{opacity:.78;border-style:dashed}
+.gem.optional:hover{opacity:1}
+.spgroup{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px;font-family:var(--ui);font-weight:700;color:var(--gild-hi);font-size:1.02rem}
+.spgroup:first-child{margin-top:0}
+.spgroup small{font-weight:400;color:var(--mute);font-family:var(--body);font-size:.88rem}
+.spnote{padding:12px 14px;margin-bottom:16px;border-color:#8a6a38;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(200,165,106,.1),transparent)}
+.spnote b{font-family:var(--display);color:var(--gild-hi);font-size:1rem}
+.spnote p{margin:0;color:var(--text)}
+.runes .sock-list{display:grid;gap:3px;margin-top:3px}
+.runes .sock-list span::before{content:"◇ ";color:var(--gild)}
+.nextpts{display:grid;gap:4px;padding:6px}
+.nextpts li{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:center;cursor:pointer;padding:3px 4px}
+.nextpts li:hover{background:rgba(143,208,255,.08)}
+.nextpts .no{display:grid;place-items:center;width:22px;height:22px;border:1px solid #6fb2e6;color:#9fd2ff;font-family:var(--mono);font-size:.72rem;border-radius:50%}
+.nextpts .nb{font-family:var(--ui);color:var(--text);font-size:.9rem;line-height:1.15}
+.nextpts .nb small{display:block;color:var(--mute);font-size:.76rem}
+.nextpts .nb.big{color:#9fd2ff;font-weight:700}
+.ptsrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 10px;border-top:1px solid var(--edge)}
+.ptsrow input{width:74px}
+.ptsrow .btn{padding:4px 10px}
+
 .links{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .sock{display:inline-flex;align-items:center;gap:7px;font-family:var(--ui);font-size:.92rem;padding:2px 10px 2px 2px;background:#0c0a08;border:1px solid var(--edge)}
 .sock img{width:24px;height:24px;border-radius:50%;background:#15110c;border:1px solid #4a3c29}
@@ -607,6 +632,20 @@ function showTab() {
 const phaseSel = (cur, attr, extra = []) => `<div class="filters" data-sel="${attr}">${D.phases.map(p => `<button type="button" data-ph="${p.id}" aria-pressed="${p.id === cur}">${esc(p.name)}</button>`).join("")}${extra.map(([id, l]) => `<button type="button" data-ph="${id}" aria-pressed="${id === cur}">${esc(l)}</button>`).join("")}</div>`;
 
 /* ------------------------------------------------ building blocks */
+const questPts = lv => { let q = 0; for (const [l, p] of A.quest || []) if (lv >= l) q = p; return q; };
+const autoPts = lv => Math.max(0, lv - 1 + questPts(lv));
+const ptsAt = lv => (S.ptsOv != null && S.ptsOvLv === lv) ? S.ptsOv : autoPts(lv);
+const nodeName = id => ((A.tree.meta[id] || [])[0]) || String(id);
+function treeState(pid, lvBased) {
+  const O = A.order[pid]; const i = TREE_ORDER.indexOf(pid);
+  const pts = lvBased ? ptsAt(S.lv) : O.n;
+  const m = O.o.slice(0, Math.min(pts, O.o.length));
+  const next = lvBased ? O.o.slice(m.length, m.length + 8) : [];
+  const prevIds = i > 0 ? new Set(A.alloc[TREE_ORDER[i - 1]].m) : null;
+  const phaseSet = new Set(A.alloc[pid].m);
+  const mk = id => { const mm = A.tree.meta[id] || []; return { id, n: mm[0] || id, s: mm[1] || [], k: A.nodeKind[id] || 0, ic: A.passiveIcon[id], new: prevIds ? !prevIds.has(id) : true, ahead: !phaseSet.has(id) }; };
+  return { m, next, pts, phaseN: O.n, extra: Math.max(0, pts - O.o.length), notables: m.filter(id => A.nodeKind[id]).map(mk), nextList: next.map(mk), prevIds };
+}
 function gemDiff(phase) {
   const i = D.phases.indexOf(phase); if (i <= 0) return { prev: null };
   const prev = D.phases[i - 1]; const map = {}; prev.gems.forEach(g => map[g.skill] = g); return { prev, map };
@@ -619,9 +658,10 @@ function gemCard(g, diff, detailed) {
   const removed = old ? old.sup.filter(s => !g.sup.includes(s)) : [];
   const gi = gemImg(g.skill);
   const sw = g.sup.filter(s => (D.supWhy || {})[s]).map(s => `<li><img src="${supImg(s) || ""}" alt=""><div><b>${esc(s)}</b><span>${esc(D.supWhy[s])}</span></div></li>`).join("");
-  return `<article class="gem frame ${carry ? "carry" : ""}">
+  const spTxt = g.sp === "core" ? `Spirit #${g.pr}${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "opt" ? `Só se sobrar Spirit${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "free" ? (g.cost && g.cost !== "Sem Spirit" ? `Sem Spirit · ${esc(g.cost)}` : "Sem Spirit") : "";
+  return `<article class="gem frame ${carry ? "carry" : ""} ${g.sp === "opt" ? "optional" : ""}">
     <div class="top"><div class="gicon">${gi ? `<img src="${gi}" alt="">` : `<span class="ph">${esc(g.skill[0])}</span>`}</div>
-      <div><div class="name">${esc(g.skill)}</div><div class="role">${esc(g.role)}${g.set && g.set !== "—" ? " · " + esc(g.set) : ""}</div></div></div>
+      <div><div class="name">${esc(g.skill)}</div><div class="role">${esc(g.role)}${g.set && g.set !== "—" ? " · " + esc(g.set) : ""}</div>${spTxt ? `<span class="spc ${g.sp}">${spTxt}</span>` : ""}</div></div>
     ${g.why ? `<p class="why">${esc(g.why)}</p>` : ""}
     <div class="links">${socks}</div>
     ${sw ? `<details class="supwhy" ${detailed ? "open" : ""}><summary>Por que cada support</summary><ul>${sw}</ul></details>` : ""}
@@ -635,14 +675,24 @@ function itemCard(it) {
     <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Único" : ""}</small></div>
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(it.n)}">` : ""}</div>
       <div class="mods">${mods.length ? mods.map(m => `<span>${esc(m)}</span>`).join("") : '<span class="none">Veja os mods do único no jogo.</span>'}</div></div>
-    ${it.r && it.r.length ? `<div class="runes">Sockets / versão: ${it.r.map(esc).join(" · ")}</div>` : ""}
+    ${it.r && it.r.length ? `<div class="runes"><b>${it.rs ? "Sockets (do guia)" : "Sockets (sugestão)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">Sem socket? Artificer’s Orb adiciona um.all>'}</div>` : ""}
     ${it.note || it.price != null ? `<div class="runes" style="color:var(--gild-hi)">${it.note ? esc(it.note) : ""}${it.price != null ? `${it.note ? " · " : ""}${fmtPrice(it.price)}` : ""}</div>` : ""}
   </article>`;
 }
 function gemGrid(p, useLv, detailed) {
   const early = p.gems.filter(g => g.until), main = p.gems.filter(g => !g.until);
   const hideEarly = useLv && early.length && S.lv >= early[0].until;
-  const mainHtml = `<div class="gems stagger">${main.map(g => gemCard(g, gemDiff(p), detailed)).join("")}</div>`;
+  const df = gemDiff(p); const cards = list => `<div class="gems stagger">${list.map(g => gemCard(g, df, detailed)).join("")}</div>`;
+  let mainHtml = cards(main);
+  if (main.some(g => g.sp)) {
+    const core = main.filter(g => g.sp === "core").sort((a, b) => a.pr - b.pr), rest = main.filter(g => !g.sp);
+    const free = main.filter(g => g.sp === "free"), opt = main.filter(g => g.sp === "opt").sort((a, b) => a.pr - b.pr);
+    const res = [...core, ...rest];
+    mainHtml = `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
+      (res.length ? `<div class="spgroup">1 · Reservam Spirit <small>${core.length ? "ative nesta ordem; se o Spirit ficar negativo, desligue o último" : "companions e auras"}</small></div>${cards(res)}` : "") +
+      (free.length ? `<div class="spgroup">2 · Não reservam Spirit <small>use sempre</small></div>${cards(free)}` : "") +
+      (opt.length ? `<div class="spgroup">3 · Só se sobrar Spirit <small>entram depois, quando você ganhar mais Spirit</small></div>${cards(opt)}` : "");
+  }
   if (!early.length) return mainHtml;
   const u = early[0].until;
   return `<div class="label" style="margin:0 0 8px">Barra principal${useLv ? "" : ` (nv ${u}+ — depois de capturar o Silverfist e fazer o respec)`}</div>${mainHtml}` +
@@ -667,15 +717,16 @@ function renderSide() {
   const find = re => items.find(i => re.test(i.slot));
   const rings = items.filter(i => /Anel/.test(i.slot));
   const cell = (it, cls, lab) => `<div class="cell ${cls} ${it && it.u ? "u" : ""} ${it ? "" : "empty"}" data-gotab="gear" title="${it ? esc(it.n) + (it.price != null ? " · " + fmtPrice(it.price) : "") : esc(lab)}">${it && ic(it.ic) ? `<img src="${ic(it.ic)}" alt="${esc(it.n)}">` : ""}<span>${lab}</span></div>`;
-  const nt = A.notables[p.id];
+  const nt = A.notables[p.id]; const ts = treeState(p.id, true);
   const prog = Math.max(0, Math.min(100, Math.round(((S.lv - p.lv[0]) / Math.max(1, p.lv[1] - p.lv[0])) * 100)));
   const carryGem = p.gems.find(g => /CARRY/i.test(g.role)) || p.gems[0];
   const nextMs = msList.filter(m => m.lv >= S.lv).slice(0, 4);
-  const gems = p.gems.filter(g => !(g.until && S.lv >= g.until));
+  const rank = g => g.sp === "core" ? g.pr : g.sp === "free" ? 50 : g.sp === "opt" ? 100 + g.pr : 40;
+  const gems = p.gems.filter(g => !(g.until && S.lv >= g.until)).slice().sort((a, b) => rank(a) - rank(b));
   const uniqs = items.filter(i => i.u);
   const setCost = uniqs.reduce((a, i) => a + (i.price || 0), 0);
   const c = spCalc(); const cls = c.free < 0 ? "bad" : c.pct > .9 ? "warn" : "";
-  const newN = nt.list.filter(n => n.new && n.k !== 3);
+  const newN = ts.notables.filter(n => n.new && n.k !== 3);
   const phaseIdx = D.phases.indexOf(p);
   const buys = (D.buyOrder || []).filter(b => !uniquesIn(b.item).length || uniquesIn(b.item).some(n => { const u = D.uniques.find(x => x.n === n); return !u || PH_ORDER.indexOf(u.p) >= phaseIdx - 1; })).slice(0, 5);
   const next = D.phases[phaseIdx + 1];
@@ -703,8 +754,9 @@ function renderSide() {
         </div>
         <span class="label">${A.sets[p.id] ? "Set principal · modo " + (S.mode === "cheap" ? "barato" : "completo") : "Set de leveling"}</span>
         <ul class="sb-list">${uniqs.map(i => `<li data-gotab="uniques"><img src="${ic(i.ic) || ""}" alt=""><div><b class="u">${esc(i.n)}</b><small>${esc(i.slot)}</small></div><span class="px">${i.price != null ? fmtPrice(i.price) : ""}</span></li>`).join("")}</ul>`)}
-      ${sideSec("skills", "Barra de skills", gems.length, gems.map(g => { const im = gemImg(g.skill); return `<div class="sb-gem" data-gotab="skills" title="${esc(g.why || "")}"><img src="${im || ""}" alt=""><div><b>${esc(g.skill)}</b><small class="label" style="font-size:.7rem">${esc(g.role)}</small><div class="ss">${g.sup.map(sp => supImg(sp) ? `<img src="${supImg(sp)}" alt="${esc(sp)}" title="${esc(sp)}">` : "").join("")}</div></div></div>`; }).join(""))}
-      ${sideSec("tree", "Passivas", `${nt.count} pontos`, `
+      ${sideSec("skills", "Barra de skills", gems.length, gems.map(g => { const im = gemImg(g.skill); return `<div class="sb-gem" data-gotab="skills" title="${esc(g.why || "")}"><img src="${im || ""}" alt=""><div><b>${esc(g.skill)}</b><small class="label" style="font-size:.7rem">${g.sp === "core" ? `Spirit #${g.pr} · ` : g.sp === "opt" ? "Se sobrar Spirit · " : g.sp === "free" ? "Sem Spirit · " : ""}${esc(g.role)}</small><div class="ss">${g.sup.map(sp => supImg(sp) ? `<img src="${supImg(sp)}" alt="${esc(sp)}" title="${esc(sp)}">` : "").join("")}</div></div></div>`; }).join(""))}
+      ${sideSec("tree", "Passivas", `${ts.m.length} pontos`, `
+        ${ts.nextList.length ? `<span class="label">Próximos pontos</span><ol class="nextpts" style="margin:0;padding:0;list-style:none">${ts.nextList.slice(0, 4).map((n, k) => `<li data-gotree="${n.id}"><span class="no">${k + 1}</span><span class="nb ${n.k ? "big" : ""}">${esc(n.n)}</span></li>`).join("")}</ol>` : ""}
         <span style="color:var(--mute);font-size:.88rem">${newN.length ? `${newN.length} notables novos nesta fase:` : "Nenhum notable novo nesta fase."}</span>
         <ul class="sb-list">${newN.slice(0, 8).map(n => `<li data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-radius:50%"><div><b>${esc(n.n)}</b><small>${esc((n.s || []).join(" · ").slice(0, 80))}</small></div><span></span></li>`).join("")}</ul>
         <button class="btn" type="button" data-gotab="arvore">Abrir árvore desta fase</button>`)}
@@ -745,7 +797,7 @@ function vAgora() {
     p.gems.forEach(g => { if (!next.gems.find(n => n.skill === g.skill)) out.push(`<li style="color:var(--faint)">− ${esc(g.skill)}</li>`); });
     changes = out.join("");
   }
-  const newN = A.notables[p.id].list.filter(n => n.new && n.k !== 3);
+  const newN = treeState(p.id, true).notables.filter(n => n.new && n.k !== 3);
   const items = setItems(p.id).filter(it => !/Charm|Flask/.test(it.slot)).slice(0, 4);
   return `
   <div class="sechead"><div><div class="label">Nível ${S.lv} · ${S.mode === "cheap" ? "modo barato" : "modo completo"}</div><h2>O que fazer agora</h2></div>
@@ -812,6 +864,7 @@ class TreeView {
       this.base.addPath(p); return { a: a[0], b: b[0], p };
     });
   }
+  setNext(ids) { this.next = ids || []; this.nextSet = new Set(this.next); this.draw(); }
   setAlloc(sets, prevIds) {
     this.alloc = new Map(); const add = (arr, t) => (arr || []).forEach(id => { if (!this.alloc.has(id)) this.alloc.set(id, t); });
     add(sets.m, "m"); add(sets.a, "m"); add(sets.s1, "s1"); add(sets.s2, "s2");
@@ -876,6 +929,16 @@ class TreeView {
         if (k && scr > 3) { ctx.strokeStyle = "#5a4a34"; ctx.lineWidth = 1 / s; ctx.stroke(); }
       }
     }
+    if (this.next && this.next.length) {
+      for (const e of this.edges) {
+        const na = this.nextSet.has(e.a), nb = this.nextSet.has(e.b);
+        if ((na && (nb || this.alloc.has(e.b))) || (nb && this.alloc.has(e.a))) { ctx.setLineDash([60, 40]); ctx.strokeStyle = "#8fd0ff"; ctx.lineWidth = Math.max(2.4 / s, 16); ctx.stroke(e.p); ctx.setLineDash([]); }
+      }
+      this.next.forEach((id, k) => { const n = this.nodes[this.idx.get(id)]; if (!n) return; const rad = Math.max(n[3] === 2 ? 80 : n[3] ? 52 : 30, 5 / s) * 1.25;
+        ctx.beginPath(); ctx.arc(n[1], n[2], rad, 0, Math.PI * 2); ctx.fillStyle = "rgba(20,40,60,.9)"; ctx.fill(); ctx.strokeStyle = "#8fd0ff"; ctx.lineWidth = Math.max(2 / s, 12); ctx.stroke();
+        ctx.save(); ctx.setTransform(r, 0, 0, r, 0, 0); ctx.font = "700 12px 'IBM Plex Mono', monospace"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillStyle = "#cfe9ff";
+        ctx.fillText(String(k + 1), n[1] * s + this.ox, n[2] * s + this.oy); ctx.restore(); });
+    }
     if (this.hover) {
       const [id, x, y, k] = this.hover; const rad = Math.max(k === 2 ? 80 : k === 1 ? 52 : 30, 6 / s) * 1.5;
       ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI * 2); ctx.strokeStyle = "#fff5d6"; ctx.lineWidth = 2 / s; ctx.stroke();
@@ -917,6 +980,7 @@ const TREE_ORDER = ["a1", "a2", "a3", "a4", "int", "ea", "t15", "mm", "uber"];
 function vArvore() {
   const pid = S.treePhase || phaseOf(S.lv).id;
   const nt = A.notables[pid]; const name = pid === "uber" ? "Bossing (endgame)" : D.phases.find(p => p.id === pid).name;
+  const lvBased = pid === phaseOf(S.lv).id; const ts = treeState(pid, lvBased);
   return `<div class="sechead"><div><h2>Árvore de Passivas</h2><p>Árvore real do patch 0.5.5 com o caminho do <b>guia do Mattjestic</b> em cada fase. Atos 1–2: Twister. Ato 3 em diante: só companion e defesa. O único keystone de "arma" é o Giant's Blood, necessário para usar a Chober Chaber com sceptre. <b style="color:#E3BE78">Dourado</b> = árvore principal, <b style="color:var(--set1)">vermelho</b> = Weapon Set I, <b style="color:var(--set2)">verde</b> = Weapon Set II — as mesmas cores do jogo. Contorno verde-claro = nó novo nesta fase.</p></div></div>
   ${phaseSel(pid, "tree", [["uber", "Bossing (endgame)"]])}
   <div class="treewrap" style="margin-top:14px">
@@ -927,16 +991,19 @@ function vArvore() {
         <button class="tbtn" type="button" data-tz="fit">Centralizar no caminho</button><button class="tbtn" type="button" data-tz="all">Árvore inteira</button>
         <button class="tbtn" type="button" data-tz="labels" aria-pressed="${!!S.treeLabels}">Nomes</button>
         <button class="tbtn" type="button" data-tz="meta" aria-pressed="${!!S.treeMeta}">Notables do meta</button>
-        <span class="chip gold" style="margin-left:auto">${nt.count} principais${nt.s1 ? ` · ${nt.s1} Set I · ${nt.s2} Set II` : ""}</span>
+        <span class="chip gold" style="margin-left:auto">${lvBased ? `Nível ${S.lv}: ${ts.m.length} pontos` : `Fase completa: ${ts.m.length} pontos`}</span>
       </div>
-      <div class="legend"><span><i style="background:#E3BE78"></i>Principal</span><span><i style="background:var(--set1)"></i>Weapon Set I</span><span><i style="background:var(--set2)"></i>Weapon Set II</span><span><i style="background:transparent;border:2px solid #7FD8B0"></i>Novo nesta fase</span></div>
+      ${lvBased ? `<div class="ptsrow"><span class="label">Pontos que você tem</span><input type="number" min="0" max="140" id="ptsIn" value="${ts.pts}" aria-label="Pontos de passiva"><button class="btn" type="button" id="ptsAuto">Automático (${autoPts(S.lv)})</button><small style="color:var(--mute)">Automático = nível − 1 + pontos de quest (≈). Se no jogo for diferente, digite o seu número.</small></div>` : `<div class="ptsrow"><small style="color:var(--mute)">Mostrando a fase inteira. Selecione a sua fase atual para ver os pontos do seu nível e os próximos.</small></div>`}
+      <div class="legend"><span><i style="background:#E3BE78"></i>Principal</span><span><i style="background:var(--set1)"></i>Weapon Set I</span><span><i style="background:var(--set2)"></i>Weapon Set II</span><span><i style="background:transparent;border:2px solid #7FD8B0"></i>Novo nesta fase</span>${lvBased ? '<span><i style="background:transparent;border:2px dashed #8fd0ff"></i>Próximos pontos (numerados)</span>' : ""}</div>
       <div class="ttip" id="ttip"></div>
     </div>
     <div class="frame">
-      <div class="plate">Notables · ${esc(name)}</div>
-      <div class="nlist">${nt.list.filter(n => n.k !== 3).map(n => `<div class="nrow k${n.k} ${n.new ? "new" : ""}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt=""><div><b>${esc(n.n)} ${n.pass ? '<span class="chip" style="font-size:.7rem">só passagem</span>' : ""}${n.new ? '<span class="chip wisp" style="font-size:.7rem">novo</span>' : ""}${n.set !== "m" ? ` <span class="chip ${n.set}" style="font-size:.7rem">${n.set === "s1" ? "Set I" : "Set II"}</span>` : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
+      ${ts.nextList.length ? `<div class="plate">Próximos pontos</div><ol class="nextpts" style="margin:0;list-style:none">${ts.nextList.map((n, k) => `<li data-gotree="${n.id}"><span class="no">${k + 1}</span><span class="nb ${n.k ? "big" : ""}">${esc(n.n)}<small>${esc((n.s || []).join(" · ").slice(0, 90))}</small></span></li>`).join("")}</ol>` : ""}
+      ${ts.extra ? `<p style="padding:6px 10px;color:var(--gild-hi);margin:0">Você tem ${ts.extra} ponto(s) além do caminho completo do guia: coloque em vida, Spirit ou resistência perto do caminho.</p>` : ""}
+      <div class="plate">Notables · ${esc(name)}${lvBased ? ` (nível ${S.lv})` : ""}</div>
+      <div class="nlist">${ts.notables.filter(n => n.k !== 3).map(n => `<div class="nrow k${n.k} ${n.new ? "new" : ""}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt=""><div><b>${esc(n.n)} ${n.new ? '<span class="chip wisp" style="font-size:.7rem">novo</span>' : ""}${n.ahead ? '<span class="chip bear" style="font-size:.7rem">da próxima fase</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
       <div class="divider"></div><p class="label" style="padding:0 6px">Notables do meta (% dos 24 zoos top) — contorno roxo na árvore</p>
-      ${A.metaNotables.map(n => `<div class="nrow k${n.k}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-color:#A77BE0"><div><b>${esc(n.n)} <span class="chip bear" style="font-size:.7rem">${n.pct}%</span>${nt.list.find(x => x.id === n.id) ? ' <span class="chip gold" style="font-size:.7rem">no guia</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
+      ${A.metaNotables.map(n => `<div class="nrow k${n.k}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-color:#A77BE0"><div><b>${esc(n.n)} <span class="chip bear" style="font-size:.7rem">${n.pct}%</span>${ts.m.includes(n.id) ? ' <span class="chip gold" style="font-size:.7rem">no guia</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
       ${nt.removed.length ? `<div class="divider"></div><p class="label" style="padding:0 6px">Removidos nesta fase</p><p style="padding:0 6px;color:var(--faint);margin:4px 0">${nt.removed.map(esc).join(" · ")}</p>` : ""}
       </div>
     </div>
@@ -962,8 +1029,9 @@ function mountTree() {
   };
   TV = new TreeView($("#treeCv"), A.tree, { showNew: true, labels: !!S.treeLabels, onHover: tip($("#ttip"), A.tree.meta) });
   if (S.treeMeta) TV.metaSet = new Set(A.metaNotables.map(m => m.id));
-  const al = A.alloc[pid]; TV.setAlloc(al, i > 0 ? prevIds : null);
-  requestAnimationFrame(() => TV.fit([...al.m, ...al.s1, ...al.s2]));
+  const al = A.alloc[pid]; const ts = treeState(pid, pid === phaseOf(S.lv).id);
+  TV.setAlloc({ m: ts.m, s1: al.s1, s2: al.s2 }, i > 0 ? prevIds : null); TV.setNext(ts.next); TV.fitIds = [...ts.m, ...ts.next];
+  requestAnimationFrame(() => TV.fit(TV.fitIds));
   AV = new TreeView($("#ascCv"), A.asc, { pad: 160, labels: true, labelAll: true, onHover: tip($("#ttip2"), A.asc.meta) });
   AV.setAlloc({ m: al.a, s1: [], s2: [] }, null);
   requestAnimationFrame(() => AV.fit());
@@ -1180,6 +1248,7 @@ function render() { renderTab(S.tab); if (typeof renderSide === "function") rend
 
 /* ------------------------------------------------ events */
 document.addEventListener("change", e => {
+  if (e.target.id === "ptsIn") { const v = parseInt(e.target.value, 10); if (!isNaN(v)) { S.ptsOv = v; S.ptsOvLv = S.lv; render(); } return; }
   const t = e.target;
   if (t.dataset.key) { S.done[t.dataset.key] = t.checked; store.set("done", S.done); render(); return; }
   if (t.dataset.sp) { S.sp[t.dataset.sp] = t.checked; saveSp(); return; }
@@ -1195,10 +1264,11 @@ document.addEventListener("click", e => {
   const lvl = t.closest(".lvl"); if (lvl) { setLv(+lvl.dataset.lv); return; }
   const ph = t.closest("[data-sel] button"); if (ph) { const w = ph.parentElement.dataset.sel; if (w === "tree") S.treePhase = ph.dataset.ph; if (w === "skills") S.skillPhase = ph.dataset.ph; if (w === "gear") S.gearPhase = ph.dataset.ph; render(); return; }
   const tz = t.closest("[data-tz]"); if (tz && TV) { const a = tz.dataset.tz; const pid = S.treePhase || phaseOf(S.lv).id; const al = A.alloc[pid];
-    if (a === "in") TV.zoom(1.35); else if (a === "out") TV.zoom(1 / 1.35); else if (a === "fit") TV.fit([...al.m, ...al.s1, ...al.s2]); else if (a === "all") TV.fit(); else if (a === "meta") { S.treeMeta = !S.treeMeta; TV.metaSet = S.treeMeta ? new Set(A.metaNotables.map(m => m.id)) : null; tz.setAttribute("aria-pressed", S.treeMeta); if (S.treeMeta) TV.fit([...al.m, ...A.metaNotables.map(m => m.id)]); else TV.draw(); } else if (a === "labels") { S.treeLabels = !S.treeLabels; TV.o.labels = S.treeLabels; tz.setAttribute("aria-pressed", S.treeLabels); TV.draw(); } return; }
+    if (a === "in") TV.zoom(1.35); else if (a === "out") TV.zoom(1 / 1.35); else if (a === "fit") TV.fit(TV.fitIds || al.m); else if (a === "all") TV.fit(); else if (a === "meta") { S.treeMeta = !S.treeMeta; TV.metaSet = S.treeMeta ? new Set(A.metaNotables.map(m => m.id)) : null; tz.setAttribute("aria-pressed", S.treeMeta); if (S.treeMeta) TV.fit([...al.m, ...A.metaNotables.map(m => m.id)]); else TV.draw(); } else if (a === "labels") { S.treeLabels = !S.treeLabels; TV.o.labels = S.treeLabels; tz.setAttribute("aria-pressed", S.treeLabels); TV.draw(); } return; }
   const uf = t.closest("[data-uf]"); if (uf) { S.uf[uf.dataset.uf] = uf.dataset.v; render(); return; }
   const tc = t.closest("#tcat button"); if (tc) { S.trickCat = tc.dataset.c; render(); return; }
   if (t.dataset.del !== undefined) { S.sp.zoo.splice(+t.dataset.del, 1); saveSp(); return; }
+  if (t.id === "ptsAuto") { S.ptsOv = null; render(); return; }
   if (t.id === "addRow") { S.sp.zoo.push({ n: "Nova skill", on: true, t: "o", c: 0, u: "flat" }); saveSp(); return; }
   if (t.id === "resetZoo") { S.sp.zoo = JSON.parse(JSON.stringify(ZOO_DEFAULT)); saveSp(); }
 });

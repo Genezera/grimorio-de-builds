@@ -149,7 +149,23 @@ SLOT_PT = {"mh1": "Arma (Set 1)", "mh2": "Arma (Set 2)", "oh1": "Offhand (Set 1)
            "flask1": "Flask vida", "flask2": "Flask mana", "charm1": "Charm", "charm2": "Charm", "charm3": "Charm"}
 RUNE_PT = {"soulcore-talismanmonkey": "Primate Idol", "soulcore-talismanfox": "Fox Idol", "soulcore-talismancat": "Cat Idol",
            "soulcore-idolhawk": "Hawk Idol", "soulcore-talismanspecial2": "Idol (especial)", "soulcore-talismanspecial6": "Idol (especial)", "soulcore-idolspecial2": "Idol (especial)", "soulcore-idolcorrupted1": "Idol corrompido", "soulcore-runespecial1": "Runa especial", "soulcore-runelightninglesser": "Lesser Storm Rune",
-           "soulcore-runefirelesser": "Lesser Desert Rune", "soulcore-runecoldlesser": "Lesser Glacial Rune", "soulcore-runeenhancegreater": "Greater Rune of Leadership"}
+           "soulcore-runefirelesser": "Lesser Desert Rune", "soulcore-runecoldlesser": "Lesser Glacial Rune", "soulcore-runeenhancegreater": "Greater Rune of Leadership",
+           "soulcore-runefire": "Desert Rune (res. fogo)", "soulcore-runefiregreater": "Greater Desert Rune (res. fogo)", "soulcore-runecoldgreater": "Greater Glacial Rune (res. frio)",
+           "soulcore-runelifelesser": "Lesser Body Rune (vida)", "soulcore-runeenhance": "Rune of Leadership", "soulcore-runeoftheancients21": "Runa ancestral (Runeforged)",
+           "soulcore-runeoftheancients22": "Runa ancestral (Runeforged)", "soulcore-soulcoreenlighten": "Soul Core (Enlighten)", "soulcore-soulcoredexterity": "Soul Core de Dexterity (atributos)",
+           "soulcore-talismanspecial7": "Idol especial", "soulcore-talismansnake": "Snake Idol", "soulcore-carvedtenacity": "Carved Tenacity",
+           "soulcore-runewarpingcreatejewelsocket": "Runa que cria Jewel Socket", "soulcore-runeolrothslegacygreymake": "Olroth's Legacy"}
+# sugestão de socket quando o item do set não tem runa definida no guia
+def socket_hint(slot, name, pid):
+    if name == "Chober Chaber": return ["2× Soul Core de Dexterity (atributos para o Giant's Blood)"]
+    if name == "Sylvan's Effigy": return ["Primate Idol + Rabbit Idol (bonus de companion)"]
+    if name == "Forgotten Warden": return ["Fox Idol + Hawk Idol (endgame) · runas de resist enquanto faltar resist"]
+    if slot.startswith(("Arma", "Offhand")):
+        if "Sceptre" in name or "Effigy" in name: return ["Primate Idol (bonus de companion) · sem Idol: Body Rune (vida)"]
+        return ["Runa de resistência que faltar (Desert = fogo · Glacial = frio · Storm = raio)"]
+    if slot in ("Capacete", "Body Armour", "Luvas", "Botas"):
+        return ["Runa de resistência que faltar (Desert = fogo · Glacial = frio · Storm = raio) · resist no cap: Body Rune (vida)"]
+    return []
 gem_icon, sup_icon, guide = {}, {}, {}
 norm = lambda s: re.sub(r"[^a-z]", "", s.lower().replace(" iii", "three").replace(" ii", "two").replace(" i", ""))
 for p in D.PHASES:
@@ -289,9 +305,11 @@ for pid, modes in D.SETS.items():
     for mode, items in modes.items():
         rows = []
         for it in items:
-            ic_key = uniq_icon.get(it["n"]) if it["u"] else (planner.get(it["slot"]) or {}).get("ic")
+            same = next((g for gl in guide.values() for g in gl if g["n"] == it["n"] and g["ic"]), None)  # mesmo item em qualquer planner
+            slot_it = planner.get(it["slot"]) or {}
+            ic_key = uniq_icon.get(it["n"]) if it["u"] else (same or {}).get("ic") or (slot_it.get("ic") if not slot_it.get("u") else None)
             if not ic_key and not it["u"]:
-                base = next((g for g in guide.get("ea", []) if g["slot"] == it["slot"]), None) or next((g for g in guide.get("t15", []) if g["slot"] == it["slot"]), None)
+                base = next((g for gl in guide.values() for g in gl if g["slot"] == it["slot"] and not g["u"] and g["ic"]), None)
                 ic_key = base and base["ic"]
             u = next((x for x in D.UNIQUES if x["n"] == it["n"]), None)
             mods = it["mods"] or ((u or {}).get("mods") or [])
@@ -301,7 +319,10 @@ for pid, modes in D.SETS.items():
                 shown = [m for m in mods if (keep.search(m) and not re.search(r"to Attacks|Attack Speed|Physical Damage to Attacks", m, re.I)) or (catha and re.search(r"Physical Damage", m) and not re.search(r"to Attacks", m))]
                 hidden = len(mods) - len(shown)
                 mods = shown + ([f"(+{hidden} mod{'s' if hidden > 1 else ''} de ataque/utilidade que não {'importam' if hidden > 1 else 'importa'} para o zoo)"] if hidden else [])
-            rows.append({"slot": it["slot"], "n": it["n"], "u": it["u"], "ic": ic_key, "x": " ; ".join(mods[:6]), "r": it["r"], "note": it.get("note", ""), "price": (u or {}).get("price")})
+            ver = [x for x in it["r"] if x in ("Runeforged", "Runemastered")]
+            real = [x for x in it["r"] if x not in ver] or (same or {}).get("r") or []
+            sock = ver + (real or socket_hint(it["slot"], it["n"], pid)); rs = 1 if real else 0
+            rows.append({"slot": it["slot"], "n": it["n"], "u": it["u"], "ic": ic_key, "x": " ; ".join(mods[:6]), "r": sock, "rs": rs, "note": it.get("note", ""), "price": (u or {}).get("price")})
         sets_out[pid][mode] = rows
 print("sets", {k: len(v["cheap"]) for k, v in sets_out.items()})
 A = dict(icons=ICONS, tree=dict(nodes=main_nodes, edges=main_edges, meta={str(k): v for k, v in main_meta.items()}),

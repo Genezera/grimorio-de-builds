@@ -4,3 +4,5 @@ tools/site/
 ~$*.xlsx
 .DS_Store
 Thumbs.db
+tools/out.xlsx
+tools/*.bak

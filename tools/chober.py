@@ -136,7 +136,7 @@ PH["a3"].update(
  gems=[
   G("Tame Beast (Mighty Silverfist)", ["Feeding Frenzy II", "Rage II", "Rapid Attacks I", "Heft"], "CARRY", "O macaco é o dano da build inteira: bate físico em área, muito rápido, com 25% de chance de crítico base. Tudo abaixo existe para deixá-lo mais forte ou mais vivo."),
   G("Wild Protector", ["Magnified Area I"], "Tank", "Segura o aggro e conta como mais um TIPO de minion para o Muster.", "Asc."),
-  G("Skeletal Warrior", ["Sacrificial Lamb I", "Meat Shield I"], "Combustível do Pain Offering", "Vem do Rattling Sceptre e os 2 primeiros não reservam Spirit. Não é para dar dano: é o esqueleto que o Pain Offering espeta. Sacrificial Lamb garante que ele seja escolhido e Meat Shield mantém ele vivo."),
+  G("Skeletal Warrior", ["Sacrificial Lamb I", "Meat Shield I"], "Combustível do Pain Offering", "Vem como gem do Rattling Sceptre. Não é para dar dano: é o esqueleto que o Pain Offering espeta. Sacrificial Lamb garante que ele seja escolhido e Meat Shield mantém ele vivo."),
   G("Pain Offering", ["Danse Macabre", "Prolonged Duration II"], "Buff de dano dos minions", "Espeta um esqueleto: minions a até 6 m ganham até +29% attack speed e +58% dano. Com Danse Macabre (2 esqueletos) o buff fica 30% mais forte. Não custa Spirit, só mana."),
   G("Unearth", ["Armour Break III"], "Quebra de Armour + corpos", "Spell sua que cria Bone Constructs dos corpos e, com Armour Break III, tira Armour do inimigo: o macaco passa a bater o dano físico inteiro."),
   G("Raise Shield", [], "Defesa ativa", "Bloqueia tudo enquanto segura. Precisa de escudo ou de um item que permita (substitui o Parry)."),
@@ -331,8 +331,6 @@ AURA_PRIORITY[:] = ["Extra Physical ou Haste Aura", "Energy Shield ou Invulnerab
 
 # ------------------------------------------------------------------ uniques extras do guia
 EXTRA_U = [
- {"n": "Rattling Sceptre", "slot": "Main-hand / Offhand", "cat": "Arma", "lvl": 1, "p": "a3", "use": None, "rf": "Base comum (qualquer rare/normal serve)",
-  "why": "Não é unique, mas é a peça que faz a campanha funcionar: concede Skeletal Warrior, e os 2 primeiros não reservam Spirit. Esses esqueletos são o combustível do Pain Offering.", "how": "Qualquer Rattling Sceptre; se tiver +Minion Skills ou Spirit, melhor.", "alt": ""},
  {"n": "Enfolding Dawn", "slot": "Body Armour", "cat": "Armadura", "lvl": 1, "p": "a4", "use": None, "rf": "",
   "why": "+100 Spirit num body de nível 1. É o maior ganho de Spirit da campanha: cabe mais um companion ou vários esqueletos.", "how": "Use do Ato 2 até o Forgotten Warden.", "alt": "Body rare com Spirit."},
  {"n": "Evergrasping Ring", "slot": "Anel", "cat": "Acessório", "lvl": 32, "p": "a4", "use": None, "rf": "",
@@ -379,8 +377,8 @@ for u in UNIQUES:
 def R(slot, name, mods, r=None, note=""): return {"slot": slot, "n": name, "u": 0, "mods": mods, "r": r or [], "note": note}
 def U(slot, name, r=None, note=""): return {"slot": slot, "n": name, "u": 1, "mods": [], "r": r or [], "note": note}
 LIFE_RES = ["+Life", "+Resistências", "+Evasion"]
-RAT = R("Offhand (Set 1)", "Rattling Sceptre", ["Grants Skill: Skeletal Warrior", "+Spirit / +Minion Skills se tiver"], note="2 Skeletal Warriors sem custo de Spirit")
-RAT_MAIN = R("Arma (Set 1)", "Rattling Sceptre", ["Grants Skill: Skeletal Warrior", "+Spirit / +Minion Skills se tiver"], note="2 Skeletal Warriors sem custo de Spirit")
+RAT = R("Offhand (Set 1)", "Rattling Sceptre", ["Grants Skill: Skeletal Warrior", "+1/+2 to Level of all Minion Skills", "% increased Spirit"], note="Base rare (não é unique) · qualquer um com +Minion Skills")
+RAT_MAIN = R("Arma (Set 1)", "Rattling Sceptre", ["Grants Skill: Skeletal Warrior", "+1/+2 to Level of all Minion Skills", "% increased Spirit"], note="Base rare (não é unique) · qualquer um com +Minion Skills")
 HELM = lambda n="Capacete rare": R("Capacete", n, ["+1/+2 to Level of all Minion Skills", "+Life", "+Resistências"])
 AMU = lambda lv: R("Amuleto", "Amuleto rare", [f"+{lv} to Level of all Minion Skills", "+Spirit", "+Life", "+Resistências"])
 GLOV = R("Luvas", "Luvas rare", LIFE_RES); BOOT = R("Botas", "Botas rare", ["25–30% Movement Speed"] + LIFE_RES)
@@ -438,7 +436,7 @@ TRICKS[:0] = [
  {"cat": "Dano", "lvl": "Médio", "title": "Conte os tipos de minion para o Muster",
   "body": "Urso, macaco, cada beast diferente, Azmerian Wolf, Wolf Pack, Spirit Vessel e cada tipo de esqueleto contam como um tipo. Cada um soma 7% more dano nos companions com Muster."},
  {"cat": "Spirit", "lvl": "Fácil", "title": "Os 2 primeiros Skeletal Warriors são grátis",
-  "body": "O Skeletal Warrior do Rattling Sceptre não reserva Spirit para os 2 primeiros. É o combustível mais barato do Pain Offering até o Effigy."},
+  "body": "O Rattling Sceptre é uma base comum (não unique) que já traz a gem Skeletal Warrior. Um único esqueleto basta como alvo do Pain Offering até o Effigy; o segundo só quando sobrar Spirit."},
  {"cat": "Economia", "lvl": "Fácil", "title": "The Vertex: confira a versão",
   "body": "Só a versão com 'Equipment has no Attribute Requirements' libera a Chober Chaber com Giant's Blood. Filtre por esse mod no trade."},
 ]
@@ -490,6 +488,9 @@ CURRENT_SETUP["items"] = [
  {"img": "image5.png", "what": "Skeletal Sniper + Withering Presence",
   "verdict": "Os dois fazem sentido: o Sniper conta como mais um tipo de minion para o Muster e serve de alvo do Pain Offering; o Withering Presence vale com 2× Evergrasping Ring (dano de chaos nos aliados). Sem os anéis, troque o Withering Presence."},
 ]
+
+import spirit_tiers
+spirit_tiers.apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS)
 
 DATA.update(phases=PHASES, milestones=MILESTONES, beasts=BEASTS, auraPriority=AURA_PRIORITY, uniques=UNIQUES,
             sets=SETS, jewelSets=JEWEL_SETS, optimizations=OPTIMIZATIONS, tricks=TRICKS, fixes=FIXES,
