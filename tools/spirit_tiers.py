@@ -12,7 +12,7 @@ FREE = "Sem Spirit"
 def tag(g, sp, pr=0, cost=FREE):
     g["sp"] = sp; g["pr"] = pr; g["cost"] = cost
 
-def apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS):
+def apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS, OPTS=(), UNIQ=()):
     def find(pid, start):
         return next(g for g in PH[pid]["gems"] if g["skill"].startswith(start))
 
@@ -124,6 +124,25 @@ def apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS):
     for pid, (n, types, note) in SK.items():
         PH[pid]["skeletons"] = {"n": n, "types": types, "note": note}
 
+    # ---------------------------------------------------------------- limpeza de textos antigos (esqueletos)
+    PH["a3"]["tag"] = "A troca: macaco + urso"
+    PH["a3"]["carry"] = "Mighty Silverfist (+ urso + 1 esqueleto)"
+    PH["a3"]["goal"] = "Capturar o Mighty Silverfist com The Natural Order e trocar a build inteira para minions no mesmo dia: Twister sai, entram macaco, urso, 1 Skeletal Warrior e Pain Offering."
+    PH["int"]["goal"] = "Depois do Lythara (+40 Spirit), somar TIPOS de esqueleto para o Muster, um por vez e só enquanto couber no Spirit: cada tipo diferente = +7% more dano no macaco, e o 2º esqueleto libera o Danse Macabre. Vulnerability tira Armour."
+    PH["int"]["exit"] = ["2+ tipos de esqueleto (quantos couberem no Spirit)" if x == "5 tipos de esqueleto ativos" else x for x in PH["int"]["exit"]]
+    po = next(g for g in PH["t15"]["gems"] if g["skill"].startswith("Pain Offering"))
+    po["why"] = "Brutus' Brain: o espinho não pode ser destruído, então o buff nunca cai. Danse Macabre só funciona com 2 esqueletos vivos: se você tiver só 1 Skeletal Cleric vivo, tire o Danse Macabre (os outros supports continuam valendo)."
+    for t in TRICKS:
+        if t["title"] == "Os 2 primeiros Skeletal Warriors são grátis":
+            t["title"] = "Rattling Sceptre já traz o esqueleto"
+    for o in OPTS:
+        if o["t"] == "Esqueletos existem para o Muster e para o Pain Offering":
+            o["ev"] = "Mattjestic (Ato 5) usa Warrior, Arsonist, Sniper, Frost Mage e Reaver sem supports de dano — mas só com Spirit sobrando. Entre um por vez."
+            o["why"] = "Muster: +7% more dano para CADA tipo diferente de minion que revive. Cada tipo de esqueleto que couber no Spirit soma +7% no macaco e ainda serve de alvo do Pain Offering. 1 de cada tipo basta."
+    for u in UNIQ:
+        if u["n"] == "Enfolding Dawn":
+            u["why"] = u["why"].replace("cabe mais um companion ou vários esqueletos", "cabe mais um companion (ou o beast de aura mais cedo)")
+
     # ---------------------------------------------------------------- textos que dependiam de 2 esqueletos
     MILESTONES[35] = "TROCA: tire Twister/Whirling. Entram 1 Skeletal Warrior (alvo do Pain Offering) + Pain Offering + Unearth."
     MILESTONES[40] = "Azak Bog: Ignagduk (+30 Spirit). Agora cabe o 2º beast (aura)."
@@ -140,3 +159,43 @@ def apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS):
     for t in TRICKS:
         if t["title"] == "Pain Offering sem cair no boss":
             t["body"] = "Brutus' Brain no Pain Offering deixa o espinho imune a dano, então o buff não some quando o boss acerta a área. Danse Macabre precisa de 2 esqueletos vivos: só coloque quando o Spirit permitir o 2º esqueleto (Interlúdios). Depois do Effigy, o Skeletal Cleric com Sacrificial Lamb II vira o alvo."
+
+
+def cleanup(DATA):
+    """Remove restos de rotas antigas (spear/Tyranny's Grip/Entangle) que contradiziam a rota Chober."""
+    g = DATA["gear"]
+    for row in g:
+        if row["slot"] == "Main-hand":
+            row["cheap"] = "Atos 1–2: spear rare (Twister). Ato 3: Rattling Sceptre (main) + Trenchtimbre. Início do Atlas: Chober Chaber Runeforged (~0,04 div)."
+            row["value"] = "Chober Chaber Runeforged + Treefingers + The Vertex"
+        if row["slot"] == "Offhand":
+            row["cheap"] = "Atos 1–2: qualquer offhand. Ato 3+: Rattling Sceptre (base rare, traz Skeletal Warrior) com +Minion Skills"
+        if row["slot"] == "Luvas":
+            row["full"] = "Treefingers até ter Giant's Blood na árvore; depois rare de Evasion/Deflection com vida e resist"
+    for t in DATA["tricks"]:
+        if t["title"] == "Compre uniques já runeforged":
+            t["body"] = "Chober Chaber Runeforged sai ≈ 0,04 div: bem mais barato do que juntar Verisium para fazer você mesmo."
+        if t["title"] == "Catha's Balance: dano por golpe":
+            t["body"] = "Companions ganham 60% do dano da main-hand. Compare armas pelo dano mínimo–máximo por golpe, não pelo DPS: a Chober Chaber bate devagar, mas tem o maior dano por golpe e ainda dá +Minion Skills e Spirit."
+        if t["title"] == "Caçar sem matar sem querer":
+            t["body"] = "Quando for capturar um beast raro, desligue temporariamente os companions e o urso (Wild Protector) — senão eles matam o beast antes do Tame Beast pegar."
+        if t["title"] == "Compre o Tyranny's Grip cedo":
+            t["title"] = "Compre a Chober Chaber cedo"
+            t["body"] = "A Chober Chaber costuma custar poucos Exalts. Compre já Runeforged no Ato 3–4 e guarde: com a Catha's Balance ela vira a principal fonte de dano do zoo."
+    DATA["tricks"] = [t for t in DATA["tricks"] if t["title"] != "Entangle é o seu botão principal"]
+    for t in DATA["troubleshoot"]:
+        if t["q"] == "Silverfist fraco no Ato 4":
+            t["a"] = "Confira os supports do macaco: Feeding Frenzy II · Rage II · Rapid Attacks II · Heft (Muster só entra nos Interlúdios, quando tiver vários tipos de minion). Suba o nível da gem Tame Beast e use Sniper's Mark no boss."
+    for a in DATA["atlasCheck"]:
+        if "Tyranny" in a.get("gear", ""):
+            a["gear"] = "Chober Chaber + Rattling Sceptre (ou Sylvan's Effigy)"
+    for u in DATA["uniques"]:
+        if u["n"] == "Tyranny's Grip":
+            u["why"] = "Arma barata popular da Catha's Balance em OUTRAS builds de zoo (spear de 1 mão). NÃO é usada nesta rota: aqui a Chober Chaber faz esse papel e ainda dá +Minion Skills e Spirit."
+            u["how"] = "Só considere se não usar a rota Chober Chaber."
+            u["alt"] = "Chober Chaber (rota deste guia)."
+            u["p"] = "mm"
+    for p in DATA["phases"]:
+        for gm in p["gems"]:
+            if gm["skill"] == "Raise Shield":
+                gm["why"] = "Só funciona com escudo ou buckler equipado. Com sceptre + maça (o set desta rota) ele não pode ser usado: deixe fora da barra se não tiver escudo."

@@ -490,12 +490,18 @@ CURRENT_SETUP["items"] = [
 ]
 
 import spirit_tiers
-spirit_tiers.apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS)
+spirit_tiers.apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS, OPTIMIZATIONS, UNIQUES)
 
 DATA.update(phases=PHASES, milestones=MILESTONES, beasts=BEASTS, auraPriority=AURA_PRIORITY, uniques=UNIQUES,
             sets=SETS, jewelSets=JEWEL_SETS, optimizations=OPTIMIZATIONS, tricks=TRICKS, fixes=FIXES,
             sources=[dict(name=a, use=b, url=c) for a, b, c in SOURCES], keyPassives=KEY_PASSIVES,
             treeStages=TREE_STAGES, buyOrder=BUY_ORDER, supWhy=SUPWHY, guideUrl=GUIDE_URL, current=CURRENT_SETUP, troubleshoot=[dict(q=a, a=b) for a, b in TROUBLESHOOT])
+
+spirit_tiers.cleanup(DATA)
+# mantém as estruturas cruas (usadas pela planilha) iguais ao DATA
+TRICKS[:] = DATA["tricks"]
+TROUBLESHOOT[:] = [(t["q"], t["a"]) for t in DATA["troubleshoot"]]
+ATLAS_CHECK[:] = [tuple(a.values()) if isinstance(a, dict) else a for a in DATA["atlasCheck"]]
 
 if __name__ == "__main__":
     miss = sorted({s for p in PHASES for g in p["gems"] for s in g["sup"]} - set(SUPWHY))
