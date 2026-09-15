@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+tools/site/
+~$*.xlsx
+.DS_Store
+Thumbs.db
