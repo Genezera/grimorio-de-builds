@@ -199,3 +199,33 @@ def cleanup(DATA):
         for gm in p["gems"]:
             if gm["skill"] == "Raise Shield":
                 gm["why"] = "Só funciona com escudo ou buckler equipado. Com sceptre + maça (o set desta rota) ele não pode ser usado: deixe fora da barra se não tiver escudo."
+
+
+def companion_limit(DATA):
+    """Limite de companions confirmado no texto do jogo (tree.json 0.5 + poe.ninja):
+    base 1 · Trusted Kinship ou Yriel's Fostering: 2 de tipos diferentes · Sylvan's Effigy: qualquer número."""
+    ph = {p["id"]: p for p in DATA["phases"]}
+    a4 = ph["a4"]
+    a4["tag"] = "2 companions + chaos"
+    a4["goal"] = "Macaco + 1 beast de aura (o limite do Trusted Kinship é 2 companions), marks e curse. Entram Evergrasping Ring (aliados ganham dano de chaos) e Withering Presence (inimigos recebem mais chaos): as duas peças se multiplicam."
+    a4["exit"] = ["2 companions (macaco + aura)" if x == "3 companions" else x for x in a4["exit"]]
+    for g in a4["gems"]:
+        if g["skill"].startswith("Tame Beast (3º"):
+            g["skill"] = "Tame Beast (3º beast: só com Sylvan's Effigy)"
+            g["role"] = "Captura / guardar para o Effigy"
+            g["why"] = "Com Trusted Kinship o limite é 2 companions de tipos diferentes (texto do keystone). O 3º só pode ficar ativo com o Sylvan's Effigy (\"any number of Companions\"). Até lá, use esta gem vazia só para capturar e guardar um Swarming Wisp / Plague Swarm com aura Physical."
+            g["cost"] = "Só com Sylvan's Effigy"
+    a4["spiritNote"] = a4["spiritNote"].replace("3º beast e 2º esqueleto só depois do Lythara (+40 Spirit).", "2º esqueleto só depois do Lythara (+40 Spirit). 3º beast só com Sylvan's Effigy: o Trusted Kinship limita a 2 companions.")
+    for t in DATA["tricks"]:
+        if t["title"] == "Rota de aura bots do Mattjestic":
+            t["body"] = "Antes do Sylvan's Effigy só cabe 1 beast de aura (limite de 2 companions com Trusted Kinship). " + t["body"] + " Os beasts extras entram quando você equipar o Effigy."
+    DATA["tricks"].insert(0, {"cat": "Captura", "lvl": "Fácil", "title": "Limite de companions",
+        "body": "Base: 1 companion. Trusted Kinship (keystone) ou Yriel's Fostering (body): 2 companions de TIPOS diferentes — não somam entre si. Sylvan's Effigy: qualquer número de tipos diferentes. O urso do Wild Protector não conta no limite."})
+    for o in DATA["optimizations"]:
+        if "2–3 auras T1" in o.get("why", ""):
+            o["why"] = o["why"].replace("O objetivo são 2–3 auras T1", "Com Sylvan's Effigy, o objetivo são 2–3 auras T1 (antes dele só cabe 1)")
+    DATA["milestones"][86] = "Com Sylvan's Effigy: 3 aura bots (Haste/Physical/ES)."
+    for x in ph["t15"]["exit"]:
+        pass
+    ph["t15"]["exit"] = ["3 aura bots (com Sylvan's Effigy)" if x == "3 aura bots" else x for x in ph["t15"]["exit"]]
+    DATA["companionLimit"] = {"base": 1, "tk": 2, "effigy": None}

@@ -71,10 +71,11 @@ def page(lang):
                       'content="Interactive Spirit Walker / Mighty Silverfist guide — PoE 2 Forbidden Rites"')
     data = DATA_PT if lang == "pt" else DATA_EN
     assets_expr = "window.__A" if lang == "pt" else "Object.assign(window.__A," + safe(A_EN_TXT) + ")"
-    t = (t.replace("__DATA__", safe(data)).replace("__ASSETS__", assets_expr).replace("__IMG__", "window.__IMG")
+    t = (t.replace("__LANG__", lang).replace("__DATA__", safe(data)).replace("__ASSETS__", assets_expr).replace("__IMG__", "window.__IMG")
           .replace("__PT_HREF__", "index.html").replace("__EN_HREF__", "en.html")
           .replace("__PT_ON__", "on" if lang == "pt" else "").replace("__EN_ON__", "on" if lang == "en" else ""))
-    t = t.replace("<script>\nconst D =", '<script src="assets/assets.js"></script>\n<script>\nconst D =', 1)
+    t = t.replace("<script>\nconst LANG =", '<script src="assets/assets.js"></script>\n<script>\nconst LANG =', 1)
+    assert 'src="assets/assets.js"' in t, "assets script tag missing"
     # head: tudo antes de <style>...</style> fica no head
     i = t.index("</style>") + len("</style>")
     return HEAD.format(lang="pt-BR" if lang == "pt" else "en") + t[:i] + "\n</head>\n<body>\n" + t[i:] + "\n</body>\n</html>\n"

@@ -18,8 +18,8 @@ UI = [
 ('aria-label="Seu build agora"', 'aria-label="Your build now"'),
 
 ('trickCat: "Todos"', 'trickCat: "All"'),
-('[["agora","Agora"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]]',
- '[["agora","Now"],["meta","Meta & Optimizations"],["uniques","Uniques"],["arvore","Passive Tree"],["rota","Route 1→100"],["skills","Skills & Supports"],["gear","Items"],["zoo","Zoo & Spirit"],["asc","Ascendancy"],["quests","Quests"],["tricks","Pro Tricks"],["atlas","Atlas"],["diag","Troubleshooting"],["fontes","Sources"]]'),
+('[["agora","Agora"],["meu","Meu personagem"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]]',
+ '[["agora","Now"],["meu","My character"],["meta","Meta & Optimizations"],["uniques","Uniques"],["arvore","Passive Tree"],["rota","Route 1→100"],["skills","Skills & Supports"],["gear","Items"],["zoo","Zoo & Spirit"],["asc","Ascendancy"],["quests","Quests"],["tricks","Pro Tricks"],["atlas","Atlas"],["diag","Troubleshooting"],["fontes","Sources"]]'),
 ("`${p.name}, nível ${p.lv[0]}`", "`${p.name}, level ${p.lv[0]}`"),
 ("`Nv ${p.lv[0]}–${p.lv[1]} · ${p.tag}`", "`Lv ${p.lv[0]}–${p.lv[1]} · ${p.tag}`"),
 ("'<span class=\"role\">sem supports</span>'", "'<span class=\"role\">no supports</span>'"),
@@ -202,4 +202,5 @@ UI = [
 
 ("<small>ESQUELETOS</small>", "<small>SKELETONS</small>"),
 ('title="${esc(p.skeletons.note)}">Esqueletos: <b>', 'title="${esc(p.skeletons.note)}">Skeletons: <b>'),
+("<b style=\"color:var(--gild-hi)\">Limite de companions:</b> 1 base · 2 de tipos diferentes com Trusted Kinship ou Yriel's Fostering · qualquer número com Sylvan's Effigy (o urso do Wild Protector não conta). Antes do Effigy: macaco + 1 beast de aura — prefira os de 21–25% de Spirit. Use a aba <a href=\"#\" data-gotab=\"meu\">Meu personagem</a> para ver o que cabe no seu Spirit.", "<b style=\"color:var(--gild-hi)\">Companion limit:</b> 1 base · 2 of different types with Trusted Kinship or Yriel's Fostering · any number with Sylvan's Effigy (the Wild Protector bear doesn't count). Before the Effigy: monkey + 1 aura beast — prefer the 21–25% Spirit ones. Use the <a href=\"#\" data-gotab=\"meu\">My character</a> tab to see what fits your Spirit."),
 ]
