@@ -24,6 +24,7 @@ The site is fully static (HTML + JS) and also works by opening the files directl
 - Navegação por assunto, busca local por itens/skills/conceitos (`Ctrl/Cmd+K`), links diretos às seções e impressão da seção aberta.
 - Crafting nas duas builds: 12 categorias de equipamentos, três rotas de investimento (comprar · craft progressivo · avançado) com receitas concretas por build em `shared/craft-detail.js` — alvos com ilvl, essence/omen/osso/alloy pelo nome, custos de Verisium, materiais com preço do poe.ninja e o que fazer se falhar.
 - Glossário de mecânicas, consulta de pesos com hipótese explícita e simulador de custo/risco, incluindo compra pronta e orçamento de 90%.
+- Visual Path of Exile 2 (`shared/poe2.css`, `shared/poe2.js`, `shared/art/`): paleta, fontes e arte de ascendência próprias de cada build (Spirit Walker: ouro, teal espectral e carmesim; Oracle: prata, violeta do destino e ciano), cenário de fundo que muda a cada aba, trilha de níveis com gemas, partículas, animações de entrada e layout para celular, tablet, paisagem e ultrawide. Respeita `prefers-reduced-motion`.
 - Dados de crafting e limites do modelo: [documentação de fontes](tools/craft/README.md).
 
 All six pages share a redesigned responsive interface. Both builds include searchable navigation, section links, printing, persistent crafting plans for 12 equipment categories, a mechanics glossary, an opt-in published-weight explorer and a cost/risk simulator. Unverified weights and undated prices are explicitly labelled.
