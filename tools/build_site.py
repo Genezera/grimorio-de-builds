@@ -14,6 +14,8 @@ for f in ["i18n/en_1.json", "i18n/en_2.json", "i18n/en_3.json"]:
     en.update(json.load(open(f, encoding="utf-8")))
 MAP = {src[k]: v for k, v in en.items()}
 MAP.update(json.load(open("i18n/en_extra.json", encoding="utf-8")))
+import timing
+MAP.update(timing.EN_PAIRS)
 SUBS = [
     (r"\(\+(\d+) mods de ataque/utilidade que não importam para o zoo\)", r"(+\1 attack/utility mods that don't matter for the zoo)"),
     (r"\(\+1 mod de ataque/utilidade que não importa para o zoo\)", "(+1 attack/utility mod that doesn't matter for the zoo)"),

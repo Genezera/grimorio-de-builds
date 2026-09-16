@@ -208,6 +208,28 @@ ul.clean.danger li::before{background:var(--danger)}
 @media (max-width:600px){.petrow{grid-template-columns:1fr 1fr}}
 .petrow .px{font-family:var(--mono);font-size:.76rem;color:var(--gild);white-space:nowrap}
 .charstat{margin-top:6px}
+.stagesel{display:grid;gap:3px;margin-top:8px}
+.stagesel span{font-family:var(--ui);font-size:.72rem;color:var(--mute);letter-spacing:.04em}
+.stagesel select{max-width:260px}
+.lvwarn{margin:6px 12px 0;padding:5px 8px;border:1px solid rgba(224,102,79,.55);color:#ffb3a3;font-family:var(--ui);font-size:.8rem}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+@media (max-width:600px){.qgrid{grid-template-columns:1fr}}
+.qcard{padding:14px;display:grid;gap:8px;align-content:start}
+.qcard.lock{border-color:rgba(224,102,79,.35)}
+.qcard.have{border-color:#2f5b4c}
+.qh{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center}
+.qh img{width:48px;height:48px;object-fit:contain}
+.qh .qi{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--edge2);font-family:var(--display);color:var(--gild-hi)}
+.qh h3{margin:0;font-size:1.05rem}
+.qh small{color:var(--mute);font-size:.8rem}
+.qst{padding:3px 8px;font-family:var(--ui);font-size:.74rem;font-weight:700;border:1px solid var(--edge2);white-space:nowrap}
+.qst.lock{border-color:rgba(224,102,79,.6);color:#ffb3a3}
+.qst.ok{border-color:#8a6a38;color:var(--gild-hi)}
+.qst.have{border-color:#2f5b4c;color:#8fd9b8}
+.qrow b{display:block;font-family:var(--ui);font-size:.8rem;color:var(--gild);letter-spacing:.03em}
+.qrow p{margin:2px 0 0;font-size:.92rem}
+.qrow ol,.qrow ul{margin:4px 0 0;padding-left:18px;font-size:.9rem;display:grid;gap:3px}
+.qrow.early b{color:#9fd2ff}.qrow.late b{color:#e0b36a}.qrow.watch b{color:#ffb3a3}
 .spnote{padding:12px 14px;margin-bottom:16px;border-color:#8a6a38;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(200,165,106,.1),transparent)}
 .spnote b{font-family:var(--display);color:var(--gild-hi);font-size:1rem}
 .spnote p{margin:0;color:var(--text)}
@@ -562,7 +584,7 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
         <canvas id="wisps" aria-hidden="true"></canvas>
         <div class="lvrow">
           <div class="orbLv"><b id="bigLv" aria-live="polite">35</b><small>NÍVEL</small></div>
-          <div class="meta"><div class="label">Você está em</div><div class="ph" id="phName">—</div><div class="tg" id="phTag">—</div></div>
+          <div class="meta"><div class="label">Você está em</div><div class="ph" id="phName">—</div><div class="tg" id="phTag">—</div><label class="stagesel"><span id="stageLbl">Onde você está no jogo</span><select id="stageSel" aria-label="Onde você está no jogo"></select></label></div>
           <div class="step"><button type="button" id="minus" aria-label="Diminuir nível">−</button><button type="button" id="plus" aria-label="Aumentar nível">+</button></div>
         </div>
         <div>
@@ -581,6 +603,7 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
 
     <section class="view" id="v-agora"></section>
     <section class="view" id="v-meu"></section>
+    <section class="view" id="v-quando"></section>
     <section class="view" id="v-meta"></section>
     <section class="view" id="v-uniques"></section>
     <section class="view" id="v-arvore"></section>
@@ -615,9 +638,11 @@ const store = {
   set(k, v) { try { localStorage.setItem("silverfist2:" + k, JSON.stringify(v)); } catch (e) {} }
 };
 const S = { lv: store.get("lv", 35), mode: store.get("mode", "cheap"), tab: store.get("tab", "agora"), done: store.get("done", {}), trickCat: "Todos", skillPhase: null, treePhase: null, gearPhase: null };
+S.stage = store.get("stage", "auto");
+function curPhase() { return (S.stage && S.stage !== "auto" && D.phases.find(p => p.id === S.stage)) || phaseOf(S.lv); }
 const phaseOf = lv => D.phases.find(p => lv >= p.lv[0] && lv <= p.lv[1]) || D.phases[D.phases.length - 1];
 const msList = Object.entries(D.milestones).map(([k, v]) => ({ lv: +k, t: v })).sort((a, b) => a.lv - b.lv);
-const TABS = [["agora","Agora"],["meu","Meu personagem"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]];
+const TABS = [["agora","Agora"],["meu","Meu personagem"],["quando","Quando usar"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]];
 const baseSkill = s => s.replace(/\s*\(.*\)/, "").trim();
 const gemImg = s => ic(A.gemIcon[baseSkill(s)]);
 const supImg = s => ic(A.supIcon[s]);
@@ -636,15 +661,24 @@ function buildRail() {
 }
 function paintRail() {
   const y = ((S.lv - 1) / 99) * 100; $("#fillbar").style.height = y + "%"; $("#you").style.top = y + "%";
-  const cur = phaseOf(S.lv);
+  const cur = curPhase();
   document.querySelectorAll("#totem .node").forEach(n => { const p = D.phases[+n.dataset.i]; n.classList.toggle("cur", p === cur); n.classList.toggle("done", p.lv[1] < S.lv); });
 }
 function setLv(v) {
   S.lv = Math.max(1, Math.min(100, +v)); store.set("lv", S.lv);
   $("#lv").value = S.lv; $("#lv").style.setProperty("--p", ((S.lv - 1) / 99 * 100) + "%"); $("#bigLv").textContent = S.lv;
-  const p = phaseOf(S.lv); $("#phName").textContent = p.name; $("#phTag").textContent = `Nv ${p.lv[0]}–${p.lv[1]} · ${p.tag}`;
+  paintStage();
   S.skillPhase = S.treePhase = S.gearPhase = null;
   paintRail(); render(); renderSide();
+}
+function paintStage() {
+  const p = curPhase(); $("#phName").textContent = p.name;
+  const manual = S.stage && S.stage !== "auto";
+  $("#phTag").textContent = `${T("Nv", "Lv")} ${p.lv[0]}–${p.lv[1]} · ${p.tag}` + (manual && (S.lv < p.lv[0] || S.lv > p.lv[1]) ? T(` · escolhida manualmente (você é nível ${S.lv})`, ` · picked manually (you are level ${S.lv})`) : "");
+  const sel = $("#stageSel");
+  sel.innerHTML = `<option value="auto">${T("Automático pelo nível", "Automatic by level")} (${esc(phaseOf(S.lv).name)})</option>` + D.phases.map(x => `<option value="${x.id}" ${x.id === S.stage ? "selected" : ""}>${esc(x.name)}</option>`).join("");
+  sel.value = manual ? S.stage : "auto";
+  $("#stageLbl").textContent = T("Onde você está no jogo", "Where you are in the game");
 }
 function setMode(m) {
   S.mode = m; store.set("mode", m); $("#mode").classList.toggle("full", m === "full");
@@ -700,11 +734,13 @@ function gemCard(g, diff, detailed) {
     ${isNew ? '<div class="diff">◆ Nova nesta fase</div>' : ""}${removed.length ? `<div class="diff rem">Sai: ${removed.map(esc).join(", ")}</div>` : ""}
   </article>`;
 }
+function lvlReq(name) { const u = D.uniques.find(x => x.n === name); return u && u.lvl ? u : null; }
 function itemCard(it) {
-  const im = ic(it.ic);
+  const im = ic(it.ic); const lr = lvlReq(it.n);
+  const lvWarn = lr && lr.lvl > S.lv ? `<div class="lvwarn">${T(`Requer nível ${lr.lvl} — você é ${S.lv}. Guarde até lá.`, `Requires level ${lr.lvl} — you are ${S.lv}. Keep it until then.`)}</div>` : (lr && lr.lvlRf && lr.lvlRf > S.lv && (it.r || []).some(x => /Rune(forged|mastered)/.test(x)) ? `<div class="lvwarn">${T(`Versão Runeforged/Runemastered requer nível ${lr.lvlRf}; a normal, ${lr.lvl}.`, `Runeforged/Runemastered version requires level ${lr.lvlRf}; the normal one, ${lr.lvl}.`)}</div>` : "");
   const mods = (it.x || "").split(" ; ").filter(Boolean);
   return `<article class="tt ${it.u ? "unique" : "rare"}">
-    <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Único" : ""}</small></div>
+    <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Único" : ""}${lr ? ` · ${T("nível", "level")} ${lr.lvl}${lr.lvlRf ? "/" + lr.lvlRf : ""}` : ""}</small></div>${lvWarn}
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(it.n)}">` : ""}</div>
       <div class="mods">${mods.length ? mods.map(m => `<span>${esc(m)}</span>`).join("") : '<span class="none">Veja os mods do único no jogo.</span>'}</div></div>
     ${it.r && it.r.length ? `<div class="runes"><b>${it.rs ? "Sockets (do guia)" : "Sockets (sugestão)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">Sem socket? Artificer’s Orb adiciona um.all>'}</div>` : ""}
@@ -749,7 +785,7 @@ function renderSide() {
   const app = document.querySelector(".app");
   const drawer = $("#side").classList.contains("drawer");
   app.classList.toggle("side-min", !!S.sideMin && !drawer);
-  const p = phaseOf(S.lv); const items = setItems(p.id);
+  const p = curPhase(); const items = setItems(p.id);
   const find = re => items.find(i => re.test(i.slot));
   const rings = items.filter(i => /Anel/.test(i.slot));
   const cell = (it, cls, lab) => `<div class="cell ${cls} ${it && it.u ? "u" : ""} ${it ? "" : "empty"}" data-gotab="gear" title="${it ? esc(it.n) + (it.price != null ? " · " + fmtPrice(it.price) : "") : esc(lab)}">${it && ic(it.ic) ? `<img src="${ic(it.ic)}" alt="${esc(it.n)}">` : ""}<span>${lab}</span></div>`;
@@ -823,7 +859,7 @@ document.addEventListener("click", e => {
 
 /* ------------------------------------------------ views */
 function vAgora() {
-  const p = phaseOf(S.lv); const i = D.phases.indexOf(p); const next = D.phases[i + 1];
+  const p = curPhase(); const i = D.phases.indexOf(p); const next = D.phases[i + 1];
   const last = [...msList].reverse().find(m => m.lv <= S.lv); const nxt = msList.filter(m => m.lv > S.lv).slice(0, 3);
   const chk = (key, html) => `<label class="check ${S.done[key] ? "done" : ""}"><input type="checkbox" data-key="${key}" ${S.done[key] ? "checked" : ""}><span>${html}</span></label>`;
   const exits = p.exit.map((e, k) => chk(`exit:${p.id}:${k}`, esc(e))).join("");
@@ -1016,9 +1052,9 @@ class TreeView {
 let TV = null, AV = null;
 const TREE_ORDER = ["a1", "a2", "a3", "a4", "int", "ea", "t15", "mm", "uber"];
 function vArvore() {
-  const pid = S.treePhase || phaseOf(S.lv).id;
+  const pid = S.treePhase || curPhase().id;
   const nt = A.notables[pid]; const name = pid === "uber" ? "Bossing (endgame)" : D.phases.find(p => p.id === pid).name;
-  const lvBased = pid === phaseOf(S.lv).id; const ts = treeState(pid, lvBased);
+  const lvBased = pid === curPhase().id; const ts = treeState(pid, lvBased);
   return `<div class="sechead"><div><h2>Árvore de Passivas</h2><p>Árvore real do patch 0.5.5 com o caminho do <b>guia do Mattjestic</b> em cada fase. Atos 1–2: Twister. Ato 3 em diante: só companion e defesa. O único keystone de "arma" é o Giant's Blood, necessário para usar a Chober Chaber com sceptre. <b style="color:#E3BE78">Dourado</b> = árvore principal, <b style="color:var(--set1)">vermelho</b> = Weapon Set I, <b style="color:var(--set2)">verde</b> = Weapon Set II — as mesmas cores do jogo. Contorno verde-claro = nó novo nesta fase.</p></div></div>
   ${phaseSel(pid, "tree", [["uber", "Bossing (endgame)"]])}
   <div class="treewrap" style="margin-top:14px">
@@ -1057,7 +1093,7 @@ function vArvore() {
   </div>`;
 }
 function mountTree() {
-  const pid = S.treePhase || phaseOf(S.lv).id; const i = TREE_ORDER.indexOf(pid);
+  const pid = S.treePhase || curPhase().id; const i = TREE_ORDER.indexOf(pid);
   const prev = i > 0 ? A.alloc[TREE_ORDER[i - 1]] : null; const prevIds = prev ? new Set([...prev.m, ...prev.s1, ...prev.s2]) : new Set();
   const tip = (el, meta) => (n, x, y) => {
     if (!n) { el.style.display = "none"; return; } const m = meta[n[0]]; if (!m) { el.style.display = "none"; return; }
@@ -1067,7 +1103,7 @@ function mountTree() {
   };
   TV = new TreeView($("#treeCv"), A.tree, { showNew: true, labels: !!S.treeLabels, onHover: tip($("#ttip"), A.tree.meta) });
   if (S.treeMeta) TV.metaSet = new Set(A.metaNotables.map(m => m.id));
-  const al = A.alloc[pid]; const ts = treeState(pid, pid === phaseOf(S.lv).id);
+  const al = A.alloc[pid]; const ts = treeState(pid, pid === curPhase().id);
   TV.setAlloc({ m: ts.m, s1: al.s1, s2: al.s2 }, i > 0 ? prevIds : null); TV.setNext(ts.next); TV.fitIds = [...ts.m, ...ts.next];
   requestAnimationFrame(() => TV.fit(TV.fitIds));
   AV = new TreeView($("#ascCv"), A.asc, { pad: 160, labels: true, labelAll: true, onHover: tip($("#ttip2"), A.asc.meta) });
@@ -1076,7 +1112,7 @@ function mountTree() {
 }
 
 function vRota() {
-  const cur = phaseOf(S.lv); const rows = [];
+  const cur = curPhase(); const rows = [];
   for (let lv = 1; lv <= 100; lv++) { const p = phaseOf(lv); const m = D.milestones[lv];
     rows.push(`<div class="lvl ${m ? "ms" : "none"} ${lv === S.lv ? "cur" : ""} ${lv < S.lv ? "past" : ""}" data-lv="${lv}"><span class="n">${lv}</span><span class="p">${esc(p.name)}</span><span class="t">${m ? esc(m) : "Siga o foco da fase: " + esc(p.stats.slice(0, 3).join(" · "))}</span><span class="tagcol">${lv === p.lv[0] ? `<span class="chip gold">${esc(p.tag)}</span>` : ""}</span></div>`); }
   return `<div class="sechead"><div><h2>Rota 1 → 100</h2><p>Oito fases, uma única build. O dano migra de você para o zoo sem nenhuma queda: cada fase prepara a próxima.</p></div></div>
@@ -1090,7 +1126,7 @@ function vRota() {
 }
 
 function vSkills() {
-  const sel = S.skillPhase ? D.phases.find(p => p.id === S.skillPhase) : phaseOf(S.lv);
+  const sel = S.skillPhase ? D.phases.find(p => p.id === S.skillPhase) : curPhase();
   return `<div class="sechead"><div><h2>Skills & Supports</h2><p>Escolha a fase. Supports com borda dourada mudaram em relação à fase anterior; "Sai" mostra o que remover.</p></div></div>
   ${phaseSel(sel.id, "skills")}
   <div style="margin-top:14px">${gemGrid(sel, false, true)}</div>
@@ -1101,7 +1137,7 @@ function vSkills() {
 }
 
 function vGear() {
-  const sel = S.gearPhase ? D.phases.find(p => p.id === S.gearPhase) : phaseOf(S.lv);
+  const sel = S.gearPhase ? D.phases.find(p => p.id === S.gearPhase) : curPhase();
   const tiers = S.mode === "cheap" ? ["cheap"] : ["value", "full"];
   return `<div class="sechead"><div><h2>Itens</h2><p>Primeiro, o set completo da fase escolhida. Depois, cada slot do barato ao completo.</p></div></div>
   ${phaseSel(sel.id, "gear")}
@@ -1227,7 +1263,7 @@ const phaseName = id => (D.phases.find(p => p.id === id) || {}).name || id;
 const OPT_PHASE = { a3: [5], a4: [5], int: [5], ea: [0, 1, 5, 6, 7, 9], t15: [0, 2, 3, 4, 6, 8], mm: [3, 8] };
 S.uf = { ph: "todas", cat: "Todos", tier: "Todas", sort: "fase" };
 function uniqueCard(u, highlight) {
-  const im = uniqImg(u.n); const cur = phaseOf(S.lv);
+  const im = uniqImg(u.n); const cur = curPhase();
   const reached = PH_ORDER.indexOf(u.p) <= PH_ORDER.indexOf(cur.id);
   const tierChip = u.tier === "Barato" ? "wisp" : u.tier === "Valor" ? "gold" : "unique";
   return `<article class="tt unique ucard ${highlight && reached && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""}">
@@ -1275,7 +1311,7 @@ function vMeta() {
   </div>`;
 }
 
-const VIEWS = { meu: vMeu, meta: vMeta, uniques: vUniques, agora: vAgora, arvore: vArvore, rota: vRota, skills: vSkills, gear: vGear, zoo: vZoo, asc: vAsc, quests: vQuests, tricks: vTricks, atlas: vAtlas, diag: vDiag, fontes: vFontes };
+const VIEWS = { meu: vMeu, quando: vQuando, meta: vMeta, uniques: vUniques, agora: vAgora, arvore: vArvore, rota: vRota, skills: vSkills, gear: vGear, zoo: vZoo, asc: vAsc, quests: vQuests, tricks: vTricks, atlas: vAtlas, diag: vDiag, fontes: vFontes };
 function renderTab(id) {
   const el = $("#v-" + id); el.innerHTML = VIEWS[id]();
   if (id === "arvore") mountTree();
@@ -1308,7 +1344,7 @@ function charItemList() {
   return [...seen.values()];
 }
 function charRecs() {
-  const c = S.ch, lv = S.lv, p = phaseOf(lv), act = ACT_OF[p.id] || 1, R = [];
+  const c = S.ch, lv = S.lv, p = curPhase(), act = ACT_OF[p.id] || 1, R = [];
   const add = (lvl, t, d, tab) => R.push({ lvl, t, d, tab });
   const has = n => !!c.items[n];
   const effigy = has("Sylvan's Effigy");
@@ -1348,6 +1384,9 @@ function charRecs() {
   if (auraPets.length && !auraPets.some(x => x.aura === "haste")) add("tip", T("Nenhum companion com Haste", "No companion with Haste"), T("Haste é a melhor aura. Quill Crab / Coconut Crab (Ato 4, Whakapanu Island) rolam Haste com facilidade.", "Haste is the best aura. Quill Crab / Coconut Crab (Act 4, Whakapanu Island) roll Haste easily."), "zoo");
   if (!effigy && pets.length >= 2) add("ok", T("Limite de 2 companions atingido", "2-companion limit reached"), T("O 3º companion só entra com o Sylvan's Effigy", "The 3rd companion only comes with Sylvan's Effigy") + ((D.uniques.find(u => u.n === "Sylvan's Effigy") || {}).price != null ? ` (${fmtPrice(D.uniques.find(u => u.n === "Sylvan's Effigy").price)}).` : ".") + T(" Enquanto isso, capture e guarde um Swarming Wisp / Plague Swarm com aura Physical.", " Meanwhile, capture and keep a Swarming Wisp / Plague Swarm with a Physical aura."), "uniques");
   if (effigy && pets.length < 4 && lv >= 78) add("tip", T("Com o Effigy cabem mais companions", "With the Effigy more companions fit"), T("Adicione beasts de aura de tipos diferentes (Haste, Physical, ES) enquanto houver Spirit, e o Azmerian Wolf do Effigy.", "Add aura beasts of different types (Haste, Physical, ES) while Spirit allows, plus the Effigy's Azmerian Wolf."), "zoo");
+  // ---- itens acima do nível / fase
+  for (const e of D.timing) if (e.kind === "item" && c.items[e.n] && e.lvl > lv) add("warn", T(`${e.n}: requer nível ${e.lvl} (você é ${lv})`, `${e.n}: requires level ${e.lvl} (you are ${lv})`), e.early, "quando");
+  if ((!S.stage || S.stage === "auto") && lv >= 58 && lv <= 64) add("tip", T("Já está no Atlas?", "Already in the Atlas?"), T("Escolha 'Início do Atlas' em 'Onde você está no jogo' no topo. O guia passa a mostrar a fase certa sem mudar o seu nível.", "Pick 'Early Atlas' in 'Where you are in the game' at the top. The guide shows the right phase without changing your level."), "quando");
   // ---- arma
   if (has("Chober Chaber") && (has("Rattling Sceptre") || effigy) && !c.gb && !has("Treefingers")) add("bad", T("Chober Chaber + sceptre precisa de Giant's Blood", "Chober Chaber + sceptre needs Giant's Blood"), T("Use Treefingers (luvas) ou o keystone Giant's Blood na árvore.", "Use Treefingers (gloves) or the Giant's Blood keystone on the tree."), "gear");
   if (has("Chober Chaber") && (c.gb || has("Treefingers")) && !has("The Vertex")) add("warn", T("Requisitos de atributo triplicados", "Tripled attribute requirements"), T("Giant's Blood triplica os requisitos. The Vertex (versão 'Equipment has no Attribute Requirements') resolve.", "Giant's Blood triples requirements. The Vertex ('Equipment has no Attribute Requirements' version) fixes it."), "uniques");
@@ -1378,7 +1417,7 @@ function charRecs() {
   return { recs: R.sort((a, b) => order[a.lvl] - order[b.lvl]), limit, pets, est, tk, effigy, skN, want, missing, total };
 }
 function vMeu() {
-  const c = S.ch, r = charRecs(), p = phaseOf(S.lv);
+  const c = S.ch, r = charRecs(), p = curPhase();
   const items = charItemList();
   const box = (k, label, checked, extra = "") => `<label class="chk"><input type="checkbox" ${k} ${checked ? "checked" : ""}><span>${label}</span>${extra}</label>`;
   const icon = { bad: "✖", warn: "!", tip: "➜", ok: "✔" };
@@ -1419,6 +1458,7 @@ function vMeu() {
   </div>`;
 }
 document.addEventListener("change", e => {
+  if (e.target.id === "stageSel") { S.stage = e.target.value; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   const t = e.target; const c = S.ch; if (!t.closest || !t.closest("#v-meu, #side")) return;
   if (t.dataset.chk) { c[t.dataset.chk] = t.checked; saveCh(); }
   else if (t.dataset.asc) { c.asc[t.dataset.asc] = t.checked; saveCh(); }
@@ -1428,6 +1468,35 @@ document.addEventListener("change", e => {
 });
 document.addEventListener("input", e => { const t = e.target; if (t.dataset && t.dataset.ch) { S.ch[t.dataset.ch] = t.value; saveCh(true); } });
 document.addEventListener("click", e => { if (e.target.id === "petAdd") { S.ch.pets.push({ b: -1, aura: "none", on: false }); saveCh(); } });
+
+/* ------------------------------------------------ quando usar */
+S.qf = store.get("qf", "all");
+function qStatus(e) {
+  const owned = e.kind === "item" ? !!S.ch.items[e.n] : e.kind === "asc" ? !!S.ch.asc[{ "Wild Protector": "wp", "The Natural Order": "no", "The Catha's Balance": "catha", "Idolatry": "idol" }[e.n]] : e.kind === "key" ? (e.n === "Trusted Kinship" ? S.ch.tk : e.n === "Giant's Blood" ? S.ch.gb : false) : false;
+  if (e.lvl > S.lv) return { k: "lock", t: T(`Nível ${e.lvl} — faltam ${e.lvl - S.lv}`, `Level ${e.lvl} — ${e.lvl - S.lv} to go`), owned };
+  return { k: owned ? "have" : "ok", t: owned ? T("Você já tem", "You have it") : T("Já pode usar", "Usable now"), owned };
+}
+function vQuando() {
+  const kinds = [["all", T("Tudo", "All")], ["item", T("Itens", "Items")], ["asc", T("Ascendência", "Ascendancy")], ["key", T("Keystones", "Keystones")], ["skill", T("Skills", "Skills")]];
+  const list = D.timing.filter(e => S.qf === "all" || e.kind === S.qf).slice().sort((a, b) => (qStatus(a).owned && a.lvl > S.lv ? -1 : 0) - (qStatus(b).owned && b.lvl > S.lv ? -1 : 0) || a.lvl - b.lvl);
+  const early = D.timing.filter(e => qStatus(e).owned && e.lvl > S.lv);
+  const card = e => { const st = qStatus(e); const im = uniqImg(e.n) || gemImg(e.n.replace(/\s*\(.*\)/, "")) || "";
+    return `<article class="qcard frame ${st.k}" id="q-${esc(e.n.replace(/[^A-Za-z]/g, ""))}">
+      <div class="qh">${im ? `<img src="${im}" alt="">` : `<span class="qi">${esc(e.n[0])}</span>`}<div><h3>${esc(e.n)}</h3><small>${esc(e.req)}</small></div><span class="qst ${st.k}">${esc(st.t)}</span></div>
+      <div class="qrow"><b>${T("Quando usar", "When to use")}</b><p>${esc(e.when)}</p></div>
+      <div class="qrow"><b>${T("O que faz", "What it does")}</b><p>${esc(e.gives)}</p></div>
+      ${e.early && e.early !== "—" ? `<div class="qrow early"><b>${T("Se conseguir antes", "If you get it early")}</b><p>${esc(e.early)}</p></div>` : ""}
+      ${e.late && e.late !== "—" ? `<div class="qrow late"><b>${T("Se ainda não tem", "If you don't have it yet")}</b><p>${esc(e.late)}</p></div>` : ""}
+      ${e.steps.length ? `<div class="qrow"><b>${T("O que mudar quando entrar", "What to change when it comes in")}</b><ol>${e.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div>` : ""}
+      ${e.watch.length ? `<div class="qrow watch"><b>${T("Cuidado", "Watch out")}</b><ul>${e.watch.map(s => `<li>${esc(s)}</li>`).join("")}</ul></div>` : ""}
+    </article>`; };
+  return `<div class="sechead"><div><h2>${T("Quando usar cada peça", "When to use each piece")}</h2><p>${T("Requisito real de nível (texto do item na liga), momento ideal na rota e o que fazer se você conseguir o item, a ascendência ou a skill antes ou depois do planejado. O status de cada cartão usa o seu nível e o que você marcou em Meu personagem.", "Real level requirement (item text in the league), ideal moment in the route and what to do if you get the item, ascendancy or skill earlier or later than planned. Each card's status uses your level and what you ticked in My character.")}</p></div></div>
+  ${early.length ? `<div class="spnote frame"><b>${T("Você tem", "You have")}</b><p>${early.map(e => `<a href="#q-${esc(e.n.replace(/[^A-Za-z]/g, ""))}">${esc(e.n)}</a> (${T("nível", "level")} ${e.lvl})`).join(" · ")} — ${T("ainda não dá para usar no seu nível. Veja o que preparar em cada cartão.", "not usable at your level yet. See what to prepare on each card.")}</p></div>` : ""}
+  <div class="panel frame" style="margin-bottom:16px"><h3>${T("Casos comuns", "Common cases")}</h3>${D.timingCases.map((c, i) => `<details class="acc" ${i === 0 ? "open" : ""}><summary>${esc(c.q)}</summary><div>${esc(c.a)}</div></details>`).join("")}</div>
+  <div class="filters" id="qfilt" style="margin-bottom:14px">${kinds.map(([k, l]) => `<button type="button" data-qf="${k}" aria-pressed="${S.qf === k}">${l}</button>`).join("")}</div>
+  <div class="qgrid stagger">${list.map(card).join("")}</div>`;
+}
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-qf]"); if (b) { S.qf = b.dataset.qf; store.set("qf", S.qf); render(); } });
 
 /* ------------------------------------------------ events */
 document.addEventListener("change", e => {
@@ -1446,7 +1515,7 @@ document.addEventListener("click", e => {
   const go = t.closest("[data-go]"); if (go) { setLv(+go.dataset.go); return; }
   const lvl = t.closest(".lvl"); if (lvl) { setLv(+lvl.dataset.lv); return; }
   const ph = t.closest("[data-sel] button"); if (ph) { const w = ph.parentElement.dataset.sel; if (w === "tree") S.treePhase = ph.dataset.ph; if (w === "skills") S.skillPhase = ph.dataset.ph; if (w === "gear") S.gearPhase = ph.dataset.ph; render(); return; }
-  const tz = t.closest("[data-tz]"); if (tz && TV) { const a = tz.dataset.tz; const pid = S.treePhase || phaseOf(S.lv).id; const al = A.alloc[pid];
+  const tz = t.closest("[data-tz]"); if (tz && TV) { const a = tz.dataset.tz; const pid = S.treePhase || curPhase().id; const al = A.alloc[pid];
     if (a === "in") TV.zoom(1.35); else if (a === "out") TV.zoom(1 / 1.35); else if (a === "fit") TV.fit(TV.fitIds || al.m); else if (a === "all") TV.fit(); else if (a === "meta") { S.treeMeta = !S.treeMeta; TV.metaSet = S.treeMeta ? new Set(A.metaNotables.map(m => m.id)) : null; tz.setAttribute("aria-pressed", S.treeMeta); if (S.treeMeta) TV.fit([...al.m, ...A.metaNotables.map(m => m.id)]); else TV.draw(); } else if (a === "labels") { S.treeLabels = !S.treeLabels; TV.o.labels = S.treeLabels; tz.setAttribute("aria-pressed", S.treeLabels); TV.draw(); } return; }
   const uf = t.closest("[data-uf]"); if (uf) { S.uf[uf.dataset.uf] = uf.dataset.v; render(); return; }
   const tc = t.closest("#tcat button"); if (tc) { S.trickCat = tc.dataset.c; render(); return; }

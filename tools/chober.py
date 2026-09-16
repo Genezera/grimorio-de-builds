@@ -498,6 +498,9 @@ DATA.update(phases=PHASES, milestones=MILESTONES, beasts=BEASTS, auraPriority=AU
             treeStages=TREE_STAGES, buyOrder=BUY_ORDER, supWhy=SUPWHY, guideUrl=GUIDE_URL, current=CURRENT_SETUP, troubleshoot=[dict(q=a, a=b) for a, b in TROUBLESHOOT])
 
 spirit_tiers.cleanup(DATA)
+import timing
+timing.unique_levels(UNIQUES)
+DATA.update(timing=timing.TIMING, timingCases=timing.TIMING_CASES)
 spirit_tiers.companion_limit(DATA)
 # mantém as estruturas cruas (usadas pela planilha) iguais ao DATA
 TRICKS[:] = DATA["tricks"]
