@@ -173,8 +173,15 @@
     paintScene(id); paintNav(); paintTrails();
     const view = document.getElementById('v-' + id); if (view) reveal(view);
   }
+  function ritesLink() {
+    const home = document.querySelector('.homebtn'); if (!home || document.querySelector('.rites-link')) return;
+    const a = document.createElement('a'); a.className = 'homebtn rites-link';
+    a.href = '../rites/' + (typeof LANG !== 'undefined' && LANG === 'en' ? 'en.html' : 'index.html');
+    a.textContent = typeof T === 'function' ? T('Challenges da liga', 'League challenges') : 'Forbidden Rites';
+    home.after(a);
+  }
   function boot() {
-    medal(); trails(); stuck();
+    medal(); trails(); stuck(); ritesLink();
     if (typeof renderTab === 'function') {
       const orig = renderTab;
       renderTab = function (id) { orig(id); try { afterRender(S.tab); } catch (e) { /* decorative only */ } };

@@ -11,6 +11,7 @@ Site: https://genezera.github.io/trilha-silverfist/
 | `index.html` · `en.html` | Página inicial para escolher a build · Build picker (PT · EN) |
 | `silverfist/index.html` · `silverfist/en.html` | Huntress · Spirit Walker — Mighty Silverfist zoo (guia do Mattjestic) |
 | `oracle/index.html` · `oracle/en.html` | Druid · Oracle — Spell Totem (guia do Lowepe) |
+| `rites/index.html` · `rites/en.html` | Liga Forbidden Rites — guia das 8 challenges (checklists, planejador de Omens, progresso salvo) |
 
 O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:` e `oracle1:`).
 The **PT / EN** switch changes language; each build's progress is shared between both versions.
