@@ -60,7 +60,7 @@ def apply(PH, MILESTONES, TROUBLESHOOT, CURRENT_SETUP, TRICKS, OPTS=(), UNIQ=())
     tag(find("a4", "Wild Protector"), "free", 0, "Ascendência")
     third = find("a4", "Tame Beast (3º")
     tag(third, "opt", 1, "~21–25% do Spirit")
-    third["why"] = "Só quando ganhar mais Spirit (Lythara +40 nos Interlúdios, capacete/amuleto com Spirit). Até lá, deixe a gem vazia só para capturar: Quill Crab e Coconut Crab aparecem no Whakapanu Island (Ato 4)."
+    third["why"] = "Só quando ganhar mais Spirit (Lythara +40 nos Interlúdios, capacete/amuleto com Spirit). Até lá, deixe a gem vazia só para capturar: Quill Crab e Coconut Crab aparecem no Whakapanu Island (Ato 4); Haste neles é sorte."
     p["gems"].append({"skill": "Skeletal Warrior (2º esqueleto)", "set": "—", "sup": ["Sacrificial Lamb I"], "role": "Só se sobrar Spirit",
                       "why": "Um 2º esqueleto libera o Danse Macabre no Pain Offering (+30% efeito). Com ~210 Spirit no nível 49 ele NÃO cabe junto com Silverfist + aura + Withering Presence + 1 esqueleto. Deixe para os Interlúdios.",
                       "sp": "opt", "pr": 2, "cost": "Pouco Spirit (1 minion)"})

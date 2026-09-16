@@ -316,7 +316,7 @@ MILESTONES.update({
 # ------------------------------------------------------------------ beasts (tier-list Mattjestic)
 BEASTS[:] = [
  {"name": "Mighty Silverfist / Zekoa", "where": "Ato 3 Jungle Ruins / mapas Riverside e Rupture", "role": "Único DPS de verdade", "cost": 47.4, "tier": "S+", "mods": "Extra Crits · Hasted · Extra Damage as Chaos/Physical", "sup": "Feeding Frenzy II · Rage III · Muster · Heft · Rapid Attacks II", "req": "Tame Beast + The Natural Order"},
- {"name": "Quill Crab (Porcupine)", "where": "Ato 4 Whakapanu Island (essence e raros na praia)", "role": "Aura bot barato", "cost": 24.9, "tier": "S", "mods": "Haste Aura (o mais fácil de achar)", "sup": "Loyalty · Last Gasp · Elemental Army · Meat Shield II · Minion Mastery", "req": "Tame Beast"},
+ {"name": "Quill Crab (Porcupine)", "where": "Ato 4 Whakapanu Island (essence e raros na praia)", "role": "Aura bot barato", "cost": 24.9, "tier": "S", "mods": "Qualquer aura T1, inclusive Haste (sorte: farme essences de crab)", "sup": "Loyalty · Last Gasp · Elemental Army · Meat Shield II · Minion Mastery", "req": "Tame Beast"},
  {"name": "Coconut Crab", "where": "Ato 4 Whakapanu Island", "role": "Aura bot barato", "cost": 24.9, "tier": "S", "mods": "Haste / Physical Aura", "sup": "Loyalty · Last Gasp · Elemental Army · Meat Shield II · Minion Mastery", "req": "Tame Beast"},
  {"name": "Swarming Wisp", "where": "Ato 5 Ashen Forest (essence)", "role": "Aura bot mais barato", "cost": 21.0, "tier": "S", "mods": "Qualquer aura T1 exceto Haste", "sup": "Loyalty · Last Gasp · Elemental Army · Meat Shield II · Minion Mastery", "req": "Tame Beast"},
  {"name": "Plague Swarm", "where": "Ato 2 Mawdun Quarry (essence)", "role": "Aura bot mais barato", "cost": 21.0, "tier": "A+", "mods": "Aura T1", "sup": "Loyalty · Last Gasp · Elemental Army · Meat Shield II · Minion Mastery", "req": "Tame Beast"},
@@ -432,7 +432,7 @@ TRICKS[:0] = [
  {"cat": "Captura", "lvl": "Médio", "title": "Rota de aura bots do Mattjestic",
   "body": "1) Ato 4 Whakapanu Island: essence de crabs na praia (Quill/Coconut Crab ~25%) até achar Haste Aura. 2) Ato 5 Ashen Forest: Swarming Wisp (21%) com qualquer aura T1 exceto Haste. 3) Ato 2 Vastiri Outskirts: Crag Leaper (23,1%). Guarde auras T1 diferentes e substitua crabs duplicados."},
  {"cat": "Captura", "lvl": "Fácil", "title": "Haste não aparece em beasts muito rápidos",
-  "body": "Beasts com a tag very_fast_movement (ex.: Crag Leaper) nunca rolam Haste Aura. Procure Haste em crabs."},
+  "body": "Beasts com a tag very_fast_movement (ex.: Crag Leaper) nunca rolam Haste Aura. Pelo guia do Mattjestic, Quadrilla, Swarming Wisp e Hyena Demon também não. Para Haste, farme essences de crab no Whakapanu Island (Ato 4) — crabs são onde é mais fácil achar todas as auras T1, mas Haste continua sendo sorte e pode levar várias tentativas."},
  {"cat": "Dano", "lvl": "Médio", "title": "Conte os tipos de minion para o Muster",
   "body": "Urso, macaco, cada beast diferente, Azmerian Wolf, Wolf Pack, Spirit Vessel e cada tipo de esqueleto contam como um tipo. Cada um soma 7% more dano nos companions com Muster."},
  {"cat": "Spirit", "lvl": "Fácil", "title": "Os 2 primeiros Skeletal Warriors são grátis",
