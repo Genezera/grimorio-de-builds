@@ -201,7 +201,7 @@ UI = [
 (">da próxima fase<", ">from next phase<"),
 
 ("<small>ESQUELETOS</small>", "<small>SKELETONS</small>"),
-('title="${esc(p.skeletons.note)}">Esqueletos: <b>', 'title="${esc(p.skeletons.note)}">Skeletons: <b>'),
+('title="${esc(pa.skeletons.note)}">Esqueletos: <b>', 'title="${esc(pa.skeletons.note)}">Skeletons: <b>'),
 ("<b style=\"color:var(--gild-hi)\">Limite de companions:</b> 1 base · 2 de tipos diferentes com Trusted Kinship ou Yriel's Fostering · qualquer número com Sylvan's Effigy (o urso do Wild Protector não conta). Antes do Effigy: macaco + 1 beast de aura — prefira os de 21–25% de Spirit. Use a aba <a href=\"#\" data-gotab=\"meu\">Meu personagem</a> para ver o que cabe no seu Spirit.", "<b style=\"color:var(--gild-hi)\">Companion limit:</b> 1 base · 2 of different types with Trusted Kinship or Yriel's Fostering · any number with Sylvan's Effigy (the Wild Protector bear doesn't count). Before the Effigy: monkey + 1 aura beast — prefer the 21–25% Spirit ones. Use the <a href=\"#\" data-gotab=\"meu\">My character</a> tab to see what fits your Spirit."),
 ('<span id="stageLbl">Onde você está no jogo</span><select id="stageSel" aria-label="Onde você está no jogo">', '<span id="stageLbl">Where you are in the game</span><select id="stageSel" aria-label="Where you are in the game">'),
 ]

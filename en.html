@@ -236,6 +236,14 @@ ul.clean.danger li::before{background:var(--danger)}
 .qrow p{margin:2px 0 0;font-size:.92rem}
 .qrow ol,.qrow ul{margin:4px 0 0;padding-left:18px;font-size:.9rem;display:grid;gap:3px}
 .qrow.early b{color:#9fd2ff}.qrow.late b{color:#e0b36a}.qrow.watch b{color:#ffb3a3}
+.adaptbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 14px;margin:14px 0;border-color:var(--edge2)}
+.adaptbar.on{border-color:#2f5b4c;background:linear-gradient(90deg,rgba(127,216,176,.08),transparent)}
+.adaptbar ul{flex-basis:100%;margin:0;padding-left:18px;display:grid;gap:3px;font-size:.9rem;color:var(--text)}
+.adaptbar b{flex-basis:100%;font-family:var(--ui);color:#8fd9b8}
+.adaptbar a{color:#9fd2ff}
+.havebadge{margin:6px 12px 0;padding:4px 8px;border:1px solid #2f5b4c;color:#8fd9b8;font-family:var(--ui);font-size:.8rem}
+.missbadge{margin:6px 12px 0;padding:4px 8px;border:1px dashed var(--edge2);color:var(--mute);font-family:var(--ui);font-size:.8rem}
+.spc.nofit{border-color:rgba(224,102,79,.6);color:#ffb3a3;margin-left:6px}
 .spnote{padding:12px 14px;margin-bottom:16px;border-color:#8a6a38;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(200,165,106,.1),transparent)}
 .spnote b{font-family:var(--display);color:var(--gild-hi);font-size:1rem}
 .spnote p{margin:0;color:var(--text)}
@@ -723,7 +731,7 @@ function treeState(pid, lvBased) {
   return { m, next, pts, phaseN: O.n, extra: Math.max(0, pts - O.o.length), notables: m.filter(id => A.nodeKind[id]).map(mk), nextList: next.map(mk), prevIds };
 }
 function gemDiff(phase) {
-  const i = D.phases.indexOf(phase); if (i <= 0) return { prev: null };
+  const i = D.phases.findIndex(x => x.id === phase.id); if (i <= 0) return { prev: null };
   const prev = D.phases[i - 1]; const map = {}; prev.gems.forEach(g => map[g.skill] = g); return { prev, map };
 }
 function gemCard(g, diff, detailed) {
@@ -737,7 +745,7 @@ function gemCard(g, diff, detailed) {
   const spTxt = g.sp === "core" ? `Spirit #${g.pr}${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "opt" ? `Only if Spirit is left${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "free" ? (g.cost && g.cost !== "No Spirit" ? `No Spirit · ${esc(g.cost)}` : "No Spirit") : "";
   return `<article class="gem frame ${carry ? "carry" : ""} ${g.sp === "opt" ? "optional" : ""}">
     <div class="top"><div class="gicon">${gi ? `<img src="${gi}" alt="">` : `<span class="ph">${esc(g.skill[0])}</span>`}</div>
-      <div><div class="name">${esc(g.skill)}</div><div class="role">${esc(g.role)}${g.set && g.set !== "—" ? " · " + esc(g.set) : ""}</div>${spTxt ? `<span class="spc ${g.sp}">${spTxt}</span>` : ""}</div></div>
+      <div><div class="name">${esc(g.skill)}</div><div class="role">${esc(g.role)}${g.set && g.set !== "—" ? " · " + esc(g.set) : ""}</div>${spTxt ? `<span class="spc ${g.sp}">${spTxt}${g.spEst != null ? ` · ≈ ${g.spEst} Spirit` : ""}</span>` : ""}${g.fits === false ? `<span class="spc nofit">${T("Provavelmente não cabe no seu Spirit", "Probably doesn't fit your Spirit")}</span>` : ""}</div></div>
     ${g.why ? `<p class="why">${esc(g.why)}</p>` : ""}
     <div class="links">${socks}</div>
     ${sw ? `<details class="supwhy" ${detailed ? "open" : ""}><summary>Why each support</summary><ul>${sw}</ul></details>` : ""}
@@ -750,7 +758,7 @@ function itemCard(it) {
   const lvWarn = lr && lr.lvl > S.lv ? `<div class="lvwarn">${T(`Requer nível ${lr.lvl} — você é ${S.lv}. Guarde até lá.`, `Requires level ${lr.lvl} — you are ${S.lv}. Keep it until then.`) + (lr.lvlSrc === "base" ? T(" (nível do tipo base — confira no item)", " (base type level — check the item)") : "")}</div>` : (lr && lr.lvlRf && lr.lvlRf > S.lv && (it.r || []).some(x => /Rune(forged|mastered)/.test(x)) ? `<div class="lvwarn">${T(`Versão Runeforged/Runemastered requer nível ${lr.lvlRf}; a normal, ${lr.lvl}.`, `Runeforged/Runemastered version requires level ${lr.lvlRf}; the normal one, ${lr.lvl}.`)}</div>` : "");
   const mods = (it.x || "").split(" ; ").filter(Boolean);
   return `<article class="tt ${it.u ? "unique" : "rare"}">
-    <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Unique" : ""}${lr ? ` · ${T("nível", "level")} ${lr.lvl}` : ""}</small></div>${lvWarn}
+    <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Unique" : ""}${lr ? ` · ${T("nível", "level")} ${lr.lvl}` : ""}</small></div>${lvWarn}${it.have ? `<div class="havebadge">${T("Você tem", "You have it")}${it.swapped && it.swapped !== it.n ? T(` · no lugar de ${esc(it.swapped)}`, ` · instead of ${esc(it.swapped)}`) : ""}</div>` : it.miss ? `<div class="missbadge">${T("Ainda não tem", "Not owned yet")}</div>` : it.swapped ? `<div class="havebadge">${T(`No lugar de ${esc(it.swapped)}`, `Instead of ${esc(it.swapped)}`)}</div>` : ""}
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(it.n)}">` : ""}</div>
       <div class="mods">${mods.length ? mods.map(m => `<span>${esc(m)}</span>`).join("") : '<span class="none">Check the unique’s mods in game.</span>'}</div></div>
     ${it.r && it.r.length ? `<div class="runes"><b>${it.rs ? "Sockets (from guide)" : "Sockets (suggestion)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">No socket? An Artificer’s Orb adds one.all>'}</div>` : ""}
@@ -762,6 +770,7 @@ function skelBox(p) {
   return `<div class="skbox frame"><div class="big">${esc(s.n)}<small>SKELETONS</small></div><div>${s.types.length ? `<div class="types">${s.types.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}<p>${esc(s.note)}</p></div></div>`;
 }
 function gemGrid(p, useLv, detailed) {
+  p = adaptPhase(p);
   const early = p.gems.filter(g => g.until), main = p.gems.filter(g => !g.until);
   const hideEarly = useLv && early.length && S.lv >= early[0].until;
   const df = gemDiff(p); const cards = list => `<div class="gems stagger">${list.map(g => gemCard(g, df, detailed)).join("")}</div>`;
@@ -770,7 +779,7 @@ function gemGrid(p, useLv, detailed) {
     const core = main.filter(g => g.sp === "core").sort((a, b) => a.pr - b.pr), rest = main.filter(g => !g.sp);
     const free = main.filter(g => g.sp === "free"), opt = main.filter(g => g.sp === "opt").sort((a, b) => a.pr - b.pr);
     const res = [...core, ...rest];
-    mainHtml = skelBox(p) + `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
+    mainHtml = skelBox(p) + (p.spiritTotal ? `<div class="spnote frame"><b>${T("Seu Spirit", "Your Spirit")}</b><p>${T(`Com ${p.spiritTotal} de Spirit máximo, macaco + beasts de aura reservam ≈ ${p.spiritUsed}. Azmerian Wolf, Cleric, Withering Presence e Discipline têm custo que depende do nível da gem: confira no painel de skills do jogo. Os cartões marcados como "não cabe" são os primeiros a sair.`, `With ${p.spiritTotal} max Spirit, monkey + aura beasts reserve ≈ ${p.spiritUsed}. Azmerian Wolf, Cleric, Withering Presence and Discipline cost depends on gem level: check the in-game skills panel. Cards marked "doesn't fit" are the first to go.`)}</p></div>` : "") + `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
       (res.length ? `<div class="spgroup">1 · Reserve Spirit <small>${core.length ? "activate in this order; if Spirit goes negative, turn off the last one" : "companions and auras"}</small></div>${cards(res)}` : "") +
       (free.length ? `<div class="spgroup">2 · Reserve no Spirit <small>always use</small></div>${cards(free)}` : "") +
       (opt.length ? `<div class="spgroup">3 · Only if Spirit is left <small>add later, once you gain more Spirit</small></div>${cards(opt)}` : "");
@@ -781,7 +790,7 @@ function gemGrid(p, useLv, detailed) {
     (hideEarly ? `<p style="color:var(--faint);margin:12px 0 0">Twister, Whirling Slash, Cull The Weak and Barrage are already off your bar: you are past level ${u}.</p>`
       : `<div class="panel frame" style="margin-top:16px;border-color:rgba(224,102,79,.45)"><h3>Only until you capture Silverfist (lv ${p.lv[0]}–${u - 1})</h3><p style="margin:0 0 12px;color:var(--mute)">These are the leveling spear skills. As soon as you capture the monkey and respec (lv ~${u}), remove them all: the tree becomes companion-focused and they stop scaling.</p><div class="gems">${early.map(g => gemCard(g, null, detailed)).join("")}</div></div>`);
 }
-const setItems = pid => (A.sets[pid] ? A.sets[pid][S.mode] : A.guide[pid]) || [];
+const setItems = pid => adaptItems(pid, setItemsRaw(pid));
 const modeList = p => S.mode === "cheap" ? p.cheap : p.full;
 function uniquesIn(text) { return Object.keys(A.uniqIcon).filter(n => text.includes(n) && A.uniqIcon[n]); }
 
@@ -795,16 +804,16 @@ function renderSide() {
   const app = document.querySelector(".app");
   const drawer = $("#side").classList.contains("drawer");
   app.classList.toggle("side-min", !!S.sideMin && !drawer);
-  const p = curPhase(); const items = setItems(p.id);
+  const p = curPhase(); const pa = adaptPhase(p); const items = setItems(p.id);
   const find = re => items.find(i => re.test(i.slot));
   const rings = items.filter(i => /ring/i.test(i.slot));
   const cell = (it, cls, lab) => `<div class="cell ${cls} ${it && it.u ? "u" : ""} ${it ? "" : "empty"}" data-gotab="gear" title="${it ? esc(it.n) + (it.price != null ? " · " + fmtPrice(it.price) : "") : esc(lab)}">${it && ic(it.ic) ? `<img src="${ic(it.ic)}" alt="${esc(it.n)}">` : ""}<span>${lab}</span></div>`;
   const nt = A.notables[p.id]; const ts = treeState(p.id, true);
   const prog = Math.max(0, Math.min(100, Math.round(((S.lv - p.lv[0]) / Math.max(1, p.lv[1] - p.lv[0])) * 100)));
-  const carryGem = p.gems.find(g => /CARRY/i.test(g.role)) || p.gems[0];
+  const carryGem = pa.gems.find(g => /CARRY/i.test(g.role)) || pa.gems[0];
   const nextMs = msList.filter(m => m.lv >= S.lv).slice(0, 4);
   const rank = g => g.sp === "core" ? g.pr : g.sp === "free" ? 50 : g.sp === "opt" ? 100 + g.pr : 40;
-  const gems = p.gems.filter(g => !(g.until && S.lv >= g.until)).slice().sort((a, b) => rank(a) - rank(b));
+  const gems = pa.gems.filter(g => !(g.until && S.lv >= g.until)).slice().sort((a, b) => rank(a) - rank(b));
   const uniqs = items.filter(i => i.u);
   const setCost = uniqs.reduce((a, i) => a + (i.price || 0), 0);
   const c = spCalc(); const cls = c.free < 0 ? "bad" : c.pct > .9 ? "warn" : "";
@@ -825,7 +834,7 @@ function renderSide() {
         <div class="row"><span>Lv ${S.lv} · ${S.mode === "cheap" ? "budget mode" : "full mode"}</span><span>${prog}% of phase</span></div>
         <div class="ph">${esc(p.name)} <small class="label">· ${esc(p.tag)}</small></div>
         <div class="sb-prog"><i style="width:${prog}%"></i></div>
-        ${p.skeletons ? `<div class="sb-skel" data-gotab="skills" title="${esc(p.skeletons.note)}">Skeletons: <b>${esc(p.skeletons.n)}</b> ${esc(p.skeletons.types.join(" · ").slice(0, 60))}</div>` : ""}
+        ${pa.skeletons ? `<div class="sb-skel" data-gotab="skills" title="${esc(pa.skeletons.note)}">Skeletons: <b>${esc(pa.skeletons.n)}</b> ${esc(pa.skeletons.types.join(" · ").slice(0, 60))}</div>` : ""}${pa.spiritTotal ? `<div class="sb-skel" data-gotab="skills">Spirit: <b>≈ ${pa.spiritUsed}/${pa.spiritTotal}</b> ${T("(companions estimados)", "(estimated companions)")}</div>` : ""}
         <div class="sb-carry">${carryGem && gemImg(carryGem.skill) ? `<img src="${gemImg(carryGem.skill)}" alt="">` : "<span></span>"}<div><b>${esc(p.carry)}</b><small>${next ? `Next phase: ${esc(next.name)} (Lv ${next.lv[0]})` : "Final phase"}</small></div></div>
       </div>
       ${(() => { const rr = charRecs().recs.filter(x => x.lvl !== "ok").slice(0, 4); if (S.sideOpen.recs === undefined) S.sideOpen.recs = true; return sideSec("recs", T("Para você agora", "For you now"), rr.length, (rr.length ? rr.map(x => `<div class="rec ${x.lvl} mini" data-gotab="${x.tab && x.tab !== "meu" ? x.tab : "meu"}"><span class="ri">${{ bad: "✖", warn: "!", tip: "➜", ok: "✔" }[x.lvl]}</span><div><b>${esc(x.t)}</b></div></div>`).join("") : `<span class="label">${T("Nada pendente pelo que você marcou.", "Nothing pending from what you ticked.")}</span>`) + `<button class="btn" type="button" data-gotab="meu">${T("Marcar o que eu tenho", "Tick what I have")}</button>`); })()}
@@ -1067,6 +1076,7 @@ function vArvore() {
   const lvBased = pid === curPhase().id; const ts = treeState(pid, lvBased);
   return `<div class="sechead"><div><h2>Passive Tree</h2><p>The real patch 0.5.5 tree with <b>Mattjestic's guide</b> path for each phase. Acts 1–2: Twister. Act 3 onward: only companion and defence. The only "weapon" keystone is Giant's Blood, needed to use Chober Chaber with a sceptre. <b style="color:#E3BE78">Gold</b> = main tree, <b style="color:var(--set1)">red</b> = Weapon Set I, <b style="color:var(--set2)">green</b> = Weapon Set II — the same colours as in game. Light-green outline = new node this phase.</p></div></div>
   ${phaseSel(pid, "tree", [["uber", "Bossing (endgame)"]])}
+  ${pid === curPhase().id ? treeAdaptNotes() : ""}
   <div class="treewrap" style="margin-top:14px">
     <div class="treebox frame">
       <canvas id="treeCv" aria-label="Passive tree — ${esc(name)}"></canvas>
@@ -1139,6 +1149,7 @@ function vSkills() {
   const sel = S.skillPhase ? D.phases.find(p => p.id === S.skillPhase) : curPhase();
   return `<div class="sechead"><div><h2>Skills & Supports</h2><p>Pick the phase. Supports with a gold border changed from the previous phase; "Remove" shows what to take out.</p></div></div>
   ${phaseSel(sel.id, "skills")}
+  ${sel.id === curPhase().id ? adaptBanner("skills") : ""}
   <div style="margin-top:14px">${gemGrid(sel, false, true)}</div>
   <div class="grid g2" style="margin-top:16px">
     <div class="panel frame"><h3>Rotation — ${esc(sel.name)}</h3><ol style="margin:0;padding-left:20px;display:grid;gap:4px">${sel.rotation.map(r => `<li>${esc(r)}</li>`).join("")}</ol></div>
@@ -1151,6 +1162,7 @@ function vGear() {
   const tiers = S.mode === "cheap" ? ["cheap"] : ["value", "full"];
   return `<div class="sechead"><div><h2>Items</h2><p>First, the complete set for the chosen phase. Then each slot from budget to full.</p></div></div>
   ${phaseSel(sel.id, "gear")}
+  ${sel.id === curPhase().id ? adaptBanner("gear") : ""}
   <p style="color:var(--mute);margin:12px 0 0">${A.sets[sel.id] ? `Our route's main set in <b>${S.mode === "cheap" ? "budget" : "full"}</b> mode: uniques where they are the pick, rares only with zoo mods (Minion Skills, Spirit, life, resists, evasion). Switch the mode at the top to see the other set.` : "Acts 1–2: you still hit with a spear, so attack damage makes sense here."}</p><div class="items stagger" style="margin-top:14px">${setItems(sel.id).map(itemCard).join("")}</div>${(D.jewelSets[sel.id] || []).length ? `<div class="panel frame" style="margin-top:14px"><h3>Jewels</h3><ul class="clean gold">${D.jewelSets[sel.id].map(j => `<li>${esc(j)}</li>`).join("")}</ul></div>` : ""}
   <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot by slot · budget to full</h2><p>${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Budget</b>" : "<b style='color:#E18C47'>Full</b>"} mode highlights the right row. Prices change fast, so we use ranges.</p></div></div>
   <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
@@ -1354,7 +1366,7 @@ function charItemList() {
   return [...seen.values()];
 }
 function charRecs() {
-  const c = S.ch, lv = S.lv, p = curPhase(), act = ACT_OF[p.id] || 1, R = [];
+  const c = S.ch, lv = S.lv, p = adaptPhase(curPhase()), act = ACT_OF[p.id] || 1, R = [];
   const add = (lvl, t, d, tab) => R.push({ lvl, t, d, tab });
   const has = n => !!c.items[n];
   const effigy = has("Sylvan's Effigy");
@@ -1415,7 +1427,7 @@ function charRecs() {
   }
   if (c.wither && !has("Evergrasping Ring")) add("warn", T("Withering Presence sem Evergrasping Ring", "Withering Presence without Evergrasping Ring"), T("O Wither só aumenta dano de chaos. Sem 2× Evergrasping Ring (chaos nos aliados) ele quase não faz nada: troque por outra coisa.", "Wither only boosts chaos damage. Without 2× Evergrasping Ring (chaos on allies) it does almost nothing: swap it."), "skills");
   // ---- itens da fase
-  const want = setItems(p.id).filter(it => (it.u || it.n === "Rattling Sceptre") && !/Charm/.test(it.slot));
+  const want = setItemsRaw(p.id).filter(it => (it.u || it.n === "Rattling Sceptre") && !/Charm/.test(it.slot));
   const missing = want.filter(it => !has(it.n)).filter((it, i, arr) => arr.findIndex(x => x.n === it.n) === i);
   if (missing.length) add("warn", T(`Faltam ${missing.length} peça(s) do set da fase (${S.mode === "cheap" ? "barato" : "completo"})`, `${missing.length} piece(s) of the phase set missing (${S.mode === "cheap" ? "budget" : "full"})`), missing.slice(0, 5).map(it => `${it.n}${it.price != null ? " " + fmtPrice(it.price) : ""}`).join(" · "), "gear");
   else if (want.length) add("ok", T("Set da fase completo", "Phase set complete"), T("Todas as peças-chave da fase estão marcadas.", "All key pieces of the phase are checked."), "gear");
@@ -1478,6 +1490,172 @@ document.addEventListener("change", e => {
 });
 document.addEventListener("input", e => { const t = e.target; if (t.dataset && t.dataset.ch) { S.ch[t.dataset.ch] = t.value; saveCh(true); } });
 document.addEventListener("click", e => { if (e.target.id === "petAdd") { S.ch.pets.push({ b: -1, aura: "none", on: false }); saveCh(); } });
+
+/* ------------------------------------------------ adaptar ao meu personagem */
+S.adapt = store.get("adapt", true);
+const clone = o => JSON.parse(JSON.stringify(o));
+const chItems = () => Object.keys((S.ch && S.ch.items) || {}).filter(k => S.ch.items[k]);
+const canUse = n => { const u = D.uniques.find(x => x.n === n); return !u || !u.lvl || u.lvl <= S.lv; };
+const hasUse = n => !!(S.ch && S.ch.items && S.ch.items[n]) && canUse(n);
+const adaptOn = () => !!S.adapt && !!S.ch && (chItems().length > 0 || (S.ch.pets || []).some(x => x.on && x.b >= 0) || Object.values(S.ch.sk || {}).some(Boolean));
+const setItemsRaw = pid => (A.sets[pid] ? A.sets[pid][S.mode] : A.guide[pid]) || [];
+const isAuraBeast = g => /^Tame Beast/.test(g.skill) && !/Silverfist|Zekoa/.test(g.skill);
+const isWarrior = g => /^Skeletal Warrior/.test(g.skill);
+const phaseById = id => D.phases.find(x => x.id === id);
+const AURA_NAME = { haste: "Haste", phys: "Physical Damage", es: "Energy Shield", heal: "Heals Allies", hinder: "Hinder", other: T("outra aura", "other aura") };
+
+function adaptNotes() {
+  const n = [];
+  if (!adaptOn()) return n;
+  const owned = chItems();
+  for (const it of owned) if (!canUse(it)) { const u = D.uniques.find(x => x.n === it); n.push(T(`${it} ainda não entra (requer nível ${u.lvl}) — o plano usa o item anterior.`, `${it} doesn't come in yet (requires level ${u.lvl}) — the plan uses the previous item.`)); }
+  if (hasUse("Sylvan's Effigy")) n.push(T("Sylvan's Effigy: companions ilimitados, Azmerian Wolf + Discipline, Skeletal Cleric como alvo do Pain Offering, sem Skeletal Warrior.", "Sylvan's Effigy: unlimited companions, Azmerian Wolf + Discipline, Skeletal Cleric as Pain Offering target, no Skeletal Warrior."));
+  if (hasUse("Forgotten Warden")) n.push(T("Forgotten Warden: entra o Spirit Vessel; você perde os +100 Spirit da Enfolding Dawn.", "Forgotten Warden: Spirit Vessel comes in; you lose Enfolding Dawn's +100 Spirit."));
+  if (!hasUse("Evergrasping Ring")) n.push(T("Sem Evergrasping Ring: Withering Presence vira opcional (quase não faz nada sem os anéis).", "No Evergrasping Ring: Withering Presence becomes optional (it does almost nothing without the rings)."));
+  return n;
+}
+
+function adaptPhase(p) {
+  if (!p || !adaptOn() || p.id !== curPhase().id) return p;
+  const q = clone(p); q._adapted = true;
+  const t15 = phaseById("t15"), ea = phaseById("ea");
+  const pick = (ph, re) => { const g = ph && ph.gems.find(x => re.test(x.skill)); return g ? clone(g) : null; };
+  const skOn = SKEL_TYPES.filter(s => S.ch.sk[s]);
+  const effigy = hasUse("Sylvan's Effigy");
+  const pets = (S.ch.pets || []).filter(x => x.on && x.b >= 0 && D.beasts[x.b] && !/Silverfist|Zekoa/.test(D.beasts[x.b].name));
+
+  // ---- Sylvan's Effigy
+  if (effigy) {
+    const silver = q.gems.find(g => /^Tame Beast/.test(g.skill) && /Silverfist|Zekoa/.test(g.skill));
+    const auraTpl = q.gems.find(isAuraBeast) || pick(t15, /^Tame Beast \(aura/) || { sup: ["Loyalty", "Last Gasp"], set: "—" };
+    const keep = q.gems.filter(g => !isWarrior(g) && !isAuraBeast(g) && !/^Tame Beast \((vazia|empty)/i.test(g.skill) && !/^(Azmerian Wolf|Discipline|Skeletal Cleric|Spirit Vessel)/.test(g.skill) && g !== silver);
+    const wantAuras = ["haste", "phys", "es"];
+    const petList = pets.map(x => Object.assign({}, x));
+    for (const a of wantAuras) if (!petList.some(x => x.aura === a)) petList.push({ b: -1, aura: a, capture: true });
+    const cheapest = D.beasts.filter(b => b.cost && !/Silverfist|Zekoa|Diretusk|Antlion/.test(b.name)).sort((a, b) => a.cost - b.cost).slice(0, 3).map(b => `${b.name} (${b.cost}%)`).join(" · ");
+    const auras = petList.map((x, i) => ({
+      skill: `Tame Beast (${x.capture ? T("capturar: ", "capture: ") : x.b >= 0 ? D.beasts[x.b].name + " · " : ""}${T("aura", "aura")} ${AURA_NAME[x.aura] || "Haste"})`,
+      set: "—", sup: ["Loyalty", "Last Gasp", "Elemental Army", "Meat Shield II"], role: T("Aura bot", "Aura bot"),
+      why: (x.capture ? T(`Você ainda não marcou um beast com aura ${AURA_NAME[x.aura]}. Capture um de tipo diferente dos que já tem — mais baratos em Spirit: ${cheapest}. `, `You haven't ticked a beast with a ${AURA_NAME[x.aura]} aura yet. Capture one of a different type from the ones you have — cheapest in Spirit: ${cheapest}. `) : "") + T("Com o Effigy não há limite de companions: cada beast de aura de TIPO diferente entra enquanto houver Spirit. Loyalty + Last Gasp mantêm a aura viva; Meat Shield II e Elemental Army deixam ele durar no Atlas.", "With the Effigy there's no companion limit: each aura beast of a DIFFERENT type comes in while Spirit allows. Loyalty + Last Gasp keep the aura alive; Meat Shield II and Elemental Army make it last in the Atlas."),
+      sp: "core", pr: ({ haste: 2, phys: 5, es: 7 })[x.aura] || 8 + i, cost: x.b >= 0 && D.beasts[x.b] ? `${D.beasts[x.b].cost}% ${T("do Spirit", "of Spirit")}` : T("~21–25% do Spirit", "~21–25% of Spirit") }));
+    const wolf = pick(t15, /^Azmerian Wolf/); if (wolf) { wolf.sp = "core"; wolf.pr = 4; wolf.cost = T("Reserva Spirit (vem do Effigy)", "Reserves Spirit (from the Effigy)"); wolf.why = T("Vem do Sylvan's Effigy. É o 2º companion de dano: entra depois do beast de Haste e do Cleric.", "Comes from Sylvan's Effigy. It's the 2nd damage companion: after the Haste beast and the Cleric."); }
+    const disc = pick(t15, /^Discipline/); if (disc) { disc.sp = "opt"; disc.pr = 1; disc.cost = T("Reserva Spirit (vem do Effigy)", "Reserves Spirit (from the Effigy)"); disc.why = T("Aura de Energy Shield que vem do Effigy. Só ative se sobrar Spirit depois dos beasts de aura.", "Energy Shield aura from the Effigy. Only activate it if Spirit is left after the aura beasts."); }
+    const cleric = pick(t15, /^Skeletal Cleric/) || pick(ea, /^Skeletal Cleric/);
+    if (cleric) { cleric.sp = "core"; cleric.pr = 3; cleric.cost = T("Pouco Spirit (1 minion)", "Low Spirit (1 minion)"); cleric.why = T("Com o Rattling Sceptre fora, o Skeletal Warrior some: o Cleric vira o esqueleto que o Pain Offering espeta (Sacrificial Lamb II) e ainda cura o zoo.", "With the Rattling Sceptre gone, the Skeletal Warrior disappears: the Cleric becomes the skeleton Pain Offering skewers (Sacrificial Lamb II) and heals the zoo."); }
+    const pack = pick(t15, /^Wolf Pack/);
+    if (pack) { pack.sp = "core"; pack.pr = 6; pack.cost = T("Reserva Spirit (vários lobos = 1 companion)", "Reserves Spirit (several wolves = 1 companion)"); pack.why = T("Com o Effigy, o Wolf Pack entra como companion de dano: vários lobos contam como UM companion, Withering Touch aplica Wither (mais dano de chaos com o Evergrasping Ring) e ele soma mais um TIPO para o Muster.", "With the Effigy, Wolf Pack comes in as a damage companion: several wolves count as ONE companion, Withering Touch applies Wither (more chaos damage with Evergrasping Ring) and it adds another TYPE for Muster."); }
+    const po = keep.find(g => /^Pain Offering/.test(g.skill));
+    if (po) {
+      const skeletons = 1 + skOn.filter(s => s !== "Skeletal Warrior" && s !== "Skeletal Cleric").length;
+      po.sup = ["Prolonged Duration II", "Sacrificial Offering", "Brutus' Brain"].concat(skeletons >= 2 ? ["Danse Macabre"] : []);
+      po.why = T(`Alvo: Skeletal Cleric. Brutus' Brain impede o espinho de morrer. ${skeletons >= 2 ? "Você marcou 2+ esqueletos: Danse Macabre funciona." : "Com só o Cleric, sem Danse Macabre (precisa de 2 esqueletos)."}`, `Target: Skeletal Cleric. Brutus' Brain keeps the spike alive. ${skeletons >= 2 ? "You ticked 2+ skeletons: Danse Macabre works." : "With only the Cleric, no Danse Macabre (needs 2 skeletons)."}`);
+    }
+    q.gems = [silver, ...auras, cleric, wolf, pack, disc, ...keep.filter(g => !/^Wolf Pack/.test(g.skill))].filter(Boolean);
+    q.spiritNote = T("Com Sylvan's Effigy (sem limite de companions), ordem para o MÁXIMO de dano, ativando enquanto houver Spirit: 1) Silverfist (o dano) → 2) beast de Haste (acelera tudo) → 3) Skeletal Cleric (barato e libera o buff do Pain Offering) → 4) Azmerian Wolf → 5) beast de Physical → 6) Wolf Pack → 7) beast de ES (defesa). Discipline, Withering Presence e tipos extras de esqueleto (Muster) só se sobrar. Se o Spirit ficar negativo, desligue o último que entrou — nunca o macaco ou o Haste.",
+      "With Sylvan's Effigy (no companion limit), order for MAXIMUM damage, activating while Spirit allows: 1) Silverfist (the damage) → 2) Haste beast (speeds everything) → 3) Skeletal Cleric (cheap and enables the Pain Offering buff) → 4) Azmerian Wolf → 5) Physical beast → 6) Wolf Pack → 7) ES beast (defence). Discipline, Withering Presence and extra skeleton types (Muster) only if Spirit is left. If Spirit goes negative, turn off the last one added — never the monkey or the Haste beast.");
+    q.skeletons = { n: String(Math.max(1, 1 + skOn.filter(s => s !== "Skeletal Warrior" && s !== "Skeletal Cleric").length)), types: ["Skeletal Cleric"].concat(skOn.filter(s => s !== "Skeletal Warrior" && s !== "Skeletal Cleric")), note: T("Sem Rattling Sceptre não há Skeletal Warrior. O Cleric é o alvo do Pain Offering; outros tipos só se sobrar Spirit (Muster conta tipos).", "Without Rattling Sceptre there's no Skeletal Warrior. The Cleric is the Pain Offering target; other types only if Spirit is left (Muster counts types).") };
+    q.tag = `${q.tag} · Sylvan's Effigy`;
+  }
+  // ---- Withering Presence marcado mas fora da fase
+  if (S.ch.wither && !q.gems.some(g => /^Withering Presence/.test(g.skill))) {
+    const wp = pick(phaseById("a4"), /^Withering Presence/);
+    if (wp) { wp.sp = hasUse("Evergrasping Ring") ? "opt" : "opt"; wp.pr = 2; wp.cost = T("Reserva fixa", "Flat reservation"); wp.why = hasUse("Evergrasping Ring") ? T("Você usa Withering Presence com Evergrasping Ring: continua valendo, mas no Atlas entra depois dos companions (Despair já tira resistência a chaos).", "You use Withering Presence with Evergrasping Ring: still worth it, but in the Atlas it comes after companions (Despair already lowers chaos resistance).") : T("Sem Evergrasping Ring ele quase não faz nada: desligue.", "Without Evergrasping Ring it does almost nothing: turn it off."); q.gems.push(wp); }
+  }
+  // ---- Chober Chaber: Mace Strike + Einhar's Beastrite (rouba modificadores = mais dano)
+  if (hasUse("Chober Chaber") && S.ch.asc && S.ch.asc.catha && !q.gems.some(g => /^Mace Strike/.test(g.skill))) {
+    const ms = pick(phaseById("t15"), /^Mace Strike/);
+    if (ms) { ms.sp = "free"; ms.pr = 0; ms.cost = T("Sem Spirit", "No Spirit"); ms.why = T("Você tem Chober Chaber: Mace Strike com Einhar's Beastrite finaliza raros e te dá 2 modificadores deles por 5 minutos (Haste, Extra Damage…). É dano extra de graça no mapping.", "You have Chober Chaber: Mace Strike with Einhar's Beastrite finishes rares and gives you 2 of their modifiers for 5 minutes (Haste, Extra Damage…). Free extra damage while mapping."); q.gems.push(ms); }
+  }
+  // ---- Forgotten Warden
+  if (hasUse("Forgotten Warden") && !q.gems.some(g => /^Spirit Vessel/.test(g.skill))) {
+    const sv = pick(t15, /^Spirit Vessel/);
+    if (sv) { sv.sp = "core"; sv.pr = 8; sv.cost = T("Reserva Spirit (vem do Forgotten Warden)", "Reserves Spirit (from Forgotten Warden)"); q.gems.push(sv); }
+  }
+  // ---- sem Evergrasping Ring
+  if (!hasUse("Evergrasping Ring")) for (const g of q.gems) if (/^Withering Presence/.test(g.skill)) { g.sp = "opt"; g.pr = 9; g.why = T("Você não marcou Evergrasping Ring: sem os anéis o Wither quase não aumenta o dano. Deixe desligado e use o Spirit em companions.", "You didn't tick Evergrasping Ring: without the rings Wither barely adds damage. Keep it off and spend the Spirit on companions."); }
+  // ---- sem Rattling Sceptre (e sem Effigy): troque o Warrior pelo esqueleto marcado
+  if (!effigy && !hasUse("Rattling Sceptre") && chItems().length) {
+    const alt = skOn.find(s => s !== "Skeletal Warrior") || "Skeletal Arsonist";
+    for (const g of q.gems) if (isWarrior(g) && g.sp !== "opt") { g.skill = alt; g.why = T(`Você não marcou Rattling Sceptre, então não há gem de Skeletal Warrior: use ${alt} como o esqueleto do Pain Offering (Sacrificial Lamb).`, `You didn't tick Rattling Sceptre, so there's no Skeletal Warrior gem: use ${alt} as the Pain Offering skeleton (Sacrificial Lamb).`); }
+  }
+  // ---- sem Effigy: usa os beasts que você marcou nas vagas de aura
+  if (!effigy && pets.length) {
+    let k = 0;
+    for (const g of q.gems) if (isAuraBeast(g) && !/vazia|empty/i.test(g.skill) && pets[k]) { const b = D.beasts[pets[k].b]; g.skill = `Tame Beast (${b.name} · ${T("aura", "aura")} ${AURA_NAME[pets[k].aura] || "—"})`; g.cost = `${b.cost}% ${T("do Spirit", "of Spirit")}`; k++; }
+  }
+  // ---- 2 companions: beasts de aura além do limite viram opcionais
+  if (!effigy) {
+    const limit = (S.ch.tk || hasUse("Yriel's Fostering")) ? 2 : 1;
+    let used = 1;
+    for (const g of q.gems) if (isAuraBeast(g) && g.sp !== "free") { used++; if (used > limit) { g.sp = "opt"; g.pr = 9; g.why = T(`Seu limite é ${limit} companion(s). Este só entra com Sylvan's Effigy${limit === 1 ? " ou Trusted Kinship" : ""}.`, `Your limit is ${limit} companion(s). This one only comes in with Sylvan's Effigy${limit === 1 ? " or Trusted Kinship" : ""}.`); } }
+  }
+  // ---- Spirit: estimativa com o seu Spirit máximo
+  const total = +S.ch.spirit || 0;
+  if (total) {
+    const eff = (S.ch.tk ? 1.3 : 1) * (1 + (S.ch.eg ? .25 : 0)); let used = 0;
+    for (const g of q.gems.filter(g => g.sp === "core").sort((a, b) => a.pr - b.pr)) {
+      let pct = null;
+      if (/^Tame Beast/.test(g.skill) && /Silverfist|Zekoa/.test(g.skill)) pct = 47.4;
+      else if (isAuraBeast(g)) { const m = D.beasts.find(b => b.cost && g.skill.includes(b.name)); pct = m ? m.cost : 24.9; }
+      if (pct != null) { const est = pct / 100 * total / eff; used += est; g.spEst = Math.round(est); }
+      g.fits = used <= total;
+    }
+    q.spiritUsed = Math.round(used); q.spiritTotal = total;
+  }
+  return q;
+}
+
+function adaptItems(pid, items) {
+  if (!adaptOn() || pid !== curPhase().id) return items;
+  const out = clone(items);
+  const ringSlot = s => /Anel|Ring/i.test(s);
+  const pool = [];
+  for (const ph of PH_ORDER) for (const m of ["cheap", "full"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u || it.n === "Rattling Sceptre") pool.push(it);
+  const sameSlot = (a, b) => a === b || (ringSlot(a) && ringSlot(b));
+  const used = new Set();
+  for (let i = 0; i < out.length; i++) {
+    const it = out[i];
+    if ((it.u || it.n === "Rattling Sceptre") && hasUse(it.n) && !used.has(it.n + i)) { it.have = 1; continue; }
+    // o que você tem para este slot (o mais avançado na rota)
+    const cands = pool.filter(c => sameSlot(c.slot, it.slot) && hasUse(c.n)).reverse();
+    const pickC = cands.find(c => !(ringSlot(c.slot) && out.some((o, j) => j !== i && o.n === c.n && o.have && c.n !== "Evergrasping Ring")));
+    if (pickC) { out[i] = Object.assign(clone(pickC), { slot: it.slot, have: 1, swapped: it.n }); continue; }
+    if (it.u || it.n === "Rattling Sceptre") it.miss = 1;
+  }
+  // Effigy na offhand
+  if (hasUse("Sylvan's Effigy")) {
+    const eff = pool.find(c => c.n === "Sylvan's Effigy");
+    const k = out.findIndex(o => /Offhand \(Set 1\)/.test(o.slot)) ;
+    if (eff && k >= 0 && out[k].n !== "Sylvan's Effigy") out[k] = Object.assign(clone(eff), { slot: out[k].slot, have: 1, swapped: out[k].n });
+  }
+  // Giant's Blood na árvore: Treefingers não é mais necessária
+  if (S.ch.gb) { const g = out.findIndex(o => o.n === "Treefingers"); if (g >= 0) { const rare = (A.sets.t15 || {})[S.mode] ? A.sets.t15[S.mode].find(o => o.slot === out[g].slot && !o.u) : null; if (rare) out[g] = Object.assign(clone(rare), { swapped: "Treefingers" }); } }
+  return out;
+}
+
+function adaptBanner(kind) {
+  const on = adaptOn(); const notes = adaptNotes();
+  if (!chItems().length && !(S.ch.pets || []).some(x => x.on && x.b >= 0)) return `<div class="adaptbar frame"><span>${T("Marque o que você tem em <b>Meu personagem</b> e esta aba se adapta ao seu personagem.", "Tick what you have in <b>My character</b> and this tab adapts to your character.")}</span><button class="btn" type="button" data-gotab="meu">${T("Marcar agora", "Tick now")}</button></div>`;
+  return `<div class="adaptbar frame ${on ? "on" : ""}"><label class="chk"><input type="checkbox" id="adaptTgl" ${S.adapt ? "checked" : ""}><span>${T("Adaptar ao que eu tenho", "Adapt to what I have")}</span></label>
+    <span>${on ? T(`Mostrando o plano ajustado para ${esc(curPhase().name)} com base em Meu personagem.`, `Showing the plan adjusted for ${esc(curPhase().name)} based on My character.`) : T("Mostrando o plano padrão da fase.", "Showing the phase's default plan.")}</span>
+    ${on && notes.length ? `<ul>${notes.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+    <button class="btn" type="button" data-gotab="meu">${T("Editar o que eu tenho", "Edit what I have")}</button></div>`;
+}
+function treeAdaptNotes() {
+  if (!adaptOn()) return "";
+  const gbId = Object.keys(A.tree.meta).find(k => A.tree.meta[k][0] === "Giant's Blood");
+  const tkId = Object.keys(A.tree.meta).find(k => A.tree.meta[k][0] === "Trusted Kinship");
+  const out = [];
+  const twoHand = hasUse("Chober Chaber") && (hasUse("Rattling Sceptre") || hasUse("Sylvan's Effigy"));
+  if (twoHand && hasUse("Treefingers") && !S.ch.gb) out.push(T("Você tem Treefingers: NÃO precisa do keystone Giant's Blood agora. Se o caminho mostrar o Giant's Blood, pule e use o ponto no próximo nó.", "You have Treefingers: you do NOT need the Giant's Blood keystone now. If the path shows Giant's Blood, skip it and use the point on the next node.") + (gbId ? ` <a href="#" data-gotree="${gbId}">Giant's Blood</a>` : ""));
+  if (twoHand && !hasUse("Treefingers") && !S.ch.gb) out.push(T("Chober Chaber + sceptre sem Treefingers: pegue o keystone Giant's Blood o quanto antes.", "Chober Chaber + sceptre without Treefingers: take the Giant's Blood keystone as soon as possible.") + (gbId ? ` <a href="#" data-gotree="${gbId}">Giant's Blood</a>` : ""));
+  if (S.ch.gb && hasUse("Treefingers")) out.push(T("Você já tem o keystone Giant's Blood: troque a Treefingers por luvas rare com vida/resist.", "You already have the Giant's Blood keystone: swap Treefingers for rare gloves with life/resists."));
+  if (!S.ch.tk && lvOk(33)) out.push(T("Você não marcou Trusted Kinship: ele é prioridade (limite de companions e 30% more eficiência).", "You didn't tick Trusted Kinship: it's a priority (companion limit and 30% more efficiency).") + (tkId ? ` <a href="#" data-gotree="${tkId}">Trusted Kinship</a>` : ""));
+  if (hasUse("Sylvan's Effigy") && !S.ch.tk) out.push(T("Com o Effigy o limite some, mas o Trusted Kinship continua valendo pelos 30% more de eficiência.", "With the Effigy the limit is gone, but Trusted Kinship is still worth it for the 30% more efficiency."));
+  return out.length ? `<div class="adaptbar frame on"><b>${T("Ajustes da árvore para o seu personagem", "Tree adjustments for your character")}</b><ul>${out.map(x => `<li>${x}</li>`).join("")}</ul></div>` : "";
+}
+const lvOk = n => S.lv >= n;
+document.addEventListener("change", e => { if (e.target.id === "adaptTgl") { S.adapt = e.target.checked; store.set("adapt", S.adapt); render(); } });
 
 /* ------------------------------------------------ quando usar */
 S.qf = store.get("qf", "all");
