@@ -4,6 +4,7 @@ import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..")
 os.chdir(ROOT); sys.path.insert(0, ROOT); sys.path.insert(0, HERE)
 import chober as SF          # só para reaproveitar quests e traduções comuns
+from enhance import enhance
 import timing, hunting
 from ui_en import UI
 import odata as D
@@ -65,6 +66,7 @@ def page(lang):
           .replace("__PT_ON__", "on" if lang == "pt" else "").replace("__EN_ON__", "on" if lang == "en" else ""))
     t = t.replace("<script>\nconst LANG =", '<script src="assets/assets.js"></script>\n<script>\nconst LANG =', 1)
     assert 'src="assets/assets.js"' in t
+    t = enhance(t, lang, "oracle")
     i = t.index("</style>") + len("</style>")
     home = '<a class="homebtn" href="../%s">%s</a>' % ("index.html" if lang == "pt" else "en.html", "← Builds")
     body = t[i:].replace('<div class="eyebrow">', '<div class="eyebrow">' + home, 1)

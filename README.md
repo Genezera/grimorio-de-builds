@@ -18,6 +18,16 @@ The **PT / EN** switch changes language; each build's progress is shared between
 O site é 100% estático (HTML + JS) e também funciona abrindo os arquivos direto no navegador.
 The site is fully static (HTML + JS) and also works by opening the files directly in a browser.
 
+## Oficina e navegação / Workshop and navigation
+
+- Todas as seis páginas foram redesenhadas, com versões PT/EN, layout responsivo e contraste de leitura maior.
+- Navegação por assunto, busca local por itens/skills/conceitos (`Ctrl/Cmd+K`), links diretos às seções e impressão da seção aberta.
+- Crafting nas duas builds: 12 categorias de equipamentos, três rotas de investimento (comprar · craft progressivo · avançado) com receitas concretas por build em `shared/craft-detail.js` — alvos com ilvl, essence/omen/osso/alloy pelo nome, custos de Verisium, materiais com preço do poe.ninja e o que fazer se falhar.
+- Glossário de mecânicas, consulta de pesos com hipótese explícita e simulador de custo/risco, incluindo compra pronta e orçamento de 90%.
+- Dados de crafting e limites do modelo: [documentação de fontes](tools/craft/README.md).
+
+All six pages share a redesigned responsive interface. Both builds include searchable navigation, section links, printing, persistent crafting plans for 12 equipment categories, a mechanics glossary, an opt-in published-weight explorer and a cost/risk simulator. Unverified weights and undated prices are explicitly labelled.
+
 ## Estrutura / Structure
 
 ```
@@ -32,6 +42,15 @@ tools/oracle/                 scripts do Oracle · Oracle scripts
 ## Regenerar / Rebuild (opcional)
 
 Requer Python 3 com `openpyxl` e `Pillow`.
+
+Para reconstruir apenas o site usando os snapshots locais, basta Python 3 (biblioteca padrão):
+
+```bash
+python tools/build_all.py
+python -m http.server 8000
+```
+
+Abra `http://localhost:8000`. O servidor local oferece uma origem consistente para compartilhar progresso PT/EN; o comportamento de localStorage em `file://` varia por navegador. `openpyxl` e `Pillow` são necessários apenas para os fluxos de planilha/regeneração de imagens abaixo.
 
 ```bash
 cd tools
@@ -50,6 +69,16 @@ python obuild.py              # ../../oracle/index.html, en.html, assets/assets.
 - Dados Silverfist: `tools/chober.py`; tradução `tools/i18n/en_*.json` e `tools/ui_en.py`.
 - Dados Oracle: `tools/oracle/odata.py` (textos bilíngues), lógica `ochar.js`, `oadapt.js`, `ototem.js`.
 - Dados de jogo: Path of Building PoE2 (`tools/dl/pob/`), preços poe.ninja.
+
+## Verificação / Verification
+
+```bash
+python -m unittest discover -s tools/tests -v
+# Com Playwright disponível no Node (e o navegador instalado):
+node tools/tests/browser.cjs
+```
+
+O teste de navegador usa um servidor temporário local, testa as seis páginas em 1366px, 1024px e 768px (tablet) e 390px (celular), percorre todas as abas e as rotas de crafting, verifica overflow, busca, teclado, persistência PT/EN, deep links e limites das calculadoras. `BROWSER_CHANNEL=msedge` permite usar o Edge instalado; `SCREENSHOT_DIR` habilita capturas fora do repositório.
 
 ## Fontes / Sources
 

@@ -47,6 +47,7 @@ block("/* ------------------------------------------------ caçar companions */"
 block("/* ---- spirit */", "function vAsc() {", "/* ---- spirit: ver Totems & Mana */")
 rep("""function qStatus(e) {""", """function qStatus(e) {
   const key = TIMING_KEY[e.n] || e.n; const owned = !!(S.ch.own || {})[key];
+  if (e.lvl == null) return { k: owned ? "have" : "unknown", t: T("Confira o requisito no item", "Check the requirement on the item"), owned };
   if (e.lvl > S.lv) return { k: "lock", t: T(`Nível ${e.lvl} — faltam ${e.lvl - S.lv}`, `Level ${e.lvl} — ${e.lvl - S.lv} to go`), owned };
   return { k: owned ? "have" : "ok", t: owned ? T("Você já tem", "You have it") : T("Já pode usar", "Usable now"), owned };
 }

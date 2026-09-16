@@ -53,12 +53,12 @@ function vTotem() {
     <div class="panel frame"><h3>${T("Runic Ward (Grim Pillars)", "Runic Ward (Grim Pillars)")}</h3>
       <p style="margin:0 0 8px;color:var(--mute)">${T("Grim Pillars, Bitter Dead e Repulsion gastam Runic Ward, não mana. O Runic Ward vem de itens Runeforged/Runemastered. Custo por uso (gem nível 1 → 20):", "Grim Pillars, Bitter Dead and Repulsion spend Runic Ward, not mana. Runic Ward comes from Runeforged/Runemastered items. Cost per use (gem level 1 → 20):")}</p>
       <ul class="clean">${Object.entries(WARD).map(([n, [a, b]]) => `<li><span><b class="ui">${esc(n)}</b> · ${a} → ${b} Runic Ward</span></li>`).join("")}</ul>
-      <p style="margin:10px 0 0;color:var(--faint);font-size:.86rem">${T("No 0.5.5, Remnants e Expedition só aparecem a partir do Ato 4: antes não tem como conseguir Grim Pillars.", "In 0.5.5, Remnants and Expedition only appear from Act 4: before that there's no way to get Grim Pillars.")}</p>
+      <p style="margin:10px 0 0;color:var(--faint);font-size:.86rem">${T("No 0.5.5, Expedition aparece a partir do Ato 4. Comprar uma gem antes não substitui seus requisitos e o Runic Ward necessário para usá-la.", "In 0.5.5, Expedition appears from Act 4. Buying a gem earlier does not bypass its requirements or the Runic Ward needed to use it.")}</p>
     </div>
   </div>
-  <div class="panel frame" style="margin-top:16px"><h3>${T("Craft do amuleto de Archmage (Lowepe)", "Archmage amulet craft (Lowepe)")}</h3>
-    <p style="margin:0 0 10px;color:var(--danger)">${T("Pode ficar muito caro: não comece com menos de 100 div.", "Can get very expensive: don't start with under 100 div.")}</p>
-    <div class="checklist">${D.craft.map((s, i) => `<label class="check ${S.done["craft:" + i] ? "done" : ""}"><input type="checkbox" data-key="craft:${i}" ${S.done["craft:" + i] ? "checked" : ""}><span><b class="ui">${i + 1}.</b> ${esc(s)}</span></label>`).join("")}</div>
+  <div class="panel frame" style="margin-top:16px"><h3>${T("Planeje o amuleto de Archmage", "Plan the Archmage amulet")}</h3>
+    <p>${T("Spirit, mana e níveis de spell precisam funcionar juntos. A aba Crafting reúne as rotas, os requisitos de ilvl, as saídas de falha e o simulador de custo. Não há um orçamento fixo que garanta o item.", "Spirit, mana and spell levels need to work together. Crafting brings together routes, item-level requirements, failure branches and a cost simulator. No fixed budget guarantees the item.")}</p>
+    <button class="btn" type="button" data-guide-go="craft">${T("Abrir a oficina de crafting", "Open the crafting workshop")} →</button>
   </div>`;
 }
 document.addEventListener("change", e => { const t = e.target; if (t.dataset && t.dataset.own !== undefined && t.closest && t.closest("#v-totem")) { S.ch.own[t.dataset.own] = t.checked; saveCh(); } });

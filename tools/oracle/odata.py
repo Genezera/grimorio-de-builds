@@ -224,7 +224,7 @@ PHASES = [
    G("Mana Remnants", ["Harmonic Remnants II", "Remnant Potency III"], L("Mana", "Mana"), L("Nos dois weapon sets.", "On both weapon sets."), "core", 2, L("30 Spirit", "30 Spirit")),
   ],
   cheap=[L("Dueling Wand + Omen Sceptre", "Dueling Wand + Omen Sceptre"), L("Soul Mantle", "Soul Mantle"), L("Luvas Runeforged (Runic Ward)", "Runeforged gloves (Runic Ward)"), L("Breath of the Mountains (charm)", "Breath of the Mountains (charm)")],
-  full=[L("Amuleto de Archmage craftado (ver aba Totems & Mana)", "Crafted Archmage amulet (see the Totems & Mana tab)"), L("Lavianga's Spirits", "Lavianga's Spirits")],
+  full=[L("Amuleto de Archmage craftado (ver aba Crafting)", "Crafted Archmage amulet (see the Crafting tab)"), L("Lavianga's Spirits", "Lavianga's Spirits")],
   stats=[L("Mana máxima (Archmage + Mind Over Matter)", "Maximum mana (Archmage + Mind Over Matter)"), L("Spirit", "Spirit"), L("Runic Ward", "Runic Ward"), L("+Level All Spells", "+Level All Spells"), L("Resistências", "Resistances")],
   tree=L("Mind Over Matter e nós de mana. Ascendência: The Unseen Path + Harmony Within + The Lesser Harm + Forced Outcome (a Soul Mantle dá o +1 totem do Heartwood).", "Mind Over Matter and mana nodes. Ascendancy: The Unseen Path + Harmony Within + The Lesser Harm + Forced Outcome (Soul Mantle provides Heartwood's +1 totem)."),
   avoid=[L("Grim Pillars sem Runic Ward (não lança)", "Grim Pillars without Runic Ward (it won't cast)"), L("Tirar o Unnamed Heartwood sem ter a Soul Mantle ou gem do Spell Totem nível 14+", "Removing Unnamed Heartwood without Soul Mantle or a level 14+ Spell Totem gem")],
@@ -245,10 +245,10 @@ PHASES = [
    G("Mana Tempest", ["Advancing Storm", "Efficiency II"], L("Boss", "Boss"), L("Igual à semana 1.", "Same as week 1."), "free"),
   ],
   cheap=[L("Setup da semana 1 com Soul Mantle", "Week 1 setup with Soul Mantle")],
-  full=[L("Amuleto de Archmage craftado (100+ div)", "Crafted Archmage amulet (100+ div)"), L("Body rare Feathered Raiment com Spirit/mana", "Rare Feathered Raiment body with Spirit/mana"), L("Charms: The Fall of the Axe, Nascent Hope, Arakaali's Gift", "Charms: The Fall of the Axe, Nascent Hope, Arakaali's Gift"), L("Lavianga's Spirits", "Lavianga's Spirits")],
+  full=[L("Amuleto de Archmage craftado (custo variável)", "Crafted Archmage amulet (variable cost)"), L("Body rare Feathered Raiment com Spirit/mana", "Rare Feathered Raiment body with Spirit/mana"), L("Charms: The Fall of the Axe, Nascent Hope, Arakaali's Gift", "Charms: The Fall of the Axe, Nascent Hope, Arakaali's Gift"), L("Lavianga's Spirits", "Lavianga's Spirits")],
   stats=[L("Mana máxima", "Maximum mana"), L("Spirit", "Spirit"), L("+Level All Spells", "+Level All Spells"), L("Runic Ward", "Runic Ward"), L("Resistências", "Resistances")],
   tree=L("Ascendência: The Unseen Path + Entwined Realities + The Lesser Harm + Forced Outcome. Sem Soul Mantle e sem Heartwood: o limite vem da gem de Spell Totem nível 14+ (2 base) dobrada pelo Ancestral Bond.", "Ascendancy: The Unseen Path + Entwined Realities + The Lesser Harm + Forced Outcome. No Soul Mantle and no Heartwood: the limit comes from the level 14+ Spell Totem gem (2 base) doubled by Ancestral Bond."),
-  avoid=[L("Começar o craft do amuleto com menos de 100 div", "Starting the amulet craft with under 100 div")],
+  avoid=[L("Começar o craft do amuleto sem limite de gastos e sem comparar uma peça pronta", "Starting the amulet craft without a spending limit or comparing a finished item")],
   exit=[L("Pinnacle bosses", "Pinnacle bosses")]),
 ]
 PH = {p["id"]: p for p in PHASES}
@@ -372,7 +372,7 @@ GEAR = [
  dict(slot="Body Armour", cheap=L("Avian Robe com Spirit", "Avian Robe with Spirit"), value="Waveshaper", full="Soul Mantle", affix=L("Spirit; mana; ES", "Spirit; mana; ES"), note=L("Soul Mantle: +75 Spirit e +1 totem.", "Soul Mantle: +75 Spirit and +1 totem.")),
  dict(slot=L("Luvas", "Gloves"), cheap=L("Vida/resists", "Life/resists"), value=L("Runeforged (Runic Ward)", "Runeforged (Runic Ward)"), full=L("Rare com mana e resists", "Rare with mana and resists"), affix=L("Mana; resist", "Mana; resist"), note=""),
  dict(slot=L("Botas", "Boots"), cheap=L("10–15% MS", "10–15% MS"), value=L("25–30% MS + vida", "25–30% MS + life"), full=L("30% MS + mana + resists", "30% MS + mana + resists"), affix=L("Movement Speed primeiro", "Movement Speed first"), note=""),
- dict(slot=L("Amuleto", "Amulet"), cheap=L("Solar Amulet com Spirit", "Solar Amulet with Spirit"), value=L("Spirit ou +níveis de spell", "Spirit or +spell levels"), full=L("Amuleto de Archmage craftado (Spirit/Spell Level fracturado + mana + Kurgal)", "Crafted Archmage amulet (fractured Spirit/Spell Level + mana + Kurgal)"), affix=L("Spirit; +Spell Level; mana", "Spirit; +Spell Level; mana"), note=L("O craft pode custar 100+ div (passo a passo na aba Totems & Mana).", "The craft can cost 100+ div (step by step on the Totems & Mana tab).")),
+ dict(slot=L("Amuleto", "Amulet"), cheap=L("Solar Amulet com Spirit", "Solar Amulet with Spirit"), value=L("Spirit ou +níveis de spell", "Spirit or +spell levels"), full=L("Amuleto de Archmage craftado (Spirit/Spell Level fracturado + mana + Kurgal)", "Crafted Archmage amulet (fractured Spirit/Spell Level + mana + Kurgal)"), affix=L("Spirit; +Spell Level; mana", "Spirit; +Spell Level; mana"), note=L("O custo depende da base e das tentativas. Veja as rotas e o simulador na aba Crafting.", "Cost depends on the base and attempts. See routes and the simulator in Crafting.")),
  dict(slot=L("Anéis", "Rings"), cheap=L("Vida/resists/mana", "Life/resists/mana"), value=L("Mana + resists", "Mana + resists"), full=L("Rares com mana e resists", "Rares with mana and resists"), affix=L("Resists; mana", "Resists; mana"), note=""),
  dict(slot=L("Cinto", "Belt"), cheap=L("Vida/resists", "Life/resists"), value=L("Heavy Belt com vida/resists", "Heavy Belt with life/resists"), full=L("Rare com mana/vida/resists", "Rare with mana/life/resists"), affix=L("Resists", "Resists"), note=""),
  dict(slot="Charms", cheap=L("Thawing, Antidote, Sapphire", "Thawing, Antidote, Sapphire"), value="Breath of the Mountains", full=L("The Fall of the Axe · Nascent Hope · Arakaali's Gift", "The Fall of the Axe · Nascent Hope · Arakaali's Gift"), affix=L("Cobrir freeze/poison/slow", "Cover freeze/poison/slow"), note=""),
@@ -386,7 +386,7 @@ BUY_ORDER = [
  dict(p=5, item=L("Peças Runeforged", "Runeforged pieces"), phase=L("Atlas", "Atlas"), cost=L("Barato", "Cheap"), impact=L("Runic Ward para Grim Pillars", "Runic Ward for Grim Pillars")),
  dict(p=6, item="Soul Mantle", phase=L("Atlas", "Atlas"), cost=L("Valor", "Value"), impact=L("+75 Spirit e +1 totem", "+75 Spirit and +1 totem")),
  dict(p=7, item="Lavianga's Spirits", phase=L("Endgame", "Endgame"), cost=L("Valor", "Value"), impact=L("Mana constante", "Constant mana")),
- dict(p=8, item=L("Amuleto de Archmage craftado", "Crafted Archmage amulet"), phase=L("Endgame final", "Final endgame"), cost=L("Alto (100+ div)", "High (100+ div)"), impact=L("Teto de dano e Spirit", "Damage and Spirit ceiling")),
+ dict(p=8, item=L("Amuleto de Archmage craftado", "Crafted Archmage amulet"), phase=L("Endgame final", "Final endgame"), cost=L("Alto; simule o orçamento", "High; model your budget"), impact=L("Teto de dano e Spirit", "Damage and Spirit ceiling")),
 ]
 
 # ------------------------------------------------------------------ tricks
@@ -430,19 +430,10 @@ ATLAS_CHECK = [
 ]
 
 CRAFT = [
- L("Amuleto com item level 79+ (o nível do Archmage não importa). Não comece com menos de 100 div.", "Amulet with item level 79+ (the Archmage level doesn't matter). Don't start with under 100 div."),
- L("Regal Orb: deixe o amuleto rare.", "Regal Orb: make the amulet rare."),
- L("Annulment Orb: tire todos os mods menos 1.", "Annulment Orb: remove all mods but 1."),
- L("Chaos Orb até vir \"T1 Spirit\" ou \"T1 Spell Level\".", "Chaos Orb until \"T1 Spirit\" or \"T1 Spell Level\" appears."),
- L("Abyss Desecrate (Preserved Collarbone) — NÃO revele.", "Abyss Desecrate (Preserved Collarbone) — do NOT reveal."),
- L("Exalted Orb: mais 1 mod.", "Exalted Orb: 1 more mod."),
- L("Fracturing Orb no \"T1 Spirit/Spell Level\". Se pegou, ótimo; senão volte ao passo 2.", "Fracturing Orb on \"T1 Spirit/Spell Level\". If it hits, great; otherwise back to step 2."),
- L("Annulment: tire todos menos 1 (e o fracturado).", "Annulment: remove all but 1 (and the fractured one)."),
- L("Chaos Orb até o outro mod (Spirit ou Spell Level, o que não foi fracturado).", "Chaos Orb until the other mod (Spirit or Spell Level, whichever isn't fractured)."),
- L("Neural Catalyst até 20% de qualidade.", "Neural Catalyst to 20% quality."),
- L("Omen of Catalysing Exaltation + Omen of Sinistral Exaltation + Perfect Exalted Orb → prefixo de mana com chance alta.", "Omen of Catalysing Exaltation + Omen of Sinistral Exaltation + Perfect Exalted Orb → mana prefix with high chance."),
- L("Abyss Desecrate (Preserved Collarbone) + Omen of the Blackblooded → mod de Kurgal.", "Abyss Desecrate (Preserved Collarbone) + Omen of the Blackblooded → Kurgal mod."),
- L("Revele com Omen of Abyssal Echoes: chance alta de \"Mana before Life\". Se errar, volte ao passo 12 com Omen of Light + Annulment.", "Reveal with Omen of Abyssal Echoes: high chance of \"Mana before Life\". If it misses, back to step 12 with Omen of Light + Annulment."),
+ L("Defina Spirit, mana e níveis de spell necessários para o seu setup; abra Crafting para os tiers e ilvl.", "Set the Spirit, mana and spell levels your setup needs; open Crafting for tiers and item level."),
+ L("Compare uma base já fracturada com o custo total de prepará-la. Uma fratura errada exige outra base.", "Compare an already fractured base against the full preparation cost. A wrong fracture requires another base."),
+ L("Conte prefixos, sufixos e famílias antes de cada operação. Perfect Exalted e omens não garantem mana T1.", "Count prefixes, suffixes and families before each operation. Perfect Exalted and omens do not guarantee T1 mana."),
+ L("Planeje a tentativa de Kurgal, o custo de repetir e um limite de gastos. Confira o roteiro completo na aba Crafting.", "Plan the Kurgal attempt, retry costs and a spending limit. Check the full route in the Crafting tab."),
 ]
 
 # ------------------------------------------------------------------ quando usar
@@ -468,8 +459,8 @@ T("item", "Waveshaper", 1, L("Confira o nível no item", "Check the level on the
   L("Serve logo na troca se o nível permitir.", "Works right at the swap if the level allows."), L("Avian Robe/body rare com Spirit.", "Avian Robe/rare body with Spirit."))
 T("item", L("Peças Runeforged (Runic Ward)", "Runeforged pieces (Runic Ward)"), 1, L("Helmet/gloves/boots Runeforged ou Runemastered", "Runeforged or Runemastered helmet/gloves/boots"), L("Antes de colocar Grim Pillars.", "Before slotting Grim Pillars."), L("Runic Ward: o recurso de Grim Pillars, Bitter Dead e Repulsion.", "Runic Ward: the resource for Grim Pillars, Bitter Dead and Repulsion."),
   L("Sem Grim Pillars ainda não fazem diferença.", "Without Grim Pillars they make no difference yet."), L("Sem elas, fique no Spark.", "Without them, stay on Spark."))
-T("item", L("Amuleto de Archmage", "Archmage amulet"), 79, L("Item level 79+ para o craft", "Item level 79+ for the craft"), L("Endgame final.", "Final endgame."), L("Spirit/Spell Level + mana + Kurgal + Mana before Life.", "Spirit/Spell Level + mana + Kurgal + Mana before Life."),
-  L("Não comece o craft com menos de 100 div.", "Don't start the craft with under 100 div."), L("Solar Amulet com Spirit.", "Solar Amulet with Spirit."))
+T("item", L("Amuleto de Archmage", "Archmage amulet"), None, L("Requisito para equipar: confira o item. ilvl dos mods: veja Crafting.", "Equip requirement: check the item. Modifier ilvl: see Crafting."), L("Endgame final.", "Final endgame."), L("Spirit/Spell Level + mana + Kurgal + Mana before Life.", "Spirit/Spell Level + mana + Kurgal + Mana before Life."),
+  L("Defina o limite de gastos e compare uma peça pronta antes de começar.", "Set a spending limit and compare a finished item before starting."), L("Solar Amulet com Spirit.", "Solar Amulet with Spirit."))
 T("item", "Lavianga's Spirits", 49, L("Nível 49", "Level 49"), L("Com Mind Over Matter/Archmage.", "With Mind Over Matter/Archmage."), L("Flask de mana constante.", "Constant mana flask."), L("Antes do MoM ajuda pouco.", "Before MoM it helps little."), "—")
 T("skill", "Grim Pillars", 40, L("Skill de Expedition — só a partir do Ato 4 (0.5.5)", "Expedition skill — only from Act 4 (0.5.5)"), L("Atlas, com Runic Ward.", "Atlas, with Runic Ward."), L("Pilares de gelo que explodem; gasta Runic Ward.", "Exploding ice pillars; spends Runic Ward."),
   L("Achou cedo? Guarde até ter Runic Ward nas armaduras; enquanto isso, Spark.", "Found it early? Keep it until you have Runic Ward on armour; meanwhile, Spark."), L("Spark nos totems funciona até o endgame.", "Spark in totems works until endgame."),

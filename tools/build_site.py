@@ -1,6 +1,7 @@
 """Gera o site (index.html PT + en.html EN + assets/) na pasta OUT."""
 import json, base64, re, os, sys, shutil
 import chober as D
+from enhance import enhance
 from ui_en import UI
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "../silverfist"
@@ -80,6 +81,7 @@ def page(lang):
           .replace("__PT_ON__", "on" if lang == "pt" else "").replace("__EN_ON__", "on" if lang == "en" else ""))
     t = t.replace("<script>\nconst LANG =", '<script src="assets/assets.js"></script>\n<script>\nconst LANG =', 1)
     assert 'src="assets/assets.js"' in t, "assets script tag missing"
+    t = enhance(t, lang, "silverfist")
     # head: tudo antes de <style>...</style> fica no head
     i = t.index("</style>") + len("</style>")
     home = '<a class="homebtn" href="../%s">← Builds</a>' % ("index.html" if lang == "pt" else "en.html")

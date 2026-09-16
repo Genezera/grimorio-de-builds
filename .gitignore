@@ -6,3 +6,8 @@ tools/site/
 Thumbs.db
 tools/out.xlsx
 tools/*.bak
+
+# Raw research pages can be re-downloaded; normalized mod snapshots are versioned.
+tools/dl/web/*.html
+tools/dl/web/report.txt
+test-results/
