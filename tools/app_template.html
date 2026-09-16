@@ -238,6 +238,8 @@ ul.clean.danger li::before{background:var(--danger)}
 .havebadge{margin:6px 12px 0;padding:4px 8px;border:1px solid #2f5b4c;color:#8fd9b8;font-family:var(--ui);font-size:.8rem}
 .missbadge{margin:6px 12px 0;padding:4px 8px;border:1px dashed var(--edge2);color:var(--mute);font-family:var(--ui);font-size:.8rem}
 .spc.nofit{border-color:rgba(224,102,79,.6);color:#ffb3a3;margin-left:6px}
+.huntol{margin:0;padding-left:20px;display:grid;gap:6px}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .spnote{padding:12px 14px;margin-bottom:16px;border-color:#8a6a38;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(200,165,106,.1),transparent)}
 .spnote b{font-family:var(--display);color:var(--gild-hi);font-size:1rem}
 .spnote p{margin:0;color:var(--text)}
@@ -612,6 +614,7 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
     <section class="view" id="v-agora"></section>
     <section class="view" id="v-meu"></section>
     <section class="view" id="v-quando"></section>
+    <section class="view" id="v-caca"></section>
     <section class="view" id="v-meta"></section>
     <section class="view" id="v-uniques"></section>
     <section class="view" id="v-arvore"></section>
@@ -650,7 +653,7 @@ S.stage = store.get("stage", "auto");
 function curPhase() { return (S.stage && S.stage !== "auto" && D.phases.find(p => p.id === S.stage)) || phaseOf(S.lv); }
 const phaseOf = lv => D.phases.find(p => lv >= p.lv[0] && lv <= p.lv[1]) || D.phases[D.phases.length - 1];
 const msList = Object.entries(D.milestones).map(([k, v]) => ({ lv: +k, t: v })).sort((a, b) => a.lv - b.lv);
-const TABS = [["agora","Agora"],["meu","Meu personagem"],["quando","Quando usar"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]];
+const TABS = [["agora","Agora"],["meu","Meu personagem"],["quando","Quando usar"],["caca","Caçar companions"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]];
 const baseSkill = s => s.replace(/\s*\(.*\)/, "").trim();
 const gemImg = s => ic(A.gemIcon[baseSkill(s)]);
 const supImg = s => ic(A.supIcon[s]);
@@ -1206,7 +1209,7 @@ function vZoo() {
       <p style="color:var(--faint);font-size:.88rem;margin:10px 0 0">Custos em % vêm do guia (antes de reduções). Custos "flat" variam com o nível da gem — copie o valor do jogo. O exemplo é ilustrativo.</p>
     </div>
   </div>
-  <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Beasts que valem capturar</h2><p>Ordem de aura: ${D.auraPriority.slice(0, 5).map(esc).join(" › ")}</p><p><b style="color:var(--gild-hi)">Limite de companions:</b> 1 base · 2 de tipos diferentes com Trusted Kinship ou Yriel's Fostering · qualquer número com Sylvan's Effigy (o urso do Wild Protector não conta). Antes do Effigy: macaco + 1 beast de aura — prefira os de 21–25% de Spirit. Use a aba <a href="#" data-gotab="meu">Meu personagem</a> para ver o que cabe no seu Spirit.</p></div></div>
+  <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Beasts que valem capturar</h2><p>Ordem de aura: ${D.auraPriority.slice(0, 5).map(esc).join(" › ")}</p><p><b style="color:var(--gild-hi)">Limite de companions:</b> 1 base · 2 de tipos diferentes com Trusted Kinship ou Yriel's Fostering · qualquer número com Sylvan's Effigy (o urso do Wild Protector não conta). Antes do Effigy: macaco + 1 beast de aura — prefira os de 21–25% de Spirit. Use a aba <a href="#" data-gotab="meu">Meu personagem</a> para ver o que cabe no seu Spirit e a aba <a href="#" data-gotab="caca">Caçar companions</a> para saber onde e como capturar.</p></div></div>
   <div class="tablewrap frame"><table><thead><tr><th>Tier</th><th>Beast</th><th>Papel</th><th>Custo</th><th>Onde</th><th>Mods desejados</th><th>Supports</th></tr></thead><tbody>
   ${D.beasts.map(b => { const gi = /Azmerian/.test(b.name) ? gemImg("Azmerian Wolf") : tb; return `<tr><td><span class="chip ${b.tier.startsWith("S") ? "unique" : "wisp"}">${esc(b.tier)}</span></td><td><span class="bst">${gi ? `<img src="${gi}" alt="">` : ""}<b class="ui" style="color:${/Silverfist|Azmerian/.test(b.name) ? "#E18C47" : "var(--text)"}">${esc(b.name)}</b></span></td><td>${esc(b.role)}</td><td class="num">${b.cost ? String(b.cost).replace(".", ",") + "%" : "—"}</td><td>${esc(b.where)}</td><td>${esc(b.mods)}</td><td style="min-width:240px">${b.sup.split(" · ").map(x => supImg(x) ? `<img src="${supImg(x)}" alt="${esc(x)}" title="${esc(x)}" style="width:22px;height:22px;vertical-align:middle;margin-right:2px">` : "").join("")}<br><small style="color:var(--mute)">${esc(b.sup)}</small></td></tr>`; }).join("")}
   </tbody></table></div>`;
@@ -1323,7 +1326,7 @@ function vMeta() {
   </div>`;
 }
 
-const VIEWS = { meu: vMeu, quando: vQuando, meta: vMeta, uniques: vUniques, agora: vAgora, arvore: vArvore, rota: vRota, skills: vSkills, gear: vGear, zoo: vZoo, asc: vAsc, quests: vQuests, tricks: vTricks, atlas: vAtlas, diag: vDiag, fontes: vFontes };
+const VIEWS = { meu: vMeu, quando: vQuando, caca: vHunt, meta: vMeta, uniques: vUniques, agora: vAgora, arvore: vArvore, rota: vRota, skills: vSkills, gear: vGear, zoo: vZoo, asc: vAsc, quests: vQuests, tricks: vTricks, atlas: vAtlas, diag: vDiag, fontes: vFontes };
 function renderTab(id) {
   const el = $("#v-" + id); el.innerHTML = VIEWS[id]();
   if (id === "arvore") mountTree();
@@ -1646,6 +1649,34 @@ function treeAdaptNotes() {
 }
 const lvOk = n => S.lv >= n;
 document.addEventListener("change", e => { if (e.target.id === "adaptTgl") { S.adapt = e.target.checked; store.set("adapt", S.adapt); render(); } });
+
+/* ------------------------------------------------ caçar companions */
+S.hf = store.get("hf", "all");
+function vHunt() {
+  const H = D.hunt;
+  const hasteTxt = h => h === "sim" ? `<span class="chip wisp">${T("Rola Haste", "Rolls Haste")}</span>` : h === "nao" ? `<span class="chip danger">${T("Não rola Haste", "No Haste")}</span>` : `<span class="chip">${T("Haste: não confirmado", "Haste: unconfirmed")}</span>`;
+  const list = H.beasts.filter(b => S.hf === "all" || (S.hf === "haste" && b.haste === "sim") || (S.hf === "cheap" && b.cost <= 26.7) || (S.hf === "act" && !/Mapas|Maps/.test(b.where)) || (S.hf === "maps" && /Mapas|Maps/.test(b.where)));
+  const est = pct => { const tot = +S.ch.spirit || 0; if (!tot) return ""; const eff = (S.ch.tk ? 1.3 : 1) * (1 + (S.ch.eg ? .25 : 0)); return ` · ≈ ${Math.round(pct / 100 * tot / eff)} Spirit`; };
+  const tierName = { primary: T("Principais — capture por causa deles", "Primary — capture for these"), secondary: T("Secundários — bons junto com um principal", "Secondary — good alongside a primary"), tertiary: T("Terciários — só bônus", "Tertiary — just a bonus") };
+  return `<div class="sechead"><div><h2>${T("Caçar companions", "Hunting companions")}</h2><p>${T("Como capturar, onde achar cada beast (campanha e mapas), truques de farm e quais modificadores procurar. O custo em Spirit usa o seu Spirit máximo de Meu personagem.", "How to capture, where to find each beast (campaign and maps), farming tricks and which modifiers to look for. Spirit cost uses your max Spirit from My character.")}</p></div></div>
+  <div class="grid g2">
+    <div class="panel frame"><h3>${T("Como capturar (passo a passo)", "How to capture (step by step)")}</h3><ol class="huntol">${H.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div>
+    <div class="panel frame"><h3>${T("Rota mais rápida para auras T1 (Mattjestic)", "Fastest route for T1 auras (Mattjestic)")}</h3><div class="checklist">${H.route.map((r, i) => `<label class="check ${S.done["hunt:" + i] ? "done" : ""}"><input type="checkbox" data-key="hunt:${i}" ${S.done["hunt:" + i] ? "checked" : ""}><span><b class="ui">${esc(r.t)}</b><br>${esc(r.d)}</span></label>`).join("")}</div></div>
+  </div>
+  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Truques de farm", "Farming tricks")}</h2></div></div>
+  <div class="qgrid">${H.tricks.map(x => `<article class="qcard frame"><h3 style="margin:0">${esc(x.t)}</h3><p style="margin:0">${esc(x.d)}</p></article>`).join("")}</div>
+  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Onde achar cada beast", "Where to find each beast")}</h2><p>${T("Ordenado pelo menor custo de Spirit. Com o Effigy, junte auras T1 de TIPOS diferentes; antes dele, só cabe 1 beast de aura.", "Sorted by lowest Spirit cost. With the Effigy, collect T1 auras of DIFFERENT types; before it, only 1 aura beast fits.")}</p></div></div>
+  <div class="filters" style="margin-bottom:12px">${[["all", T("Todos", "All")], ["haste", T("Rolam Haste", "Roll Haste")], ["cheap", T("Mais baratos (≤ 26,7%)", "Cheapest (≤ 26.7%)")], ["act", T("Campanha", "Campaign")], ["maps", T("Mapas", "Maps")]].map(([k, l]) => `<button type="button" data-hf="${k}" aria-pressed="${S.hf === k}">${l}</button>`).join("")}</div>
+  <div class="tablewrap frame"><table><thead><tr><th>${T("Beast", "Beast")}</th><th>${T("Spirit", "Spirit")}</th><th>${T("Onde", "Where")}</th><th>${T("Como aparece", "How it spawns")}</th><th>Haste</th><th>${T("Observação", "Note")}</th></tr></thead><tbody>
+  ${list.map(b => `<tr><td><b class="ui">${esc(b.n)}</b></td><td class="num">${b.cost}%${est(b.cost)}</td><td>${esc(b.where)}</td><td>${esc(b.how)}</td><td>${hasteTxt(b.haste)}</td><td>${esc(b.note)}</td></tr>`).join("")}
+  </tbody></table></div>
+  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Nos mapas (Atlas)", "In maps (Atlas)")}</h2></div></div>
+  <div class="qgrid">${H.atlas.map(x => `<article class="qcard frame"><h3 style="margin:0">${esc(x.t)}</h3><p style="margin:0">${esc(x.d)}</p></article>`).join("")}</div>
+  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Quais modificadores procurar", "Which modifiers to look for")}</h2><p>${T("Um beast pode ter até 4 modificadores. Procure pelo menos 1 principal; o ideal é 1 principal + 1 secundário.", "A beast can have up to 4 modifiers. Look for at least 1 primary; ideally 1 primary + 1 secondary.")}</p></div></div>
+  <div class="grid g3">${["primary", "secondary", "tertiary"].map(k => `<div class="panel frame"><h3>${tierName[k]}</h3><ul class="clean ${k === "primary" ? "gold" : ""}">${H.mods.filter(m => m.tier === k).map(m => `<li><span><b class="ui">${esc(m.n)}</b><br><small style="color:var(--mute)">${esc(m.d)}</small></span></li>`).join("")}</ul></div>`).join("")}</div>
+  <p style="color:var(--faint);font-size:.85rem;margin-top:16px">${T("Fontes:", "Sources:")} ${H.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(" · ")}</p>`;
+}
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-hf]"); if (b) { S.hf = b.dataset.hf; store.set("hf", S.hf); render(); } });
 
 /* ------------------------------------------------ quando usar */
 S.qf = store.get("qf", "all");

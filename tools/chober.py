@@ -502,6 +502,8 @@ import timing
 timing.unique_levels(UNIQUES)
 DATA.update(timing=timing.TIMING, timingCases=timing.TIMING_CASES)
 timing.effigy_62(DATA)
+import hunting
+DATA.update(hunt=hunting.HUNT)
 spirit_tiers.companion_limit(DATA)
 # mantém as estruturas cruas (usadas pela planilha) iguais ao DATA
 TRICKS[:] = DATA["tricks"]
