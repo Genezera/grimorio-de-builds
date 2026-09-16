@@ -1,48 +1,32 @@
-# A Trilha do Mighty Silverfist · The Mighty Silverfist Trail
+# Grimório de Builds · Build Grimoire — Path of Exile 2
 
-Guia interativo **Spirit Walker / Mighty Silverfist (Zoo Chober Chaber)** para Path of Exile 2 — patch 0.5.5, liga Forbidden Rites. Baseado no guia do Mattjestic, com explicações de cada gem, support, item, unique e passiva, do nível 1 ao 100, em modo barato e completo.
+Guias interativos de build para Path of Exile 2 — patch 0.5.5, liga Forbidden Rites. Cada guia vai do nível 1 ao 100, explica cada gem, support, item, unique e passiva, e se adapta ao que você marca em **Meu personagem** (nível, Spirit, itens que já tem).
 
-Interactive **Spirit Walker / Mighty Silverfist (Chober Chaber zoo)** guide for Path of Exile 2 — patch 0.5.5, Forbidden Rites league. Built on Mattjestic's guide, with explanations for every gem, support, item, unique and passive from level 1 to 100, in budget and full mode.
+Interactive build guides for Path of Exile 2 — patch 0.5.5, Forbidden Rites league. Each guide goes from level 1 to 100, explains every gem, support, item, unique and passive, and adapts to what you tick in **My character** (level, Spirit, items you already own).
 
-| Página / Page | Idioma / Language |
+Site: https://genezera.github.io/trilha-silverfist/
+
+| Página / Page | Conteúdo / Content |
 |---|---|
-| `index.html` | Português (BR) |
-| `en.html` | English |
+| `index.html` · `en.html` | Página inicial para escolher a build · Build picker (PT · EN) |
+| `silverfist/index.html` · `silverfist/en.html` | Huntress · Spirit Walker — Mighty Silverfist zoo (guia do Mattjestic) |
+| `oracle/index.html` · `oracle/en.html` | Druid · Oracle — Spell Totem (guia do Lowepe) |
 
-O botão **PT / EN** no topo troca de idioma; o progresso (nível, modo, checklists, zoo) é compartilhado entre as duas versões.
-The **PT / EN** switch at the top changes language; progress (level, mode, checklists, zoo) is shared between both versions.
+O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:` e `oracle1:`).
+The **PT / EN** switch changes language; each build's progress is shared between both versions.
 
----
-
-## Publicar no GitHub Pages / Publish on GitHub Pages
-
-1. Crie um repositório no GitHub (ex.: `trilha-silverfist`) · Create a GitHub repository.
-2. Nesta pasta / In this folder:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Trilha do Silverfist"
-   git branch -M main
-   git remote add origin https://github.com/SEU-USUARIO/trilha-silverfist.git
-   git push -u origin main
-   ```
-
-3. No GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / `(root)` → Save**.
-4. Em ~1 minuto o site fica em / In about a minute the site is live at:
-   `https://SEU-USUARIO.github.io/trilha-silverfist/` (PT) e `.../en.html` (EN).
-
-O site é 100% estático (HTML + JS). Também funciona abrindo `index.html` direto no navegador.
-The site is fully static (HTML + JS). It also works by opening `index.html` directly in a browser.
+O site é 100% estático (HTML + JS) e também funciona abrindo os arquivos direto no navegador.
+The site is fully static (HTML + JS) and also works by opening the files directly in a browser.
 
 ## Estrutura / Structure
 
 ```
-index.html            app em português
-en.html               app in English
-assets/assets.js      árvore de passivas, ícones e sets (compartilhado) · tree, icons, sets (shared)
-planilha/             planilha Excel completa · full Excel workbook (PT)
-tools/                scripts para regenerar tudo · scripts to rebuild everything
+index.html, en.html           página inicial · landing page
+silverfist/                   app Spirit Walker (index.html, en.html, assets/assets.js)
+oracle/                       app Oracle (index.html, en.html, assets/assets.js)
+planilha/                     planilha Excel do Silverfist · Silverfist Excel workbook (PT)
+tools/                        scripts do Silverfist + página inicial · Silverfist + landing scripts
+tools/oracle/                 scripts do Oracle · Oracle scripts
 ```
 
 ## Regenerar / Rebuild (opcional)
@@ -51,17 +35,25 @@ Requer Python 3 com `openpyxl` e `Pillow`.
 
 ```bash
 cd tools
-python build_assets.py     # assets.json (árvore, ícones, sets) — usa dl/, tree.json, iconcache/
-python build_site.py ..    # gera ../index.html, ../en.html e ../assets/assets.js
-python build_xlsx.py       # gera out.xlsx
+python build_assets.py        # assets.json do Silverfist (árvore, ícones, sets)
+python build_site.py          # ../silverfist/index.html, en.html, assets/assets.js
+python build_xlsx.py          # out.xlsx
+python build_landing.py       # ../index.html e ../en.html (usa assets.json e oracle/assets.json)
+
+cd oracle
+python extract.py             # dl/oracle_variants.json (variantes do Mobalytics)
+python oassets.py             # assets.json do Oracle
+python opatch.py              # app_template.html do Oracle (a partir do template do Silverfist)
+python obuild.py              # ../../oracle/index.html, en.html, assets/assets.js
 ```
 
-- Dados da build: `tools/chober.py` (sobre `meta.py` e `data.py`).
-- Tradução: `tools/i18n/en_*.json` (textos dos dados) e `tools/ui_en.py` (textos da interface).
+- Dados Silverfist: `tools/chober.py`; tradução `tools/i18n/en_*.json` e `tools/ui_en.py`.
+- Dados Oracle: `tools/oracle/odata.py` (textos bilíngues), lógica `ochar.js`, `oadapt.js`, `ototem.js`.
+- Dados de jogo: Path of Building PoE2 (`tools/dl/pob/`), preços poe.ninja.
 
 ## Fontes / Sources
 
-Mattjestic (Mobalytics), imortilize (Mobalytics), Zizaran (Maxroll), poe.ninja, PoE2DB e dados da árvore do Path of Building (PoE2). Preços da liga são um retrato do momento da pesquisa · League prices are a snapshot from research time.
+Mattjestic e Lowepe (Mobalytics), imortilize (Mobalytics), Zizaran (Maxroll), poe.ninja, PoE2DB e dados do Path of Building (PoE2). Preços da liga são um retrato do momento da pesquisa · League prices are a snapshot from research time.
 
 Projeto de fã, sem vínculo com a Grinding Gear Games. Path of Exile é marca da Grinding Gear Games.
 Fan project, not affiliated with Grinding Gear Games.

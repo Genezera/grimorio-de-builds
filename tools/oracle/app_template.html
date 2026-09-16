@@ -1,19 +1,19 @@
-<title>Trilha do Silverfist</title>
-<meta name="description" content="Guia interativo Spirit Walker / Mighty Silverfist — PoE 2 Forbidden Rites">
+<title>__TITLE__</title>
+<meta name="description" content="__DESC__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Alegreya+SC:wght@400;500;700&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Marcellus&family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
 :root{
-  --ground:#0A0908; --ground2:#100E0C; --stone:#15120F; --stone2:#1B1713; --stone3:#231E18;
-  --edge:#3A3024; --edge2:#5A4832; --gild:#C8A56A; --gild-hi:#EBD29A; --gild-g:rgba(200,165,106,.14);
-  --text:#D9CDB4; --mute:#9B8C74; --faint:#6A5E4D;
+  --ground:#07080B; --ground2:#0B0C11; --stone:#0E0F16; --stone2:#11141D; --stone3:#161925;
+  --edge:#21263D; --edge2:#2C3760; --gild:#7292CA; --gild-hi:#ACC0E3; --gild-g:rgba(114,146,202,.14);
+  --text:#B4C5E3; --mute:#597FC0; --faint:#474F70;
   --unique:#AF6025; --rare:#FFFF77; --magic:#8888FF; --gem:#1BA29B; --normal:#C8C8C8; --corrupt:#D20000;
-  --wisp:#7FD8B0; --wisp-g:rgba(127,216,176,.14); --bear:#A77BE0; --bear-g:rgba(167,123,224,.16);
+  --wisp:#7FD7D8; --wisp-g:rgba(127,215,216,.14); --bear:#AA7BE0; --bear-g:rgba(170,123,224,.16);
   --set1:#D9544A; --set2:#62B462; --danger:#E0664F; --danger-g:rgba(224,102,79,.14);
-  --display:"Cinzel","Trajan Pro",Georgia,serif;
-  --ui:"Alegreya SC","Palatino Linotype",Georgia,serif;
-  --body:"Alegreya","Palatino Linotype",Georgia,serif;
+  --display:"Marcellus","Cinzel","Trajan Pro",Georgia,serif;
+  --ui:"Marcellus SC","Palatino Linotype",Georgia,serif;
+  --body:"Spectral","Palatino Linotype",Georgia,serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
   color-scheme:dark;
 }
@@ -21,9 +21,9 @@
 html,body{background:var(--ground);color:var(--text)}
 body{margin:0;font-family:var(--body);font-size:17px;line-height:1.5;min-height:100vh;
   background:
-    radial-gradient(1100px 600px at 78% -8%,rgba(167,123,224,.10),transparent 60%),
-    radial-gradient(900px 520px at 8% 0%,rgba(127,216,176,.07),transparent 60%),
-    radial-gradient(1400px 900px at 50% 120%,rgba(200,165,106,.06),transparent 60%),
+    radial-gradient(1100px 600px at 78% -8%,rgba(170,123,224,.10),transparent 60%),
+    radial-gradient(900px 520px at 8% 0%,rgba(127,215,216,.07),transparent 60%),
+    radial-gradient(1400px 900px at 50% 120%,rgba(114,146,202,.06),transparent 60%),
     var(--ground)}
 button,input,select{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--gild);outline-offset:2px}
@@ -35,11 +35,11 @@ h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:.04em;text-wr
 img{max-width:100%}
 
 /* ---------- ornate panel (PoE frame) */
-.frame{position:relative;background:linear-gradient(180deg,var(--stone2),var(--stone));border:1px solid var(--edge);box-shadow:inset 0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(235,210,154,.06),0 8px 24px rgba(0,0,0,.35)}
+.frame{position:relative;background:linear-gradient(180deg,var(--stone2),var(--stone));border:1px solid var(--edge);box-shadow:inset 0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(172,192,227,.06),0 8px 24px rgba(0,0,0,.35)}
 .frame::before,.frame::after{content:"";position:absolute;width:9px;height:9px;border:1px solid var(--gild);background:var(--ground);transform:rotate(45deg);top:-5px;pointer-events:none}
 .frame::before{left:-5px}.frame::after{right:-5px}
 .plate{font-family:var(--display);font-weight:700;letter-spacing:.08em;color:var(--gild-hi);text-align:center;padding:8px 14px;
-  background:linear-gradient(90deg,transparent,rgba(200,165,106,.14) 20%,rgba(200,165,106,.22) 50%,rgba(200,165,106,.14) 80%,transparent);
+  background:linear-gradient(90deg,transparent,rgba(114,146,202,.14) 20%,rgba(114,146,202,.22) 50%,rgba(114,146,202,.14) 80%,transparent);
   border-top:1px solid var(--edge2);border-bottom:1px solid var(--edge2)}
 .divider{height:10px;margin:10px 0;background:
   linear-gradient(90deg,transparent,var(--edge2) 15%,var(--gild) 50%,var(--edge2) 85%,transparent) center/100% 1px no-repeat}
@@ -49,7 +49,7 @@ img{max-width:100%}
 /* ---------- layout */
 .app{display:grid;grid-template-columns:84px minmax(0,1fr);min-height:100vh}
 @media (min-width:1440px){.app{grid-template-columns:84px minmax(0,1fr) 360px}}
-.rail{position:sticky;top:0;height:100vh;border-right:1px solid var(--edge);background:linear-gradient(180deg,#0e0c0a,#080706);display:flex;flex-direction:column;align-items:center;padding:16px 0 12px;gap:6px}
+.rail{position:sticky;top:0;height:100vh;border-right:1px solid var(--edge);background:linear-gradient(180deg,#090A0F,#060608);display:flex;flex-direction:column;align-items:center;padding:16px 0 12px;gap:6px}
 .rail .lv-top,.rail .lv-bot{font-family:var(--ui);font-size:.72rem;color:var(--faint)}
 .totem{position:relative;flex:1;width:100%;margin:6px 0}
 .totem .spine{position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);background:var(--edge)}
@@ -69,10 +69,10 @@ main{padding:24px clamp(16px,2.6vw,40px) 80px;min-width:0}
 .console{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,1fr);gap:26px;align-items:stretch;padding-bottom:22px}
 .brand{display:flex;flex-direction:column;justify-content:flex-end}
 .brand .eyebrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.brand .pill{font-family:var(--ui);border:1px solid var(--edge2);padding:1px 10px;font-size:.82rem;color:var(--gild-hi);background:rgba(200,165,106,.08)}
-.brand .pill.league{color:#f2b28b;border-color:#6b3b20;background:rgba(175,96,37,.14)}
+.brand .pill{font-family:var(--ui);border:1px solid var(--edge2);padding:1px 10px;font-size:.82rem;color:var(--gild-hi);background:rgba(114,146,202,.08)}
+.brand .pill.league{color:#A0BAE7;border-color:#233168;background:rgba(53,74,159,.14)}
 .brand h1{font-size:clamp(2.1rem,4.4vw,3.9rem);line-height:1.02;margin-top:12px;font-weight:900;
-  background:linear-gradient(180deg,#F6E7C1 0%,#D9B676 48%,#9C7640 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 30px rgba(200,165,106,.18)}
+  background:linear-gradient(180deg,#D0DCF2 0%,#88A3D2 48%,#3F65A7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 30px rgba(114,146,202,.18)}
 .brand h1 small{display:block;font-family:var(--ui);font-weight:500;font-size:.36em;letter-spacing:.2em;color:var(--mute);-webkit-text-fill-color:var(--mute);margin-bottom:4px}
 .brand p{color:var(--mute);max-width:60ch;margin:12px 0 0}
 .where{padding:16px 18px;display:grid;gap:12px;overflow:hidden}
@@ -80,35 +80,35 @@ main{padding:24px clamp(16px,2.6vw,40px) 80px;min-width:0}
 .where > *:not(canvas){position:relative}
 .lvrow{display:flex;align-items:center;gap:16px}
 .orbLv{flex:none;width:86px;height:86px;border-radius:50%;display:grid;place-items:center;position:relative;
-  background:radial-gradient(circle at 40% 35%,#3a2a14,#130d07 70%);border:2px solid var(--edge2);box-shadow:inset 0 0 18px #000,0 0 0 4px #0a0806,0 0 22px rgba(200,165,106,.2)}
+  background:radial-gradient(circle at 40% 35%,#141B3B,#060914 70%);border:2px solid var(--edge2);box-shadow:inset 0 0 18px #000000,0 0 0 4px #05060B,0 0 22px rgba(114,146,202,.2)}
 .orbLv b{font-family:var(--display);font-size:2.3rem;font-weight:900;color:var(--gild-hi);line-height:1}
 .orbLv small{position:absolute;bottom:10px;font-family:var(--ui);font-size:.62rem;letter-spacing:.18em;color:var(--mute)}
 .lvrow .meta{flex:1;min-width:0}
 .lvrow .ph{font-family:var(--display);font-size:1.35rem;color:var(--gild-hi)}
 .lvrow .tg{color:var(--mute);font-family:var(--ui);font-size:.95rem}
 .step{display:flex;gap:6px}
-.step button{width:36px;height:36px;border:1px solid var(--edge2);background:linear-gradient(#2a2219,#17120d);cursor:pointer;font-family:var(--display);font-weight:900;color:var(--gild-hi)}
+.step button{width:36px;height:36px;border:1px solid var(--edge2);background:linear-gradient(#161B2D,#0C0E18);cursor:pointer;font-family:var(--display);font-weight:900;color:var(--gild-hi)}
 .step button:hover{border-color:var(--gild)}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;cursor:pointer}
-input[type=range]::-webkit-slider-runnable-track{height:6px;background:linear-gradient(90deg,var(--gild) var(--p,35%),#2a241c var(--p,35%));border:1px solid #000}
-input[type=range]::-moz-range-track{height:6px;background:#2a241c}
+input[type=range]::-webkit-slider-runnable-track{height:6px;background:linear-gradient(90deg,var(--gild) var(--p,35%),#1A1D2C var(--p,35%));border:1px solid #000000}
+input[type=range]::-moz-range-track{height:6px;background:#1A1D2C}
 input[type=range]::-moz-range-progress{height:6px;background:var(--gild)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--gild-hi);border:2px solid #1a140c;margin-top:-7px;transform:rotate(45deg);box-shadow:0 0 10px var(--gild)}
-input[type=range]::-moz-range-thumb{width:14px;height:14px;background:var(--gild-hi);border:2px solid #1a140c}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--gild-hi);border:2px solid #0A0E1C;margin-top:-7px;transform:rotate(45deg);box-shadow:0 0 10px var(--gild)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;background:var(--gild-hi);border:2px solid #0A0E1C}
 .ticks{display:flex;justify-content:space-between;font-family:var(--ui);font-size:.72rem;color:var(--faint);margin-top:-4px}
-.mode{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--edge2);padding:3px;position:relative;background:#0b0907}
+.mode{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--edge2);padding:3px;position:relative;background:#06070C}
 .mode button{border:0;background:transparent;padding:7px 10px;cursor:pointer;font-family:var(--ui);font-weight:700;font-size:1rem;position:relative;z-index:1;transition:color .25s;color:var(--mute)}
-.mode button[aria-pressed=true]{color:#120d07}
-.mode .slide{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);background:linear-gradient(#9fe6c4,#4fa37e);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s}
-.mode.full .slide{transform:translateX(100%);background:linear-gradient(#f3d79b,#b8873f)}
+.mode button[aria-pressed=true]{color:#060913}
+.mode .slide{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);background:linear-gradient(#9FE5E6,#4FA2A3);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s}
+.mode.full .slide{transform:translateX(100%);background:linear-gradient(#AEC4EA,#4871B9)}
 .mode small{display:block;font-weight:400;font-size:.74rem;opacity:.85}
 
 /* ---------- tabs */
-nav.tabs{position:sticky;top:0;z-index:20;margin:0 calc(-1*clamp(16px,2.6vw,40px));padding:8px clamp(16px,2.6vw,40px);background:rgba(10,9,8,.92);backdrop-filter:blur(10px);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);display:flex;flex-wrap:wrap;gap:2px;overflow:visible}
+nav.tabs{position:sticky;top:0;z-index:20;margin:0 calc(-1*clamp(16px,2.6vw,40px));padding:8px clamp(16px,2.6vw,40px);background:rgba(7,8,11,.92);backdrop-filter:blur(10px);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);display:flex;flex-wrap:wrap;gap:2px;overflow:visible}
 nav.tabs::-webkit-scrollbar{display:none}
 nav.tabs button{border:1px solid transparent;background:transparent;color:var(--mute);padding:6px 13px;cursor:pointer;white-space:nowrap;font-family:var(--ui);font-weight:700;font-size:1.02rem;transition:all .2s}
 nav.tabs button:hover{color:var(--gild-hi)}
-nav.tabs button[aria-selected=true]{color:var(--gild-hi);border-color:var(--edge2);background:linear-gradient(180deg,rgba(200,165,106,.16),rgba(200,165,106,.03));box-shadow:inset 0 -2px 0 var(--gild)}
+nav.tabs button[aria-selected=true]{color:var(--gild-hi);border-color:var(--edge2);background:linear-gradient(180deg,rgba(114,146,202,.16),rgba(114,146,202,.03));box-shadow:inset 0 -2px 0 var(--gild)}
 nav.tabs .count{font-family:var(--mono);font-size:.72rem;color:var(--wisp);margin-left:5px}
 
 section.view{display:none;padding-top:24px;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
@@ -126,11 +126,11 @@ section.view.on{display:block}
 .panel{padding:18px}
 .panel h3{font-size:1.1rem;margin-bottom:10px}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:1px 9px;font-family:var(--ui);font-size:.85rem;font-weight:700;border:1px solid var(--edge2);color:var(--mute);white-space:nowrap;background:rgba(0,0,0,.25)}
-.chip.wisp{color:var(--wisp);border-color:rgba(127,216,176,.35);background:var(--wisp-g)}
-.chip.gold{color:var(--gild-hi);border-color:rgba(200,165,106,.45);background:var(--gild-g)}
-.chip.unique{color:#f0a36b;border-color:rgba(175,96,37,.6);background:rgba(175,96,37,.14)}
+.chip.wisp{color:var(--wisp);border-color:rgba(127,215,216,.35);background:var(--wisp-g)}
+.chip.gold{color:var(--gild-hi);border-color:rgba(114,146,202,.45);background:var(--gild-g)}
+.chip.unique{color:#84A6E1;border-color:rgba(53,74,159,.6);background:rgba(53,74,159,.14)}
 .chip.danger{color:var(--danger);border-color:rgba(224,102,79,.4);background:var(--danger-g)}
-.chip.bear{color:var(--bear);border-color:rgba(167,123,224,.4);background:var(--bear-g)}
+.chip.bear{color:var(--bear);border-color:rgba(170,123,224,.4);background:var(--bear-g)}
 .chip.s1{color:var(--set1);border-color:rgba(217,84,74,.45)} .chip.s2{color:var(--set2);border-color:rgba(98,180,98,.45)}
 ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 ul.clean li{display:flex;gap:10px;align-items:flex-start}
@@ -145,15 +145,15 @@ ul.clean.danger li::before{background:var(--danger)}
 .nowcard .ms{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:baseline}
 .nowcard .ms .n{font-family:var(--ui);color:var(--gild-hi);font-weight:700}
 .nowcard .ms .n.next{color:var(--wisp)}
-.split .bar{display:flex;height:12px;overflow:hidden;background:#241e17;border:1px solid #000}
+.split .bar{display:flex;height:12px;overflow:hidden;background:#151826;border:1px solid #000000}
 .split .bar i{display:block;transition:width .8s cubic-bezier(.2,.8,.2,1)}
 .split .bar i.p{background:linear-gradient(#e6e6e6,#9a9a9a)}
-.split .bar i.z{background:linear-gradient(#a6ecca,#3f8c68)}
+.split .bar i.z{background:linear-gradient(#A6EBEC,#3F8B8C)}
 .split .legend{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--ui);font-size:.88rem;color:var(--mute);margin-top:6px}
 .checklist{display:grid;gap:4px}
 .check{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;cursor:pointer;transition:background .2s}
-.check:hover{background:rgba(200,165,106,.06)}
-.check input{appearance:none;flex:none;width:17px;height:17px;margin-top:4px;border:1px solid var(--edge2);background:#0b0907;cursor:pointer;display:grid;place-items:center;transform:rotate(45deg);transition:all .2s}
+.check:hover{background:rgba(114,146,202,.06)}
+.check input{appearance:none;flex:none;width:17px;height:17px;margin-top:4px;border:1px solid var(--edge2);background:#06070C;cursor:pointer;display:grid;place-items:center;transform:rotate(45deg);transition:all .2s}
 .check input:checked{background:var(--gild);border-color:var(--gild-hi);box-shadow:0 0 10px var(--gild)}
 .check.done span{color:var(--faint);text-decoration:line-through}
 
@@ -161,17 +161,17 @@ ul.clean.danger li::before{background:var(--danger)}
 .gems{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
 .gem{padding:14px;display:grid;gap:10px;align-content:start;transition:transform .2s,border-color .2s}
 .gem:hover{transform:translateY(-2px);border-color:var(--edge2)}
-.gem.carry{border-color:#7a6440;background:linear-gradient(160deg,rgba(200,165,106,.12),var(--stone) 60%)}
+.gem.carry{border-color:#384782;background:linear-gradient(160deg,rgba(114,146,202,.12),var(--stone) 60%)}
 .gem .top{display:flex;gap:12px;align-items:center}
-.gicon{flex:none;width:52px;height:52px;display:grid;place-items:center;background:radial-gradient(circle,#1d2a28,#0b0f0e);border:1px solid #2f4b47}
+.gicon{flex:none;width:52px;height:52px;display:grid;place-items:center;background:radial-gradient(circle,#1d2a28,#0B0F0F);border:1px solid #2f4b47}
 .gicon img{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(27,162,155,.45))}
 .gicon .ph{font-family:var(--display);color:var(--gem);font-size:1.3rem}
 .gem .name{font-family:var(--ui);font-weight:700;font-size:1.1rem;color:var(--gem);line-height:1.15}
 .gem.carry .name{color:#9FE7E1}
 .gem .role{font-size:.9rem;color:var(--mute)}
 .spc{display:inline-block;margin-top:5px;padding:2px 8px;font-family:var(--ui);font-size:.76rem;font-weight:700;border:1px solid var(--edge2);color:var(--mute)}
-.spc.core{border-color:#8a6a38;color:var(--gild-hi);background:rgba(200,165,106,.1)}
-.spc.free{border-color:#2f5b4c;color:#8fd9b8}
+.spc.core{border-color:#304492;color:var(--gild-hi);background:rgba(114,146,202,.1)}
+.spc.free{border-color:#2F5A5B;color:#8FD8D9}
 .spc.opt{border-style:dashed;color:var(--faint)}
 .gem.optional{opacity:.78;border-style:dashed}
 .gem.optional:hover{opacity:1}
@@ -189,19 +189,19 @@ ul.clean.danger li::before{background:var(--danger)}
 .charwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:16px;align-items:start;margin-top:16px}
 @media (max-width:1100px){.charwrap{grid-template-columns:1fr}}
 .recs{position:sticky;top:12px;display:grid;gap:8px}
-.rec{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:9px 10px;border:1px solid var(--edge);background:#0f0c0a;cursor:pointer}
+.rec{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:9px 10px;border:1px solid var(--edge);background:#090A10;cursor:pointer}
 .rec .ri{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;font-weight:900;font-family:var(--ui);font-size:.8rem}
 .rec b{display:block;font-family:var(--ui);color:var(--text);font-size:.95rem;line-height:1.2}
 .rec small{display:block;color:var(--mute);font-size:.84rem;margin-top:3px;line-height:1.3}
 .rec.bad{border-color:rgba(224,102,79,.55)}.rec.bad .ri{background:#5a1d14;color:#ffb3a3}
-.rec.warn{border-color:#7a6440}.rec.warn .ri{background:#4a3a1c;color:var(--gild-hi)}
+.rec.warn{border-color:#384782}.rec.warn .ri{background:#19244D;color:var(--gild-hi)}
 .rec.tip{border-color:#2f5b6c}.rec.tip .ri{background:#15323d;color:#9fd2ff}
-.rec.ok{opacity:.8}.rec.ok .ri{background:#15342a;color:#8fd9b8}
+.rec.ok{opacity:.8}.rec.ok .ri{background:#153334;color:#8FD8D9}
 .rec.mini{padding:6px 8px;grid-template-columns:22px 1fr}.rec.mini .ri{width:20px;height:20px;font-size:.7rem}.rec.mini b{font-size:.84rem}
 .chkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px}
 .chk{display:flex;align-items:center;gap:8px;padding:5px 8px;border:1px solid var(--edge);cursor:pointer;font-family:var(--ui);font-size:.88rem;color:var(--text)}
-.chk:has(input:checked){border-color:#8a6a38;background:rgba(200,165,106,.08)}
-.chk input{accent-color:#c8a56a}
+.chk:has(input:checked){border-color:#304492;background:rgba(114,146,202,.08)}
+.chk input{accent-color:#7292CA}
 .chk img{width:26px;height:26px;object-fit:contain}
 .chk .px{margin-left:auto;font-family:var(--mono);font-size:.7rem;color:var(--gild)}
 .petrow{display:grid;grid-template-columns:auto minmax(0,1.4fr) minmax(0,1fr) auto;gap:8px;align-items:center;margin-bottom:8px}
@@ -216,7 +216,7 @@ ul.clean.danger li::before{background:var(--danger)}
 @media (max-width:600px){.qgrid{grid-template-columns:1fr}}
 .qcard{padding:14px;display:grid;gap:8px;align-content:start}
 .qcard.lock{border-color:rgba(224,102,79,.35)}
-.qcard.have{border-color:#2f5b4c}
+.qcard.have{border-color:#2F5A5B}
 .qh{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center}
 .qh img{width:48px;height:48px;object-fit:contain}
 .qh .qi{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--edge2);font-family:var(--display);color:var(--gild-hi)}
@@ -224,23 +224,23 @@ ul.clean.danger li::before{background:var(--danger)}
 .qh small{color:var(--mute);font-size:.8rem}
 .qst{padding:3px 8px;font-family:var(--ui);font-size:.74rem;font-weight:700;border:1px solid var(--edge2);white-space:nowrap}
 .qst.lock{border-color:rgba(224,102,79,.6);color:#ffb3a3}
-.qst.ok{border-color:#8a6a38;color:var(--gild-hi)}
-.qst.have{border-color:#2f5b4c;color:#8fd9b8}
+.qst.ok{border-color:#304492;color:var(--gild-hi)}
+.qst.have{border-color:#2F5A5B;color:#8FD8D9}
 .qrow b{display:block;font-family:var(--ui);font-size:.8rem;color:var(--gild);letter-spacing:.03em}
 .qrow p{margin:2px 0 0;font-size:.92rem}
 .qrow ol,.qrow ul{margin:4px 0 0;padding-left:18px;font-size:.9rem;display:grid;gap:3px}
-.qrow.early b{color:#9fd2ff}.qrow.late b{color:#e0b36a}.qrow.watch b{color:#ffb3a3}
+.qrow.early b{color:#9fd2ff}.qrow.late b{color:#809FD4}.qrow.watch b{color:#ffb3a3}
 .adaptbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 14px;margin:14px 0;border-color:var(--edge2)}
-.adaptbar.on{border-color:#2f5b4c;background:linear-gradient(90deg,rgba(127,216,176,.08),transparent)}
+.adaptbar.on{border-color:#2F5A5B;background:linear-gradient(90deg,rgba(127,215,216,.08),transparent)}
 .adaptbar ul{flex-basis:100%;margin:0;padding-left:18px;display:grid;gap:3px;font-size:.9rem;color:var(--text)}
-.adaptbar b{flex-basis:100%;font-family:var(--ui);color:#8fd9b8}
+.adaptbar b{flex-basis:100%;font-family:var(--ui);color:#8FD8D9}
 .adaptbar a{color:#9fd2ff}
-.havebadge{margin:6px 12px 0;padding:4px 8px;border:1px solid #2f5b4c;color:#8fd9b8;font-family:var(--ui);font-size:.8rem}
+.havebadge{margin:6px 12px 0;padding:4px 8px;border:1px solid #2F5A5B;color:#8FD8D9;font-family:var(--ui);font-size:.8rem}
 .missbadge{margin:6px 12px 0;padding:4px 8px;border:1px dashed var(--edge2);color:var(--mute);font-family:var(--ui);font-size:.8rem}
 .spc.nofit{border-color:rgba(224,102,79,.6);color:#ffb3a3;margin-left:6px}
 .huntol{margin:0;padding-left:20px;display:grid;gap:6px}
 .grid.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.spnote{padding:12px 14px;margin-bottom:16px;border-color:#8a6a38;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(200,165,106,.1),transparent)}
+.spnote{padding:12px 14px;margin-bottom:16px;border-color:#304492;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:linear-gradient(90deg,rgba(114,146,202,.1),transparent)}
 .spnote b{font-family:var(--display);color:var(--gild-hi);font-size:1rem}
 .spnote p{margin:0;color:var(--text)}
 .runes .sock-list{display:grid;gap:3px;margin-top:3px}
@@ -257,9 +257,9 @@ ul.clean.danger li::before{background:var(--danger)}
 .ptsrow .btn{padding:4px 10px}
 
 .links{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.sock{display:inline-flex;align-items:center;gap:7px;font-family:var(--ui);font-size:.92rem;padding:2px 10px 2px 2px;background:#0c0a08;border:1px solid var(--edge)}
-.sock img{width:24px;height:24px;border-radius:50%;background:#15110c;border:1px solid #4a3c29}
-.sock.new{border-color:rgba(200,165,106,.6);box-shadow:0 0 0 1px rgba(200,165,106,.2)}
+.sock{display:inline-flex;align-items:center;gap:7px;font-family:var(--ui);font-size:.92rem;padding:2px 10px 2px 2px;background:#07080D;border:1px solid var(--edge)}
+.sock img{width:24px;height:24px;border-radius:50%;background:#0B0D16;border:1px solid #242D4F}
+.sock.new{border-color:rgba(114,146,202,.6);box-shadow:0 0 0 1px rgba(114,146,202,.2)}
 .sock.new span{color:var(--gild-hi)}
 .gem .diff{font-family:var(--ui);font-size:.85rem;color:var(--gild-hi)}
 .gem .diff.rem{color:var(--faint)}
@@ -268,15 +268,15 @@ ul.clean.danger li::before{background:var(--danger)}
 .timeline{display:grid;grid-template-columns:repeat(8,minmax(150px,1fr));gap:10px;overflow-x:auto;padding:6px 6px 10px}
 .tl{padding:12px;cursor:pointer;text-align:left;display:grid;gap:8px;align-content:start;transition:all .25s;color:inherit}
 .tl:hover{border-color:var(--edge2)}
-.tl.cur{border-color:var(--gild);box-shadow:0 0 0 1px var(--gild),0 0 22px rgba(200,165,106,.25)}
+.tl.cur{border-color:var(--gild);box-shadow:0 0 0 1px var(--gild),0 0 22px rgba(114,146,202,.25)}
 .tl .lv{font-family:var(--ui);font-size:.82rem;color:var(--faint)}
 .tl .nm{font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.1;color:var(--gild-hi)}
 .tl .tg{font-size:.88rem;color:var(--mute)}
-.tl .mini{height:5px;background:#241e17;overflow:hidden;display:flex}
+.tl .mini{height:5px;background:#151826;overflow:hidden;display:flex}
 .tl .mini i.p{background:#bdbdbd}.tl .mini i.z{background:var(--wisp)}
 .levels{max-height:540px;overflow:auto}
-.lvl{display:grid;grid-template-columns:56px 130px minmax(0,1fr) auto;gap:12px;align-items:center;padding:8px 14px;border-bottom:1px solid #221c15;cursor:pointer}
-.lvl:hover{background:rgba(200,165,106,.05)}
+.lvl{display:grid;grid-template-columns:56px 130px minmax(0,1fr) auto;gap:12px;align-items:center;padding:8px 14px;border-bottom:1px solid #131624;cursor:pointer}
+.lvl:hover{background:rgba(114,146,202,.05)}
 .lvl .n{font-family:var(--ui);color:var(--faint);font-weight:700}
 .lvl .p{color:var(--mute);font-family:var(--ui);font-size:.85rem}
 .lvl.ms .t{font-weight:700}
@@ -288,33 +288,33 @@ ul.clean.danger li::before{background:var(--danger)}
 /* tables */
 .tablewrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:.95rem}
-th{font-family:var(--ui);font-size:.85rem;letter-spacing:.06em;color:var(--gild);text-align:left;padding:10px 12px;border-bottom:1px solid var(--edge2);background:#120f0c;position:sticky;top:0}
-td{padding:10px 12px;border-bottom:1px solid #221c15;vertical-align:top}
+th{font-family:var(--ui);font-size:.85rem;letter-spacing:.06em;color:var(--gild);text-align:left;padding:10px 12px;border-bottom:1px solid var(--edge2);background:#0B0D13;position:sticky;top:0}
+td{padding:10px 12px;border-bottom:1px solid #131624;vertical-align:top}
 tr:last-child td{border-bottom:0}
 td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 
 /* item tooltip (PoE) */
 .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
-.tt{background:rgba(0,0,0,.86);border:1px solid #4d3a22;display:grid;align-content:start;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-.tt .th{position:relative;text-align:center;padding:8px 10px 7px;font-family:var(--ui);font-weight:700;line-height:1.15;border-bottom:1px solid #4d3a22;
-  background:linear-gradient(180deg,#2a2016,#16110c)}
+.tt{background:rgba(0,0,0,.86);border:1px solid #1D2852;display:grid;align-content:start;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.tt .th{position:relative;text-align:center;padding:8px 10px 7px;font-family:var(--ui);font-weight:700;line-height:1.15;border-bottom:1px solid #1D2852;
+  background:linear-gradient(180deg,#13182D,#0B0D17)}
 .tt.unique{border-color:#7a4a22}
-.tt.unique .th{color:#E18C47;background:linear-gradient(180deg,#3a2413,#1a0f08);border-bottom-color:#7a4a22}
-.tt.rare .th{color:#F2EF7E;background:linear-gradient(180deg,#2f2a14,#15130a)}
+.tt.unique .th{color:#E18C47;background:linear-gradient(180deg,#131B3A,#080C1A);border-bottom-color:#7a4a22}
+.tt.rare .th{color:#95B2E5;background:linear-gradient(180deg,#111832,#090B16)}
 .tt .th small{display:block;font-weight:500;font-size:.78rem;color:var(--mute);letter-spacing:.08em}
 .tt .body{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:10px 12px}
-.tt .art{width:80px;height:96px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,rgba(200,165,106,.12),transparent 70%)}
-.tt .art img{max-width:78px;max-height:94px;object-fit:contain;filter:drop-shadow(0 4px 8px #000)}
+.tt .art{width:80px;height:96px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,rgba(114,146,202,.12),transparent 70%)}
+.tt .art img{max-width:78px;max-height:94px;object-fit:contain;filter:drop-shadow(0 4px 8px #000000)}
 .tt .mods{font-size:.88rem;color:#9C9CFF;display:grid;gap:2px;align-content:start}
 .tt .mods .none{color:var(--faint);font-style:italic}
-.tt .runes{padding:0 12px 10px;font-family:var(--ui);font-size:.8rem;color:#7fb0a6}
+.tt .runes{padding:0 12px 10px;font-family:var(--ui);font-size:.8rem;color:#7FAFB0}
 
 .slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
 .slot{padding:14px;display:grid;gap:9px;align-content:start}
 .slot .hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .slot .hd b{font-family:var(--display);font-weight:700;color:var(--gild-hi)}
 .slot .thumbs{display:flex;gap:4px}
-.slot .thumbs img{width:34px;height:34px;object-fit:contain;background:#0c0a08;border:1px solid var(--edge)}
+.slot .thumbs img{width:34px;height:34px;object-fit:contain;background:#07080D;border:1px solid var(--edge)}
 .tier{display:grid;grid-template-columns:82px 1fr;gap:8px;font-size:.93rem;padding:6px 8px;transition:all .3s;opacity:.5}
 .tier.on{opacity:1;background:rgba(0,0,0,.3);border-left:2px solid var(--gild)}
 .tier .k{font-family:var(--ui);font-size:.85rem;font-weight:700;color:var(--faint);padding-top:1px}
@@ -329,54 +329,54 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 
 /* tree */
 .treewrap{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;align-items:start}
-.treebox{position:relative;height:min(76vh,760px);overflow:hidden;background:radial-gradient(circle at 50% 50%,#12100d,#060505 80%)}
+.treebox{position:relative;height:min(76vh,760px);overflow:hidden;background:radial-gradient(circle at 50% 50%,#0C0D13,#060505 80%)}
 .treebox canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:none}
 .treebox canvas:active{cursor:grabbing}
 .treebar{position:absolute;left:10px;top:10px;right:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;pointer-events:none}
 .treebar > *{pointer-events:auto}
-.tbtn{border:1px solid var(--edge2);background:rgba(15,12,9,.9);padding:4px 10px;cursor:pointer;font-family:var(--ui);font-weight:700;color:var(--text)}
+.tbtn{border:1px solid var(--edge2);background:rgba(8,10,16,.9);padding:4px 10px;cursor:pointer;font-family:var(--ui);font-weight:700;color:var(--text)}
 .tbtn:hover{border-color:var(--gild)}
-.tbtn[aria-pressed=true]{color:#120d07;background:var(--gild)}
-.legend{position:absolute;left:10px;bottom:10px;display:flex;gap:12px;flex-wrap:wrap;font-family:var(--ui);font-size:.85rem;background:rgba(8,7,6,.85);border:1px solid var(--edge);padding:5px 10px}
+.tbtn[aria-pressed=true]{color:#060913;background:var(--gild)}
+.legend{position:absolute;left:10px;bottom:10px;display:flex;gap:12px;flex-wrap:wrap;font-family:var(--ui);font-size:.85rem;background:rgba(6,6,8,.85);border:1px solid var(--edge);padding:5px 10px}
 .legend i{display:inline-block;width:10px;height:10px;transform:rotate(45deg);margin-right:6px;vertical-align:middle}
-.ttip{position:absolute;pointer-events:none;max-width:320px;background:rgba(0,0,0,.92);border:1px solid #5a4630;padding:0;z-index:5;display:none}
-.ttip .th{font-family:var(--ui);font-weight:700;color:var(--gild-hi);padding:6px 10px;background:linear-gradient(#2a2016,#16110c);border-bottom:1px solid #5a4630;text-align:center}
+.ttip{position:absolute;pointer-events:none;max-width:320px;background:rgba(0,0,0,.92);border:1px solid #2A3560;padding:0;z-index:5;display:none}
+.ttip .th{font-family:var(--ui);font-weight:700;color:var(--gild-hi);padding:6px 10px;background:linear-gradient(#13182D,#0B0D17);border-bottom:1px solid #2A3560;text-align:center}
 .ttip .st{padding:8px 10px;font-size:.88rem;color:#9C9CFF;display:grid;gap:2px}
 .nlist{max-height:min(76vh,760px);overflow:auto;padding:10px}
 .nrow{display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:center;padding:6px;cursor:pointer;border:1px solid transparent}
-.nrow:hover{border-color:var(--edge2);background:rgba(200,165,106,.05)}
-.nrow img{width:38px;height:38px;border-radius:50%;border:2px solid #6b5536;background:#0b0907}
+.nrow:hover{border-color:var(--edge2);background:rgba(114,146,202,.05)}
+.nrow img{width:38px;height:38px;border-radius:50%;border:2px solid #2F3D72;background:#06070C}
 .nrow.k2 img{border-radius:0;border-color:var(--gild)}
 .nrow b{font-family:var(--ui);font-size:.98rem;color:var(--text);display:block;line-height:1.15}
 .nrow small{color:var(--mute);font-size:.8rem;display:block;line-height:1.25}
 .nrow.new b{color:var(--wisp)}
-.ascbox{position:relative;height:340px;background:radial-gradient(circle,#1a1410,#070605 75%);overflow:hidden}
+.ascbox{position:relative;height:340px;background:radial-gradient(circle,#0E111C,#050507 75%);overflow:hidden}
 .ascbox canvas{position:absolute;inset:0;width:100%;height:100%}
 
 /* spirit */
 .spirit{display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px;align-items:start}
 .field{display:grid;gap:4px}
 .field span{font-family:var(--ui);font-size:.9rem;color:var(--mute)}
-.field input[type=number],select{background:#0b0907;border:1px solid var(--edge2);padding:6px 9px;width:100%}
+.field input[type=number],select{background:#06070C;border:1px solid var(--edge2);padding:6px 9px;width:100%}
 .toggle{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0}
 .switch{position:relative;width:44px;height:22px;flex:none}
-.switch input{appearance:none;width:44px;height:22px;background:#241e17;border:1px solid var(--edge2);cursor:pointer;margin:0;transition:background .25s}
-.switch input:checked{background:#3a2e1c}
+.switch input{appearance:none;width:44px;height:22px;background:#151826;border:1px solid var(--edge2);cursor:pointer;margin:0;transition:background .25s}
+.switch input:checked{background:#18203E}
 .switch i{position:absolute;top:4px;left:4px;width:14px;height:14px;background:var(--faint);pointer-events:none;transition:transform .25s;transform:rotate(45deg)}
 .switch input:checked + i{transform:translateX(22px) rotate(45deg);background:var(--gild-hi);box-shadow:0 0 8px var(--gild)}
 .donut{display:grid;place-items:center;position:relative;margin:6px 0}
 .donut .c{position:absolute;text-align:center}
 .donut .c b{font-family:var(--display);font-size:2rem;display:block;line-height:1;color:var(--gild-hi)}
 .donut .c small{color:var(--mute);font-family:var(--ui)}
-.zoo td input{background:#0b0907;border:1px solid var(--edge);padding:4px 6px;width:100%}
+.zoo td input{background:#06070C;border:1px solid var(--edge);padding:4px 6px;width:100%}
 .zoo td input[type=number]{width:74px}
 .zoo td select{padding:4px 6px;width:auto}
 .zoo .x{background:none;border:0;color:var(--faint);cursor:pointer;font-size:1.2rem}
 .zoo .x:hover{color:var(--danger)}
-.btn{border:1px solid var(--edge2);background:linear-gradient(#2a2219,#17120d);padding:6px 12px;cursor:pointer;font-family:var(--ui);font-weight:700;color:var(--gild-hi)}
+.btn{border:1px solid var(--edge2);background:linear-gradient(#161B2D,#0C0E18);padding:6px 12px;cursor:pointer;font-family:var(--ui);font-weight:700;color:var(--gild-hi)}
 .btn:hover{border-color:var(--gild)}
 .status{padding:10px 12px;font-family:var(--ui);font-weight:700;margin-top:10px;border:1px solid}
-.status.ok{background:var(--wisp-g);color:var(--wisp);border-color:rgba(127,216,176,.3)} .status.warn{background:var(--gild-g);color:var(--gild-hi);border-color:var(--edge2)} .status.bad{background:var(--danger-g);color:var(--danger);border-color:rgba(224,102,79,.4)}
+.status.ok{background:var(--wisp-g);color:var(--wisp);border-color:rgba(127,215,216,.3)} .status.warn{background:var(--gild-g);color:var(--gild-hi);border-color:var(--edge2)} .status.bad{background:var(--danger-g);color:var(--danger);border-color:rgba(224,102,79,.4)}
 .bst{display:flex;gap:10px;align-items:center}
 .bst img{width:30px;height:30px}
 
@@ -385,19 +385,19 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .asc{padding:0 12px;display:grid;gap:8px;justify-items:center;text-align:center;position:relative}
 .asc::before{content:"";position:absolute;top:40px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bear),var(--gild));z-index:0}
 .asc:first-child::before{left:50%} .asc:last-child::before{right:50%}
-.asc .medal{position:relative;z-index:1;width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:#0b0907;border:3px solid var(--gild);box-shadow:0 0 0 5px #0b0907,0 0 26px rgba(200,165,106,.35);transition:transform .3s;overflow:hidden}
+.asc .medal{position:relative;z-index:1;width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:#06070C;border:3px solid var(--gild);box-shadow:0 0 0 5px #06070C,0 0 26px rgba(114,146,202,.35);transition:transform .3s;overflow:hidden}
 .asc .medal img{width:64px;height:64px;border-radius:50%}
 .asc:hover .medal{transform:scale(1.07)}
-.asc.locked .medal{border-color:var(--edge);filter:grayscale(.9) brightness(.6);box-shadow:0 0 0 5px #0b0907}
+.asc.locked .medal{border-color:var(--edge);filter:grayscale(.9) brightness(.6);box-shadow:0 0 0 5px #06070C}
 .asc .when{font-family:var(--ui);font-size:.88rem;color:var(--bear)}
 .asc p{font-size:.92rem;color:var(--mute);margin:0}
 .kp{display:grid;grid-template-columns:52px 1fr;gap:12px}
-.kp img{width:52px;height:52px;border-radius:50%;border:2px solid #6b5536}
+.kp img{width:52px;height:52px;border-radius:50%;border:2px solid #2F3D72}
 .kp.k2 img{border-radius:0;border-color:var(--gild)}
 
 /* quests / tricks / misc */
 .acts{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
-.ring{--v:0;width:118px;height:118px;border-radius:50%;background:conic-gradient(var(--gild) calc(var(--v)*1%),#241e17 0);display:grid;place-items:center}
+.ring{--v:0;width:118px;height:118px;border-radius:50%;background:conic-gradient(var(--gild) calc(var(--v)*1%),#151826 0);display:grid;place-items:center}
 .ring > div{width:94px;height:94px;border-radius:50%;background:var(--stone);display:grid;place-items:center;text-align:center}
 .ring b{font-family:var(--display);font-size:1.7rem;line-height:1;color:var(--gild-hi)}
 .filters{display:flex;gap:6px;flex-wrap:wrap}
@@ -428,7 +428,7 @@ details.acc div{padding:0 16px 14px;color:var(--mute)}
 .supwhy[open] summary::before{content:"▾ "}
 .supwhy ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
 .supwhy li{display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start}
-.supwhy li img{width:24px;height:24px;border-radius:50%;border:1px solid #4a3c29;background:#15110c}
+.supwhy li img{width:24px;height:24px;border-radius:50%;border:1px solid #242D4F;background:#0B0D16}
 .supwhy li b{display:block;font-family:var(--ui);font-size:.9rem;color:var(--gild-hi)}
 .supwhy li span{font-size:.86rem;color:var(--mute);line-height:1.4}
 /* ---------- uniques */
@@ -441,9 +441,9 @@ details.acc div{padding:0 16px 14px;color:var(--mute)}
 .ucard .art{width:96px;height:120px}
 .ucard .art img{max-width:94px;max-height:118px}
 .ucard .facts{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}
-.ucard .txt{padding:10px 12px;border-top:1px solid #3a2c1c;display:grid;gap:6px;font-size:.93rem}
+.ucard .txt{padding:10px 12px;border-top:1px solid #18203E;display:grid;gap:6px;font-size:.93rem}
 .ucard .txt b{font-family:var(--ui);color:var(--gild);font-weight:700;margin-right:4px}
-.ucard.ucur{box-shadow:0 0 0 1px var(--wisp),0 0 22px rgba(127,216,176,.18)}
+.ucard.ucur{box-shadow:0 0 0 1px var(--wisp),0 0 22px rgba(127,215,216,.18)}
 .ucard.dim{opacity:.62}
 .price{font-family:var(--mono);font-size:.82rem}
 .idols td img{width:30px;height:30px;vertical-align:middle;margin-right:8px}
@@ -462,13 +462,13 @@ details.acc div{padding:0 16px 14px;color:var(--mute)}
 .bars .nm{display:flex;gap:8px;align-items:center;min-width:0}
 .bars .nm span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bars .nm img{width:22px;height:22px;object-fit:contain;flex:none}
-.bars .track{height:10px;background:#1d1812;position:relative}
-.bars .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#8a6a38,var(--gild-hi));border-radius:0 4px 4px 0;transform-origin:left;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.bars .track{height:10px;background:#10131F;position:relative}
+.bars .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#304492,var(--gild-hi));border-radius:0 4px 4px 0;transform-origin:left;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .bars .v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;color:var(--text)}
 .bars li:hover .track{outline:1px solid var(--edge2)}
 .bars li:hover .nm span{color:var(--gild-hi)}
-.bars li .tipb{position:absolute;right:52px;top:-30px;background:#000;border:1px solid var(--edge2);padding:2px 8px;font-family:var(--ui);font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:3}
+.bars li .tipb{position:absolute;right:52px;top:-30px;background:#000000;border:1px solid var(--edge2);padding:2px 8px;font-family:var(--ui);font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:3}
 .bars li:hover .tipb{opacity:1}
 .stat{display:flex;gap:24px;flex-wrap:wrap;margin:6px 0 18px}
 .stat div b{display:block;font-family:var(--display);font-size:1.9rem;color:var(--gild-hi);line-height:1.05}
@@ -478,22 +478,22 @@ details.acc div{padding:0 16px 14px;color:var(--mute)}
 .app{--sidew:380px}
 @media (min-width:1440px){.app{grid-template-columns:84px minmax(0,1fr) var(--sidew)}.app.side-min{--sidew:58px}}
 aside.side{display:none}
-@media (min-width:1440px){aside.side{display:flex;flex-direction:column;position:sticky;top:0;height:100vh;border-left:1px solid var(--edge);background:linear-gradient(180deg,#0f0d0b,#070605)}}
-.sb-head{display:flex;align-items:center;gap:8px;padding:12px 12px 10px;border-bottom:1px solid var(--edge);background:linear-gradient(180deg,rgba(200,165,106,.12),transparent)}
+@media (min-width:1440px){aside.side{display:flex;flex-direction:column;position:sticky;top:0;height:100vh;border-left:1px solid var(--edge);background:linear-gradient(180deg,#0A0B10,#050507)}}
+.sb-head{display:flex;align-items:center;gap:8px;padding:12px 12px 10px;border-bottom:1px solid var(--edge);background:linear-gradient(180deg,rgba(114,146,202,.12),transparent)}
 .sb-head h2{font-size:1.02rem;flex:1;margin:0;white-space:nowrap}
-.sb-btn{flex:none;width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--edge2);background:#120e0a;color:var(--gild-hi);cursor:pointer;font-family:var(--display);font-weight:900;font-size:1.1rem;transition:border-color .2s}
+.sb-btn{flex:none;width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--edge2);background:#090B13;color:var(--gild-hi);cursor:pointer;font-family:var(--display);font-weight:900;font-size:1.1rem;transition:border-color .2s}
 .sb-btn:hover{border-color:var(--gild)}
-.sb-body{overflow:auto;padding:12px 12px 40px;display:grid;gap:10px;align-content:start;scrollbar-width:thin;scrollbar-color:#3a3024 transparent}
+.sb-body{overflow:auto;padding:12px 12px 40px;display:grid;gap:10px;align-content:start;scrollbar-width:thin;scrollbar-color:#21263D transparent}
 .sb-hero{padding:12px;display:grid;gap:8px}
 .sb-hero .ph{font-family:var(--display);font-weight:700;color:var(--gild-hi);font-size:1.15rem;line-height:1.15}
 .sb-hero .row{display:flex;justify-content:space-between;gap:8px;align-items:center;font-family:var(--ui);font-size:.85rem;color:var(--mute)}
-.sb-prog{height:8px;background:#221c15;border:1px solid #000;position:relative;overflow:hidden}
-.sb-prog i{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#8a6a38,var(--gild-hi));transition:width .5s}
+.sb-prog{height:8px;background:#131624;border:1px solid #000000;position:relative;overflow:hidden}
+.sb-prog i{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#304492,var(--gild-hi));transition:width .5s}
 .sb-carry{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center}
-.sb-carry img{width:44px;height:44px;object-fit:contain;background:radial-gradient(circle,#1d2a28,#0b0f0e);border:1px solid #2f4b47}
+.sb-carry img{width:44px;height:44px;object-fit:contain;background:radial-gradient(circle,#1d2a28,#0B0F0F);border:1px solid #2f4b47}
 .sb-carry b{display:block;font-family:var(--ui);color:var(--text);font-size:.95rem;line-height:1.15}
 .sb-carry small{color:var(--mute);font-size:.8rem}
-details.sb{border:1px solid var(--edge);background:linear-gradient(180deg,#15120f,#0e0c0a)}
+details.sb{border:1px solid var(--edge);background:linear-gradient(180deg,#0E0F16,#090A0F)}
 details.sb > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:9px 11px;font-family:var(--ui);font-weight:700;color:var(--gild-hi);font-size:.95rem}
 details.sb > summary::-webkit-details-marker{display:none}
 details.sb > summary::after{content:"";margin-left:auto;width:7px;height:7px;border-right:2px solid var(--gild);border-bottom:2px solid var(--gild);transform:rotate(-45deg);transition:transform .2s;flex:none}
@@ -501,9 +501,9 @@ details.sb[open] > summary::after{transform:rotate(45deg)}
 details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--wisp);font-weight:400}
 .sb-in{padding:2px 11px 12px;display:grid;gap:8px}
 .doll{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(5,52px);gap:5px}
-.cell{position:relative;background:linear-gradient(180deg,#14110d,#0b0907);border:1px solid var(--edge);display:grid;place-items:center;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
-.cell img{max-width:86%;max-height:84%;object-fit:contain;filter:drop-shadow(0 2px 4px #000)}
-.cell.u{border-color:#7a4a22;box-shadow:inset 0 0 12px rgba(175,96,37,.25)}
+.cell{position:relative;background:linear-gradient(180deg,#0C0E15,#06070C);border:1px solid var(--edge);display:grid;place-items:center;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
+.cell img{max-width:86%;max-height:84%;object-fit:contain;filter:drop-shadow(0 2px 4px #000000)}
+.cell.u{border-color:#7a4a22;box-shadow:inset 0 0 12px rgba(53,74,159,.25)}
 .cell.empty{opacity:.45}
 .cell span{position:absolute;top:2px;left:4px;font-family:var(--ui);font-size:.6rem;color:var(--faint)}
 .cell:hover{border-color:var(--gild);transform:translateY(-1px)}
@@ -512,26 +512,26 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
 .c-glov{grid-column:1;grid-row:5}.c-belt{grid-column:2/4;grid-row:4}.c-boot{grid-column:2/4;grid-row:5}
 .sb-list{display:grid;gap:5px;margin:0;padding:0;list-style:none}
 .sb-list li{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;padding:4px;border:1px solid transparent;cursor:pointer}
-.sb-list li:hover{border-color:var(--edge2);background:rgba(200,165,106,.05)}
+.sb-list li:hover{border-color:var(--edge2);background:rgba(114,146,202,.05)}
 .sb-list img{width:34px;height:34px;object-fit:contain}
 .sb-list b{display:block;font-family:var(--ui);font-size:.9rem;line-height:1.15;color:var(--text)}
 .sb-list b.u{color:#E18C47}
 .sb-list small{display:block;color:var(--mute);font-size:.76rem;line-height:1.2}
 .sb-list .px{font-family:var(--mono);font-size:.72rem;color:var(--gild);white-space:nowrap}
-.sb-gem{display:grid;grid-template-columns:38px 1fr;gap:8px;align-items:center;padding:4px 2px;border-bottom:1px solid #1f1a14;cursor:pointer}
+.sb-gem{display:grid;grid-template-columns:38px 1fr;gap:8px;align-items:center;padding:4px 2px;border-bottom:1px solid #121521;cursor:pointer}
 .sb-gem:last-child{border-bottom:0}
-.sb-gem > img{width:38px;height:38px;background:radial-gradient(circle,#1d2a28,#0b0f0e);border:1px solid #2f4b47}
+.sb-gem > img{width:38px;height:38px;background:radial-gradient(circle,#1d2a28,#0B0F0F);border:1px solid #2f4b47}
 .sb-gem b{display:block;font-family:var(--ui);font-size:.88rem;color:var(--gem);line-height:1.1}
 .sb-gem .ss{display:flex;gap:3px;margin-top:3px;flex-wrap:wrap}
-.sb-gem .ss img{width:18px;height:18px;border-radius:50%;border:1px solid #4a3c29;background:#15110c}
+.sb-gem .ss img{width:18px;height:18px;border-radius:50%;border:1px solid #242D4F;background:#0B0D16}
 .sb-step{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;font-size:.88rem;cursor:pointer}
-.sb-step input{appearance:none;width:13px;height:13px;margin:4px 2px 0;border:1px solid var(--edge2);background:#0b0907;transform:rotate(45deg);cursor:pointer}
+.sb-step input{appearance:none;width:13px;height:13px;margin:4px 2px 0;border:1px solid var(--edge2);background:#06070C;transform:rotate(45deg);cursor:pointer}
 .sb-step input:checked{background:var(--gild);border-color:var(--gild-hi)}
 .sb-step b{font-family:var(--ui);color:var(--wisp)}
 .sb-step.done span{color:var(--faint);text-decoration:line-through}
-.sb-spirit .sbar{height:10px;background:#221c15;border:1px solid #000;overflow:hidden}
-.sb-spirit .sbar i{display:block;height:100%;background:linear-gradient(90deg,#3f8c68,#a6ecca)}
-.sb-spirit .sbar i.warn{background:linear-gradient(90deg,#8a6a38,var(--gild-hi))}
+.sb-spirit .sbar{height:10px;background:#131624;border:1px solid #000000;overflow:hidden}
+.sb-spirit .sbar i{display:block;height:100%;background:linear-gradient(90deg,#3F8B8C,#A6EBEC)}
+.sb-spirit .sbar i.warn{background:linear-gradient(90deg,#304492,var(--gild-hi))}
 .sb-spirit .sbar i.bad{background:linear-gradient(90deg,#7a2a1c,var(--danger))}
 /* minimizado */
 .app.side-min .sb-body{display:none}
@@ -539,26 +539,26 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
 .app.side-min .sb-head h2{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.95rem;letter-spacing:.12em;color:var(--gild);flex:none;order:2;margin-top:10px}
 .app.side-min .sb-mini{display:grid;order:3}
 .sb-mini{display:none;gap:8px;justify-items:center;margin-top:10px}
-.sb-mini img{width:38px;height:38px;object-fit:contain;border:1px solid var(--edge);background:#0d0b09;cursor:pointer}
+.sb-mini img{width:38px;height:38px;object-fit:contain;border:1px solid var(--edge);background:#08090E;cursor:pointer}
 .sb-mini .lvb{font-family:var(--display);font-weight:900;color:var(--gild-hi);font-size:1.05rem}
 /* gaveta em telas menores */
 .sb-fab{display:none}
 .sb-shade{display:none}
 @media (max-width:1439px){
-  .sb-fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--gild);background:#120e0a;color:var(--gild-hi);font-family:var(--ui);font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.6)}
+  .sb-fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--gild);background:#090B13;color:var(--gild-hi);font-family:var(--ui);font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.6)}
   .sb-fab img{width:26px;height:26px}
-  aside.side.drawer{display:flex;flex-direction:column;position:fixed;top:0;right:0;bottom:0;width:min(400px,92vw);z-index:70;background:#0c0a08;border-left:1px solid var(--gild);box-shadow:-20px 0 40px rgba(0,0,0,.6);animation:slidein .3s cubic-bezier(.2,.8,.2,1)}
+  aside.side.drawer{display:flex;flex-direction:column;position:fixed;top:0;right:0;bottom:0;width:min(400px,92vw);z-index:70;background:#07080D;border-left:1px solid var(--gild);box-shadow:-20px 0 40px rgba(0,0,0,.6);animation:slidein .3s cubic-bezier(.2,.8,.2,1)}
   aside.side.drawer .sb-body{display:grid}
   .sb-shade:not([hidden]){display:block;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:65}
 }
 @keyframes slidein{from{transform:translateX(100%)}to{transform:none}}
 .homebtn{display:inline-flex;align-items:center;padding:3px 10px;border:1px solid var(--edge2);color:var(--gild-hi);font-family:var(--ui);font-size:.85rem;text-decoration:none;background:rgba(0,0,0,.25)}
 .homebtn:hover{border-color:var(--gild)}
-.langsw{display:inline-flex;margin-left:auto;align-items:center;gap:0;border:1px solid var(--gild);background:rgba(12,10,8,.92);box-shadow:0 6px 20px rgba(0,0,0,.55);backdrop-filter:blur(6px)}
+.langsw{display:inline-flex;margin-left:auto;align-items:center;gap:0;border:1px solid var(--gild);background:rgba(7,8,13,.92);box-shadow:0 6px 20px rgba(0,0,0,.55);backdrop-filter:blur(6px)}
 .langsw .lg{padding:0 8px 0 10px;font-size:1rem;color:var(--gild)}
 .langsw a{display:flex;align-items:center;gap:6px;padding:7px 12px;font-family:var(--ui);font-weight:700;font-size:.9rem;color:var(--mute);text-decoration:none;border-left:1px solid var(--edge2);transition:color .2s,background .2s}
-.langsw a:hover{color:var(--gild-hi);background:rgba(200,165,106,.08)}
-.langsw a.on{background:var(--gild);color:#120d07}
+.langsw a:hover{color:var(--gild-hi);background:rgba(114,146,202,.08)}
+.langsw a.on{background:var(--gild);color:#060913}
 @media (max-width:600px){.langsw a{padding:6px 9px;font-size:.82rem}}
 
 @media (max-width:1100px){.treewrap{grid-template-columns:1fr}.nlist{max-height:420px}}
@@ -575,6 +575,10 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
   .treebox{height:62vh}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.orh1 small{color:#9FD8FF}
+.console h1{text-shadow:0 0 24px rgba(159,216,255,.25)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:radial-gradient(1px 1px at 12% 22%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 67% 12%,#dfe8ff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 84% 64%,#b8d8ff 50%,transparent 51%),radial-gradient(1px 1px at 32% 78%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 51% 41%,#cfe0ff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 7% 58%,#e6d8ff 50%,transparent 51%),radial-gradient(1px 1px at 93% 31%,#fff 50%,transparent 51%)}
+.app{position:relative;z-index:1}
 </style>
 
 <div class="app">
@@ -587,10 +591,10 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
   <main>
     <header class="console">
       <div class="brand">
-        <div class="eyebrow"><span class="pill league" id="league"></span><span class="pill">Huntress · Spirit Walker</span><nav class="langsw" aria-label="Idioma / Language"><span class="lg" aria-hidden="true">🌐</span><a href="__PT_HREF__" class="__PT_ON__" hreflang="pt-BR" title="Ver em português">Português</a><a href="__EN_HREF__" class="__EN_ON__" hreflang="en" title="View in English">English</a></nav></div>
-        <h1><small>Rota Chober Chaber · guia Mattjestic explicado</small>A Trilha do Mighty Silverfist</h1>
+        <div class="eyebrow"><span class="pill league" id="league"></span><span class="pill">Druid · Oracle</span><nav class="langsw" aria-label="Idioma / Language"><span class="lg" aria-hidden="true">🌐</span><a href="__PT_HREF__" class="__PT_ON__" hreflang="pt-BR" title="Ver em português">Português</a><a href="__EN_HREF__" class="__EN_ON__" hreflang="en" title="View in English">English</a></nav></div>
+        <h1 class="orh1"><small>__H1S__</small>__H1__</h1>
         <div class="divider orn" style="max-width:520px"></div>
-        <p>Spear no começo, o macaco no Ato 3 e o zoo completo no Atlas — sem nenhuma queda de dano. Diga seu nível e quanto quer gastar: o guia mostra o que fazer, o que equipar e quais passivas pegar agora.</p>
+        <p>__LEAD__</p>
       </div>
       <div class="where frame">
         <canvas id="wisps" aria-hidden="true"></canvas>
@@ -616,7 +620,7 @@ details.sb > summary .cnt{font-family:var(--mono);font-size:.72rem;color:var(--w
     <section class="view" id="v-agora"></section>
     <section class="view" id="v-meu"></section>
     <section class="view" id="v-quando"></section>
-    <section class="view" id="v-caca"></section>
+    <section class="view" id="v-totem"></section>
     <section class="view" id="v-meta"></section>
     <section class="view" id="v-uniques"></section>
     <section class="view" id="v-arvore"></section>
@@ -647,15 +651,15 @@ const $ = (s, r = document) => r.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ic = k => k && A.icons[k] ? A.icons[k] : null;
 const store = {
-  get(k, d) { try { const v = localStorage.getItem("silverfist2:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
-  set(k, v) { try { localStorage.setItem("silverfist2:" + k, JSON.stringify(v)); } catch (e) {} }
+  get(k, d) { try { const v = localStorage.getItem("oracle1:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("oracle1:" + k, JSON.stringify(v)); } catch (e) {} }
 };
 const S = { lv: store.get("lv", 35), mode: store.get("mode", "cheap"), tab: store.get("tab", "agora"), done: store.get("done", {}), trickCat: "Todos", skillPhase: null, treePhase: null, gearPhase: null };
 S.stage = store.get("stage", "auto");
 function curPhase() { return (S.stage && S.stage !== "auto" && D.phases.find(p => p.id === S.stage)) || phaseOf(S.lv); }
 const phaseOf = lv => D.phases.find(p => lv >= p.lv[0] && lv <= p.lv[1]) || D.phases[D.phases.length - 1];
 const msList = Object.entries(D.milestones).map(([k, v]) => ({ lv: +k, t: v })).sort((a, b) => a.lv - b.lv);
-const TABS = [["agora","Agora"],["meu","Meu personagem"],["quando","Quando usar"],["caca","Caçar companions"],["meta","Meta & Otimizações"],["uniques","Uniques"],["arvore","Árvore de Passivas"],["rota","Rota 1→100"],["skills","Skills & Supports"],["gear","Itens"],["zoo","Zoo & Spirit"],["asc","Ascendência"],["quests","Quests"],["tricks","Tricks Pro"],["atlas","Atlas"],["diag","Diagnóstico"],["fontes","Fontes"]];
+const TABS = __TABS__;
 const baseSkill = s => s.replace(/\s*\(.*\)/, "").trim();
 const gemImg = s => ic(A.gemIcon[baseSkill(s)]);
 const supImg = s => ic(A.supIcon[s]);
@@ -730,7 +734,7 @@ function gemDiff(phase) {
   const prev = D.phases[i - 1]; const map = {}; prev.gems.forEach(g => map[g.skill] = g); return { prev, map };
 }
 function gemCard(g, diff, detailed) {
-  const carry = /Silverfist|Zekoa|Azmerian/.test(g.skill);
+  const carry = /^Spell Totem/.test(g.skill);
   const old = diff && diff.map ? diff.map[g.skill] : null;
   const isNew = diff && diff.prev && !old; const oldSup = old ? old.sup : [];
   const socks = g.sup.map(s => { const im = supImg(s); return `<span class="sock ${diff && diff.prev && !oldSup.includes(s) ? "new" : ""}" title="${esc((D.supWhy || {})[s] || "")}">${im ? `<img src="${im}" alt="">` : '<img alt="">'}<span>${esc(s)}</span></span>`; }).join("") || '<span class="role">sem supports</span>';
@@ -762,7 +766,7 @@ function itemCard(it) {
 }
 function skelBox(p) {
   const s = p.skeletons; if (!s) return "";
-  return `<div class="skbox frame"><div class="big">${esc(s.n)}<small>ESQUELETOS</small></div><div>${s.types.length ? `<div class="types">${s.types.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}<p>${esc(s.note)}</p></div></div>`;
+  return `<div class="skbox frame"><div class="big">${esc(s.n)}<small>${T("TOTEMS", "TOTEMS")}</small></div><div>${s.types.length ? `<div class="types">${s.types.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}<p>${esc(s.note)}</p></div></div>`;
 }
 function gemGrid(p, useLv, detailed) {
   p = adaptPhase(p);
@@ -774,16 +778,16 @@ function gemGrid(p, useLv, detailed) {
     const core = main.filter(g => g.sp === "core").sort((a, b) => a.pr - b.pr), rest = main.filter(g => !g.sp);
     const free = main.filter(g => g.sp === "free"), opt = main.filter(g => g.sp === "opt").sort((a, b) => a.pr - b.pr);
     const res = [...core, ...rest];
-    mainHtml = skelBox(p) + (p.spiritTotal ? `<div class="spnote frame"><b>${T("Seu Spirit", "Your Spirit")}</b><p>${T(`Com ${p.spiritTotal} de Spirit máximo, macaco + beasts de aura reservam ≈ ${p.spiritUsed}. Azmerian Wolf, Cleric, Withering Presence e Discipline têm custo que depende do nível da gem: confira no painel de skills do jogo. Os cartões marcados como "não cabe" são os primeiros a sair.`, `With ${p.spiritTotal} max Spirit, monkey + aura beasts reserve ≈ ${p.spiritUsed}. Azmerian Wolf, Cleric, Withering Presence and Discipline cost depends on gem level: check the in-game skills panel. Cards marked "doesn't fit" are the first to go.`)}</p></div>` : "") + `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
-      (res.length ? `<div class="spgroup">1 · Reservam Spirit <small>${core.length ? "ative nesta ordem; se o Spirit ficar negativo, desligue o último" : "companions e auras"}</small></div>${cards(res)}` : "") +
+    mainHtml = skelBox(p) + (p.spiritTotal ? `<div class="spnote frame"><b>${T("Seu Spirit", "Your Spirit")}</b><p>${T(`Com ${p.spiritTotal} de Spirit máximo, totems e skills persistentes reservam ≈ ${p.spiritUsed}. Malice e Spellslinger não têm custo nos dados: digite em Meu personagem. Cartões marcados como "não cabe" são os primeiros a sair.`, `With ${p.spiritTotal} max Spirit, totems and persistent skills reserve ≈ ${p.spiritUsed}. Malice and Spellslinger have no cost in the data: type it in My character. Cards marked "doesn't fit" are the first to go.`)}</p></div>` : "") + `${p.spiritNote ? `<div class="spnote frame"><b>Spirit</b><p>${esc(p.spiritNote)}</p></div>` : ""}` +
+      (res.length ? `<div class="spgroup">1 · Reservam Spirit <small>${core.length ? "ative nesta ordem; se o Spirit ficar negativo, desligue o último" : T("skills persistentes", "persistent skills")}</small></div>${cards(res)}` : "") +
       (free.length ? `<div class="spgroup">2 · Não reservam Spirit <small>use sempre</small></div>${cards(free)}` : "") +
       (opt.length ? `<div class="spgroup">3 · Só se sobrar Spirit <small>entram depois, quando você ganhar mais Spirit</small></div>${cards(opt)}` : "");
   }
   if (!early.length) return mainHtml;
   const u = early[0].until;
-  return `<div class="label" style="margin:0 0 8px">Barra principal${useLv ? "" : ` (nv ${u}+ — depois de capturar o Silverfist e fazer o respec)`}</div>${mainHtml}` +
-    (hideEarly ? `<p style="color:var(--faint);margin:12px 0 0">Twister, Whirling Slash, Cull The Weak e Barrage já saíram da sua barra: você passou do nível ${u}.</p>`
-      : `<div class="panel frame" style="margin-top:16px;border-color:rgba(224,102,79,.45)"><h3>Só até capturar o Silverfist (nv ${p.lv[0]}–${u - 1})</h3><p style="margin:0 0 12px;color:var(--mute)">São as skills de spear do leveling. Assim que capturar o macaco e fizer o respec (nv ~${u}), tire todas da barra: a árvore passa a ser de companion e elas não escalam mais.</p><div class="gems">${early.map(g => gemCard(g, null, detailed)).join("")}</div></div>`);
+  return `<div class="label" style="margin:0 0 8px">${T("Barra principal", "Main bar")}${useLv ? "" : T(` (nv ${u}+)`, ` (lv ${u}+)`)}</div>${mainHtml}` +
+    (hideEarly ? `<p style="color:var(--faint);margin:12px 0 0">${T(`Volcano e Frost Bomb já saíram da barra: você passou do nível ${u} e o Bonestorm assumiu.`, `Volcano and Frost Bomb are already off the bar: you're past level ${u} and Bonestorm took over.`)}</p>`
+      : `<div class="panel frame" style="margin-top:16px;border-color:rgba(224,102,79,.45)"><h3>${T(`Só no começo (nv ${p.lv[0]}–${u - 1})`, `Early only (lv ${p.lv[0]}–${u - 1})`)}</h3><p style="margin:0 0 12px;color:var(--mute)">${T(`Skills de início do Ato 1. Antes do boss do Ato 1 (nv ~${u}) o Bonestorm substitui os dois.`, `Act 1 starting skills. Before the Act 1 boss (lv ~${u}) Bonestorm replaces both.`)}</p><div class="gems">${early.map(g => gemCard(g, null, detailed)).join("")}</div></div>`);
 }
 const setItems = pid => adaptItems(pid, setItemsRaw(pid));
 const modeList = p => S.mode === "cheap" ? p.cheap : p.full;
@@ -829,7 +833,7 @@ function renderSide() {
         <div class="row"><span>Nv ${S.lv} · ${S.mode === "cheap" ? "modo barato" : "modo completo"}</span><span>${prog}% da fase</span></div>
         <div class="ph">${esc(p.name)} <small class="label">· ${esc(p.tag)}</small></div>
         <div class="sb-prog"><i style="width:${prog}%"></i></div>
-        ${pa.skeletons ? `<div class="sb-skel" data-gotab="skills" title="${esc(pa.skeletons.note)}">Esqueletos: <b>${esc(pa.skeletons.n)}</b> ${esc(pa.skeletons.types.join(" · ").slice(0, 60))}</div>` : ""}${pa.spiritTotal ? `<div class="sb-skel" data-gotab="skills">Spirit: <b>≈ ${pa.spiritUsed}/${pa.spiritTotal}</b> ${T("(companions estimados)", "(estimated companions)")}</div>` : ""}
+        ${pa.skeletons ? `<div class="sb-skel" data-gotab="skills" title="${esc(pa.skeletons.note)}">${T("Totems", "Totems")}: <b>${esc(pa.skeletons.n)}</b> ${esc(pa.skeletons.types.join(" · ").slice(0, 60))}</div>` : ""}${pa.spiritTotal ? `<div class="sb-skel" data-gotab="skills">Spirit: <b>≈ ${pa.spiritUsed}/${pa.spiritTotal}</b> ${T("(totems + persistentes)", "(totems + persistent)")}</div>` : ""}
         <div class="sb-carry">${carryGem && gemImg(carryGem.skill) ? `<img src="${gemImg(carryGem.skill)}" alt="">` : "<span></span>"}<div><b>${esc(p.carry)}</b><small>${next ? `Próxima fase: ${esc(next.name)} (Nv ${next.lv[0]})` : "Fase final"}</small></div></div>
       </div>
       ${(() => { const rr = charRecs().recs.filter(x => x.lvl !== "ok").slice(0, 4); if (S.sideOpen.recs === undefined) S.sideOpen.recs = true; return sideSec("recs", T("Para você agora", "For you now"), rr.length, (rr.length ? rr.map(x => `<div class="rec ${x.lvl} mini" data-gotab="${x.tab && x.tab !== "meu" ? x.tab : "meu"}"><span class="ri">${{ bad: "✖", warn: "!", tip: "➜", ok: "✔" }[x.lvl]}</span><div><b>${esc(x.t)}</b></div></div>`).join("") : `<span class="label">${T("Nada pendente pelo que você marcou.", "Nothing pending from what you ticked.")}</span>`) + `<button class="btn" type="button" data-gotab="meu">${T("Marcar o que eu tenho", "Tick what I have")}</button>`); })()}
@@ -851,7 +855,7 @@ function renderSide() {
       ${sideSec("spirit", "Spirit", `${Math.round(c.pct * 100)}%`, `
         <div class="sb-spirit"><div class="sbar"><i class="${cls}" style="width:${Math.min(100, c.pct * 100)}%"></i></div></div>
         <span style="font-size:.88rem;color:var(--mute)">${c.used.toFixed(0)} de ${esc(S.sp.total)} reservados · ${c.free >= 0 ? `sobram ${c.free.toFixed(0)}` : `faltam ${(-c.free).toFixed(0)}`}</span>
-        <button class="btn" type="button" data-gotab="zoo">Abrir planner de Spirit</button>`)}
+        <button class="btn" type="button" data-gotab="totem">${T("Abrir Totems & Mana", "Open Totems & Mana")}</button>`)}
       ${sideSec("buy", "Comprar a seguir", null, `<ul class="sb-list">${buys.map(b => { const u = uniquesIn(b.item)[0]; return `<li data-gotab="gear"><img src="${u ? uniqImg(u) : ""}" alt=""><div><b>${esc(b.item)}</b><small>${esc(b.phase)} · ${esc(b.impact)}</small></div><span class="px">${esc(b.cost)}</span></li>`; }).join("")}</ul>`)}
     </div>`;
   const fab = $("#sbFab");
@@ -895,7 +899,7 @@ function vAgora() {
       <div class="label">${esc(p.name)} · ${esc(p.tag)}</div>
       <p class="goal">${esc(p.goal)}</p>
       <div class="split"><div class="bar"><i class="p" style="width:${p.dmgSplit[0]}%"></i><i class="z" style="width:${p.dmgSplit[1]}%"></i></div>
-        <div class="legend"><span>Dano seu ≈ ${p.dmgSplit[0]}%</span><span>Carry: <b style="color:var(--text)">${esc(p.carry)}</b></span><span>Zoo ≈ ${p.dmgSplit[1]}%</span></div></div>
+        <div class="legend"><span>Dano seu ≈ ${p.dmgSplit[0]}%</span><span>Carry: <b style="color:var(--text)">${esc(p.carry)}</b></span><span>${T("Totems", "Totems")} ≈ ${p.dmgSplit[1]}%</span></div></div>
       <div class="divider"></div>
       <div class="ms">${last ? `<span class="n">Nv ${last.lv}</span><span><b>Último marco:</b> ${esc(last.t)}</span>` : ""}${nxt.map(m => `<span class="n next">Nv ${m.lv}</span><span>${esc(m.t)}</span>`).join("")}</div>
     </div>
@@ -917,7 +921,7 @@ function vAgora() {
     <div class="panel frame"><h3>Passivas novas desta fase</h3>
       ${newN.length ? `<div style="display:grid;gap:4px">${newN.map(n => `<div class="nrow" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt=""><div><b>${esc(n.n)}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}</div>` : '<p style="color:var(--mute);margin:0">Nenhum notable novo: só pontos pequenos no caminho.</p>'}
       <button class="btn" type="button" data-gotab="arvore" style="margin-top:10px">Ver na árvore</button></div>
-    <div class="panel frame"><h3>${A.sets[p.id] ? "Set principal desta fase" : "Set de leveling (spear)"}</h3><div class="items" style="grid-template-columns:1fr">${items.map(itemCard).join("")}</div>
+    <div class="panel frame"><h3>${T("Set principal desta fase", "Main set this phase")}</h3><div class="items" style="grid-template-columns:1fr">${items.map(itemCard).join("")}</div>
       <button class="btn" type="button" data-gotab="gear" style="margin-top:10px">Todos os itens</button></div>
   </div>
   ${(() => { const ops = (OPT_PHASE[p.id] || []).map(i => D.optimizations[i]); const us = D.uniques.filter(u => u.p === p.id);
@@ -978,7 +982,7 @@ class TreeView {
     if (!this.imgs.has(key)) { const im = new Image(); im.onload = () => this.draw(); im.src = A.icons[key]; this.imgs.set(key, im); }
     const im = this.imgs.get(key); return im.complete ? im : null;
   }
-  color(t) { return t === "s1" ? "#D9544A" : t === "s2" ? "#62B462" : "#E3BE78"; }
+  color(t) { return t === "s1" ? "#D9544A" : t === "s2" ? "#62B462" : "#8DA9D8"; }
   draw() {
     if (this._raf) return; this._raf = requestAnimationFrame(() => { this._raf = null; this._draw(); });
   }
@@ -993,7 +997,7 @@ class TreeView {
       if (ta && tb) {
         const t = ta === "m" ? tb : ta; const isNew = this.newSet.has(e.a) && this.newSet.has(e.b);
         ctx.strokeStyle = this.color(t); ctx.lineWidth = Math.max(3.2 / s, 22);
-        if (isNew && this.o.showNew) { ctx.shadowColor = "#7FD8B0"; ctx.shadowBlur = 10 * r; }
+        if (isNew && this.o.showNew) { ctx.shadowColor = "#7FD7D8"; ctx.shadowBlur = 10 * r; }
         ctx.stroke(e.p); ctx.shadowBlur = 0;
       }
     }
@@ -1011,10 +1015,10 @@ class TreeView {
         if (im) { ctx.save(); ctx.beginPath(); ctx.arc(x, y, rad * .86, 0, Math.PI * 2); ctx.clip(); ctx.drawImage(im, x - rad * .86, y - rad * .86, rad * 1.72, rad * 1.72); ctx.restore(); }
         else { ctx.beginPath(); ctx.arc(x, y, rad * .62, 0, Math.PI * 2); ctx.fillStyle = this.color(t); ctx.fill(); }
         ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI * 2);
-        ctx.strokeStyle = this.newSet.has(id) && this.o.showNew ? "#7FD8B0" : this.color(t); ctx.lineWidth = Math.max(2 / s, k ? 14 : 9); ctx.stroke();
+        ctx.strokeStyle = this.newSet.has(id) && this.o.showNew ? "#7FD7D8" : this.color(t); ctx.lineWidth = Math.max(2 / s, k ? 14 : 9); ctx.stroke();
       } else {
-        ctx.fillStyle = k === 2 ? "#3b3124" : k === 1 ? "#2e271e" : k === 3 ? "#26303a" : "#2a241c"; ctx.fill();
-        if (k && scr > 3) { ctx.strokeStyle = "#5a4a34"; ctx.lineWidth = 1 / s; ctx.stroke(); }
+        ctx.fillStyle = k === 2 ? "#20263F" : k === 1 ? "#1B2031" : k === 3 ? "#26303a" : "#1A1D2C"; ctx.fill();
+        if (k && scr > 3) { ctx.strokeStyle = "#2F385F"; ctx.lineWidth = 1 / s; ctx.stroke(); }
       }
     }
     if (this.next && this.next.length) {
@@ -1038,7 +1042,7 @@ class TreeView {
     if (this.o.labels) {
       ctx.setTransform(r, 0, 0, r, 0, 0); ctx.font = "600 12px 'Alegreya SC', Georgia, serif"; ctx.textAlign = "center";
       for (const n of this.nodes) { const t = this.alloc.get(n[0]); const m = this.d.meta[n[0]]; if (!m || (!t && !this.o.labelAll) || !n[3]) continue;
-        const sx = n[1] * s + this.ox, sy = n[2] * s + this.oy; ctx.fillStyle = "rgba(0,0,0,.7)"; ctx.fillText(m[0], sx + 1, sy + 34); ctx.fillStyle = t ? "#EBD29A" : "#8a7b64"; ctx.fillText(m[0], sx, sy + 33); }
+        const sx = n[1] * s + this.ox, sy = n[2] * s + this.oy; ctx.fillStyle = "rgba(0,0,0,.7)"; ctx.fillText(m[0], sx + 1, sy + 34); ctx.fillStyle = t ? "#ACC0E3" : "#446DB4"; ctx.fillText(m[0], sx, sy + 33); }
     }
   }
   bind() {
@@ -1064,13 +1068,13 @@ class TreeView {
   }
 }
 let TV = null, AV = null;
-const TREE_ORDER = ["a1", "a2", "a3", "a4", "int", "ea", "t15", "mm", "uber"];
+const TREE_ORDER = ["a1", "a2", "a3", "a4", "sw", "int", "ea", "w1", "fin", "uber"];
 function vArvore() {
   const pid = S.treePhase || curPhase().id;
-  const nt = A.notables[pid]; const name = pid === "uber" ? "Bossing (endgame)" : D.phases.find(p => p.id === pid).name;
+  const nt = A.notables[pid]; const name = (D.phases.find(p => p.id === pid) || D.phases[D.phases.length - 1]).name;
   const lvBased = pid === curPhase().id; const ts = treeState(pid, lvBased);
-  return `<div class="sechead"><div><h2>Árvore de Passivas</h2><p>Árvore real do patch 0.5.5 com o caminho do <b>guia do Mattjestic</b> em cada fase. Atos 1–2: Twister. Ato 3 em diante: só companion e defesa. O único keystone de "arma" é o Giant's Blood, necessário para usar a Chober Chaber com sceptre. <b style="color:#E3BE78">Dourado</b> = árvore principal, <b style="color:var(--set1)">vermelho</b> = Weapon Set I, <b style="color:var(--set2)">verde</b> = Weapon Set II — as mesmas cores do jogo. Contorno verde-claro = nó novo nesta fase.</p></div></div>
-  ${phaseSel(pid, "tree", [["uber", "Bossing (endgame)"]])}
+  return `<div class="sechead"><div><h2>${T("Árvore de Passivas", "Passive Tree")}</h2><p>${T("Árvore real do patch 0.5.5 com o caminho do guia do Lowepe em cada fase. Atos 1–4: spells físicos e Wildsurge Incantation. Troca: Ancestral Bond, Efficient Inscriptions e nós de totem. Endgame: mana e Mind Over Matter.", "Real patch 0.5.5 tree with Lowepe's guide path for each phase. Acts 1–4: physical spells and Wildsurge Incantation. Swap: Ancestral Bond, Efficient Inscriptions and totem nodes. Endgame: mana and Mind Over Matter.")} <b style="color:#8DA9D8">${T("Principal", "Main")}</b> · <b style="color:var(--set1)">Weapon Set I = ${T("totem", "totem")}</b> · <b style="color:var(--set2)">Weapon Set II = ${T("o resto", "everything else")}</b>. ${T("Contorno verde-claro = nó novo nesta fase.", "Light-green outline = new node this phase.")}</p></div></div>
+  ${phaseSel(pid, "tree")}
   ${pid === curPhase().id ? treeAdaptNotes() : ""}
   <div class="treewrap" style="margin-top:14px">
     <div class="treebox frame">
@@ -1083,7 +1087,7 @@ function vArvore() {
         <span class="chip gold" style="margin-left:auto">${lvBased ? `Nível ${S.lv}: ${ts.m.length} pontos` : `Fase completa: ${ts.m.length} pontos`}</span>
       </div>
       ${lvBased ? `<div class="ptsrow"><span class="label">Pontos que você tem</span><input type="number" min="0" max="140" id="ptsIn" value="${ts.pts}" aria-label="Pontos de passiva"><button class="btn" type="button" id="ptsAuto">Automático (${autoPts(S.lv)})</button><small style="color:var(--mute)">Automático = nível − 1 + pontos de quest (≈). Se no jogo for diferente, digite o seu número.</small></div>` : `<div class="ptsrow"><small style="color:var(--mute)">Mostrando a fase inteira. Selecione a sua fase atual para ver os pontos do seu nível e os próximos.</small></div>`}
-      <div class="legend"><span><i style="background:#E3BE78"></i>Principal</span><span><i style="background:var(--set1)"></i>Weapon Set I</span><span><i style="background:var(--set2)"></i>Weapon Set II</span><span><i style="background:transparent;border:2px solid #7FD8B0"></i>Novo nesta fase</span>${lvBased ? '<span><i style="background:transparent;border:2px dashed #8fd0ff"></i>Próximos pontos (numerados)</span>' : ""}</div>
+      <div class="legend"><span><i style="background:#8DA9D8"></i>Principal</span><span><i style="background:var(--set1)"></i>Weapon Set I</span><span><i style="background:var(--set2)"></i>Weapon Set II</span><span><i style="background:transparent;border:2px solid #7FD7D8"></i>Novo nesta fase</span>${lvBased ? '<span><i style="background:transparent;border:2px dashed #8fd0ff"></i>Próximos pontos (numerados)</span>' : ""}</div>
       <div class="ttip" id="ttip"></div>
     </div>
     <div class="frame">
@@ -1091,19 +1095,19 @@ function vArvore() {
       ${ts.extra ? `<p style="padding:6px 10px;color:var(--gild-hi);margin:0">Você tem ${ts.extra} ponto(s) além do caminho completo do guia: coloque em vida, Spirit ou resistência perto do caminho.</p>` : ""}
       <div class="plate">Notables · ${esc(name)}${lvBased ? ` (nível ${S.lv})` : ""}</div>
       <div class="nlist">${ts.notables.filter(n => n.k !== 3).map(n => `<div class="nrow k${n.k} ${n.new ? "new" : ""}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt=""><div><b>${esc(n.n)} ${n.new ? '<span class="chip wisp" style="font-size:.7rem">novo</span>' : ""}${n.ahead ? '<span class="chip bear" style="font-size:.7rem">da próxima fase</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
-      <div class="divider"></div><p class="label" style="padding:0 6px">Notables do meta (% dos 24 zoos top) — contorno roxo na árvore</p>
-      ${A.metaNotables.map(n => `<div class="nrow k${n.k}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-color:#A77BE0"><div><b>${esc(n.n)} <span class="chip bear" style="font-size:.7rem">${n.pct}%</span>${ts.m.includes(n.id) ? ' <span class="chip gold" style="font-size:.7rem">no guia</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
+      ${A.metaNotables.length ? `<div class="divider"></div><p class="label" style="padding:0 6px">${T("Notables do meta", "Meta notables")}</p>` : ""}
+      ${A.metaNotables.map(n => `<div class="nrow k${n.k}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-color:#AA7BE0"><div><b>${esc(n.n)} <span class="chip bear" style="font-size:.7rem">${n.pct}%</span>${ts.m.includes(n.id) ? ' <span class="chip gold" style="font-size:.7rem">no guia</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
       ${nt.removed.length ? `<div class="divider"></div><p class="label" style="padding:0 6px">Removidos nesta fase</p><p style="padding:0 6px;color:var(--faint);margin:4px 0">${nt.removed.map(esc).join(" · ")}</p>` : ""}
       </div>
     </div>
   </div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="frame"><div class="plate">Ascendência Spirit Walker</div><div class="ascbox"><canvas id="ascCv" aria-label="Árvore de ascendência"></canvas><div class="ttip" id="ttip2"></div></div></div>
+    <div class="frame"><div class="plate">${T("Ascendência Oracle", "Oracle Ascendancy")}</div><div class="ascbox"><canvas id="ascCv" aria-label="Árvore de ascendência"></canvas><div class="ttip" id="ttip2"></div></div></div>
     <div class="panel frame"><h3>Como seguir no jogo</h3><ul class="clean gold">
-      <li>Abra a árvore (tecla P), busque o nome do notable na caixa "Search here" e siga as linhas douradas a partir do início da Huntress.</li>
+      <li>${T("Abra a árvore (tecla P), busque o nome do notable na caixa \"Search here\" e siga as linhas a partir do início da Druid.", "Open the tree (P key), search the notable name in the \"Search here\" box and follow the lines from the Druid start.")}</li>
       <li>Pontos de Weapon Set (vermelho/verde) só valem com aquele set ativo — use os pontos que ganha nas quests de Weapon Set Passive Points.</li>
       <li>Passe o mouse em qualquer nó para ver os stats; clique num notable da lista para centralizar.</li>
-      <li>Nos respecs (Ato 3 e ao pegar Sylvan's Effigy) compare com a fase anterior: nós sem contorno verde já eram seus.</li>
+      <li>${T("No respec da troca para totem, compare com a fase anterior: nós sem contorno verde já eram seus. Weapon Set 1 = passivas de totem.", "At the totem-swap respec, compare with the previous phase: nodes without a green outline were already yours. Weapon Set 1 = totem passives.")}</li>
     </ul></div>
   </div>`;
 }
@@ -1130,12 +1134,12 @@ function vRota() {
   const cur = curPhase(); const rows = [];
   for (let lv = 1; lv <= 100; lv++) { const p = phaseOf(lv); const m = D.milestones[lv];
     rows.push(`<div class="lvl ${m ? "ms" : "none"} ${lv === S.lv ? "cur" : ""} ${lv < S.lv ? "past" : ""}" data-lv="${lv}"><span class="n">${lv}</span><span class="p">${esc(p.name)}</span><span class="t">${m ? esc(m) : "Siga o foco da fase: " + esc(p.stats.slice(0, 3).join(" · "))}</span><span class="tagcol">${lv === p.lv[0] ? `<span class="chip gold">${esc(p.tag)}</span>` : ""}</span></div>`); }
-  return `<div class="sechead"><div><h2>Rota 1 → 100</h2><p>Oito fases, uma única build. O dano migra de você para o zoo sem nenhuma queda: cada fase prepara a próxima.</p></div></div>
+  return `<div class="sechead"><div><h2>${T("Rota 1 → 100", "Route 1 → 100")}</h2><p>${T("Nove fases do guia do Lowepe. Até o Ato 4 você lança os spells; na troca, o dano passa para os Spell Totems.", "Nine phases from Lowepe's guide. Until Act 4 you cast the spells; at the swap, damage moves to the Spell Totems.")}</p></div></div>
   <div class="timeline stagger">${D.phases.map(p => `<button type="button" class="tl frame ${p === cur ? "cur" : ""}" data-go="${p.lv[0]}">
     <span class="lv">Nv ${p.lv[0]}–${p.lv[1]}</span><span class="nm">${esc(p.name)}</span><span class="tg">${esc(p.tag)}</span>
-    <span class="mini" title="Dano seu / do zoo (aprox.)"><i class="p" style="width:${p.dmgSplit[0]}%"></i><i class="z" style="width:${p.dmgSplit[1]}%"></i></span>
+    <span class="mini" title="${T("Dano seu / dos totems (aprox.)", "Your damage / totem damage (approx.)")}"><i class="p" style="width:${p.dmgSplit[0]}%"></i><i class="z" style="width:${p.dmgSplit[1]}%"></i></span>
     <span style="display:flex;gap:3px">${p.gems.filter(g => !g.until).slice(0, 5).map(g => gemImg(g.skill) ? `<img src="${gemImg(g.skill)}" alt="" style="width:22px;height:22px">` : "").join("")}</span></button>`).join("")}</div>
-  <p style="color:var(--faint);font-size:.88rem;margin:6px 0 20px">Barra: <span style="color:#bdbdbd">■</span> dano seu · <span style="color:var(--wisp)">■</span> dano do zoo (proporção aproximada).</p>
+  <p style="color:var(--faint);font-size:.88rem;margin:6px 0 20px">${T("Barra", "Bar")}: <span style="color:#bdbdbd">■</span> ${T("dano seu", "your damage")} · <span style="color:var(--wisp)">■</span> ${T("dano dos totems (proporção aproximada)", "totem damage (approximate ratio)")}.</p>
   <div class="sechead"><div><h2 style="font-size:1.4rem">Nível a nível</h2><p>Negrito = marco real. Clique numa linha para marcar como seu nível.</p></div></div>
   <div class="levels frame" id="levels">${rows.join("")}</div>`;
 }
@@ -1148,7 +1152,7 @@ function vSkills() {
   <div style="margin-top:14px">${gemGrid(sel, false, true)}</div>
   <div class="grid g2" style="margin-top:16px">
     <div class="panel frame"><h3>Rotação — ${esc(sel.name)}</h3><ol style="margin:0;padding-left:20px;display:grid;gap:4px">${sel.rotation.map(r => `<li>${esc(r)}</li>`).join("")}</ol></div>
-    <div class="panel frame"><h3>Prioridade de sockets (Jeweller's)</h3><ul class="clean gold"><li>Tame Beast do Mighty Silverfist</li><li>Azmerian Wolf (quando tiver o Effigy)</li><li>Demais Tame Beast</li><li>Wolf Pack · Sniper's / Voltaic Mark</li></ul></div>
+    <div class="panel frame"><h3>${T("Prioridade de sockets (Jeweller's)", "Socket priority (Jeweller's)")}</h3><ul class="clean gold"><li>Spell Totem (Urgent Totems III ${T("primeiro", "first")})</li><li>Entangle</li><li>Archmage · Mana Remnants</li><li>Frost Bomb · Mana Tempest</li></ul></div>
   </div>`;
 }
 
@@ -1158,7 +1162,7 @@ function vGear() {
   return `<div class="sechead"><div><h2>Itens</h2><p>Primeiro, o set completo da fase escolhida. Depois, cada slot do barato ao completo.</p></div></div>
   ${phaseSel(sel.id, "gear")}
   ${sel.id === curPhase().id ? adaptBanner("gear") : ""}
-  <p style="color:var(--mute);margin:12px 0 0">${A.sets[sel.id] ? `Set principal da nossa rota no modo <b>${S.mode === "cheap" ? "barato" : "completo"}</b>: uniques onde eles são a escolha, rares só com mods de zoo (Minion Skills, Spirit, vida, resist, evasion). Troque o modo no topo para ver o outro set.` : "Atos 1–2: você ainda bate de spear, então aqui dano de ataque faz sentido."}</p><div class="items stagger" style="margin-top:14px">${setItems(sel.id).map(itemCard).join("")}</div>${(D.jewelSets[sel.id] || []).length ? `<div class="panel frame" style="margin-top:14px"><h3>Jewels</h3><ul class="clean gold">${D.jewelSets[sel.id].map(j => `<li>${esc(j)}</li>`).join("")}</ul></div>` : ""}
+  <p style="color:var(--mute);margin:12px 0 0">${T(`Set principal da fase no modo <b>${S.mode === "cheap" ? "barato" : "completo"}</b>: rares com +níveis de spell, Spirit, mana e resistências. Troque o modo no topo para ver o outro set.`, `Main phase set in <b>${S.mode === "cheap" ? "budget" : "full"}</b> mode: rares with +spell levels, Spirit, mana and resistances. Switch the mode at the top to see the other set.`)}</p><div class="items stagger" style="margin-top:14px">${setItems(sel.id).map(itemCard).join("")}</div>
   <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot a slot · do barato ao completo</h2><p>O modo ${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Barato</b>" : "<b style='color:#E18C47'>Completo</b>"} acende a linha certa. Preços mudam rápido, então usamos faixas.</p></div></div>
   <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
     <div class="hd"><b>${esc(g.slot)}</b><span class="thumbs">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}">`).join("")}</span></div>
@@ -1170,59 +1174,13 @@ function vGear() {
   <ol class="buy">${D.buyOrder.map(b => { const u = uniquesIn(b.item)[0]; return `<li class="frame"><span class="i">${String(b.p).padStart(2, "0")}</span>${u ? `<img src="${uniqImg(u)}" alt="">` : "<span></span>"}<div><b>${esc(b.item)}</b><small>${esc(b.impact)} · ${esc(b.phase)}</small></div><span class="chip ${/Alto|alto/.test(b.cost) ? "unique" : "wisp"}">${esc(b.cost)}</span></li>`; }).join("")}</ol>`;
 }
 
-/* ---- spirit */
-const ZOO_DEFAULT = [{ n: "Mighty Silverfist", on: true, t: "c", c: 47.4, u: "%" }, { n: "Quadrilla", on: true, t: "c", c: 42.3, u: "%" }, { n: "Wind Dancer", on: true, t: "o", c: 30, u: "flat" }, { n: "Withering Presence", on: false, t: "o", c: 30, u: "flat" }];
-S.sp = store.get("sp", { total: 191, tk: true, eg: true, extra: 0, ido: false, idols: 0, zoo: ZOO_DEFAULT });
-function spCalc() {
-  const s = S.sp; const incC = (s.eg ? .25 : 0) + (+s.extra || 0) / 100 + (s.ido ? .02 * (+s.idols || 0) : 0); const incO = (+s.extra || 0) / 100 + (s.ido ? .02 * (+s.idols || 0) : 0);
-  const mC = s.tk ? 1.3 : 1, mO = s.tk ? .8 : 1;
-  const rows = s.zoo.map(z => { if (!z.on) return 0; const base = z.u === "%" ? (+z.c || 0) / 100 * (+s.total || 0) : (+z.c || 0); return base / (z.t === "c" ? (1 + incC) * mC : (1 + incO) * mO); });
-  const used = rows.reduce((a, b) => a + b, 0); return { rows, used, free: (+s.total || 0) - used, pct: s.total ? used / s.total : 0 };
-}
-function vZoo() {
-  const s = S.sp; const c = spCalc(); const R = 62, L = 2 * Math.PI * R, pct = Math.min(c.pct, 1);
-  const st = c.free < 0 ? ["bad", "Estourou o Spirit — desligue algo (comece pelas não-companion)."] : c.pct > .9 ? ["warn", "No limite — sem espaço para mais um beast."] : ["ok", `Sobram ${c.free.toFixed(0)} de Spirit.`];
-  const tb = ic(A.gemIcon["Tame Beast"]);
-  const beastOpts = D.beasts.filter(b => b.cost).map(b => `<option value="${esc(b.name)}">${esc(b.name)} (${String(b.cost).replace(".", ",")}%)</option>`).join("");
-  return `<div class="sechead"><div><h2>Zoo & Spirit</h2><p>Monte seu zoo e veja se cabe. Estimativa: custo ÷ ((1 + increased) × more/less). O painel de skills do jogo é a palavra final.</p></div></div>
-  <div class="spirit">
-    <div class="panel frame">
-      <label class="field"><span>Spirit total (painel do personagem)</span><input type="number" min="0" id="spTotal" value="${esc(s.total)}"></label>
-      <div class="donut"><svg width="170" height="170" viewBox="0 0 170 170" aria-hidden="true"><circle cx="85" cy="85" r="${R}" fill="none" stroke="#241e17" stroke-width="16"/>
-        <circle cx="85" cy="85" r="${R}" fill="none" stroke="${c.free < 0 ? "#E0664F" : c.pct > .9 ? "#EBD29A" : "#7FD8B0"}" stroke-width="16" stroke-dasharray="${(L * pct).toFixed(1)} ${L.toFixed(1)}" transform="rotate(-90 85 85)" style="transition:stroke-dasharray .6s"/></svg>
-        <div class="c"><b>${Math.round(c.pct * 100)}%</b><small>${c.used.toFixed(0)} / ${esc(s.total)}</small></div></div>
-      ${[["tk", "Trusted Kinship", "30% more p/ companion · 20% less p/ o resto"], ["eg", "Easy Going", "+25% increased p/ companion"], ["ido", "Idolatry", "+2% por Idol"]].map(([k, l, h]) => `<div class="toggle"><span class="ui">${l}<br><small style="color:var(--faint);font-family:var(--body)">${h}</small></span><label class="switch"><input type="checkbox" data-sp="${k}" ${s[k] ? "checked" : ""} aria-label="${l}"><i></i></label></div>`).join("")}
-      <div class="grid g2" style="gap:10px;margin-top:6px"><label class="field"><span>Nº de Idols</span><input type="number" min="0" data-spn="idols" value="${esc(s.idols)}"></label><label class="field"><span>Outro % eficiência</span><input type="number" min="0" data-spn="extra" value="${esc(s.extra)}"></label></div>
-      <div class="status ${st[0]}">${st[1]}</div>
-    </div>
-    <div class="panel frame">
-      <div class="tablewrap"><table class="zoo"><thead><tr><th>Ativo</th><th>Skill / beast</th><th>Tipo</th><th>Custo base</th><th>Unid.</th><th>Spirit usado</th><th></th></tr></thead><tbody>
-      ${s.zoo.map((z, i) => `<tr><td><label class="switch"><input type="checkbox" data-z="${i}" data-f="on" ${z.on ? "checked" : ""} aria-label="Ativo"><i></i></label></td>
-        <td><input data-z="${i}" data-f="n" value="${esc(z.n)}" aria-label="Nome"></td>
-        <td><select data-z="${i}" data-f="t"><option value="c" ${z.t === "c" ? "selected" : ""}>Companion</option><option value="o" ${z.t === "o" ? "selected" : ""}>Outro</option></select></td>
-        <td><input type="number" step="0.1" data-z="${i}" data-f="c" value="${esc(z.c)}" aria-label="Custo"></td>
-        <td><select data-z="${i}" data-f="u"><option value="%" ${z.u === "%" ? "selected" : ""}>%</option><option value="flat" ${z.u === "flat" ? "selected" : ""}>flat</option></select></td>
-        <td class="num">${z.on ? c.rows[i].toFixed(1) : "—"}</td><td><button class="x" data-del="${i}" aria-label="Remover">×</button></td></tr>`).join("")}
-      </tbody></table></div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center">
-        <select id="addBeast" aria-label="Beast para adicionar" style="width:auto"><option value="">+ Adicionar beast do guia…</option>${beastOpts}</select>
-        <button class="btn" type="button" id="addRow">+ Linha livre</button><button class="btn" type="button" id="resetZoo">Restaurar exemplo</button>
-      </div>
-      <p style="color:var(--faint);font-size:.88rem;margin:10px 0 0">Custos em % vêm do guia (antes de reduções). Custos "flat" variam com o nível da gem — copie o valor do jogo. O exemplo é ilustrativo.</p>
-    </div>
-  </div>
-  <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Beasts que valem capturar</h2><p>Ordem de aura: ${D.auraPriority.slice(0, 5).map(esc).join(" › ")}</p><p><b style="color:var(--gild-hi)">Limite de companions:</b> 1 base · 2 de tipos diferentes com Trusted Kinship ou Yriel's Fostering · qualquer número com Sylvan's Effigy (o urso do Wild Protector não conta). Antes do Effigy: macaco + 1 beast de aura — prefira os de 21–25% de Spirit. Use a aba <a href="#" data-gotab="meu">Meu personagem</a> para ver o que cabe no seu Spirit e a aba <a href="#" data-gotab="caca">Caçar companions</a> para saber onde e como capturar.</p></div></div>
-  <div class="tablewrap frame"><table><thead><tr><th>Tier</th><th>Beast</th><th>Papel</th><th>Custo</th><th>Onde</th><th>Mods desejados</th><th>Supports</th></tr></thead><tbody>
-  ${D.beasts.map(b => { const gi = /Azmerian/.test(b.name) ? gemImg("Azmerian Wolf") : tb; return `<tr><td><span class="chip ${b.tier.startsWith("S") ? "unique" : "wisp"}">${esc(b.tier)}</span></td><td><span class="bst">${gi ? `<img src="${gi}" alt="">` : ""}<b class="ui" style="color:${/Silverfist|Azmerian/.test(b.name) ? "#E18C47" : "var(--text)"}">${esc(b.name)}</b></span></td><td>${esc(b.role)}</td><td class="num">${b.cost ? String(b.cost).replace(".", ",") + "%" : "—"}</td><td>${esc(b.where)}</td><td>${esc(b.mods)}</td><td style="min-width:240px">${b.sup.split(" · ").map(x => supImg(x) ? `<img src="${supImg(x)}" alt="${esc(x)}" title="${esc(x)}" style="width:22px;height:22px;vertical-align:middle;margin-right:2px">` : "").join("")}<br><small style="color:var(--mute)">${esc(b.sup)}</small></td></tr>`; }).join("")}
-  </tbody></table></div>`;
-}
-
+/* ---- spirit: ver Totems & Mana */
 function vAsc() {
-  const unlocked = [20, 33, 65, 75]; const allAsc = A.notables.uber.asc;
+  const unlocked = D.ascUnlock; const allAsc = A.notables.uber.asc;
   const kpIcon = n => { for (const pid of TREE_ORDER) { const f = A.notables[pid].list.find(x => x.n === n); if (f && f.ic) return { src: ic(f.ic), k: f.k }; } return null; };
   return `<div class="sechead"><div><h2>Ascendência</h2><p>Ordem obrigatória. Medalhas apagadas ainda não estão disponíveis no seu nível. A árvore completa da ascendência está na aba Árvore de Passivas.</p></div></div>
   <div class="panel frame" style="padding:28px 10px"><div class="ascpath stagger">${D.ascendancy.map((a, i) => { const nd = allAsc.find(x => x.n.replace(/^The /, "") === a.node.replace(/^The /, "")); return `<div class="asc ${S.lv < unlocked[i] ? "locked" : ""}">
-    <div class="medal">${nd && ic(nd.ic) ? `<img src="${ic(nd.ic)}" alt="">` : ["I", "II", "III", "IV"][i]}</div><span class="label">${["I", "II", "III", "IV"][i]} ascensão</span><h3>${esc(a.node)}</h3><span class="when">${esc(a.when)}</span><p>${esc(a.text)}</p><span>${esc(a.why)}</span></div>`; }).join("")}</div></div>
+    <div class="medal">${nd && ic(nd.ic) ? `<img src="${ic(nd.ic)}" alt="">` : ["I", "II", "III", "IV", "V", "VI"][i]}</div><span class="label">${["I", "II", "III", "IV", "V", "VI"][i]}</span><h3>${esc(a.node)}</h3><span class="when">${esc(a.when)}</span><p>${esc(a.text)}</p><span>${esc(a.why)}</span></div>`; }).join("")}</div></div>
   <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Passivas-chave</h2></div></div>
   <div class="grid g3 stagger">${D.keyPassives.map(k => { const i = kpIcon(k.node.split(" · ")[0]); return `<div class="panel frame kp ${i && i.k === 2 ? "k2" : ""}">${i ? `<img src="${i.src}" alt="">` : "<span></span>"}<div><div class="label">${esc(k.type)} · ${esc(k.when)}</div><h3 style="margin:4px 0 6px">${esc(k.node)}</h3><p style="margin:0 0 8px;color:var(--mute)">${esc(k.text)}</p><p style="margin:0">${esc(k.why)}</p></div></div>`; }).join("")}</div>
   <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Árvore por etapa</h2></div></div>
@@ -1234,7 +1192,7 @@ function vAsc() {
 function vQuests() {
   const acts = [...new Set(D.quests.map(q => q.act))]; const done = D.quests.filter((q, i) => S.done["q:" + i]).length; const pct = Math.round(done / D.quests.length * 100);
   const spDone = D.quests.map((q, i) => ({ q, i })).filter(o => /Spirit/.test(o.q.reward) && S.done["q:" + o.i]).reduce((a, o) => a + parseInt(o.q.reward.match(/\d+/)[0]), 0);
-  return `<div class="sechead"><div><h2>Recompensas permanentes</h2><p>Nada disso volta depois. Os de Spirit e resistência são obrigatórios para o zoo caber e você não morrer no Atlas.</p></div>
+  return `<div class="sechead"><div><h2>${T("Recompensas permanentes", "Permanent rewards")}</h2><p>${T("Nada disso volta depois. Cada Spirit conta para os totems (75 por totem) e os Weapon Set Points alimentam as passivas de totem no Set 1.", "None of this comes back later. Every Spirit counts for totems (75 per totem) and Weapon Set Points fuel the totem passives on Set 1.")}</p></div>
     <div style="display:flex;gap:18px;align-items:center"><div class="ring" style="--v:${pct}"><div><div><b>${done}</b><br><small style="color:var(--mute)">de ${D.quests.length}</small></div></div></div>
     <div><div class="label">Spirit de quests</div><div style="font-family:var(--display);font-size:1.7rem;color:var(--gild-hi)">${spDone} / 130</div></div></div></div>
   <div class="acts stagger">${acts.map(a => `<div class="panel frame"><h3>${esc(a)}</h3><div class="checklist">${D.quests.map((q, i) => q.act !== a ? "" : `<label class="check ${S.done["q:" + i] ? "done" : ""}"><input type="checkbox" data-key="q:${i}" ${S.done["q:" + i] ? "checked" : ""}><span><b class="ui">${esc(q.boss)}</b> <small style="color:var(--faint)">${esc(q.area)}</small><br>${esc(q.reward)} ${q.prio === "CRÍTICA" ? '<span class="chip danger">crítica</span>' : ""}</span></label>`).join("")}</div></div>`).join("")}</div>`;
@@ -1251,14 +1209,14 @@ function vAtlas() {
   <div class="tablewrap frame"><table><thead><tr><th>Etapa</th><th>Meta</th><th>Upgrade-chave</th><th>Feito</th></tr></thead><tbody>
   ${D.atlasCheck.map((a, i) => `<tr><td><b class="ui">${esc(a.stage)}</b></td><td>${esc(a.goal)}</td><td>${esc(a.gear)}</td><td><label class="check" style="padding:0"><input type="checkbox" data-key="atlas:${i}" ${S.done["atlas:" + i] ? "checked" : ""} aria-label="Feito"></label></td></tr>`).join("")}
   </tbody></table></div>
-  <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Árvore do Atlas (guia T15+)</h2></div></div>
-  <div class="atlasgrp stagger">${Object.entries(D.atlas).map(([g, ns]) => `<div class="panel frame"><h3>${esc(g)} <span class="chip">${ns.length}</span></h3><ul class="clean">${ns.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+
+  <div class="grid g2" style="margin-top:16px"><div class="panel frame"><h3>${T("Grim Pillars no Atlas", "Grim Pillars in the Atlas")}</h3><p style="margin:0">${T("Grim Pillars, Bitter Dead e Repulsion são skills de Runic Ward. No 0.5.5, Remnants e Expedition começam no Ato 4. Rode esses conteúdos no início do Atlas para conseguir as gems e as peças Runeforged.", "Grim Pillars, Bitter Dead and Repulsion are Runic Ward skills. In 0.5.5, Remnants and Expedition start in Act 4. Run that content early in the Atlas to get the gems and the Runeforged pieces.")}</p></div><div class="panel frame"><h3>${T("Totems nos mapas", "Totems in maps")}</h3><p style="margin:0">${T("2 totems bastam para mapear (Lowepe). No boss, coloque todos e desligue o Mana Remnants se precisar de Spirit para mais um.", "2 totems are enough for mapping (Lowepe). On bosses, place all of them and turn off Mana Remnants if you need Spirit for one more.")}</p></div></div>`;
 }
 function vDiag() {
   return `<div class="sechead"><div><h2>Diagnóstico</h2><p>O dano caiu ou algo sumiu? Ache o sintoma.</p></div></div>
   ${D.troubleshoot.map((t, i) => `<details class="acc frame" ${i === 0 ? "open" : ""}><summary>${esc(t.q)}</summary><div>${esc(t.a)}</div></details>`).join("")}
-  <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Seu setup atual</h2><p>${esc(D.current.note)}</p></div></div>
-  <div class="setup stagger">${D.current.items.map(it => `<div class="panel frame"><img src="${IMG[it.img]}" alt="${esc(it.what)}"><div><b>${esc(it.what)}</b><p>${esc(it.verdict)}</p></div></div>`).join("")}</div>`;
+  `;
+
 }
 function vFontes() {
   return `<div class="sechead"><div><h2>Fontes & correções</h2><p>Pesquisado em ${esc(D.updated)} · ${esc(D.patch)}. Árvore e ícones: dados oficiais do Path of Building (0.5) e planners do guia.</p></div></div>
@@ -1277,7 +1235,7 @@ function fmtPrice(d) {
   return `≈ ${d < 10 ? d.toFixed(2).replace(".", ",") : Math.round(d)} div`;
 }
 const phaseName = id => (D.phases.find(p => p.id === id) || {}).name || id;
-const OPT_PHASE = { a3: [5], a4: [5], int: [5], ea: [0, 1, 5, 6, 7, 9], t15: [0, 2, 3, 4, 6, 8], mm: [3, 8] };
+const OPT_PHASE = {};
 S.uf = { ph: "todas", cat: "Todos", tier: "Todas", sort: "fase" };
 function uniqueCard(u, highlight) {
   const im = uniqImg(u.n); const cur = curPhase();
@@ -1297,7 +1255,7 @@ function vUniques() {
   const sorters = { fase: (a, b) => PH_ORDER.indexOf(a.p) - PH_ORDER.indexOf(b.p) || (a.price || 0) - (b.price || 0), uso: (a, b) => (b.use || 0) - (a.use || 0), preco: (a, b) => (a.price || 0) - (b.price || 0) };
   list = list.slice().sort(sorters[f.sort]);
   const btns = (key, opts, labels) => opts.map((o, i) => `<button type="button" data-uf="${key}" data-v="${esc(o)}" aria-pressed="${f[key] === o}">${esc(labels ? labels[i] : o)}</button>`).join("");
-  return `<div class="sechead"><div><h2>Uniques da build</h2><p>${D.uniques.length} uniques com mods, preço real da liga ${esc(D.league)} (poe.ninja, ${esc(D.snap)}) e quantos zoos top usam. Borda verde = já vale para o seu nível e modo.</p></div></div>
+  return `<div class="sechead"><div><h2>${T("Uniques da build", "Build uniques")}</h2><p>${T(`${D.uniques.length} uniques com mods e preço da liga ${esc(D.league)} (poe.ninja, ${esc(D.snap)}). Os marcados como fora do guia são alternativas. Borda verde = já vale para o seu nível e modo.`, `${D.uniques.length} uniques with mods and ${esc(D.league)} league prices (poe.ninja, ${esc(D.snap)}). The ones marked as outside the guide are alternatives. Green border = already relevant for your level and mode.`)}</p></div></div>
   <div class="ufilters frame" style="padding:12px 14px">
     <div class="row"><span class="label">Fase</span><div class="filters">${btns("ph", ["todas", ...PH_ORDER], ["Todas", ...D.phases.map(p => p.name)])}</div></div>
     <div class="row"><span class="label">Tipo</span><div class="filters">${btns("cat", cats)}</div></div>
@@ -1305,10 +1263,7 @@ function vUniques() {
       <span class="label" style="margin-left:auto">Ordenar</span><div class="filters">${btns("sort", ["fase", "uso", "preco"], ["Fase", "Mais usados", "Mais baratos"])}</div></div>
   </div>
   <div class="ucards stagger">${list.map(u => uniqueCard(u, true)).join("") || '<p style="color:var(--mute)">Nenhum unique com esses filtros.</p>'}</div>
-  <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Idols e soul cores</h2><p>Os sockets do Sylvan's Effigy, capacete e body fazem muita diferença com a Idolatry.</p></div></div>
-  <div class="tablewrap frame"><table class="idols"><thead><tr><th>Idol</th><th>Onde</th><th>Efeito</th><th>Preço</th></tr></thead><tbody>
-  ${D.idols.map(i => `<tr><td><b class="ui">${uniqImg(i.n) ? `<img src="${uniqImg(i.n)}" alt="">` : ""}${esc(i.n)}</b></td><td>${esc(i.where)}</td><td>${esc(i.eff)}</td><td class="num">${fmtPrice(i.price)}</td></tr>`).join("")}
-  </tbody></table></div>`;
+`;
 }
 function barList(rows, withIcons) {
   const max = 100;
@@ -1328,7 +1283,7 @@ function vMeta() {
   </div>`;
 }
 
-const VIEWS = { meu: vMeu, quando: vQuando, caca: vHunt, meta: vMeta, uniques: vUniques, agora: vAgora, arvore: vArvore, rota: vRota, skills: vSkills, gear: vGear, zoo: vZoo, asc: vAsc, quests: vQuests, tricks: vTricks, atlas: vAtlas, diag: vDiag, fontes: vFontes };
+const VIEWS = { meu: vMeu, quando: vQuando, totem: vTotem, uniques: vUniques, agora: vAgora, arvore: vArvore, rota: vRota, skills: vSkills, gear: vGear, asc: vAsc, quests: vQuests, tricks: vTricks, atlas: vAtlas, diag: vDiag, fontes: vFontes };
 function renderTab(id) {
   const el = $("#v-" + id); el.innerHTML = VIEWS[id]();
   if (id === "arvore") mountTree();
@@ -1337,354 +1292,294 @@ function renderTab(id) {
 }
 function render() { renderTab(S.tab); if (typeof renderSide === "function") renderSide(); }
 
-/* ------------------------------------------------ meu personagem: checklist + recomendações automáticas */
+/* ------------------------------------------------ meu personagem: checklist + recomendações automáticas (Oracle) */
 const T = (pt, en) => LANG === "en" ? en : pt;
-const SKEL_TYPES = ["Skeletal Warrior", "Skeletal Arsonist", "Skeletal Sniper", "Skeletal Frost Mage", "Skeletal Reaver", "Skeletal Cleric"];
-const AURAS = [["none", "—", "—"], ["haste", "Haste", "Haste"], ["phys", "Physical Damage", "Physical Damage"], ["es", "Energy Shield", "Energy Shield"], ["heal", "Heals Allies", "Heals Allies"], ["hinder", "Hinder", "Hinder"], ["other", "Outra aura", "Other aura"]];
-const ASC_KEYS = [["wp", "Wild Protector", 20], ["no", "The Natural Order", 33], ["catha", "The Catha's Balance", 65], ["idol", "Idolatry", 75]];
-const CH_DEFAULT = { spirit: "", free: "", tk: false, eg: false, gb: false, po: false, wither: false, asc: {}, items: {}, sk: {}, pets: [{ b: 0, aura: "none", on: false }, { b: -1, aura: "none", on: false }, { b: -1, aura: "none", on: false }] };
+const OWN = [
+ ["gear", "sceptre", T("Sceptre com 130+ Spirit", "Sceptre with 130+ Spirit")],
+ ["gear", "wand", T("Wand com +Lightning/All Spells", "Wand with +Lightning/All Spells")],
+ ["gear", "dueling", "Dueling Wand (Spellslinger)"],
+ ["gear", "runeforged", T("Peças Runeforged/Runemastered (Runic Ward)", "Runeforged/Runemastered pieces (Runic Ward)")],
+ ["gear", "archamu", T("Amuleto de Archmage craftado", "Crafted Archmage amulet")],
+ ["gear", "Soul Mantle", "Soul Mantle"], ["gear", "Waveshaper", "Waveshaper"], ["gear", "Lavianga's Spirits", "Lavianga's Spirits"], ["gear", "Cloak of Defiance", "Cloak of Defiance"],
+ ["gem", "spark", "Spark"], ["gem", "grim", "Grim Pillars"], ["gem", "bitter", "Bitter Dead"], ["gem", "archmage", "Archmage (100 Spirit)"], ["gem", "tempest", "Mana Tempest"],
+ ["gem", "remnants", "Mana Remnants (30 Spirit)"], ["gem", "swarm", "Ravenous Swarm (30 Spirit)"], ["gem", "malice", "Malice"], ["gem", "sling", "Spellslinger"], ["gem", "rakiata", "Rakiata's Flow"], ["gem", "pierce", "Pierce II"],
+ ["tree", "wild", "Wildsurge Incantation"], ["tree", "ab", "Ancestral Bond"], ["tree", "ei", "Efficient Inscriptions"], ["tree", "bb", "Branching Bolts"], ["tree", "mom", "Mind Over Matter"], ["tree", "mp", "Mental Perseverance"],
+ ["asc", "lh", "The Lesser Harm"], ["asc", "fo", "Forced Outcome"], ["asc", "hw", "Unnamed Heartwood"], ["asc", "up", "The Unseen Path"], ["asc", "hwi", "Harmony Within"], ["asc", "er", "Entwined Realities"],
+];
+const CH_DEFAULT = { spirit: "", mana: "", life: "", gemLv: "", malice: "", sling: "", own: {} };
 S.ch = Object.assign(JSON.parse(JSON.stringify(CH_DEFAULT)), store.get("char", {}));
+if (!S.ch.own) S.ch.own = {};
+const own = k => !!S.ch.own[k];
+const PIDX = id => D.phases.findIndex(p => p.id === id);
 const saveCh = defer => {
   store.set("char", S.ch);
-  if (S.ch.spirit !== "" && !isNaN(+S.ch.spirit)) { S.sp.total = +S.ch.spirit; store.set("sp", S.sp); }
   if (!defer) return render();
   clearTimeout(spTimer);
   spTimer = setTimeout(() => { const a = document.activeElement; const k = a && a.dataset.ch; render(); const n = k ? document.querySelector(`[data-ch="${k}"]`) : null; if (n) { n.focus(); const v = n.value; n.value = ""; n.value = v; } }, 450);
 };
-const ACT_OF = { a1: 1, a2: 2, a3: 3, a4: 4, int: 5, ea: 6, t15: 6, mm: 6 };
-function charItemList() {
-  const seen = new Map();
-  for (const pid of ["a3", "a4", "int", "ea", "t15", "mm"]) for (const m of ["cheap", "full"]) for (const it of (A.sets[pid] || {})[m] || []) {
-    if ((it.u || it.n === "Rattling Sceptre") && !seen.has(it.n)) seen.set(it.n, { n: it.n, pid, ic: it.ic, price: it.price });
-  }
-  if (!seen.has("Yriel's Fostering")) seen.set("Yriel's Fostering", { n: "Yriel's Fostering", pid: "a4", ic: null, price: (D.uniques.find(u => u.n === "Yriel's Fostering") || {}).price });
-  return [...seen.values()];
+/* cálculo de totems com dados do jogo (Path of Building): 1 totem até gem nível 13, 2 a partir do 14; Heartwood/Soul Mantle +1; Ancestral Bond dobra e cada totem reserva 75 */
+function totemCalc(o) {
+  o = o || {};
+  const c = S.ch; const spirit = +(o.spirit ?? c.spirit) || 0;
+  const gemLv = +(o.gemLv ?? c.gemLv) || (S.lv >= 58 ? 14 : 1);
+  const ab = o.ab ?? own("ab"), ei = o.ei ?? own("ei"), hw = o.hw ?? own("hw"), soul = o.soul ?? own("Soul Mantle");
+  const base = gemLv >= 14 ? 2 : 1;
+  const limit = (base + (hw ? 1 : 0) + (soul ? 1 : 0)) * (ab ? 2 : 1);
+  const per = 75 / (1 + (ei ? .2 : 0));
+  const others = [];
+  if (o.remnants ?? own("remnants")) others.push(["Mana Remnants", 30]);
+  if (o.archmage ?? own("archmage")) others.push(["Archmage", 100]);
+  if (o.swarm ?? own("swarm")) others.push(["Ravenous Swarm", 30]);
+  if ((o.malice ?? own("malice")) && +c.malice) others.push(["Malice", +c.malice]);
+  if ((o.sling ?? own("sling")) && +c.sling) others.push(["Spellslinger", +c.sling]);
+  const otherSum = others.reduce((a, x) => a + x[1], 0);
+  const freeForTotems = spirit - otherSum;
+  const fit = ab ? Math.max(0, Math.min(limit, Math.floor(freeForTotems / Math.ceil(per)))) : 0;
+  const used = otherSum + fit * Math.ceil(per);
+  return { spirit, gemLv, base, limit, per, perR: Math.ceil(per), others, otherSum, fit, used, left: spirit - used, ab, ei, hw, soul };
 }
 function charRecs() {
-  const c = S.ch, lv = S.lv, p = adaptPhase(curPhase()), act = ACT_OF[p.id] || 1, R = [];
+  const c = S.ch, lv = S.lv, p = curPhase(), pi = PIDX(p.id), R = [];
   const add = (lvl, t, d, tab) => R.push({ lvl, t, d, tab });
-  const has = n => !!c.items[n];
-  const effigy = has("Sylvan's Effigy");
-  const tk = !!c.tk || has("Yriel's Fostering");
-  const limit = effigy ? Infinity : tk ? 2 : 1;
-  const total = +c.spirit || 0, free = c.free === "" || c.free == null ? null : +c.free;
-  const eff = (c.tk ? 1.3 : 1) * (1 + (c.eg ? .25 : 0));
-  const est = pct => total && pct ? pct / 100 * total / eff : null;
-  const pets = c.pets.filter(x => x.on && x.b >= 0 && D.beasts[x.b]);
-  const beast = x => D.beasts[x.b];
-  const isSilver = x => /Silverfist|Zekoa/.test(beast(x).name);
-  const auraPets = pets.filter(x => !isSilver(x));
-  const cheapAura = D.beasts.map((b, i) => ({ b, i })).filter(o => o.b.cost && !/Silverfist|Zekoa|Diretusk|Antlion/.test(o.b.name)).sort((a, b) => a.b.cost - b.b.cost);
-  const skN = SKEL_TYPES.filter(s => c.sk[s]).length;
-  const skMax = p.skeletons ? Math.max(...(p.skeletons.n.match(/\d+/g) || ["0"]).map(Number)) : 0;
-  const skMin = p.skeletons ? +((p.skeletons.n.match(/\d+/) || ["0"])[0]) : 0;
-
-  // ---- ascendência
-  for (const [k, name, need] of ASC_KEYS) {
-    if (lv >= need + 2 && !c.asc[k] && !(k === "idol" && S.mode === "cheap")) add(k === "no" || k === "catha" ? "bad" : "warn", T(`Falta a ascendência ${name}`, `Missing ascendancy ${name}`), T(`Disponível a partir do nível ~${need}.`, `Available from level ~${need}.`) + " " + ((D.ascendancy.find(a => a.node === name) || {}).why || ""), "asc");
+  const tc = totemCalc();
+  const swapIdx = PIDX("sw");
+  const spirit = +c.spirit || 0, mana = +c.mana || 0, life = +c.life || 0;
+  // ---- troca para totem
+  if (!own("ab") && lv >= 40) {
+    const need = own("ei") ? 210 : 255;
+    const miss = [];
+    if (!spirit) miss.push(T("informe seu Spirit máximo", "enter your max Spirit"));
+    else if (spirit < need) miss.push(T(`Spirit ${spirit}/${need}`, `Spirit ${spirit}/${need}`));
+    if (!own("sceptre")) miss.push(T("sceptre com 130+ Spirit", "sceptre with 130+ Spirit"));
+    if (!own("wand")) miss.push(T("wand com +Lightning/All Spells", "wand with +Lightning/All Spells"));
+    if (miss.length) add(pi >= swapIdx ? "bad" : "warn", T("Ainda não dá para trocar para totem", "Not ready to swap to totems yet"), T("Falta: ", "Missing: ") + miss.join(" · ") + T(". O Lowepe recomenda ficar no setup anterior o máximo possível.", ". Lowepe recommends staying on the previous setup as long as possible."), "totem");
+    else add("tip", T("Pronto para a troca", "Ready for the swap"), T(`Com ${spirit} Spirit cabem ${totemCalc({ ab: true }).fit} totem(s). Guarde gold e pontos para Ancestral Bond${own("ei") ? "" : " e Efficient Inscriptions"}.`, `With ${spirit} Spirit, ${totemCalc({ ab: true }).fit} totem(s) fit. Keep gold and points for Ancestral Bond${own("ei") ? "" : " and Efficient Inscriptions"}.`), "totem");
   }
-  // ---- companions
-  if (lv >= 33 && !pets.some(isSilver)) add("bad", T("Capture e ative o Mighty Silverfist", "Capture and activate Mighty Silverfist"), T("Precisa da The Natural Order. Ele é o dano da build.", "Needs The Natural Order. It's the build's damage."), "zoo");
-  if (lv >= 33 && !tk && !effigy) add("warn", T("Pegue o keystone Trusted Kinship", "Take the Trusted Kinship keystone"), T("Sem ele o limite é 1 companion: você não consegue ter o macaco + um beast de aura.", "Without it the limit is 1 companion: you can't run the monkey + an aura beast."), "arvore");
-  if (pets.length > limit) add("bad", T(`${pets.length} companions ativos, mas o seu limite é ${limit}`, `${pets.length} active companions, but your limit is ${limit}`), T("Trusted Kinship / Yriel's Fostering: 2 companions de tipos diferentes. Mais que isso só com Sylvan's Effigy. Desative o excedente (o urso do Wild Protector não conta).", "Trusted Kinship / Yriel's Fostering: 2 companions of different types. More only with Sylvan's Effigy. Deactivate the extra one (the Wild Protector bear doesn't count)."), "zoo");
-  const names = pets.map(x => beast(x).name); if (new Set(names).size < names.length) add("bad", T("Dois companions do mesmo tipo", "Two companions of the same type"), T("O limite exige tipos diferentes: troque um deles por outro beast.", "The limit requires different types: swap one for another beast."), "zoo");
-  if (tk && !effigy && pets.some(isSilver) && auraPets.length === 0 && lv >= 38) add("warn", T("Capture um beast de aura (2º companion)", "Capture an aura beast (2nd companion)"), T("Mais baratos em Spirit: ", "Cheapest in Spirit: ") + cheapAura.slice(0, 4).map(o => `${o.b.name} (${o.b.cost}%)`).join(" · ") + T(". Prioridade de aura: Haste > Physical > Energy Shield.", ". Aura priority: Haste > Physical > Energy Shield."), "zoo");
-  for (const x of auraPets) {
-    const b = beast(x);
-    if (b.cost >= 35) {
-      const alt = cheapAura.find(o => /Crab/.test(o.b.name)) || cheapAura[0];
-      const save = est(b.cost) != null && est(alt.b.cost) != null ? Math.round(est(b.cost) - est(alt.b.cost)) : null;
-      add("tip", T(`${b.name} é um beast de aura caro (${b.cost}% do Spirit)`, `${b.name} is an expensive aura beast (${b.cost}% of Spirit)`), T(`Um ${alt.b.name} (${alt.b.cost}%) com a mesma aura libera`, `A ${alt.b.name} (${alt.b.cost}%) with the same aura frees`) + (save != null ? ` ~${save} Spirit` : T(" Spirit", " Spirit")) + T(` — dá para um esqueleto a mais ou o Withering Presence. Onde: ${alt.b.where}.`, ` — enough for another skeleton or Withering Presence. Where: ${alt.b.where}.`), "zoo");
-    }
-    if (x.aura === "none") add("warn", T(`Marque a aura do ${b.name}`, `Set the aura of ${b.name}`), T("Beast de aura sem aura boa não vale o Spirit. Prioridade: Haste > Physical > Energy Shield.", "An aura beast without a good aura isn't worth the Spirit. Priority: Haste > Physical > Energy Shield."), "meu");
-  }
-  if (auraPets.length && !auraPets.some(x => x.aura === "haste")) add("tip", T("Nenhum companion com Haste", "No companion with Haste"), T("Haste é a melhor aura, mas é sorte. Rota do Mattjestic: Ato 4, Whakapanu Island, essences de crab na praia (Quill/Coconut Crab) — repita até aparecer Haste. Antlion Charger e Diretusk Boar (Ato 3) também podem rolar Haste; Quadrilla, Swarming Wisp, Crag Leaper e Hyena Demon NÃO rolam.", "Haste is the best aura, but it's luck. Mattjestic's route: Act 4, Whakapanu Island, crab essences on the beach (Quill/Coconut Crab) — repeat until Haste shows up. Antlion Charger and Diretusk Boar (Act 3) can also roll Haste; Quadrilla, Swarming Wisp, Crag Leaper and Hyena Demon can NOT."), "zoo");
-  if (!effigy && pets.length >= 2) add("ok", T("Limite de 2 companions atingido", "2-companion limit reached"), T("O 3º companion só entra com o Sylvan's Effigy", "The 3rd companion only comes with Sylvan's Effigy") + ((D.uniques.find(u => u.n === "Sylvan's Effigy") || {}).price != null ? ` (${fmtPrice(D.uniques.find(u => u.n === "Sylvan's Effigy").price)}).` : ".") + T(" Enquanto isso, capture e guarde um Swarming Wisp / Plague Swarm com aura Physical.", " Meanwhile, capture and keep a Swarming Wisp / Plague Swarm with a Physical aura."), "uniques");
-  if (effigy && pets.length < 4 && lv >= 62) add("tip", T("Com o Effigy cabem mais companions", "With the Effigy more companions fit"), T("Adicione beasts de aura de tipos diferentes (Haste, Physical, ES) enquanto houver Spirit, e o Azmerian Wolf do Effigy.", "Add aura beasts of different types (Haste, Physical, ES) while Spirit allows, plus the Effigy's Azmerian Wolf."), "zoo");
-  // ---- itens acima do nível / fase
-  for (const e of D.timing) if (e.kind === "item" && c.items[e.n] && e.lvl > lv) add("warn", T(`${e.n}: requer nível ${e.lvl} (você é ${lv})`, `${e.n}: requires level ${e.lvl} (you are ${lv})`), e.early, "quando");
-  if ((!S.stage || S.stage === "auto") && lv >= 58 && lv <= 64) add("tip", T("Já está no Atlas?", "Already in the Atlas?"), T("Escolha 'Início do Atlas' em 'Onde você está no jogo' no topo. O guia passa a mostrar a fase certa sem mudar o seu nível.", "Pick 'Early Atlas' in 'Where you are in the game' at the top. The guide shows the right phase without changing your level."), "quando");
-  // ---- arma
-  if (has("Chober Chaber") && (has("Rattling Sceptre") || effigy) && !c.gb && !has("Treefingers")) add("bad", T("Chober Chaber + sceptre precisa de Giant's Blood", "Chober Chaber + sceptre needs Giant's Blood"), T("Use Treefingers (luvas) ou o keystone Giant's Blood na árvore.", "Use Treefingers (gloves) or the Giant's Blood keystone on the tree."), "gear");
-  if (has("Chober Chaber") && (c.gb || has("Treefingers")) && !has("The Vertex")) add("warn", T("Requisitos de atributo triplicados", "Tripled attribute requirements"), T("Giant's Blood triplica os requisitos. The Vertex (versão 'Equipment has no Attribute Requirements') resolve.", "Giant's Blood triples requirements. The Vertex ('Equipment has no Attribute Requirements' version) fixes it."), "uniques");
-  // ---- esqueletos / Spirit
-  if (p.skeletons && lv >= 31) {
-    if (skN < skMin) add("warn", T(`Esqueletos: você tem ${skN}, esta fase pede ${p.skeletons.n}`, `Skeletons: you have ${skN}, this phase asks for ${p.skeletons.n}`), p.skeletons.note, "skills");
-    else if (skN > skMax) add("tip", T(`Esqueletos: ${skN} ativos, a fase pede ${p.skeletons.n}`, `Skeletons: ${skN} active, the phase asks for ${p.skeletons.n}`), T("Os extras só valem se sobrar Spirit. Se faltar, desligue o último que entrou.", "Extras are only worth it with spare Spirit. If short, turn off the last one added."), "skills");
-    else add("ok", T(`Esqueletos certos para a fase (${skN})`, `Right number of skeletons for the phase (${skN})`), p.skeletons.types.join(" · "), "skills");
-    if (c.po && skN === 0) add("bad", T("Pain Offering sem esqueleto", "Pain Offering without a skeleton"), T("Ele precisa de pelo menos 1 esqueleto vivo para espetar.", "It needs at least 1 living skeleton to skewer."), "skills");
-    if (c.po && skN === 1) add("tip", T("Com 1 esqueleto: sem Danse Macabre", "With 1 skeleton: no Danse Macabre"), T("Use Prolonged Duration II + Sacrificial Offering no Pain Offering.", "Use Prolonged Duration II + Sacrificial Offering on Pain Offering."), "skills");
-  }
-  if (free != null) {
-    if (free < 0) add("bad", T("Spirit negativo", "Negative Spirit"), T("Desligue o último minion que entrou (esqueleto extra antes de companion).", "Turn off the last minion you added (extra skeleton before a companion)."), "skills");
-    else if (free >= 30 && p.skeletons && skN < skMax && lv >= 56) { const nxt = SKEL_TYPES.find(s => !c.sk[s] && s !== "Skeletal Cleric"); add("tip", T(`Sobram ${free} de Spirit`, `${free} Spirit left`), T(`Teste ativar mais um tipo de esqueleto (${nxt || "Cleric"}) — cada tipo é +7% more dano com Muster.`, `Try activating another skeleton type (${nxt || "Cleric"}) — each type is +7% more damage with Muster.`), "skills"); }
-    else if (free >= 30 && !c.wither && lv >= 46) add("tip", T(`Sobram ${free} de Spirit`, `${free} Spirit left`), T("Cabe o Withering Presence (com 2× Evergrasping Ring).", "Withering Presence fits (with 2× Evergrasping Ring)."), "skills");
-  }
-  if (c.wither && !has("Evergrasping Ring")) add("warn", T("Withering Presence sem Evergrasping Ring", "Withering Presence without Evergrasping Ring"), T("O Wither só aumenta dano de chaos. Sem 2× Evergrasping Ring (chaos nos aliados) ele quase não faz nada: troque por outra coisa.", "Wither only boosts chaos damage. Without 2× Evergrasping Ring (chaos on allies) it does almost nothing: swap it."), "skills");
+  if (own("ab")) {
+    if (!spirit) add("warn", T("Informe seu Spirit máximo", "Enter your max Spirit"), T("Sem esse número não dá para calcular quantos totems cabem.", "Without it we can't calculate how many totems fit."), "meu");
+    else if (tc.fit < 3) add("warn", T(`Só cabem ${tc.fit} totem(s)`, `Only ${tc.fit} totem(s) fit`), T(`Cada totem custa ${tc.perR} Spirit e você reserva ${tc.otherSum} em outras skills. ${own("ei") ? "" : "Efficient Inscriptions baixa para 63 por totem. "}No boss, desligue o Mana Remnants para caber mais um.`, `Each totem costs ${tc.perR} Spirit and you reserve ${tc.otherSum} on other skills. ${own("ei") ? "" : "Efficient Inscriptions lowers it to 63 per totem. "}On bosses, turn off Mana Remnants to fit one more.`), "totem");
+    else add("ok", T(`${tc.fit} totems cabem no seu Spirit`, `${tc.fit} totems fit your Spirit`), T(`Limite ${tc.limit} · ${tc.perR} Spirit cada · sobram ${tc.left}.`, `Limit ${tc.limit} · ${tc.perR} Spirit each · ${tc.left} left.`), "totem");
+    if (spirit && tc.fit < tc.limit && tc.left >= 0) add("tip", T(`Seu limite é ${tc.limit}, mas o Spirit só dá ${tc.fit}`, `Your limit is ${tc.limit}, but Spirit only allows ${tc.fit}`), T(`Faltam ${tc.perR - tc.left} Spirit para o próximo totem.`, `${tc.perR - tc.left} Spirit short of the next totem.`), "totem");
+    if (spirit && tc.fit >= tc.limit && tc.left >= tc.perR) add("tip", T("Spirit sobrando, limite atingido", "Spare Spirit, limit reached"), T(`Sobram ${tc.left}. ${tc.hw || tc.soul ? "" : "Unnamed Heartwood ou Soul Mantle dão +1 no limite (vira +2 com Ancestral Bond). "}${own("archmage") ? "" : "Ou ative o Archmage (100)."}`, `${tc.left} left. ${tc.hw || tc.soul ? "" : "Unnamed Heartwood or Soul Mantle add +1 to the limit (+2 with Ancestral Bond). "}${own("archmage") ? "" : "Or activate Archmage (100)."}`), "totem");
+    if (tc.limit <= 2) add("warn", T(`Limite de totems só ${tc.limit}`, `Totem limit only ${tc.limit}`), T("Gem do Spell Totem nível 14+ (2 base), Unnamed Heartwood ou Soul Mantle aumentam o limite.", "A level 14+ Spell Totem gem (2 base), Unnamed Heartwood or Soul Mantle raise the limit."), "totem");
+    if (!own("ei") && spirit && spirit < 255) add("tip", T("Efficient Inscriptions", "Efficient Inscriptions"), T("Com menos de 255 Spirit, pegue Efficient Inscriptions: cada totem cai de 75 para 63.", "With under 255 Spirit, take Efficient Inscriptions: each totem drops from 75 to 63."), "arvore");
+    if (own("swarm")) add("tip", T("Ravenous Swarm ainda ativo", "Ravenous Swarm still active"), T("Depois da troca ele não faz parte da build: os 30 Spirit rendem mais em totems.", "After the swap it's not part of the build: those 30 Spirit are better spent on totems."), "skills");
+  } else if (pi >= swapIdx && lv >= 51) add("bad", T("Sem Ancestral Bond", "No Ancestral Bond"), T("Sem ele o Spell Totem pede 3 charges por totem. Se ainda não tem o Spirit, selecione 'Ato 4' em 'Onde você está' e continue no leveling.", "Without it Spell Totem needs 3 charges per totem. If you don't have the Spirit yet, pick 'Act 4' in 'Where you are' and keep leveling."), "arvore");
+  // ---- skills de Runic Ward
+  if ((own("grim") || own("bitter")) && !own("runeforged")) add("bad", T("Grim Pillars/Bitter Dead sem Runic Ward", "Grim Pillars/Bitter Dead without Runic Ward"), T("Eles gastam Runic Ward, não mana. Sem peças Runeforged/Runemastered o totem não lança: use Spark até lá.", "They spend Runic Ward, not mana. Without Runeforged/Runemastered pieces the totem can't cast: use Spark until then."), "gear");
+  if (own("grim") && own("runeforged") && pi < PIDX("w1") && own("ab")) add("tip", T("Você já pode usar Grim Pillars", "You can already use Grim Pillars"), T("Tem a gem e Runic Ward: troque o Spark pelo setup Grim Pillars + Bitter Dead (aba Skills adapta).", "You have the gem and Runic Ward: swap Spark for the Grim Pillars + Bitter Dead setup (the Skills tab adapts)."), "skills");
+  if (!own("grim") && pi >= PIDX("w1")) add("warn", T("Fase de Grim Pillars sem a gem", "Grim Pillars phase without the gem"), T("Grim Pillars vem de Expedition/Remnants (só a partir do Ato 4). Enquanto isso, fique no Spark.", "Grim Pillars comes from Expedition/Remnants (only from Act 4). Meanwhile, stay on Spark."), "skills");
+  // ---- árvore
+  if (own("pierce") && own("bb")) add("bad", T("Pierce II com Branching Bolts", "Pierce II with Branching Bolts"), T("O Lowepe avisa: se usar Pierce II, não pegue Branching Bolts.", "Lowepe warns: if you use Pierce II, don't take Branching Bolts."), "arvore");
+  if (own("mom") && mana && life && mana <= life) add("bad", T("Mind Over Matter com mana menor que a vida", "Mind Over Matter with mana below life"), T(`Mana ${mana} x vida ${life}: todo dano sai da mana primeiro. Suba mana ou volte para Mental Perseverance.`, `Mana ${mana} vs life ${life}: all damage comes from mana first. Raise mana or go back to Mental Perseverance.`), "arvore");
+  if (own("hwi") && mana && life && mana <= life) add("warn", T("Harmony Within inativo", "Harmony Within inactive"), T("Ele só protege quando a mana atual é maior que a vida atual.", "It only protects when current mana is higher than current life."), "asc");
+  if (own("archmage") && !mana) add("tip", T("Informe sua mana máxima", "Enter your max mana"), T("Archmage e Zenith dependem da mana: com o número o app mostra o limite de 90% do Zenith.", "Archmage and Zenith depend on mana: with the number the app shows Zenith's 90% threshold."), "totem");
+  if (own("wild") && own("ab") && pi >= PIDX("ea")) add("tip", "Wildsurge Incantation", T("Serviu para Storm/Plant no leveling. Com totems, veja se os pontos rendem mais em nós de totem/mana.", "It served Storm/Plant while leveling. With totems, check whether those points are better on totem/mana nodes."), "arvore");
+  // ---- ascendência por nível
+  const ascNeed = [["lh", "The Lesser Harm", 22], ["fo", "Forced Outcome", 36], ["up", "The Unseen Path", 66]];
+  for (const [k, n, need] of ascNeed) if (lv >= need && !own(k)) add("warn", T(`Falta a ascendência ${n}`, `Missing ascendancy ${n}`), T(`Disponível por volta do nível ${need - 2}.`, `Available around level ${need - 2}.`), "asc");
+  if (own("ab") && !own("hw") && !own("Soul Mantle") && (+c.gemLv || 0) < 14) add("warn", "Unnamed Heartwood", T("Sem Heartwood, sem Soul Mantle e com a gem abaixo do nível 14, o limite é só 2 totems.", "Without Heartwood, without Soul Mantle and with the gem below level 14, the limit is only 2 totems."), "asc");
+  if (own("hw") && own("Soul Mantle")) add("tip", T("Heartwood + Soul Mantle", "Heartwood + Soul Mantle"), T("A Soul Mantle já dá o +1 totem: o Lowepe troca o Heartwood por Harmony Within na semana 1.", "Soul Mantle already gives the +1 totem: Lowepe swaps Heartwood for Harmony Within in week 1."), "asc");
   // ---- itens da fase
-  const want = setItemsRaw(p.id).filter(it => (it.u || it.n === "Rattling Sceptre") && !/Charm/.test(it.slot));
-  const missing = want.filter(it => !has(it.n)).filter((it, i, arr) => arr.findIndex(x => x.n === it.n) === i);
-  if (missing.length) add("warn", T(`Faltam ${missing.length} peça(s) do set da fase (${S.mode === "cheap" ? "barato" : "completo"})`, `${missing.length} piece(s) of the phase set missing (${S.mode === "cheap" ? "budget" : "full"})`), missing.slice(0, 5).map(it => `${it.n}${it.price != null ? " " + fmtPrice(it.price) : ""}`).join(" · "), "gear");
-  else if (want.length) add("ok", T("Set da fase completo", "Phase set complete"), T("Todas as peças-chave da fase estão marcadas.", "All key pieces of the phase are checked."), "gear");
+  const want = setItemsRaw(p.id).filter(it => it.u && !/Charm/.test(it.slot));
+  const missing = want.filter(it => !own(it.n));
+  if (missing.length) add("warn", T(`Faltam ${missing.length} unique(s) do set da fase`, `${missing.length} unique(s) of the phase set missing`), missing.map(it => `${it.n}${it.price != null ? " " + fmtPrice(it.price) : ""}`).join(" · "), "gear");
   // ---- quests de Spirit
+  const ACT = { a1: 1, a2: 2, a3: 3, a4: 4, sw: 5, int: 5, ea: 6, w1: 6, fin: 6 }; const act = ACT[p.id] || 1;
   const actNum = q => { const m = String(q.act).match(/\d+/); return m ? +m[0] : 5; };
   const spq = D.quests.map((q, i) => ({ q, i })).filter(o => /Spirit/.test(o.q.reward) && !S.done["q:" + o.i] && actNum(o.q) < act);
-  if (spq.length) add("warn", T("Quests de Spirit que ficaram para trás", "Spirit quests left behind"), spq.map(o => `${o.q.boss} (${o.q.reward})`).join(" · ") + T(". Marque na aba Quests se já fez.", ". Tick them on the Quests tab if done."), "quests");
+  if (spq.length) add("warn", T("Quests de Spirit que ficaram para trás", "Spirit quests left behind"), spq.map(o => `${o.q.boss} (${o.q.reward})`).join(" · ") + T(" — cada Spirit conta para os totems.", " — every Spirit point counts for totems."), "quests");
   const order = { bad: 0, warn: 1, tip: 2, ok: 3 };
-  return { recs: R.sort((a, b) => order[a.lvl] - order[b.lvl]), limit, pets, est, tk, effigy, skN, want, missing, total };
+  return { recs: R.sort((a, b) => order[a.lvl] - order[b.lvl]), tc };
 }
 function vMeu() {
-  const c = S.ch, r = charRecs(), p = curPhase();
-  const items = charItemList();
-  const box = (k, label, checked, extra = "") => `<label class="chk"><input type="checkbox" ${k} ${checked ? "checked" : ""}><span>${label}</span>${extra}</label>`;
+  const c = S.ch, r = charRecs(), tc = r.tc;
   const icon = { bad: "✖", warn: "!", tip: "➜", ok: "✔" };
-  const petRow = (x, i) => `<div class="petrow">
-    <label class="chk"><input type="checkbox" data-pet="${i}" data-pf="on" ${x.on ? "checked" : ""}><span>${T("Ativo", "Active")}</span></label>
-    <select data-pet="${i}" data-pf="b" aria-label="Beast"><option value="-1">${T("— nenhum —", "— none —")}</option>${D.beasts.map((b, bi) => b.cost ? `<option value="${bi}" ${bi === x.b ? "selected" : ""}>${esc(b.name)} (${b.cost}%)</option>` : "").join("")}</select>
-    <select data-pet="${i}" data-pf="aura" aria-label="Aura">${AURAS.map(([k, pt, en]) => `<option value="${k}" ${k === x.aura ? "selected" : ""}>${T(pt, en)}</option>`).join("")}</select>
-    <span class="px">${x.b >= 0 && D.beasts[x.b] && r.est(D.beasts[x.b].cost) != null ? "≈ " + Math.round(r.est(D.beasts[x.b].cost)) + " Spirit" : ""}</span></div>`;
-  const petSpirit = r.pets.reduce((a, x) => a + (r.est(D.beasts[x.b].cost) || 0), 0);
-  const byPhase = PH_ORDER.map(pid => ({ pid, list: items.filter(it => it.pid === pid) })).filter(g => g.list.length);
-  return `<div class="sechead"><div><h2>${T("Meu personagem", "My character")}</h2><p>${T("Marque o que você já tem. As recomendações abaixo mudam na hora com base no seu nível, no modo e no que você marcou. Tudo fica salvo neste navegador.", "Tick what you already have. The recommendations below update instantly based on your level, mode and what you ticked. Everything is saved in this browser.")}</p></div></div>
-  <div class="stat charstat"><div><b>${r.limit === Infinity ? "∞" : r.limit}</b><span>${T("limite de companions", "companion limit")}</span></div><div><b>${r.pets.length}</b><span>${T("companions ativos", "active companions")}</span></div><div><b>${r.total ? "≈ " + Math.round(petSpirit) : "—"}</b><span>${T("Spirit dos companions (estimado)", "companion Spirit (estimated)")}</span></div><div><b>${r.skN}</b><span>${T("esqueletos", "skeletons")} · ${T("fase pede", "phase asks")} ${esc((p.skeletons || {}).n || "0")}</span></div><div><b>${r.want.length ? `${r.want.length - r.missing.length}/${r.want.length}` : "—"}</b><span>${T("peças do set da fase", "phase set pieces")}</span></div></div>
+  const box = ([grp, k, label]) => { const u = D.uniques.find(x => x.n === k); const im = u ? uniqImg(k) : gemImg(label.split(" (")[0]) || supImg(label.split(" (")[0]); return `<label class="chk"><input type="checkbox" data-own="${esc(k)}" ${own(k) ? "checked" : ""}><span>${im ? `<img src="${im}" alt="">` : ""}${esc(label)}</span>${u && u.price != null ? `<small class="px">${fmtPrice(u.price)}</small>` : ""}</label>`; };
+  const grp = g => OWN.filter(o => o[0] === g).map(box).join("");
+  const num = (k, label, ph) => `<label class="field"><span>${label}</span><input type="number" min="0" data-ch="${k}" value="${esc(c[k])}" placeholder="${ph || ""}"></label>`;
+  return `<div class="sechead"><div><h2>${T("Meu personagem", "My character")}</h2><p>${T("Marque o que você tem. As recomendações e as abas Skills, Itens, Árvore e Totems & Mana se adaptam na hora ao seu Spirit, mana e ao que você marcou. Tudo fica salvo neste navegador.", "Tick what you have. Recommendations and the Skills, Items, Tree and Totems & Mana tabs adapt instantly to your Spirit, mana and what you ticked. Everything is saved in this browser.")}</p></div></div>
+  <div class="stat charstat"><div><b>${tc.ab ? tc.fit : "—"}</b><span>${T("totems que cabem", "totems that fit")}</span></div><div><b>${tc.limit}</b><span>${T("limite de totems", "totem limit")}</span></div><div><b>${tc.ab ? tc.perR : "—"}</b><span>${T("Spirit por totem", "Spirit per totem")}</span></div><div><b>${tc.spirit ? tc.left : "—"}</b><span>${T("Spirit sobrando", "Spirit left")}</span></div><div><b>${+c.mana ? Math.round(+c.mana * .9) : "—"}</b><span>${T("mana p/ Zenith (90%)", "mana for Zenith (90%)")}</span></div></div>
   <div class="charwrap">
     <div class="panel frame recs"><h3>${T("Recomendações para você agora", "Recommendations for you now")}</h3>
       ${r.recs.length ? r.recs.map(x => `<div class="rec ${x.lvl}" ${x.tab && x.tab !== "meu" ? `data-gotab="${x.tab}"` : ""}><span class="ri">${icon[x.lvl]}</span><div><b>${esc(x.t)}</b><small>${esc(x.d)}</small></div></div>`).join("") : `<p style="color:var(--mute)">${T("Preencha o formulário ao lado.", "Fill in the form.")}</p>`}
     </div>
     <div class="grid" style="gap:14px">
-      <div class="panel frame"><h3>${T("Spirit e keystones", "Spirit and keystones")}</h3>
-        <div class="grid g2" style="gap:10px">
-          <label class="field"><span>${T("Spirit máximo (painel do personagem)", "Max Spirit (character panel)")}</span><input type="number" min="0" data-ch="spirit" value="${esc(c.spirit)}"></label>
-          <label class="field"><span>${T("Spirit sobrando agora (painel de skills)", "Spirit left now (skills panel)")}</span><input type="number" data-ch="free" value="${esc(c.free)}" placeholder="${T("opcional", "optional")}"></label>
-        </div>
-        <div class="chkgrid">${box('data-chk="tk"', "Trusted Kinship", c.tk)}${box('data-chk="eg"', "Easy Going", c.eg)}${box('data-chk="gb"', T("Giant's Blood na árvore", "Giant's Blood on tree"), c.gb)}${box('data-chk="po"', T("Uso Pain Offering", "I use Pain Offering"), c.po)}${box('data-chk="wither"', T("Uso Withering Presence", "I use Withering Presence"), c.wither)}</div>
-        <div class="label" style="margin:12px 0 6px">${T("Ascendência", "Ascendancy")}</div>
-        <div class="chkgrid">${ASC_KEYS.map(([k, n]) => box(`data-asc="${k}"`, n, c.asc[k])).join("")}</div>
+      <div class="panel frame"><h3>${T("Números do personagem", "Character numbers")}</h3>
+        <div class="grid g2" style="gap:10px">${num("spirit", T("Spirit máximo", "Max Spirit"))}${num("mana", T("Mana máxima", "Max mana"))}${num("life", T("Vida máxima", "Max life"))}${num("gemLv", T("Nível da gem Spell Totem", "Spell Totem gem level"), T("ex.: 16", "e.g. 16"))}${num("malice", T("Spirit do Malice (se usa)", "Malice Spirit (if used)"))}${num("sling", T("Spirit do Spellslinger (se usa)", "Spellslinger Spirit (if used)"))}</div>
       </div>
-      <div class="panel frame"><h3>${T("Companions", "Companions")}</h3>
-        <p style="margin:0 0 8px;color:var(--mute);font-size:.9rem">${T("Limite confirmado no texto do jogo: 1 base · 2 de tipos diferentes com Trusted Kinship ou Yriel's Fostering · qualquer número com Sylvan's Effigy. O urso do Wild Protector não conta.", "Limit confirmed from game text: 1 base · 2 of different types with Trusted Kinship or Yriel's Fostering · any number with Sylvan's Effigy. The Wild Protector bear doesn't count.")}</p>
-        ${c.pets.map(petRow).join("")}
-        <button class="btn" type="button" id="petAdd">${T("+ Companion", "+ Companion")}</button>
-        <div class="label" style="margin:14px 0 6px">${T("Esqueletos ativos", "Active skeletons")}</div>
-        <div class="chkgrid">${SKEL_TYPES.map(s => box(`data-sk="${s}"`, s, c.sk[s])).join("")}</div>
-      </div>
-      <div class="panel frame"><h3>${T("Itens que eu já tenho", "Items I already have")}</h3>
-        ${byPhase.map(g => `<div class="label" style="margin:10px 0 6px">${esc(phaseName(g.pid))}</div><div class="chkgrid items">${g.list.map(it => box(`data-item="${esc(it.n)}"`, `${uniqImg(it.n) || ic(it.ic) ? `<img src="${uniqImg(it.n) || ic(it.ic)}" alt="">` : ""}${esc(it.n)}`, c.items[it.n], it.price != null ? `<small class="px">${fmtPrice(it.price)}</small>` : "")).join("")}</div>`).join("")}
-      </div>
+      <div class="panel frame"><h3>${T("Árvore e ascendência", "Tree and ascendancy")}</h3><div class="chkgrid">${grp("tree")}${grp("asc")}</div></div>
+      <div class="panel frame"><h3>${T("Gems que eu tenho/uso", "Gems I have/use")}</h3><div class="chkgrid">${grp("gem")}</div></div>
+      <div class="panel frame"><h3>${T("Itens que eu tenho", "Items I have")}</h3><div class="chkgrid items">${grp("gear")}</div></div>
     </div>
   </div>`;
 }
-document.addEventListener("change", e => {
-  if (e.target.id === "stageSel") { S.stage = e.target.value; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
-  const t = e.target; const c = S.ch; if (!t.closest || !t.closest("#v-meu, #side")) return;
-  if (t.dataset.chk) { c[t.dataset.chk] = t.checked; saveCh(); }
-  else if (t.dataset.asc) { c.asc[t.dataset.asc] = t.checked; saveCh(); }
-  else if (t.dataset.item) { c.items[t.dataset.item] = t.checked; saveCh(); }
-  else if (t.dataset.sk) { c.sk[t.dataset.sk] = t.checked; saveCh(); }
-  else if (t.dataset.pet !== undefined) { const x = c.pets[+t.dataset.pet]; const f = t.dataset.pf; x[f] = f === "on" ? t.checked : f === "b" ? +t.value : t.value; if (f === "b" && +t.value >= 0 && !x.on) x.on = true; saveCh(); }
-});
-document.addEventListener("input", e => { const t = e.target; if (t.dataset && t.dataset.ch) { S.ch[t.dataset.ch] = t.value; saveCh(true); } });
-document.addEventListener("click", e => { if (e.target.id === "petAdd") { S.ch.pets.push({ b: -1, aura: "none", on: false }); saveCh(); } });
+document.addEventListener("change", e => { const t = e.target; if (t.dataset && t.dataset.own !== undefined && t.closest && t.closest("#v-meu")) { S.ch.own[t.dataset.own] = t.checked; saveCh(); } });
+document.addEventListener("input", e => { const t = e.target; if (t.dataset && t.dataset.ch && t.closest && t.closest("#v-meu, #v-totem")) { S.ch[t.dataset.ch] = t.value; saveCh(true); } });
 
-/* ------------------------------------------------ adaptar ao meu personagem */
+/* ------------------------------------------------ adaptar ao meu personagem (Oracle) */
 S.adapt = store.get("adapt", true);
 const clone = o => JSON.parse(JSON.stringify(o));
-const chItems = () => Object.keys((S.ch && S.ch.items) || {}).filter(k => S.ch.items[k]);
-const canUse = n => { const u = D.uniques.find(x => x.n === n); return !u || !u.lvl || u.lvl <= S.lv; };
-const hasUse = n => !!(S.ch && S.ch.items && S.ch.items[n]) && canUse(n);
-const adaptOn = () => !!S.adapt && !!S.ch && (chItems().length > 0 || (S.ch.pets || []).some(x => x.on && x.b >= 0) || Object.values(S.ch.sk || {}).some(Boolean));
 const setItemsRaw = pid => (A.sets[pid] ? A.sets[pid][S.mode] : A.guide[pid]) || [];
-const isAuraBeast = g => /^Tame Beast/.test(g.skill) && !/Silverfist|Zekoa/.test(g.skill);
-const isWarrior = g => /^Skeletal Warrior/.test(g.skill);
 const phaseById = id => D.phases.find(x => x.id === id);
-const AURA_NAME = { haste: "Haste", phys: "Physical Damage", es: "Energy Shield", heal: "Heals Allies", hinder: "Hinder", other: T("outra aura", "other aura") };
+const canUse = n => { const u = D.uniques.find(x => x.n === n); return !u || !u.lvl || u.lvl <= S.lv; };
+const hasUse = n => own(n) && canUse(n);
+const adaptOn = () => !!S.adapt && !!S.ch && (Object.values(S.ch.own || {}).some(Boolean) || +S.ch.spirit > 0);
 
 function adaptNotes() {
-  const n = [];
-  if (!adaptOn()) return n;
-  const owned = chItems();
-  for (const it of owned) if (!canUse(it)) { const u = D.uniques.find(x => x.n === it); n.push(T(`${it} ainda não entra (requer nível ${u.lvl}) — o plano usa o item anterior.`, `${it} doesn't come in yet (requires level ${u.lvl}) — the plan uses the previous item.`)); }
-  if (hasUse("Sylvan's Effigy")) n.push(T("Sylvan's Effigy: companions ilimitados, Azmerian Wolf + Discipline, Skeletal Cleric como alvo do Pain Offering, sem Skeletal Warrior.", "Sylvan's Effigy: unlimited companions, Azmerian Wolf + Discipline, Skeletal Cleric as Pain Offering target, no Skeletal Warrior."));
-  if (hasUse("Forgotten Warden")) n.push(T("Forgotten Warden: entra o Spirit Vessel; você perde os +100 Spirit da Enfolding Dawn.", "Forgotten Warden: Spirit Vessel comes in; you lose Enfolding Dawn's +100 Spirit."));
-  if (!hasUse("Evergrasping Ring")) n.push(T("Sem Evergrasping Ring: Withering Presence vira opcional (quase não faz nada sem os anéis).", "No Evergrasping Ring: Withering Presence becomes optional (it does almost nothing without the rings)."));
+  const n = []; if (!adaptOn()) return n;
+  const p = curPhase(), pi = PIDX(p.id), sw = PIDX("sw");
+  if (pi >= sw && !own("ab")) n.push(T("Sem Ancestral Bond: mostrando o setup de leveling do Ato 4 até você fazer a troca.", "No Ancestral Bond: showing the Act 4 leveling setup until you swap."));
+  if (pi < sw && own("ab")) n.push(T("Você já tem Ancestral Bond: mostrando o setup de totem.", "You already have Ancestral Bond: showing the totem setup."));
+  if (own("grim") && own("runeforged") && pi >= sw && pi < PIDX("w1")) n.push(T("Grim Pillars + Runic Ward: totem já no setup de Grim Pillars.", "Grim Pillars + Runic Ward: totem already on the Grim Pillars setup."));
+  if (pi >= PIDX("w1") && !(own("grim") && own("runeforged"))) n.push(T("Sem Grim Pillars com Runic Ward: totem continua com Spark.", "No Grim Pillars with Runic Ward: totem stays on Spark."));
+  const tc = totemCalc(); if (tc.spirit && tc.ab) n.push(T(`${tc.fit} totem(s) cabem (limite ${tc.limit}, ${tc.perR} Spirit cada).`, `${tc.fit} totem(s) fit (limit ${tc.limit}, ${tc.perR} Spirit each).`));
   return n;
 }
-
 function adaptPhase(p) {
   if (!p || !adaptOn() || p.id !== curPhase().id) return p;
-  const q = clone(p); q._adapted = true;
-  const t15 = phaseById("t15"), ea = phaseById("ea");
-  const pick = (ph, re) => { const g = ph && ph.gems.find(x => re.test(x.skill)); return g ? clone(g) : null; };
-  const skOn = SKEL_TYPES.filter(s => S.ch.sk[s]);
-  const effigy = hasUse("Sylvan's Effigy");
-  const pets = (S.ch.pets || []).filter(x => x.on && x.b >= 0 && D.beasts[x.b] && !/Silverfist|Zekoa/.test(D.beasts[x.b].name));
-
-  // ---- Sylvan's Effigy
-  if (effigy) {
-    const silver = q.gems.find(g => /^Tame Beast/.test(g.skill) && /Silverfist|Zekoa/.test(g.skill));
-    const auraTpl = q.gems.find(isAuraBeast) || pick(t15, /^Tame Beast \(aura/) || { sup: ["Loyalty", "Last Gasp"], set: "—" };
-    const keep = q.gems.filter(g => !isWarrior(g) && !isAuraBeast(g) && !/^Tame Beast \((vazia|empty)/i.test(g.skill) && !/^(Azmerian Wolf|Discipline|Skeletal Cleric|Spirit Vessel)/.test(g.skill) && g !== silver);
-    const wantAuras = ["haste", "phys", "es"];
-    const petList = pets.map(x => Object.assign({}, x));
-    for (const a of wantAuras) if (!petList.some(x => x.aura === a)) petList.push({ b: -1, aura: a, capture: true });
-    const cheapest = D.beasts.filter(b => b.cost && !/Silverfist|Zekoa|Diretusk|Antlion/.test(b.name)).sort((a, b) => a.cost - b.cost).slice(0, 3).map(b => `${b.name} (${b.cost}%)`).join(" · ");
-    const auras = petList.map((x, i) => ({
-      skill: `Tame Beast (${x.capture ? T("capturar: ", "capture: ") : x.b >= 0 ? D.beasts[x.b].name + " · " : ""}${T("aura", "aura")} ${AURA_NAME[x.aura] || "Haste"})`,
-      set: "—", sup: ["Loyalty", "Last Gasp", "Elemental Army", "Meat Shield II"], role: T("Aura bot", "Aura bot"),
-      why: (x.capture ? T(`Você ainda não marcou um beast com aura ${AURA_NAME[x.aura]}. Capture um de tipo diferente dos que já tem — mais baratos em Spirit: ${cheapest}. `, `You haven't ticked a beast with a ${AURA_NAME[x.aura]} aura yet. Capture one of a different type from the ones you have — cheapest in Spirit: ${cheapest}. `) : "") + T("Com o Effigy não há limite de companions: cada beast de aura de TIPO diferente entra enquanto houver Spirit. Loyalty + Last Gasp mantêm a aura viva; Meat Shield II e Elemental Army deixam ele durar no Atlas.", "With the Effigy there's no companion limit: each aura beast of a DIFFERENT type comes in while Spirit allows. Loyalty + Last Gasp keep the aura alive; Meat Shield II and Elemental Army make it last in the Atlas."),
-      sp: "core", pr: ({ haste: 2, phys: 5, es: 7 })[x.aura] || 8 + i, cost: x.b >= 0 && D.beasts[x.b] ? `${D.beasts[x.b].cost}% ${T("do Spirit", "of Spirit")}` : T("~21–25% do Spirit", "~21–25% of Spirit") }));
-    const wolf = pick(t15, /^Azmerian Wolf/); if (wolf) { wolf.sp = "core"; wolf.pr = 4; wolf.cost = T("Reserva Spirit (vem do Effigy)", "Reserves Spirit (from the Effigy)"); wolf.why = T("Vem do Sylvan's Effigy. É o 2º companion de dano: entra depois do beast de Haste e do Cleric.", "Comes from Sylvan's Effigy. It's the 2nd damage companion: after the Haste beast and the Cleric."); }
-    const disc = pick(t15, /^Discipline/); if (disc) { disc.sp = "opt"; disc.pr = 1; disc.cost = T("Reserva Spirit (vem do Effigy)", "Reserves Spirit (from the Effigy)"); disc.why = T("Aura de Energy Shield que vem do Effigy. Só ative se sobrar Spirit depois dos beasts de aura.", "Energy Shield aura from the Effigy. Only activate it if Spirit is left after the aura beasts."); }
-    const cleric = pick(t15, /^Skeletal Cleric/) || pick(ea, /^Skeletal Cleric/);
-    if (cleric) { cleric.sp = "core"; cleric.pr = 3; cleric.cost = T("Pouco Spirit (1 minion)", "Low Spirit (1 minion)"); cleric.why = T("Com o Rattling Sceptre fora, o Skeletal Warrior some: o Cleric vira o esqueleto que o Pain Offering espeta (Sacrificial Lamb II) e ainda cura o zoo.", "With the Rattling Sceptre gone, the Skeletal Warrior disappears: the Cleric becomes the skeleton Pain Offering skewers (Sacrificial Lamb II) and heals the zoo."); }
-    const pack = pick(t15, /^Wolf Pack/);
-    if (pack) { pack.sp = "core"; pack.pr = 6; pack.cost = T("Reserva Spirit (vários lobos = 1 companion)", "Reserves Spirit (several wolves = 1 companion)"); pack.why = T("Com o Effigy, o Wolf Pack entra como companion de dano: vários lobos contam como UM companion, Withering Touch aplica Wither (mais dano de chaos com o Evergrasping Ring) e ele soma mais um TIPO para o Muster.", "With the Effigy, Wolf Pack comes in as a damage companion: several wolves count as ONE companion, Withering Touch applies Wither (more chaos damage with Evergrasping Ring) and it adds another TYPE for Muster."); }
-    const po = keep.find(g => /^Pain Offering/.test(g.skill));
-    if (po) {
-      const skeletons = 1 + skOn.filter(s => s !== "Skeletal Warrior" && s !== "Skeletal Cleric").length;
-      po.sup = ["Prolonged Duration II", "Sacrificial Offering", "Brutus' Brain"].concat(skeletons >= 2 ? ["Danse Macabre"] : []);
-      po.why = T(`Alvo: Skeletal Cleric. Brutus' Brain impede o espinho de morrer. ${skeletons >= 2 ? "Você marcou 2+ esqueletos: Danse Macabre funciona." : "Com só o Cleric, sem Danse Macabre (precisa de 2 esqueletos)."}`, `Target: Skeletal Cleric. Brutus' Brain keeps the spike alive. ${skeletons >= 2 ? "You ticked 2+ skeletons: Danse Macabre works." : "With only the Cleric, no Danse Macabre (needs 2 skeletons)."}`);
+  const pi = PIDX(p.id), sw = PIDX("sw");
+  let q = clone(p); q._adapted = true;
+  // troca antes/depois do planejado
+  if (pi >= sw && !own("ab")) { const a4 = clone(phaseById("a4")); q.gems = a4.gems; q.skeletons = a4.skeletons; q.spiritNote = T("Você ainda não pegou Ancestral Bond: continue com o setup do Ato 4 até ter 210+ Spirit, sceptre e wand. ", "You haven't taken Ancestral Bond yet: stay on the Act 4 setup until you have 210+ Spirit, sceptre and wand. ") + (a4.spiritNote || ""); }
+  if (pi < sw && own("ab")) { const s = clone(phaseById("sw")); q.gems = s.gems; q.skeletons = s.skeletons; q.spiritNote = s.spiritNote; }
+  const totemPhase = q.gems.some(g => g.skill === "Spell Totem");
+  if (totemPhase) {
+    const grimReady = own("grim") && own("runeforged");
+    const tpl = grimReady ? (pi >= PIDX("fin") && own("rakiata") ? phaseById("fin") : phaseById("w1")) : phaseById(pi >= PIDX("ea") ? "ea" : pi >= PIDX("int") ? "int" : "sw");
+    const tg = tpl.gems.find(g => g.skill === "Spell Totem");
+    const first = q.gems.findIndex(g => g.skill === "Spell Totem");
+    q.gems = q.gems.filter((g, i) => g.skill !== "Spell Totem" || i === first);
+    if (first >= 0 && tg) { const g = q.gems.find(x => x.skill === "Spell Totem"); g.sup = tg.sup.slice(); g.why = tg.why; }
+    if (grimReady && !q.gems.some(g => g.skill === "Entangle")) { const en = clone(phaseById("w1").gems.find(g => g.skill === "Entangle")); q.gems.push(en); }
+    if (!grimReady) for (const g of q.gems) if (g.skill === "Entangle" && pi >= PIDX("w1")) { g.role = T("Clear (sem Grim Pillars)", "Clear (no Grim Pillars)"); }
+    if (own("pierce") && !own("bb")) { const g = q.gems.find(x => x.skill === "Spell Totem"); if (g && g.sup.includes("Spark") && !g.sup.includes("Pierce II")) { g.sup = g.sup.slice(0, -1).concat("Pierce II"); g.why += T(" Você marcou Pierce II (sem Branching Bolts): entra no último slot.", " You ticked Pierce II (no Branching Bolts): it takes the last slot."); } }
+    // Spirit e totems
+    const tc = totemCalc();
+    const tg2 = q.gems.find(g => g.skill === "Spell Totem");
+    if (tg2) { tg2.cost = T(`${tc.perR} Spirit por totem`, `${tc.perR} Spirit per totem`); if (tc.spirit) tg2.spEst = tc.fit * tc.perR; }
+    for (const g of q.gems) {
+      if (g.skill === "Archmage" && tc.spirit) { const withArch = totemCalc({ archmage: true }); if (withArch.fit < 3 || withArch.left < 0) { g.sp = "opt"; g.pr = 1; g.why += T(` Com ${tc.spirit} Spirit, o Archmage deixaria só ${withArch.fit} totem(s): ative quando tiver mais Spirit.`, ` With ${tc.spirit} Spirit, Archmage would leave only ${withArch.fit} totem(s): activate it once you have more Spirit.`); } }
+      if (g.skill === "Ravenous Swarm") { g.sp = "opt"; g.pr = 9; }
     }
-    q.gems = [silver, ...auras, cleric, wolf, pack, disc, ...keep.filter(g => !/^Wolf Pack/.test(g.skill))].filter(Boolean);
-    q.spiritNote = T("Com Sylvan's Effigy (sem limite de companions), ordem para o MÁXIMO de dano, ativando enquanto houver Spirit: 1) Silverfist (o dano) → 2) beast de Haste (acelera tudo) → 3) Skeletal Cleric (barato e libera o buff do Pain Offering) → 4) Azmerian Wolf → 5) beast de Physical → 6) Wolf Pack → 7) beast de ES (defesa). Discipline, Withering Presence e tipos extras de esqueleto (Muster) só se sobrar. Se o Spirit ficar negativo, desligue o último que entrou — nunca o macaco ou o Haste.",
-      "With Sylvan's Effigy (no companion limit), order for MAXIMUM damage, activating while Spirit allows: 1) Silverfist (the damage) → 2) Haste beast (speeds everything) → 3) Skeletal Cleric (cheap and enables the Pain Offering buff) → 4) Azmerian Wolf → 5) Physical beast → 6) Wolf Pack → 7) ES beast (defence). Discipline, Withering Presence and extra skeleton types (Muster) only if Spirit is left. If Spirit goes negative, turn off the last one added — never the monkey or the Haste beast.");
-    q.skeletons = { n: String(Math.max(1, 1 + skOn.filter(s => s !== "Skeletal Warrior" && s !== "Skeletal Cleric").length)), types: ["Skeletal Cleric"].concat(skOn.filter(s => s !== "Skeletal Warrior" && s !== "Skeletal Cleric")), note: T("Sem Rattling Sceptre não há Skeletal Warrior. O Cleric é o alvo do Pain Offering; outros tipos só se sobrar Spirit (Muster conta tipos).", "Without Rattling Sceptre there's no Skeletal Warrior. The Cleric is the Pain Offering target; other types only if Spirit is left (Muster counts types).") };
-    q.tag = `${q.tag} · Sylvan's Effigy`;
-  }
-  // ---- Withering Presence marcado mas fora da fase
-  if (S.ch.wither && !q.gems.some(g => /^Withering Presence/.test(g.skill))) {
-    const wp = pick(phaseById("a4"), /^Withering Presence/);
-    if (wp) { wp.sp = hasUse("Evergrasping Ring") ? "opt" : "opt"; wp.pr = 2; wp.cost = T("Reserva fixa", "Flat reservation"); wp.why = hasUse("Evergrasping Ring") ? T("Você usa Withering Presence com Evergrasping Ring: continua valendo, mas no Atlas entra depois dos companions (Despair já tira resistência a chaos).", "You use Withering Presence with Evergrasping Ring: still worth it, but in the Atlas it comes after companions (Despair already lowers chaos resistance).") : T("Sem Evergrasping Ring ele quase não faz nada: desligue.", "Without Evergrasping Ring it does almost nothing: turn it off."); q.gems.push(wp); }
-  }
-  // ---- Chober Chaber: Mace Strike + Einhar's Beastrite (rouba modificadores = mais dano)
-  if (hasUse("Chober Chaber") && S.ch.asc && S.ch.asc.catha && !q.gems.some(g => /^Mace Strike/.test(g.skill))) {
-    const ms = pick(phaseById("t15"), /^Mace Strike/);
-    if (ms) { ms.sp = "free"; ms.pr = 0; ms.cost = T("Sem Spirit", "No Spirit"); ms.why = T("Você tem Chober Chaber: Mace Strike com Einhar's Beastrite finaliza raros e te dá 2 modificadores deles por 5 minutos (Haste, Extra Damage…). É dano extra de graça no mapping.", "You have Chober Chaber: Mace Strike with Einhar's Beastrite finishes rares and gives you 2 of their modifiers for 5 minutes (Haste, Extra Damage…). Free extra damage while mapping."); q.gems.push(ms); }
-  }
-  // ---- Forgotten Warden
-  if (hasUse("Forgotten Warden") && !q.gems.some(g => /^Spirit Vessel/.test(g.skill))) {
-    const sv = pick(S.lv >= 90 ? phaseById("mm") : t15, /^Spirit Vessel/);
-    if (sv) { sv.sp = "core"; sv.pr = 8; sv.cost = T("Reserva Spirit (vem do Forgotten Warden)", "Reserves Spirit (from Forgotten Warden)"); q.gems.push(sv); }
-  }
-  // ---- sem Evergrasping Ring
-  if (!hasUse("Evergrasping Ring")) for (const g of q.gems) if (/^Withering Presence/.test(g.skill)) { g.sp = "opt"; g.pr = 9; g.why = T("Você não marcou Evergrasping Ring: sem os anéis o Wither quase não aumenta o dano. Deixe desligado e use o Spirit em companions.", "You didn't tick Evergrasping Ring: without the rings Wither barely adds damage. Keep it off and spend the Spirit on companions."); }
-  // ---- sem Rattling Sceptre (e sem Effigy): troque o Warrior pelo esqueleto marcado
-  if (!effigy && !hasUse("Rattling Sceptre") && chItems().length) {
-    const alt = skOn.find(s => s !== "Skeletal Warrior") || "Skeletal Arsonist";
-    for (const g of q.gems) if (isWarrior(g) && g.sp !== "opt") { g.skill = alt; g.why = T(`Você não marcou Rattling Sceptre, então não há gem de Skeletal Warrior: use ${alt} como o esqueleto do Pain Offering (Sacrificial Lamb).`, `You didn't tick Rattling Sceptre, so there's no Skeletal Warrior gem: use ${alt} as the Pain Offering skeleton (Sacrificial Lamb).`); }
-  }
-  // ---- sem Effigy: usa os beasts que você marcou nas vagas de aura
-  if (!effigy && pets.length) {
-    let k = 0;
-    for (const g of q.gems) if (isAuraBeast(g) && !/vazia|empty/i.test(g.skill) && pets[k]) { const b = D.beasts[pets[k].b]; g.skill = `Tame Beast (${b.name} · ${T("aura", "aura")} ${AURA_NAME[pets[k].aura] || "—"})`; g.cost = `${b.cost}% ${T("do Spirit", "of Spirit")}`; k++; }
-  }
-  // ---- 2 companions: beasts de aura além do limite viram opcionais
-  if (!effigy) {
-    const limit = (S.ch.tk || hasUse("Yriel's Fostering")) ? 2 : 1;
-    let used = 1;
-    for (const g of q.gems) if (isAuraBeast(g) && g.sp !== "free") { used++; if (used > limit) { g.sp = "opt"; g.pr = 9; g.why = T(`Seu limite é ${limit} companion(s). Este só entra com Sylvan's Effigy${limit === 1 ? " ou Trusted Kinship" : ""}.`, `Your limit is ${limit} companion(s). This one only comes in with Sylvan's Effigy${limit === 1 ? " or Trusted Kinship" : ""}.`); } }
-  }
-  // ---- Spirit: estimativa com o seu Spirit máximo
-  const total = +S.ch.spirit || 0;
-  if (total) {
-    const eff = (S.ch.tk ? 1.3 : 1) * (1 + (S.ch.eg ? .25 : 0)); let used = 0;
-    for (const g of q.gems.filter(g => g.sp === "core").sort((a, b) => a.pr - b.pr)) {
-      let pct = null;
-      if (/^Tame Beast/.test(g.skill) && /Silverfist|Zekoa/.test(g.skill)) pct = 47.4;
-      else if (isAuraBeast(g)) { const m = D.beasts.find(b => b.cost && g.skill.includes(b.name)); pct = m ? m.cost : 24.9; }
-      if (pct != null) { const est = pct / 100 * total / eff; used += est; g.spEst = Math.round(est); }
-      g.fits = used <= total;
-    }
-    q.spiritUsed = Math.round(used); q.spiritTotal = total;
+    const box = q.skeletons || { n: "", types: [], note: "" };
+    q.skeletons = { n: tc.ab ? String(tc.fit) : "0", types: [T(`limite ${tc.limit}`, `limit ${tc.limit}`), T(`${tc.perR} Spirit cada`, `${tc.perR} Spirit each`)], note: tc.spirit ? T(`Com ${tc.spirit} Spirit e ${tc.otherSum} reservados em outras skills cabem ${tc.fit} totem(s). ${box.note}`, `With ${tc.spirit} Spirit and ${tc.otherSum} reserved on other skills, ${tc.fit} totem(s) fit. ${box.note}`) : T("Informe seu Spirit em Meu personagem para calcular.", "Enter your Spirit in My character to calculate.") };
+    if (tc.spirit) { q.spiritUsed = tc.used; q.spiritTotal = tc.spirit; }
+    q.spiritNote = (q.spiritNote || "") + (grimReady ? "" : T(" Sem Grim Pillars + Runic Ward: o totem usa Spark.", " Without Grim Pillars + Runic Ward: the totem uses Spark."));
   }
   return q;
 }
-
 function adaptItems(pid, items) {
   if (!adaptOn() || pid !== curPhase().id) return items;
-  const out = clone(items);
-  const ringSlot = s => /Anel|Ring/i.test(s);
-  const pool = [];
-  const cur = PH_ORDER.indexOf(pid);
-  for (const ph of PH_ORDER) for (const m of [S.mode, S.mode === "cheap" ? "full" : "cheap"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u || it.n === "Rattling Sceptre") pool.push(Object.assign({}, it, { _d: Math.abs(PH_ORDER.indexOf(ph) - cur) * 2 + (PH_ORDER.indexOf(ph) < cur ? 1 : 0) + (m === S.mode ? 0 : .5) }));
+  const out = clone(items); const ringSlot = s => /Anel|Ring/i.test(s); const pool = []; const cur = PH_ORDER.indexOf(pid);
+  for (const ph of PH_ORDER) for (const m of [S.mode, S.mode === "cheap" ? "full" : "cheap"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u) pool.push(Object.assign({}, it, { _d: Math.abs(PH_ORDER.indexOf(ph) - cur) * 2 + (PH_ORDER.indexOf(ph) < cur ? 1 : 0) }));
   pool.sort((x, y) => x._d - y._d);
-  const sameSlot = (a, b) => a === b || (ringSlot(a) && ringSlot(b));
-  const used = new Set();
   for (let i = 0; i < out.length; i++) {
     const it = out[i];
-    if ((it.u || it.n === "Rattling Sceptre") && hasUse(it.n) && !used.has(it.n + i)) { it.have = 1; continue; }
-    // o que você tem para este slot (o mais avançado na rota)
-    const cands = pool.filter(c => sameSlot(c.slot, it.slot) && hasUse(c.n));
-    const pickC = cands.find(c => !(ringSlot(c.slot) && out.some((o, j) => j !== i && o.n === c.n && o.have && c.n !== "Evergrasping Ring")));
-    if (pickC) { out[i] = Object.assign(clone(pickC), { slot: it.slot, have: 1, swapped: it.n }); continue; }
-    if (it.u || it.n === "Rattling Sceptre") it.miss = 1;
+    if (it.u && hasUse(it.n)) { it.have = 1; continue; }
+    const cand = pool.find(c => (c.slot === it.slot || (ringSlot(c.slot) && ringSlot(it.slot))) && hasUse(c.n));
+    if (cand) { out[i] = Object.assign(clone(cand), { slot: it.slot, have: 1, swapped: it.n }); continue; }
+    if (it.u) it.miss = 1;
   }
-  // Effigy na offhand
-  if (hasUse("Sylvan's Effigy")) {
-    const eff = pool.find(c => c.n === "Sylvan's Effigy");
-    const k = out.findIndex(o => /Offhand \(Set 1\)/.test(o.slot)) ;
-    if (eff && k >= 0 && out[k].n !== "Sylvan's Effigy") out[k] = Object.assign(clone(eff), { slot: out[k].slot, have: 1, swapped: out[k].n });
-  }
-  // Giant's Blood na árvore: Treefingers não é mais necessária
-  if (S.ch.gb) { const g = out.findIndex(o => o.n === "Treefingers"); if (g >= 0) { const rare = (A.sets.t15 || {})[S.mode] ? A.sets.t15[S.mode].find(o => o.slot === out[g].slot && !o.u) : null; if (rare) out[g] = Object.assign(clone(rare), { swapped: "Treefingers" }); } }
   return out;
 }
-
-function adaptBanner(kind) {
-  const on = adaptOn(); const notes = adaptNotes();
-  if (!chItems().length && !(S.ch.pets || []).some(x => x.on && x.b >= 0)) return `<div class="adaptbar frame"><span>${T("Marque o que você tem em <b>Meu personagem</b> e esta aba se adapta ao seu personagem.", "Tick what you have in <b>My character</b> and this tab adapts to your character.")}</span><button class="btn" type="button" data-gotab="meu">${T("Marcar agora", "Tick now")}</button></div>`;
+function adaptBanner() {
+  if (!Object.values(S.ch.own || {}).some(Boolean) && !+S.ch.spirit) return `<div class="adaptbar frame"><span>${T("Marque o que você tem em <b>Meu personagem</b> e esta aba se adapta ao seu personagem.", "Tick what you have in <b>My character</b> and this tab adapts to your character.")}</span><button class="btn" type="button" data-gotab="meu">${T("Marcar agora", "Tick now")}</button></div>`;
+  const on = adaptOn(), notes = adaptNotes();
   return `<div class="adaptbar frame ${on ? "on" : ""}"><label class="chk"><input type="checkbox" id="adaptTgl" ${S.adapt ? "checked" : ""}><span>${T("Adaptar ao que eu tenho", "Adapt to what I have")}</span></label>
-    <span>${on ? T(`Mostrando o plano ajustado para ${esc(curPhase().name)} com base em Meu personagem.`, `Showing the plan adjusted for ${esc(curPhase().name)} based on My character.`) : T("Mostrando o plano padrão da fase.", "Showing the phase's default plan.")}</span>
+    <span>${on ? T(`Plano ajustado para ${esc(curPhase().name)} com base em Meu personagem.`, `Plan adjusted for ${esc(curPhase().name)} based on My character.`) : T("Mostrando o plano padrão da fase.", "Showing the phase's default plan.")}</span>
     ${on && notes.length ? `<ul>${notes.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
     <button class="btn" type="button" data-gotab="meu">${T("Editar o que eu tenho", "Edit what I have")}</button></div>`;
 }
 function treeAdaptNotes() {
   if (!adaptOn()) return "";
-  const gbId = Object.keys(A.tree.meta).find(k => A.tree.meta[k][0] === "Giant's Blood");
-  const tkId = Object.keys(A.tree.meta).find(k => A.tree.meta[k][0] === "Trusted Kinship");
-  const out = [];
-  const twoHand = hasUse("Chober Chaber") && (hasUse("Rattling Sceptre") || hasUse("Sylvan's Effigy"));
-  if (twoHand && hasUse("Treefingers") && !S.ch.gb) out.push(T("Você tem Treefingers: NÃO precisa do keystone Giant's Blood agora. Se o caminho mostrar o Giant's Blood, pule e use o ponto no próximo nó.", "You have Treefingers: you do NOT need the Giant's Blood keystone now. If the path shows Giant's Blood, skip it and use the point on the next node.") + (gbId ? ` <a href="#" data-gotree="${gbId}">Giant's Blood</a>` : ""));
-  if (twoHand && !hasUse("Treefingers") && !S.ch.gb) out.push(T("Chober Chaber + sceptre sem Treefingers: pegue o keystone Giant's Blood o quanto antes.", "Chober Chaber + sceptre without Treefingers: take the Giant's Blood keystone as soon as possible.") + (gbId ? ` <a href="#" data-gotree="${gbId}">Giant's Blood</a>` : ""));
-  if (S.ch.gb && hasUse("Treefingers")) out.push(T("Você já tem o keystone Giant's Blood: troque a Treefingers por luvas rare com vida/resist.", "You already have the Giant's Blood keystone: swap Treefingers for rare gloves with life/resists."));
-  if (!S.ch.tk && lvOk(33)) out.push(T("Você não marcou Trusted Kinship: ele é prioridade (limite de companions e 30% more eficiência).", "You didn't tick Trusted Kinship: it's a priority (companion limit and 30% more efficiency).") + (tkId ? ` <a href="#" data-gotree="${tkId}">Trusted Kinship</a>` : ""));
-  if (hasUse("Sylvan's Effigy") && !S.ch.tk) out.push(T("Com o Effigy o limite some, mas o Trusted Kinship continua valendo pelos 30% more de eficiência.", "With the Effigy the limit is gone, but Trusted Kinship is still worth it for the 30% more efficiency."));
+  const idOf = name => Object.keys(A.tree.meta).find(k => A.tree.meta[k][0] === name);
+  const link = n => { const id = idOf(n); return id ? ` <a href="#" data-gotree="${id}">${esc(n)}</a>` : ""; };
+  const out = []; const spirit = +S.ch.spirit || 0;
+  if (!own("ab") && S.lv >= 45) out.push(T(`Ancestral Bond é a base da troca. Só pegue com ${own("ei") ? 210 : 255}+ Spirit.`, `Ancestral Bond is the core of the swap. Only take it with ${own("ei") ? 210 : 255}+ Spirit.`) + link("Ancestral Bond"));
+  if (own("ab") && !own("ei") && spirit && spirit < 255) out.push(T("Menos de 255 Spirit: pegue Efficient Inscriptions (75 → 63 por totem).", "Under 255 Spirit: take Efficient Inscriptions (75 → 63 per totem).") + link("Efficient Inscriptions"));
+  if (own("pierce") && own("bb")) out.push(T("Pierce II marcado: tire Branching Bolts.", "Pierce II ticked: remove Branching Bolts.") + link("Branching Bolts"));
+  if (own("mom") && +S.ch.mana && +S.ch.life && +S.ch.mana <= +S.ch.life) out.push(T("Mind Over Matter com mana menor que a vida: perigoso. Teste Mental Perseverance.", "Mind Over Matter with mana below life: dangerous. Try Mental Perseverance.") + link("Mental Perseverance"));
+  if (own("ab") && own("wild")) out.push(T("Wildsurge Incantation é do leveling (Storm/Plant). Depois da troca os pontos podem ir para totem/mana.", "Wildsurge Incantation is for leveling (Storm/Plant). After the swap those points can go to totem/mana.") + link("Wildsurge Incantation"));
   return out.length ? `<div class="adaptbar frame on"><b>${T("Ajustes da árvore para o seu personagem", "Tree adjustments for your character")}</b><ul>${out.map(x => `<li>${x}</li>`).join("")}</ul></div>` : "";
 }
-const lvOk = n => S.lv >= n;
 document.addEventListener("change", e => { if (e.target.id === "adaptTgl") { S.adapt = e.target.checked; store.set("adapt", S.adapt); render(); } });
 
-/* ------------------------------------------------ caçar companions */
-S.hf = store.get("hf", "all");
-function vHunt() {
-  const H = D.hunt;
-  const hasteTxt = h => h === "sim" ? `<span class="chip wisp">${T("Rola Haste", "Rolls Haste")}</span>` : h === "nao" ? `<span class="chip danger">${T("Não rola Haste", "No Haste")}</span>` : `<span class="chip">${T("Haste: não confirmado", "Haste: unconfirmed")}</span>`;
-  const list = H.beasts.filter(b => S.hf === "all" || (S.hf === "haste" && b.haste === "sim") || (S.hf === "cheap" && b.cost <= 26.7) || (S.hf === "act" && !/Mapas|Maps/.test(b.where)) || (S.hf === "maps" && /Mapas|Maps/.test(b.where)));
-  const est = pct => { const tot = +S.ch.spirit || 0; if (!tot) return ""; const eff = (S.ch.tk ? 1.3 : 1) * (1 + (S.ch.eg ? .25 : 0)); return ` · ≈ ${Math.round(pct / 100 * tot / eff)} Spirit`; };
-  const tierName = { primary: T("Principais — capture por causa deles", "Primary — capture for these"), secondary: T("Secundários — bons junto com um principal", "Secondary — good alongside a primary"), tertiary: T("Terciários — só bônus", "Tertiary — just a bonus") };
-  return `<div class="sechead"><div><h2>${T("Caçar companions", "Hunting companions")}</h2><p>${T("Como capturar, onde achar cada beast (campanha e mapas), truques de farm e quais modificadores procurar. O custo em Spirit usa o seu Spirit máximo de Meu personagem.", "How to capture, where to find each beast (campaign and maps), farming tricks and which modifiers to look for. Spirit cost uses your max Spirit from My character.")}</p></div></div>
-  <div class="grid g2">
-    <div class="panel frame"><h3>${T("Como capturar (passo a passo)", "How to capture (step by step)")}</h3><ol class="huntol">${H.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div>
-    <div class="panel frame"><h3>${T("Rota mais rápida para auras T1 (Mattjestic)", "Fastest route for T1 auras (Mattjestic)")}</h3><div class="checklist">${H.route.map((r, i) => `<label class="check ${S.done["hunt:" + i] ? "done" : ""}"><input type="checkbox" data-key="hunt:${i}" ${S.done["hunt:" + i] ? "checked" : ""}><span><b class="ui">${esc(r.t)}</b><br>${esc(r.d)}</span></label>`).join("")}</div></div>
-  </div>
-  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Truques de farm", "Farming tricks")}</h2></div></div>
-  <div class="qgrid">${H.tricks.map(x => `<article class="qcard frame"><h3 style="margin:0">${esc(x.t)}</h3><p style="margin:0">${esc(x.d)}</p></article>`).join("")}</div>
-  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Onde achar cada beast", "Where to find each beast")}</h2><p>${T("Ordenado pelo menor custo de Spirit. Com o Effigy, junte auras T1 de TIPOS diferentes; antes dele, só cabe 1 beast de aura.", "Sorted by lowest Spirit cost. With the Effigy, collect T1 auras of DIFFERENT types; before it, only 1 aura beast fits.")}</p></div></div>
-  <div class="filters" style="margin-bottom:12px">${[["all", T("Todos", "All")], ["haste", T("Rolam Haste", "Roll Haste")], ["cheap", T("Mais baratos (≤ 26,7%)", "Cheapest (≤ 26.7%)")], ["act", T("Campanha", "Campaign")], ["maps", T("Mapas", "Maps")]].map(([k, l]) => `<button type="button" data-hf="${k}" aria-pressed="${S.hf === k}">${l}</button>`).join("")}</div>
-  <div class="tablewrap frame"><table><thead><tr><th>${T("Beast", "Beast")}</th><th>${T("Spirit", "Spirit")}</th><th>${T("Onde", "Where")}</th><th>${T("Como aparece", "How it spawns")}</th><th>Haste</th><th>${T("Observação", "Note")}</th></tr></thead><tbody>
-  ${list.map(b => `<tr><td><b class="ui">${esc(b.n)}</b></td><td class="num">${b.cost}%${est(b.cost)}</td><td>${esc(b.where)}</td><td>${esc(b.how)}</td><td>${hasteTxt(b.haste)}</td><td>${esc(b.note)}</td></tr>`).join("")}
-  </tbody></table></div>
-  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Nos mapas (Atlas)", "In maps (Atlas)")}</h2></div></div>
-  <div class="qgrid">${H.atlas.map(x => `<article class="qcard frame"><h3 style="margin:0">${esc(x.t)}</h3><p style="margin:0">${esc(x.d)}</p></article>`).join("")}</div>
-  <div class="sechead" style="margin-top:26px"><div><h2 style="font-size:1.4rem">${T("Quais modificadores procurar", "Which modifiers to look for")}</h2><p>${T("Um beast pode ter até 4 modificadores. Procure pelo menos 1 principal; o ideal é 1 principal + 1 secundário.", "A beast can have up to 4 modifiers. Look for at least 1 primary; ideally 1 primary + 1 secondary.")}</p></div></div>
-  <div class="grid g3">${["primary", "secondary", "tertiary"].map(k => `<div class="panel frame"><h3>${tierName[k]}</h3><ul class="clean ${k === "primary" ? "gold" : ""}">${H.mods.filter(m => m.tier === k).map(m => `<li><span><b class="ui">${esc(m.n)}</b><br><small style="color:var(--mute)">${esc(m.d)}</small></span></li>`).join("")}</ul></div>`).join("")}</div>
-  <p style="color:var(--faint);font-size:.85rem;margin-top:16px">${T("Fontes:", "Sources:")} ${H.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(" · ")}</p>`;
+/* ------------------------------------------------ totems & mana (Oracle) */
+S.sp = { total: 0, zoo: [] };
+function spCalc() {
+  const tc = totemCalc(); const total = tc.spirit || 0;
+  S.sp.total = total;
+  return { used: tc.used, free: total - tc.used, pct: total ? tc.used / total : 0, rows: [] };
 }
-document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-hf]"); if (b) { S.hf = b.dataset.hf; store.set("hf", S.hf); render(); } });
+
+const WARD = { "Grim Pillars": [15, 81], "Bitter Dead": [11, 59], "Repulsion": [15, 116] };
+function vTotem() {
+  const c = S.ch, tc = totemCalc();
+  const mana = +c.mana || 0;
+  const chk = (k, label, hint) => `<div class="toggle"><span class="ui">${label}${hint ? `<br><small style="color:var(--faint);font-family:var(--body)">${hint}</small>` : ""}</span><label class="switch"><input type="checkbox" data-own="${k}" ${own(k) ? "checked" : ""} aria-label="${esc(label)}"><i></i></label></div>`;
+  const R = 62, Lc = 2 * Math.PI * R, pct = tc.spirit ? Math.min(1, tc.used / tc.spirit) : 0;
+  const need = n => Math.ceil(n * tc.perR + tc.otherSum);
+  const st = !tc.ab ? ["warn", T("Sem Ancestral Bond o Spell Totem pede 3 charges por totem. Marque Ancestral Bond para simular.", "Without Ancestral Bond Spell Totem needs 3 charges per totem. Tick Ancestral Bond to simulate.")] : !tc.spirit ? ["warn", T("Digite seu Spirit máximo.", "Enter your max Spirit.")] : tc.fit >= 3 ? ["ok", T(`${tc.fit} totems cabem · sobram ${tc.left} Spirit.`, `${tc.fit} totems fit · ${tc.left} Spirit left.`)] : ["bad", T(`Só ${tc.fit} totem(s). Faltam ${need(3) - tc.spirit} Spirit para 3.`, `Only ${tc.fit} totem(s). ${need(3) - tc.spirit} Spirit short of 3.`)];
+  const manaRows = Object.entries(D.totemMana).map(([lv, m]) => `<tr><td class="num">${lv}</td><td class="num">${m}</td><td>${lv >= 14 ? 2 : 1}</td></tr>`).join("");
+  return `<div class="sechead"><div><h2>${T("Totems & Mana", "Totems & Mana")}</h2><p>${T("Quantos Spell Totems cabem no seu Spirit, quanto de mana a build precisa e o craft do amuleto de Archmage. Os números vêm dos dados do jogo (Path of Building): cada totem reserva 75 Spirit com Ancestral Bond, 1 totem base até a gem nível 13 e 2 a partir do 14.", "How many Spell Totems fit your Spirit, how much mana the build needs and the Archmage amulet craft. Numbers come from game data (Path of Building): each totem reserves 75 Spirit with Ancestral Bond, 1 base totem up to gem level 13 and 2 from level 14.")}</p></div></div>
+  <div class="spirit">
+    <div class="panel frame">
+      <div class="grid g2" style="gap:10px">
+        <label class="field"><span>${T("Spirit máximo", "Max Spirit")}</span><input type="number" min="0" data-ch="spirit" value="${esc(c.spirit)}"></label>
+        <label class="field"><span>${T("Nível da gem Spell Totem", "Spell Totem gem level")}</span><input type="number" min="1" max="40" data-ch="gemLv" value="${esc(c.gemLv)}" placeholder="${S.lv >= 58 ? 14 : 1}"></label>
+        <label class="field"><span>${T("Spirit do Malice (se usa)", "Malice Spirit (if used)")}</span><input type="number" min="0" data-ch="malice" value="${esc(c.malice)}"></label>
+        <label class="field"><span>${T("Mana máxima", "Max mana")}</span><input type="number" min="0" data-ch="mana" value="${esc(c.mana)}"></label>
+      </div>
+      <div style="margin-top:10px;display:grid;gap:4px">
+        ${chk("ab", "Ancestral Bond", T("dobra o limite · 75 Spirit por totem", "doubles the limit · 75 Spirit per totem"))}
+        ${chk("ei", "Efficient Inscriptions", T("+20% eficiência: 63 por totem", "+20% efficiency: 63 per totem"))}
+        ${chk("hw", "Unnamed Heartwood", T("+1 totem", "+1 totem"))}
+        ${chk("Soul Mantle", "Soul Mantle", T("+1 totem e +75 Spirit (inclua esse Spirit no campo acima)", "+1 totem and +75 Spirit (include that Spirit in the field above)"))}
+        ${chk("remnants", "Mana Remnants", "30 Spirit")}${chk("archmage", "Archmage", "100 Spirit")}${chk("swarm", "Ravenous Swarm", T("30 Spirit (leveling)", "30 Spirit (leveling)"))}${chk("malice", "Malice", T("usa o valor digitado", "uses the value typed"))}
+      </div>
+    </div>
+    <div class="panel frame" style="display:grid;gap:12px;align-content:start">
+      <div class="gauge"><svg viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="${R}" fill="none" stroke="#1f2436" stroke-width="16"/><circle cx="80" cy="80" r="${R}" fill="none" stroke="${st[0] === "bad" ? "var(--danger)" : st[0] === "warn" ? "var(--gild)" : "var(--wisp)"}" stroke-width="16" stroke-dasharray="${Lc}" stroke-dashoffset="${Lc * (1 - pct)}" transform="rotate(-90 80 80)"/></svg><div><b>${tc.ab ? tc.fit : 0}</b><small>${T("totems", "totems")}</small></div></div>
+      <div class="rec ${st[0]}"><span class="ri">${{ ok: "✔", warn: "!", bad: "✖" }[st[0]]}</span><div><b>${esc(st[1])}</b><small>${T(`Limite: (${tc.base} base${tc.hw ? " + 1 Heartwood" : ""}${tc.soul ? " + 1 Soul Mantle" : ""}) × ${tc.ab ? 2 : 1} = ${tc.limit} · por totem: ${tc.perR} · outras reservas: ${tc.otherSum}`, `Limit: (${tc.base} base${tc.hw ? " + 1 Heartwood" : ""}${tc.soul ? " + 1 Soul Mantle" : ""}) × ${tc.ab ? 2 : 1} = ${tc.limit} · per totem: ${tc.perR} · other reservations: ${tc.otherSum}`)}</small></div></div>
+      <div class="tablewrap"><table><thead><tr><th>${T("Totems", "Totems")}</th><th>${T("Spirit necessário", "Spirit needed")}</th><th></th></tr></thead><tbody>${[1, 2, 3, 4, 5, 6].filter(n => n <= Math.max(4, tc.limit)).map(n => `<tr><td class="num">${n}</td><td class="num">${need(n)}</td><td>${n > tc.limit ? `<span class="chip">${T("acima do limite", "above limit")}</span>` : tc.spirit && tc.spirit >= need(n) ? `<span class="chip wisp">${T("cabe", "fits")}</span>` : ""}</td></tr>`).join("")}</tbody></table></div>
+      <p style="margin:0;color:var(--faint);font-size:.86rem">${T("Guia do Lowepe: 3 totems + Mana Remnants = 210 Spirit com Efficient Inscriptions, 255 sem. Nos bosses dá para desligar o Mana Remnants para caber mais um totem. O arredondamento exato da reserva pode variar 1 ponto: confira no painel de skills.", "Lowepe's guide: 3 totems + Mana Remnants = 210 Spirit with Efficient Inscriptions, 255 without. On bosses you can turn off Mana Remnants to fit one more totem. Exact reservation rounding may vary by 1 point: check the skills panel.")}</p>
+    </div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="panel frame"><h3>${T("Mana", "Mana")}</h3>
+      <ul class="clean gold">
+        <li>${mana ? T(`Zenith I/II só dão dano acima de 90% da mana: mantenha ≥ ${Math.round(mana * .9)} de ${mana}.`, `Zenith I/II only grant damage above 90% mana: keep ≥ ${Math.round(mana * .9)} of ${mana}.`) : T("Zenith I/II só dão dano acima de 90% da mana máxima.", "Zenith I/II only grant damage above 90% of maximum mana.")}</li>
+        <li>${T("Com Ancestral Bond você paga a mana do Spell Totem, não dos spells que ele lança.", "With Ancestral Bond you pay Spell Totem's mana, not the spells it casts.")}</li>
+        <li>${T("Archmage: spells não canalizados custam mana extra e causam dano de raio extra baseado na mana máxima (100 Spirit).", "Archmage: non-channelled spells cost extra mana and deal extra lightning damage based on maximum mana (100 Spirit).")}</li>
+        <li>${T("Mind Over Matter: todo dano sai da mana antes da vida (50% less recuperação de mana). Só com mana bem acima da vida.", "Mind Over Matter: all damage from mana before life (50% less mana recovery). Only with mana well above life.")}</li>
+        <li>${T("Mana Tempest drena mana: use por último, no boss.", "Mana Tempest drains mana: use it last, on the boss.")}</li>
+      </ul>
+      <div class="tablewrap"><table><thead><tr><th>${T("Nível da gem", "Gem level")}</th><th>${T("Mana do Spell Totem", "Spell Totem mana")}</th><th>${T("Totems base", "Base totems")}</th></tr></thead><tbody>${manaRows}</tbody></table></div>
+    </div>
+    <div class="panel frame"><h3>${T("Runic Ward (Grim Pillars)", "Runic Ward (Grim Pillars)")}</h3>
+      <p style="margin:0 0 8px;color:var(--mute)">${T("Grim Pillars, Bitter Dead e Repulsion gastam Runic Ward, não mana. O Runic Ward vem de itens Runeforged/Runemastered. Custo por uso (gem nível 1 → 20):", "Grim Pillars, Bitter Dead and Repulsion spend Runic Ward, not mana. Runic Ward comes from Runeforged/Runemastered items. Cost per use (gem level 1 → 20):")}</p>
+      <ul class="clean">${Object.entries(WARD).map(([n, [a, b]]) => `<li><span><b class="ui">${esc(n)}</b> · ${a} → ${b} Runic Ward</span></li>`).join("")}</ul>
+      <p style="margin:10px 0 0;color:var(--faint);font-size:.86rem">${T("No 0.5.5, Remnants e Expedition só aparecem a partir do Ato 4: antes não tem como conseguir Grim Pillars.", "In 0.5.5, Remnants and Expedition only appear from Act 4: before that there's no way to get Grim Pillars.")}</p>
+    </div>
+  </div>
+  <div class="panel frame" style="margin-top:16px"><h3>${T("Craft do amuleto de Archmage (Lowepe)", "Archmage amulet craft (Lowepe)")}</h3>
+    <p style="margin:0 0 10px;color:var(--danger)">${T("Pode ficar muito caro: não comece com menos de 100 div.", "Can get very expensive: don't start with under 100 div.")}</p>
+    <div class="checklist">${D.craft.map((s, i) => `<label class="check ${S.done["craft:" + i] ? "done" : ""}"><input type="checkbox" data-key="craft:${i}" ${S.done["craft:" + i] ? "checked" : ""}><span><b class="ui">${i + 1}.</b> ${esc(s)}</span></label>`).join("")}</div>
+  </div>`;
+}
+document.addEventListener("change", e => { const t = e.target; if (t.dataset && t.dataset.own !== undefined && t.closest && t.closest("#v-totem")) { S.ch.own[t.dataset.own] = t.checked; saveCh(); } });
+/* quando usar: status pelo que você marcou */
+const TIMING_KEY = { "Sceptre com 130+ Spirit": "sceptre", "Sceptre with 130+ Spirit": "sceptre", "Wand com +Lightning/All Spells": "wand", "Wand with +Lightning/All Spells": "wand", "Dueling Wand": "dueling", "Peças Runeforged (Runic Ward)": "runeforged", "Runeforged pieces (Runic Ward)": "runeforged", "Amuleto de Archmage": "archamu", "Archmage amulet": "archamu", "Grim Pillars": "grim", "Bitter Dead": "bitter", "Archmage": "archmage", "Mana Tempest": "tempest", "Unnamed Heartwood": "hw", "Forced Outcome": "fo", "Harmony Within": "hwi", "Ancestral Bond": "ab", "Efficient Inscriptions": "ei", "Mind Over Matter": "mom" };
 
 /* ------------------------------------------------ quando usar */
 S.qf = store.get("qf", "all");
 function qStatus(e) {
+  const key = TIMING_KEY[e.n] || e.n; const owned = !!(S.ch.own || {})[key];
+  if (e.lvl > S.lv) return { k: "lock", t: T(`Nível ${e.lvl} — faltam ${e.lvl - S.lv}`, `Level ${e.lvl} — ${e.lvl - S.lv} to go`), owned };
+  return { k: owned ? "have" : "ok", t: owned ? T("Você já tem", "You have it") : T("Já pode usar", "Usable now"), owned };
+}
+function qStatusOld(e) {
   const owned = e.kind === "item" ? !!S.ch.items[e.n] : e.kind === "asc" ? !!S.ch.asc[{ "Wild Protector": "wp", "The Natural Order": "no", "The Catha's Balance": "catha", "Idolatry": "idol" }[e.n]] : e.kind === "key" ? (e.n === "Trusted Kinship" ? S.ch.tk : e.n === "Giant's Blood" ? S.ch.gb : false) : false;
   if (e.lvl > S.lv) return { k: "lock", t: T(`Nível ${e.lvl} — faltam ${e.lvl - S.lv}`, `Level ${e.lvl} — ${e.lvl - S.lv} to go`), owned };
   return { k: owned ? "have" : "ok", t: owned ? T("Você já tem", "You have it") : T("Já pode usar", "Usable now"), owned };
@@ -1748,7 +1643,7 @@ function saveSp(defer) {
 function wisps() {
   const cv = $("#wisps"); if (!cv || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const ctx = cv.getContext("2d"); let w, h;
-  const dots = Array.from({ length: 30 }, (_, i) => ({ x: Math.random(), y: Math.random(), r: .6 + Math.random() * 1.8, s: .0005 + Math.random() * .0015, o: Math.random() * 6.28, c: i % 5 === 0 ? "167,123,224" : i % 3 === 0 ? "235,210,154" : "127,216,176" }));
+  const dots = Array.from({ length: 30 }, (_, i) => ({ x: Math.random(), y: Math.random(), r: .6 + Math.random() * 1.8, s: .0005 + Math.random() * .0015, o: Math.random() * 6.28, c: i % 5 === 0 ? "179,140,255" : i % 3 === 0 ? "210,226,255" : "111,227,224" }));
   const size = () => { w = cv.width = cv.offsetWidth * devicePixelRatio; h = cv.height = cv.offsetHeight * devicePixelRatio; };
   size(); addEventListener("resize", size);
   (function f(t) {
@@ -1763,7 +1658,7 @@ function wisps() {
 
 /* ------------------------------------------------ boot */
 $("#league").textContent = "Liga " + D.league + " · 0.5.5";
-$("#foot").textContent = `Guia baseado em imortilize (Mobalytics), Zizaran (Maxroll), PoE2DB e dados da árvore do Path of Building · ${D.patch} · ${D.updated}. Seu progresso fica salvo neste navegador.`;
+$("#foot").textContent = T(`Guia baseado no build do Lowepe (Mobalytics), dados de jogo do Path of Building e preços do poe.ninja · ${D.patch} · ${D.updated}. Seu progresso fica salvo neste navegador.`, `Guide based on Lowepe's build (Mobalytics), Path of Building game data and poe.ninja prices · ${D.patch} · ${D.updated}. Your progress is saved in this browser.`);
 buildRail(); buildTabs();
 $("#lv").addEventListener("input", e => setLv(e.target.value));
 $("#minus").onclick = () => setLv(S.lv - 1); $("#plus").onclick = () => setLv(S.lv + 1);

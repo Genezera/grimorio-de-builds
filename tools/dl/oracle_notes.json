@@ -1,0 +1,98 @@
+{
+ "variants": [
+  {
+   "title": "Endgame (Final)",
+   "desc": "",
+   "notes": {}
+  },
+  {
+   "title": "Endgame (Woche 1)",
+   "desc": "In der neusten Version ist zusätzlich zu Grim Pillars noch Bitter Dead im Spell Totem. Damit haben wir massiv viel mehr Clearspeed. Optional kann der Gem bei Bossen ausgetauscht werden (habe ich bisher nicht gebraucht). \n\nDa der Build sich täglich verändert, hier ein Live-Link: https://poe.ninja/poe2/profile/Lowepe-1630/runesofaldur/character/LowepeWaldtyp",
+   "notes": {
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Waffenset Konfiguration: \nWaffenset 1: Spell Totem, Archmage\nWaffenset 2: Entangle, Frost Bomb, Elemental Weakness\nWaffenset 1+2: Mana Tempest, Mana Remnants"
+   }
+  },
+  {
+   "title": "Endgame Start (Import)",
+   "desc": "",
+   "notes": {
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Mana Tempest nutzen nachdem alle anderen Skills platziert sind um extra Damage zu bekommen bei Bossen."
+   }
+  },
+  {
+   "title": "Akt 1",
+   "desc": "",
+   "notes": {
+    "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Cold für Akt1 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Reihenfolge/Priorität:\nVolcano (Start Skill)\nEntangle\nFrost Bomb (kann lvl1 bleiben)\nRavenous Swarm\nBonestorm\n Entangle ist unser Clearing Skill. Volcano ist unser Single-Target Skill bis Ende Akt 1 - Volcano ist ein Channeling Skill, als unbedingt ein paar Sekunden gedrückt lassen!\n Volcano & Frost Bomb wird dann abgelöst durch Bonestorm vor dem Akt 1 Boss."
+   }
+  },
+  {
+   "title": "Akt 2",
+   "desc": "",
+   "notes": {
+    "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Level Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Lightning/Fire für Akt2 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Sobald Wildsurge Incantation im Skilltree gewählt wird, machen die Plant und Storm Skills richtig Spaß.\nReihenfolge/Priorität:\nBonestorm\nEntangle\nThunderstorm\nRavenous Swarm\nThunderstorm löst nicht nur Schock beim Gegner aus, sondern erhöht auch die Dauer von Entangle"
+   }
+  },
+  {
+   "title": "Akt 3",
+   "desc": "",
+   "notes": {
+    "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm"
+   }
+  },
+  {
+   "title": "Akt 4",
+   "desc": "",
+   "notes": {
+    "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm",
+    "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree": "Für den Umbau zu Totem benötigt ihr einiges an Gold, also nicht alles ausgeben und immer wieder Rare Items (Gelbe Gegenstände) identifiziert verkaufen!"
+   }
+  },
+  {
+   "title": "Akt 4 - Totem Swap",
+   "desc": "ACHTUNG!!!\nDer Wechsel zu Spell Totem sollte nicht erfolgen bevor man diese Bedingungen erfüllt: \nMindestens 210 Spirit (60 aus der Kampagne + Szepter mit 130+, ggf. auf Rüstung oder Amulett) \nGenug Skillpunkte beim Umbau für Efficient Inscriptions, falls man nicht 255 Spirit hat.\nGenug Skillpunkte beim Umbau für Ancestral Bond\nJe länger wir also mit dem vorherigen Setup spielen, desto besser!\nAb hier könnte man nach Bedarf ausprobieren Mind Over Matter zu spielen oder teilweise Schaden umzuwandeln durch Mental Perseverance \nRegex für Händler: \"([32]0|25)% i.+mov|^\\+.*ng sp.*ls$|^\\+.*al sp.*ls$|spiri\"",
+   "notes": {
+    "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+    "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree": "Waffenset 1 = Totem\nWaffenset 2 = Alles andere"
+   }
+  },
+  {
+   "title": "Interludes",
+   "desc": "Regex für Händler: \"([32]0|25)% i.+mov|^\\+.*ng sp.*ls$|^\\+.*al sp.*ls$|spiri\"",
+   "notes": {
+    "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+    "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!"
+   }
+  }
+ ],
+ "sections": {
+  "NgfDocumentCmWidgetRichTextSimplifiedV2.simplifiedContent.c81bc723": "Mehr Infos auf TWITCH!\nKommt gerne vorbei für Fragen, Informationen usw.\n___________________________________\nUPDATE ZUM FÜR 0.5.5 NACHTRAG VON GGG: \nRemnants und Expedition taucht erstmalig in Akt 4 auf mit Update 0.5.5 - vorher gibt es also keine Chance Grim Pillars zu bekommen. Ich würde daher den Wechsel zu Totem soweit hinauszögern wie möglich, ggf. vorerst mit Spark spielen (so wie ich es in 0.5 auch die ersten Stunden im Endgame gemacht habe). \n___________________________________\nAscendancy Wahl\nWir starten als Oracle um vom + Limit für Spell Totem zu profitieren. Um ganz früh mit Spell Totem zu spielen, könnte man auch 2 Totems auf dem Shaman spielen. Allerdings war in meinen Tests 2 Totems nicht genug und daher rate ich davon ab. \nGenerelle Informationen\nIn Patch 0.5 wird Ancestral Bond im Skilltree so verändert, dass Spell Totem keine Charges mehr braucht Das ermöglicht es uns viel früher Spell Totem zu spielen und nicht mehr Abhängig von bestimmten Charge Uniques zu sein. Wir bezahlen nur die Mana-Kosten des Totems, nicht der Zauber. Dadurch ergibt sich eine interessante Synergie mit  Mind Over Matter und Archmage um im generellen mit 'Mana-Stacking'.\nMehr Infos dazu auch in DIESEM VIDEO!\nLeveling\nBis zum Ende der Kampagne werden wir auf Spell Totem umsteigen. Warum? Es ist zu schwierig Spirit & Level aufzubauen um 4 Spell Totem aufstellen zu können. Nach einigen Tests fühle ich mich besser dabei erst am Ende der Kampagne umzubauen.\nBis zu Spell Totem spielen wir überwiegend mit Bonestorm und Entangle. \nHier findet ihr meine aktuellen Filter für den Build: KLICK MICH FÜR FILTER\nEndgame\nDa potential entfaltet sich aber erst richtig im späteren Endgame. Sobald wir voll auf Spell Totem umgestiegen sind, ist unser Hauptziel Mana aufzubauen. Denn mit Archmage und Mind Over Matter bekommen wir eine Defensive und Offensive aus unserem Mana-Pool. Optional können wir am Anfang Spell Totem im niedrigen Levelbereich lassen um wenig Mana zu bezahlen. Später haben wir genügen Mechaniken um die Mana-Kosten tragen zu können.\nCrafting Anleitung für Amulett\nArchmage Amulett (Item-Level 79+) - Level von Archmage egal\nCraft kann sehr teuer werden, nicht unter 100div anfangen!\n1. Amulett Rare machen (Regal Orb)\n2. Alle Mods außer 1 runter machen (Annulment Orb) \n3. Chaos spammen bis \"T1 Spirit\" oder \"T1 Spell-Level\"\n4. Abyss Desecrate (Preserved Collarbone) NICHT AUFDECKEN\n5. 1 weiterer Mod mit Exalted Orb\n6. \"T1 Spirit/Spell-Level\" Fracturen mit (Fracturing Orb)\n7. Wenn getroffen, dann gut. Sonst zurück zu Schritt 1\n8. Alle Mods außer 1 (+ den Factured) runter machen (Annulment Orb) \n9. Chaos spammen bis zum anderen Mod (Spirit oder Spell-Level je nach dem was gefractured ist)\n10. Neural Catalyst bis 20% Qualität aufs Amulett machen\n11. \"Omen of Catalysing Exaltation\" + \"Omen of Sinistral Exaltation\" + Perfect Exalted Orb => Mana Prefix mit hoher Chance\n12. Abyss Desecrate (\"Preserved Collarbone\") + \"Omen of the Blackblooded\" => Kurgal Mod\n13. Desecrate aufdecken mit \"Omen of Abyssal Echoes\" => Chance auf \"Mana before Life\"-Mod ist hoch, zurück zu Schritt 12 mit \"Omen of Light\"+Annulment\n14. Fertig",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.4b46748c": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Cold für Akt1 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.1585fa3f": "Reihenfolge/Priorität:\nVolcano (Start Skill)\nEntangle\nFrost Bomb (kann lvl1 bleiben)\nRavenous Swarm\nBonestorm\n Entangle ist unser Clearing Skill. Volcano ist unser Single-Target Skill bis Ende Akt 1 - Volcano ist ein Channeling Skill, als unbedingt ein paar Sekunden gedrückt lassen!\n Volcano & Frost Bomb wird dann abgelöst durch Bonestorm vor dem Akt 1 Boss.",
+  "NgfDocumentCmWidgetRichTextSimplifiedV2.simplifiedContent.a7505586": "01/06/2026 v1.2.0 Endgame Update mit Bitter Dead und Grim Pillars\n31/05/2026 v1.1.3 Umbau Grim Pillars Spell Totem im Endgame\n30/05/2026 v1.1.2 Import Endgame Start zum Nachverfolgen\n29/05/2026 v1.1.1 Leveling Optimierung\n28/05/2026 v1.1.0 Kompletter Umbau auf Oracle wegen Patchnote Änderungen\n27/05/2026 v1.0.2 Backup-Plan mit Dark Effigy eingebaut + Leveling vervollständigt\n26/05/2026 v1.0.1 Anpassung Support Gems Kampagne\n26/05/2026 v1.0.0 Build Konzept veröffentlicht",
+  "NgfDocumentCmWidgetStrengthsAndWeaknessesV1.strengths.91048081": "Einfaches Leveling\nKomfortabler Totem Spielstil\nSchaden & Defensive durch Mana\nFlexibel (Unterschiedliche Spells nutzen)\nMit Grim Pillars guten Clear-Speed und sehr guten Boss-Schaden",
+  "NgfDocumentCmWidgetStrengthsAndWeaknessesV1.weaknesses.91048081": "Totem Verzögerung\nHäufig 2-Button Build (Entangle für Grim Pillars)",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.0af958be": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Level Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Lightning/Fire für Akt2 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.9fc78d2c": "Sobald Wildsurge Incantation im Skilltree gewählt wird, machen die Plant und Storm Skills richtig Spaß.\nReihenfolge/Priorität:\nBonestorm\nEntangle\nThunderstorm\nRavenous Swarm\nThunderstorm löst nicht nur Schock beim Gegner aus, sondern erhöht auch die Dauer von Entangle",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.1788d9f7": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.77b151ad": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.e4fd3f57": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.1077fcd9": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+  "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree.78cc5267": "Waffenset 1 = Totem\nWaffenset 2 = Alles andere",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.a8b0b72e": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4093684d": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4acb8c00": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+  "Poe2DocumentUgWidgetBuildPlannerExportV1.subTitlePoeBuildPlannerExport.f06538a3": "Export this build variant directly to your game.",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.c2b441e4": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4cbace16": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm",
+  "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree.24fbbf7d": "Für den Umbau zu Totem benötigt ihr einiges an Gold, also nicht alles ausgeben und immer wieder Rare Items (Gelbe Gegenstände) identifiziert verkaufen!",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.888d7e7c": "Mana Tempest nutzen nachdem alle anderen Skills platziert sind um extra Damage zu bekommen bei Bossen.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.e884944a": "Waffenset Konfiguration: \nWaffenset 1: Spell Totem, Archmage\nWaffenset 2: Entangle, Frost Bomb, Elemental Weakness\nWaffenset 1+2: Mana Tempest, Mana Remnants",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4c18e011": "Waffenset Konfiguration: \nWaffenset 1: Spell Totem, Archmage\nWaffenset 2: Entangle, Frost Bomb, Elemental Weakness\nWaffenset 1+2: Mana Tempest, Mana Remnants"
+ }
+}

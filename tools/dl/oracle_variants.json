@@ -1,0 +1,4500 @@
+{
+ "title": "[0.5.5] Oracle Spell-Totem Spark/Grim Pillars (GERMAN) - PoE 2 Druid Build Guide",
+ "variants": [
+  {
+   "idx": 0,
+   "name": "Endgame (Final)",
+   "items": {
+    "helmet": {
+     "n": "Kamasan Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "98% increased Energy Shield",
+      "+115 to maximum Mana",
+      "+31% to Lightning Resistance",
+      "+15% to Lightning and Chaos Resistances"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+20%"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "416"
+      },
+      {
+       "name": "Item Level",
+       "value": "79"
+      }
+     ],
+     "runes": [
+      "soulcore-soulcoremaxmana"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Feathered Raiment",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt10.webp",
+     "mods": [
+      "41% increased Energy Shield",
+      "+45 to maximum Life",
+      "+61 to Spirit",
+      "+33 to Intelligence",
+      "+35% to Fire Resistance",
+      "58% reduced Poison Duration on you",
+      "109% increased Energy Shield"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+20%"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "496"
+      },
+      {
+       "name": "Item Level",
+       "value": "80"
+      }
+     ],
+     "runes": [
+      "soulcore-runespecial25",
+      "soulcore-runeenhanceperfect"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Vaal Gloves",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.webp",
+     "mods": [
+      "+60 to maximum Energy Shield",
+      "+60 to maximum Life",
+      "+103 to maximum Mana",
+      "+66% to Cold Resistance",
+      "Gain 5 Life per Enemy Hit with Attacks"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+20%"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "133"
+      },
+      {
+       "name": "Item Level",
+       "value": "77"
+      }
+     ],
+     "runes": [
+      "soulcore-runemanaperfect"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Bound Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "30% increased Movement Speed",
+      "+105 to maximum Life",
+      "+106 to maximum Mana",
+      "+39% to Fire Resistance",
+      "+40% to Lightning Resistance",
+      "+21% to Chaos Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+20%"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "82"
+      },
+      {
+       "name": "Item Level",
+       "value": "81"
+      }
+     ],
+     "runes": [
+      "soulcore-soulcorechaos"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/AbsentAmulet.webp",
+     "mods": [
+      "+164 to maximum Mana",
+      "+2 to Level of all Spell Skills",
+      "18% of Damage is taken from Mana before Life"
+     ],
+     "stats": [
+      {
+       "name": "Quality (Mana Modifiers)",
+       "value": "+20%"
+      },
+      {
+       "name": "Item Level",
+       "value": "79"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Prismatic Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/PrismaticRing.webp",
+     "mods": [
+      "+201 to Evasion Rating",
+      "+108 to maximum Life",
+      "23% increased Cast Speed",
+      "+22% to Cold Resistance",
+      "33% increased Mana Regeneration Rate"
+     ],
+     "stats": [
+      {
+       "name": "Quality (Mana Modifiers)",
+       "value": "+20%"
+      },
+      {
+       "name": "Item Level",
+       "value": "80"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Lazuli Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/LazuliRing.webp",
+     "mods": [
+      "+93 to Accuracy Rating",
+      "+208 to maximum Mana",
+      "19% increased Rarity of Items found",
+      "23% increased Cast Speed",
+      "+23% to Fire Resistance",
+      "+22% to Cold Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Quality (Mana Modifiers)",
+       "value": "+20%"
+      },
+      {
+       "name": "Item Level",
+       "value": "79"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Heavy Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt09.webp",
+     "mods": [
+      "+173 to maximum Life",
+      "16% increased Charm Effect Duration",
+      "+35% to Fire Resistance",
+      "+24% to Cold Resistance",
+      "+38% to Lightning Resistance",
+      "+113 to maximum Mana"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "77"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/SilverUniqueCharm.webp",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/ThawingUniqueCharm.webp",
+     "mods": [
+      "22% Chance to gain a Charges when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Arakaali's Gift",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/AntidoteUniqueCharm.webp",
+     "mods": [
+      "Recover Life equal to 19% of Mana Flask's Recovery Amount when used",
+      "Recover Mana equal to 19% of Life Flask's Recovery Amount when used"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+     "mods": [
+      "60% increased Amount Recovered",
+      "37% increased Charges"
+     ],
+     "stats": [
+      {
+       "name": "Recovers 1472 Life over 3 Seconds",
+       "value": "1472"
+      },
+      {
+       "name": "Consumes 10 of 102 Charges on use",
+       "value": "10"
+      },
+      {
+       "name": "Currently has 102 Charges",
+       "value": "102"
+      },
+      {
+       "name": "Item Level",
+       "value": "64"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Uniques/LaviangasSpirit.webp",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "71% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Dueling Wand",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand13.webp",
+     "mods": [
+      "20% increased Spell Damage",
+      "+170 to maximum Mana",
+      "+4 to Level of all Cold Spell Skills",
+      "+17 to Intelligence",
+      "50% increased Mana Regeneration Rate",
+      "62% increased Spell Damage",
+      "Minions deal 61% increased Damage"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "67"
+      }
+     ],
+     "runes": [
+      "soulcore-runespecial5"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Omen Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre04.webp",
+     "mods": [
+      "73% increased Spirit",
+      "+161 to maximum Mana",
+      "Allies in your Presence have +9% to all Elemental Resistances",
+      "Minions have 41% increased maximum Life",
+      "66% increased Mana Regeneration Rate"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+20%"
+      },
+      {
+       "name": "Spirit",
+       "value": "188"
+      },
+      {
+       "name": "Item Level",
+       "value": "81"
+      }
+     ],
+     "runes": [
+      "soulcore-talismanrabbit"
+     ],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Spellslinger",
+     "slug": "metaspellslingerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalInvocationMetaSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SpellslingerWeaponSkill.webp",
+     "sup": [],
+     "supIcons": {},
+     "supSlugs": [],
+     "weaponSet": null
+    },
+    {
+     "skill": "Malice",
+     "slug": "maliceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MaliceWeaponSkill.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Her Declaration",
+      "Clarity II"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Her Declaration": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/MothersDeclaration.webp",
+      "Clarity II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ClaritySupportGem.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayertwo",
+      "supportherdeclarationplayer",
+      "supportclarityplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmageplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ArchmageSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/ArchmageSkill.webp",
+     "sup": [
+      "Lightning Mastery"
+     ],
+     "supIcons": {
+      "Lightning Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LightningMasterySupportGem.webp"
+     },
+     "supSlugs": [
+      "supportlightningmasteryplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Spell Totem",
+     "slug": "summonmetatotemspelltotemplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidSpellTotemSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidSpellTotem.webp",
+     "sup": [
+      "grimpillarsplayer",
+      "Magnified Area II",
+      "Urgent Totems III",
+      "bitterdeadplayer",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {
+      "grimpillarsplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ExpeditionGrimPillarsGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Urgent Totems III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/TotemPlacementSpeedSupportGem.webp",
+      "bitterdeadplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ExpeditionBitterDeadGem.webp",
+      "Rakiata's Flow": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Rakiata.webp"
+     },
+     "supSlugs": [
+      "grimpillarsplayer",
+      "supportmagnifiedareaplayertwo",
+      "supporturgenttotemsplayerthree",
+      "bitterdeadplayer",
+      "supportrakiatasflowplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III"
+     ],
+     "supIcons": {
+      "Harmonic Remnants II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RushedRemnantsSupportGem.webp",
+      "Remnant Potency III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InterludeSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportfleetingremnantsplayertwo",
+      "supportinterludeplayerthree"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Repulsion",
+     "slug": "curseofrepulsionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ExpeditionMarkofRepulsionGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/ExpeditionMarkofRepulsion.webp",
+     "sup": [],
+     "supIcons": {},
+     "supSlugs": [],
+     "weaponSet": null
+    },
+    {
+     "skill": "Entangle",
+     "slug": "entangleplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidEntangle.webp",
+     "sup": [
+      "Branching Fissures I",
+      "Elemental Discharge",
+      "Unleash",
+      "Rapid Casting II"
+     ],
+     "supIcons": {
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.webp",
+      "Elemental Discharge": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalDischargeSupportGem.webp",
+      "Unleash": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/UnleashSupportGem.webp",
+      "Rapid Casting II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportbranchingfissuresplayer",
+      "supportelementaldischargeplayer",
+      "supportunleashplayer",
+      "supportrapidcastingplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Tempest",
+     "slug": "manatempestplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ManaTempestSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressManaTempest.webp",
+     "sup": [
+      "Advancing Storm",
+      "Efficiency II"
+     ],
+     "supIcons": {
+      "Advancing Storm": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MovingStormSupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportadvancingstormplayer",
+      "supportefficiencyplayertwo"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     17517,
+     17655,
+     64299,
+     12462,
+     50558,
+     32194,
+     55933,
+     22558,
+     51052,
+     22616,
+     14654,
+     21017,
+     55789,
+     41665,
+     50562,
+     58295,
+     47263,
+     18448,
+     30141,
+     55190,
+     59039,
+     28223,
+     6100,
+     20963,
+     10100,
+     56757,
+     11292,
+     2575,
+     28002,
+     49547,
+     49938,
+     26196,
+     11741,
+     39131,
+     55596,
+     45569,
+     2672,
+     28267,
+     47931,
+     33722,
+     4140,
+     59093,
+     5088,
+     49537,
+     58016,
+     45202,
+     23382,
+     7960,
+     48552,
+     31238,
+     1433,
+     34840,
+     48618,
+     6748,
+     62122,
+     4295,
+     44733,
+     13500,
+     41044,
+     47591,
+     9226,
+     50104,
+     47168,
+     54521,
+     45885,
+     59362,
+     41669,
+     44455,
+     60515,
+     19955,
+     62677,
+     46554,
+     36379,
+     25026,
+     3567,
+     10159,
+     31977,
+     29240,
+     57513,
+     10131,
+     3251,
+     21984,
+     61403,
+     14446,
+     47976,
+     49976,
+     62936,
+     51891,
+     44669,
+     50816,
+     39567,
+     2508,
+     41615,
+     49192,
+     43396
+    ],
+    "s1": [
+     6355,
+     14110,
+     27096,
+     33423,
+     36197,
+     38124,
+     45400,
+     51820,
+     59908,
+     63170,
+     65192,
+     22616,
+     47931,
+     59093,
+     10534,
+     46205,
+     2174,
+     19249
+    ],
+    "s2": [
+     2244,
+     13233,
+     15782,
+     20032,
+     27626,
+     28839,
+     38103,
+     43036,
+     54067,
+     56703,
+     56762,
+     1433,
+     6898,
+     17517,
+     26196,
+     48552,
+     25429,
+     58096,
+     61444,
+     15180
+    ],
+    "a": [
+     11335,
+     5571,
+     47190,
+     32905,
+     42761,
+     25092,
+     34313,
+     378,
+     55135
+    ],
+    "attr": [
+     {
+      "attribute": "str",
+      "nodeSlug": "node-1433"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-14654"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-22616"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-31238"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-44733"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-45885"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-47263"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-47931"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-58295"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-59093"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-59362"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-62677"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-10100"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-10131"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-11248"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-11741"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-14446"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-15782"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-18448"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-21568"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-22558"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-23382"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-28002"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-29240"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-30141"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-32194"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-3251"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-33722"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-34840"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-39131"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-4140"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-46554"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-47168"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-47976"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-48552"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-49938"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-50104"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-51052"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-54521"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-55933"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-61403"
+     }
+    ],
+    "jewels": [
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-26196",
+      "prefixSlugs": [
+       "JewelCurseArea",
+       "SpellDamage3"
+      ],
+      "suffixSlugs": [
+       "JewelManaonKill",
+       "SpellCriticalStrikeMultiplier1"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":13}},{\"id\":\"explicit.stat_274716455\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_153777645\",\"value\":{\"min\":8}},{\"id\":\"explicit.stat_1030153674\",\"value\":{\"min\":1}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-7960",
+      "prefixSlugs": [
+       "JewelOfferingLife",
+       "SpellDamage3"
+      ],
+      "suffixSlugs": [
+       "CriticalMultiplier1",
+       "JewelCastSpeed"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":13}},{\"id\":\"explicit.stat_2891184298\",\"value\":{\"min\":2}},{\"id\":\"explicit.stat_3556824919\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_3787460122\",\"value\":{\"min\":15}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-55190",
+      "prefixSlugs": [
+       "JewelColdPenetration",
+       "SpellDamage3"
+      ],
+      "suffixSlugs": [
+       "ManaRegeneration1",
+       "SpellCriticalStrikeMultiplier2"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":13}},{\"id\":\"explicit.stat_789117908\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_274716455\",\"value\":{\"min\":15}},{\"id\":\"explicit.stat_3417711605\",\"value\":{\"min\":5}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-21984",
+      "prefixSlugs": [
+       "JewelEnergyShieldDelay",
+       "SpellDamage2"
+      ],
+      "suffixSlugs": [
+       "JewelCastSpeed",
+       "JewelCurseDuration"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_3824372849\",\"value\":{\"min\":15}},{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":8}},{\"id\":\"explicit.stat_2891184298\",\"value\":{\"min\":2}},{\"id\":\"explicit.stat_1782086450\",\"value\":{\"min\":10}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     }
+    ]
+   },
+   "req": {
+    "dex": 5,
+    "str": 25,
+    "int": 40
+   },
+   "notes": {
+    "title": "Endgame (Final)",
+    "desc": "",
+    "notes": {}
+   }
+  },
+  {
+   "idx": 1,
+   "name": "Endgame (Woche 1)",
+   "items": {
+    "helmet": {
+     "n": "Saintly Crown",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr04.webp",
+     "mods": [
+      "+72 to Armour",
+      "+25 to maximum Energy Shield",
+      "+113 to maximum Life",
+      "+70 to maximum Mana",
+      "15% reduced Attributes Requirements",
+      "+32% to Cold Resistance",
+      "+24% to Lightning Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Armour",
+       "value": "260"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "77"
+      },
+      {
+       "name": "Item Level",
+       "value": "78"
+      }
+     ],
+     "runes": [
+      "soulcore-runelightninggreater"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Soul Mantle",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Uniques/soulmantle.webp",
+     "mods": [
+      "115% increased Armour and Energy Shield",
+      "+75 to Spirit",
+      "+10 to Strength",
+      "+15 to Intelligence",
+      "+1 to maximum number of Summoned Totems",
+      "Inflicts a random Curse on you when your Totems die, ignoring Curse limit"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial10",
+      "soulcore-runecoldgreater"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Runeforged Ancient Cuffs",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr02.webp",
+     "mods": [
+      "+72 to Armour",
+      "+25 to maximum Energy Shield",
+      "+123 to maximum Life",
+      "+98 to maximum Mana",
+      "+30% to Cold Resistance",
+      "+21% to Lightning Resistance",
+      "Gain 6 Mana per enemy killed"
+     ],
+     "stats": [
+      {
+       "name": "Armour",
+       "value": "130"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "41"
+      },
+      {
+       "name": "Runic Ward",
+       "value": "63"
+      },
+      {
+       "name": "Item Level",
+       "value": "72"
+      }
+     ],
+     "runes": [
+      "soulcore-soulcorechaos"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Bound Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "30% increased Movement Speed",
+      "+105 to maximum Life",
+      "+106 to maximum Mana",
+      "+39% to Fire Resistance",
+      "+40% to Lightning Resistance",
+      "+21% to Chaos Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "68"
+      },
+      {
+       "name": "Item Level",
+       "value": "81"
+      }
+     ],
+     "runes": [
+      "soulcore-soulcorechaos"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Gold Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/GoldAmulet.webp",
+     "mods": [
+      "+99 to maximum Life",
+      "+82 to maximum Mana",
+      "+44 to Spirit",
+      "+1 to Level of all Spell Skills",
+      "+14 to all Attributes",
+      "14% increased Cast Speed"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "53"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Prismatic Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/PrismaticRing.webp",
+     "mods": [
+      "+201 to Evasion Rating",
+      "+108 to maximum Life",
+      "23% increased Cast Speed",
+      "+22% to Cold Resistance",
+      "28% increased Mana Regeneration Rate"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "80"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.webp",
+     "mods": [
+      "Adds 2 to 3 Physical Damage to Attacks",
+      "+80 to maximum Life",
+      "+12 to maximum Mana",
+      "16% increased Cast Speed",
+      "+29% to Fire Resistance",
+      "+31% to Lightning Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "60"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Heavy Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt09.webp",
+     "mods": [
+      "+173 to maximum Life",
+      "16% increased Charm Effect Duration",
+      "+35% to Fire Resistance",
+      "+24% to Cold Resistance",
+      "+38% to Lightning Resistance",
+      "+113 to maximum Mana"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "77"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Thawing Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.webp",
+     "mods": [
+      "Recover 233 Mana when Used",
+      "43% increased Charges gained"
+     ],
+     "stats": [
+      {
+       "name": "Lasts 3 Seconds",
+       "value": "3"
+      },
+      {
+       "name": "Consumes 40 of 40 Charges on use",
+       "value": "40"
+      },
+      {
+       "name": "Currently has 40 Charges",
+       "value": "40"
+      },
+      {
+       "name": "Item Level",
+       "value": "79"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Breath of the Mountains",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/SapphireUniqueCharm.webp",
+     "mods": [
+      "15% reduced Charges per use",
+      "Grants a Power Charge on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Antidote Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/AntidoteCharm.webp",
+     "mods": [
+      "Recover 62 Mana when Used",
+      "17% reduced Charges per use"
+     ],
+     "stats": [
+      {
+       "name": "Lasts 3 Seconds",
+       "value": "3"
+      },
+      {
+       "name": "Consumes 16 of 40 Charges on use",
+       "value": "16"
+      },
+      {
+       "name": "Currently has 40 Charges",
+       "value": "40"
+      },
+      {
+       "name": "Item Level",
+       "value": "33"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+     "mods": [
+      "60% increased Amount Recovered",
+      "37% increased Charges"
+     ],
+     "stats": [
+      {
+       "name": "Recovers 1472 Life over 3 Seconds",
+       "value": "1472"
+      },
+      {
+       "name": "Consumes 10 of 102 Charges on use",
+       "value": "10"
+      },
+      {
+       "name": "Currently has 102 Charges",
+       "value": "102"
+      },
+      {
+       "name": "Item Level",
+       "value": "64"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Ultimate Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana09.webp",
+     "mods": [
+      "29% of Recovery applied Instantly",
+      "29% reduced Charges per use"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+10%"
+      },
+      {
+       "name": "Recovers 341 Mana over 3 Seconds",
+       "value": "341"
+      },
+      {
+       "name": "Consumes 7 of 75 Charges on use",
+       "value": "7"
+      },
+      {
+       "name": "Currently has 75 Charges",
+       "value": "75"
+      },
+      {
+       "name": "Item Level",
+       "value": "75"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Dueling Wand",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand13.webp",
+     "mods": [
+      "20% increased Spell Damage",
+      "+170 to maximum Mana",
+      "+4 to Level of all Cold Spell Skills",
+      "+17 to Intelligence",
+      "50% increased Mana Regeneration Rate",
+      "62% increased Spell Damage",
+      "Minions deal 61% increased Damage"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "67"
+      }
+     ],
+     "runes": [
+      "soulcore-runespecial5"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Omen Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre04.webp",
+     "mods": [
+      "62% increased Spirit",
+      "+166 to maximum Mana",
+      "Allies in your Presence Regenerate 24.3 Life per second",
+      "25% reduced Attributes Requirements",
+      "+25 to Strength"
+     ],
+     "stats": [
+      {
+       "name": "Spirit",
+       "value": "177"
+      },
+      {
+       "name": "Item Level",
+       "value": "71"
+      }
+     ],
+     "runes": [
+      "soulcore-talismanrabbit"
+     ],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Spell Totem",
+     "slug": "summonmetatotemspelltotemplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidSpellTotemSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidSpellTotem.webp",
+     "sup": [
+      "grimpillarsplayer",
+      "Magnified Area II",
+      "Urgent Totems III",
+      "Cold Mastery",
+      "bitterdeadplayer"
+     ],
+     "supIcons": {
+      "grimpillarsplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ExpeditionGrimPillarsGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Urgent Totems III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/TotemPlacementSpeedSupportGem.webp",
+      "Cold Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ColdMasterySupportGem.webp",
+      "bitterdeadplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ExpeditionBitterDeadGem.webp"
+     },
+     "supSlugs": [
+      "grimpillarsplayer",
+      "supportmagnifiedareaplayertwo",
+      "supporturgenttotemsplayerthree",
+      "supportcoldmasteryplayer",
+      "bitterdeadplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Entangle",
+     "slug": "entangleplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidEntangle.webp",
+     "sup": [
+      "Branching Fissures I",
+      "Biting Frost II",
+      "Unleash",
+      "Rapid Casting II"
+     ],
+     "supIcons": {
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.webp",
+      "Biting Frost II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BitingFrostSupportGem.webp",
+      "Unleash": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/UnleashSupportGem.webp",
+      "Rapid Casting II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportbranchingfissuresplayer",
+      "supportbitingfrostplayertwo",
+      "supportunleashplayer",
+      "supportrapidcastingplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+     "sup": [
+      "Potent Exposure",
+      "Magnified Area II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {
+      "Potent Exposure": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/StripAwaySupportGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportpotentexposureplayer",
+      "supportmagnifiedareaplayertwo",
+      "prolongeddurationsupportplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Tempest",
+     "slug": "manatempestplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ManaTempestSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressManaTempest.webp",
+     "sup": [
+      "Advancing Storm",
+      "Efficiency II"
+     ],
+     "supIcons": {
+      "Advancing Storm": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MovingStormSupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportadvancingstormplayer",
+      "supportefficiencyplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.webp",
+     "sup": [
+      "Prolonged Duration II"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Malice",
+     "slug": "maliceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MaliceWeaponSkill.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Her Declaration"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Her Declaration": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/MothersDeclaration.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayertwo",
+      "supportherdeclarationplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmageplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ArchmageSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/ArchmageSkill.webp",
+     "sup": [
+      "Lightning Mastery",
+      "Clarity II"
+     ],
+     "supIcons": {
+      "Lightning Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LightningMasterySupportGem.webp",
+      "Clarity II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ClaritySupportGem.webp"
+     },
+     "supSlugs": [
+      "supportlightningmasteryplayer",
+      "supportclarityplayertwo"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III"
+     ],
+     "supIcons": {
+      "Harmonic Remnants II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RushedRemnantsSupportGem.webp",
+      "Remnant Potency III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InterludeSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportfleetingremnantsplayertwo",
+      "supportinterludeplayerthree"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     17517,
+     17655,
+     64299,
+     12462,
+     50558,
+     32194,
+     55933,
+     22558,
+     51052,
+     22616,
+     14654,
+     21017,
+     55789,
+     41665,
+     50562,
+     58295,
+     47263,
+     18448,
+     30141,
+     55190,
+     59039,
+     28223,
+     6100,
+     20963,
+     10100,
+     56757,
+     11292,
+     2575,
+     28002,
+     49938,
+     26196,
+     11741,
+     39131,
+     55596,
+     45569,
+     2672,
+     28267,
+     47931,
+     33722,
+     4140,
+     59093,
+     5088,
+     49537,
+     58016,
+     45202,
+     23382,
+     7960,
+     48552,
+     50104,
+     47168,
+     54521,
+     45885,
+     59362,
+     41669,
+     44455,
+     60515,
+     19955,
+     41972,
+     62677,
+     46554,
+     36379,
+     25026,
+     3567,
+     10159,
+     31977,
+     4828,
+     19044,
+     10314,
+     16256,
+     29240,
+     57513,
+     10131,
+     3251,
+     55947,
+     62153,
+     32054,
+     13823,
+     50816,
+     39567,
+     17505,
+     28774,
+     10295,
+     35408,
+     38596,
+     31925,
+     36474,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444
+    ],
+    "s1": [
+     6355,
+     10534,
+     14110,
+     19249,
+     27096,
+     33209,
+     33423,
+     36197,
+     38124,
+     41615,
+     43396,
+     45400,
+     46205,
+     49192,
+     51820,
+     59908,
+     63170,
+     65192,
+     22616,
+     47931,
+     59093
+    ],
+    "s2": [
+     1433,
+     2244,
+     13233,
+     15782,
+     16499,
+     20032,
+     25429,
+     27626,
+     28839,
+     31238,
+     32009,
+     36639,
+     36814,
+     38103,
+     43036,
+     54067,
+     56703,
+     56762,
+     6898,
+     17517,
+     48552,
+     62677
+    ],
+    "a": [
+     11335,
+     5571,
+     42761,
+     21284,
+     30904,
+     25092,
+     34313,
+     378,
+     55135
+    ],
+    "attr": [
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-59093"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-10100"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-10131"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-11741"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-1433"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-14654"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-15782"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-18448"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-22558"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-23382"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-28002"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-29240"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-30141"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-31238"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-32194"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-3251"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-33722"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-39131"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-4140"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-46554"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-47168"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-47263"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-48552"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-49938"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-50104"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-51052"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-54521"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-55933"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-58295"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-22616"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-45885"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-47931"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-59362"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-62677"
+     }
+    ],
+    "jewels": [
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-26196",
+      "prefixSlugs": [
+       "JewelCurseArea",
+       "SpellDamage3"
+      ],
+      "suffixSlugs": [
+       "JewelManaonKill",
+       "SpellCriticalStrikeMultiplier1"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":13}},{\"id\":\"explicit.stat_274716455\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_153777645\",\"value\":{\"min\":8}},{\"id\":\"explicit.stat_1030153674\",\"value\":{\"min\":1}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-7960",
+      "prefixSlugs": [
+       "JewelOfferingLife",
+       "SpellDamage3"
+      ],
+      "suffixSlugs": [
+       "CriticalMultiplier1",
+       "JewelCastSpeed"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":13}},{\"id\":\"explicit.stat_2891184298\",\"value\":{\"min\":2}},{\"id\":\"explicit.stat_3556824919\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_3787460122\",\"value\":{\"min\":15}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-55190",
+      "prefixSlugs": [
+       "JewelColdPenetration",
+       "SpellDamage3"
+      ],
+      "suffixSlugs": [
+       "ManaRegeneration1",
+       "SpellCriticalStrikeMultiplier2"
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2974417149\",\"value\":{\"min\":13}},{\"id\":\"explicit.stat_789117908\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_274716455\",\"value\":{\"min\":15}},{\"id\":\"explicit.stat_3417711605\",\"value\":{\"min\":5}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     }
+    ]
+   },
+   "req": {
+    "dex": 0,
+    "str": 35,
+    "int": 55
+   },
+   "notes": {
+    "title": "Endgame (Woche 1)",
+    "desc": "In der neusten Version ist zusätzlich zu Grim Pillars noch Bitter Dead im Spell Totem. Damit haben wir massiv viel mehr Clearspeed. Optional kann der Gem bei Bossen ausgetauscht werden (habe ich bisher nicht gebraucht). \n\nDa der Build sich täglich verändert, hier ein Live-Link: https://poe.ninja/poe2/profile/Lowepe-1630/runesofaldur/character/LowepeWaldtyp",
+    "notes": {
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Waffenset Konfiguration: \nWaffenset 1: Spell Totem, Archmage\nWaffenset 2: Entangle, Frost Bomb, Elemental Weakness\nWaffenset 1+2: Mana Tempest, Mana Remnants"
+    }
+   }
+  },
+  {
+   "idx": 2,
+   "name": "Endgame Start (Import)",
+   "items": {
+    "helmet": {
+     "n": "Runeforged Feathered Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+     "mods": [
+      "32% increased Energy Shield",
+      "+50 to maximum Mana",
+      "32% increased Rarity of Items found",
+      "+29% to Fire Resistance",
+      "+20% to Cold Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "71"
+      },
+      {
+       "name": "Runic Ward",
+       "value": "49"
+      },
+      {
+       "name": "Item Level",
+       "value": "54"
+      }
+     ],
+     "runes": [
+      "soulcore-runelightninggreater"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Waveshaper",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Uniques/waveshaper.webp",
+     "mods": [
+      "+196 to maximum Energy Shield",
+      "+38 to Spirit",
+      "+31% to Fire Resistance",
+      "+35% to Cold Resistance",
+      "Increases and Reductions to Mana Regeneration Rate also\napply to Energy Shield Recharge Rate",
+      "Gain 40% of Maximum Mana as Armour"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runecoldlesser"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Runeforged Baroque Gloves",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt04.webp",
+     "mods": [
+      "Adds 7 to 10 Fire damage to Attacks",
+      "Adds 4 to 7 Cold damage to Attacks",
+      "+38 to maximum Life",
+      "+16% to Cold Resistance",
+      "+16% to Chaos Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "33"
+      },
+      {
+       "name": "Runic Ward",
+       "value": "36"
+      },
+      {
+       "name": "Item Level",
+       "value": "58"
+      }
+     ],
+     "runes": [
+      "soulcore-runefire"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Runeforged Silk Slippers",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt04.webp",
+     "mods": [
+      "20% increased Movement Speed",
+      "+67 to maximum Life",
+      "+56 to maximum Mana",
+      "+10 to Intelligence"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "36"
+      },
+      {
+       "name": "Runic Ward",
+       "value": "31"
+      },
+      {
+       "name": "Item Level",
+       "value": "33"
+      }
+     ],
+     "runes": [
+      "soulcore-runelightninggreater"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Lunar Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LunarAmulet.webp",
+     "mods": [
+      "+23 to maximum Life",
+      "15% increased Cast Speed",
+      "+6% to Lightning Resistance",
+      "8.9 Life Regeneration per second"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "28"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Pearl Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/PearlRing.webp",
+     "mods": [
+      "Adds 2 to 3 Physical Damage to Attacks",
+      "+157 to Evasion Rating",
+      "+26 to maximum Life",
+      "14% increased Cast Speed",
+      "+11 to Strength"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "57"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.webp",
+     "mods": [
+      "Adds 2 to 3 Physical Damage to Attacks",
+      "+80 to maximum Life",
+      "+12 to maximum Mana",
+      "16% increased Cast Speed",
+      "+29% to Fire Resistance",
+      "+31% to Lightning Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "60"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Utility Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt10.webp",
+     "mods": [
+      "+148 to maximum Life",
+      "16% increased Charm Effect Duration",
+      "+12 to Strength",
+      "+14% to Lightning Resistance",
+      "1 to 3 Physical Thorns damage"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "64"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Sapphire Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/SapphireCharm.webp",
+     "mods": [
+      "Recover 19 Mana when Used",
+      "24% increased Charges gained"
+     ],
+     "stats": [
+      {
+       "name": "Lasts 4 Seconds",
+       "value": "4"
+      },
+      {
+       "name": "Consumes 20 of 40 Charges on use",
+       "value": "20"
+      },
+      {
+       "name": "Currently has 40 Charges",
+       "value": "40"
+      },
+      {
+       "name": "Item Level",
+       "value": "11"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Antidote Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/AntidoteCharm.webp",
+     "mods": [
+      "Recover 62 Mana when Used",
+      "17% reduced Charges per use"
+     ],
+     "stats": [
+      {
+       "name": "Lasts 3 Seconds",
+       "value": "3"
+      },
+      {
+       "name": "Consumes 16 of 40 Charges on use",
+       "value": "16"
+      },
+      {
+       "name": "Currently has 40 Charges",
+       "value": "40"
+      },
+      {
+       "name": "Item Level",
+       "value": "33"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": null,
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+     "mods": [
+      "60% increased Amount Recovered",
+      "37% increased Charges"
+     ],
+     "stats": [
+      {
+       "name": "Recovers 1472 Life over 3 Seconds",
+       "value": "1472"
+      },
+      {
+       "name": "Consumes 10 of 102 Charges on use",
+       "value": "10"
+      },
+      {
+       "name": "Currently has 102 Charges",
+       "value": "102"
+      },
+      {
+       "name": "Item Level",
+       "value": "64"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Transcendent Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana08.webp",
+     "mods": [
+      "43% increased Amount Recovered",
+      "23% increased Charges gained"
+     ],
+     "stats": [
+      {
+       "name": "Recovers 408 Mana over 3.50 Seconds",
+       "value": "408"
+      },
+      {
+       "name": "Consumes 10 of 75 Charges on use",
+       "value": "10"
+      },
+      {
+       "name": "Currently has 75 Charges",
+       "value": "75"
+      },
+      {
+       "name": "Item Level",
+       "value": "51"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Attuned Wand",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand03.webp",
+     "mods": [
+      "68% increased Spell Damage",
+      "46% increased Lightning Damage",
+      "+23 to maximum Mana",
+      "+2 to Level of all Lightning Spell Skills",
+      "39% increased Critical Hit Chance for Spells",
+      "19% increased Mana Regeneration Rate"
+     ],
+     "stats": [
+      {
+       "name": "Item Level",
+       "value": "21"
+      }
+     ],
+     "runes": [
+      "soulcore-runeenhancegreater"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.webp",
+     "mods": [
+      "44% increased Spirit",
+      "+40 to maximum Mana",
+      "Allies in your Presence deal 1 to 24 added Attack Lightning Damage",
+      "Allies in your Presence have 24% increased Critical Hit Chance",
+      "Allies in your Presence have 17% increased Critical Damage Bonus",
+      "20% reduced Attributes Requirements"
+     ],
+     "stats": [
+      {
+       "name": "Quality",
+       "value": "+3%"
+      },
+      {
+       "name": "Spirit",
+       "value": "144"
+      },
+      {
+       "name": "Item Level",
+       "value": "42"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Spell Totem",
+     "slug": "summonmetatotemspelltotemplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidSpellTotemSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidSpellTotem.webp",
+     "sup": [
+      "uniqueearthboundtriggeredsparkplayer",
+      "Urgent Totems III",
+      "Zenith II",
+      "Projectile Acceleration III"
+     ],
+     "supIcons": {
+      "uniqueearthboundtriggeredsparkplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/SparkSkillGem.webp",
+      "Urgent Totems III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/TotemPlacementSpeedSupportGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Projectile Acceleration III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterProjectilesSupportGem.webp"
+     },
+     "supSlugs": [
+      "uniqueearthboundtriggeredsparkplayer",
+      "supporturgenttotemsplayerthree",
+      "supportzenithplayertwo",
+      "supportprojectileaccelerationplayerthree"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+     "sup": [
+      "Potent Exposure",
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Potent Exposure": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/StripAwaySupportGem.webp",
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportpotentexposureplayer",
+      "supportmagnifiedareaplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.webp",
+     "sup": [
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Flame Wall",
+     "slug": "flamewallplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FlameWallSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFlameWall.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Efficiency I"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Efficiency I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayertwo",
+      "supportefficiencyplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstormsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/OrbOfStormsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressOrbOfStorms.webp",
+     "sup": [
+      "Living Lightning",
+      "Overabundance I",
+      "Unleash"
+     ],
+     "supIcons": {
+      "Living Lightning": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp",
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp",
+      "Unleash": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/UnleashSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportlivinglightningplayer",
+      "supportincreaselimitplayer",
+      "supportunleashplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [],
+     "supIcons": {},
+     "supSlugs": [],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Tempest",
+     "slug": "manatempestplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ManaTempestSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressManaTempest.webp",
+     "sup": [
+      "Advancing Storm"
+     ],
+     "supIcons": {
+      "Advancing Storm": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MovingStormSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportadvancingstormplayer"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     45923,
+     52319,
+     48305,
+     8406,
+     35426,
+     48631,
+     22616,
+     41615,
+     49192,
+     43396,
+     6898,
+     17517,
+     17655,
+     64299,
+     12462,
+     50558,
+     32194,
+     28002,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357,
+     38856,
+     2071,
+     38420,
+     37543,
+     50423,
+     46358,
+     59376,
+     34058,
+     36286,
+     41130,
+     8397,
+     56935,
+     57710,
+     39037,
+     11672,
+     47177,
+     8569,
+     46034,
+     41029,
+     25557,
+     55668,
+     35896,
+     53266,
+     53560,
+     46157,
+     37806,
+     24165,
+     4328,
+     63668,
+     9069,
+     42245,
+     30979,
+     44733,
+     1433,
+     31238,
+     48552,
+     7960,
+     23382,
+     59093,
+     5088,
+     49537,
+     58016,
+     45202,
+     17505,
+     28774,
+     10295,
+     20718,
+     13294,
+     39990,
+     38103,
+     25429
+    ],
+    "s1": [
+     2955,
+     6355,
+     14110,
+     28800,
+     38124,
+     51820,
+     55308,
+     28002,
+     59093
+    ],
+    "s2": [
+     2244,
+     15782,
+     27626,
+     28839,
+     43036,
+     54067,
+     56703,
+     1433,
+     48552
+    ],
+    "a": [
+     25092,
+     34313,
+     378,
+     55135,
+     42761
+    ],
+    "attr": [
+     {
+      "attribute": "str",
+      "nodeSlug": "node-1433"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-22616"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-24165"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-30979"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-31238"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-35426"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-4328"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-44733"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-45923"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-46034"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-47177"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-48631"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-50423"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-56935"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-11672"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-15782"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-23382"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-25557"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-28002"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-32194"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-34058"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-35896"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-38856"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-39037"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-41029"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-46358"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-48305"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-48552"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-49357"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-52319"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-55668"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-59376"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-8406"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-8569"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-59093"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 10,
+    "str": 20,
+    "int": 30
+   },
+   "notes": {
+    "title": "Endgame Start (Import)",
+    "desc": "",
+    "notes": {
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Mana Tempest nutzen nachdem alle anderen Skills platziert sind um extra Damage zu bekommen bei Bossen."
+    }
+   }
+  },
+  {
+   "idx": 3,
+   "name": "Akt 1",
+   "items": {
+    "helmet": null,
+    "body": null,
+    "gloves": null,
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "22"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": null,
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Ashen Staff",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+     "mods": [
+      "50% increased Spell Damage",
+      "+2 to Level of all Physical Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    },
+    "offHand_set1": null,
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Entangle",
+     "slug": "entangleplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidEntangle.webp",
+     "sup": [
+      "Rapid Casting I",
+      "Brutality I"
+     ],
+     "supIcons": {
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+      "Brutality I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BrutalitySupportGem.webp"
+     },
+     "supSlugs": [
+      "supportrapidcastingplayer",
+      "supportbrutalityplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Volcano",
+     "slug": "volcanoplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/VolcanoSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidVolcano.webp",
+     "sup": [
+      "Burgeon I",
+      "Controlled Destruction"
+     ],
+     "supIcons": {
+      "Burgeon I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChannellingDamageSupportGem.webp",
+      "Controlled Destruction": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ControlledDestructionSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportburgeonplayer",
+      "supportcontrolleddestructionplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+     "sup": [],
+     "supIcons": {},
+     "supSlugs": [],
+     "weaponSet": null
+    },
+    {
+     "skill": "Ravenous Swarm",
+     "slug": "ravenousswarmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchRavenousSwarmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchRavenousSwarm.webp",
+     "sup": [
+      "Corrosion"
+     ],
+     "supIcons": {
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportcorrosionplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Bonestorm",
+     "slug": "bonestormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBoneStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBoneStorm.webp",
+     "sup": [
+      "Burgeon I",
+      "Rapid Casting I"
+     ],
+     "supIcons": {
+      "Burgeon I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChannellingDamageSupportGem.webp",
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportburgeonplayer",
+      "supportrapidcastingplayer"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     17517,
+     17655,
+     64299,
+     13233,
+     12462,
+     50558,
+     32194,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-8616"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-56935"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 5,
+    "str": 5,
+    "int": 25
+   },
+   "notes": {
+    "title": "Akt 1",
+    "desc": "",
+    "notes": {
+     "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Cold für Akt1 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Reihenfolge/Priorität:\nVolcano (Start Skill)\nEntangle\nFrost Bomb (kann lvl1 bleiben)\nRavenous Swarm\nBonestorm\n Entangle ist unser Clearing Skill. Volcano ist unser Single-Target Skill bis Ende Akt 1 - Volcano ist ein Channeling Skill, als unbedingt ein paar Sekunden gedrückt lassen!\n Volcano & Frost Bomb wird dann abgelöst durch Bonestorm vor dem Akt 1 Boss."
+    }
+   }
+  },
+  {
+   "idx": 4,
+   "name": "Akt 2",
+   "items": {
+    "helmet": null,
+    "body": null,
+    "gloves": null,
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "22"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": null,
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Ashen Staff",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+     "mods": [
+      "50% increased Spell Damage",
+      "+2 to Level of all Physical Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    },
+    "offHand_set1": null,
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Bonestorm",
+     "slug": "bonestormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBoneStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBoneStorm.webp",
+     "sup": [
+      "Burgeon I",
+      "Zenith I"
+     ],
+     "supIcons": {
+      "Burgeon I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChannellingDamageSupportGem.webp",
+      "Zenith I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportburgeonplayer",
+      "supportzenithplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Thunderstorm",
+     "slug": "thunderstormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/LightningStormSkill.webp",
+     "sup": [
+      "Rapid Casting I",
+      "Living Lightning"
+     ],
+     "supIcons": {
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+      "Living Lightning": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportrapidcastingplayer",
+      "supportlivinglightningplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Entangle",
+     "slug": "entangleplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidEntangle.webp",
+     "sup": [
+      "Accelerated Growth",
+      "Rapid Casting I"
+     ],
+     "supIcons": {
+      "Accelerated Growth": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExplosiveGrowthSupportGem.webp",
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportexplosivegrowthplayer",
+      "supportrapidcastingplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Ravenous Swarm",
+     "slug": "ravenousswarmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchRavenousSwarmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchRavenousSwarm.webp",
+     "sup": [
+      "Corrosion",
+      "Armour Demolisher I"
+     ],
+     "supIcons": {
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp",
+      "Armour Demolisher I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedArmourBreakSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportcorrosionplayer",
+      "supportarmourdemolisherplayer"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     17517,
+     17655,
+     64299,
+     13233,
+     12462,
+     50558,
+     32194,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357,
+     38856,
+     50423,
+     46358,
+     59376,
+     34058,
+     36286,
+     41130,
+     8397,
+     30979,
+     44733,
+     49363,
+     20718,
+     13294,
+     39990,
+     1433,
+     48530,
+     39130,
+     14294
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-8616"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-56935"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 5,
+    "str": 5,
+    "int": 30
+   },
+   "notes": {
+    "title": "Akt 2",
+    "desc": "",
+    "notes": {
+     "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Level Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Lightning/Fire für Akt2 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Sobald Wildsurge Incantation im Skilltree gewählt wird, machen die Plant und Storm Skills richtig Spaß.\nReihenfolge/Priorität:\nBonestorm\nEntangle\nThunderstorm\nRavenous Swarm\nThunderstorm löst nicht nur Schock beim Gegner aus, sondern erhöht auch die Dauer von Entangle"
+    }
+   }
+  },
+  {
+   "idx": 5,
+   "name": "Akt 3",
+   "items": {
+    "helmet": null,
+    "body": null,
+    "gloves": null,
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "22"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": null,
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Ashen Staff",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+     "mods": [
+      "50% increased Spell Damage",
+      "+2 to Level of all Physical Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    },
+    "offHand_set1": null,
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Bonestorm",
+     "slug": "bonestormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBoneStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBoneStorm.webp",
+     "sup": [
+      "Burgeon I",
+      "Zenith II",
+      "Considered Casting"
+     ],
+     "supIcons": {
+      "Burgeon I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChannellingDamageSupportGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Considered Casting": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedConsideredCastingSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportburgeonplayer",
+      "supportzenithplayertwo",
+      "supportconsideredcastingplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Entangle",
+     "slug": "entangleplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidEntangle.webp",
+     "sup": [
+      "Accelerated Growth",
+      "Rapid Casting I",
+      "Branching Fissures I"
+     ],
+     "supIcons": {
+      "Accelerated Growth": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExplosiveGrowthSupportGem.webp",
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportexplosivegrowthplayer",
+      "supportrapidcastingplayer",
+      "supportbranchingfissuresplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Thunderstorm",
+     "slug": "thunderstormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/LightningStormSkill.webp",
+     "sup": [
+      "Rapid Casting I",
+      "Living Lightning"
+     ],
+     "supIcons": {
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+      "Living Lightning": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportrapidcastingplayer",
+      "supportlivinglightningplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Ravenous Swarm",
+     "slug": "ravenousswarmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchRavenousSwarmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchRavenousSwarm.webp",
+     "sup": [
+      "Corrosion",
+      "Armour Demolisher I"
+     ],
+     "supIcons": {
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp",
+      "Armour Demolisher I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedArmourBreakSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportcorrosionplayer",
+      "supportarmourdemolisherplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Thrashing Vines",
+     "slug": "thrashingvinesplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidAwakenedForestSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidAwakenedForest.webp",
+     "sup": [
+      "Concentrated Area",
+      "Zenith II",
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportconcentratedareaplayer",
+      "supportzenithplayertwo",
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [],
+     "supIcons": {},
+     "supSlugs": [],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     17517,
+     17655,
+     64299,
+     13233,
+     12462,
+     50558,
+     32194,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357,
+     38856,
+     50423,
+     46358,
+     59376,
+     34058,
+     36286,
+     41130,
+     8397,
+     30979,
+     20718,
+     13294,
+     39990,
+     44733,
+     49363,
+     1433,
+     48530,
+     39130,
+     14294,
+     34840,
+     29148,
+     11679,
+     61042,
+     37608,
+     53524,
+     32727,
+     12851,
+     32507,
+     56547,
+     12189,
+     32859,
+     15114,
+     6356,
+     27900,
+     54640
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     42761,
+     25092,
+     34313,
+     378,
+     55135
+    ],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-8616"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-56935"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 5,
+    "str": 15,
+    "int": 45
+   },
+   "notes": {
+    "title": "Akt 3",
+    "desc": "",
+    "notes": {
+     "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm"
+    }
+   }
+  },
+  {
+   "idx": 6,
+   "name": "Akt 4",
+   "items": {
+    "helmet": null,
+    "body": null,
+    "gloves": null,
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "22"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": null,
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Ashen Staff",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+     "mods": [
+      "50% increased Spell Damage",
+      "+2 to Level of all Physical Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    },
+    "offHand_set1": null,
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Bonestorm",
+     "slug": "bonestormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBoneStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBoneStorm.webp",
+     "sup": [
+      "Burgeon I",
+      "Zenith II",
+      "Considered Casting"
+     ],
+     "supIcons": {
+      "Burgeon I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChannellingDamageSupportGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Considered Casting": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedConsideredCastingSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportburgeonplayer",
+      "supportzenithplayertwo",
+      "supportconsideredcastingplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Entangle",
+     "slug": "entangleplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidEntangle.webp",
+     "sup": [
+      "Accelerated Growth",
+      "Rapid Casting I",
+      "Branching Fissures I"
+     ],
+     "supIcons": {
+      "Accelerated Growth": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExplosiveGrowthSupportGem.webp",
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportexplosivegrowthplayer",
+      "supportrapidcastingplayer",
+      "supportbranchingfissuresplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Thunderstorm",
+     "slug": "thunderstormplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningStormSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/LightningStormSkill.webp",
+     "sup": [
+      "Rapid Casting I",
+      "Living Lightning"
+     ],
+     "supIcons": {
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+      "Living Lightning": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportrapidcastingplayer",
+      "supportlivinglightningplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Ravenous Swarm",
+     "slug": "ravenousswarmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchRavenousSwarmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchRavenousSwarm.webp",
+     "sup": [
+      "Corrosion",
+      "Armour Demolisher I"
+     ],
+     "supIcons": {
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp",
+      "Armour Demolisher I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedArmourBreakSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportcorrosionplayer",
+      "supportarmourdemolisherplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Thrashing Vines",
+     "slug": "thrashingvinesplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidAwakenedForestSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidAwakenedForest.webp",
+     "sup": [
+      "Concentrated Area",
+      "Zenith II",
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportconcentratedareaplayer",
+      "supportzenithplayertwo",
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [],
+     "supIcons": {},
+     "supSlugs": [],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     17517,
+     17655,
+     64299,
+     13233,
+     12462,
+     50558,
+     32194,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357,
+     38856,
+     50423,
+     46358,
+     59376,
+     34058,
+     36286,
+     41130,
+     8397,
+     30979,
+     20718,
+     13294,
+     39990,
+     44733,
+     49363,
+     1433,
+     48530,
+     39130,
+     14294,
+     34840,
+     29148,
+     11679,
+     61042,
+     37608,
+     53524,
+     32727,
+     12851,
+     32507,
+     56547,
+     12189,
+     32859,
+     15114,
+     6356,
+     27900,
+     54640,
+     4456,
+     57710,
+     53975,
+     33254,
+     55104,
+     19125,
+     31238,
+     48552,
+     7960,
+     50104,
+     32745,
+     58183,
+     61179,
+     21245,
+     57178,
+     5284
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     42761,
+     25092,
+     34313,
+     378,
+     55135
+    ],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-8616"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-56935"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 5,
+    "str": 15,
+    "int": 45
+   },
+   "notes": {
+    "title": "Akt 4",
+    "desc": "",
+    "notes": {
+     "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm",
+     "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree": "Für den Umbau zu Totem benötigt ihr einiges an Gold, also nicht alles ausgeben und immer wieder Rare Items (Gelbe Gegenstände) identifiziert verkaufen!"
+    }
+   }
+  },
+  {
+   "idx": 7,
+   "name": "Akt 4 - Totem Swap",
+   "items": {
+    "helmet": null,
+    "body": {
+     "n": "Avian Robe",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt02.webp",
+     "mods": [
+      "+30 to Spirit"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "103"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": null,
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "22"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Solar Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/SolarAmulet.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": null,
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Attuned Wand",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand03.webp",
+     "mods": [
+      "45% increased Spell Damage",
+      "+2 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    },
+    "offHand_set1": {
+     "n": "Omen Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre04.webp",
+     "mods": [
+      "27% increased Spirit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Spell Totem",
+     "slug": "summonmetatotemspelltotemplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidSpellTotemSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidSpellTotem.webp",
+     "sup": [
+      "sparkplayer",
+      "Zenith II",
+      "Deliberation"
+     ],
+     "supIcons": {
+      "sparkplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/SparkSkillGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Deliberation": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CessationSupportGem.webp"
+     },
+     "supSlugs": [
+      "sparkplayer",
+      "supportzenithplayertwo",
+      "supportdeliberationplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Spell Totem",
+     "slug": "summonmetatotemspelltotemplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidSpellTotemSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidSpellTotem.webp",
+     "sup": [
+      "sparkplayer",
+      "Zenith II",
+      "Urgent Totems III",
+      "Projectile Acceleration III"
+     ],
+     "supIcons": {
+      "sparkplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/SparkSkillGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Urgent Totems III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/TotemPlacementSpeedSupportGem.webp",
+      "Projectile Acceleration III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterProjectilesSupportGem.webp"
+     },
+     "supSlugs": [
+      "sparkplayer",
+      "supportzenithplayertwo",
+      "supporturgenttotemsplayerthree",
+      "supportprojectileaccelerationplayerthree"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstormsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/OrbOfStormsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressOrbOfStorms.webp",
+     "sup": [
+      "Overabundance I",
+      "Living Lightning"
+     ],
+     "supIcons": {
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp",
+      "Living Lightning": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportincreaselimitplayer",
+      "supportlivinglightningplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+     "sup": [
+      "Potent Exposure",
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Potent Exposure": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/StripAwaySupportGem.webp",
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportpotentexposureplayer",
+      "supportmagnifiedareaplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Flame Wall",
+     "slug": "flamewallplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FlameWallSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFlameWall.webp",
+     "sup": [
+      "Efficiency I",
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Efficiency I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp",
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportefficiencyplayer",
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.webp",
+     "sup": [
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency II"
+     ],
+     "supIcons": {
+      "Harmonic Remnants II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RushedRemnantsSupportGem.webp",
+      "Remnant Potency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InterludeSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportfleetingremnantsplayertwo",
+      "supportinterludeplayertwo"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     32194,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357,
+     38856,
+     50423,
+     46358,
+     30979,
+     20718,
+     13294,
+     39990,
+     44733,
+     1433,
+     58016,
+     49537,
+     5088,
+     59093,
+     45202,
+     38103,
+     25429,
+     23382,
+     7960,
+     48552,
+     31238,
+     2071,
+     38420,
+     37543,
+     48305,
+     37629,
+     55933,
+     22558,
+     51052,
+     22616,
+     41615,
+     49192,
+     43396,
+     48530,
+     39130,
+     14294,
+     59376,
+     34058,
+     36286,
+     41130,
+     8397,
+     4456,
+     57710,
+     39037,
+     11672,
+     47177,
+     8569,
+     46034,
+     41029,
+     25557,
+     24165,
+     4328,
+     63668,
+     9069,
+     42245,
+     55668,
+     35896,
+     53266,
+     53560,
+     46157,
+     37806,
+     17505,
+     28774,
+     10295
+    ],
+    "s1": [
+     14110,
+     6355,
+     38124,
+     51820,
+     28002,
+     2955,
+     28800,
+     55308,
+     38313
+    ],
+    "s2": [
+     15782,
+     56703,
+     28839,
+     56762,
+     20032,
+     43036,
+     54067,
+     2244,
+     27626
+    ],
+    "a": [
+     42761,
+     15275,
+     52374,
+     25092,
+     34313
+    ],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-8616"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-56935"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-15782"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-48552"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-31238"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-4140"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-33722"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-47931"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-28002"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-34840"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-29148"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-11679"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-15885"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-49512"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-3025"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-38732"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-17672"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 15,
+    "str": 25,
+    "int": 30
+   },
+   "notes": {
+    "title": "Akt 4 - Totem Swap",
+    "desc": "ACHTUNG!!!\nDer Wechsel zu Spell Totem sollte nicht erfolgen bevor man diese Bedingungen erfüllt: \nMindestens 210 Spirit (60 aus der Kampagne + Szepter mit 130+, ggf. auf Rüstung oder Amulett) \nGenug Skillpunkte beim Umbau für Efficient Inscriptions, falls man nicht 255 Spirit hat.\nGenug Skillpunkte beim Umbau für Ancestral Bond\nJe länger wir also mit dem vorherigen Setup spielen, desto besser!\nAb hier könnte man nach Bedarf ausprobieren Mind Over Matter zu spielen oder teilweise Schaden umzuwandeln durch Mental Perseverance \nRegex für Händler: \"([32]0|25)% i.+mov|^\\+.*ng sp.*ls$|^\\+.*al sp.*ls$|spiri\"",
+    "notes": {
+     "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+     "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree": "Waffenset 1 = Totem\nWaffenset 2 = Alles andere"
+    }
+   }
+  },
+  {
+   "idx": 8,
+   "name": "Interludes",
+   "items": {
+    "helmet": null,
+    "body": {
+     "n": "Avian Robe",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt02.webp",
+     "mods": [
+      "+30 to Spirit"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "103"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": null,
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "22"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Solar Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/SolarAmulet.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": null,
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Attuned Wand",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand03.webp",
+     "mods": [
+      "45% increased Spell Damage",
+      "+2 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    },
+    "offHand_set1": {
+     "n": "Omen Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre04.webp",
+     "mods": [
+      "27% increased Spirit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Spell Totem",
+     "slug": "summonmetatotemspelltotemplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidSpellTotemSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidSpellTotem.webp",
+     "sup": [
+      "sparkplayer",
+      "Zenith II",
+      "Urgent Totems III",
+      "Projectile Acceleration III"
+     ],
+     "supIcons": {
+      "sparkplayer": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/SparkSkillGem.webp",
+      "Zenith II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManatenanceSupportGem.webp",
+      "Urgent Totems III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/TotemPlacementSpeedSupportGem.webp",
+      "Projectile Acceleration III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterProjectilesSupportGem.webp"
+     },
+     "supSlugs": [
+      "sparkplayer",
+      "supportzenithplayertwo",
+      "supporturgenttotemsplayerthree",
+      "supportprojectileaccelerationplayerthree"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstormsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/OrbOfStormsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressOrbOfStorms.webp",
+     "sup": [
+      "Overabundance I",
+      "Living Lightning"
+     ],
+     "supIcons": {
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp",
+      "Living Lightning": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportincreaselimitplayer",
+      "supportlivinglightningplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+     "sup": [
+      "Potent Exposure",
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Potent Exposure": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/StripAwaySupportGem.webp",
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportpotentexposureplayer",
+      "supportmagnifiedareaplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Flame Wall",
+     "slug": "flamewallplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FlameWallSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFlameWall.webp",
+     "sup": [
+      "Efficiency I",
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Efficiency I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp",
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportefficiencyplayer",
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.webp",
+     "sup": [
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "supSlugs": [
+      "prolongeddurationsupportplayer"
+     ],
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnantsplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/EnergyRemnantsSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+     "sup": [
+      "Remnant Potency II",
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {
+      "Remnant Potency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InterludeSupportGem.webp",
+      "Harmonic Remnants II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RushedRemnantsSupportGem.webp"
+     },
+     "supSlugs": [
+      "supportinterludeplayertwo",
+      "supportfleetingremnantsplayertwo"
+     ],
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     50084,
+     28446,
+     12430,
+     17584,
+     6898,
+     32194,
+     29652,
+     6008,
+     58096,
+     34096,
+     61444,
+     49357,
+     38856,
+     50423,
+     46358,
+     30979,
+     44733,
+     1433,
+     58016,
+     49537,
+     5088,
+     59093,
+     45202,
+     38103,
+     25429,
+     23382,
+     7960,
+     17505,
+     28774,
+     10295,
+     48552,
+     31238,
+     2071,
+     38420,
+     37543,
+     48305,
+     37629,
+     55933,
+     22558,
+     51052,
+     22616,
+     41615,
+     49192,
+     43396,
+     48530,
+     39130,
+     14294,
+     59376,
+     34058,
+     36286,
+     41130,
+     8397,
+     4456,
+     57710,
+     39037,
+     11672,
+     47177,
+     8569,
+     46034,
+     41029,
+     25557,
+     24165,
+     4328,
+     63668,
+     9069,
+     42245,
+     55668,
+     35896,
+     53266,
+     53560,
+     46157,
+     37806,
+     28002,
+     49938,
+     15580,
+     61977,
+     61471,
+     49153,
+     4140,
+     33722,
+     47931,
+     2955,
+     28800,
+     55308,
+     38313,
+     48030,
+     41372,
+     6715,
+     116,
+     517,
+     9642,
+     20718,
+     13294,
+     39990
+    ],
+    "s1": [
+     14110,
+     6355,
+     38124,
+     51820,
+     63170,
+     65192,
+     33423,
+     27096,
+     36197
+    ],
+    "s2": [
+     15782,
+     56703,
+     28839,
+     56762,
+     20032,
+     43036,
+     54067,
+     2244,
+     27626
+    ],
+    "a": [
+     42761,
+     15275,
+     52374,
+     11335,
+     5571
+    ],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-8616"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-57710"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-56935"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-15782"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-48552"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-31238"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-4140"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-33722"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-47931"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-28002"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-34840"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-29148"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-11679"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-15885"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-49512"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-3025"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-38732"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-17672"
+     }
+    ],
+    "jewels": []
+   },
+   "req": {
+    "dex": 10,
+    "str": 25,
+    "int": 25
+   },
+   "notes": {
+    "title": "Interludes",
+    "desc": "Regex für Händler: \"([32]0|25)% i.+mov|^\\+.*ng sp.*ls$|^\\+.*al sp.*ls$|spiri\"",
+    "notes": {
+     "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+     "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!"
+    }
+   }
+  }
+ ],
+ "text": "Builds\nPoE 2 Build\n[0.5.5] Oracle Spell-Totem Spark/Grim Pillars (GERMAN)\nDruid\nOracle\nStarter\n0.5.5 FR\nCreator\nBy\nLowepe\nLIVE\nSep 4, 2026\nTrack Build\n111\n4\nFocus Mode\nLive Seasonal Characters\n\nLevel 87 Oracle\n\nForbidden Rites\n\n+4\n+3\nView All Seasonal Characters\nBuild Overview\nMehr Infos auf TWITCH!\nKommt gerne vorbei für Fragen, Informationen usw.\n\n___________________________________\n\nUPDATE ZUM FÜR 0.5.5 NACHTRAG VON GGG: \n\nRemnants und Expedition taucht erstmalig in Akt 4 auf mit Update 0.5.5 - vorher gibt es also keine Chance \nGrim Pillars\n zu bekommen. Ich würde daher den Wechsel zu Totem soweit hinauszögern wie möglich, ggf. vorerst mit Spark spielen (so wie ich es in 0.5 auch die ersten Stunden im Endgame gemacht habe). \n\n___________________________________\n\nAscendancy Wahl\n\nWir starten als \nOracle\n um vom + Limit für \nSpell Totem\n zu profitieren. Um ganz früh mit \nSpell Totem\n zu spielen, könnte man auch 2 Totems auf dem \nShaman\n spielen. Allerdings war in meinen Tests 2 Totems nicht genug und daher rate ich davon ab. \n\nGenerelle Informationen\n\nIn Patch 0.5 wird \nAncestral Bond\n im Skilltree so verändert, dass \nSpell Totem\n keine Charges mehr braucht Das ermöglicht es uns viel früher \nSpell Totem\n zu spielen und nicht mehr Abhängig von bestimmten Charge Uniques zu sein. Wir bezahlen nur die Mana-Kosten des Totems, nicht der Zauber. Dadurch ergibt sich eine interessante Synergie mit  \nMind Over Matter\n und \nArchmage\n um im generellen mit 'Mana-Stacking'.\n\nMehr Infos dazu auch in DIESEM VIDEO!\nLeveling\n\nBis zum Ende der Kampagne werden wir auf \nSpell Totem\n umsteigen. Warum? Es ist zu schwierig Spirit & Level aufzubauen um 4 \nSpell Totem\n aufstellen zu können. Nach einigen Tests fühle ich mich besser dabei erst am Ende der Kampagne umzubauen.\n\nBis zu \nSpell Totem\n spielen wir überwiegend mit \nBonestorm\n und \nEntangle\n. \n\nHier findet ihr meine aktuellen Filter für den Build: KLICK MICH FÜR FILTER\n\nEndgame\n\nDa potential entfaltet sich aber erst richtig im späteren Endgame. Sobald wir voll auf \nSpell Totem\n umgestiegen sind, ist unser Hauptziel Mana aufzubauen. Denn mit \nArchmage\n und \nMind Over Matter\n bekommen wir eine Defensive und Offensive aus unserem Mana-Pool. Optional können wir am Anfang \nSpell Totem\n im niedrigen Levelbereich lassen um wenig Mana zu bezahlen. Später haben wir genügen Mechaniken um die Mana-Kosten tragen zu können.\n\nCrafting Anleitung für Amulett\n\nArchmage Amulett (Item-Level 79+) - Level von Archmage egal\n\nCraft kann sehr teuer werden, nicht unter 100div anfangen!\n\n1. Amulett Rare machen (Regal Orb)\n\n2. Alle Mods außer 1 runter machen (Annulment Orb) \n\n3. Chaos spammen bis \"T1 Spirit\" oder \"T1 Spell-Level\"\n\n4. Abyss Desecrate (Preserved Collarbone) NICHT AUFDECKEN\n\n5. 1 weiterer Mod mit Exalted Orb\n\n6. \"T1 Spirit/Spell-Level\" Fracturen mit (Fracturing Orb)\n\n7. Wenn getroffen, dann gut. Sonst zurück zu Schritt 1\n\n8. Alle Mods außer 1 (+ den Factured) runter machen (Annulment Orb) \n\n9. Chaos spammen bis zum anderen Mod (Spirit oder Spell-Level je nach dem was gefractured ist)\n\n10. Neural Catalyst bis 20% Qualität aufs Amulett machen\n\n11. \"Omen of Catalysing Exaltation\" + \"Omen of Sinistral Exaltation\" + Perfect Exalted Orb => Mana Prefix mit hoher Chance\n\n12. Abyss Desecrate (\"Preserved Collarbone\") + \"Omen of the Blackblooded\" => Kurgal Mod\n\n13. Desecrate aufdecken mit \"Omen of Abyssal Echoes\" => Chance auf \"Mana before Life\"-Mod ist hoch, zurück zu Schritt 12 mit \"Omen of Light\"+Annulment\n\n14. Fertig\n\nStrengths and Weaknesses\nEinfaches Leveling\nKomfortabler Totem Spielstil\nSchaden & Defensive durch Mana\nFlexibel (Unterschiedliche Spells nutzen)\nMit \nGrim Pillars\n guten Clear-Speed und sehr guten Boss-Schaden\nTotem Verzögerung\nHäufig 2-Button Build (\nEntangle\n für \nGrim Pillars\n)\nBuild Variants\nEndgame (Final)\nEndgame (Woche 1)\nEndgame Start (Import)\nAkt 1\nAkt 2\nAkt 3\nAkt 4\nAkt 4 - Totem Swap\nInterludes\n\nACHTUNG!!!\nDer Wechsel zu \nSpell Totem\n sollte nicht erfolgen bevor man diese Bedingungen erfüllt: \n\nMindestens 210 Spirit (60 aus der Kampagne + Szepter mit 130+, ggf. auf Rüstung oder Amulett) \nGenug Skillpunkte beim Umbau für \nEfficient Inscriptions\n, falls man nicht 255 Spirit hat.\nGenug Skillpunkte beim Umbau für \nAncestral Bond\n\n\n\nJe länger wir also mit dem vorherigen Setup spielen, desto besser!\n\nAb hier könnte man nach Bedarf ausprobieren \nMind Over Matter\n zu spielen oder teilweise Schaden umzuwandeln durch \nMental Perseverance\n \n\nRegex für Händler: \"([32]0|25)% i.+mov|^\\+.*ng sp.*ls$|^\\+.*al sp.*ls$|spiri\"\n\nEquipment\nEndgame (Final)\nEndgame (Woche 1)\nEndgame Start (Import)\nAkt 1\nAkt 2\nAkt 3\nAkt 4\nAkt 4 - Totem Swap\nInterludes\nSet 1\nSet 2\n2\n5\n4\n3\n1\nEquipment Priority\nTrack Build\nShow All\n\nPriorität der Items: \n\n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nSkill Gems\nEndgame (Final)\nEndgame (Woche 1)\nEndgame Start (Import)\nAkt 1\nAkt 2\nAkt 3\nAkt 4\nAkt 4 - Totem Swap\nInterludes\n\nSupport Gem Requirements:\n\nStr 25\n\nDex 15\n\nInt 30\n\nCollapse all\n1\n\nSpell Totem\n\nSpark\nZenith II\nDeliberation\n2\n\nSpell Totem\n\nSpark\nZenith II\nUrgent Totems III\nProjectile Acceleration III\n3\n\nOrb of Storms\n\nOverabundance I\nLiving Lightning\n4\n\nFrost Bomb\n\nPotent Exposure\nMagnified Area I\n5\n\nFlame Wall\n\nEfficiency I\nProlonged Duration I\n6\n\nElemental Weakness\n\nProlonged Duration I\n7\n\nMana Remnants\n\nHarmonic Remnants II\nRemnant Potency II\nGem Priority\nTrack Build\nShow All\n\n2. \nSpell Totem\n Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \n\nOptional kann auch \nPierce II\n genutzt werden, dann aber nicht \nBranching Bolts\n skillen!\n\nPassive Tree\nEndgame (Final)\nEndgame (Woche 1)\nEndgame Start (Import)\nAkt 1\nAkt 2\nAkt 3\nAkt 4\nAkt 4 - Totem Swap\nInterludes\nMain:\n30\n123\nSet 1:\n11\n20\nSet 2:\n11\n20\n\nWaffenset 1 = Totem\nWaffenset 2 = Alles andere\n\nQuest Rewards\nCheck which quests you’ve completed on your character\nTrack Build\nChoices\nSkill Points\nCharacter Upgrades\nAll\nChoices\nAct 2\nValley of the Titans — Medallion\n30% increased Charm Charges gained\n+1 Charm Slot\nAct 3\nThe Venom Crypts — Venom Draught\n25% increased Mana Regeneration Rate\nAct 4\nWhakapanu Island — Great White One\nNot Specified\n2 choices\nHalls of the Dead — Tawhoa's Test\nNot Specified\n2 choices\nAbandoned Prison — Goddess of Justice\n30% increased Life Recovery from Flasks\nHalls of the Dead — Tasalio's Test\nNot Specified\n2 choices\nHalls of the Dead — Ngamahu's Test\nNot Specified\n2 choices\nHalls of the Dead — Tribal Medicine\nNot Specified\n2 choices\nInterlude\nQimah — Tabana's Pillar\n3% increased Movement Speed\nHide Rewards\nChangelog\n\n01/06/2026 v1.2.0 Endgame Update mit \nBitter Dead\n und \nGrim Pillars\n\n\n\n31/05/2026 v1.1.3 Umbau \nGrim Pillars\n Spell Totem im Endgame\n\n30/05/2026 v1.1.2 Import Endgame Start zum Nachverfolgen\n\n29/05/2026 v1.1.1 Leveling Optimierung\n\n28/05/2026 v1.1.0 Kompletter Umbau auf \nOracle\n wegen Patchnote Änderungen\n\n27/05/2026 v1.0.2 Backup-Plan mit \nDark Effigy\n eingebaut + Leveling vervollständigt\n\n26/05/2026 v1.0.1 Anpassung Support Gems Kampagne\n\n26/05/2026 v1.0.0 Build Konzept veröffentlicht\n\nComments\n4\n\n\n\n\nShare your thoughts...Type @ to try game data\n1000 characters remaining\nComment\nTop\nNewest\nOldest\nNewest\nF\nFreshGolem\n•\n7h ago\n\nhuhu Lowepe \n\nentweder bin ick zu blöde oder steh uffen schlauch^^ wo bekomme ich ( Spellslinger ) her danke für info\n\n0\nReply\nShare\nL\nLowepe\nAuthor\n•\n6h ago\n\nDas kommt automatisch vom \nDueling Wand\n :)\n\n0\nReply\nShare\nM\nMario\n•\n5d ago\n\nHey Lowepe,\n\nnach meinem Umbau kann ich nur noch 2 Totem stellen, habe mich um 20 Spirit verrechnet :D\n\nMacht es Sinn die Aura Mana Remnants auszuschalten damit ich drei Totems stellen kann? Oder lieber die Aura. Dauert etwas bis ich mir ein neues Amulet leisten kann\n\n0\nReply\nShare\nL\nLowepe\nAuthor\n•\n3d ago\n\nZum Mappen reichen 2 Totems, und bei Bossen könntest du es ausmachen um 3 zu stellen - da bekommst du eh keine Remnants.\n\n0\nReply\nShare\nVideo Guide\nBuild Planner Export\n\nExport this build variant directly to your game.\n\nDownload Build File\nHow it Works\nFeatured Builds\nDefinitiv Guide to Varashta Sorceress - The Perfect Allrounder\nUpdated on Sep 16, 2026\n[0.5.5] Immortal Witchhunter Frostbolt Infinite Loop\nUpdated on Sep 16, 2026\n[0.5.5] Navira's Fracturing Varashta League Starter Guide w/Acts Walkthrough\nUpdated on Sep 16, 2026\n[0.5.5] Corrupting Wings - (One Button + speed leveling) Gemling\nUpdated on Sep 16, 2026\n[0.5.5] BALROG - (1* button) Fire Bear Fury of the King Kitava\nUpdated on Sep 16, 2026\n\nBecome a Creator\n\nWant to earn rewards by sharing your builds with your community?\n\nJoin Creator Program",
+ "sections": {
+  "NgfDocumentCmWidgetRichTextSimplifiedV2.simplifiedContent.c81bc723": "Mehr Infos auf TWITCH!\nKommt gerne vorbei für Fragen, Informationen usw.\n___________________________________\nUPDATE ZUM FÜR 0.5.5 NACHTRAG VON GGG: \nRemnants und Expedition taucht erstmalig in Akt 4 auf mit Update 0.5.5 - vorher gibt es also keine Chance Grim Pillars zu bekommen. Ich würde daher den Wechsel zu Totem soweit hinauszögern wie möglich, ggf. vorerst mit Spark spielen (so wie ich es in 0.5 auch die ersten Stunden im Endgame gemacht habe). \n___________________________________\nAscendancy Wahl\nWir starten als Oracle um vom + Limit für Spell Totem zu profitieren. Um ganz früh mit Spell Totem zu spielen, könnte man auch 2 Totems auf dem Shaman spielen. Allerdings war in meinen Tests 2 Totems nicht genug und daher rate ich davon ab. \nGenerelle Informationen\nIn Patch 0.5 wird Ancestral Bond im Skilltree so verändert, dass Spell Totem keine Charges mehr braucht Das ermöglicht es uns viel früher Spell Totem zu spielen und nicht mehr Abhängig von bestimmten Charge Uniques zu sein. Wir bezahlen nur die Mana-Kosten des Totems, nicht der Zauber. Dadurch ergibt sich eine interessante Synergie mit  Mind Over Matter und Archmage um im generellen mit 'Mana-Stacking'.\nMehr Infos dazu auch in DIESEM VIDEO!\nLeveling\nBis zum Ende der Kampagne werden wir auf Spell Totem umsteigen. Warum? Es ist zu schwierig Spirit & Level aufzubauen um 4 Spell Totem aufstellen zu können. Nach einigen Tests fühle ich mich besser dabei erst am Ende der Kampagne umzubauen.\nBis zu Spell Totem spielen wir überwiegend mit Bonestorm und Entangle. \nHier findet ihr meine aktuellen Filter für den Build: KLICK MICH FÜR FILTER\nEndgame\nDa potential entfaltet sich aber erst richtig im späteren Endgame. Sobald wir voll auf Spell Totem umgestiegen sind, ist unser Hauptziel Mana aufzubauen. Denn mit Archmage und Mind Over Matter bekommen wir eine Defensive und Offensive aus unserem Mana-Pool. Optional können wir am Anfang Spell Totem im niedrigen Levelbereich lassen um wenig Mana zu bezahlen. Später haben wir genügen Mechaniken um die Mana-Kosten tragen zu können.\nCrafting Anleitung für Amulett\nArchmage Amulett (Item-Level 79+) - Level von Archmage egal\nCraft kann sehr teuer werden, nicht unter 100div anfangen!\n1. Amulett Rare machen (Regal Orb)\n2. Alle Mods außer 1 runter machen (Annulment Orb) \n3. Chaos spammen bis \"T1 Spirit\" oder \"T1 Spell-Level\"\n4. Abyss Desecrate (Preserved Collarbone) NICHT AUFDECKEN\n5. 1 weiterer Mod mit Exalted Orb\n6. \"T1 Spirit/Spell-Level\" Fracturen mit (Fracturing Orb)\n7. Wenn getroffen, dann gut. Sonst zurück zu Schritt 1\n8. Alle Mods außer 1 (+ den Factured) runter machen (Annulment Orb) \n9. Chaos spammen bis zum anderen Mod (Spirit oder Spell-Level je nach dem was gefractured ist)\n10. Neural Catalyst bis 20% Qualität aufs Amulett machen\n11. \"Omen of Catalysing Exaltation\" + \"Omen of Sinistral Exaltation\" + Perfect Exalted Orb => Mana Prefix mit hoher Chance\n12. Abyss Desecrate (\"Preserved Collarbone\") + \"Omen of the Blackblooded\" => Kurgal Mod\n13. Desecrate aufdecken mit \"Omen of Abyssal Echoes\" => Chance auf \"Mana before Life\"-Mod ist hoch, zurück zu Schritt 12 mit \"Omen of Light\"+Annulment\n14. Fertig",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.4b46748c": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Cold für Akt1 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.1585fa3f": "Reihenfolge/Priorität:\nVolcano (Start Skill)\nEntangle\nFrost Bomb (kann lvl1 bleiben)\nRavenous Swarm\nBonestorm\n Entangle ist unser Clearing Skill. Volcano ist unser Single-Target Skill bis Ende Akt 1 - Volcano ist ein Channeling Skill, als unbedingt ein paar Sekunden gedrückt lassen!\n Volcano & Frost Bomb wird dann abgelöst durch Bonestorm vor dem Akt 1 Boss.",
+  "NgfDocumentCmWidgetRichTextSimplifiedV2.simplifiedContent.a7505586": "01/06/2026 v1.2.0 Endgame Update mit Bitter Dead und Grim Pillars\n31/05/2026 v1.1.3 Umbau Grim Pillars Spell Totem im Endgame\n30/05/2026 v1.1.2 Import Endgame Start zum Nachverfolgen\n29/05/2026 v1.1.1 Leveling Optimierung\n28/05/2026 v1.1.0 Kompletter Umbau auf Oracle wegen Patchnote Änderungen\n27/05/2026 v1.0.2 Backup-Plan mit Dark Effigy eingebaut + Leveling vervollständigt\n26/05/2026 v1.0.1 Anpassung Support Gems Kampagne\n26/05/2026 v1.0.0 Build Konzept veröffentlicht",
+  "NgfDocumentCmWidgetStrengthsAndWeaknessesV1.strengths.91048081": "Einfaches Leveling\nKomfortabler Totem Spielstil\nSchaden & Defensive durch Mana\nFlexibel (Unterschiedliche Spells nutzen)\nMit Grim Pillars guten Clear-Speed und sehr guten Boss-Schaden",
+  "NgfDocumentCmWidgetStrengthsAndWeaknessesV1.weaknesses.91048081": "Totem Verzögerung\nHäufig 2-Button Build (Entangle für Grim Pillars)",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.0af958be": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Level Physical oder All Spell Skills\n% Spell/Physical Damage\nMaximum Life\nElemental Resistance (Lightning/Fire für Akt2 Boss)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.9fc78d2c": "Sobald Wildsurge Incantation im Skilltree gewählt wird, machen die Plant und Storm Skills richtig Spaß.\nReihenfolge/Priorität:\nBonestorm\nEntangle\nThunderstorm\nRavenous Swarm\nThunderstorm löst nicht nur Schock beim Gegner aus, sondern erhöht auch die Dauer von Entangle",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.1788d9f7": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.77b151ad": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.e4fd3f57": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.1077fcd9": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+  "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree.78cc5267": "Waffenset 1 = Totem\nWaffenset 2 = Alles andere",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.a8b0b72e": "Priorität der Items: \n+ Level Lightning oder All Spell Skills\nSpirit\n% Spell/Lightning\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4093684d": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4acb8c00": "2. Spell Totem Setup ist nur um zu zeigen, was mit höheren Support Gems genommen werden sollte. \nOptional kann auch Pierce II genutzt werden, dann aber nicht Branching Bolts skillen!",
+  "Poe2DocumentUgWidgetBuildPlannerExportV1.subTitlePoeBuildPlannerExport.f06538a3": "Export this build variant directly to your game.",
+  "Poe2DocumentUgWidgetEquipmentV1.descriptionPoeEquipment.c2b441e4": "Regex für Händler: \"(10|15)% i.+mov|^\\+.*l sp.*ls$|^\\+.*al sp.*ls$|spiri\"\nPriorität der Items: \n+ Physical oder All Spell Skills\n% Spell/Physical Damage\n% Cast Speed\nMaximum Life\nResistance (wenn Elemental gut, dann Chaos)\nACHTUNG: Für den wechsel zu Spell Totem brauchen wir 180-210 Spirit (Szepter mit 130+ Spirit, ggf. Amulett, Brustrüstung - je mehr desto besser!) und einen andere Waffe (1Hand mit + Level Lightning oder All Spell Skills). Schaut immer wieder bei den Händlern nach diesen Items.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4cbace16": "Thrashing Vines kommt dazu für Bosse. \nDie Rotation ist: Thunderstorm > Entangle > Thrashing Vines > Bonestorm",
+  "Poe2DocumentUgWidgetPassiveTreeV1.descriptionPoe2PassiveTree.24fbbf7d": "Für den Umbau zu Totem benötigt ihr einiges an Gold, also nicht alles ausgeben und immer wieder Rare Items (Gelbe Gegenstände) identifiziert verkaufen!",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.888d7e7c": "Mana Tempest nutzen nachdem alle anderen Skills platziert sind um extra Damage zu bekommen bei Bossen.",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.e884944a": "Waffenset Konfiguration: \nWaffenset 1: Spell Totem, Archmage\nWaffenset 2: Entangle, Frost Bomb, Elemental Weakness\nWaffenset 1+2: Mana Tempest, Mana Remnants",
+  "Poe2DocumentUgWidgetSkillGemsV1.descriptionPoeSkillGems.4c18e011": "Waffenset Konfiguration: \nWaffenset 1: Spell Totem, Archmage\nWaffenset 2: Entangle, Frost Bomb, Elemental Weakness\nWaffenset 1+2: Mana Tempest, Mana Remnants"
+ },
+ "questRewards": {
+  "quests": [
+   {
+    "quest": {
+     "slug": "g1-15-mappincandlemass",
+     "name": "Candlemass, the Living Rite",
+     "act": "Act 1",
+     "area": "Ogham Manor",
+     "rewards": [
+      "g1-15-candlemassslain"
+     ]
+    },
+    "reward": {
+     "slug": "g1-15-candlemassslain",
+     "name": "Candlemass, the Living Rite",
+     "bakedDescription": "+20 to maximum Life",
+     "modifiers": [
+      "+20 to maximum Life"
+     ]
+    }
+   },
+   {
+    "quest": {
+     "slug": "g2-6-mappinmedallion",
+     "name": "Medallion",
+     "act": "Act 2",
+     "area": "Valley of the Titans",
+     "rewards": [
+      "g2-6-fragmentaltarleftactive",
+      "g2-6-fragmentaltarrightactive"
+     ]
+    },
+    "reward": {
+     "slug": "g2-6-fragmentaltarleftactive",
+     "name": "Medallion",
+     "bakedDescription": "30% increased Charm Charges gained, +1 Charm Slot",
+     "modifiers": [
+      "30% increased Charm Charges gained",
+      "+1 Charm Slot"
+     ]
+    }
+   },
+   {
+    "quest": {
+     "slug": "g3-4-mappindenofsnakes",
+     "name": "Venom Draught",
+     "act": "Act 3",
+     "area": "The Venom Crypts",
+     "rewards": [
+      "g3-4-denofsnakesdonereward1",
+      "g3-4-denofsnakesdonereward2",
+      "g3-4-denofsnakesdonereward3"
+     ]
+    },
+    "reward": {
+     "slug": "g3-4-denofsnakesdonereward3",
+     "name": "Venom Draught",
+     "bakedDescription": "25% increased Mana Regeneration Rate",
+     "modifiers": [
+      "25% increased Mana Regeneration Rate"
+     ]
+    }
+   },
+   {
+    "quest": {
+     "slug": "g4-5-1-mappingoddessofjustice",
+     "name": "Goddess of Justice",
+     "act": "Act 4",
+     "area": "Abandoned Prison",
+     "rewards": [
+      "g4-5-1goddessofjusticeactive1",
+      "g4-5-1goddessofjusticeactive2"
+     ]
+    },
+    "reward": {
+     "slug": "g4-5-1goddessofjusticeactive1",
+     "name": "Goddess of Justice",
+     "bakedDescription": "30% increased Life Recovery from Flasks",
+     "modifiers": [
+      "30% increased Life Recovery from Flasks"
+     ]
+    }
+   },
+   {
+    "quest": {
+     "slug": "p2-6-mappinsevensekhemas",
+     "name": "Tabana's Pillar",
+     "act": "Interlude",
+     "area": "Qimah",
+     "rewards": [
+      "p2-6sevensekhemas01",
+      "p2-6sevensekhemas02",
+      "p2-6sevensekhemas03",
+      "p2-6sevensekhemas04",
+      "p2-6sevensekhemas05",
+      "p2-6sevensekhemas06",
+      "p2-6sevensekhemas07"
+     ]
+    },
+    "reward": {
+     "slug": "p2-6sevensekhemas02",
+     "name": "Orbala's Pillar",
+     "bakedDescription": "3% increased Movement Speed",
+     "modifiers": [
+      "3% increased Movement Speed"
+     ]
+    }
+   }
+  ]
+ }
+}

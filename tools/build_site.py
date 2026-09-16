@@ -3,7 +3,7 @@ import json, base64, re, os, sys, shutil
 import chober as D
 from ui_en import UI
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else "site"
+OUT = sys.argv[1] if len(sys.argv) > 1 else "../silverfist"
 os.makedirs(OUT + "/assets", exist_ok=True)
 safe = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
@@ -82,7 +82,9 @@ def page(lang):
     assert 'src="assets/assets.js"' in t, "assets script tag missing"
     # head: tudo antes de <style>...</style> fica no head
     i = t.index("</style>") + len("</style>")
-    return HEAD.format(lang="pt-BR" if lang == "pt" else "en") + t[:i] + "\n</head>\n<body>\n" + t[i:] + "\n</body>\n</html>\n"
+    home = '<a class="homebtn" href="../%s">← Builds</a>' % ("index.html" if lang == "pt" else "en.html")
+    body = t[i:].replace('<div class="eyebrow">', '<div class="eyebrow">' + home, 1)
+    return HEAD.format(lang="pt-BR" if lang == "pt" else "en") + t[:i] + "\n</head>\n<body>\n" + body + "\n</body>\n</html>\n"
 
 open(OUT + "/index.html", "w", encoding="utf-8").write(page("pt"))
 open(OUT + "/en.html", "w", encoding="utf-8").write(page("en"))
