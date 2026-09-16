@@ -427,3 +427,61 @@ html[data-build] .trick{margin:0;min-width:0;grid-template-columns:minmax(0,1fr)
 html[data-build] .rites-link{margin-left:6px;color:#e9d6ff;border-color:#6b4fa8;background:linear-gradient(180deg,rgba(155,107,255,.22),rgba(40,25,70,.35))}
 html[data-build] .rites-link::before{content:"✦ ";color:#f1b35c}
 html[data-build] .rites-link:hover{border-color:#cdb4ff;box-shadow:0 0 16px -4px #9b6bff}
+
+/* ---------- passive tree: toolbar, points row, canvas and legend stacked in normal flow (no overlays) */
+html[data-build] .treebox{display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;height:min(82vh,820px);min-height:520px}
+html[data-build] .treebox canvas{position:relative;inset:auto;grid-row:3;width:100%;height:100%;min-height:0}
+html[data-build] .treebar{position:relative;left:auto;top:auto;right:auto;grid-row:1;z-index:2;pointer-events:auto;gap:6px;padding:10px;border-bottom:1px solid var(--edge);background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.25))}
+html[data-build] .treebar .chip{margin-left:auto}
+html[data-build] .tbtn{min-height:38px;padding:6px 12px;border-radius:var(--r);border-color:var(--gild-lo);background:linear-gradient(180deg,var(--stone3),var(--ground2));color:var(--gild-hi);font-size:.86rem;line-height:1.1;transition:border-color .25s,background .25s,color .25s}
+html[data-build] .tbtn:hover{border-color:var(--gild);color:#fff}
+html[data-build] .tbtn[aria-pressed=true]{color:var(--ground);background:linear-gradient(180deg,var(--accent-hi),var(--accent));border-color:var(--accent-hi)}
+html[data-build] .ptsrow{grid-row:2;position:relative;z-index:2;border-top:0;border-bottom:1px solid var(--edge);background:rgba(0,0,0,.35);row-gap:6px}
+html[data-build] .ptsrow input{min-height:38px}
+html[data-build] .ptsrow .btn{min-height:38px}
+html[data-build] .ptsrow small{flex:1 1 260px;min-width:0}
+html[data-build] .legend{position:relative;left:auto;bottom:auto;grid-row:4;z-index:2;border:0;border-top:1px solid var(--edge);border-radius:0;row-gap:4px}
+html[data-build] .treewrap > *{min-width:0}
+@media (max-width:1100px){html[data-build] .treewrap{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:700px){
+  html[data-build] .treebox{height:auto;grid-template-rows:auto auto 62vh auto;min-height:0}
+  html[data-build] .treebar{padding:8px;gap:5px}
+  html[data-build] .tbtn{font-size:.78rem;padding:6px 9px}
+  html[data-build] .treebar .chip{margin-left:0;flex-basis:100%;justify-content:center}
+  html[data-build] .legend{font-size:.76rem;gap:6px 10px}
+}
+
+/* ---------- tables never squeeze text into the next column: they scroll sideways instead */
+html[data-build] td,html[data-build] th{overflow-wrap:normal;word-break:normal}
+html[data-build] td b,html[data-build] td .ui,html[data-build] td small{overflow-wrap:anywhere}
+html[data-build] .bst{display:flex;align-items:center;gap:8px;min-width:0}
+html[data-build] .bst > *:last-child{min-width:0;overflow-wrap:anywhere}
+@media (max-width:900px){
+  html[data-build] .tablewrap > table{min-width:max(100%,680px)}
+  html[data-build] .tablewrap > table.zoo{min-width:max(100%,760px)}
+  html[data-build] .craft-mods{min-width:max(100%,560px)}
+}
+
+/* ---------- audit fixes: level orb, card art on phones, dense trail */
+html[data-build] .orbLv{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:clamp(84px,6.4vw,98px);height:clamp(84px,6.4vw,98px);flex:none}
+html[data-build] .orbLv b{font-size:clamp(1.7rem,1.3vw + 1rem,2.3rem);line-height:1}
+html[data-build] .orbLv small{position:static;font-size:.5rem;letter-spacing:.14em;line-height:1}
+@media (max-width:700px){
+  html[data-build] .ucard .body{grid-template-columns:72px minmax(0,1fr)}
+  html[data-build] .ucard .art{width:72px;height:92px}
+  html[data-build] .ucard .art img{max-width:70px;max-height:90px}
+}
+@media (max-width:380px){
+  html[data-build] .tt .art img{max-width:58px;max-height:74px}
+  html[data-build] .ucard .body{grid-template-columns:60px minmax(0,1fr)}
+  html[data-build] .ucard .art{width:60px;height:78px}
+  html[data-build] .ucard .art img{max-width:58px;max-height:76px}
+}
+@media (max-width:400px){
+  .hrail button{width:8px;height:8px;box-shadow:0 0 0 2px var(--ground)}
+  .hrail button.cur{width:12px;height:12px}
+  .hrail .hy{width:24px;height:24px}
+}
+/* grid items may shrink below their content (wide tables scroll inside instead of widening the page) */
+html[data-build] .grid > *,html[data-build] .g2 > *,html[data-build] .g3 > *,html[data-build] .now > *,html[data-build] .spirit > *,html[data-build] .console > *,html[data-build] .craft-layout > *,html[data-build] .charwrap > *,html[data-build] .setup > *{min-width:0}
+html[data-build] .panel,html[data-build] .frame{max-width:100%}

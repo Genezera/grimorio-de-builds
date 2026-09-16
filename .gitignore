@@ -11,3 +11,4 @@ tools/*.bak
 tools/dl/web/*.html
 tools/dl/web/report.txt
 test-results/
+tools/tests/overlap-report.txt

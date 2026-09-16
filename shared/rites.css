@@ -331,3 +331,7 @@ table.omens td small{color:var(--faint)}
 @media (pointer:coarse){.btn.sm{min-height:44px;min-width:44px}.chk{min-height:44px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}#embers{display:none}}
 @media print{.void,.chnav,.top,.cta,.btn{display:none!important}body{background:#fff;color:#111}.frame{background:#fff;box-shadow:none}h1 span{-webkit-text-fill-color:#111;color:#111}}
+/* decorative chapter number never sits on the title */
+.ch-art .num{top:14px;transform:none;line-height:.9}
+@media (max-width:860px){.ch-art .num{font-size:2.6rem;top:10px;right:14px}.ch-head{margin-top:-30px}}
+@media (max-width:640px){.ch-art{height:96px}.ch-art .num{font-size:2.2rem;top:8px}}

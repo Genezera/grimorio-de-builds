@@ -113,7 +113,7 @@
   function section(c, i) {
     const p = progress(c.id), pct = p / c.goal, ok = complete(c.id);
     return `<section class="ch frame ${ok ? 'complete' : ''}" id="${c.id}" aria-labelledby="h-${c.id}" style="--i:${i}">
-      <div class="ch-art" style="--art:url('${img(c.art)}')"><span class="num">${String(i + 1).padStart(2, '0')}</span></div>
+      <div class="ch-art" style="--art:url('${img(c.art)}')"><span class="num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span></div>
       <header class="ch-head">${icon(c.icon, 'sigil')}<div class="ch-title"><h2 id="h-${c.id}">${esc(c.name)}</h2><p class="req"><span>${esc(U.req)}:</span> “${esc(c.req)}”</p><p class="reqpt">${esc(c.reqpt)}</p>
         <div class="chips"><span class="chip">${esc(U.phase)}: ${esc(c.phase)}</span><span class="chip">${esc(U.effort)}: ${esc(c.effort)}</span>${ok ? `<span class="chip ok">✓ ${esc(U.done)}</span>` : ''}</div></div>
         <div class="ch-prog">${ring(pct, 76, `${p}`)}<small>${esc(U.of)} ${c.goal}</small></div></header>
