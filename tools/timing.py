@@ -7,26 +7,33 @@ Cada texto é (pt, en); build_site registra os pares na tradução.
 import json, glob
 
 def _levels():
-    """nível exigido por nome → {base, rf} (rf = versão Runeforged/Runemastered)."""
+    """Nível exigido por unique, do Path of Building (PoE2): linha 'Requires Level' do unique ou, sem ela, o requisito do tipo base.
+    (O campo levelRequired do poe.ninja NÃO é confiável: dizia 78 para o Sylvan's Effigy, que no jogo pede 62.)"""
+    import re
+    bases = {}
+    for f in glob.glob("dl/pob/pob_*.lua"):
+        for m in re.finditer(r'itemBases\["([^"]+)"\] = \{(.*?)\n\}', open(f, encoding="utf-8").read(), re.S):
+            r = re.search(r"req = \{[^}]*level = (\d+)", m.group(2)); bases[m.group(1)] = int(r.group(1)) if r else 1
     out = {}
-    for f in glob.glob("dl/eco_Unique*.json"):
-        for l in json.load(open(f, encoding="utf-8")).get("lines", []):
-            lv = l.get("levelRequired") or 1
-            rf = str(l.get("baseType", "")).startswith(("Runeforged", "Runemastered"))
-            d = out.setdefault(l["name"], {"base": None, "rf": None})
-            k = "rf" if rf else "base"
-            d[k] = lv if d[k] is None else min(d[k], lv)
+    for f in glob.glob("dl/pob/pobu_*.lua"):
+        for blk in re.findall(r"\[\[(.*?)\]\]", open(f, encoding="utf-8").read(), re.S):
+            lines = [l.strip() for l in blk.strip().splitlines() if l.strip()]
+            if len(lines) < 2: continue
+            name, base = lines[0], lines[1]
+            rq = next((int(re.search(r"\d+", l).group()) for l in lines if l.startswith("Requires Level")), None)
+            if name not in out:
+                out[name] = {"base": rq or bases.get(base), "src": "unique" if rq else "base", "type": base}
     return out
 
 LV = _levels()
 
 def req(name, extra=("", "")):
     d = LV.get(name, {})
-    b, r = d.get("base"), d.get("rf")
-    pt = f"Nível {b}" if b else "Sem requisito de nível"
-    en = f"Level {b}" if b else "No level requirement"
-    if r and r != b:
-        pt += f" · Runeforged/Runemastered: nível {r}"; en += f" · Runeforged/Runemastered: level {r}"
+    b = d.get("base")
+    pt = f"Nível {b}" if b else "Requisito não confirmado — confira no item"
+    en = f"Level {b}" if b else "Requirement not confirmed — check the item"
+    if b and d.get("src") == "base":
+        pt += " (do tipo base — confira no item)"; en += " (from the base type — check the item)"
     if extra[0]:
         pt += " · " + extra[0]; en += " · " + extra[1]
     return (pt, en)
@@ -36,15 +43,15 @@ def add(kind, n, lvl, req_, when, gives, early, late, steps, watch=()):
     E.append(dict(kind=kind, n=n, lvl=lvl, req=req_, when=when, gives=gives, early=early, late=late, steps=list(steps), watch=list(watch)))
 
 # ------------------------------------------------------------------ ITENS
-add("item", "Sylvan's Effigy", (LV.get("Sylvan's Effigy") or {}).get("base") or 78,
+add("item", "Sylvan's Effigy", (LV.get("Sylvan's Effigy") or {}).get("base") or 62,
     req("Sylvan's Effigy", ("Stoic Sceptre (1 mão)", "Stoic Sceptre (one-handed)")),
-    ("Nível 78, na fase T15+. Substitui o Rattling Sceptre.", "Level 78, in the T15+ phase. Replaces the Rattling Sceptre."),
-    ("Companions ilimitados (de tipos diferentes), 50–68% increased Spirit, atributos, regen de vida para aliados e mais dano dos companions em alvos marcados. Pelo guia do Mattjestic, traz as skills Azmerian Wolf e Discipline.",
-     "Unlimited companions (of different types), 50–68% increased Spirit, attributes, life regen for allies and more companion damage vs marked targets. Per Mattjestic's guide it grants the Azmerian Wolf and Discipline skills."),
-    ("Conseguiu antes do nível 78? NÃO dá para equipar ainda. Guarde e prepare a troca: (1) capture e guarde beasts de aura de tipos diferentes — um com Haste (Quill/Coconut Crab) e um com Physical (Swarming Wisp / Plague Swarm); (2) compre Primate Idol + Rabbit Idol para os sockets dele; (3) continue com Chober Chaber + Rattling Sceptre e 2 companions até lá; (4) junte currency para o Forgotten Warden, que também pede nível 78.",
-     "Got it before level 78? You can NOT equip it yet. Keep it and prepare the swap: (1) capture and keep aura beasts of different types — one with Haste (Quill/Coconut Crab) and one with Physical (Swarming Wisp / Plague Swarm); (2) buy Primate Idol + Rabbit Idol for its sockets; (3) keep Chober Chaber + Rattling Sceptre and 2 companions until then; (4) save currency for Forgotten Warden, which also needs level 78."),
-    ("Ainda não tem no nível 78+? A rota continua funcionando com Rattling Sceptre e 2 companions. O Effigy é o maior upgrade de Spirit e de companions: priorize antes de Idolatry e de itens de luxo.",
-     "Don't have it at level 78+? The route still works with Rattling Sceptre and 2 companions. The Effigy is the biggest Spirit and companion upgrade: prioritize it over Idolatry and luxury items."),
+    ("A partir do nível 62 (requisito do item). Entra assim que você conseguir — normalmente no início do Atlas. Substitui o Rattling Sceptre.", "From level 62 (item requirement). Put it on as soon as you get it — usually early Atlas. Replaces the Rattling Sceptre."),
+    ("Companions ilimitados (de tipos diferentes), 50–68% increased Spirit, atributos, regen de vida para aliados e mais dano dos companions em alvos marcados. Concede as skills Discipline e Azmerian Wolf.",
+     "Unlimited companions (of different types), 50–68% increased Spirit, attributes, life regen for allies and more companion damage vs marked targets. Grants the Discipline and Azmerian Wolf skills."),
+    ("Conseguiu antes do nível 62? Guarde até o 62. Já está no 62+? Equipe agora. Antes de trocar, deixe prontos: (1) beasts de aura de tipos diferentes capturados — Haste (Quill/Coconut Crab) e Physical (Swarming Wisp / Plague Swarm); (2) Primate Idol + Rabbit Idol para os sockets; (3) um Skeletal Cleric para ser o alvo do Pain Offering, porque a gem Skeletal Warrior sai junto com o Rattling Sceptre.",
+     "Got it before level 62? Keep it until 62. Already 62+? Equip it now. Before swapping, have ready: (1) captured aura beasts of different types — Haste (Quill/Coconut Crab) and Physical (Swarming Wisp / Plague Swarm); (2) Primate Idol + Rabbit Idol for the sockets; (3) a Skeletal Cleric to be the Pain Offering target, because the Skeletal Warrior gem leaves with the Rattling Sceptre."),
+    ("Ainda não tem? A rota continua funcionando com Rattling Sceptre e 2 companions. O Effigy é o maior upgrade de Spirit e de companions: priorize antes de Idolatry e de itens de luxo.",
+     "Don't have it yet? The route still works with Rattling Sceptre and 2 companions. The Effigy is the biggest Spirit and companion upgrade: prioritize it over Idolatry and luxury items."),
     [("Tire o Rattling Sceptre: a gem Skeletal Warrior some. O alvo do Pain Offering passa a ser o Skeletal Cleric (Sacrificial Lamb II + Tecrod's Revenge).", "Remove the Rattling Sceptre: the Skeletal Warrior gem disappears. The Pain Offering target becomes the Skeletal Cleric (Sacrificial Lamb II + Tecrod's Revenge)."),
      ("Com Chober Chaber você ainda precisa de Giant's Blood (Treefingers ou keystone) para usar maça de 2 mãos + sceptre.", "With Chober Chaber you still need Giant's Blood (Treefingers or keystone) to use a two-handed mace + sceptre."),
      ("Ative os companions nesta ordem, olhando o Spirit: Silverfist/Zekoa → beast Haste → Azmerian Wolf → beast Physical → beast ES.", "Activate companions in this order, watching Spirit: Silverfist/Zekoa → Haste beast → Azmerian Wolf → Physical beast → ES beast."),
@@ -58,8 +65,8 @@ add("item", "Chober Chaber", (LV.get("Chober Chaber") or {}).get("base") or 33,
     req("Chober Chaber", ("+100 de Intelligence exigido (triplica com Giant's Blood)", "+100 Intelligence required (tripled with Giant's Blood)")),
     ("Ato 3 no modo completo; início do Atlas no modo barato (quando pegar a Catha's Balance).", "Act 3 in full mode; early Atlas in budget mode (when you get Catha's Balance)."),
     ("Maça de 2 mãos: +2 Minion Skills, +50 Spirit, +80–100 mana e dano físico alto. Com The Catha's Balance, 60% do dano dela vai para cada golpe dos companions.", "Two-handed mace: +2 Minion Skills, +50 Spirit, +80–100 mana and high physical damage. With The Catha's Balance, 60% of its damage goes into every companion hit."),
-    ("Antes da Catha's Balance ela já vale pelos +2 Minion Skills e +50 Spirit. Atenção: a versão Runeforged pede nível 55; a normal pede 33. Para usar junto com o Rattling Sceptre você precisa de Giant's Blood (Treefingers) e, por causa dos requisitos triplicados, da The Vertex.",
-     "Before Catha's Balance it's already worth it for +2 Minion Skills and +50 Spirit. Note: the Runeforged version needs level 55; the normal one needs 33. To use it with Rattling Sceptre you need Giant's Blood (Treefingers) and, because of tripled requirements, The Vertex."),
+    ("Antes da Catha's Balance ela já vale pelos +2 Minion Skills e +50 Spirit. Para usar junto com o Rattling Sceptre você precisa de Giant's Blood (Treefingers) e, por causa dos requisitos triplicados, da The Vertex.",
+     "Before Catha's Balance it's already worth it for +2 Minion Skills and +50 Spirit. To use it with Rattling Sceptre you need Giant's Blood (Treefingers) and, because of tripled requirements, The Vertex."),
     ("Sem ela: Trenchtimbre (main) + Rattling Sceptre. Depois da Catha's Balance, cada nível sem a Chober é dano perdido: ela é a primeira compra do Atlas.", "Without it: Trenchtimbre (main) + Rattling Sceptre. After Catha's Balance, every level without Chober is lost damage: it's the first Atlas purchase."),
     [("Equipe Treefingers (Giant's Blood) antes, senão o sceptre sai da offhand.", "Equip Treefingers (Giant's Blood) first, otherwise the sceptre leaves the offhand."),
      ("Confira os atributos: sem The Vertex, 100 de Intelligence vira 300.", "Check attributes: without The Vertex, 100 Intelligence becomes 300."),
@@ -83,11 +90,11 @@ add("item", "The Vertex", (LV.get("The Vertex") or {}).get("base") or 33, req("T
     [("Trocar a The Vertex por Alpha's Howl (+100 Spirit) traz os requisitos triplicados de volta.", "Swapping The Vertex for Alpha's Howl (+100 Spirit) brings the tripled requirements back.")])
 
 add("item", "Enfolding Dawn", (LV.get("Enfolding Dawn") or {}).get("base") or 1, req("Enfolding Dawn"),
-    ("Ato 3–4 até o nível 78.", "Acts 3–4 until level 78."),
+    ("Ato 3 até trocar pela Forgotten Warden.", "Act 3 until you swap to Forgotten Warden."),
     ("Body com +100 Spirit. Custo: você não ganha o bônus inerente de Intelligence (menos mana).", "Body armour with +100 Spirit. Cost: you gain no inherent bonus from Intelligence (less mana)."),
     ("Quanto antes, melhor: é o maior ganho de Spirit da campanha.", "The earlier the better: it's the biggest Spirit gain of the campaign."),
     ("Sem ela, você perde espaço para o beast de aura ou para o esqueleto. Um body rare com Spirit é o substituto.", "Without it you lose room for the aura beast or the skeleton. A rare body with Spirit is the replacement."),
-    [("Ao trocar pela Forgotten Warden (nível 78), você perde +100 Spirit: faça a troca junto com o Sylvan's Effigy (increased Spirit) e confira o painel.", "When swapping to Forgotten Warden (level 78) you lose +100 Spirit: do it together with Sylvan's Effigy (increased Spirit) and check the panel.")])
+    [("Ao trocar pela Forgotten Warden você perde +100 Spirit: faça a troca depois do Sylvan's Effigy (increased Spirit) e confira o painel.", "When swapping to Forgotten Warden you lose +100 Spirit: do it after Sylvan's Effigy (increased Spirit) and check the panel.")])
 
 add("item", "Evergrasping Ring", (LV.get("Evergrasping Ring") or {}).get("base") or 32, req("Evergrasping Ring"),
     ("Ato 4 (nível 32+), os dois anéis.", "Act 4 (level 32+), both rings."),
@@ -105,10 +112,10 @@ add("item", "Yriel's Fostering", (LV.get("Yriel's Fostering") or {}).get("base")
     [],
     [("NÃO soma com o Trusted Kinship: continua 2 companions.", "Does NOT stack with Trusted Kinship: still 2 companions.")])
 
-add("item", "Forgotten Warden", (LV.get("Forgotten Warden") or {}).get("base") or 78, req("Forgotten Warden"),
-    ("Nível 78, junto com o Sylvan's Effigy.", "Level 78, together with Sylvan's Effigy."),
-    ("Companions com 30–50% mais vida, parte do dano Deflected vai para eles, Evasion/ES alto. Pelo guia, dá o Spirit Vessel.", "Companions get 30–50% more life, part of Deflected damage goes to them, high Evasion/ES. Per the guide it grants Spirit Vessel."),
-    ("Antes do 78 não dá para equipar: guarde e siga com Enfolding Dawn.", "Before level 78 you can't equip it: keep it and stay on Enfolding Dawn."),
+add("item", "Forgotten Warden", (LV.get("Forgotten Warden") or {}).get("base") or 70, req("Forgotten Warden"),
+    ("Depois do Sylvan's Effigy, quando o requisito do item permitir.", "After Sylvan's Effigy, once the item's requirement allows."),
+    ("Companions com 30–50% mais vida, parte do dano Deflected vai para eles, Evasion/ES alto. Concede a skill Spirit Vessel.", "Companions get 30–50% more life, part of Deflected damage goes to them, high Evasion/ES. Grants the Spirit Vessel skill."),
+    ("Se o requisito do item for maior que o seu nível, guarde e siga com Enfolding Dawn.", "If the item's requirement is above your level, keep it and stay on Enfolding Dawn."),
     ("Sem ela, continue com Enfolding Dawn; é o upgrade de defesa do zoo no endgame.", "Without it, stay on Enfolding Dawn; it's the zoo's endgame defensive upgrade."),
     [("Você perde os +100 Spirit da Enfolding Dawn: confira se o zoo ainda cabe.", "You lose Enfolding Dawn's +100 Spirit: check the zoo still fits."),
      ("Spirit Vessel: socket Furious Slam (Bear) + Arctic Howl (Werewolf).", "Spirit Vessel: socket Furious Slam (Bear) + Arctic Howl (Werewolf).")])
@@ -134,10 +141,10 @@ add("item", "Alpha's Howl", (LV.get("Alpha's Howl") or {}).get("base") or 65, re
     ("Não é obrigatório.", "Not required."),
     [], [("Tira a The Vertex: com Giant's Blood os requisitos triplicados voltam.", "Replaces The Vertex: with Giant's Blood the tripled requirements come back.")])
 
-add("item", "Spiteful Floret", (LV.get("Spiteful Floret") or {}).get("base") or 52, req("Spiteful Floret"),
+add("item", "Spiteful Floret", (LV.get("Spiteful Floret") or {}).get("base") or 1, req("Spiteful Floret"),
     ("Weapon set 2 no endgame.", "Weapon set 2 in endgame."),
     ("Pelo guia do Mattjestic, dá o Sanguine Revelry quando está no weapon set 2.", "Per Mattjestic's guide it grants Sanguine Revelry while in weapon set 2."),
-    ("Pode colocar no weapon set 2 a partir do nível 52.", "Can go in weapon set 2 from level 52."),
+    ("Confira o requisito no item antes de comprar.", "Check the requirement on the item before buying."),
     ("Opcional.", "Optional."),
     [], [("Não fique com o set 2 ativo: a Catha's Balance lê a main-hand do set ATIVO.", "Don't stay on set 2: Catha's Balance reads the ACTIVE set's main hand.")])
 
@@ -218,8 +225,8 @@ add("skill", "Skeletal Cleric", 65, ("Gem de minion", "Minion gem"),
     ("Início do Atlas; vira o alvo do Pain Offering quando o Rattling Sceptre sai.", "Early Atlas; becomes the Pain Offering target when Rattling Sceptre leaves."),
     ("Cura o zoo e revive esqueletos.", "Heals the zoo and revives skeletons."),
     ("Pode entrar antes como 2º esqueleto (libera Danse Macabre) se couber no Spirit.", "Can come in earlier as the 2nd skeleton (unlocks Danse Macabre) if it fits your Spirit."), ("—", "—"), [])
-add("skill", "Azmerian Wolf", 78, ("Vem do Sylvan's Effigy", "Comes from Sylvan's Effigy"),
-    ("Junto com o Effigy (nível 78).", "Together with the Effigy (level 78)."),
+add("skill", "Azmerian Wolf", 62, ("Vem do Sylvan's Effigy", "Comes from Sylvan's Effigy"),
+    ("Junto com o Effigy (nível 62).", "Together with the Effigy (level 62)."),
     ("Segundo companion de dano.", "Second damage companion."),
     ("Sem Effigy não existe.", "Doesn't exist without the Effigy."), ("—", "—"), [])
 add("skill", "Refutation", 65, ("Gem (precisa de Runic Ward)", "Gem (needs Runic Ward)"),
@@ -235,17 +242,14 @@ add("skill", "Tame Beast (Zekoa)", 65, ("Mapas Riverside / Rupture", "Riverside 
 # ------------------------------------------------------------------ CASOS
 CASES = [
  (("Cheguei ao Atlas ainda no nível 60–65", "I reached the Atlas still at level 60–65"),
-  ("Normal. Selecione 'Início do Atlas' em 'Onde você está' no topo: o guia passa a mostrar a fase do Atlas, e a árvore continua usando os pontos do seu nível. O que dá para usar agora: The Catha's Balance (3º Trial em área 60+), Chober Chaber (33; Runeforged 55), The Vertex, Evergrasping Ring, Alpha's Howl (65). O que ainda NÃO dá: Sylvan's Effigy e Forgotten Warden (78). Até o 78: Chober + Rattling Sceptre, 2 companions, 1–2 esqueletos.",
-   "Normal. Pick 'Early Atlas' in 'Where are you' at the top: the guide switches to the Atlas phase and the tree keeps using your level's points. Usable now: The Catha's Balance (3rd Trial in area 60+), Chober Chaber (33; Runeforged 55), The Vertex, Evergrasping Ring, Alpha's Howl (65). NOT yet: Sylvan's Effigy and Forgotten Warden (78). Until 78: Chober + Rattling Sceptre, 2 companions, 1–2 skeletons.")),
+  ("Normal. Selecione 'Início do Atlas' em 'Onde você está' no topo: o guia passa a mostrar a fase do Atlas, e a árvore continua usando os pontos do seu nível. Já dá para usar: The Catha's Balance (3º Trial em área 60+), Chober Chaber, The Vertex, Evergrasping Ring e o Sylvan's Effigy (nível 62). Se tiver o Effigy, siga o cartão dele: tire o Rattling Sceptre, use Skeletal Cleric no Pain Offering e ative mais beasts de aura conforme o Spirit.",
+   "Normal. Pick 'Early Atlas' in 'Where are you' at the top: the guide switches to the Atlas phase and the tree keeps using your level's points. Already usable: The Catha's Balance (3rd Trial in area 60+), Chober Chaber, The Vertex, Evergrasping Ring and Sylvan's Effigy (level 62). If you have the Effigy, follow its card: remove the Rattling Sceptre, use Skeletal Cleric for Pain Offering and activate more aura beasts as Spirit allows.")),
  (("Consegui um item antes do nível exigido", "I got an item before its level requirement"),
-  ("Guarde. Veja o cartão do item nesta aba: ele diz o nível exato (e o da versão Runeforged, que costuma ser maior) e o que preparar enquanto isso.",
-   "Keep it. Check the item's card on this tab: it shows the exact level (and the Runeforged version's, usually higher) and what to prepare meanwhile.")),
+  ("Guarde. Veja o cartão do item nesta aba: ele diz o nível exato e o que preparar enquanto isso.",
+   "Keep it. Check the item's card on this tab: it shows the exact level and what to prepare meanwhile.")),
  (("Estou mais atrasado que o nível (ex.: nível 70 ainda nos Interlúdios)", "I'm behind my level (e.g. level 70 still in the Interludes)"),
   ("Selecione a fase em que você realmente está. Os itens e skills seguem a fase; a árvore usa os pontos do nível e continua para a próxima fase quando sobrarem pontos.",
    "Select the phase you're actually in. Items and skills follow the phase; the tree uses your level's points and continues into the next phase when you have spare points.")),
- (("Comprei a versão Runeforged e não consigo equipar", "I bought the Runeforged version and can't equip it"),
-  ("Runeforged/Runemastered aumentam o nível exigido (Chober Chaber: 33 → 55; Treefingers: 11 → 38; Forgotten Warden: 78 → 80). Use a versão normal até lá.",
-   "Runeforged/Runemastered raise the level requirement (Chober Chaber: 33 → 55; Treefingers: 11 → 38; Forgotten Warden: 78 → 80). Use the normal version until then.")),
  (("Tenho o Effigy mas não tenho Giant's Blood", "I have the Effigy but no Giant's Blood"),
   ("Você pode usar Effigy + arma de 1 mão (Trenchtimbre) sem Giant's Blood. Para Chober Chaber (2 mãos) + Effigy, precisa de Treefingers ou do keystone.",
    "You can use Effigy + a one-handed weapon (Trenchtimbre) without Giant's Blood. For Chober Chaber (two-handed) + Effigy you need Treefingers or the keystone.")),
@@ -263,10 +267,25 @@ TIMING = [_reg(e) for e in E]
 TIMING_CASES = [{"q": _reg(q), "a": _reg(a)} for q, a in CASES]
 
 def unique_levels(UNIQUES):
-    """Corrige o nível exigido dos uniques com o dado real do item."""
+    """Nível exigido dos uniques pelo Path of Building (ver _levels)."""
     for u in UNIQUES:
+        u.pop("lvlRf", None)
         d = LV.get(u["n"])
         if d and d.get("base"):
-            u["lvl"] = d["base"]
-            if d.get("rf") and d["rf"] != d["base"]:
-                u["lvlRf"] = d["rf"]
+            u["lvl"] = d["base"]; u["lvlSrc"] = d["src"]
+        else:
+            u["lvl"] = None
+        if u.get("rf"):
+            import re as _re
+            u["rf"] = _re.sub(r"\s*\(nv \d+\)", "", u["rf"])
+
+
+def effigy_62(DATA):
+    """O Sylvan's Effigy pede nível 62 (texto do item no jogo), não 78."""
+    m = DATA["milestones"]
+    m.pop(78, None)
+    m[63] = "Sylvan's Effigy liberado (requer nível 62, ~1 div): tire o Rattling Sceptre, Skeletal Cleric vira o alvo do Pain Offering e ative mais beasts de aura conforme o Spirit."
+    for b in DATA["buyOrder"]:
+        if "Sylvan's Effigy" in b["item"]:
+            b["phase"] = "Nv 62+"
+    DATA["fixes"] = ["Sylvan's Effigy é um Stoic Sceptre e requer nível 62 (texto do item no jogo)." if "Sylvan's Effigy é Stoic Sceptre" in f else f for f in DATA["fixes"]]
