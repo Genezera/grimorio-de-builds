@@ -75,7 +75,7 @@ function adaptPhase(p) {
   }
   // ---- Forgotten Warden
   if (hasUse("Forgotten Warden") && !q.gems.some(g => /^Spirit Vessel/.test(g.skill))) {
-    const sv = pick(t15, /^Spirit Vessel/);
+    const sv = pick(S.lv >= 90 ? phaseById("mm") : t15, /^Spirit Vessel/);
     if (sv) { sv.sp = "core"; sv.pr = 8; sv.cost = T("Reserva Spirit (vem do Forgotten Warden)", "Reserves Spirit (from Forgotten Warden)"); q.gems.push(sv); }
   }
   // ---- sem Evergrasping Ring
@@ -117,14 +117,16 @@ function adaptItems(pid, items) {
   const out = clone(items);
   const ringSlot = s => /Anel|Ring/i.test(s);
   const pool = [];
-  for (const ph of PH_ORDER) for (const m of ["cheap", "full"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u || it.n === "Rattling Sceptre") pool.push(it);
+  const cur = PH_ORDER.indexOf(pid);
+  for (const ph of PH_ORDER) for (const m of [S.mode, S.mode === "cheap" ? "full" : "cheap"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u || it.n === "Rattling Sceptre") pool.push(Object.assign({}, it, { _d: Math.abs(PH_ORDER.indexOf(ph) - cur) * 2 + (PH_ORDER.indexOf(ph) < cur ? 1 : 0) + (m === S.mode ? 0 : .5) }));
+  pool.sort((x, y) => x._d - y._d);
   const sameSlot = (a, b) => a === b || (ringSlot(a) && ringSlot(b));
   const used = new Set();
   for (let i = 0; i < out.length; i++) {
     const it = out[i];
     if ((it.u || it.n === "Rattling Sceptre") && hasUse(it.n) && !used.has(it.n + i)) { it.have = 1; continue; }
     // o que você tem para este slot (o mais avançado na rota)
-    const cands = pool.filter(c => sameSlot(c.slot, it.slot) && hasUse(c.n)).reverse();
+    const cands = pool.filter(c => sameSlot(c.slot, it.slot) && hasUse(c.n));
     const pickC = cands.find(c => !(ringSlot(c.slot) && out.some((o, j) => j !== i && o.n === c.n && o.have && c.n !== "Evergrasping Ring")));
     if (pickC) { out[i] = Object.assign(clone(pickC), { slot: it.slot, have: 1, swapped: it.n }); continue; }
     if (it.u || it.n === "Rattling Sceptre") it.miss = 1;

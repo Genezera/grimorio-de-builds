@@ -118,7 +118,7 @@ add("item", "Forgotten Warden", (LV.get("Forgotten Warden") or {}).get("base") o
     ("Se o requisito do item for maior que o seu nível, guarde e siga com Enfolding Dawn.", "If the item's requirement is above your level, keep it and stay on Enfolding Dawn."),
     ("Sem ela, continue com Enfolding Dawn; é o upgrade de defesa do zoo no endgame.", "Without it, stay on Enfolding Dawn; it's the zoo's endgame defensive upgrade."),
     [("Você perde os +100 Spirit da Enfolding Dawn: confira se o zoo ainda cabe.", "You lose Enfolding Dawn's +100 Spirit: check the zoo still fits."),
-     ("Spirit Vessel: socket Furious Slam (Bear) + Arctic Howl (Werewolf).", "Spirit Vessel: socket Furious Slam (Bear) + Arctic Howl (Werewolf).")])
+     ("Spirit Vessel até o nível 90: Loyalty + Furious Slam + Arctic Howl + Rapid Attacks II + Rage III. No endgame 90+: Loyalty + Devour + Oil Barrage + Salvo + Living Lightning II.", "Spirit Vessel until level 90: Loyalty + Furious Slam + Arctic Howl + Rapid Attacks II + Rage III. At endgame 90+: Loyalty + Devour + Oil Barrage + Salvo + Living Lightning II.")])
 
 add("item", "Trenchtimbre", (LV.get("Trenchtimbre") or {}).get("base") or 16, req("Trenchtimbre"),
     ("Ato 3 no modo barato, até a Chober Chaber.", "Act 3 in budget mode, until Chober Chaber."),
