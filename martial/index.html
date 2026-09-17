@@ -1376,6 +1376,23 @@ const S = { lv: store.get("lv", 35), mode: store.get("mode", "cheap"), tab: stor
 S.stage = store.get("stage", "auto");
 function curPhase() { return (S.stage && S.stage !== "auto" && D.phases.find(p => p.id === S.stage)) || phaseOf(S.lv); }
 const phaseOf = lv => D.phases.find(p => lv >= p.lv[0] && lv <= p.lv[1]) || D.phases[D.phases.length - 1];
+/* nível e ato podem não bater (subiu rápido, subiu devagar, voltou para farmar): explica o que muda */
+function stageGap() {
+  const manual = S.stage && S.stage !== "auto"; if (!manual) return "";
+  const p = curPhase(), auto = phaseOf(S.lv);
+  if (p.id === auto.id) return "";
+  const ahead = S.lv < p.lv[0];
+  const gems = (p.gems || []).filter(g => g.since && S.lv < g.since);
+  const falta = Math.max(0, p.lv[0] - S.lv);
+  const txt = ahead
+    ? T(`Você marcou <b>${esc(p.name)}</b> com nível ${S.lv}: está adiantado no jogo e atrasado em nível. Siga o plano desta fase, mas ${gems.length ? `estas skills só abrem mais tarde: ${gems.map(g => `${esc(g.skill)} (nv ${g.since})`).join(", ")}. ` : ""}${falta ? `faltam ${falta} níveis para o plano completo da fase — não gaste currency com o que você ainda não equipa.` : ""}`,
+        `You picked <b>${esc(p.name)}</b> at level ${S.lv}: you are ahead in the campaign and behind in level. Follow this phase's plan, but ${gems.length ? `these skills unlock later: ${gems.map(g => `${esc(g.skill)} (lv ${g.since})`).join(", ")}. ` : ""}${falta ? `you are ${falta} levels short of the full phase plan — don't spend currency on what you can't equip yet.` : ""}`)
+    : T(`Você marcou <b>${esc(p.name)}</b> com nível ${S.lv}: está com nível de sobra para esta fase. Já dá para pegar o setup de <b>${esc(auto.name)}</b> e seguir em frente.`,
+        `You picked <b>${esc(p.name)}</b> at level ${S.lv}: you are over-levelled for this phase. You can already take the <b>${esc(auto.name)}</b> setup and move on.`);
+  return `<div class="adaptbar frame on" style="margin-top:12px"><span>${txt}</span>
+    <button class="btn" type="button" data-stage="auto">${T("Usar meu nível", "Use my level")}</button>
+    ${ahead ? "" : `<button class="btn" type="button" data-stage="${auto.id}">${T(`Ir para ${esc(auto.name)}`, `Go to ${esc(auto.name)}`)}</button>`}</div>`;
+}
 const msList = Object.entries(D.milestones).map(([k, v]) => ({ lv: +k, t: v })).sort((a, b) => a.lv - b.lv);
 const TABS = [["agora", "Agora"], ["meu", "Meu personagem"], ["quando", "Quando usar"], ["mech", "Teleporte & Cargas"], ["uniques", "Uniques"], ["arvore", "Árvore de Passivas"], ["rota", "Rota 1→100"], ["skills", "Skills & Supports"], ["gear", "Itens"], ["asc", "Ascendência"], ["quests", "Quests"], ["tricks", "Tricks Pro"], ["atlas", "Atlas"], ["diag", "Diagnóstico"], ["fontes", "Fontes"]];
 const baseSkill = s => s.replace(/\s*\(.*\)/, "").trim();
@@ -1530,6 +1547,7 @@ function vAgora() {
   return `
   <div class="sechead"><div><div class="label">Nível ${S.lv} · ${S.mode === "cheap" ? "modo barato" : "modo completo"}</div><h2>O que fazer agora</h2></div>
     <span class="chip ${S.mode === "cheap" ? "wisp" : "unique"}">${S.mode === "cheap" ? "Barato: trade com pouco" : "Completo: currency suficiente"}</span></div>
+  ${stageGap()}
   <div class="now stagger">
     <div class="nowcard frame">
       <div class="label">${esc(p.name)} · ${esc(p.tag)}</div>
@@ -2168,6 +2186,7 @@ document.addEventListener("click", e => { const b = e.target.closest && e.target
 
 /* ------------------------------------------------ events */
 document.addEventListener("change", e => {
+  if (e.target.id === "stageSel") { S.stage = e.target.value; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   if (e.target.id === "ptsIn") { const v = parseInt(e.target.value, 10); if (!isNaN(v)) { S.ptsOv = v; S.ptsOvLv = S.lv; render(); } return; }
   const t = e.target;
   if (t.dataset.key) { S.done[t.dataset.key] = t.checked; store.set("done", S.done); render(); return; }
@@ -2180,6 +2199,7 @@ document.addEventListener("click", e => {
   const t = e.target;
   const gt = t.closest("[data-gotab]"); if (gt) { S.tab = gt.dataset.gotab; store.set("tab", S.tab); showTab(); scrollTo({ top: $("#tabs").offsetTop, behavior: "smooth" }); return; }
   const gn = t.closest("[data-gotree]"); if (gn) { const id = +gn.dataset.gotree; if (S.tab !== "arvore") { S.tab = "arvore"; store.set("tab", S.tab); showTab(); } setTimeout(() => TV && TV.center(id, 0.22), 60); return; }
+  const st = t.closest("[data-stage]"); if (st) { S.stage = st.dataset.stage; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   const go = t.closest("[data-go]"); if (go) { setLv(+go.dataset.go); return; }
   const lvl = t.closest(".lvl"); if (lvl) { setLv(+lvl.dataset.lv); return; }
   const ph = t.closest("[data-sel] button"); if (ph) { const w = ph.parentElement.dataset.sel; if (w === "tree") S.treePhase = ph.dataset.ph; if (w === "skills") S.skillPhase = ph.dataset.ph; if (w === "gear") S.gearPhase = ph.dataset.ph; render(); return; }

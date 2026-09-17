@@ -1196,6 +1196,34 @@ html[data-build] #navigator.stuck{background-color:var(--ground)}
 @media (max-width:980px){html[data-build] .craft-items{flex-wrap:wrap;overflow:visible}}
 @media (max-width:480px){html[data-build] #guidePrint{display:none}}
 
+/* ---------- linha do tempo de itens (aba da mecânica): ícone do item, slot e nível */
+html[data-build] .gearline{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+html[data-build] .glrow{display:grid;grid-template-columns:auto auto 1fr;gap:12px;align-items:center;padding:8px 10px;border:1px solid var(--edge);border-radius:var(--r);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--stone2) 70%,transparent),transparent);opacity:.72}
+html[data-build] .glrow.on{opacity:1;border-color:color-mix(in srgb,var(--gild) 45%,var(--edge))}
+html[data-build] .glrow.next{opacity:1;border-color:color-mix(in srgb,var(--accent) 55%,var(--edge));box-shadow:0 0 0 1px var(--accent-g)}
+html[data-build] .glpics{display:flex;gap:6px;align-items:center;min-width:44px}
+html[data-build] .glpics img{width:42px;height:42px;object-fit:contain;border:1px solid var(--edge2);border-radius:2px;background:#0c0c0e}
+html[data-build] .glrow b{color:var(--gild-hi)}
+html[data-build] .glrow small{display:block;color:var(--mute);line-height:1.45}
+html[data-build] .glslot{display:inline-block;margin-left:6px;padding:1px 7px;border:1px solid var(--edge2);border-radius:999px;font:600 .66rem/1.5 var(--ui);color:var(--accent-hi);letter-spacing:.04em;text-transform:uppercase}
+@media (max-width:560px){
+  html[data-build] .glrow{grid-template-columns:auto 1fr;row-gap:6px}
+  html[data-build] .glpics{grid-column:1;grid-row:2}
+  html[data-build] .glrow>div{grid-column:2;grid-row:2}
+  html[data-build] .glpics img{width:36px;height:36px}
+}
+
+/* ---------- progressão por nível dentro do card do slot (aba Itens): o que usar agora fica aceso */
+html[data-build] .gearlv{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+html[data-build] .glv{display:inline-flex;align-items:center;gap:6px;padding:3px 8px 3px 3px;border:1px solid var(--edge);border-radius:999px;
+  font:600 .72rem/1.4 var(--ui);color:var(--mute);background:color-mix(in srgb,var(--stone2) 60%,transparent);opacity:.75}
+html[data-build] .glv img{width:26px;height:26px;object-fit:contain;border-radius:50%;background:#0b0b0d;border:1px solid var(--edge2)}
+html[data-build] .glv i{font-style:normal;color:var(--faint);letter-spacing:.06em}
+html[data-build] .glv.on{opacity:1;color:var(--gild-hi);border-color:color-mix(in srgb,var(--gild) 60%,var(--edge));background:var(--gild-g)}
+html[data-build] .glv.on i{color:var(--gild)}
+html[data-build] .glv.nx{opacity:1;color:var(--accent-hi);border-color:color-mix(in srgb,var(--accent) 45%,var(--edge))}
+
 /* Build companion: readable rows instead of a compressed equipment doll. */
 html[data-build] #side{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-width:0;background:linear-gradient(160deg,var(--stone3),var(--ground) 65%);box-shadow:inset 1px 0 var(--edge);isolation:isolate;overflow:hidden}
 #side *{box-sizing:border-box;min-width:0}
@@ -1348,6 +1376,23 @@ const S = { lv: store.get("lv", 35), mode: store.get("mode", "cheap"), tab: stor
 S.stage = store.get("stage", "auto");
 function curPhase() { return (S.stage && S.stage !== "auto" && D.phases.find(p => p.id === S.stage)) || phaseOf(S.lv); }
 const phaseOf = lv => D.phases.find(p => lv >= p.lv[0] && lv <= p.lv[1]) || D.phases[D.phases.length - 1];
+/* nível e ato podem não bater (subiu rápido, subiu devagar, voltou para farmar): explica o que muda */
+function stageGap() {
+  const manual = S.stage && S.stage !== "auto"; if (!manual) return "";
+  const p = curPhase(), auto = phaseOf(S.lv);
+  if (p.id === auto.id) return "";
+  const ahead = S.lv < p.lv[0];
+  const gems = (p.gems || []).filter(g => g.since && S.lv < g.since);
+  const falta = Math.max(0, p.lv[0] - S.lv);
+  const txt = ahead
+    ? T(`Você marcou <b>${esc(p.name)}</b> com nível ${S.lv}: está adiantado no jogo e atrasado em nível. Siga o plano desta fase, mas ${gems.length ? `estas skills só abrem mais tarde: ${gems.map(g => `${esc(g.skill)} (nv ${g.since})`).join(", ")}. ` : ""}${falta ? `faltam ${falta} níveis para o plano completo da fase — não gaste currency com o que você ainda não equipa.` : ""}`,
+        `You picked <b>${esc(p.name)}</b> at level ${S.lv}: you are ahead in the campaign and behind in level. Follow this phase's plan, but ${gems.length ? `these skills unlock later: ${gems.map(g => `${esc(g.skill)} (lv ${g.since})`).join(", ")}. ` : ""}${falta ? `you are ${falta} levels short of the full phase plan — don't spend currency on what you can't equip yet.` : ""}`)
+    : T(`Você marcou <b>${esc(p.name)}</b> com nível ${S.lv}: está com nível de sobra para esta fase. Já dá para pegar o setup de <b>${esc(auto.name)}</b> e seguir em frente.`,
+        `You picked <b>${esc(p.name)}</b> at level ${S.lv}: you are over-levelled for this phase. You can already take the <b>${esc(auto.name)}</b> setup and move on.`);
+  return `<div class="adaptbar frame on" style="margin-top:12px"><span>${txt}</span>
+    <button class="btn" type="button" data-stage="auto">${T("Usar meu nível", "Use my level")}</button>
+    ${ahead ? "" : `<button class="btn" type="button" data-stage="${auto.id}">${T(`Ir para ${esc(auto.name)}`, `Go to ${esc(auto.name)}`)}</button>`}</div>`;
+}
 const msList = Object.entries(D.milestones).map(([k, v]) => ({ lv: +k, t: v })).sort((a, b) => a.lv - b.lv);
 const TABS = [["agora", "Now"], ["meu", "My character"], ["quando", "When to use"], ["mech", "Pin & Grenades"], ["uniques", "Uniques"], ["arvore", "Passive Tree"], ["rota", "Route 1→100"], ["skills", "Skills & Supports"], ["gear", "Items"], ["asc", "Ascendancy"], ["quests", "Quests"], ["tricks", "Pro Tricks"], ["atlas", "Atlas"], ["diag", "Troubleshooting"], ["fontes", "Sources"]];
 const baseSkill = s => s.replace(/\s*\(.*\)/, "").trim();
@@ -1502,6 +1547,7 @@ function vAgora() {
   return `
   <div class="sechead"><div><div class="label">Level ${S.lv} · ${S.mode === "cheap" ? "budget mode" : "full mode"}</div><h2>What to do now</h2></div>
     <span class="chip ${S.mode === "cheap" ? "wisp" : "unique"}">${S.mode === "cheap" ? "Budget: trade on little" : "Full: enough currency"}</span></div>
+  ${stageGap()}
   <div class="now stagger">
     <div class="nowcard frame">
       <div class="label">${esc(p.name)} · ${esc(p.tag)}</div>
@@ -1774,6 +1820,7 @@ function vGear() {
   <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot by slot · budget to full</h2><p>${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Budget</b>" : "<b style='color:#E18C47'>Full</b>"} mode highlights the right row. Prices change fast, so we use ranges.</p></div></div>
   <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
     <div class="hd"><b>${esc(g.slot)}</b><span class="thumbs">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}">`).join("")}</span></div>
+    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
     <div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Budget</span><span>${esc(g.cheap)}</span></div>
     <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Value</span><span>${esc(g.value)}</span></div>
     <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Full</span><span>${esc(g.full)}</span></div>
@@ -2139,6 +2186,7 @@ document.addEventListener("click", e => { const b = e.target.closest && e.target
 
 /* ------------------------------------------------ events */
 document.addEventListener("change", e => {
+  if (e.target.id === "stageSel") { S.stage = e.target.value; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   if (e.target.id === "ptsIn") { const v = parseInt(e.target.value, 10); if (!isNaN(v)) { S.ptsOv = v; S.ptsOvLv = S.lv; render(); } return; }
   const t = e.target;
   if (t.dataset.key) { S.done[t.dataset.key] = t.checked; store.set("done", S.done); render(); return; }
@@ -2151,6 +2199,7 @@ document.addEventListener("click", e => {
   const t = e.target;
   const gt = t.closest("[data-gotab]"); if (gt) { S.tab = gt.dataset.gotab; store.set("tab", S.tab); showTab(); scrollTo({ top: $("#tabs").offsetTop, behavior: "smooth" }); return; }
   const gn = t.closest("[data-gotree]"); if (gn) { const id = +gn.dataset.gotree; if (S.tab !== "arvore") { S.tab = "arvore"; store.set("tab", S.tab); showTab(); } setTimeout(() => TV && TV.center(id, 0.22), 60); return; }
+  const st = t.closest("[data-stage]"); if (st) { S.stage = st.dataset.stage; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   const go = t.closest("[data-go]"); if (go) { setLv(+go.dataset.go); return; }
   const lvl = t.closest(".lvl"); if (lvl) { setLv(+lvl.dataset.lv); return; }
   const ph = t.closest("[data-sel] button"); if (ph) { const w = ph.parentElement.dataset.sel; if (w === "tree") S.treePhase = ph.dataset.ph; if (w === "skills") S.skillPhase = ph.dataset.ph; if (w === "gear") S.gearPhase = ph.dataset.ph; render(); return; }
