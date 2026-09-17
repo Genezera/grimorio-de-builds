@@ -7,7 +7,8 @@ const canUse = n => { const u = D.uniques.find(x => x.n === n); return !u || !u.
 const hasUse = n => own(n) && canUse(n);
 const adaptOn = () => !!S.adapt && !!S.ch && (Object.values(S.ch.own || {}).some(Boolean) || +S.ch.spirit > 0);
 /* trocas declaradas nos dados: {pid, when:{...regra}, gemsFrom, note} */
-const swapsFor = pid => (D.adaptSwaps || []).filter(s => (!s.pid || s.pid === pid || (s.pids || []).includes(pid)) && ruleOk(s.when));
+/* a troca só vale nas fases declaradas (pid ou pids); sem nenhuma das duas, vale em qualquer fase */
+const swapsFor = pid => (D.adaptSwaps || []).filter(s => (s.pid ? s.pid === pid : s.pids ? s.pids.includes(pid) : true) && ruleOk(s.when));
 
 function adaptNotes() {
   const n = []; if (!adaptOn()) return n;
