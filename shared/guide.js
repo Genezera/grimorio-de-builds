@@ -3,7 +3,7 @@ const GUIDE_ORACLE = Object.prototype.hasOwnProperty.call(VIEWS, 'totem');
 const GUIDE_GROUPS = [
   [T('Sua jornada','Your journey'), ['agora','meu','quando','rota','quests']],
   [T('Monte a build','Build setup'), ['skills','gear','craft','uniques','arvore','asc']],
-  [T('Domine a build','Master the build'), ['totem','caca','zoo','meta','tricks','atlas']],
+  [T('Domine a build','Master the build'), ['totem','mech','caca','zoo','meta','tricks','atlas']],
   [T('Ajuda & fontes','Help & sources'), ['diag','fontes']]
 ];
 const GUIDE_HINTS = {
@@ -19,6 +19,7 @@ const GUIDE_HINTS = {
   arvore: [T('Siga a ordem, confira os pontos','Follow the order, check your points'),T('Selecione a etapa e compare os pontos disponíveis. Use o zoom e o ajuste de enquadramento para localizar a próxima passiva.','Select your stage and check available points. Use zoom and fit controls to locate the next passive.'),'asc'],
   asc: [T('Planeje as dependências','Plan dependencies'),T('Pegue os notables na ordem do guia. Uma mudança de ascendência pode exigir ajustar armas, reservas ou skills antes da troca.','Take notables in the guide’s order. An ascendancy change may require adjusting weapons, reservations or skills first.'),'meu'],
   totem: [T('Spirit, mana e Runic Ward','Spirit, mana and Runic Ward'),T('São recursos diferentes. Confira quantos totems cabem e se as armaduras sustentam as skills de Runic Ward antes de ativar o setup.','These are different resources. Check totem capacity and whether your armour supports Runic Ward skills before enabling the setup.'),'craft'],
+  mech: [T('Entenda a mecânica','Understand the mechanic'),(D.ui&&D.ui.mechHint)||T('Leia como a build causa dano e se defende, depois planeje o Spirit das skills persistentes.','Read how the build deals damage and defends, then plan the Spirit of your persistent skills.'),'skills'],
   caca: [T('Capture o tipo, depois busque o roll','Capture the type, then hunt the roll'),T('Filtre o beast pelo objetivo. Área correta não garante Haste: confira os modificadores antes de concluir a captura.','Filter beasts by your goal. The right area does not guarantee Haste: check modifiers before completing the capture.'),'zoo'],
   zoo: [T('Monte o zoo que cabe','Build a zoo that fits'),T('Informe o Spirit total e a eficiência real. Priorize o companion principal; acrescente auras depois de conferir o saldo.','Enter your actual Spirit and efficiency. Prioritise the main companion; add auras after checking the remaining budget.'),'meu'],
   meta: [T('Otimize o que já funciona','Optimise a working setup'),T('Resolva primeiro as dependências básicas. Compare cada upgrade com a melhoria mais barata que ainda falta no personagem.','Resolve core dependencies first. Compare each upgrade against the cheapest improvement still missing on your character.'),'craft'],
@@ -95,7 +96,7 @@ function guideSearch() {
   box.hidden=q.length<2;$('#guideSearch').setAttribute('aria-expanded',!box.hidden);
   if(box.hidden) return;
   if(!guideIndex){
-    const sources={agora:D.phases,meu:GUIDE_HINTS.meu,quando:D.timing,rota:D.phases,quests:D.quests,skills:D.phases.map(p=>p.gems),gear:[D.gear,A.sets],craft:craftRecipes(),uniques:D.uniques,arvore:D.keyPassives,asc:D.asc,totem:[D.totem,D.craft,D.phases],caca:D.hunt,zoo:D.beasts,meta:[D.meta,D.optimizations],tricks:D.tricks,atlas:D.atlas,diag:D.fixes,fontes:D.sources};
+    const sources={agora:D.phases,meu:GUIDE_HINTS.meu,quando:D.timing,rota:D.phases,quests:D.quests,skills:D.phases.map(p=>p.gems),gear:[D.gear,A.sets],craft:craftRecipes(),uniques:D.uniques,arvore:D.keyPassives,asc:D.asc,totem:[D.totem,D.craft,D.phases],mech:D.mech,caca:D.hunt,zoo:D.beasts,meta:[D.meta,D.optimizations],tricks:D.tricks,atlas:D.atlas,diag:D.fixes,fontes:D.sources};
     guideIndex=TABS.map(([id,label])=>({id,label,text:guideStrings([label,GUIDE_HINTS[id],sources[id]])}));
   }
   const hits=guideIndex.map(row=>({...row,matches:row.text.filter(s=>guideNorm(s).includes(q))})).filter(row=>row.matches.length);

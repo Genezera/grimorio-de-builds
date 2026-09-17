@@ -1,0 +1,3301 @@
+{
+ "guides": [
+  {
+   "src": "pf_lvl",
+   "title": "Skadoosh's Poison Pathfinder Leveling 1-58 - PoE 2 Ranger Build Guide",
+   "url": "https://mobalytics.gg/poe-2/builds/pathfinder-leveling-skadoosh",
+   "author": "Skadoosh",
+   "updatedAt": "2026-09-06T20:09:53Z",
+   "widgets": [
+    "Level 1 to 58 guide before starting my Decompose Pathfinder Build\nMade with the intent of guiding new players on a fresh league start. Incremental tips as you progress",
+    "Make sure to go back and pick up all the permanent buffs throughout the campaign if you missed any.\nThe transition to the Decompose Build requires some gold, so be sure not to gamble away all of it for when you respec your tree upon reaching level 58.",
+    "- Weapon/Quiver stat priority\n- Required level\n- x% Increased physical damage/adds x to x physical damage\n- +x to level of all projectile skills\n- Armour/Jewelry stat priority\n- Movement speed (Boots)\n- Adds x to x physical damage to attacks\n- Maximum life\nTips\n- Make sure to use Orb of Transmutation and Orb of Augmentation on White weapons to get an upgrade, both are types of Currency\n- Check the vendors for good items, upgrades and Wisdom Scrolls. Available items refresh each time you level up\n- Sell Magic (Blue) or Rare (Yellow) items you won't use to the vendors for gold",
+    "Tips\n- Hold down dodgeroll while rolling to initiate a sprint right after, keep holding (and stop using WASD) to direct your movement with the mouse cursor instead. Getting hit while sprinting will knock you down, so only use it when you can avoid getting hit\n-  for very early singletarget damage before you unlock the other skills\n-  is found in the Occult skill section and should be created and kept at level 1. It is good early and needed later\n- While clearing packs of monsters, use  first on an enemy, then target it with . Once it dies,  will spread the poison to nearby enemies\n-  for crowd control (CC) and more damage\n- For bosses first use  to apply 20% increased damage taken shock, then  on top of them. Afterwards keep using  while trying to hit the  spud with the poison splash that happens after hitting the enemy",
+    "- Initially created (19.03.2025)\n- Published (29.03.2025)\n- Fully revamped and updated the leveling guide for 0.3 (27.11.2025)\n- Patch 0.4.0: (05.12.2025)\n nerfed(?), now only creates 4 (was 8), but has 25% faster attack speed and max pods on the ground is now 12 (was 8).\n changed\n\n removed (Replace  with )\n now only 2 ascendancy points total (+2 ascendancy points free!)\n- Replaced  with  (08.12.2025)",
+    "- Weapon/Quiver stat priority\n- x% Increased/adds x to x Physical Damage\n- +x to level of all projectile skills\n- Attack speed\n- Armour/Jewelry stat priority\n- Movement speed (Boots)\n- Weapon/Quiver stats (Ring/Amulet/Gloves)\n- Maximum life\n- x% increased/+x to Evasion Rating\n- Elemental resistance (Fire/Cold/Lightning)\nTips\n- Talk to the The Hooded One NPC to identify any items you pick up\n- ,  and  are very good for armour if they have sockets. Try and keep an even spread of resistances\n-  is very good for weapons if they have sockets\n- Artificers Orb (adds sockets to items) should be saved for very good Rare (yellow) items that will last several levels \n- Use the Salvage Bench on items with sockets and quality (has Superior in the name) that you won't use",
+    "- Set 1 skills are Pink (, , , )\n- Set 2 skills are Green ()\nTips\n- Use  to quickly clear a large pack of monsters or a harder enemy. Its poison can also spread with \n- Elemental damage to attacks does not increase  poison damage (only physical and chaos)\n- Remember to level up your skills (NOT ) with higher level Skill Gems when you find them\nSELECTING WEAPON SETS!\nTo ensure that a skill is only used with one particular weapon set, you need to configure it in your skill menu (G by default)\nCheck out this guide to see how you do it for each individual skill (gem section): Dual Specialisation\nIMPORTANT! You also have to make sure you have a weapon (and quiver) on BOTH sets (should be a lock button next to your character's bow/quiver above their respective slots, | and ||)",
+    "- The PINK lines are for weapon set 1 passive points, while the GREEN lines are for weapon set 2 passive points\n- To use a weapon set passive on the passive tree you first need 1 normal passive point available. It will then split it into two, one for each set",
+    "- Weapon/quiver stat priority\n- x% Increased/adds x to x Physical Damage\n- +x to level of all projectile skills\n- Attack speed\n- Armour/Jewelry stat priority\n- Movement speed (Boots)\n- Weapon/Quiver stats (Ring/Amulet/Gloves)\n- Maximum life\n- Elemental resistance (Fire/Cold/Lightning)\n- x% increased/+x to Evasion Rating\nTips\n- Elemental damage to attacks will increase damage of , but physical is better\n- Use Regal Orb and/or Exalted Orb to upgrade your rare items to try and get more priority stats on them. Only do this if they already have several\n- You can socket a // into your passive tree socket (next to ) as long as it has any beneficial mods for your character.  usually has the most relevant ones\n- A helpful but lengthy guide to learning crafting basics",
+    "Tips\n-  as the primary way of doing damage. Make sure that the area you are targeting is first covered with 2+ poison clouds from  (More poisons applied to  means higher potential pustule damage and detonation speed)\n-  once for  to break armour on bosses\n-   isn't needed for singletarget.  can be removed entirely if you don't care about the CC it gives\n- Take  support out of , and put it in",
+    "Tips\n- For the first ascendancy from the Sekhima Trials we take \n- You can respec passive attribute travel nodes to other attributes without disconnecting the tree via the The Hooded One NPC. \n- Respec the Set 2 passives leading to  for \n- Only get the Jewel Socket next to  if you have a  // with usable stats. Otherwise, skip it until you do",
+    "- Set 1 selected skills: , , , \n- Set 2 selected skills: , \nTips\n- You want level 9 versions of  and  to have the lowest possible intelligence requirements\n-  and  is for even more poison damage with  on single-target, but requires a lot of extra debuff management. If you don't want to bother, just ignore them and keep using \n- Save extra Support Skill Gem's for the Decompose build",
+    "- Weapon/Quiver stat priority\n- x% Increased/adds x to x Physical Damage\n- + x to level of all projectile skills\n- Attack speed\n- Armour/Jewelry stat priority\n- Movement speed (Boots only)\n- Weapon/Quiver stats (Ring/Amulet/Gloves)\n- Elemental resistance (Fire/Cold/Lightning)\n- Maximum life\n- x% increased/+x to Evasion Rating\nTips\n- You can get a guaranteed Lesser Jewelers Orb from Sandswept Marsh, Orok Campfire (first area in act 3). More info here Campaign Loot\n- Pick the Stun Threshold from the Venom Draught quest\n- Use Blacksmith's Whetstone to get up to 20% more damage for your high stat bow\n- Using a loot filter can help you more easily identify higher value items that are worth picking up. Highly recommend the Regular strictness of Neversink's filters. Full Loot Filter Guide explaining how to get one",
+    "Tips\n- Use your first Lesser Jewelers Orb on  to get 3 sockets\n-  is not worth using until you can level it up.  is priority for your first Uncut spirit gem after getting 60 spirit",
+    "Tips\n- For the second ascendancy via the chaos trial we get , pick the witch/sorceress starting area\n- Respec small point around  for",
+    "- Weapon/Quiver stat priority\n-  is very good bow for the entire campaign\n- x% Increased/adds x to x Physical Damage\n- + x to level of all projectile skills\n- Attack speed\n- Armour/Jewelry stat priority\n- Movement speed (Boots)\n- Weapon/Quiver stats (Ring/Amulet/Gloves)\n- Elemental resistance (Fire/Cold/Lightning)\n- Maximum life\n- x% increased/+x to Evasion Rating\n- Chaos resistance\nTips\n- Act 4 and Interlude Rewards: Resistances\n- The later into the campaign you get, the more you need +50% elemental resistances and a minimum of 0% chaos resistance (You lose resistances as you progress further into the campaign)\n- Check the Decompose Build Starter Variant for the required items. It's best to farm up or continue with this build until you have them ready for the transition\n- Once you get to Act 4 you can start using the trading system if you feel you can't get gear upgrades elsewhere. Check out this Trading Guide for how to start using it",
+    "Tips\n- If  isn't blowing up right away, then keep using  instead of \n- Save extra Support Skill Gem's and Lesser Jeweler's Orb for the Decompose Build\n- Only use a Lesser Jeweler's Orb on  once you can level it up. Sharkfin quest item will give you a Spirit Skill Gem as an option\n-  for extra damage and regen on bosses, not needed if you don't wanna press another button",
+    "Tips\n- When you are ready to respec to the Decompose Build, make sure to first spec and then unspec the starting area of the passive tree. \n- It will require a decent chunk of gold, so make sure you have some to spare before doing so",
+    "Export this build variant directly to your game."
+   ]
+  },
+  {
+   "src": "pf_decomp",
+   "title": "[0.5.5] Fartfinder - Corpsewade Decompose Pathfinder - PoE 2 Ranger Build Guide",
+   "url": "https://mobalytics.gg/poe-2/builds/skadoosh-decompose-pathfinder",
+   "author": "Skadoosh",
+   "updatedAt": "2026-09-11T23:42:51Z",
+   "widgets": [
+    "T16 11 mod Aldur's 6-rune Grand Expedition map showcase\nBreak wind each step as creates poison gas clouds via  automatically, consuming nearby corpses. The stronger the enemy corpse, the more potent the fart from it is. Store up passed gas with  for a concentrated stink to create corpses and chain poisons with  and . Weapon swap when fuel for your flatulence is low to  your own  minions instead. Easily fartwalk (or sprint) through all content\nExplanation of  () and build: How It Works section\n0.5 changes in changelog\nLeveling strategy (1 to 58)\n- Please check out my Full Pathfinder Leveling Guide with step-by-step sections to help gearing, selecting passives, and new player tips\n-  can be bought at a low level and used early if you want\n- Check this video on how to get a Blood Elemental \n- Level 58 is required before you can start following the Starter variant of this build.  unlocks at 58 and is mandatory\nPlease read this guide and FAQ\nIf you still have questions, you can contact me via twitch: Skadoosh_C or Discord",
+    "T16 11 mod Aldur's 6-rune Grand Expedition map showcase\n(OLD Season 3): Full 10+ breach lvl 81 juiced map, Uber Arbiter\n(OLD Season 1): Full Build Overview video with gameplay, Tier 4 simulacrum wave 13-15, Tier 15 waystone with delirium + breach, Tier 4 breach Xesht boss\nFrequently Asked Questions\n- I can't use my weapon set passive points, why?\nYou first need normal passive points before you can split them with the weapon set points. So to apply the max 24 weapon points for each set, you first need 24 normal passive points available to use\n- How come I can't summon 's each time I swap weapons?\nWhen one of our 's die, it start the minion respawn timer. Normally takes up to 8-11 seconds before they can spawn again. When outside combat, weapon swapping bypasses this timer, and always spawns your minions instantly. When in-combat however, you need to wait for this timer to run out first or use  to resummon them a limited number of extra times\n- My minions have a X MINUTE respawn timer?!\nThis happens due to the game letting you have more minions selected than your spirit allows. Make sure to press the - (minus) button to reduce the amount of minions you have until the + (plus) lights up, and click that once\n- Why aren't my 's summoned when I swap to set 2?\nFirst thing to check is the skill gem section of the current variant you are playing. Each skill should only be active on one of the two sets.  requires that you specifically set the amount summoned per set. Put it at the max possible for set 2, and none for set 1. This is all done in the skill specific stat window. First access skill gem menu (default G), then click the small arrow on the right side next to the DPS number for a particular skill and then on the menu that appears bottom right checkboxes. Refer to Dual Specialisation gem section\n- Why is my  doing so little damage?\nThe higher the level of , the significantly more damage it can deal. Focus this over other intelligence spirit gems early\n- How come  is dying constantly to ?\nTo make sure that  does not get consumed by , you need to plug in a controller to enable the \"exclude from targeting\" option. Here is a Video Guide\n- Why do I take damage after I weapon swap?Your total energy shield might change significantly and/or  gives a 15% damage boost whenever you weapon swap and  your 's. After 4 seconds, it will hit you with physical damage and give you the damage buff\n- How did I just die while I had energy shield?!\nIt was  or , it kills you if you don't have some source of flat regen like \n- Where can I find the answer to a question that's not in the FAQ?\nA likely scenario is that the question is already answered in the main bulk of the guide. Please read it fully; I'm begging you. If you still can't find the answer, then you can join my Discord and ask there",
+    "This build revolves around the  skill that gets cast every time you take a step with  boots equipped. It automatically targets dead enemies around you (corpses), consuming them to create poison clouds that slowly expand. It deals pseudo-hit chaos damage poison based on the life of that enemy before it died, meaning it scales with monster HP and level.\n allows  to trigger on our own undead minions (), meaning we can spawn poison clouds without needing to kill something first. Thus  will do more damage the more life the  has.\nTo spawn 's to create poison clouds when we need them, we use weapon swapping. This way we can have all our de-buffs and buffs active on Set 1, minions and  active on Set 2, thus effectively doubling our usable spirit. So when we swap to Set 2 our minions instantly spawn next to us and  targets them as we step.\nEach  targeted by  will spawn it's own poison cloud. Each cloud applies one poison per 2 seconds up to a maximum poison capacity. With , , 2x  and  our maximum poison capacity becomes 10. More poison clouds = more poisons per second, NOT more damage. It just means you reach the poison capacity faster, and stay at max longer.\nWhen one of our 's die, it will start the minion respawn timer. Normally it can take 10-16 seconds before they can spawn naturally again. When outside combat, weapon swapping bypasses this timer, and always spawns your minions instantly. When in-combat however, you usually have to wait, luckily  can ressurrect your minions. You can keep casting it until you don't summon any more minions before swapping back to Set 1.  clouds last long enough that you don't need to resummon minions often anyway.\nDuring maps, we don't want to wait for this timer before we can spawn clouds, so we use  instead for killing packs of monsters. As long as a couple monsters survive,  will target the corpses of stuff we kill and poison those remaining monsters. This refills our  instantly meaning we can use it again for the next pack of monsters. When casting , make sure to hit several packs of monsters, we don't want to kill everything with one cast.  clouds should clean up stragglers.\n will only gather poison when using Set 1. Make sure to stay in Set 1 whenever possible, as our de-buffs such as  with  and  are only active when that set is equipped.\n- Patch 0.2.0: (03.04.2025) \n 75% less base scaling (now 10%, was 39.5%)\n lost 20% more life quality (15% less damage)\n no longer gives 50% more life (33% less damage)\nSceptres went from 5 to 4 to max levels for minions (9% less damage)\n has weaker shock (10% less damage)\n reduced to 24% (from 36%)\nYou can only have 6 poison clouds active at any time\n is now better\n deleted\n won't apply  via  reliably\n minions revive 60% more slowly now (was 31%)\nYou can no longer weapon swap to bypass minion respawn timer\n- Patch 0.4.0: (05.12.2025)\n changed\n\n removed (Lose base poison prolif from build, but,  and  makes up for it no problem)\n now only 2 ascendancy points total (+2 ascendancy points free!)\n now gives cannot be knocked down while sprinting (Possible option?)\nReplacement for  gives us access to witch starting area (Can save passive points?, -1 passive to build currently)\n now gives 5% damage/Defence as options instead of attributes on travel passive node (Insanely OP?!, could give a LOT of damage or defence to the build)\n Buffed! (now 40% as extra chaos, was 20%)\n Buffed! (Now 40% more, was 30%)\n now has a max limit of 1 (now 20%, was 15%)\n now has a max limit of 1\n now has a limit of 1 (- 2 max poisons for singletarget)\n has a max of 3 charges, charge delay doubled (now 6s, was 3s)\nLast but not least,  now only has a 40% revive speed penalty (was 60%), which means we no longer need a  with \n- Updates for patch 0.4 (06.12.2025)\nSet 1 points now take  for reduced shroud delay on \n no longer needs  if you have  for singletarget\n is NOT required for clear (tested), so keeping  for defence\n no longer needs \nAdded options explanation for fourth ascendancy: , , \nDarkness Enthroned (belt) now uses  and \nRecommend  if picking  for your 4th ascendancy\n - Updates for patch 0.5 (22.05.2026)\n changed again, now doesn't give energy shield instantly and instead \"2% of your Evasion Rating per second\". Reduced duration no longer works on it, and uses cooldown reduction instead, so  and other supports will work.\n changed:\n\n now 50% less poison duration (was 35%)\n now 30% less movement penalty (was 50%)\n now +2 to level of skill (was 3). Not really worth it anymore\n now has a 1 second cooldown\nFixed bug were  failed to revive minions\nThe Bogfelled Commoner now has a Spectre variant for the boss version of the monster\nES wheels such as ,  and  nerfed\nCan use Jewellers orb on  for more sockets",
+    "This is the Uber Endgame variant that transitions from the Endgame one. Requires a lvl 80+ character and a decent amount of currency\nNote that most of the gear shown is NOT needed to start this variant; it is only something to aspire to and build towards. Before acquiring  while still using , keep flask passives on set 1 (, , , )\nT16 11 mod Aldur's 6-rune Grand Expedition map showcase",
+    "This is the Endgame variant for a 65+ character, check the Starter variant if you just got lvl 58.\nNote that the high stats on gear shown are NOT needed to start this variant; it is only something to aspire to and build towards.",
+    "LEVEL 58 REQUIRED!\nVariant of the build for when you just hit lvl 58, check Full Pathfinder Leveling Guide if fresh character\n IS MANDATORY before you can start the build\nCheck this video on how to get a Blood Elemental \nI recommend assigning weapon swap key to something on your mouse, as we will be using it A LOT to summon our minions momentarily to  them (I use Mouse button 5).",
+    "- Stat priority: \n- Elemental Resistance (minimum 75%, don't need Chaos resistance)\n- Energy Shield and Evasion\n- Minion Skill levels\n- Rarity\n- Set 1 Use Arcanist Etchers (quality to 20%) to get quality on  aura. Mace with  socketed. Use Perfect Essence of Command for aura magnitude\n- Set 2 Now has  socketed in \n- Use a Perfect Jewellers Orb on for 5 sockets in \n- All other items should follow the stat priority. Don't copy exactly what I have above, it is only example of good stats without resistance\n-  with Gloves modfier and ideally 95%+ effect, socketed with  and \n- /'s with poison scaling: trade link or 's with block chance and minion life: trade link\n- Amulet distilled emotion: I recommend  as it allows us to weapon swap to create poison clouds more often\nAlternatives\n- Keep using  for more damage IF you can sustain max poisons on bosses\nCrafting Steps\n- \n1 - Buy any one-handed mace (low strength requirement)\n2 - Use perfect Essence of Abrasion on 6 mod mace (use exalted orb to fill affixes if needed) \n3 - Use Omen of Sinistral Necromancy + Omen of the Liege + Preserved Jawbone and reveal for increased damage against enemies with fully broken armour. Repeat step 2 if it removes the Essence of Abrasion mod",
+    "- Set 1 skills: , , , , \n- Set 2 skills: , .  requires that you specifically set the amount summoned per set. Put it at the max possible for set 2, and 0 for set 1\nTips\n- If in-combat spam  while walking to resummon as many 's as possible while in set 2. If out of combat then spam weapon swap to resummon, and pre-load  clouds before a boss\n- If you can't summon more than 2 's due to low spirit, then unsocket  until you do\n- Quality priority:  >  >  > \nSELECTING WEAPON SETS!\nTo ensure that a skill is only used with one particular weapon set, you need to configure it in your skill menu (G by default)\nCheck out this guide to see how you do it for each individual skill (gem section): Dual Specialisation",
+    "Red lines are weapon Set 1Green lines are weapon Set 2\n- Take a mix of Dexterity and Intelligence (splash of strength for  if needed)\n- DON'T TAKE  until you can sustain max poisons on a boss/fill  consistently!\n-  to stack attributes and convert travel nodes into 5% damage/defence (recommend getting a  first)\nReplace attribute travel nodes going from start all the way to the jewel socket near  with 5% increased global defence. The rest you can get 5% increased damage (or more defence if you prefer)",
+    "- First created (23.12.2024)\n- Added new build variant Uber Endgame (SPEED) (03.01.2026) \n- Added  to Set 1 sceptre (01.06.2026)\n- Swapped  with  in \n- Replaced  with  in , and added  with  as a separate skill (04.07.2026)\n-  now best belt choice  (jade < quicksilver < gold) (04.07.2026)\n- Swapped  for  (06.07.2026)\n- New overview video (13.07.2026)\n- Swapped a lot of supports and skill gems! Added  (), . Removed , . Updated Passive tree: , ,  (13.07.2026)\n- Added t16 grand expedition video (14.07.2026)\n- Endgame variant now uses  with life flask nodes (04.09.2026)\n-  added to  (06.09.2026)",
+    "- Stat priority: \n- Resistance (elemental minimum total 75%) \n- Attributes (skill gems/item requirements, also use passive tree)\n- Maximum life\n- Minion Skill levels\n- Evasion\n- Set 1 This is our aura and buff set. Only stat that matters is spirit, everything else is bonus. Ideally you have a  in both sets, but as long as it's not a  it should work.Any one-Handed mace with low strength requirment. It allows for the use of \n- Set 2 is our minion summoning set. Main stats are  level of all minion skills and Minion increased maximum life. Spirit is nice so we can summon more minions, but not required initially.\n-  is the bread and butter and mandatory for the build to function. It provides the  skill. Higher level boots = higher level skill = more support sockets (can use jewellers).  can create gas clouds by consuming our minions with \n- Things that scale  damage: Magnitude of poison, chaos damage, damage as extra chaos and damaging ailments deal damage faster. If you  your  then: Minions have increased maximum life and level of all minion skills\n-  are not required to start the build, but will be a cheap and effective dps boost early\n-  get one with +2 to level of all minion skills, if possible\n- /'s with poison and area scaling: trade link\nCrafting Steps\n- \n1 - Buy any one-handed mace (low strength requirement)\n3 - Use Omen of Sinistral Necromancy + Omen of the Liege + Preserved Jawbone and reveal for increased damage against enemies with fully broken armour",
+    "- Set 1 skills: , , , \n- Set 2 skills:  requires that you specifically set the amount summoned per set, put it at max possible for set 2, and 0 for set 1.\nTips\n- Check this video on how to get a Blood Elemental \n- Swap  for  in  if you want more AoE and faster clearing. Replace for boss fights since the  duration isn't long enough to sustain poisons while waiting for 's to respawn\n- Manually cast  to spread  poisons faster. Keep  low level\n-  makes killing monster packs without minions possible and is the majority of the dexterity requirement for this build. The higher the level, the significantly more damage it can deal. Focus this over other intelligence spirit gems early.\n- You can spam  in boss fights for extra damage\n-  (and other curses) needs to be max level possible, or it won't affect higher level monsters\nSELECTING WEAPON SETS!\nTo ensure that a skill is only used with one particular weapon set, you need to configure it in your skill menu (G by default)\nCheck out this guide to see how you do it for each individual skill (gem section): Dual Specialisation",
+    "Red lines are weapon Set 1Green lines are weapon Set 2\n- Mix of Dexterity > Intelligence for attributes, pick what lets you use the highest level of  then \n- Everything up to  should be specced close to 58.\n- Pick sorcerer/witch in",
+    "Check the Endgame or Uber Endgame variant for skill gems",
+    "This is what I'm currently using. \nDon't do this until you can sustain Tier 15 waystones",
+    "- Set 1 skills: , , ,  , , , ,   \n- Set 2 skills: , , , \nTips\n- If you think you can sustain 10 poison stacks with  linked to , then it's better single-target over . More spirit for 3+ 's will help\n- Corrupt any  gem with 20% quality and 3 sockets until you  get +1 level, then upgrade to 20 after\n- We sustain  charges for  with  in  while having \n- Can use the old setup with  and  socketed inside  for more passive charges. Will save 2 passive points since you don't want \n- Top  is for single-target pinnacle fights. Bottom  is used to enable  for mapping\n( must be active on BOTH sets or it will delete your grim feast energy shield)\n-  instead of  for pinnacle boss fights, if don't have the spirit on Set 2 or you don't wanna bother with skill swapping\n-  is another option for Pinnacle bosses to sustain flask charges instead of  or . Swap ascendancy  to . Also get the \"gain 0.2 charges per second\" suffix on your  \n-  now uses  over 's for mapping. Can swap back for pinnacle bosses\n- Use  to stack wither to 70% on bosses. This won't work unless you have the  mentioned in the Passive Tree section\n-  can be socketed in a spirit gem if you have the extra 15 spirit (81% increased spirit on sceptre and 20% quality)\n-  as 5th support for  allows for all spells to be triggered after 2 brutes, rather than 3.\n- , , , ,  and  can be as low level as possible, to conserve mana, we only care about their utility",
+    "This is what I'm currently using. \nDon't do this until you can sustain Tier 15 waystones",
+    "One button\nMore Monster life = More Damage\nSlow nearby enemies to a crawl\nLow visual clutter\nChain kill enemies off-screen\nIgnore mana flask\n100%+ movement speed (sprint)",
+    "Minion respawn timer\nManual weapon swap\nWeak single-target (early/without gear)",
+    "- Stat priority: \n- Elemental Resistance (minimum 75%, don't need Chaos resistance)\n- Spirit\n- Energy Shield and Evasion\n- Minion Skill levels\n- Dexterity/Intelligence\n- Rarity\n- Set 1 A total of 413 spirit is needed. Use Perfect Essence of Command for aura magnitude on \n- Set 2 A total of 444 spirit is needed for 5 's.  now has 2x. This requires that it be corrupted for an extra socket. Make sure that it still has +2 to level of all minion skills. 3 sockets is possible, but requires corrupting a 2 socket \n- All other items should follow the stat priority. Don't copy exactly what I have above, it is only example of good stats without resistance\n-  runeforged for 5% extra movement speed. Use Perfect Jewelers Orb to get 5 sockets for . Corrupt for 2/3rd socket (buy exceptional  with 2 sockets not corrupted to potentially get 3 sockets)\n- 2x  is required to fit in all the skills\n-  is a very good belt for defence and speed (jade > quicksilver > gold/granite)\n-  with 2-3 beneficial nodes. Anything with aura/minion life/curse/poison/ailment magnitude or duration.  to save points for . If you want even faster minion revive speed, then \n-  with spirit (if rich, then damage as extra chaos too). You can also fit in  (need  and ) with set 2 points, instead of ones leading to )\n-  with +3 to  is good (or )\n- Once you get  (helmet rune), swap attributes passive on tree with  (check passive tree section of guide)\n- /'s with poison scaling: trade link\n- Amulet distilled emotion:  or anything else you would want on \n- Transcendent Limbs: Curse Magnitude, Deflection, Evasion, sprint speed\nAlternatives\n-  with  socketed (replace  in ) for 25% increased movement speed while sprinting. Need life regeneration on gear (if  aren't equipped), or it will kill you\n-  with a movespeed related buff or owl (replaces )\n- Gloves with  modifiers (faster ailments, poison magnitude, curse magnitude, etc.)\n-  can be used if more rarity is wanted, same as  you need life regeneration on gear\nCrafting Steps\n- \n1 - Buy any 2 socket one-handed mace (low strength requirement), trade link\n2 - Use perfect Essence of Abrasion on 6 mod mace (use exalted orb to fill affixes if needed) \n3 - Use Omen of Sinistral Necromancy + Omen of the Liege + Preserved Jawbone and reveal for increased damage against enemies with fully broken armour. Repeat step 2 if it removes the Essence of Abrasion mod\n4 - To get both crafted mods on the , temporarily socket a Astrid's Creativity.  Then use Prismatic Alloy for % increased magnitude of ailments you inflict\n-  Jewels\nCheap - Buy a 3 stat jewel with %increased duration of ailments/ailments deal damage faster/wither magnitude/magnitude of damaging ailtments. Fill prefix if not full with exalt. Add Chaos Damage with Diluted Liquid Greed, 50% chance to remove the good prefix\n- Amulet\n1 - Fracturing Orb +3 level of all minion skills or 45+ spirit (or buy fractured already). To do so, chaos spam a 1 mod rare amulet until you get it (Orb of Annulment to get 1 mod). (If you get something other than the mod we want, such as +3 to melee skills or +3 to spell skills, it best to sell it and buy a fresh new one). After add 2 more mods with exalts, and a UNREVEALED abyss mod with collarbone, then fracture. 1 in 3 odds to hit\n2 - Essence of the Breach for +20% max quality. Use Necrotic Catalyst until 34%+ quality. Orb of Annulment back down to only the fracture\n3 - Chaos spam 2 mod fractured rare amulet until you get +3 minion levels or 45+ spirit\n4 - Then you can Omen of Dextral Exaltation (suffix) + Exalt (if spirit is fractured then prefix), and remove with Omen of Dextral Crystallisation (suffix) (if spirit is fractured then prefix) + Perfect Essence of Enhancement\n5 - Collarbone + echoes reveal\n5 - 2x exalt omen + Perfect exalt\nUber Extra - When adding quality, add up to 40% instead of 34%. Then increase that even more with Vaal Catalysing Infuser to 50%. +3 minion CANNOT BE FRACTURED, so fracture spirit instead. Add annoint then Omen of Sanctification + Divine Orb after step 5 and pray for +6 level to all minion skills (can use hinekora's lock to guarantee)",
+    "Tips\n-  requires that you specifically set the amount summoned per set. Put it at the max possible (ideally 5) for set 2, and 0 for set 1\n- Create several  gems of any level, Lesser Jeweller's Orb and Vaal Orb them. Once you get a  gem with +1 to level from corruption you can upgrade it with a lvl 20 skill gem. \n-  can be replaced with  in  until you can afford it\n- For pinnacle bosses you can swap  for  (if you have ) in For  you can potentially replace  for  (/)\n- Only want one . Press the command skill to get  buff for 15s.To make sure that  does not get consumed by , you need to plug in a controller to enable the \"exclude from targeting\" option. Here is a Video Guide\n-  in  only if you have a 30 extra spirit\n-  is the one from set 1 , only add supports if you have extra spirit\n- Lineage gem priority:  >  >   >   >   > \n- Quality ALL (except )",
+    "Red lines are weapon Set 1Green lines are weapon Set 2\n- Take a mix of Dexterity and Intelligence (splash of strength for 's if needed)\n-  gives a 15% damage boost whenever you weapon swap to  your 's. After 4 seconds, it will hit you with physical damage and give you the damage buff\n- You can replace  with  if you want more sprint speed\n- The choice of ascendancy (once you get , replace ): \n to stack attributes and convert travel nodes into 5% damage/defence (recommend getting a  first, best ascendancy once you get one)\n\nReplace attribute travel nodes going from start all the way to the jewel socket near  with 5% increased global defence. The rest you can get 5% increased damage (or more defence if you prefer)\n to get a significant defence boost against elemental damage (can replace )\n to get better sprint and faster movement during  cast",
+    "REFER TO UBER ENDGAME VARIANT \nTips\n- Swap  for  in  until you can afford it",
+    "Export this build variant directly to your game.",
+    "I'm level 58, but it's not working at all at this level—any advice? I have pretty much everything except the special support gems.",
+    "I accidentally chose the wrong flask in Act 3, in The Venom Crypts. Is that a big problem? Do I really need the 25% increased Stun Threshold, or would it be better to start over from the beginning?",
+    "Best bet is to join my discord and share your PoE ninja. There are a lot of puzzle pieces to the build, so I understand if Something was missed\nDiscord is linked at the top of the guide or via my profile"
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "src": "pf_lvl",
+   "name": "pf_lvl: Level 1 - 10",
+   "items": {
+    "helmet": null,
+    "body": null,
+    "gloves": null,
+    "boots": null,
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": null,
+    "charm2": null,
+    "charm3": null,
+    "flask1": {
+     "n": "Medium Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife02.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Medium Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana02.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Shortbow",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow02.avif",
+     "mods": [
+      "40% increased Physical Damage"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "10"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "21"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Broadhead Quiver",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Poisonburst Arrow",
+     "slug": "poisonburstarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerPoisonArrowSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBurstArrow.avif",
+     "sup": [
+      "Escalating Poison",
+      "Concentrated Area"
+     ],
+     "supIcons": {
+      "Escalating Poison": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultiplePoisonSupportGem.avif",
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.avif"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Vine Arrow",
+     "slug": "vinearrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PoisonVineSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonVineArrowSkill.avif",
+     "sup": [
+      "Swift Affliction I"
+     ],
+     "supIcons": {
+      "Swift Affliction I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/SwiftAfflictionSupportGem.avif"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Stormcaller Arrow",
+     "slug": "stormcallerarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingArrowSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShockingArrow.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     56651,
+     35234,
+     6789,
+     4313,
+     28992,
+     42781,
+     22795,
+     13783,
+     30695
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1583
+    ],
+    "attr": [
+     {
+      "attribute": "int",
+      "nodeSlug": "node-60505"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-65009"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-16460"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-28050"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-6772"
+     }
+    ],
+    "jewels": []
+   },
+   "desc": ""
+  },
+  {
+   "src": "pf_lvl",
+   "name": "pf_lvl: Lvl 11 - 20",
+   "items": {
+    "helmet": null,
+    "body": {
+     "n": "Shrouded Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex04.avif",
+     "mods": [
+      "15% increased Evasion Rating"
+     ],
+     "stats": [
+      {
+       "name": "Evasion Rating",
+       "value": "154"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": null,
+    "boots": null,
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": {
+     "n": "Sapphire Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/SapphireCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": null,
+    "charm3": null,
+    "flask1": {
+     "n": "Grand Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife04.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Grand Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana04.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Recurve Bow",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow04.avif",
+     "mods": [
+      "Adds 1 to 4 Physical Damage",
+      "50% increased Physical Damage",
+      "+1 to Level of all Projectile Skills"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "28"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "59"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Broadhead Quiver",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.avif",
+     "mods": [
+      "Adds 2 to 4 Physical Damage to Attacks",
+      "+1 to Level of all Projectile Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Poisonburst Arrow",
+     "slug": "poisonburstarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerPoisonArrowSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBurstArrow.avif",
+     "sup": [
+      "Escalating Poison",
+      "Deadly Poison I"
+     ],
+     "supIcons": {
+      "Escalating Poison": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultiplePoisonSupportGem.avif",
+      "Deadly Poison I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Vine Arrow",
+     "slug": "vinearrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PoisonVineSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonVineArrowSkill.avif",
+     "sup": [
+      "Swift Affliction I"
+     ],
+     "supIcons": {
+      "Swift Affliction I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/SwiftAfflictionSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Stormcaller Arrow",
+     "slug": "stormcallerarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingArrowSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShockingArrow.avif",
+     "sup": [
+      "Shock"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.avif",
+     "sup": [
+      "Concentrated Area"
+     ],
+     "supIcons": {
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    }
+   ],
+   "tree": {
+    "m": [
+     6789,
+     35234,
+     56651,
+     4313,
+     28992,
+     22795,
+     42781,
+     55429,
+     13783,
+     30695,
+     22049,
+     60505,
+     65009,
+     28050,
+     63888,
+     35901,
+     6951,
+     23608,
+     61741
+    ],
+    "s1": [
+     35644,
+     45193,
+     4083,
+     43677
+    ],
+    "s2": [
+     41096,
+     25700,
+     32155,
+     31345
+    ],
+    "a": [
+     1583
+    ],
+    "attr": [
+     {
+      "attribute": "str",
+      "nodeSlug": "node-27373"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-16725"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-54811"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-60505"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-28050"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-63888"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-48401"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-10909"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-65009"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-35901"
+     }
+    ],
+    "jewels": []
+   },
+   "desc": ""
+  },
+  {
+   "src": "pf_lvl",
+   "name": "pf_lvl: Lvl 21 - 30",
+   "items": {
+    "helmet": null,
+    "body": {
+     "n": "Studded Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex06.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "+39 to Evasion Rating",
+      "27% increased Evasion Rating"
+     ],
+     "stats": [
+      {
+       "name": "Evasion Rating",
+       "value": "323"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": null,
+    "boots": null,
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": {
+     "n": "Ruby Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/RubyCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/StoneCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": null,
+    "flask1": {
+     "n": "Giant Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Giant Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Dualstring Bow",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow06.avif",
+     "mods": [
+      "Adds 4 to 7 Physical Damage",
+      "50% increased Physical Damage",
+      "+1 to Level of all Projectile Skills",
+      "8% increased Attack Speed"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "41"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "75"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Sacral Quiver",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverSacral.avif",
+     "mods": [
+      "Adds 2 to 5 Physical Damage to Attacks",
+      "11% increased Damage with Bow Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Poisonburst Arrow",
+     "slug": "poisonburstarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerPoisonArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBurstArrow.webp",
+     "sup": [
+      "Escalating Poison",
+      "Corrosion"
+     ],
+     "supIcons": {
+      "Escalating Poison": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultiplePoisonSupportGem.webp",
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Toxic Growth",
+     "slug": "toxicgrowthplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PoisonBloomSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBloomSkill.webp",
+     "sup": [
+      "Short Fuse I",
+      "Concentrated Area"
+     ],
+     "supIcons": {
+      "Short Fuse I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpediteSupportGem.webp",
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Gas Arrow",
+     "slug": "gasarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GasCloudArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerGasCloudSkill.webp",
+     "sup": [
+      "Persistent Ground II",
+      "Multishot I"
+     ],
+     "supIcons": {
+      "Persistent Ground II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DomainSupportGem.webp",
+      "Multishot I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Stormcaller Arrow",
+     "slug": "stormcallerarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingArrowSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShockingArrow.avif",
+     "sup": [
+      "Shock"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.avif",
+     "sup": [
+      "Bursting Plague",
+      "Poison II"
+     ],
+     "supIcons": {
+      "Bursting Plague": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BurstingPlagueSupportGem.avif",
+      "Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChancetoPoisonSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    }
+   ],
+   "tree": {
+    "m": [
+     28992,
+     35234,
+     56651,
+     4313,
+     6789,
+     42781,
+     22795,
+     55429,
+     22049,
+     13783,
+     30695,
+     60505,
+     28050,
+     63888,
+     35901,
+     6951,
+     23608,
+     61741,
+     62464,
+     17854,
+     65009,
+     60735,
+     29517,
+     32701,
+     26598
+    ],
+    "s1": [
+     24401,
+     63759,
+     35644,
+     45193,
+     4083,
+     43677
+    ],
+    "s2": [
+     41096,
+     54176,
+     55463,
+     27875,
+     23905,
+     1953
+    ],
+    "a": [
+     1583,
+     9798,
+     24868
+    ],
+    "attr": [
+     {
+      "attribute": "str",
+      "nodeSlug": "node-53719"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-57703"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-54811"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-16725"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-27373"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-60505"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-10909"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-48401"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-28050"
+     }
+    ],
+    "jewels": []
+   },
+   "desc": ""
+  },
+  {
+   "src": "pf_lvl",
+   "name": "pf_lvl: Lvl 31 - 40",
+   "items": {
+    "helmet": null,
+    "body": {
+     "n": "Serpentscale Coat",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex08.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "+52 to Evasion Rating",
+      "27% increased Evasion Rating"
+     ],
+     "stats": [
+      {
+       "name": "Evasion Rating",
+       "value": "447"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": null,
+    "boots": null,
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": {
+     "n": "Amethyst Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/AmethystCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/StoneCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": null,
+    "flask1": {
+     "n": "Colossal Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife06.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Colossal Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana06.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Zealot Bow",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow08.avif",
+     "mods": [
+      "Adds 6 to 11 Physical Damage",
+      "50% increased Physical Damage",
+      "+1 to Level of all Projectile Skills",
+      "8% increased Attack Speed"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "66"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "103"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Toxic Quiver",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverToxic.avif",
+     "mods": [
+      "Adds 2 to 5 Physical Damage to Attacks",
+      "21% increased Damage with Bow Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Poisonburst Arrow",
+     "slug": "poisonburstarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerPoisonArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBurstArrow.webp",
+     "sup": [
+      "Escalating Poison",
+      "Corrosion"
+     ],
+     "supIcons": {
+      "Escalating Poison": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultiplePoisonSupportGem.webp",
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Toxic Growth",
+     "slug": "toxicgrowthplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PoisonBloomSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBloomSkill.webp",
+     "sup": [
+      "Short Fuse I",
+      "Concentrated Area",
+      "Efficiency II"
+     ],
+     "supIcons": {
+      "Short Fuse I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpediteSupportGem.webp",
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Gas Arrow",
+     "slug": "gasarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GasCloudArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerGasCloudSkill.webp",
+     "sup": [
+      "Persistent Ground II",
+      "Multishot II"
+     ],
+     "supIcons": {
+      "Persistent Ground II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DomainSupportGem.webp",
+      "Multishot II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Stormcaller Arrow",
+     "slug": "stormcallerarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingArrowSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShockingArrow.avif",
+     "sup": [
+      "Shock",
+      "Lasting Shock"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif",
+      "Lasting Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LastingShockSupportGem.avif"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.avif",
+     "sup": [
+      "Bursting Plague",
+      "Poison II"
+     ],
+     "supIcons": {
+      "Bursting Plague": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BurstingPlagueSupportGem.avif",
+      "Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChancetoPoisonSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Herald of Plague",
+     "slug": "heraldofplagueplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldOfAgonySkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAgonySkill.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     6789,
+     35234,
+     56651,
+     28992,
+     4313,
+     42781,
+     22795,
+     60505,
+     55429,
+     32701,
+     29517,
+     65009,
+     20916,
+     53698,
+     46782,
+     21746,
+     26598,
+     14658,
+     35901,
+     63888,
+     28050,
+     17854,
+     62464,
+     52053,
+     24120,
+     22049,
+     13783,
+     30695,
+     6951,
+     23608,
+     61741,
+     12253,
+     32183,
+     49996,
+     33463,
+     41017,
+     14262,
+     32763,
+     14267,
+     28976,
+     29458,
+     53595,
+     38628
+    ],
+    "s1": [
+     45193,
+     35644,
+     4083,
+     43677,
+     24401,
+     63759,
+     45304,
+     64325,
+     61119,
+     63431
+    ],
+    "s2": [
+     27875,
+     55463,
+     54176,
+     1953,
+     23905,
+     38215,
+     61921,
+     49388,
+     37304,
+     64543
+    ],
+    "a": [
+     1583,
+     12183,
+     16433,
+     12795,
+     9798,
+     24868
+    ],
+    "attr": [
+     {
+      "attribute": "str",
+      "nodeSlug": "node-53719"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-57703"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-54811"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-16725"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-27373"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-63114"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-53405"
+     }
+    ],
+    "jewels": []
+   },
+   "desc": ""
+  },
+  {
+   "src": "pf_lvl",
+   "name": "pf_lvl: Lvl 41 - 58",
+   "items": {
+    "helmet": null,
+    "body": {
+     "n": "Strider Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "+52 to Evasion Rating",
+      "27% increased Evasion Rating"
+     ],
+     "stats": [
+      {
+       "name": "Evasion Rating",
+       "value": "587"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": null,
+    "boots": null,
+    "amulet": null,
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": {
+     "n": "Amethyst Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/AmethystCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/StoneCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": null,
+    "flask1": {
+     "n": "Transcendent Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife08.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Transcendent Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana08.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Artillery Bow",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow09.avif",
+     "mods": [
+      "Adds 6 to 11 Physical Damage",
+      "50% increased Physical Damage",
+      "8% increased Attack Speed"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "79"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "144"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": null,
+    "offHand_set1": {
+     "n": "Toxic Quiver",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverToxic.avif",
+     "mods": [
+      "Adds 2 to 5 Physical Damage to Attacks",
+      "+1 to Level of all Projectile Skills",
+      "21% increased Damage with Bow Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": null
+   },
+   "gems": [
+    {
+     "skill": "Poisonburst Arrow",
+     "slug": "poisonburstarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerPoisonArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBurstArrow.webp",
+     "sup": [
+      "Escalating Poison",
+      "Corrosion"
+     ],
+     "supIcons": {
+      "Escalating Poison": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultiplePoisonSupportGem.webp",
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Toxic Growth",
+     "slug": "toxicgrowthplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PoisonBloomSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPoisonBloomSkill.webp",
+     "sup": [
+      "Long Fuse II",
+      "Concentrated Area",
+      "Efficiency II"
+     ],
+     "supIcons": {
+      "Long Fuse II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LongFuseSupportGem.webp",
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Gas Arrow",
+     "slug": "gasarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GasCloudArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerGasCloudSkill.webp",
+     "sup": [
+      "Persistent Ground II",
+      "Multishot II"
+     ],
+     "supIcons": {
+      "Persistent Ground II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DomainSupportGem.webp",
+      "Multishot II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Stormcaller Arrow",
+     "slug": "stormcallerarrowplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingArrowSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShockingArrow.webp",
+     "sup": [
+      "Shock",
+      "Lasting Shock"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.webp",
+      "Lasting Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LastingShockSupportGem.webp"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.avif",
+     "sup": [
+      "Bursting Plague",
+      "Poison II",
+      "Deadly Poison II"
+     ],
+     "supIcons": {
+      "Bursting Plague": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BurstingPlagueSupportGem.avif",
+      "Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChancetoPoisonSupportGem.avif",
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Herald of Plague",
+     "slug": "heraldofplagueplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldOfAgonySkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAgonySkill.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Toxic Domain",
+     "slug": "toxicdomainplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ToxicDomainSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerToxicDomain.avif",
+     "sup": [
+      "Magnified Area I",
+      "Impale"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif",
+      "Impale": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ImpaleSupportGem.avif"
+     },
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     6789,
+     35234,
+     56651,
+     28992,
+     4313,
+     42781,
+     22795,
+     60505,
+     55429,
+     32701,
+     29517,
+     65009,
+     20916,
+     53698,
+     46782,
+     21746,
+     26598,
+     14658,
+     35901,
+     63888,
+     28050,
+     17854,
+     62464,
+     52053,
+     24120,
+     22049,
+     13783,
+     30695,
+     6951,
+     23608,
+     61741,
+     12253,
+     32183,
+     49996,
+     33463,
+     41017,
+     14262,
+     32763,
+     14267,
+     28976,
+     29458,
+     53595,
+     38628,
+     7294,
+     39307,
+     37026,
+     27513,
+     21945,
+     61718,
+     38342,
+     43877,
+     47895,
+     56493,
+     60735,
+     41877,
+     24958,
+     61834
+    ],
+    "s1": [
+     45193,
+     35644,
+     4083,
+     43677,
+     24401,
+     63759,
+     45304,
+     64325,
+     61119,
+     63431,
+     1723,
+     2134,
+     9703,
+     6030,
+     15986,
+     22517,
+     59644,
+     42959
+    ],
+    "s2": [
+     27875,
+     55463,
+     54176,
+     1953,
+     23905,
+     38215,
+     61921,
+     49388,
+     37304,
+     64543,
+     32123,
+     54678,
+     41096,
+     25700,
+     31345,
+     55400,
+     30372,
+     42065
+    ],
+    "a": [
+     1583,
+     9798,
+     24868,
+     12183,
+     16433,
+     12795
+    ],
+    "attr": [
+     {
+      "attribute": "str",
+      "nodeSlug": "node-53719"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-57703"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-54811"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-16725"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-27373"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-63114"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-53405"
+     }
+    ],
+    "jewels": []
+   },
+   "desc": "Make sure to go back and pick up all the permanent buffs throughout the campaign if you missed any.\nThe transition to the Decompose Build requires some gold, so be sure not to gamble away all of it for when you respec your tree upon reaching level 58."
+  },
+  {
+   "src": "pf_decomp",
+   "name": "pf_decomp: Uber Endgame",
+   "items": {
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.webp",
+     "mods": [
+      "+33 to maximum Mana",
+      "15% increased Rarity of Items found",
+      "+61 to maximum Energy Shield",
+      "131% increased Energy Shield",
+      "+2 to Level of all Minion Skills"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "440"
+      }
+     ],
+     "runes": [
+      "soulcore-runeolrothslegacygreymake",
+      "soulcore-talismanspecial7"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Sacrificial Regalia",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDexInt02.webp",
+     "mods": [
+      "+182 to Evasion Rating",
+      "+56 to maximum Energy Shield",
+      "39% increased Evasion and Energy Shield",
+      "+57 to Spirit",
+      "Gain Deflection Rating equal to 24% of Evasion Rating"
+     ],
+     "stats": [
+      {
+       "name": "Armour",
+       "value": "273"
+      },
+      {
+       "name": "Evasion Rating",
+       "value": "689"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "197"
+      }
+     ],
+     "runes": [
+      "soulcore-runeenhancegreater",
+      "soulcore-amanamusgaze"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Snakebite",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Uniques/snakebite.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial15",
+      "soulcore-talismansnake",
+      "soulcore-talismansnake"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Corpsewade",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Uniques/corpsewade.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "soulcore-soulcorespecial7",
+      "soulcore-runespecial9",
+      "soulcore-runeoftheancients15"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Lunar Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LunarAmulet.webp",
+     "mods": [
+      "45% increased Evasion Rating",
+      "+4 to Level of all Minion Skills",
+      "+54 to Spirit",
+      "20% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Unset Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/UnsetRing.webp",
+     "mods": [
+      "27% increased Chaos Damage",
+      "+15% to all Elemental Resistances",
+      "16% increased Rarity of Items found",
+      "+31 to Dexterity",
+      "+203 to Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Unset Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/UnsetRing.webp",
+     "mods": [
+      "27% increased Chaos Damage",
+      "+15% to all Elemental Resistances",
+      "16% increased Rarity of Items found",
+      "+31 to Intelligence",
+      "+203 to Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/mageblood.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Thawing Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "For Utopia",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/StoneUniqueCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Dousing Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/DousingCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": null,
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Uniques/LaviangasSpirit.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Brigand Mace",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace07.webp",
+     "mods": [
+      "+31 to Strength",
+      "20% increased Magnitude of Ailments you inflict",
+      "41% increased Damage against Enemies with Fully Broken Armour",
+      "Gain 15% of Damage as Extra Physical Damage"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "28"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "38"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      },
+      {
+       "name": "Weapon Speed",
+       "value": "3"
+      }
+     ],
+     "runes": [
+      "soulcore-runespecial7",
+      "soulcore-talismanspecial2"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Trenchtimbre",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/trenchtimbre.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "soulcore-soulcorelight",
+      "soulcore-soulcorelight"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.webp",
+     "mods": [
+      "Aura Skills have 15% increased Magnitudes",
+      "+42 to maximum Mana",
+      "96% increased Spirit",
+      "66% increased Presence Area of Effect"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-idolcorrupted2"
+     ],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.webp",
+     "mods": [
+      "+42 to maximum Mana",
+      "+4 to Level of all Minion Skills",
+      "96% increased Spirit",
+      "Minions have 46% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-talismanrabbit"
+     ],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Decompose",
+     "slug": "corpsewadecorpsecloudplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DecomposeSkill.webp",
+     "sup": [
+      "Persistent Ground III",
+      "Deadly Poison II",
+      "Encroaching Ground",
+      "Arakaali's Lust",
+      "Exploit Weakness"
+     ],
+     "supIcons": {
+      "Persistent Ground III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DomainSupportGem.webp",
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.webp",
+      "Encroaching Ground": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpandingGroundSupportGem.webp",
+      "Arakaali's Lust": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/LineageArakaali.webp",
+      "Exploit Weakness": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExploitWeaknessSupportGem.webp"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.webp",
+     "sup": [
+      "Bursting Plague",
+      "Poison III",
+      "Deadly Poison II",
+      "Vorana's Siege",
+      "Uul-Netol's Embrace"
+     ],
+     "supIcons": {
+      "Bursting Plague": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BurstingPlagueSupportGem.webp",
+      "Poison III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChancetoPoisonSupportGem.webp",
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.webp",
+      "Vorana's Siege": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/VoranasSiege.webp",
+      "Uul-Netol's Embrace": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUulNetol.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Bind Spectre",
+     "slug": "bindspectreplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBindSpectreSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBindSpectre.avif",
+     "sup": [
+      "Minion Mastery",
+      "Dialla's Desire",
+      "Uhtred's Augury"
+     ],
+     "supIcons": {
+      "Minion Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PhysicalMasterySupportGem.avif",
+      "Dialla's Desire": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Dialla.avif",
+      "Uhtred's Augury": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUhtredGreater.avif"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Sacrifice",
+     "slug": "sacrificeplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HarvesterSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HarvesterSkill.webp",
+     "sup": [
+      "Minion Mastery"
+     ],
+     "supIcons": {
+      "Minion Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PhysicalMasterySupportGem.webp"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Skeletal Sniper",
+     "slug": "summonskeletalsnipersplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchArcherSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchArcherSkeleton.webp",
+     "sup": [
+      "Kurgal's Leash",
+      "Brutus' Brain",
+      "Mobility",
+      "Efficiency II",
+      "Minion Mastery"
+     ],
+     "supIcons": {
+      "Kurgal's Leash": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/AbyssKurgal.webp",
+      "Brutus' Brain": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/LineageMeatshield.webp",
+      "Mobility": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MobilitySupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp",
+      "Minion Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PhysicalMasterySupportGem.webp"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Minion Death",
+     "slug": "metacastonminiondeathplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/CastOnCritMinionDeathSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/CastOnMinionDeath.webp",
+     "sup": [
+      "Contagion",
+      "Acrimony",
+      "Entangle",
+      "Bleed III",
+      "Blind II"
+     ],
+     "supIcons": {
+      "Contagion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.webp",
+      "Acrimony": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AcrimonySupportGem.webp",
+      "Entangle": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/DruidEntangleSkillGem.webp",
+      "Bleed III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChanceToBleedSupportGem.webp",
+      "Blind II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemyplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBlasphemySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBlasphemy.webp",
+     "sup": [
+      "Temporal Chains",
+      "Enfeeble",
+      "Magnified Area II",
+      "Ritualistic Curse",
+      "Heightened Curse"
+     ],
+     "supIcons": {
+      "Temporal Chains": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TemporalChainsSkillGem.webp",
+      "Enfeeble": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchEnfeebleSkillGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Ritualistic Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RitualisticCurseSupportGem.webp",
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Despair",
+     "slug": "despairplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchDespairSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/Despair.webp",
+     "sup": [
+      "Atziri's Allure",
+      "Heightened Curse",
+      "Focused Curse",
+      "Prolonged Duration II",
+      "Cursed Ground"
+     ],
+     "supIcons": {
+      "Atziri's Allure": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/LineageAtziri.webp",
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.webp",
+      "Focused Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FocusedHexSupportGem.webp",
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Cursed Ground": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CursedGroundSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Withering Presence",
+     "slug": "witheringpresenceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchWitheringPresenceSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchWitheringPresence.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Chaos Mastery",
+      "Her Declaration"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Chaos Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChaosMasterySupportGem.webp",
+      "Her Declaration": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/MothersDeclaration.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdanceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GhostDanceSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkGhostDance.webp",
+     "sup": [
+      "Cooldown Recovery II",
+      "Uhtred's Omen"
+     ],
+     "supIcons": {
+      "Cooldown Recovery II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+      "Uhtred's Omen": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUhtredStandard.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+     "sup": [
+      "Blind II",
+      "Magnified Area II",
+      "Maim",
+      "Bleed III"
+     ],
+     "supIcons": {
+      "Blind II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Maim": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MaimSupportGem.webp",
+      "Bleed III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChanceToBleedSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Herald of Plague",
+     "slug": "heraldofplagueplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldOfAgonySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAgonySkill.webp",
+     "sup": [
+      "Chaos Mastery"
+     ],
+     "supIcons": {
+      "Chaos Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChaosMasterySupportGem.webp"
+     },
+     "weaponSet": "set1"
+    }
+   ],
+   "tree": {
+    "m": [
+     13828,
+     1140,
+     15507,
+     48401,
+     61312,
+     21280,
+     28050,
+     60505,
+     65009,
+     35644,
+     45193,
+     4083,
+     63888,
+     35901,
+     60735,
+     6951,
+     23608,
+     24401,
+     63759,
+     29517,
+     32701,
+     26598,
+     33366,
+     10944,
+     55193,
+     14658,
+     12253,
+     41017,
+     14262,
+     32763,
+     14267,
+     28976,
+     6030,
+     15986,
+     29458,
+     53595,
+     38628,
+     9703,
+     2134,
+     1723,
+     30808,
+     15775,
+     722,
+     31765,
+     59538,
+     47976,
+     14446,
+     61403,
+     21984,
+     3251,
+     10131,
+     46554,
+     62677,
+     59362,
+     47759,
+     29009,
+     5314,
+     61419,
+     49512,
+     15885,
+     12367,
+     36358,
+     19112,
+     3492,
+     46819,
+     8616,
+     57710,
+     40783,
+     56349,
+     58022,
+     5186,
+     6800,
+     32438,
+     55149,
+     57821,
+     51741,
+     61834,
+     34473,
+     11679,
+     7424,
+     1823,
+     50755,
+     19355,
+     62230,
+     43677,
+     39567,
+     5009,
+     60138,
+     49984,
+     17254,
+     23046,
+     36290,
+     21227,
+     52971,
+     61042,
+     45885,
+     54521,
+     3025,
+     61741,
+     13537,
+     49455,
+     44299,
+     11672,
+     48030,
+     62436,
+     3215,
+     56063,
+     23078
+    ],
+    "s1": [
+     62464,
+     17854,
+     26762,
+     35380,
+     44373,
+     37695,
+     38044,
+     30456,
+     22517,
+     59644,
+     42959,
+     35987,
+     22185,
+     17796,
+     12412,
+     38732,
+     42290,
+     52254,
+     37991,
+     40345,
+     26034,
+     45631,
+     3630,
+     13457
+    ],
+    "s2": [
+     56956,
+     54632,
+     36507,
+     15358,
+     44255,
+     41905,
+     10320,
+     14548,
+     59541,
+     44669,
+     39280,
+     32951,
+     50720,
+     30523,
+     54453,
+     19006,
+     39461,
+     229,
+     46365,
+     22783,
+     17501,
+     54036,
+     18485,
+     52191
+    ],
+    "a": [
+     1583,
+     14508,
+     29074,
+     12183,
+     16433,
+     12795,
+     36676,
+     46454,
+     39292,
+     40
+    ],
+    "attr": [
+     {
+      "attribute": "any",
+      "nodeSlug": "node-38732"
+     },
+     {
+      "attribute": "any",
+      "nodeSlug": "node-3025"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-29148"
+     },
+     {
+      "attribute": "str",
+      "nodeSlug": "node-47177"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-16845"
+     }
+    ],
+    "jewels": [
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SacredFlameJewel.avif",
+      "isUnique": true,
+      "jewelSlug": "jewel-fouruniquejewel8-prism-of-belief",
+      "nodeSlug": "node-32763",
+      "prefixSlugs": [
+       "",
+       "",
+       ""
+      ],
+      "suffixSlugs": [
+       "",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"name\":\"Prism of Belief\",\"stats\":[{\"type\":\"and\",\"filters\":[]}],\"filters\":{\"type_filters\":{\"filters\":{\"rarity\":{\"option\":\"unique\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SanctumJewel.avif",
+      "isUnique": true,
+      "jewelSlug": "jewel-fouruniquejewel10-against-the-darkness",
+      "nodeSlug": "node-61834",
+      "prefixSlugs": [
+       "prefix-against-the-darkness-17",
+       "prefix-against-the-darkness-19",
+       ""
+      ],
+      "suffixSlugs": [
+       "",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"name\":\"Against the Darkness\",\"stats\":[{\"type\":\"and\",\"filters\":[]}],\"filters\":{\"type_filters\":{\"filters\":{\"rarity\":{\"option\":\"unique\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/RitualJewel.avif",
+      "isUnique": true,
+      "jewelSlug": "jewel-fouruniquejewel6-from-nothing",
+      "nodeSlug": "node-60735",
+      "prefixSlugs": [
+       "passive-passive-keystone-resonance",
+       "",
+       ""
+      ],
+      "suffixSlugs": [
+       "",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"name\":\"From Nothing\",\"stats\":[{\"type\":\"and\",\"filters\":[]}],\"filters\":{\"type_filters\":{\"filters\":{\"rarity\":{\"option\":\"unique\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-21984",
+      "prefixSlugs": [
+       "JewelEnergyShield",
+       "JewelAilmentEffect",
+       ""
+      ],
+      "suffixSlugs": [
+       "JewelFasterAilments",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2482852589\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_1303248024\",\"value\":{\"min\":5}},{\"id\":\"explicit.stat_538241406\",\"value\":{\"min\":3}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/DeliriumJewel.webp",
+      "isUnique": true,
+      "jewelSlug": "jewel-fouruniquejewel4-megalomaniac",
+      "nodeSlug": "node-61419",
+      "prefixSlugs": [
+       "passive-chaos37",
+       "passive-sentinels11",
+       ""
+      ],
+      "suffixSlugs": [
+       "",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"name\":\"Megalomaniac\",\"stats\":[{\"type\":\"and\",\"filters\":[]}],\"filters\":{\"type_filters\":{\"filters\":{\"rarity\":{\"option\":\"unique\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     }
+    ]
+   },
+   "desc": "This is the Uber Endgame variant that transitions from the Endgame one. Requires a lvl 80+ character and a decent amount of currency\nNote that most of the gear shown is NOT needed to start this variant; it is only something to aspire to and build towards. Before acquiring  while still using , keep flask passives on set 1 (, , , )\nT16 11 mod Aldur's 6-rune Grand Expedition map showcase"
+  },
+  {
+   "src": "pf_decomp",
+   "name": "pf_decomp: Endgame",
+   "items": {
+    "helmet": {
+     "n": "Sorcerous Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt04.webp",
+     "mods": [
+      "+71 to maximum Energy Shield",
+      "80% increased Energy Shield",
+      "+1 to Level of all Minion Skills"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "336"
+      }
+     ],
+     "runes": [
+      "soulcore-talismanspecial7"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Rambler Jacket",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt04.webp",
+     "mods": [
+      "+120 to Evasion Rating",
+      "+37 to maximum Energy Shield",
+      "68% increased Evasion and Energy Shield",
+      "+34 to Spirit"
+     ],
+     "stats": [
+      {
+       "name": "Evasion Rating",
+       "value": "696"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "211"
+      }
+     ],
+     "runes": [
+      "soulcore-runeenhancegreater",
+      "soulcore-runeenhancegreater"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Snakebite",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Uniques/snakebite.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial15",
+      "soulcore-talismansnake"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Corpsewade",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Uniques/corpsewade.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial9"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Astramentis",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Uniques/astramentis.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Prismatic Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/PrismaticRing.avif",
+     "mods": [
+      "23% increased Chaos Damage",
+      "+175 to Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Unset Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/UnsetRing.webp",
+     "mods": [
+      "23% increased Chaos Damage",
+      "+175 to Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Shavronne's Satchel",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/ShavronnesSatchel.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Thawing Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/StoneCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Dousing Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/DousingCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+     "mods": [
+      "25% reduced Flask Charges used",
+      "76% increased Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Brigand Mace",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace07.webp",
+     "mods": [
+      "41% increased Damage against Enemies with Fully Broken Armour",
+      "Gain 15% of Damage as Extra Physical Damage"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "28"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "38"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      },
+      {
+       "name": "Weapon Speed",
+       "value": "3"
+      }
+     ],
+     "runes": [
+      "soulcore-talismanspecial2"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Trenchtimbre",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/trenchtimbre.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial7"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.webp",
+     "mods": [
+      "Aura Skills have 15% increased Magnitudes",
+      "+34 to maximum Mana",
+      "78% increased Spirit"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-idolcorrupted2"
+     ],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.webp",
+     "mods": [
+      "+3 to Level of all Minion Skills",
+      "39% increased Spirit",
+      "Minions have 41% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-talismanrabbit"
+     ],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Decompose",
+     "slug": "corpsewadecorpsecloudplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DecomposeSkill.webp",
+     "sup": [
+      "Persistent Ground III",
+      "Deadly Poison II",
+      "Prolonged Duration II",
+      "Exploit Weakness",
+      "Encroaching Ground"
+     ],
+     "supIcons": {
+      "Persistent Ground III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DomainSupportGem.webp",
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.webp",
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Exploit Weakness": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExploitWeaknessSupportGem.webp",
+      "Encroaching Ground": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpandingGroundSupportGem.webp"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.webp",
+     "sup": [
+      "Deadly Poison II",
+      "Bursting Plague",
+      "Poison III",
+      "Corrosion"
+     ],
+     "supIcons": {
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.webp",
+      "Bursting Plague": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BurstingPlagueSupportGem.webp",
+      "Poison III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChancetoPoisonSupportGem.webp",
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Bind Spectre",
+     "slug": "bindspectreplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBindSpectreSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBindSpectre.avif",
+     "sup": [
+      "Minion Mastery",
+      "Hulking Minions"
+     ],
+     "supIcons": {
+      "Minion Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PhysicalMasterySupportGem.avif",
+      "Hulking Minions": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/EnormitySupportGem.avif"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Sacrifice",
+     "slug": "sacrificeplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HarvesterSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HarvesterSkill.avif",
+     "sup": [
+      "Minion Mastery"
+     ],
+     "supIcons": {
+      "Minion Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PhysicalMasterySupportGem.avif"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despairplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchDespairSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/Despair.webp",
+     "sup": [
+      "Heightened Curse",
+      "Focused Curse",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.webp",
+      "Focused Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FocusedHexSupportGem.webp",
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemyplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBlasphemySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBlasphemy.webp",
+     "sup": [
+      "Temporal Chains",
+      "Magnified Area II",
+      "Ritualistic Curse"
+     ],
+     "supIcons": {
+      "Temporal Chains": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TemporalChainsSkillGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Ritualistic Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RitualisticCurseSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+     "sup": [
+      "Blind II"
+     ],
+     "supIcons": {
+      "Blind II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [
+      "Expand",
+      "Rapid Casting I"
+     ],
+     "supIcons": {
+      "Expand": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpandSupportGem.avif",
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Withering Presence",
+     "slug": "witheringpresenceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchWitheringPresenceSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchWitheringPresence.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Herbalism II"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Herbalism II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/HerbalismSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdanceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GhostDanceSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkGhostDance.webp",
+     "sup": [
+      "Cooldown Recovery II"
+     ],
+     "supIcons": {
+      "Cooldown Recovery II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Herald of Plague",
+     "slug": "heraldofplagueplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldOfAgonySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAgonySkill.webp",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Grim Feast",
+     "slug": "grimfeastplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchGrimFeastSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchGrimFeast.avif",
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I",
+      "Rapid Casting I"
+     ],
+     "supIcons": {
+      "Harmonic Remnants II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RushedRemnantsSupportGem.avif",
+      "Remnant Potency I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InterludeSupportGem.avif",
+      "Rapid Casting I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.avif"
+     },
+     "weaponSet": "set2"
+    }
+   ],
+   "tree": {
+    "m": [
+     1583,
+     14508,
+     29074,
+     12183,
+     16433,
+     12795,
+     13828,
+     1140,
+     15507,
+     48401,
+     61312,
+     21280,
+     28050,
+     60505,
+     65009,
+     35644,
+     45193,
+     4083,
+     63888,
+     35901,
+     60735,
+     6951,
+     23608,
+     24401,
+     63759,
+     29517,
+     32701,
+     26598,
+     33366,
+     10944,
+     55193,
+     14658,
+     12253,
+     41017,
+     14262,
+     32763,
+     14267,
+     28976,
+     6030,
+     15986,
+     29458,
+     53595,
+     38628,
+     9703,
+     2134,
+     1723,
+     30808,
+     15775,
+     722,
+     31765,
+     59538,
+     47976,
+     14446,
+     61403,
+     21984,
+     3251,
+     10131,
+     46554,
+     62677,
+     59362,
+     47759,
+     29009,
+     5314,
+     61419,
+     49512,
+     15885,
+     12367,
+     36358,
+     19112,
+     3492,
+     46819,
+     8616,
+     57710,
+     40783,
+     11672,
+     48030,
+     62436,
+     3215,
+     56349,
+     58022,
+     5186,
+     6800,
+     32438,
+     55149,
+     57821,
+     51741,
+     61834,
+     11679,
+     7424,
+     1823,
+     43677,
+     23046,
+     36290,
+     21227,
+     52971,
+     3025
+    ],
+    "s1": [
+     62464,
+     17854,
+     26762,
+     35380,
+     44373,
+     37695,
+     38044,
+     30456,
+     35987,
+     19470,
+     10053,
+     57945,
+     49291,
+     26363,
+     52803,
+     31855,
+     37408,
+     55397,
+     44527,
+     38732,
+     42290,
+     52254,
+     37991,
+     40345
+    ],
+    "s2": [
+     61741,
+     56956,
+     54632,
+     36507,
+     15358,
+     44255,
+     41905,
+     10320,
+     14548,
+     59541,
+     47177,
+     39987,
+     18913,
+     12419,
+     56063,
+     44669,
+     39280,
+     32951,
+     50720,
+     30523,
+     29148,
+     21606,
+     2606,
+     28573
+    ],
+    "a": [
+     1583,
+     14508,
+     29074,
+     12183,
+     16433,
+     12795,
+     36676,
+     46454,
+     16,
+     41619
+    ],
+    "attr": [
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-38732"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-3025"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-29148"
+     },
+     {
+      "attribute": "int",
+      "nodeSlug": "node-47177"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-16845"
+     }
+    ],
+    "jewels": [
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-32763",
+      "prefixSlugs": [
+       "JewelAilmentEffect",
+       "JewelEnergyShield",
+       ""
+      ],
+      "suffixSlugs": [
+       "JewelFasterAilments",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2482852589\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_1303248024\",\"value\":{\"min\":5}},{\"id\":\"explicit.stat_538241406\",\"value\":{\"min\":3}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-61834",
+      "prefixSlugs": [
+       "ChaosDamagePercent2",
+       "JewelAilmentEffect",
+       ""
+      ],
+      "suffixSlugs": [
+       "JewelFasterAilments",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_736967255\",\"value\":{\"min\":8}},{\"id\":\"explicit.stat_1303248024\",\"value\":{\"min\":5}},{\"id\":\"explicit.stat_538241406\",\"value\":{\"min\":3}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/EmeraldJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jeweldex",
+      "nodeSlug": "node-60735",
+      "prefixSlugs": [
+       "JewelEvasion",
+       "JewelAilmentEffect",
+       ""
+      ],
+      "suffixSlugs": [
+       "JewelDamagingAilmentDuration",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2106365538\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_1303248024\",\"value\":{\"min\":5}},{\"id\":\"explicit.stat_1829102168\",\"value\":{\"min\":5}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-21984",
+      "prefixSlugs": [
+       "JewelEnergyShield",
+       "JewelAilmentEffect",
+       ""
+      ],
+      "suffixSlugs": [
+       "JewelFasterAilments",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2482852589\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_1303248024\",\"value\":{\"min\":5}},{\"id\":\"explicit.stat_538241406\",\"value\":{\"min\":3}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     },
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/EmeraldJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jeweldex",
+      "nodeSlug": "node-61419",
+      "prefixSlugs": [
+       "JewelEvasion",
+       "JewelAilmentEffect",
+       ""
+      ],
+      "suffixSlugs": [
+       "JewelDamagingAilmentDuration",
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[{\"id\":\"explicit.stat_2106365538\",\"value\":{\"min\":10}},{\"id\":\"explicit.stat_1303248024\",\"value\":{\"min\":5}},{\"id\":\"explicit.stat_1829102168\",\"value\":{\"min\":5}}]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     }
+    ]
+   },
+   "desc": "This is the Endgame variant for a 65+ character, check the Starter variant if you just got lvl 58.\nNote that the high stats on gear shown are NOT needed to start this variant; it is only something to aspire to and build towards."
+  },
+  {
+   "src": "pf_decomp",
+   "name": "pf_decomp: Starter",
+   "items": {
+    "helmet": null,
+    "body": null,
+    "gloves": {
+     "n": "Snakebite",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Uniques/snakebite.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Corpsewade",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Uniques/corpsewade.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Solar Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/SolarAmulet.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": null,
+    "rightRing": null,
+    "belt": null,
+    "charm1": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/StoneCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": null,
+    "charm3": null,
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": null,
+    "mainHand_set1": {
+     "n": "Brigand Mace",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace07.webp",
+     "mods": [
+      "41% increased Damage against Enemies with Fully Broken Armour"
+     ],
+     "stats": [
+      {
+       "name": "Minimum Physical Damage",
+       "value": "28"
+      },
+      {
+       "name": "Maximum Physical Damage",
+       "value": "38"
+      },
+      {
+       "name": "Critical Hit Chance",
+       "value": "5"
+      },
+      {
+       "name": "Weapon Speed",
+       "value": "3"
+      }
+     ],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Trenchtimbre",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/trenchtimbre.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.webp",
+     "mods": [
+      "27% increased Spirit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Stoic Sceptre",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/Scepters/Basetypes/Sceptre02.avif",
+     "mods": [
+      "+1 to Level of all Minion Skills",
+      "Minions have 31% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Decompose",
+     "slug": "corpsewadecorpsecloudplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DecomposeSkill.webp",
+     "sup": [
+      "Persistent Ground III",
+      "Deadly Poison II",
+      "Exploit Weakness",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {
+      "Persistent Ground III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DomainSupportGem.webp",
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.webp",
+      "Exploit Weakness": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExploitWeaknessSupportGem.webp",
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "weaponSet": null
+    },
+    {
+     "skill": "Plague Bearer",
+     "slug": "plaguebearerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/PlagueBearerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.webp",
+     "sup": [
+      "Magnified Area II",
+      "Deadly Poison II",
+      "Corrosion"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Deadly Poison II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DeadlyPoisonSupportGem.webp",
+      "Corrosion": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CorrosionSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Bind Spectre",
+     "slug": "bindspectreplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchBindSpectreSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchBindSpectre.webp",
+     "sup": [
+      "Minion Mastery"
+     ],
+     "supIcons": {
+      "Minion Mastery": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PhysicalMasterySupportGem.webp"
+     },
+     "weaponSet": "set2"
+    },
+    {
+     "skill": "Sacrifice",
+     "slug": "sacrificeplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HarvesterSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HarvesterSkill.webp",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despairplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchDespairSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/Despair.webp",
+     "sup": [
+      "Heightened Curse"
+     ],
+     "supIcons": {
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.webp"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Contagion",
+     "slug": "contagionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+     "sup": [
+      "Expand",
+      "Rapid Casting II"
+     ],
+     "supIcons": {
+      "Expand": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpandSupportGem.avif",
+      "Rapid Casting II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Withering Presence",
+     "slug": "witheringpresenceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchWitheringPresenceSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchWitheringPresence.avif",
+     "sup": [
+      "Prolonged Duration II"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.avif"
+     },
+     "weaponSet": "set1"
+    },
+    {
+     "skill": "Herald of Plague",
+     "slug": "heraldofplagueplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldOfAgonySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAgonySkill.webp",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": "set1"
+    }
+   ],
+   "tree": {
+    "m": [
+     13828,
+     48401,
+     61312,
+     21280,
+     28050,
+     60505,
+     65009,
+     35644,
+     45193,
+     4083,
+     43677,
+     63888,
+     35901,
+     6951,
+     23608,
+     61741,
+     29517,
+     32701,
+     26598,
+     14658,
+     1140,
+     15507,
+     60735,
+     12253,
+     32183,
+     49996,
+     33463,
+     45304,
+     64325,
+     61119,
+     63431,
+     41877,
+     24958,
+     61834,
+     16705,
+     42379,
+     3463,
+     26885,
+     59775,
+     20782,
+     4328,
+     24165,
+     25557,
+     26804,
+     55405,
+     41029,
+     46034,
+     8569,
+     47177,
+     39987,
+     18913,
+     12419,
+     56063,
+     11672,
+     40783,
+     41017,
+     14262,
+     32763,
+     14267,
+     28976,
+     29458,
+     53595,
+     38628,
+     1723,
+     2134,
+     9703,
+     6030,
+     15986,
+     24401,
+     63759
+    ],
+    "s1": [
+     21280,
+     29517,
+     35901,
+     35987,
+     48401,
+     26598,
+     22517,
+     59644,
+     42959,
+     17711,
+     46989,
+     33180,
+     60269,
+     62464,
+     17854
+    ],
+    "s2": [
+     13828,
+     23608,
+     15358,
+     44255,
+     41905,
+     10320,
+     52191,
+     57724,
+     54883,
+     34473,
+     14548,
+     59541
+    ],
+    "a": [
+     1583,
+     12183,
+     16433,
+     12795,
+     16,
+     41619
+    ],
+    "attr": [
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-38732"
+     },
+     {
+      "attribute": "dex",
+      "nodeSlug": "node-3025"
+     }
+    ],
+    "jewels": [
+     {
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/EmeraldJewel.avif",
+      "isUnique": false,
+      "jewelSlug": "jewel-jeweldex",
+      "nodeSlug": "node-63132",
+      "prefixSlugs": [
+       "",
+       ""
+      ],
+      "suffixSlugs": [
+       "",
+       ""
+      ],
+      "poe2TradeRequest": {
+       "query": "{\"query\":{\"status\":{\"option\":\"securable\"},\"stats\":[{\"type\":\"and\",\"filters\":[]}],\"filters\":{\"type_filters\":{\"filters\":{\"category\":{\"option\":\"jewel\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+       "currentLeague": "Forbidden Rites"
+      }
+     }
+    ]
+   },
+   "desc": "LEVEL 58 REQUIRED!\nVariant of the build for when you just hit lvl 58, check Full Pathfinder Leveling Guide if fresh character\n IS MANDATORY before you can start the build\nCheck this video on how to get a Blood Elemental \nI recommend assigning weapon swap key to something on your mouse, as we will be using it A LOT to summon our minions momentarily to  them (I use Mouse button 5)."
+  }
+ ]
+}

@@ -6,7 +6,10 @@ ROOT = Path(__file__).resolve().parents[2]
 DL = ROOT / 'tools' / 'dl'
 PAGES = ['Amulets', 'Rings', 'Belts', 'Wands', 'Sceptres', 'Two_Hand_Maces',
          'Helmets_int', 'Helmets_dex_int', 'Body_Armours_int', 'Body_Armours_dex',
-         'Gloves_int', 'Gloves_dex', 'Boots_int', 'Boots_dex', 'Life_Flasks', 'Mana_Flasks', 'Charms']
+         'Gloves_int', 'Gloves_dex', 'Boots_int', 'Boots_dex', 'Life_Flasks', 'Mana_Flasks', 'Charms',
+         'Crossbows', 'Bows', 'Quivers', 'Foci', 'Staves', 'One_Hand_Maces', 'Shields_str', 'Shields_str_int', 'Bucklers', 'Quarterstaves', 'Talismans',
+         'Helmets_str', 'Helmets_dex', 'Helmets_str_dex', 'Helmets_str_int', 'Body_Armours_str', 'Body_Armours_str_dex', 'Body_Armours_str_int', 'Body_Armours_dex_int',
+         'Gloves_str', 'Gloves_str_dex', 'Gloves_dex_int', 'Boots_str', 'Boots_str_dex', 'Boots_dex_int']
 data = {'reviewed': '2026-09-16', 'patch': '0.5.5', 'pools': {}, 'prices': {}}
 for page in PAGES:
     source = DL / 'web' / f'mods_{page}.json'

@@ -2,7 +2,7 @@
 from pathlib import Path
 
 SHARED = Path(__file__).resolve().parents[1] / 'shared'
-THEME_COLOR = {'silverfist': '#07080a', 'oracle': '#06060c'}
+THEME_COLOR = {'silverfist': '#07080a', 'oracle': '#06060c', 'tactician': '#08080a', 'infernalist': '#0a0505', 'acolyte': '#07050b', 'pathfinder': '#060906', 'smith': '#09070a'}
 
 
 def enhance(template, lang, build):

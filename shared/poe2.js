@@ -2,11 +2,21 @@
    Everything here is decorative; the guide works without it. */
 (() => {
   const root = document.documentElement;
-  const build = root.dataset.build === 'oracle' ? 'oracle' : 'silverfist';
+  const BUILDS = {
+    silverfist: { p: 'sf', name: 'Spirit Walker', motes: 'wisp' },
+    oracle: { p: 'or', name: 'Oracle', motes: 'stars' },
+    tactician: { p: 'ta', name: 'Tactician', motes: 'embers' },
+    infernalist: { p: 'in', name: 'Infernalist', motes: 'hellfire' },
+    acolyte: { p: 'ac', name: 'Acolyte of Chayula', motes: 'void' },
+    pathfinder: { p: 'pf', name: 'Pathfinder', motes: 'toxic' },
+    smith: { p: 'sk', name: 'Smith of Kitava', motes: 'forge' },
+  };
+  const build = BUILDS[root.dataset.build] ? root.dataset.build : 'silverfist';
+  const CFG = BUILDS[build];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const coarse = matchMedia('(pointer: coarse)');
   const artBase = new URL('art/', document.currentScript.src).href;
-  const P = build === 'oracle' ? 'or' : 'sf';
+  const P = CFG.p;
   const art = n => `${artBase}${P}-${n}.webp`;
   const $$ = s => [...document.querySelectorAll(s)];
 
@@ -61,12 +71,23 @@
     const rgb = hex => { const v = parseInt(hex.replace('#', ''), 16); return [(v >> 16) & 255, (v >> 8) & 255, v & 255]; };
     const cols = [rgb(css('--accent')), rgb(css('--accent2')), rgb(css('--gild-hi')), rgb(css('--wisp'))];
     const count = () => Math.round(Math.min(70, Math.max(18, innerWidth * innerHeight / (coarse.matches ? 42000 : 26000))));
+    /* estilo das partículas por build: tamanho, subida, balanço lateral, cintilação e mistura de cores */
+    const STYLE = {
+      wisp: { r: [1, 3.4], vy: [.18, .63], sway: .35, tw: 0, mix: [.72, .72, .88] },
+      stars: { r: [.6, 2.4], vy: [.04, .16], sway: .08, tw: .35, mix: [.5, .72, .9] },
+      embers: { r: [.7, 2.6], vy: [.35, 1.25], sway: .5, tw: .25, mix: [.62, .8, .93] },
+      hellfire: { r: [.9, 3.5], vy: [.3, 1.05], sway: .45, tw: .2, mix: [.55, .78, .92] },
+      void: { r: [.8, 3], vy: [.05, .21], sway: .18, tw: .45, mix: [.5, .7, .9] },
+      toxic: { r: [1.2, 4.2], vy: [.08, .3], sway: .28, tw: .1, mix: [.62, .82, .94] },
+      forge: { r: [.6, 2.2], vy: [.45, 1.55], sway: .55, tw: .3, mix: [.6, .85, .95] },
+    }[CFG.motes];
+    const rnd = ([a, b]) => a + Math.random() * (b - a);
     const spawn = fresh => {
-      const oracle = build === 'oracle', pick = Math.random();
-      const c = oracle ? (pick < .5 ? cols[0] : pick < .72 ? cols[3] : pick < .9 ? cols[2] : cols[1]) : (pick < .72 ? cols[0] : pick < .88 ? cols[2] : cols[1]);
-      return { x: Math.random() * W, y: fresh ? Math.random() * H : H + 20, r: (oracle ? .6 : 1) + Math.random() * (oracle ? 1.8 : 2.4),
-        vy: oracle ? -(.04 + Math.random() * .12) : -(.18 + Math.random() * .45), vx: (Math.random() - .5) * .12,
-        ph: Math.random() * 6.28, sp: .004 + Math.random() * .01, a: .25 + Math.random() * .55, c, tw: oracle && Math.random() < .35 };
+      const pick = Math.random(), m = STYLE.mix;
+      const c = pick < m[0] ? cols[0] : pick < m[1] ? cols[3] : pick < m[2] ? cols[2] : cols[1];
+      return { x: Math.random() * W, y: fresh ? Math.random() * H : H + 20, r: rnd(STYLE.r),
+        vy: -rnd(STYLE.vy), vx: (Math.random() - .5) * .12,
+        ph: Math.random() * 6.28, sp: .004 + Math.random() * .01, a: .25 + Math.random() * .55, c, tw: Math.random() < STYLE.tw };
     };
     const size = () => { dpr = Math.min(2, devicePixelRatio || 1); W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); const n = count(); while (parts.length < n) parts.push(spawn(true)); parts.length = n; };
     size(); addEventListener('resize', size, { passive: true });
@@ -76,7 +97,7 @@
       if (!running) return;
       t++; ctx.clearRect(0, 0, W, H); ctx.globalCompositeOperation = 'lighter';
       for (const p of parts) {
-        p.ph += p.sp; p.y += p.vy; p.x += p.vx + Math.sin(p.ph) * (build === 'oracle' ? .08 : .35);
+        p.ph += p.sp; p.y += p.vy; p.x += p.vx + Math.sin(p.ph) * STYLE.sway;
         if (p.y < -30 || p.x < -30 || p.x > W + 30) Object.assign(p, spawn(false));
         const a = p.a * (p.tw ? .45 + .55 * Math.abs(Math.sin(p.ph * 3)) : 1) * Math.min(1, (H - p.y) / 160);
         const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 7);
@@ -94,7 +115,7 @@
     const h1 = document.querySelector('.brand h1'); if (!h1 || document.querySelector('.asc-medal')) return;
     const row = document.createElement('div'); row.className = 'brand-row';
     const b = document.createElement('button'); b.type = 'button'; b.className = 'asc-medal';
-    const name = build === 'oracle' ? 'Oracle' : 'Spirit Walker';
+    const name = CFG.name;
     b.setAttribute('aria-label', (typeof T === 'function' ? T('Abrir Ascendência: ', 'Open Ascendancy: ') : '') + name);
     b.innerHTML = `<span class="glow"></span><img src="${art('asc')}" alt="" width="148" height="148" decoding="async"><span class="cap">${name}</span>`;
     b.addEventListener('click', () => typeof guideGo === 'function' && guideGo('asc'));

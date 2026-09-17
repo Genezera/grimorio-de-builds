@@ -5,6 +5,7 @@ const craftIsOracle=()=>Object.prototype.hasOwnProperty.call(VIEWS,'totem');
 const craftOwned=r=>(r.owned||[]).filter(name=>!!(S.ch.items?.[name]||S.ch.own?.[name]));
 const craftSource=(name)=>'https://poe2db.tw/us/'+name.replaceAll(' ','_');
 function craftRecipes(){
+  if(D.craftKit)return D.craftKit.items;
   const o=craftIsOracle(), L=T;
   const item=(id,name,page,goal,base,stop,trap,patterns,owned=[])=>({id,name,page,goal,base,stop,trap,patterns,owned});
   return [
@@ -23,7 +24,7 @@ function craftRecipes(){
   ];
 }
 const craftBase=r=>S.craft.route==='cheap'?r.base:(craftDet(r)?.base||r.base);
-const craftDet=r=>typeof window.craftDetail==='function'?window.craftDetail(craftIsOracle())[r.id]||null:null;
+const craftDet=r=>D.craftKit?(D.craftKit.detail[r.id]||null):typeof window.craftDetail==='function'?window.craftDetail(craftIsOracle())[r.id]||null:null;
 function craftSteps(r){
   const L=T, route=S.craft.route, o=craftIsOracle(), magic=/Flasks|Charms/.test(r.page);
   const step=(id,title,body,fail='')=>({id,title,body,fail});
@@ -64,7 +65,7 @@ function vCraft(){
 function craftRecipe(r){
   const steps=craftSteps(r),completed=steps.filter(s=>S.done[craftStepKey(r,s)]).length,targets=craftTargets(r),owned=craftOwned(r);
   return `<h3>${esc(r.name)}</h3><p class="craft-lead">${esc(r.goal)}</p>
-  ${r.id==='weapon'&&!craftIsOracle()?`<p class="craft-meta"><a href="https://poe2db.tw/us/Runeforging" target="_blank" rel="noopener">${T('Receita de Runeforging: Chober Chaber','Runeforging recipe: Chober Chaber')} ↗</a></p>`:''}
+  ${r.id==='weapon'&&!craftIsOracle()&&!D.craftKit?`<p class="craft-meta"><a href="https://poe2db.tw/us/Runeforging" target="_blank" rel="noopener">${T('Receita de Runeforging: Chober Chaber','Runeforging recipe: Chober Chaber')} ↗</a></p>`:''}
   ${owned.length?`<div class="craft-note">✓ ${T('Você já marcou','You already marked')}: <b>${owned.map(esc).join(', ')}</b>. ${T('Confira se essa peça já resolve o slot. A rota rare abaixo é opcional; compare antes de substituir um unique.','Check whether it already solves the slot. The rare route below is optional; compare before replacing a unique.')} <button class="guide-btn" data-guide-go="meu">${T('Meu personagem','My character')}</button></div>`:''}
   <div class="craft-controls"><label>${T('Rota de investimento','Investment route')}<select id="craftRoute">${[['cheap',T('Econômica · comprar / aproveitar','Budget · buy / reuse')],['value',T('Progressiva · craft básico','Progressive · basic crafting')],['lux',T('Avançada · otimizar','Advanced · optimise')]].map(([id,n])=>`<option value="${id}" ${S.craft.route===id?'selected':''}>${n}</option>`).join('')}</select></label><label>${T('Nível do item (ilvl)','Item level (ilvl)')}<input id="craftIlvl" type="number" min="1" max="100" step="1" value="${S.craft.ilvl}"></label></div>
   <div class="craft-goals"><div><h4>${T('Sua base','Your base')}</h4><p>${esc(craftBase(r))}</p></div><div><h4>${T('Pare quando','Stop when')}</h4><p>${esc(r.stop)}</p></div></div>
