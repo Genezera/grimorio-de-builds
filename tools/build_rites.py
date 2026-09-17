@@ -61,7 +61,7 @@ def page(lang):
 <link rel="alternate" hreflang="pt-BR" href="index.html"><link rel="alternate" hreflang="en" href="en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Alegreya+SC:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<link rel="stylesheet" href="../shared/rites.css"><link rel="stylesheet" href="../shared/loader.css?v={LV[0]}"><script src="../shared/loader.js?v={LV[1]}"></script>
+<link rel="stylesheet" href="../shared/rites.css?v={asset_version('rites.css')}"><link rel="stylesheet" href="../shared/loader.css?v={LV[0]}"><script src="../shared/loader.js?v={LV[1]}"></script>
 </head>
 <body>
 <a class="skip" href="#challenges">{u['jump']}: {u['nav']}</a>
@@ -73,7 +73,7 @@ def page(lang):
 <main id="app"></main>
 <noscript><p style="padding:24px;color:#e9dcc0">JavaScript</p></noscript>
 <script>window.RITES={safe(d)};window.RT={safe(u)};</script>
-<script src="../shared/rites.js"></script>
+<script src="../shared/rites.js?v={asset_version('rites.js')}"></script>
 </body>
 </html>
 """

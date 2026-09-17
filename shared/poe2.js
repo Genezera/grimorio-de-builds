@@ -66,6 +66,7 @@
 
   /* ---------- particles: spirit wisps (Spirit Walker) / fate motes & stars (Oracle) */
   function motes() {
+    if (root.classList.contains('lite')) return;   // modo leve (celular/aparelho fraco): sem partículas
     const cv = document.getElementById('poeMotes'); if (!cv || reduce.matches) return;
     const ctx = cv.getContext('2d'); let W, H, dpr, parts = [], running = true;
     const css = n => getComputedStyle(root).getPropertyValue(n).trim();

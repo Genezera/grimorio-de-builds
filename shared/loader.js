@@ -1,7 +1,8 @@
 /* Instant navigation + entry loading screen. Loaded in <head>; decorative only, never blocks input.
    - Links inside the site are prerendered in the background (Speculation Rules): the click just swaps in the already-rendered page,
      with a native crossfade (@view-transition in loader.css). No curtain, no reload feel.
-   - The loading screen only shows when arriving from outside the site (first open, typed link, bookmark). */
+   - The loading screen covers every real page load (skipped only for prerendered pages and back/forward cache).
+   - Lite mode (phones, touch tablets, weak devices): no prerender, blur, particles or infinite animations. */
 (() => {
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
@@ -9,12 +10,19 @@
   const siteBase = src ? new URL('../', src) : new URL('./', location.href);   // .../trilha-silverfist/
   const art = new URL('shared/art/', siteBase).href;
 
+  /* ---- modo leve: celular, tablet touch e aparelhos fracos (sem blur, partículas nem animações infinitas; ver loader.css) */
+  const mem = navigator.deviceMemory || 8, cores = navigator.hardwareConcurrency || 8, saveData = !!(navigator.connection && navigator.connection.saveData);
+  const lite = qs.has('lite') || (!qs.has('full') && (matchMedia('(pointer: coarse)').matches || innerWidth < 900 || mem <= 4 || cores <= 4 || saveData));
+  if (lite) root.classList.add('lite');
+
   /* ---- prerender every page of the site on hover/touch (Chrome/Edge); from inside a build, the home page eagerly */
   if (!navigator.webdriver && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
     const site = { and: [{ href_matches: siteBase.pathname + '*' }, { not: { selector_matches: '[target=_blank], [download]' } }, { not: { href_matches: location.pathname } }] };
-    const rules = { prerender: [{ source: 'document', where: site, eagerness: 'moderate' }], prefetch: [{ source: 'document', where: site, eagerness: 'conservative' }] };
+    // no modo leve só baixa o HTML ao tocar (pré-renderizar páginas pesadas em segundo plano deixaria o celular lento)
+    const rules = lite ? { prefetch: [{ source: 'document', where: site, eagerness: 'conservative' }] }
+                       : { prerender: [{ source: 'document', where: site, eagerness: 'moderate' }], prefetch: [{ source: 'document', where: site, eagerness: 'conservative' }] };
     const inSubfolder = location.pathname.replace(/[^/]*$/, '') !== siteBase.pathname;
-    if (inSubfolder) rules.prerender.push({ source: 'list', urls: [new URL(/en\.html$/.test(location.pathname) ? 'en.html' : 'index.html', siteBase).href], eagerness: 'eager' });
+    if (inSubfolder && !lite) rules.prerender.push({ source: 'list', urls: [new URL(/en\.html$/.test(location.pathname) ? 'en.html' : 'index.html', siteBase).href], eagerness: 'eager' });
     const s = document.createElement('script'); s.type = 'speculationrules'; s.textContent = JSON.stringify(rules);
     document.head.appendChild(s);
   }
@@ -22,9 +30,9 @@
   if (navigator.webdriver && !qs.has('loader')) return;             // automated tests: no overlay
   if (document.prerendering) return;                                // prerendered page: it is shown already rendered
   let internal = false;
-  try { internal = !!document.referrer && new URL(document.referrer).origin === location.origin && !qs.has('loader'); } catch (e) {}
+  try { internal = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
   const nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
-  if (internal || (nav && nav.type === 'back_forward' && !qs.has('loader'))) return;   // moving inside the site: no loading screen
+  if (nav && nav.type === 'back_forward' && !qs.has('loader')) return;   // voltar/avançar: a página vem pronta do cache
 
   const BUILDS = {
     silverfist: ['sf', 'Mighty Silverfist', 'Huntress · Spirit Walker'], oracle: ['or', 'Oracle Spell Totem', 'Druid · Oracle'],
@@ -46,7 +54,7 @@
 
   const discSize = () => Math.ceil(2 * Math.hypot(innerWidth / 2, innerHeight * .54) + 4) + 'px';
   const esc = s => String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]);
-  const born = performance.now(), minShow = reduce ? 0 : 900;
+  const born = performance.now(), minShow = reduce ? 0 : internal ? 350 : 900;   // dentro do site: só cobre o carregamento
   let el = null, done = false;
   const progress = v => { if (el) el.style.setProperty('--pl-p', v); };
   const mount = () => {

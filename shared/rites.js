@@ -183,7 +183,7 @@
     }
   }
   function embers() {
-    const cv = document.getElementById('embers'); if (!cv || reduce) return;
+    const cv = document.getElementById('embers'); if (!cv || reduce || document.documentElement.classList.contains('lite')) return;
     const ctx = cv.getContext('2d'); let W, H, P = [], L = [], run = true;
     const size = () => { const d = Math.min(2, devicePixelRatio || 1); W = innerWidth; H = innerHeight; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0); const n = Math.round(Math.min(70, W * H / 24000)); while (P.length < n) P.push(mk(true)); P.length = n; while (L.length < 5) L.push(loc()); };
     const cols = [[155, 107, 255], [201, 173, 255], [241, 179, 92], [184, 50, 63]];

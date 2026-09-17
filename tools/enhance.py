@@ -27,6 +27,6 @@ def enhance(template, lang, build):
     end = template.index('/* ------------------------------------------------ views */', start)
     template = template[:start] + template[end:]
     scripts = ['craft-data.js', 'craft-detail.js', 'craft.js', 'weights.js', 'guide.js', 'poe2.js', 'build-now.js']
-    tags = ''.join('<script src="../shared/%s"></script>\n' % s for s in scripts)
+    tags = ''.join('<script src="../shared/%s?v=%s"></script>\n' % (s, asset_version(s)) for s in scripts)
     template = template.replace(marker, '</script>\n' + tags + '<script>\n' + marker, 1)
     return template

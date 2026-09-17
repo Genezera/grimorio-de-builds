@@ -91,8 +91,10 @@ document.addEventListener('keydown',e=>{
 });
 buildNow.wide.addEventListener('change',()=>{if(buildNow.open)openDrawer(false);renderSide();});
 
-/* the floating "Your build" button must never sit on top of the level console: step aside only while they actually overlap */
-(()=>{const fab=document.getElementById('sbFab'),con=document.querySelector('.console');if(!fab||!con)return;let raf=0;
-  const check=()=>{raf=0;fab.classList.remove('sb-fab-away');const f=fab.getBoundingClientRect(),c=con.getBoundingClientRect();
-    fab.classList.toggle('sb-fab-away',f.width>0&&f.left<c.right&&f.right>c.left&&f.top<c.bottom&&f.bottom>c.top);};
-  const q=()=>{if(!raf)raf=requestAnimationFrame(check);};addEventListener('scroll',q,{passive:true});addEventListener('resize',q);q();})();
+/* the floating "Your build" button must never sit on top of the level console: step aside only while they actually overlap.
+   The button is fixed, so its box is measured on resize only; scrolling reads just the console box (no forced style recalculation). */
+(()=>{const fab=document.getElementById('sbFab'),con=document.querySelector('.console');if(!fab||!con)return;let raf=0,f=null;
+  const measure=()=>{const away=fab.classList.contains('sb-fab-away');if(away)fab.classList.remove('sb-fab-away');f=fab.getBoundingClientRect();if(away)fab.classList.add('sb-fab-away');};
+  const check=()=>{raf=0;if(!f||!f.width)measure();const c=con.getBoundingClientRect();
+    const hit=f.width>0&&f.left<c.right&&f.right>c.left&&f.top<c.bottom&&f.bottom>c.top;if(hit!==fab.classList.contains('sb-fab-away'))fab.classList.toggle('sb-fab-away',hit);};
+  const q=()=>{if(!raf)raf=requestAnimationFrame(check);};addEventListener('scroll',q,{passive:true});addEventListener('resize',()=>{f=null;q();});q();})();

@@ -48,3 +48,11 @@ html.ld::before{content:"";position:fixed;inset:0;z-index:2147483000;pointer-eve
   .poe-loader.out .pl-disc{transform:none;transition:none}
 }
 @media print{.poe-loader,html.ld::before{display:none}}
+/* ---------- modo leve (html.lite, definido no <head> por loader.js): celular, tablet touch e aparelhos fracos.
+   Blur de fundo e animações infinitas são redesenhados a cada frame de rolagem sobre o cenário: no celular isso derruba o FPS. */
+html.lite body *,html.lite body *::before,html.lite body *::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html.lite body :not(.poe-loader):not(.poe-loader *),html.lite body :not(.poe-loader):not(.poe-loader *)::before,html.lite body :not(.poe-loader):not(.poe-loader *)::after{animation:none!important}
+html.lite[data-build]{--glass:1}
+html.lite #poeScene .art{will-change:auto}
+html.lite #poeScene,html.lite .scene{transform:translateZ(0)}
+html.lite #poeMotes,html.lite #motes,html.lite #embers{display:none}
