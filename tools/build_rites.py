@@ -4,6 +4,9 @@ import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "rites"))
 import rdata, rtext
+sys.path.insert(0, HERE)
+from enhance import asset_version
+LV = (asset_version("loader.css"), asset_version("loader.js"))
 
 OUT = os.path.join(HERE, "..", "rites")
 os.makedirs(OUT, exist_ok=True)
@@ -58,7 +61,7 @@ def page(lang):
 <link rel="alternate" hreflang="pt-BR" href="index.html"><link rel="alternate" hreflang="en" href="en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Alegreya+SC:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<link rel="stylesheet" href="../shared/rites.css"><link rel="stylesheet" href="../shared/loader.css"><script src="../shared/loader.js"></script>
+<link rel="stylesheet" href="../shared/rites.css"><link rel="stylesheet" href="../shared/loader.css?v={LV[0]}"><script src="../shared/loader.js?v={LV[1]}"></script>
 </head>
 <body>
 <a class="skip" href="#challenges">{u['jump']}: {u['nav']}</a>

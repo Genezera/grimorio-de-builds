@@ -2,6 +2,9 @@
 import json
 from html import escape
 
+from enhance import asset_version
+LV = (asset_version("loader.css"), asset_version("loader.js"))
+
 def render(lang, text, icons):
     en = lang == 'en'
     def L(pt, eng): return eng if en else pt
@@ -31,7 +34,7 @@ def render(lang, text, icons):
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='52'%3E◇%3C/text%3E%3C/svg%3E">
 <link rel="alternate" hreflang="pt-BR" href="index.html"><link rel="alternate" hreflang="en" href="en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700&family=Alegreya+SC:wght@500;700&family=Alegreya:ital,wght@0,400;0,500;1,400&display=swap">
-<link rel="stylesheet" href="shared/landing.css"><link rel="stylesheet" href="shared/loader.css"><script src="shared/loader.js"></script></head><body>
+<link rel="stylesheet" href="shared/landing.css"><link rel="stylesheet" href="shared/loader.css?v={LV[0]}"><script src="shared/loader.js?v={LV[1]}"></script></head><body>
 <div class="scene" aria-hidden="true"><div class="half sf"></div><div class="half or"></div><canvas id="motes"></canvas><div class="veil"></div></div>
 <a class="skip" href="#builds">{L('Pular para as builds','Skip to builds')}</a>
 <div class="wrap"><header class="masthead"><a class="brand" href="{suffix}"><span aria-hidden="true">◇</span> {L('GRIMÓRIO','GRIMOIRE')}<small>PATH OF EXILE 2</small></a><nav aria-label="{L('Idioma','Language')}" class="language"><a href="index.html" lang="pt-BR" {'aria-current="page"' if not en else ''}>PT</a><span>/</span><a href="en.html" lang="en" {'aria-current="page"' if en else ''}>EN</a></nav></header>
