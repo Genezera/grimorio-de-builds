@@ -1,7 +1,7 @@
-/* Loading screen + page transitions (shared/loader.js). Never blocks input.
+/* Entry loading screen + native page crossfade (shared/loader.js). Never blocks input.
    Only transform/opacity are animated (GPU-composited) and only local fonts are used, so nothing swaps or stalls. */
 @view-transition{navigation:auto}
-::view-transition-old(root),::view-transition-new(root){animation-duration:.18s}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.28s;animation-timing-function:ease}
 html.ld::before{content:"";position:fixed;inset:0;z-index:2147483000;pointer-events:none;
   background:radial-gradient(60% 50% at 50% 45%,color-mix(in srgb,var(--pl-acc,#c3a066) 16%,transparent),transparent 70%),var(--pl-ground,#07070a)}
 .poe-loader{--pl-p:.2;position:fixed;inset:0;z-index:2147483001;pointer-events:none;overflow:hidden;contain:strict;
@@ -40,14 +40,6 @@ html.ld::before{content:"";position:fixed;inset:0;z-index:2147483000;pointer-eve
 /* revelar: disco encolhe até o centro, medalhão se dissolve */
 .poe-loader.out .pl-disc{transform:scale(0);transition:transform .8s cubic-bezier(.7,0,.25,1)}
 .poe-loader.out .pl-stage{opacity:0;transform:translate(-50%,-50%) scale(1.08);transition:opacity .35s ease,transform .5s ease-in}
-/* sair: disco nasce no centro e cobre a tela */
-.poe-loader.leave .pl-disc{transform:scale(0);transition:transform .5s cubic-bezier(.6,0,.3,1)}
-.poe-loader.leave.on .pl-disc{transform:scale(1)}
-.poe-loader.leave .pl-stage{transition-delay:.12s}
-/* continuação da cortina da página anterior: nasce pronta, sem re-animar */
-.poe-loader.nav .pl-stage,.poe-loader.nav .pl-disc{transition:none}
-.poe-loader.nav.out .pl-disc{transition:transform .8s cubic-bezier(.7,0,.25,1)}
-.poe-loader.nav.out .pl-stage{transition:opacity .35s ease,transform .5s ease-in}
 @keyframes plSpin{to{transform:rotate(1turn)}}
 @keyframes plOrbit{from{transform:rotate(0) translateX(clamp(52px,min(25vw,17vh),140px))}to{transform:rotate(1turn) translateX(clamp(52px,min(25vw,17vh),140px))}}
 @media (prefers-reduced-motion:reduce){
