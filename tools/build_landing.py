@@ -5,7 +5,10 @@ HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.join(HERE, ".."
 SF = json.load(open(os.path.join(HERE, "assets.json"), encoding="utf-8"))
 OR = json.load(open(os.path.join(HERE, "oracle", "assets.json"), encoding="utf-8"))
 def ico(A, table, name):
-    k = A[table].get(name); return A["icons"].get(k, "") if k else ""
+    for t in (table, "gemIcon", "supIcon", "uniqIcon"):   # gems encaixadas em meta skills ficam em supIcon
+        k = A.get(t, {}).get(name)
+        if k and A["icons"].get(k): return A["icons"][k]
+    raise SystemExit(f"landing: ícone vazio para {name!r}")
 IC = {
  "sf_main": ico(SF, "gemIcon", "Tame Beast"), "sf_a": ico(SF, "uniqIcon", "Chober Chaber"), "sf_b": ico(SF, "uniqIcon", "Sylvan's Effigy"), "sf_c": ico(SF, "gemIcon", "Pain Offering"),
  "or_main": ico(OR, "gemIcon", "Spell Totem"), "or_a": ico(OR, "supIcon", "Grim Pillars"), "or_b": ico(OR, "gemIcon", "Archmage"), "or_c": ico(OR, "uniqIcon", "Soul Mantle"),

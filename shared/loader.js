@@ -30,16 +30,19 @@
   { const c = PAL[infoFor(location.pathname)[0]] || PAL.home; root.style.setProperty('--pl-ground', c[0]); root.style.setProperty('--pl-acc', c[1]); }
   root.classList.add('ld');                                        // plain cover before first paint
 
+  const discSize = () => Math.ceil(2 * Math.hypot(innerWidth / 2, innerHeight * .54) + 4) + 'px';   // cobre até o canto mais distante do centro da íris
+  addEventListener('resize', () => document.querySelectorAll('.poe-loader').forEach(n => n.style.setProperty('--pl-d', discSize())), { passive: true });
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   function overlay(info, mode) {
     const [key, p, name, sub] = info;
     const el = document.createElement('div');
     el.className = 'poe-loader ' + mode; el.setAttribute('aria-hidden', 'true'); el.dataset.key = key;
+    el.style.setProperty('--pl-d', discSize());
     el.style.setProperty('--pl-t', -(Date.now() % 1e6) / 1000 + 's');
     const c = PAL[key] || PAL.home;
     [['--pl-ground', c[0]], ['--pl-acc', c[1]], ['--pl-gold', c[2]], ['--pl-hi', c[3]]].forEach(([k, v]) => el.style.setProperty(k, v));   // fase das animações pelo relógio: continua igual na página seguinte
     const img = p ? `<img src="${art}${p}-asc-sm.webp" alt="" decoding="async">` : '<span class="pl-glyph">◇</span>';
-    el.innerHTML = `<div class="pl-veil"></div><div class="pl-stage">
+    el.innerHTML = `<div class="pl-disc"></div><div class="pl-stage">
       <div class="pl-medal"><span class="pl-ring r1"></span><span class="pl-ring r2"></span><span class="pl-ring r3"></span>
         <span class="pl-spark s1"></span><span class="pl-spark s2"></span><span class="pl-spark s3"></span><span class="pl-art">${img}</span></div>
       <div class="pl-name">${esc(name)}</div><div class="pl-sub">${esc(sub)}</div>
@@ -68,12 +71,16 @@
     if (done) return; done = true;
     if (!el) { root.classList.remove('ld'); return; }
     progress(1);
-    const wait = Math.max(0, minShow - (performance.now() - born));
-    setTimeout(() => {
-      root.classList.add('pl-reveal');
-      el.classList.add('out');
-      setTimeout(() => { el.remove(); el = null; root.classList.remove('pl-reveal'); }, reduce ? 200 : 900);
-    }, wait);
+    const fonts = document.fonts && document.fonts.ready ? Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1200))]) : Promise.resolve();
+    const idle = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(() => (window.requestIdleCallback ? requestIdleCallback(r, { timeout: 300 }) : setTimeout(r, 60)))));
+    fonts.then(idle).then(() => {
+      const wait = Math.max(0, minShow - (performance.now() - born));
+      setTimeout(() => {
+        if (!el) return;
+        el.classList.add('out');
+        setTimeout(() => { if (el) { el.remove(); el = null; } }, reduce ? 220 : 850);
+      }, wait);
+    });
   };
   // monta assim que o <body> existir (antes dos scripts pesados da página terminarem de baixar)
   if (document.body) mount();
