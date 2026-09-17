@@ -1742,7 +1742,7 @@ function vFontes() {
   return `<div class="sechead"><div><h2>Fontes & correções</h2><p>Pesquisado em ${esc(D.updated)} · ${esc(D.patch)}. Árvore e ícones: dados oficiais do Path of Building (0.5) e planners do guia.</p></div></div>
   <div class="grid g2">
     <div class="panel frame"><h3>Fontes</h3><ul class="clean">${D.sources.map(s => `<li><span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a><br><small style="color:var(--mute)">${esc(s.use)}</small></span></li>`).join("")}</ul></div>
-    <div class="panel frame"><h3>Erros corrigidos da planilha antiga</h3><ul class="clean gold">${D.fixes.map(f => `<li>${esc(f)}</li>`).join("")}</ul></div>
+    <div class="panel frame"><h3>Correções e observações</h3><ul class="clean gold">${D.fixes.map(f => `<li>${esc(f)}</li>`).join("")}</ul></div>
   </div>`;
 }
 

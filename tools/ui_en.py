@@ -148,7 +148,7 @@ UI = [
 (">Seu setup atual<", ">Your current setup<"),
 ("<h2>Fontes & correções</h2><p>Pesquisado em ${esc(D.updated)} · ${esc(D.patch)}. Árvore e ícones: dados oficiais do Path of Building (0.5) e planners do guia.</p>", "<h2>Sources & fixes</h2><p>Researched on ${esc(D.updated)} · ${esc(D.patch)}. Tree and icons: official Path of Building data (0.5) and the guide's planners.</p>"),
 ("<h3>Fontes</h3>", "<h3>Sources</h3>"),
-("Erros corrigidos da planilha antiga", "Errors fixed from the old spreadsheet"),
+("Correções e observações", "Corrections and notes"),
 ('return `≈ ${d < 10 ? d.toFixed(2).replace(".", ",") : Math.round(d)} div`;', 'return `≈ ${d < 10 ? d.toFixed(2) : Math.round(d)} div`;'),
 ('S.uf = { ph: "todas", cat: "Todos", tier: "Todas", sort: "fase" };', 'S.uf = { ph: "todas", cat: "All", tier: "All", sort: "fase" };'),
 ("Mods variáveis.", "Variable mods."),

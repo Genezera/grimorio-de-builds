@@ -156,7 +156,7 @@ add("item", "Lavianga's Spirits", (LV.get("Lavianga's Spirits") or {}).get("base
 
 add("item", "Darkness Enthroned", (LV.get("Darkness Enthroned") or {}).get("base") or 62, req("Darkness Enthroned"),
     ("Endgame com Idolatry.", "Endgame with Idolatry."),
-    ("Cinto que recebe bônus de sockets como capacete/escudo/botas/luvas, com 50–99% mais efeito.", "Belt that gains socket bonuses as helmet/shield/boots/gloves, with 50–99% more effect."),
+    ("Cinto com 2 sockets (50–100% mais efeito) que contam como o slot da variante. Use a variante Capacete com Idol of Ralakesh + Primate Idol.", "Belt with 2 sockets (50–100% more effect) that count as the variant’s slot. Use the Helmet variant with Idol of Ralakesh + Primate Idol."),
     ("Nível 62, mas só rende com Idols (Idolatry).", "Level 62, but it only pays off with Idols (Idolatry)."),
     ("Opcional.", "Optional."), [])
 

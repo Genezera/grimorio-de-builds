@@ -353,7 +353,7 @@ ws.freeze_panes = "A4"; ws.auto_filter.ref = f"A3:D{te}"
 
 # ============================================================ DIAGNÓSTICO
 ws = sheet("Diagnóstico", [36, 70, 4, 34, 60], C["red"])
-banner(ws, "DIAGNÓSTICO — o dano caiu? algo deu errado?", "Sintoma → causa provável → correção. Abaixo, análise do seu setup atual (imagens da planilha antiga).", 5)
+banner(ws, "DIAGNÓSTICO — o dano caiu? algo deu errado?", "Sintoma → causa provável → correção. Abaixo, análise do seu setup atual (imagens do seu setup).", 5)
 header(ws, 3, ["Sintoma", "O que fazer", "", "", ""])
 for i, (q, a) in enumerate(D.TROUBLESHOOT):
     put(ws, 4 + i, [q, a, "", "", ""], bold_first=True, height=34)
