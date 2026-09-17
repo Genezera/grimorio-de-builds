@@ -77,6 +77,8 @@ rep('${T("Dano seu / dos totems (aprox.)", "Your damage / totem damage (approx.)
 rep('${T("dano dos totems (proporção aproximada)", "totem damage (approximate ratio)")}', '${esc(D.ui.dmgLegend)}')
 line('<div class="panel frame"><h3>${T("Prioridade de sockets (Jeweller\'s)", "Socket priority (Jeweller\'s)")}</h3>',
      '''    <div class="panel frame"><h3>${T("Prioridade de sockets (Jeweller's)", "Socket priority (Jeweller's)")}</h3><ul class="clean gold">${D.ui.socketPrio.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>''')
+if os.path.exists(os.path.join(BDIR, "view_skills.js")):
+    block("function vSkills() {", "function vGear() {", J("view_skills.js"))
 line("Nada disso volta depois. Cada Spirit conta para os totems", '''  return `<div class="sechead"><div><h2>${T("Recompensas permanentes", "Permanent rewards")}</h2><p>${esc(D.ui.permIntro)}</p></div>''')
 line('<h3>${T("Grim Pillars no Atlas", "Grim Pillars in the Atlas")}</h3>',
      '''  <div class="grid g2" style="margin-top:16px">${D.ui.atlasCards.map(([h, b]) => `<div class="panel frame"><h3>${esc(h)}</h3><p style="margin:0">${esc(b)}</p></div>`).join("")}</div>`;''')

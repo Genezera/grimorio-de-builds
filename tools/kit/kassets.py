@@ -292,7 +292,25 @@ orders["uber"] = orders[ORDER[-1]]; alloc["uber"] = alloc[ORDER[-1]]
 QUEST = [[8, 1], [12, 2], [18, 3], [22, 4], [26, 5], [30, 6], [34, 8], [40, 10], [45, 12], [50, 14], [54, 16], [58, 18], [62, 20], [66, 22], [70, 24]]
 kinds = {n[0]: n[3] for n in main_nodes}
 
-A = dict(icons=ICONS, tree=dict(nodes=main_nodes, edges=main_edges, meta={str(k): v for k, v in main_meta.items()}),
+# ------------------------------------------------------------ ícones de bases (progressão por nível no card do slot: rares e bases também aparecem)
+_BASES = json.load(open(os.path.join("dl", "repoe_base_items.json"), encoding="utf-8"))
+_BY_NAME = {}
+for _b in _BASES.values():
+    _n, _dds = _b.get("name"), (_b.get("visual_identity") or {}).get("dds_file")
+    if _n and _dds and "Gem" not in (_b.get("item_class") or ""):
+        _BY_NAME.setdefault(_n, _dds)
+base_icon = {}
+for g in getattr(D, "GEAR", []):
+    for x in g.get("lvls", []):
+        n = x["n"]
+        if n in uniq_icon or n in gem_icon or n in sup_icon or n in base_icon:
+            continue
+        hit = _BY_NAME.get(n) or next((dds for nm, dds in sorted(_BY_NAME.items(), key=lambda p: -len(p[0])) if n.startswith(nm + " ") or n.startswith(nm + ",")), None)
+        if hit:
+            k = icon(hit, 96)
+            if k: base_icon[n] = k
+
+A = dict(icons=ICONS, baseIcon=base_icon, tree=dict(nodes=main_nodes, edges=main_edges, meta={str(k): v for k, v in main_meta.items()}),
          asc=dict(nodes=asc_nodes, edges=asc_edges, meta={str(k): v for k, v in asc_meta.items()}),
          alloc=alloc, notables=notables, passiveIcon={str(k): v for k, v in passive_icons.items()}, gemIcon=gem_icon, metaNotables=[],
          sets=sets_out, supIcon=sup_icon, uniqIcon=uniq_icon, guide=guide, order=orders, quest=QUEST,
