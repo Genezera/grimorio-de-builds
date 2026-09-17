@@ -10,7 +10,7 @@ const server=http.createServer((req,res)=>{
 (async()=>{
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({headless:true,...(process.env.BROWSER_CHANNEL?{channel:process.env.BROWSER_CHANNEL}:{})});
-  let tabs=0,recipes=0;const errors=[],overflow=[];
+  let pages=0,tabs=0,recipes=0;const errors=[],overflow=[];
   try{
     for(const width of [1366,1024,768,390]){
       const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'}),page=await context.newPage();
@@ -18,7 +18,7 @@ const server=http.createServer((req,res)=>{
       await page.route('https://fonts.googleapis.com/**',route=>route.abort());
       await page.route('https://fonts.gstatic.com/**',route=>route.abort());
       for(const file of ['index.html','en.html','silverfist/index.html','silverfist/en.html','oracle/index.html','oracle/en.html']){
-        await page.goto(base+'/'+file);await page.waitForLoadState('domcontentloaded');
+        await page.goto(base+'/'+file);await page.waitForLoadState('domcontentloaded');pages++;
         if(!file.includes('/')){
           assert.equal(await page.locator('.build').count(),2);
           assert.equal(await page.locator('.primary').count(),2);
@@ -96,7 +96,7 @@ const server=http.createServer((req,res)=>{
       const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
       page.on('pageerror',e=>errors.push(e.message));
       for(const build of ['silverfist','oracle']){
-        await page.goto(base+'/'+build+'/en.html');await page.evaluate(()=>setLv(95));
+        await page.goto(base+'/'+build+'/en.html');await page.evaluate(()=>setLv(95));pages++;
         for(const id of await page.evaluate(()=>TABS.map(x=>x[0]))){
           await page.evaluate(id=>guideGo(id),id);
           if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${build} #${id}`);
@@ -107,6 +107,6 @@ const server=http.createServer((req,res)=>{
       await page.close();
     }
     assert.deepEqual(errors,[],'Browser runtime errors');assert.deepEqual(overflow,[],'Horizontal page overflow');
-    console.log(JSON.stringify({pages:16,tabViews:tabs,recipeRoutes:recipes,runtimeErrors:errors.length,horizontalOverflow:overflow.length,checks:'search, deep links, keyboard, persistence, PT/EN, ilvl, weight opt-in, blocked slots, calculator boundaries, level 95 at 320px/1920px'},null,2));
+    console.log(JSON.stringify({pages,tabViews:tabs,recipeRoutes:recipes,runtimeErrors:errors.length,horizontalOverflow:overflow.length,checks:'search, deep links, keyboard, persistence, PT/EN, ilvl, weight opt-in, blocked slots, calculator boundaries, level 95 at 320px/1920px'},null,2));
   }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;server.close();});
