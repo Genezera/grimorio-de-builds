@@ -17,6 +17,8 @@ os.makedirs(OUT + "/assets", exist_ok=True)
 safe = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 DATA_PT = D.build(SF.DATA["quests"])
+
+print("checklist: +%d uniques marcáveis" % common.ensure_own(DATA_PT))
 src = json.load(open("i18n_src.json", encoding="utf-8")); en = {}
 for f in ["i18n/en_1.json", "i18n/en_2.json", "i18n/en_3.json"]:
     en.update(json.load(open(f, encoding="utf-8")))
@@ -24,7 +26,7 @@ MAP = {src[k]: v for k, v in en.items()}
 MAP.update(json.load(open("i18n/en_extra.json", encoding="utf-8")))
 MAP.update(timing.EN_PAIRS); MAP.update(hunting.EN_PAIRS); MAP.update(D.EN_PAIRS)
 SUBS = [(r"(\d),(\d)", r"\1.\2")]
-SKIP = {"ic", "iconUrl", "url", "img", "id", "p", "skill", "sup"}
+SKIP = {"ic", "iconUrl", "url", "img", "id", "p", "skill", "sup", "tab"}
 def tr(s):
     if s in MAP: return MAP[s]
     if " ; " in s: return " ; ".join(tr(x) for x in s.split(" ; "))

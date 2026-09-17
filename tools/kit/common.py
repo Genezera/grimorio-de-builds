@@ -74,3 +74,14 @@ def load_build(bid):
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+def ensure_own(data):
+    """Garante que toda unique do plano tenha caixinha em "Meu personagem" (usado pelo build e pela auditoria)."""
+    own = data["char"]["own"]
+    have = {k for _, k, _ in own} | {lbl for _, _, lbl in own}
+    ordem = {p["id"]: i for i, p in enumerate(data["phases"])}
+    novas = [u for u in sorted(data["uniques"], key=lambda u: (ordem.get(u.get("p"), 99), u["n"])) if u["n"] not in have]
+    for i, u in enumerate(novas):
+        own.insert(i, ["gear", u["n"], u["n"]])
+    return len(novas)
