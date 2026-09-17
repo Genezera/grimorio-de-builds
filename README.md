@@ -4,7 +4,7 @@ Guias interativos de build para Path of Exile 2 — patch 0.5.5, liga Forbidden 
 
 Interactive build guides for Path of Exile 2 — patch 0.5.5, Forbidden Rites league. Each guide goes from level 1 to 100, explains every gem, support, item, unique and passive, and adapts to what you tick in **My character** (level, Spirit, items you already own).
 
-Site: https://genezera.github.io/trilha-silverfist/
+Site: https://genezera.github.io/grimorio-de-builds/
 
 | Página / Page | Conteúdo / Content |
 |---|---|
