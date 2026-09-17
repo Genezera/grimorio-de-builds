@@ -1089,6 +1089,71 @@ html[data-build] .orbLv small{position:static;font-size:.5rem;letter-spacing:.14
 html[data-build] .grid > *,html[data-build] .g2 > *,html[data-build] .g3 > *,html[data-build] .now > *,html[data-build] .spirit > *,html[data-build] .console > *,html[data-build] .craft-layout > *,html[data-build] .charwrap > *,html[data-build] .setup > *{min-width:0}
 html[data-build] .panel,html[data-build] .frame{max-width:100%}
 
+/* Build companion: readable rows instead of a compressed equipment doll. */
+html[data-build] #side{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-width:0;background:linear-gradient(160deg,var(--stone3),var(--ground) 65%);box-shadow:inset 1px 0 var(--edge);isolation:isolate;overflow:hidden}
+#side *{box-sizing:border-box;min-width:0}
+#side button{font-family:inherit;cursor:pointer;color:var(--text)}
+#side .bn-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:24px 22px 18px;flex:none}
+#side .bn-eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:700;color:var(--accent-hi);display:block;margin-bottom:8px}
+#side h2{font-size:23px;line-height:1.2;letter-spacing:-.025em;margin:0}
+#side .bn-close{width:42px;height:42px;flex:0 0 42px;border-radius:50%;border:1px solid var(--edge2);background:var(--ground);font-size:24px;transition:background .2s,transform .2s}
+#side .bn-close:hover{background:var(--accent-g);transform:rotate(6deg)}
+#side .bn-phase{display:flex;gap:14px;align-items:center;margin:0 22px 18px;padding:16px;border:1px solid var(--edge);border-radius:12px;background:radial-gradient(ellipse at top left,var(--accent-g),transparent 80%);flex:none}
+#side .bn-level{display:grid;place-items:center;flex:0 0 48px;border-right:1px solid var(--edge);padding-right:12px;color:var(--accent-hi)}
+#side .bn-level small{font-size:9px;letter-spacing:.1em}#side .bn-level b{font-size:30px;line-height:1.2;font-variant-numeric:tabular-nums}
+#side .bn-phase>div>b{display:block;font-size:14px;line-height:1.4;overflow-wrap:anywhere}#side .bn-phase>div>small{display:block;font-size:11px;color:var(--mute);line-height:1.6;margin-top:4px}
+#side .bn-tabs{display:grid;grid-template-columns:.8fr 1.35fr .8fr;margin:0 22px;padding:4px;gap:4px;border:1px solid var(--edge);border-radius:10px;background:var(--ground);flex:none}
+#side .bn-tabs button{min-height:42px;border:0;border-radius:6px;background:transparent;color:var(--mute);font-size:12px;font-weight:650;transition:background .25s,color .25s,box-shadow .25s}
+#side .bn-tabs [aria-selected="true"]{background:var(--accent-g);color:var(--accent-hi);box-shadow:inset 0 -2px var(--accent)}
+#side .bn-scroll{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;scroll-padding:18px}
+#side .bn-content{padding:22px;display:grid;gap:16px;animation:bn-reveal .3s ease-out both}
+#side h3{font-family:inherit;font-size:16px;line-height:1.45;margin:0;color:var(--text);letter-spacing:-.01em;overflow-wrap:anywhere}
+#side p{font-size:12px;line-height:1.7;color:var(--mute);margin:7px 0 0}
+#side .bn-focus{padding:18px;border:1px solid var(--edge2);border-radius:12px;background:linear-gradient(140deg,var(--accent-g),transparent);position:relative}
+#side .bn-focus:before{content:"";position:absolute;top:18px;bottom:18px;left:-1px;width:2px;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+#side .bn-focus h3{font-size:20px}#side .bn-focus .bn-link{margin-top:16px}
+#side .bn-link{display:flex;width:100%;justify-content:space-between;gap:12px;text-align:left;align-items:center;padding:12px 14px;min-height:44px;background:var(--ground);border:1px solid var(--edge2);border-radius:8px;font-size:12px;line-height:1.5;font-weight:650}
+#side .bn-link>span{color:var(--accent-hi);flex:none}
+#side .bn-priorities,#side .bn-items,#side .bn-skills,#side .bn-milestones,#side .bn-shortcuts{display:grid;gap:10px}
+#side .bn-priority{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;text-align:left;padding:16px 14px;border:1px solid var(--edge);border-radius:10px;background:var(--stone)}
+#side .bn-number{font-size:13px;font-variant-numeric:tabular-nums;color:var(--accent-hi);padding-top:2px}
+#side .bn-priority small{font-size:10px;color:var(--mute);display:block;margin-bottom:6px}#side .bn-priority.bad small{color:#ffa99b}
+#side .bn-priority b{font-size:13px;line-height:1.6;display:block;overflow-wrap:anywhere}#side .bn-priority-more{display:block;font-size:11px;color:var(--accent-hi);margin-top:10px}
+#side .bn-clear{font-size:13px;line-height:1.7;padding:16px;border:1px solid var(--edge);border-radius:10px;color:var(--accent-hi)}
+#side .bn-milestones label{display:flex;align-items:flex-start;gap:12px;padding:12px;border-bottom:1px solid var(--edge);cursor:pointer}
+#side .bn-milestones input{width:20px;height:20px;flex:0 0 20px;margin:3px 0;accent-color:var(--accent)}
+#side .bn-milestones .completed b{color:var(--mute);text-decoration:line-through}
+#side .bn-milestones small{display:block;color:var(--accent-hi);font-size:11px;margin-bottom:5px}#side .bn-milestones b{display:block;font-size:12px;font-weight:500;line-height:1.65;overflow-wrap:anywhere}
+#side .bn-item{display:grid;width:100%;grid-template-columns:64px minmax(0,1fr);align-items:center;gap:16px;padding:14px;text-align:left;border:1px solid var(--edge);border-radius:12px;background:var(--stone);min-height:108px}
+#side .bn-art{width:64px;height:80px;display:grid;place-items:center;background:radial-gradient(ellipse,var(--accent-g),transparent 75%);border:1px solid var(--edge);border-radius:8px;padding:7px}
+#side .bn-art img{display:block;width:100%;height:100%;max-height:64px;object-fit:contain;filter:drop-shadow(0 3px 8px #000)}
+#side .bn-empty{font-size:26px;color:var(--faint)}
+#side .bn-item-copy{display:grid;gap:6px;overflow-wrap:anywhere}
+#side .bn-item-copy small{font-size:10px;color:var(--mute);line-height:1.5}#side .bn-item-copy b{font-size:14px;line-height:1.5;color:var(--text)}
+#side .unique .bn-item-copy b{color:#f4b478}#side .bn-item-copy>span{color:var(--accent-hi);font-size:11px;line-height:1.5}
+#side .bn-skill{border:1px solid var(--edge);border-radius:12px;background:var(--stone);overflow:hidden}
+#side .bn-skill .bn-item{border:0;border-radius:0;background:transparent;min-height:92px;grid-template-columns:48px minmax(0,1fr)}
+#side .bn-skill .bn-art{width:48px;height:48px;padding:4px}
+#side .bn-supports{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0 14px 16px;margin:0}
+#side .bn-supports li{display:flex;align-items:center;gap:6px;border:1px solid var(--edge);border-radius:6px;padding:5px 7px;font-size:10px;line-height:1.5;color:var(--mute);max-width:100%;overflow-wrap:anywhere}
+#side .bn-supports img{width:18px;height:18px;object-fit:contain;flex:none}
+#side .bn-footer{display:flex;align-items:center;gap:8px;flex:none;padding:14px 22px max(14px,env(safe-area-inset-bottom));border-top:1px solid var(--edge);font-size:10px;line-height:1.5;color:var(--mute)}
+#side .bn-live{width:5px;height:5px;flex:none;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent)}
+#side .bn-item,#side .bn-link,#side .bn-priority{transition:border-color .2s,background .2s,box-shadow .2s}
+@media(hover:hover){#side .bn-item:hover,#side .bn-link:hover,#side .bn-priority:hover{border-color:var(--accent);background:var(--accent-g);box-shadow:0 5px 20px -12px var(--accent)}}
+#side .bn-expand{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;gap:20px;padding:24px 6px;border:0;background:transparent;color:var(--accent-hi)}
+#side .bn-vertical{writing-mode:vertical-rl;font-size:12px;letter-spacing:.1em}
+@media(min-width:1440px){html[data-build] .app{grid-template-columns:84px minmax(0,1fr) 380px}html[data-build] .app.side-min{grid-template-columns:84px minmax(0,1fr) 58px}html[data-build] #side{display:flex;flex-direction:column;position:sticky;top:0;height:100dvh}html[data-build] #sbFab{display:none}}
+html[data-build] #sbShade:not([hidden]){z-index:80;background:rgba(0,0,0,.7);backdrop-filter:blur(5px);animation:bn-fade .25s ease-out}
+@media(max-width:1439px){html[data-build] #side.drawer{display:flex;flex-direction:column;position:fixed;inset:0 0 0 auto;width:min(480px,100%);height:100dvh;z-index:81;animation:bn-enter .35s cubic-bezier(.2,.8,.2,1);border-left:1px solid var(--edge2);box-shadow:-20px 0 80px #0008}html[data-build] #sbFab{z-index:75;padding:10px 16px;gap:12px;min-height:52px;font-family:system-ui,sans-serif;font-size:13px;line-height:1.3}#sbFab small{display:block;font-size:10px;color:var(--mute);text-align:left;margin-top:3px}#sbFab .bn-fab-icon{font-size:23px;color:var(--accent-hi)}.bn-modal #sbFab{visibility:hidden}}
+@media(max-width:540px){#side .bn-header{padding:16px 18px 12px}#side h2{font-size:22px}#side .bn-phase{margin:0 18px 12px;padding:12px}#side .bn-tabs{margin:0 18px}#side .bn-content{padding:18px}#side .bn-footer{padding-left:18px;padding-right:18px}html[data-build] #side.drawer{border:0}#side .bn-eyebrow{font-size:9px;margin-bottom:5px}}
+@media(max-height:500px){#side .bn-header{padding:10px 18px}#side .bn-header .bn-eyebrow,#side .bn-phase,#side .bn-footer{display:none}#side h2{font-size:19px}}
+@keyframes bn-reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes bn-enter{from{opacity:.5;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes bn-fade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){#side *,html[data-build] #side.drawer,html[data-build] #sbShade{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{html[data-build] #side,html[data-build] #sbFab,html[data-build] #sbShade{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -1308,88 +1373,6 @@ function gemGrid(p, useLv, detailed) {
 const setItems = pid => adaptItems(pid, setItemsRaw(pid));
 const modeList = p => S.mode === "cheap" ? p.cheap : p.full;
 function uniquesIn(text) { return Object.keys(A.uniqIcon).filter(n => text.includes(n) && A.uniqIcon[n]); }
-
-/* ------------------------------------------------ side panel */
-S.sideMin = store.get("sideMin", false);
-S.sideOpen = store.get("sideOpen", { steps: true, gear: true, skills: false, tree: false, spirit: false, buy: false });
-function sideSec(key, title, count, inner) {
-  return `<details class="sb" data-sb="${key}" ${S.sideOpen[key] ? "open" : ""}><summary>${title}${count != null ? ` <span class="cnt">${count}</span>` : ""}</summary><div class="sb-in">${inner}</div></details>`;
-}
-function renderSide() {
-  const app = document.querySelector(".app");
-  const drawer = $("#side").classList.contains("drawer");
-  app.classList.toggle("side-min", !!S.sideMin && !drawer);
-  const p = curPhase(); const pa = adaptPhase(p); const items = setItems(p.id);
-  const find = re => items.find(i => re.test(i.slot));
-  const rings = items.filter(i => /Anel/.test(i.slot));
-  const cell = (it, cls, lab) => `<div class="cell ${cls} ${it && it.u ? "u" : ""} ${it ? "" : "empty"}" data-gotab="gear" title="${it ? esc(it.n) + (it.price != null ? " · " + fmtPrice(it.price) : "") : esc(lab)}">${it && ic(it.ic) ? `<img src="${ic(it.ic)}" alt="${esc(it.n)}">` : ""}<span>${lab}</span></div>`;
-  const nt = A.notables[p.id]; const ts = treeState(p.id, true);
-  const prog = Math.max(0, Math.min(100, Math.round(((S.lv - p.lv[0]) / Math.max(1, p.lv[1] - p.lv[0])) * 100)));
-  const carryGem = pa.gems.find(g => /CARRY/i.test(g.role)) || pa.gems[0];
-  const nextMs = msList.filter(m => m.lv >= S.lv).slice(0, 4);
-  const rank = g => g.sp === "core" ? g.pr : g.sp === "free" ? 50 : g.sp === "opt" ? 100 + g.pr : 40;
-  const gems = pa.gems.filter(g => !(g.until && S.lv >= g.until)).slice().sort((a, b) => rank(a) - rank(b));
-  const uniqs = items.filter(i => i.u);
-  const setCost = uniqs.reduce((a, i) => a + (i.price || 0), 0);
-  const c = spCalc(); const cls = c.free < 0 ? "bad" : c.pct > .9 ? "warn" : "";
-  const newN = ts.notables.filter(n => n.new && n.k !== 3);
-  const phaseIdx = D.phases.indexOf(p);
-  const buys = (D.buyOrder || []).filter(b => !uniquesIn(b.item).length || uniquesIn(b.item).some(n => { const u = D.uniques.find(x => x.n === n); return !u || PH_ORDER.indexOf(u.p) >= phaseIdx - 1; })).slice(0, 5);
-  const next = D.phases[phaseIdx + 1];
-  const weapon = items.find(i => /Arma \(Set 1/.test(i.slot));
-  const min = !!S.sideMin && !drawer;
-  $("#side").innerHTML = `
-    <div class="sb-head">
-      <button class="sb-btn" type="button" id="sbToggle" aria-expanded="${!min}" title="${drawer ? "Fechar" : min ? "Expandir painel" : "Minimizar painel"}">${drawer ? "×" : min ? "‹" : "›"}</button>
-      <h2>Seu build agora</h2>
-      <div class="sb-mini"><span class="lvb">${S.lv}</span>${carryGem && gemImg(carryGem.skill) ? `<img src="${gemImg(carryGem.skill)}" alt="" title="${esc(carryGem.skill)}" data-gotab="skills">` : ""}${weapon && ic(weapon.ic) ? `<img src="${ic(weapon.ic)}" alt="" title="${esc(weapon.n)}" data-gotab="gear">` : ""}</div>
-    </div>
-    <div class="sb-body">
-      <div class="sb-hero frame">
-        <div class="row"><span>Nv ${S.lv} · ${S.mode === "cheap" ? "modo barato" : "modo completo"}</span><span>${prog}% da fase</span></div>
-        <div class="ph">${esc(p.name)} <small class="label">· ${esc(p.tag)}</small></div>
-        <div class="sb-prog"><i style="width:${prog}%"></i></div>
-        ${pa.skeletons ? `<div class="sb-skel" data-gotab="skills" title="${esc(pa.skeletons.note)}">Esqueletos: <b>${esc(pa.skeletons.n)}</b> ${esc(pa.skeletons.types.join(" · ").slice(0, 60))}</div>` : ""}${pa.spiritTotal ? `<div class="sb-skel" data-gotab="skills">Spirit: <b>≈ ${pa.spiritUsed}/${pa.spiritTotal}</b> ${T("(companions estimados)", "(estimated companions)")}</div>` : ""}
-        <div class="sb-carry">${carryGem && gemImg(carryGem.skill) ? `<img src="${gemImg(carryGem.skill)}" alt="">` : "<span></span>"}<div><b>${esc(p.carry)}</b><small>${next ? `Próxima fase: ${esc(next.name)} (Nv ${next.lv[0]})` : "Fase final"}</small></div></div>
-      </div>
-      ${(() => { const rr = charRecs().recs.filter(x => x.lvl !== "ok").slice(0, 4); if (S.sideOpen.recs === undefined) S.sideOpen.recs = true; return sideSec("recs", T("Para você agora", "For you now"), rr.length, (rr.length ? rr.map(x => `<div class="rec ${x.lvl} mini" data-gotab="${x.tab && x.tab !== "meu" ? x.tab : "meu"}"><span class="ri">${{ bad: "✖", warn: "!", tip: "➜", ok: "✔" }[x.lvl]}</span><div><b>${esc(x.t)}</b></div></div>`).join("") : `<span class="label">${T("Nada pendente pelo que você marcou.", "Nothing pending from what you ticked.")}</span>`) + `<button class="btn" type="button" data-gotab="meu">${T("Marcar o que eu tenho", "Tick what I have")}</button>`); })()}
-      ${sideSec("steps", "Próximos passos", nextMs.length, nextMs.map(m => { const k = "ms:" + m.lv; return `<label class="sb-step ${S.done[k] ? "done" : ""}"><input type="checkbox" data-key="${k}" ${S.done[k] ? "checked" : ""}><span><b>Nv ${m.lv}</b> · ${esc(m.t)}</span></label>`; }).join("") || '<span class="label">Você chegou ao topo.</span>')}
-      ${sideSec("gear", "Equipamento", uniqs.length ? `${uniqs.length} únicos · ${fmtPrice(setCost)}` : null, `
-        <div class="doll">
-          ${cell(find(/Arma \(Set 1/), "c-mh", "Arma")}${cell(find(/Capacete/), "c-helm", "Capacete")}${cell(find(/Offhand \(Set 1/), "c-oh", "Offhand")}
-          ${cell(find(/Body/), "c-body", "Body")}${cell(rings[0], "c-rl", "Anel")}${cell(find(/Cinto/), "c-belt", "Cinto")}${cell(find(/Amuleto/), "c-amu", "Amuleto")}
-          ${cell(find(/Luvas/), "c-glov", "Luvas")}${cell(find(/Botas/), "c-boot", "Botas")}${cell(rings[1], "c-rr", "Anel")}
-        </div>
-        <span class="label">${A.sets[p.id] ? "Set principal · modo " + (S.mode === "cheap" ? "barato" : "completo") : "Set de leveling"}</span>
-        <ul class="sb-list">${uniqs.map(i => `<li data-gotab="uniques"><img src="${ic(i.ic) || ""}" alt=""><div><b class="u">${esc(i.n)}</b><small>${esc(i.slot)}</small></div><span class="px">${i.price != null ? fmtPrice(i.price) : ""}</span></li>`).join("")}</ul>`)}
-      ${sideSec("skills", "Barra de skills", gems.length, gems.map(g => { const im = gemImg(g.skill); return `<div class="sb-gem" data-gotab="skills" title="${esc(g.why || "")}"><img src="${im || ""}" alt=""><div><b>${esc(g.skill)}</b><small class="label" style="font-size:.7rem">${g.sp === "core" ? `Spirit #${g.pr} · ` : g.sp === "opt" ? "Se sobrar Spirit · " : g.sp === "free" ? "Sem Spirit · " : ""}${esc(g.role)}</small><div class="ss">${g.sup.map(sp => supImg(sp) ? `<img src="${supImg(sp)}" alt="${esc(sp)}" title="${esc(sp)}">` : "").join("")}</div></div></div>`; }).join(""))}
-      ${sideSec("tree", "Passivas", `${ts.m.length} pontos`, `
-        ${ts.nextList.length ? `<span class="label">Próximos pontos</span><ol class="nextpts" style="margin:0;padding:0;list-style:none">${ts.nextList.slice(0, 4).map((n, k) => `<li data-gotree="${n.id}"><span class="no">${k + 1}</span><span class="nb ${n.k ? "big" : ""}">${esc(n.n)}</span></li>`).join("")}</ol>` : ""}
-        <span style="color:var(--mute);font-size:.88rem">${newN.length ? `${newN.length} notables novos nesta fase:` : "Nenhum notable novo nesta fase."}</span>
-        <ul class="sb-list">${newN.slice(0, 8).map(n => `<li data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-radius:50%"><div><b>${esc(n.n)}</b><small>${esc((n.s || []).join(" · ").slice(0, 80))}</small></div><span></span></li>`).join("")}</ul>
-        <button class="btn" type="button" data-gotab="arvore">Abrir árvore desta fase</button>`)}
-      ${sideSec("spirit", "Spirit", `${Math.round(c.pct * 100)}%`, `
-        <div class="sb-spirit"><div class="sbar"><i class="${cls}" style="width:${Math.min(100, c.pct * 100)}%"></i></div></div>
-        <span style="font-size:.88rem;color:var(--mute)">${c.used.toFixed(0)} de ${esc(S.sp.total)} reservados · ${c.free >= 0 ? `sobram ${c.free.toFixed(0)}` : `faltam ${(-c.free).toFixed(0)}`}</span>
-        <button class="btn" type="button" data-gotab="zoo">Abrir planner de Spirit</button>`)}
-      ${sideSec("buy", "Comprar a seguir", null, `<ul class="sb-list">${buys.map(b => { const u = uniquesIn(b.item)[0]; return `<li data-gotab="gear"><img src="${u ? uniqImg(u) : ""}" alt=""><div><b>${esc(b.item)}</b><small>${esc(b.phase)} · ${esc(b.impact)}</small></div><span class="px">${esc(b.cost)}</span></li>`; }).join("")}</ul>`)}
-    </div>`;
-  const fab = $("#sbFab");
-  if (fab) fab.innerHTML = `${carryGem && gemImg(carryGem.skill) ? `<img src="${gemImg(carryGem.skill)}" alt="">` : ""}Seu build · Nv ${S.lv}`;
-}
-function openDrawer(open) {
-  $("#side").classList.toggle("drawer", open); $("#sbShade").hidden = !open; renderSide();
-}
-document.addEventListener("toggle", e => { const d = e.target; if (d.matches && d.matches("details.sb")) { S.sideOpen[d.dataset.sb] = d.open; store.set("sideOpen", S.sideOpen); } }, true);
-document.addEventListener("click", e => {
-  if (e.target.closest("#sbToggle")) {
-    if ($("#side").classList.contains("drawer")) { openDrawer(false); return; }
-    S.sideMin = !S.sideMin; store.set("sideMin", S.sideMin); renderSide(); if (typeof TV !== "undefined" && TV) setTimeout(() => TV.resize(), 80); return;
-  }
-  if (e.target.closest("#sbFab")) { openDrawer(true); return; }
-  if (e.target.closest("#sbShade")) { openDrawer(false); return; }
-  if (e.target.closest("#side [data-gotab], #side [data-gotree]") && $("#side").classList.contains("drawer")) setTimeout(() => openDrawer(false), 0);
-});
 
 /* ------------------------------------------------ views */
 function vAgora() {
@@ -2288,6 +2271,7 @@ function wisps() {
 <script src="../shared/weights.js"></script>
 <script src="../shared/guide.js"></script>
 <script src="../shared/poe2.js"></script>
+<script src="../shared/build-now.js"></script>
 <script>
 /* ------------------------------------------------ boot */
 $("#league").textContent = "Liga " + D.league + " · 0.5.5";

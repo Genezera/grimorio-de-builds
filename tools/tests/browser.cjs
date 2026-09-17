@@ -80,7 +80,7 @@ const server=http.createServer((req,res)=>{
           await page.locator('[data-cview="recipes"]').click();
           // Roving tab index and arrow navigation.
           await page.locator('[data-tab="craft"]').focus();await page.keyboard.press('ArrowRight');
-          assert.equal(await page.locator('[role="tab"][aria-selected="true"]').count(),1);
+          assert.equal(await page.locator('#tabs [role="tab"][aria-selected="true"]').count(),1);
           await page.locator('[data-tab="craft"]').click();
         }
         if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${file}`);

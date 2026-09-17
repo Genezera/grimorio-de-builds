@@ -79,6 +79,7 @@ python -m unittest discover -s tools/tests -v
 # Com Playwright disponível no Node (e o navegador instalado):
 node tools/tests/browser.cjs
 node tools/tests/recipes.cjs  # ordem de finalização das receitas PT/EN
+node tools/tests/build-now.cjs # painel adaptável, teclado, rolagem e movimento reduzido
 # Auditoria de sobreposição (todas as abas, 10 tamanhos de tela, PT/EN):
 node tools/tests/overlap.cjs
 ```
