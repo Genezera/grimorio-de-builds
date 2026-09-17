@@ -43,11 +43,19 @@ function adaptItems(pid, items) {
   if (!adaptOn() || pid !== curPhase().id) return items;
   const out = clone(items); const ringSlot = s => /Anel|Ring/i.test(s); const pool = []; const cur = PH_ORDER.indexOf(pid);
   for (const ph of PH_ORDER) for (const m of [S.mode, S.mode === "cheap" ? "full" : "cheap"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u) pool.push(Object.assign({}, it, { _d: Math.abs(PH_ORDER.indexOf(ph) - cur) }));
+  /* uniques da aba Uniques que você marcou também entram no set recomendado (elas não estão nos sets do planner) */
+  const SLOT_ALIAS = { "Arco": "Arma", "Bow": "Arma", "Aljava": "Offhand", "Quiver": "Offhand", "Talisman (Set 2)": "Arma (Set 2)", "Anel": "Anel", "Ring": "Anel" };
+  const slotKey = t => { const x = String(t || ""); const al = SLOT_ALIAS[x] || x; return al.replace(/\s*\(.*/, "").replace(/\s+[ED]$/, "").toLowerCase(); };
+  for (const u of D.uniques || []) {
+    if (!hasUse(u.n) || pool.some(c => c.n === u.n)) continue;
+    const d = Math.abs(PH_ORDER.indexOf(u.p) - cur);
+    pool.push({ n: u.n, u: 1, ic: (A.uniqIcon || {})[u.n], x: (u.mods || []).slice(0, 6).join(" ; "), r: [], rs: 0, note: "", price: u.price, slot: u.slot, _d: isNaN(d) ? 9 : d });
+  }
   pool.sort((x, y) => x._d - y._d);
   for (let i = 0; i < out.length; i++) {
     const it = out[i];
     if (it.u && hasUse(it.n)) { it.have = 1; continue; }
-    const cand = pool.find(c => (c.slot === it.slot || (ringSlot(c.slot) && ringSlot(it.slot))) && hasUse(c.n));
+    const cand = pool.find(c => (c.slot === it.slot || slotKey(c.slot) === slotKey(it.slot) || (ringSlot(c.slot) && ringSlot(it.slot))) && hasUse(c.n));
     if (cand) { out[i] = Object.assign(clone(cand), { slot: it.slot, have: 1, swapped: it.n }); continue; }
     if (it.u) it.miss = 1;
   }

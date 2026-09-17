@@ -119,6 +119,7 @@ nav.tabs button{border:1px solid transparent;background:transparent;color:var(--
 nav.tabs button:hover{color:var(--gild-hi)}
 nav.tabs button[aria-selected=true]{color:var(--gild-hi);border-color:var(--edge2);background:linear-gradient(180deg,rgba(114,146,202,.16),rgba(114,146,202,.03));box-shadow:inset 0 -2px 0 var(--gild)}
 nav.tabs .count{font-family:var(--mono);font-size:.72rem;color:var(--wisp);margin-left:5px}
+.tabgroup{align-self:center;margin:0 5px 0 12px;color:var(--faint);font:700 .68rem/1 var(--ui);letter-spacing:.09em;text-transform:uppercase}.tabgroup:first-child{margin-left:0}@media(max-width:720px){nav.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabgroup{position:sticky;left:0;background:#08090d;padding:8px 5px;margin-left:8px}nav.tabs button{min-height:42px}}
 
 section.view{display:none;padding-top:24px;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
 section.view.on{display:block}
@@ -1439,7 +1440,8 @@ function setMode(m) {
 }
 function buildTabs() {
   const nav = $("#tabs");
-  nav.innerHTML = TABS.map(([id, l]) => `<button role="tab" type="button" data-tab="${id}" aria-selected="${S.tab === id}">${l}${id === "quests" ? '<span class="count" id="qcount"></span>' : ""}</button>`).join("");
+  const groupAt = {}; (D.tabGroups || []).forEach(([label, ids]) => ids.length && (groupAt[ids[0]] = label));
+  nav.innerHTML = TABS.map(([id, l]) => `${groupAt[id] ? `<span class="tabgroup" role="presentation">${esc(groupAt[id])}</span>` : ""}<button role="tab" type="button" data-tab="${id}" aria-selected="${S.tab === id}">${l}${id === "quests" ? '<span class="count" id="qcount"></span>' : ""}</button>`).join("");
   nav.onclick = e => { const b = e.target.closest("button"); if (b) { S.tab = b.dataset.tab; store.set("tab", S.tab); showTab(); } };
 }
 function showTab() {
@@ -1820,7 +1822,7 @@ function vGear() {
   <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot by slot · budget to full</h2><p>${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Budget</b>" : "<b style='color:#E18C47'>Full</b>"} mode highlights the right row. Prices change fast, so we use ranges.</p></div></div>
   <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
     <div class="hd"><b>${esc(g.slot)}</b><span class="thumbs">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}">`).join("")}</span></div>
-    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
+    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n) || ic((A.baseIcon || {})[x.n]); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
     <div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Budget</span><span>${esc(g.cheap)}</span></div>
     <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Value</span><span>${esc(g.value)}</span></div>
     <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Full</span><span>${esc(g.full)}</span></div>
@@ -1895,12 +1897,13 @@ S.uf = { ph: "todas", cat: "All", tier: "All", sort: "fase" };
 function uniqueCard(u, highlight) {
   const im = uniqImg(u.n); const cur = curPhase();
   const reached = PH_ORDER.indexOf(u.p) <= PH_ORDER.indexOf(cur.id);
+  const owned = typeof own === "function" && own(u.n);
   const tierChip = u.tier === "Cheap" ? "wisp" : u.tier === "Value" ? "gold" : "unique";
   return `<article class="tt unique ucard ${highlight && reached && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""}">
     <div class="th">${esc(u.n)}<small>${esc(u.base || "")} · ${esc(u.slot)}</small></div>
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(u.n)}">` : ""}</div>
       <div class="mods">${(u.mods || []).map(m => `<span>${esc(m)}</span>`).join("") || '<span class="none">Variable mods.</span>'}</div></div>
-    <div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% of zoos</span>` : ""}<span class="chip">lv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
+    ${owned ? `<div class="havebadge">✓ ${T("Marcado em Meu personagem", "Marked in My character")}</div>` : ""}<div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% of zoos</span>` : ""}<span class="chip">lv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
     <div class="txt"><div><b>Why</b>${esc(u.why)}</div>${u.how ? `<div><b>How</b>${esc(u.how)}</div>` : ""}<div><b>Price/versions</b>${esc(u.rf)}</div>${u.alt ? `<div><b>Without it</b>${esc(u.alt)}</div>` : ""}</div>
   </article>`;
 }
@@ -2080,11 +2083,19 @@ function adaptItems(pid, items) {
   if (!adaptOn() || pid !== curPhase().id) return items;
   const out = clone(items); const ringSlot = s => /Anel|Ring/i.test(s); const pool = []; const cur = PH_ORDER.indexOf(pid);
   for (const ph of PH_ORDER) for (const m of [S.mode, S.mode === "cheap" ? "full" : "cheap"]) for (const it of (A.sets[ph] || {})[m] || []) if (it.u) pool.push(Object.assign({}, it, { _d: Math.abs(PH_ORDER.indexOf(ph) - cur) }));
+  /* uniques da aba Uniques que você marcou também entram no set recomendado (elas não estão nos sets do planner) */
+  const SLOT_ALIAS = { "Arco": "Arma", "Bow": "Arma", "Aljava": "Offhand", "Quiver": "Offhand", "Talisman (Set 2)": "Arma (Set 2)", "Anel": "Anel", "Ring": "Anel" };
+  const slotKey = t => { const x = String(t || ""); const al = SLOT_ALIAS[x] || x; return al.replace(/\s*\(.*/, "").replace(/\s+[ED]$/, "").toLowerCase(); };
+  for (const u of D.uniques || []) {
+    if (!hasUse(u.n) || pool.some(c => c.n === u.n)) continue;
+    const d = Math.abs(PH_ORDER.indexOf(u.p) - cur);
+    pool.push({ n: u.n, u: 1, ic: (A.uniqIcon || {})[u.n], x: (u.mods || []).slice(0, 6).join(" ; "), r: [], rs: 0, note: "", price: u.price, slot: u.slot, _d: isNaN(d) ? 9 : d });
+  }
   pool.sort((x, y) => x._d - y._d);
   for (let i = 0; i < out.length; i++) {
     const it = out[i];
     if (it.u && hasUse(it.n)) { it.have = 1; continue; }
-    const cand = pool.find(c => (c.slot === it.slot || (ringSlot(c.slot) && ringSlot(it.slot))) && hasUse(c.n));
+    const cand = pool.find(c => (c.slot === it.slot || slotKey(c.slot) === slotKey(it.slot) || (ringSlot(c.slot) && ringSlot(it.slot))) && hasUse(c.n));
     if (cand) { out[i] = Object.assign(clone(cand), { slot: it.slot, have: 1, swapped: it.n }); continue; }
     if (it.u) it.miss = 1;
   }
