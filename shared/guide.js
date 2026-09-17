@@ -62,7 +62,8 @@ function buildTabs() {
     if(e.key==='End') next=list.length-1;
     if(next!==undefined){e.preventDefault();guideGo(list[next].dataset.tab);list[next].focus();}
   };
-  $('#navGroups').innerHTML=GUIDE_GROUPS.map(([label],i)=>`<button type="button" data-group="${i}" aria-pressed="false">${label}</button>`).join('');
+  const GUIDE_SHORT=[T('Jornada','Journey'),T('Montar','Setup'),T('Dominar','Master'),T('Ajuda','Help')];
+  $('#navGroups').innerHTML=GUIDE_GROUPS.map(([label],i)=>`<button type="button" data-group="${i}" aria-pressed="false" aria-label="${label}"><span class="ng-long">${label}</span><span class="ng-short" aria-hidden="true">${GUIDE_SHORT[i]||label}</span></button>`).join('');
   $('#navGroups').onclick=e=>{const b=e.target.closest('[data-group]');if(b){const g=GUIDE_GROUPS[+b.dataset.group];guideGo(g[1].find(id=>VIEWS[id]));}};
   document.querySelectorAll('section.view').forEach(el=>{el.setAttribute('role','tabpanel');el.setAttribute('aria-labelledby','tab-'+el.id.slice(2));el.tabIndex=0;});
   $('#guideTools').innerHTML=`<div class="guide-search"><label class="sr-only" for="guideSearch">${T('Buscar no guia','Search the guide')}</label><input id="guideSearch" type="search" placeholder="${T('Buscar item, skill ou dúvida…','Search items, skills or questions…')}" autocomplete="off" aria-controls="guideResults" aria-expanded="false"></div><div class="guide-tools-actions"><button type="button" id="guidePrint" title="${T('Imprimir a seção aberta','Print the open section')}">${T('Imprimir','Print')}</button><button type="button" id="guideLink" title="${T('Copiar link desta seção','Copy this section’s link')}">${T('Link','Link')}</button></div><div class="search-results" id="guideResults" hidden></div>`;
@@ -113,3 +114,14 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#guideResults').hidden=true;$('#guideSearch').setAttribute('aria-expanded','false');if(document.activeElement.closest('#guideResults'))$('#guideSearch').focus();}if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();$('#guideSearch').focus();}});
 addEventListener('popstate',()=>{const id=location.hash.slice(1);if(VIEWS[id])guideGo(id,false);});
 addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(VIEWS[id]&&S.tab!==id)guideGo(id,false);});
+
+/* Tab switch while scrolled down: bring the start of the new content just below the sticky header (phones and tablets included). */
+document.addEventListener('click',e=>{
+  if(!e.target.closest('#tabs [data-tab]'))return;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const stuck=document.querySelector('.stuck'),anchor=document.querySelector('#readingGuide')||document.querySelector('.view.on');
+    if(!stuck||!anchor)return;
+    const bottom=stuck.getBoundingClientRect().bottom,top=anchor.getBoundingClientRect().top;
+    if(top<bottom+4)window.scrollBy({top:top-bottom-12,behavior:'auto'});
+  }));
+});

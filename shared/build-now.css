@@ -62,3 +62,5 @@ html[data-build] #sbShade:not([hidden]){z-index:80;background:rgba(0,0,0,.7);bac
 @keyframes bn-fade{from{opacity:0}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){#side *,html[data-build] #side.drawer,html[data-build] #sbShade{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{html[data-build] #side,html[data-build] #sbFab,html[data-build] #sbShade{display:none!important}}
+html[data-build] .sb-fab.sb-fab-away,.sb-fab.sb-fab-away{opacity:0;transform:translateY(16px);pointer-events:none}
+.sb-fab{transition:opacity .25s ease,transform .25s ease}

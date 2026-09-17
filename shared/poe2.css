@@ -92,6 +92,18 @@ html[data-build="smith"]{
   --scene-tint:rgba(40,16,4,.55);
 }
 
+html[data-build="martial"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#05070b; --ground2:#080b11; --stone:#0d1219; --stone2:#121822; --stone3:#1a2230;
+  --edge:#233044; --edge2:#3d5270;
+  --gild:#e0b25c; --gild-hi:#f7deaa; --gild-lo:#6e5530; --gild-g:rgba(224,178,92,.13);
+  --accent:#4cc3ff; --accent-hi:#b3e6ff; --accent-g:rgba(76,195,255,.16);
+  --accent2:#ffa62b; --accent2-hi:#ffd28f; --accent2-g:rgba(255,166,43,.16);
+  --wisp:#8fe3ff; --wisp-g:rgba(143,227,255,.14);
+  --text:#dde5ee; --mute:#9eabbb; --faint:#687587;
+  --scene-tint:rgba(6,18,34,.56);
+}
+
 /* ---------- base */
 html[data-build]{scroll-padding-top:190px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html[data-build] body{font-family:var(--body);font-size:clamp(15.5px,.36vw + 14px,18px);line-height:1.62;color:var(--text);background:var(--ground);overflow-x:hidden}
@@ -521,7 +533,7 @@ html[data-build] .bst > *:last-child{min-width:0;overflow-wrap:anywhere}
 /* ---------- audit fixes: level orb, card art on phones, dense trail */
 html[data-build] .orbLv{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:clamp(84px,6.4vw,98px);height:clamp(84px,6.4vw,98px);flex:none}
 html[data-build] .orbLv b{font-size:clamp(1.7rem,1.3vw + 1rem,2.3rem);line-height:1}
-html[data-build] .orbLv small{position:static;font-size:.5rem;letter-spacing:.14em;line-height:1}
+html[data-build] .orbLv small{position:static;font-size:10px;letter-spacing:.12em;line-height:1}
 @media (max-width:700px){
   html[data-build] .ucard .body{grid-template-columns:72px minmax(0,1fr)}
   html[data-build] .ucard .art{width:72px;height:92px}
@@ -541,3 +553,35 @@ html[data-build] .orbLv small{position:static;font-size:.5rem;letter-spacing:.14
 /* grid items may shrink below their content (wide tables scroll inside instead of widening the page) */
 html[data-build] .grid > *,html[data-build] .g2 > *,html[data-build] .g3 > *,html[data-build] .now > *,html[data-build] .spirit > *,html[data-build] .console > *,html[data-build] .craft-layout > *,html[data-build] .charwrap > *,html[data-build] .setup > *{min-width:0}
 html[data-build] .panel,html[data-build] .frame{max-width:100%}
+
+/* ícones em data URI são recortados sem margem (proporção variável): nunca esticar */
+img[src^="data:image"]{object-fit:contain}
+
+/* celular/tablet: nomes das barras do meta quebram linha em vez de cortar; botão × do zoo com área de toque */
+html[data-build] .bars .nm span{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+html[data-build] .zoo .x{min-width:36px;min-height:36px}
+
+/* celular: o seletor de fase ocupa a largura inteira do card (antes cortava o nome da fase) */
+@media (max-width:480px){
+  html[data-build] .lvrow{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"orb label" "orb ph" "orb tg" "step step" "sel sel";row-gap:6px}
+  html[data-build] .lvrow .meta{display:contents}
+  html[data-build] .lvrow .meta .label{grid-area:label;align-self:end}
+  html[data-build] .lvrow .meta .ph{grid-area:ph}
+  html[data-build] .lvrow .meta .tg{grid-area:tg;align-self:start}
+  html[data-build] .lvrow .stagesel{grid-area:sel;margin-top:4px}
+  html[data-build] .lvrow .step{justify-self:start;margin-left:10px}
+}
+
+/* celular: os 4 grupos de navegação cabem sem cortar (rótulos curtos) */
+#navGroups .ng-short{display:none}
+@media (max-width:480px){
+  #navGroups .ng-long{display:none}
+  #navGroups .ng-short{display:inline}
+  html[data-build] #navGroups,#navGroups{justify-content:space-between;gap:6px}
+}
+
+/* cabeçalho fixo opaco: o texto da página não aparece por trás dele */
+html[data-build] #navigator.stuck{background-color:var(--ground)}
+/* celular/tablet: equipamentos do crafting quebram linha em vez de sair da tela; sem "Imprimir" no celular (sobra espaço para a busca) */
+@media (max-width:980px){html[data-build] .craft-items{flex-wrap:wrap;overflow:visible}}
+@media (max-width:480px){html[data-build] #guidePrint{display:none}}

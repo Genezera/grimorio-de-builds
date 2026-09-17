@@ -112,17 +112,17 @@ def tree(pv, limit=None, ascs=None):
     m, s1, s2, a = [], [], [], []
     events = []
     for h in pv["history"]:
-        if isinstance(h, dict) and "remove" in h:
-            events += [("rm", x, None) for x in h["remove"]]
-        elif isinstance(h, dict) and "add" in h:
-            events += [("add", x, None) for x in h["add"]]
+        unwrap = lambda x: (x["id"], x.get("set")) if isinstance(x, dict) else (x, None)
+        if isinstance(h, dict) and ("remove" in h or "add" in h):  # um passo pode ter respec (remove) e alocação (add) juntos
+            events += [("rm",) + unwrap(x) for x in h.get("remove", [])]
+            events += [("add",) + unwrap(x) for x in h.get("add", [])]
         else:
             events.append(("add",) + ((h["id"], h.get("set")) if isinstance(h, dict) else (h, None)))
     for op, nid, st in events:
         if op == "rm":
             if limit is not None and len(m) >= limit:
                 continue
-            for lst in (m, s1, s2, a):
+            for lst in ((s1,) if st == 1 else (s2,) if st == 2 else (m, s1, s2, a)):
                 if nid in lst: lst.remove(nid)
             continue
         n = T.get(str(nid), {})
@@ -145,16 +145,28 @@ if __name__ == "__main__":
     items = d["items"]
     variants, profiles = [], {}
     for p in d["profiles"]:
-        eq = p["equipment"]["variants"][0]["items"]
-        its = {SLOTS[k]: item(items[str(i)]) for k, i in eq.items() if k in SLOTS and str(i) in items}
-        profiles[p["name"]] = (p, its)
-        variants.append({"src": src, "name": p["name"], "items": its, "gems": gems(p["skills"]["steps"], p["name"]), "tree": tree(p["passives"]["variants"][0]), "desc": "", "level": p["level"]})
+        # perfis com várias variantes (ex.: Early/Late Maps): uma variante por conjunto de itens, com a árvore e o passo de gems de mesmo índice
+        evs, pvs, steps = p["equipment"]["variants"], p["passives"]["variants"], p["skills"]["steps"]
+        for j, ev in enumerate(evs):
+            its = {SLOTS[k]: item(items[str(i)]) for k, i in ev["items"].items() if k in SLOTS and str(i) in items}
+            name = p["name"] if len(evs) == 1 else ev.get("name") or f"{p['name']} {j + 1}"
+            pv, st = pvs[min(j, len(pvs) - 1)], steps[min(j, len(steps) - 1):]
+            if j == 0: profiles[p["name"]] = (p, its, pv, st)
+            profiles[name] = (p, its, pv, st)
+            variants.append({"src": src, "name": name, "items": its, "gems": gems(st, name), "tree": tree(pv), "desc": "", "level": p["level"]})
+        for j, pv in enumerate(pvs[len(evs):], len(evs)):  # árvores extras sem itens próprios
+            name = pv.get("name") or f"{p['name']} {j + 1}"
+            its = variants[-1]["items"]
+            profiles[name] = (p, its, pv, steps[min(j, len(steps) - 1):])
+            variants.append({"src": src, "name": name, "items": its, "gems": gems(steps[min(j, len(steps) - 1):], name), "tree": tree(pv), "desc": "", "level": p["level"]})
     for c in cuts:
         prof, n, nm, *asc = c.split("|")
-        nm = [nm]; p, its = profiles[prof]
+        prof, _, si = prof.partition("@")  # "Campaign@5" = gems do 6º passo do perfil
+        nm = [nm]; p, its, pv, st = profiles[prof]
+        if si: st = p["skills"]["steps"][int(si):]
         ascs = {x for x in T if T[x].get("name") in asc} if asc else set()
         ascs = {int(x) for x in ascs} | {int(x) for x in T if asc and T[x].get("ascendancyName") and not T[x].get("isNotable")}
-        variants.append({"src": src, "name": nm[0] if nm else f"{prof} {n}", "items": its, "gems": gems(p["skills"]["steps"], prof), "tree": tree(p["passives"]["variants"][0], int(n), ascs if asc else None), "desc": ""})
+        variants.append({"src": src, "name": nm[0] if nm else f"{prof} {n}", "items": its, "gems": gems(st, prof), "tree": tree(pv, int(n), ascs if asc else None), "desc": ""})
     meta = [{"src": src, "title": R["name"], "url": f"https://maxroll.gg/poe2/planner/{R['id']}", "author": (d.get("author") or {}).get("contentCreator"), "updatedAt": R.get("date"),
              "widgets": [], "notes": d.get("globalNotes"), "profileNotes": {p["name"]: p.get("widgetNotes") for p in d["profiles"]},
              "rotations": {p["name"]: p.get("skillRotations") for p in d["profiles"]}}]

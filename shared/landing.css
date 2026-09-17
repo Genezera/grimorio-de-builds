@@ -39,7 +39,7 @@ body[data-focus="sf"] .scene .or,body[data-focus="or"] .scene .sf{opacity:.16;fi
 .brand>span::before{content:"";width:18px;height:18px;border:1px solid var(--gild);transform:rotate(45deg);box-shadow:0 0 14px -2px var(--gild)}
 .brand>span::after{content:"";position:absolute;width:6px;height:6px;background:var(--sf);transform:rotate(45deg);box-shadow:0 0 10px var(--sf);animation:hue 8s ease-in-out infinite alternate}
 @keyframes hue{to{background:var(--or);box-shadow:0 0 10px var(--or)}}
-.brand small{font-family:var(--ui);font-size:.62em;font-weight:500;letter-spacing:.24em;color:var(--mute)}
+.brand small{font-family:var(--ui);font-size:max(.62em,10px);font-weight:500;letter-spacing:.24em;color:var(--mute)}
 .language{display:flex;align-items:center;border:1px solid var(--gild-lo);border-radius:3px;overflow:hidden;font-family:var(--ui);font-weight:700;font-size:.85rem}
 .language a{color:var(--mute);padding:6px 14px;min-height:36px;display:grid;place-items:center;transition:color .25s,background .25s}
 .language a:hover{color:var(--gild-hi)}
@@ -81,6 +81,7 @@ h1 em{font-style:normal;display:inline-block;font-size:.62em;font-weight:700;bac
 .build.ac{--acc:#b57bff;--acc2:#5fe3a1;--metal:#a996c9;--metal-hi:#ece2fb;--surface:rgba(16,11,26,.86);border-color:#43365c}
 .build.pf{--acc:#8fd14f;--acc2:#d3e36a;--metal:#9fb58a;--metal-hi:#e4f1d6;--surface:rgba(11,18,11,.86);border-color:#35492f}
 .build.sk{--acc:#ff9f43;--acc2:#e2465f;--metal:#c4a27a;--metal-hi:#f3e0c8;--surface:rgba(22,14,10,.86);border-color:#54402d}
+.build.ma{--acc:#4cc3ff;--acc2:#ffa62b;--metal:#8fb3cf;--metal-hi:#e2f1fb;--surface:rgba(8,14,22,.86);border-color:#2f4a66}
 .build::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;background:
   linear-gradient(var(--metal),var(--metal)) left 8px top 8px/22px 1px no-repeat,linear-gradient(var(--metal),var(--metal)) left 8px top 8px/1px 22px no-repeat,
   linear-gradient(var(--metal),var(--metal)) right 8px top 8px/22px 1px no-repeat,linear-gradient(var(--metal),var(--metal)) right 8px top 8px/1px 22px no-repeat,
@@ -172,7 +173,7 @@ footer a:hover{color:var(--gild-hi)}
 
 /* ---------- reveal */
 .rv-on .build,.rv-on .steps article,.rv-on .knowledge,.rv-on .section-heading,.rv-on .about{opacity:0;translate:0 26px;transition:opacity .9s var(--ease),translate 1s var(--ease),transform .7s var(--ease),border-color .4s,box-shadow .6s}
-.rv-on .shown{opacity:1;translate:0 0}
+.rv-on .shown,.rv-on .steps article.shown{opacity:1;translate:0 0}
 .hero > div:first-child > *{animation:heroIn 1s var(--ease) both}
 .hero > div:first-child > *:nth-child(2){animation-delay:.1s}.hero > div:first-child > *:nth-child(3){animation-delay:.2s}.hero-note{animation:heroIn 1s .3s var(--ease) both}
 @keyframes heroIn{from{opacity:0;transform:translateY(18px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}

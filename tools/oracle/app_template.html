@@ -693,7 +693,7 @@ function paintStage() {
   const manual = S.stage && S.stage !== "auto";
   $("#phTag").textContent = `${T("Nv", "Lv")} ${p.lv[0]}–${p.lv[1]} · ${p.tag}` + (manual && (S.lv < p.lv[0] || S.lv > p.lv[1]) ? T(` · escolhida manualmente (você é nível ${S.lv})`, ` · picked manually (you are level ${S.lv})`) : "");
   const sel = $("#stageSel");
-  sel.innerHTML = `<option value="auto">${T("Automático pelo nível", "Automatic by level")} (${esc(phaseOf(S.lv).name)})</option>` + D.phases.map(x => `<option value="${x.id}" ${x.id === S.stage ? "selected" : ""}>${esc(x.name)}</option>`).join("");
+  sel.innerHTML = `<option value="auto">${T("Auto", "Auto")} · ${esc(phaseOf(S.lv).name)}</option>` + D.phases.map(x => `<option value="${x.id}" ${x.id === S.stage ? "selected" : ""}>${esc(x.name)}</option>`).join("");
   sel.value = manual ? S.stage : "auto";
   $("#stageLbl").textContent = T("Onde você está no jogo", "Where you are in the game");
 }
@@ -760,7 +760,7 @@ function itemCard(it) {
     <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Único" : ""}${lr ? ` · ${T("nível", "level")} ${lr.lvl}` : ""}</small></div>${lvWarn}${it.have ? `<div class="havebadge">${T("Você tem", "You have it")}${it.swapped && it.swapped !== it.n ? T(` · no lugar de ${esc(it.swapped)}`, ` · instead of ${esc(it.swapped)}`) : ""}</div>` : it.miss ? `<div class="missbadge">${T("Ainda não tem", "Not owned yet")}</div>` : it.swapped ? `<div class="havebadge">${T(`No lugar de ${esc(it.swapped)}`, `Instead of ${esc(it.swapped)}`)}</div>` : ""}
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(it.n)}">` : ""}</div>
       <div class="mods">${mods.length ? mods.map(m => `<span>${esc(m)}</span>`).join("") : '<span class="none">Veja os mods do único no jogo.</span>'}</div></div>
-    ${it.r && it.r.length ? `<div class="runes"><b>${it.rs === 2 ? "Sockets do item" : it.rs ? "Sockets (do guia)" : "Sockets (sugestão)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">Sem socket? Artificer’s Orb adiciona um.all>'}</div>` : ""}
+    ${it.r && it.r.length ? `<div class="runes"><b>${it.rs === 2 ? "Sockets do item" : it.rs ? "Sockets (do guia)" : "Sockets (sugestão)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">Sem socket? Artificer’s Orb adiciona um.</small>'}</div>` : ""}
     ${it.note || it.price != null ? `<div class="runes" style="color:var(--gild-hi)">${it.note ? esc(it.note) : ""}${it.price != null ? `${it.note ? " · " : ""}${fmtPrice(it.price)}` : ""}</div>` : ""}
   </article>`;
 }
@@ -1194,7 +1194,7 @@ function vQuests() {
   const spDone = D.quests.map((q, i) => ({ q, i })).filter(o => /Spirit/.test(o.q.reward) && S.done["q:" + o.i]).reduce((a, o) => a + parseInt(o.q.reward.match(/\d+/)[0]), 0);
   return `<div class="sechead"><div><h2>${T("Recompensas permanentes", "Permanent rewards")}</h2><p>${T("Nada disso volta depois. Cada Spirit conta para os totems (75 por totem) e os Weapon Set Points alimentam as passivas de totem no Set 1.", "None of this comes back later. Every Spirit counts for totems (75 per totem) and Weapon Set Points fuel the totem passives on Set 1.")}</p></div>
     <div style="display:flex;gap:18px;align-items:center"><div class="ring" style="--v:${pct}"><div><div><b>${done}</b><br><small style="color:var(--mute)">de ${D.quests.length}</small></div></div></div>
-    <div><div class="label">Spirit de quests</div><div style="font-family:var(--display);font-size:1.7rem;color:var(--gild-hi)">${spDone} / 130</div></div></div></div>
+    <div><div class="label">Spirit de quests</div><div style="font-family:var(--display);font-size:1.7rem;color:var(--gild-hi)">${spDone} / ${D.quests.filter(q => /Spirit/.test(q.reward)).reduce((a, q) => a + parseInt(q.reward.match(/\d+/)[0]), 0)}</div></div></div></div>
   <div class="acts stagger">${acts.map(a => `<div class="panel frame"><h3>${esc(a)}</h3><div class="checklist">${D.quests.map((q, i) => q.act !== a ? "" : `<label class="check ${S.done["q:" + i] ? "done" : ""}"><input type="checkbox" data-key="q:${i}" ${S.done["q:" + i] ? "checked" : ""}><span><b class="ui">${esc(q.boss)}</b> <small style="color:var(--faint)">${esc(q.area)}</small><br>${esc(q.reward)} ${q.prio === "CRÍTICA" ? '<span class="chip danger">crítica</span>' : ""}</span></label>`).join("")}</div></div>`).join("")}</div>`;
 }
 function vTricks() {

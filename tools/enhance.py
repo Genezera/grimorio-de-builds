@@ -2,7 +2,7 @@
 from pathlib import Path
 
 SHARED = Path(__file__).resolve().parents[1] / 'shared'
-THEME_COLOR = {'silverfist': '#07080a', 'oracle': '#06060c', 'tactician': '#08080a', 'infernalist': '#0a0505', 'acolyte': '#07050b', 'pathfinder': '#060906', 'smith': '#09070a'}
+THEME_COLOR = {'silverfist': '#07080a', 'oracle': '#06060c', 'tactician': '#08080a', 'infernalist': '#0a0505', 'acolyte': '#07050b', 'pathfinder': '#060906', 'smith': '#09070a', 'martial': '#05070b'}
 
 
 def enhance(template, lang, build):
@@ -10,7 +10,8 @@ def enhance(template, lang, build):
     template = template.replace('</style>', '\n' + css + '\n</style>', 1)
     # Palette before first paint (no flash): everything before </style> ends up in <head>.
     template = ('<script>document.documentElement.dataset.build=%r</script>\n<meta name="theme-color" content="%s">\n'
-                % (build, THEME_COLOR.get(build, '#07080a'))) + template
+                % (build, THEME_COLOR.get(build, '#07080a'))
+                + '<link rel="stylesheet" href="../shared/loader.css"><script src="../shared/loader.js"></script>\n') + template
     template = template.replace('<nav class="tabs" role="tablist" id="tabs"></nav>', '<div id="navigator"><div id="guideTools"></div><div id="navGroups"></div><nav class="tabs" role="tablist" id="tabs"></nav></div>\n<div id="readingGuide"></div>\n<section class="view" id="v-craft"></section>')
     marker = '/* ------------------------------------------------ boot */'
     assert marker in template

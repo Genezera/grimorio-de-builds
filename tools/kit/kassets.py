@@ -190,6 +190,18 @@ for extra, path in getattr(D, "EXTRA_ICONS", {}).items():
         kk = icon(path, 40)
         if kk: sup_icon[extra] = kk
     if extra not in gem_icon and extra in sup_icon: gem_icon[extra] = sup_icon[extra]
+# gems das fases que o planner não tem (ex.: setup do ladder): ícone pela base do RePoE2
+_GEMDDS = {b["name"]: (b.get("visual_identity") or {}).get("dds_file") for b in json.load(open(os.path.join("dl", "repoe_base_items.json"), encoding="utf-8")).values()
+           if "Gem" in (b.get("item_class") or "") and b.get("name")}
+for p in D.PHASES:
+    for g in p["gems"]:
+        if g["skill"] not in gem_icon and _GEMDDS.get(g["skill"]):
+            k = icon(_GEMDDS[g["skill"]], 64)
+            if k: gem_icon[g["skill"]] = k
+        for s in g["sup"]:
+            if s not in sup_icon and _GEMDDS.get(s):
+                k = icon(_GEMDDS[s], 40)
+                if k: sup_icon[s] = k
 
 # ------------------------------------------------------------ itens
 SLOT_PT = {"mainHand_set1": "Arma (Set 1)", "offHand_set1": "Offhand (Set 1)", "mainHand_set2": "Arma (Set 2)", "offHand_set2": "Offhand (Set 2)", "helmet": "Capacete", "body": "Body Armour",

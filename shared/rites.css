@@ -324,7 +324,7 @@ table.omens td small{color:var(--faint)}
   table.omens td.num{justify-self:start}
   .rite table td[data-l]::before,table.omens td[data-l="Custo"]::before,table.omens td[data-l="Cost"]::before{content:attr(data-l) " · ";font-family:var(--ui);font-size:.72rem;color:var(--faint)}
   .rite table td:nth-child(2)::before{content:none}
-  .chnav a span{max-width:9ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .chnav a span{white-space:nowrap}
 }
 @media (max-width:360px){h1{font-size:2.6rem}.track{grid-template-columns:1fr 1fr}.chnav a span{display:none}}
 @media (max-height:500px) and (orientation:landscape){.chnav{position:relative}.hero{min-height:0}.hero-sigil{max-width:240px}}
@@ -335,3 +335,13 @@ table.omens td small{color:var(--faint)}
 .ch-art .num{top:14px;transform:none;line-height:.9}
 @media (max-width:860px){.ch-art .num{font-size:2.6rem;top:10px;right:14px}.ch-head{margin-top:-30px}}
 @media (max-width:640px){.ch-art{height:96px}.ch-art .num{font-size:2.2rem;top:8px}}
+
+/* celular: recompensas da liga em lista (sem metade da linha vazia nos marcos sem recompensa) */
+@media (max-width:640px){
+  .track{grid-template-columns:1fr;row-gap:10px}
+  .track li{flex-direction:row;align-items:center;text-align:left;gap:18px;padding-left:4px}
+  .track .step{flex:none;width:34px;height:34px}
+  .track .piece{margin:0}
+  .track figure{flex:1;grid-template-columns:56px minmax(0,1fr);justify-items:start;align-items:center;column-gap:12px;padding:10px 12px}
+  .track figure .ico{width:52px;height:52px}
+}

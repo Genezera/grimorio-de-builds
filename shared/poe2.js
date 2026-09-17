@@ -10,6 +10,7 @@
     acolyte: { p: 'ac', name: 'Acolyte of Chayula', motes: 'void' },
     pathfinder: { p: 'pf', name: 'Pathfinder', motes: 'toxic' },
     smith: { p: 'sk', name: 'Smith of Kitava', motes: 'forge' },
+    martial: { p: 'ma', name: 'Martial Artist', motes: 'storm' },
   };
   const build = BUILDS[root.dataset.build] ? root.dataset.build : 'silverfist';
   const CFG = BUILDS[build];
@@ -80,6 +81,7 @@
       void: { r: [.8, 3], vy: [.05, .21], sway: .18, tw: .45, mix: [.5, .7, .9] },
       toxic: { r: [1.2, 4.2], vy: [.08, .3], sway: .28, tw: .1, mix: [.62, .82, .94] },
       forge: { r: [.6, 2.2], vy: [.45, 1.55], sway: .55, tw: .3, mix: [.6, .85, .95] },
+      storm: { r: [.5, 2.4], vy: [.2, .8], sway: .6, tw: .55, mix: [.55, .8, .92] },
     }[CFG.motes];
     const rnd = ([a, b]) => a + Math.random() * (b - a);
     const spawn = fresh => {
