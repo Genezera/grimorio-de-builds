@@ -15,7 +15,7 @@ html.ld::before{content:"";position:fixed;inset:0;z-index:2147483000;pointer-eve
 .poe-loader .pl-disc::after{content:"";position:absolute;left:50%;top:50%;width:100vmax;height:100vmax;margin:-50vmax 0 0 -50vmax;
   background:radial-gradient(closest-side,transparent 25%,var(--pl-ground) 100%)}
 .poe-loader .pl-stage{position:absolute;left:50%;top:46%;display:grid;justify-items:center;gap:clamp(6px,1.8vh,16px);width:min(92vw,640px);text-align:center;
-  transform:translate(-50%,-50%);opacity:0;transition:opacity .5s ease;will-change:opacity,transform}
+  transform:translate(-50%,-50%);opacity:0;transition:opacity .28s ease;will-change:opacity,transform}
 .poe-loader.on .pl-stage{opacity:1}
 .poe-loader .pl-medal{position:relative;width:clamp(96px,min(46vw,32vh),260px);aspect-ratio:1}
 .poe-loader .pl-art{position:absolute;inset:16%;border-radius:50%;overflow:hidden;background:#000;

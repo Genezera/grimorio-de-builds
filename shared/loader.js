@@ -54,7 +54,7 @@
 
   const discSize = () => Math.ceil(2 * Math.hypot(innerWidth / 2, innerHeight * .54) + 4) + 'px';
   const esc = s => String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]);
-  const born = performance.now(), minShow = reduce ? 0 : internal ? 350 : 900;   // dentro do site: só cobre o carregamento
+  const born = performance.now(), minShow = reduce ? 0 : internal ? 750 : 1000;   // dentro do site: só cobre o carregamento
   let el = null, done = false;
   const progress = v => { if (el) el.style.setProperty('--pl-p', v); };
   const mount = () => {
