@@ -155,9 +155,9 @@ add("item", "Lavianga's Spirits", (LV.get("Lavianga's Spirits") or {}).get("base
     ("Sem ela, o Mind Over Matter fica perigoso.", "Without it, Mind Over Matter is risky."), [])
 
 add("item", "Darkness Enthroned", (LV.get("Darkness Enthroned") or {}).get("base") or 62, req("Darkness Enthroned"),
-    ("Endgame com Idolatry.", "Endgame with Idolatry."),
-    ("Cinto com 2 sockets (50–100% mais efeito) que contam como o slot da variante. Use a variante Capacete com Idol of Ralakesh + Primate Idol.", "Belt with 2 sockets (50–100% more effect) that count as the variant’s slot. Use the Helmet variant with Idol of Ralakesh + Primate Idol."),
-    ("Nível 62, mas só rende com Idols (Idolatry).", "Level 62, but it only pays off with Idols (Idolatry)."),
+    ("Charm Slots extras no endgame.", "Extra Charm Slots for endgame."),
+    ("Cinto com até 3 Charm Slots e 2 sockets escondidos (50–100% mais efeito): Greater Body Rune + a rune da resist que faltar. Idols não entram (são só de Capacete ou Sceptre).", "Belt with up to 3 Charm Slots and 2 hidden sockets (50–100% more effect): Greater Body Rune + a rune for the resist you lack. Idols don't fit (Helmet or Sceptre only)."),
+    ("Nível 62; rende mais com roll alto de efeito.", "Level 62; best with a high effect roll."),
     ("Opcional.", "Optional."), [])
 
 # ------------------------------------------------------------------ ASCENDÊNCIA

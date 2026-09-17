@@ -169,7 +169,7 @@ PHASES = [
     {"skill": "Voltaic Mark", "set": "—", "sup": ["Prolonged Duration II", "Cooldown Recovery II", "Second Wind III", "Overabundance II"], "role": "Burst em alvo shockado"},
   ],
   "cheap": ["Sem Effigy? Continue no setup de Início do Atlas — ele faz T15 sem problema", "Beasts de aura baratos: Venomous Crab Matriarch (27,6%), Bramble Rhoa (34,2%), Alpha Primate (39,6%)", "Idols simples em luvas/botas só pelo bônus da Idolatry"],
-  "full": ["Sylvan's Effigy (Perfect Jeweller's se tiver menos sockets)", "Idol of Ralakesh no capacete, Fox Idol no body, Primate Idol no sceptre", "Darkness Enthroned (cinto, variante Capacete) com Idol of Ralakesh + Primate Idol", "Jewels Sapphire: minion dano/crit/speed"],
+  "full": ["Sylvan's Effigy (Perfect Jeweller's se tiver menos sockets)", "Idol of Ralakesh no capacete, Fox Idol no body, Primate Idol no sceptre", "Darkness Enthroned (cinto): Greater Body Rune + rune da resist que faltar", "Jewels Sapphire: minion dano/crit/speed"],
   "stats": ["Movement Speed", "+Minion Skills", "Vida", "Atributos (147 Dex / 114 Int / 75 Str)", "Resistências", "Evasion/Deflection", "Spirit Reservation Efficiency"],
   "tree": "Remova Trusted Kinship (o Effigy já permite qualquer número de companions de tipos diferentes). Mínimo 250 Spirit.",
   "asc": "Idolatry (Trial nível 75+)",
@@ -256,7 +256,7 @@ MILESTONES = {
  80: "Com Effigy: Azmerian Wolf + Wolf Pack; remova Trusted Kinship.",
  82: "Vile Vulture (Temporary Invulnerability / Physical aura).",
  85: "Idol of Ralakesh (capacete) e Fox Idol (body).",
- 88: "Darkness Enthroned (cinto, variante Capacete): Idol of Ralakesh + Primate Idol.",
+ 88: "Darkness Enthroned (cinto): Greater Body Rune + rune da resist que faltar.",
  90: "Arbiter: Mana Remnants no lugar de Wind Dancer; Voltaic Mark.",
  93: "Beast com All Damage Shocks para gerar Mana Remnants.",
  95: "From Nothing (Vile Mending, Grip of Evil).",
@@ -287,7 +287,7 @@ GEAR = [
  {"slot": "Anéis", "cheap": "Vida/resists/atributos", "value": "Resists + atributos + utilidade de minion",
   "full": "Raros premium com mods de minion", "affix": "Cap de resist; atributos", "note": "Anéis são o lugar mais barato para fechar resist."},
  {"slot": "Cinto", "cheap": "Meginord's Girdle (Strength + frio) ou raro vida/resist", "value": "Raro vida + resists",
-  "full": "Darkness Enthroned variante Capacete: Idol of Ralakesh + Primate Idol", "affix": "Vida; resist; atributos", "note": "Darkness Enthroned tem 2 sockets com 50–100% mais efeito. Compre a variante \"as though it was a Helmet\": Idol of Ralakesh (+8% reservation efficiency de minions vira 12–16%) + Primate Idol (+15% vida de minions vira 22–30%). O Ralakesh é limitado a 1: tire do capacete e coloque um Primate Idol lá. Companions são minions (tag Minion no Tame Beast), então os dois valem para o zoo."},
+  "full": "Darkness Enthroned (cinto): Greater Body Rune + rune da resist que faltar", "affix": "Vida; resist; atributos", "note": "Darkness Enthroned tem até 3 Charm Slots e 2 sockets escondidos com 50–100% mais efeito. Socket 1: Greater Body Rune (vida). Socket 2: Greater Desert, Glacial ou Storm Rune, a resist que faltar. Idols não entram no cinto: Idol of Ralakesh e Primate Idol só vão em Capacete ou Sceptre, então o Ralakesh continua no capacete. Qualquer variante serve; prefira efeito perto de 100%."},
  {"slot": "Jewels", "cheap": "Emerald: Companion dano/vida; Sapphire: Minion +% Elemental Res", "value": "Sapphire: minion dano/attack speed/crit; Ruby: redução física para minions",
   "full": "From Nothing + Prism of Belief", "affix": "Minion crit/dano > attack speed > resist de minion", "note": "Prism de roll ruim não vale só por ser unique."},
  {"slot": "Charms", "cheap": "Stone / Thawing na campanha", "value": "Ruby / Antidote / Staunching", "full": "Beira's Anguish / Arakaali's Gift / Sanguis Heroum",
@@ -472,7 +472,7 @@ BUY_ORDER = [
  {"p": 6, "item": "Evasion + Deflection", "phase": "Ato 4+", "cost": "Médio", "impact": "Tankiness"},
  {"p": 7, "item": "Primate Idol / Idol of Ralakesh / Fox Idol", "phase": "Atlas", "cost": "Médio", "impact": "Reserva + dano (Idolatry)"},
  {"p": 8, "item": "Sylvan's Effigy", "phase": "T15", "cost": "Alto", "impact": "Zoo ilimitado + Azmerian Wolf"},
- {"p": 9, "item": "Darkness Enthroned (variante Capacete) + Idol of Ralakesh + Primate Idol", "phase": "T15+", "cost": "Barato", "impact": "+2 Idols (Idolatry) e reserva/vida do zoo"},
+ {"p": 9, "item": "Darkness Enthroned + Greater Body Rune + rune de resist", "phase": "T15+", "cost": "Barato", "impact": "Charm Slots + runas 50–100% mais fortes"},
  {"p": 10, "item": "From Nothing / Prism of Belief", "phase": "Min-max", "cost": "Muito alto", "impact": "Teto da build"},
 ]
 
@@ -500,7 +500,7 @@ SOURCES = [
 ]
 
 FIXES = [
- "Darkness Enthroned é um cinto: a variante define se os 2 sockets contam como capacete, body armour, luvas, botas ou escudo.",
+ "Darkness Enthroned é um cinto com 2 sockets escondidos para runas. Idols de Capacete ou Sceptre (Idol of Ralakesh, Primate Idol) não entram nele.",
  "Trenchtimbre é maça de uma mão, não spear.",
  "Comparação de arma: com Catha's Balance vale dano por golpe, não pDPS.",
  "Sylvan's Effigy é um Stoic Sceptre que exige nível 62.",

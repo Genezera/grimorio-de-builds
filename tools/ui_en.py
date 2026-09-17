@@ -179,7 +179,7 @@ UI = [
 ("Veja onde ficam: aba Árvore de Passivas → botão \"Notables do meta\".", "See where they are: Passive Tree tab → \"Meta notables\" button."),
 ("Guia baseado em imortilize (Mobalytics), Zizaran (Maxroll), PoE2DB e dados da árvore do Path of Building · ${D.patch} · ${D.updated}. Seu progresso fica salvo neste navegador.", "Guide based on Mattjestic & imortilize (Mobalytics), Zizaran (Maxroll), PoE2DB and Path of Building tree data · ${D.patch} · ${D.updated}. Your progress is saved in this browser."),
 ('"Liga " + D.league + " · 0.5.5"', 'D.league + " league · 0.5.5"'),
-("Sockets (do guia)", "Sockets (from guide)"), ("Sockets (sugestão)", "Sockets (suggestion)"),
+("Sockets do item", "Item sockets"), ("Sockets (do guia)", "Sockets (from guide)"), ("Sockets (sugestão)", "Sockets (suggestion)"),
 ("Sem socket? Artificer’s Orb adiciona um.", "No socket? An Artificer’s Orb adds one."),
 ('`Spirit #${g.pr}${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "opt" ? `Só se sobrar Spirit${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "free" ? (g.cost && g.cost !== "Sem Spirit" ? `Sem Spirit · ${esc(g.cost)}` : "Sem Spirit") : ""', '`Spirit #${g.pr}${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "opt" ? `Only if Spirit is left${g.cost ? " · " + esc(g.cost) : ""}` : g.sp === "free" ? (g.cost && g.cost !== "No Spirit" ? `No Spirit · ${esc(g.cost)}` : "No Spirit") : ""'),
 ("1 · Reservam Spirit <small>${core.length ? \"ative nesta ordem; se o Spirit ficar negativo, desligue o último\" : \"companions e auras\"}</small>", "1 · Reserve Spirit <small>${core.length ? \"activate in this order; if Spirit goes negative, turn off the last one\" : \"companions and auras\"}</small>"),

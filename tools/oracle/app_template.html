@@ -760,7 +760,7 @@ function itemCard(it) {
     <div class="th">${esc(it.n)}<small>${esc(it.slot)}${it.u ? " · Único" : ""}${lr ? ` · ${T("nível", "level")} ${lr.lvl}` : ""}</small></div>${lvWarn}${it.have ? `<div class="havebadge">${T("Você tem", "You have it")}${it.swapped && it.swapped !== it.n ? T(` · no lugar de ${esc(it.swapped)}`, ` · instead of ${esc(it.swapped)}`) : ""}</div>` : it.miss ? `<div class="missbadge">${T("Ainda não tem", "Not owned yet")}</div>` : it.swapped ? `<div class="havebadge">${T(`No lugar de ${esc(it.swapped)}`, `Instead of ${esc(it.swapped)}`)}</div>` : ""}
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(it.n)}">` : ""}</div>
       <div class="mods">${mods.length ? mods.map(m => `<span>${esc(m)}</span>`).join("") : '<span class="none">Veja os mods do único no jogo.</span>'}</div></div>
-    ${it.r && it.r.length ? `<div class="runes"><b>${it.rs ? "Sockets (do guia)" : "Sockets (sugestão)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">Sem socket? Artificer’s Orb adiciona um.all>'}</div>` : ""}
+    ${it.r && it.r.length ? `<div class="runes"><b>${it.rs === 2 ? "Sockets do item" : it.rs ? "Sockets (do guia)" : "Sockets (sugestão)"}</b><div class="sock-list">${it.r.map(x => `<span>${esc(x)}</span>`).join("")}</div>${it.rs ? "" : '<small style="color:var(--faint)">Sem socket? Artificer’s Orb adiciona um.all>'}</div>` : ""}
     ${it.note || it.price != null ? `<div class="runes" style="color:var(--gild-hi)">${it.note ? esc(it.note) : ""}${it.price != null ? `${it.note ? " · " : ""}${fmtPrice(it.price)}` : ""}</div>` : ""}
   </article>`;
 }
