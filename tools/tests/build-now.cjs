@@ -11,7 +11,7 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
   for(const [width,height] of sizes){
    const context=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'}),page=await context.newPage();
    page.on('pageerror',e=>errors.push(e.message));await page.route(/fonts\.(googleapis|gstatic)\.com/,r=>r.abort());
-   for(const file of ['silverfist/index.html','silverfist/en.html','oracle/index.html','oracle/en.html']){
+   for(const file of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith'].flatMap(b=>[b+'/index.html',b+'/en.html'])){
     await page.goto(base+'/'+file);await page.evaluate(()=>{buildNow.collapsed=false;renderSide();});
     if(width<1440){await page.locator('#sbFab').click();assert.equal(await page.locator('#side').getAttribute('aria-modal'),'true');assert.ok(await page.locator('main').evaluate(el=>el.inert));}
     for(const level of [1,35,70,95]){

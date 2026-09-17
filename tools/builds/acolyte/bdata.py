@@ -1,0 +1,491 @@
+# -*- coding: utf-8 -*-
+"""Acolyte of Chayula: Poisonburst Arrow + Toxic Growth + Archon of Chayula. Base: planner do Goratha (Maxroll: Campaign, Mapping, Min Max),
+convertido por kit/maxroll.py; textos do Path of Building, bases do RePoE2 e preços do poe.ninja (Forbidden Rites)."""
+import copy, os, sys
+HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.join(HERE, "..", "..", "kit"))
+import common
+
+BOOK = common.Book(); L, G, U, T = BOOK.L, BOOK.G, BOOK.U, BOOK.T; EN_PAIRS = BOOK.EN_PAIRS; BOOK.common_pairs()
+V, VAR = common.variants("acolyte")
+# fase Archon: itens e gems do Mapping, ascendência completa do Min Max
+_arch = copy.deepcopy(VAR["Mapping"]); _arch["name"] = "Archon"; _arch["tree"]["a"] = list(VAR["Min Max"]["tree"]["a"])
+V["variants"].append(_arch); VAR["Archon"] = _arch
+
+PLANNER_URL = "https://maxroll.gg/poe2/planner/w675g80h"
+LEAGUE = "Forbidden Rites"
+PATCH = L("0.5.5 · Liga Forbidden Rites", "0.5.5 · Forbidden Rites league")
+UPDATED = "17/09/2026"
+
+CONFIG = dict(dir="acolyte", build="acolyte", store="acolyte1", emoji="🌀", pill="Monk · Acolyte of Chayula",
+              fonts="family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Cormorant+SC:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400")
+TXT = {
+ "pt": dict(TITLE="Sonho de Chayula", DESC="Guia interativo Acolyte of Chayula Poisonburst Arrow + Archon of Chayula (Monk) — PoE 2 Forbidden Rites",
+            H1S="Poisonburst Arrow · Toxic Growth · Chamas de Chayula · Archon — planner do Goratha explicado", H1="O Sonho de Chayula",
+            LEAD="Uma flecha envenena o pack, os heralds fazem tudo explodir em cadeia e as chamas roxas de Chayula transformam o dano em caos. No fim, você vira o Archon: tornados de caos que detonam as pústulas no boss. Diga seu nível e o que você tem."),
+ "en": dict(TITLE="Chayula's Dream", DESC="Interactive Acolyte of Chayula Poisonburst Arrow + Archon of Chayula (Monk) guide — PoE 2 Forbidden Rites",
+            H1S="Poisonburst Arrow · Toxic Growth · Flames of Chayula · Archon — Goratha's planner explained", H1="Chayula's Dream",
+            LEAD="One arrow poisons the pack, the heralds chain-explode everything and Chayula's purple flames turn your damage into chaos. At the end you become the Archon: chaos tornadoes that detonate the pustules on the boss. Tell it your level and what you have."),
+}
+TABS = [["agora", "Agora", "Now"], ["meu", "Meu personagem", "My character"], ["quando", "Quando usar", "When to use"], ["mech", "Chamas & Archon", "Flames & Archon"],
+        ["uniques", "Uniques", "Uniques"], ["arvore", "Árvore de Passivas", "Passive Tree"], ["rota", "Rota 1→100", "Route 1→100"], ["skills", "Skills & Supports", "Skills & Supports"],
+        ["gear", "Itens", "Items"], ["asc", "Ascendência", "Ascendancy"], ["quests", "Quests", "Quests"], ["tricks", "Tricks Pro", "Pro Tricks"], ["atlas", "Atlas", "Atlas"],
+        ["diag", "Diagnóstico", "Troubleshooting"], ["fontes", "Fontes", "Sources"]]
+
+CLASS, ASC, START = "Monk", "Acolyte of Chayula", 44683
+ORDER = ["a1", "a2", "a3", "a4", "maps", "archon", "max"]
+VMAP = {"a1": "A1", "a2": "A2", "a3": "Campaign", "a4": "Interlude", "maps": "Mapping", "archon": "Archon", "max": "Min Max"}
+FULLMAP = {k: k for k in ORDER}
+CHEAPMAP = {"a1": "a1", "a2": "a2", "a3": "a3", "a4": "a4", "maps": "a4", "archon": "maps", "max": "archon"}
+PHASE_ACT = {"a1": 1, "a2": 2, "a3": 3, "a4": 4, "maps": 6, "archon": 6, "max": 6}
+ITEM_NOTE = {"Familial Talisman": L("Set 2: snapshot", "Set 2: snapshot"), "Hysseg's Claw": L("Set 2: snapshot", "Set 2: snapshot")}
+EXTRA_ICONS = {"Contagion": "Art/2DItems/Gems/New/WitchContagionSkillGem.dds"}
+BOW_RUNE = L("Countess Seske's Rune of Archery (+flecha) + Idol of Thruldana (+1 veneno)", "Countess Seske's Rune of Archery (+arrow) + Idol of Thruldana (+1 poison)")
+
+def socket_hint(slot, name):
+    if "Bow" in name or name == "Splinterheart": return [BOW_RUNE]
+    if slot == "Capacete": return [L("Rune of Reach (efeito das Remnants)", "Rune of Reach (remnant effect)")]
+    if slot == "Body Armour": return [L("Craiceann's Rune of Warding + runa de resistência que faltar", "Craiceann's Rune of Warding + whatever resistance rune you're missing")]
+    return None
+
+SUPWHY = {
+ "Bleed I": L("Faz o alvo sangrar: liga o Herald of Blood.", "Makes the target bleed: enables Herald of Blood."), "Bleed II": L("Mais sangramento para o Herald of Blood.", "More bleeding for Herald of Blood."), "Bleed III": L("Sangramento forte: explosões do Herald of Blood em cadeia.", "Strong bleed: chained Herald of Blood explosions."),
+ "Bursting Plague": L("Inimigos envenenados explodem ao morrer — a explosão também pode sangrar (auto-corrente).", "Poisoned enemies explode on death — the explosion can also bleed (self-chaining)."),
+ "Escalating Poison": L("Mais venenos no alvo aumentam o dano do veneno.", "More poisons on the target raise poison damage."),
+ "Deadly Poison II": L("Veneno mais forte, menos dano de hit.", "Stronger poison, less hit damage."),
+ "Poison II": L("Chance de envenenar.", "Poison chance."), "Poison III": L("Envenena sempre: no Archon, detona as pústulas da Toxic Growth.", "Always poisons: on Archon, detonates Toxic Growth pustules."),
+ "Fork": L("As flechas se dividem: clear fora da tela.", "Arrows fork: off-screen clear."),
+ "Concentrated Area": L("OBRIGATÓRIO na Toxic Growth: as pústulas se sobrepõem no boss.", "MANDATORY on Toxic Growth: pustules overlap on the boss."),
+ "Long Fuse I": L("Pústulas com pavio maior e mais dano.", "Longer fuse and more damage on pustules."), "Long Fuse II": L("Pavio maior, muito mais dano.", "Longer fuse, much more damage."),
+ "Arakaali's Lust": L("Lineage barata: muito dano na Toxic Growth com +5 venenos.", "Cheap lineage: huge Toxic Growth damage with +5 poisons."),
+ "Garukhan's Resolve": L("Lineage cara: só com ~50% de crítico.", "Expensive lineage: only at ~50% crit."),
+ "Prolonged Duration I": L("Planta da Vine Arrow dura mais.", "Vine Arrow plant lasts longer."), "Prolonged Duration II": L("Mais duração: tornados do Archon duram mais.", "More duration: Archon tornadoes last longer."),
+ "Swift Affliction I": L("Dano no tempo mais rápido.", "Faster damage over time."), "Swift Affliction II": L("Dano no tempo bem mais rápido.", "Much faster damage over time."),
+ "Deliberation": L("Mais dano.", "More damage."), "Stoicism II": L("Mais dano da planta.", "More plant damage."),
+ "Magnified Area I": L("Área maior.", "Larger area."), "Magnified Area II": L("Área maior.", "Larger area."),
+ "Chaos Mastery": L("+1 nível em skills de caos.", "+1 level to chaos skills."),
+ "Astral Projection": L("Plague Bearer vira à distância.", "Makes Plague Bearer ranged."),
+ "Exploit Weakness": L("Mais dano contra Armour quebrada (Corrosion no Archon).", "More damage against broken Armour (Corrosion on Archon)."),
+ "Tacati's Ire": L("Lineage: dano com Rage (Absent Amulet).", "Lineage: damage with Rage (Absent Amulet)."), "Vorana's Siege": L("Lineage: área maior e hits fortes em alvo isolado.", "Lineage: larger area and strong hits on isolated targets."),
+ "Harmonic Remnants II": L("Chamas de Chayula de mais longe.", "Flames of Chayula from further away."), "Remnant Potency III": L("Chamas mais fortes (mais caos da roxa).", "Stronger flames (more chaos from purple)."),
+ "Khatal's Rejuvenation": L("Lineage: pegar Remnants reduz cooldown (Ghost Dance).", "Lineage: picking Remnants reduces cooldowns (Ghost Dance)."),
+ "Repulsion": L("Curse dentro do Blasphemy: explosões ao acertar.", "Curse inside Blasphemy: explosions on hit."),
+ "Living Lightning": L("Qualquer hit de raio cria minions que ativam a Repulsion.", "Any lightning hit creates minions that proc Repulsion."), "Living Lightning II": L("Minions de raio ativam a Repulsion sozinhos.", "Lightning minions proc Repulsion by themselves."),
+ "Admixture": L("Mais veneno no Herald of Blood.", "More poison on Herald of Blood."),
+ "Withering Touch": L("Wither ao acertar: mais dano de caos.", "Wither on hit: more chaos damage."), "Corrosion": L("Quebra Armour (para Exploit Weakness).", "Breaks Armour (for Exploit Weakness)."),
+ "Uul-Netol's Embrace": L("Lineage: Armour Break.", "Lineage: Armour Break."),
+ "Rage II": L("Rage no Wind Dancer.", "Rage on Wind Dancer."), "Maim": L("Maim nos inimigos repelidos.", "Maims knocked-back enemies."), "Blind II": L("Blind: defesa.", "Blind: defence."), "Life Leech III": L("Leech de vida.", "Life leech."),
+ "Cooldown Recovery II": L("Ghost Dance volta mais rápido.", "Ghost Dance recovers faster."), "Her Declaration": L("Intimidate na Presence. Reduz o custo quando no Ghost Dance.", "Intimidate in Presence. Cheaper when on Ghost Dance."),
+}
+
+SP30 = L("30 Spirit", "30 Spirit")
+PHASES = [
+ dict(id="a1", name=L("Ato 1", "Act 1"), lv=[1, 15], tag=L("Poisonburst + Herald of Blood", "Poisonburst + Herald of Blood"),
+  carry=L("Você: Poisonburst Arrow", "You: Poisonburst Arrow"), dmgSplit=[100, 0],
+  goal=L("Monk com arco desde o nível 1. O Poisonburst Arrow limpa bem mas falta dano em alvo único até a Toxic Growth (nível 14): use Vine Arrow nos rares e Contagion no começo. Primeiro Spirit (King in the Mists): Herald of Blood com Bleed I e Bursting Plague — a explosão do herald não sangra, mas a do Bursting Plague sim, e a corrente se alimenta sozinha. Se o Ato 1 estiver lento, o Goratha sugere subir com granadas ou Twister até o 14.",
+         "Monk with a bow from level 1. Poisonburst Arrow clears well but lacks single target until Toxic Growth (level 14): use Vine Arrow on rares and Contagion early. First Spirit (King in the Mists): Herald of Blood with Bleed I and Bursting Plague — the herald's explosion doesn't bleed, but Bursting Plague's does, so the chain feeds itself. If Act 1 is slow, Goratha suggests leveling with grenades or Twister until 14."),
+  rotation=[L("Poisonburst Arrow no pack", "Poisonburst Arrow into the pack"), L("Vine Arrow no rare/boss", "Vine Arrow on the rare/boss"), L("Poisonburst Arrow em volta da planta", "Poisonburst Arrow around the plant")],
+  gems=[
+   G("Poisonburst Arrow", ["Bleed I", "Bursting Plague"], L("Clear", "Clear"), L("Flecha que solta uma explosão de veneno em área.", "Arrow that releases an area poison burst."), "free"),
+   G("Vine Arrow", ["Prolonged Duration I", "Swift Affliction I"], L("Alvo único (começo)", "Single target (early)"), L("Planta que prende e causa caos no tempo.", "Plant that latches and deals chaos over time."), "free"),
+   G("Contagion", [], L("Clear (começo)", "Clear (early)"), L("Só no começo do Ato 1.", "Early Act 1 only."), "free", until=10),
+   G("Herald of Blood", ["Poison II", "Bursting Plague", "Bleed I"], L("Explosões em cadeia", "Chain explosions"), L("Matar inimigo sangrando causa explosão física. Mantenha o nível baixo se faltar atributo.", "Killing a bleeding enemy causes a physical explosion. Keep it low level if attributes are short."), "core", 1, SP30),
+  ],
+  cheap=[L("Arco com dano físico", "Bow with physical damage"), L("Dano plano em anéis, luvas e aljava", "Flat damage on rings, gloves and quiver")],
+  full=["Splinterheart"],
+  stats=[L("Dano plano de ataque", "Flat attack damage"), L("% dano físico no arco", "% physical damage on the bow"), L("Atributos (apertados)", "Attributes (tight)")],
+  tree=L("Nós de 'increased Damage' baratos: Concussive Attack, Blinding Strike, Killer Instinct.", "Cheap 'increased Damage' nodes: Concussive Attack, Blinding Strike, Killer Instinct."),
+  avoid=[L("Herald of Blood nível alto sem atributos", "High-level Herald of Blood without attributes")],
+  exit=[L("King in the Mists: Herald of Blood", "King in the Mists: Herald of Blood"), L("Nível 14: Toxic Growth", "Level 14: Toxic Growth")]),
+
+ dict(id="a2", name=L("Ato 2", "Act 2"), lv=[16, 29], tag=L("Toxic Growth + Waking Dream", "Toxic Growth + Waking Dream"),
+  carry=L("Você: Poisonburst · Toxic Growth", "You: Poisonburst · Toxic Growth"), dmgSplit=[100, 0],
+  goal=L("A Toxic Growth vira o dano de boss: SEMPRE com Concentrated Area (as pústulas se sobrepõem). Lance uma vez e só lance de novo depois que as primeiras explodirem — relançar destrói as antigas. 1ª ascendência: Waking Dream (Into the Breach) — chamas vermelhas (vida), azuis (mana) e roxas (7% do dano ganho como caos) nascem em volta de você.",
+         "Toxic Growth becomes your boss damage: ALWAYS with Concentrated Area (pustules overlap). Cast it once and only recast after the first ones explode — recasting destroys the old ones. 1st ascendancy: Waking Dream (Into the Breach) — red (life), blue (mana) and purple (7% of damage gained as chaos) flames spawn around you."),
+  rotation=[L("Vine Arrow", "Vine Arrow"), L("Toxic Growth (uma vez)", "Toxic Growth (once)"), L("Poisonburst Arrow até as pústulas explodirem", "Poisonburst Arrow until the pustules explode"), L("Toxic Growth de novo", "Toxic Growth again")],
+  gems=[
+   G("Poisonburst Arrow", ["Bleed II", "Bursting Plague", "Escalating Poison"], L("Clear", "Clear"), L("3 links.", "3 links."), "free"),
+   G("Toxic Growth", ["Concentrated Area", "Escalating Poison", "Long Fuse I"], L("Alvo único", "Single target"), L("Chuva de pústulas; envenenadas, detonam antes e mais forte.", "Rain of pustules; when poisoned, they detonate sooner and harder."), "free"),
+   G("Vine Arrow", ["Prolonged Duration I", "Swift Affliction I", "Deliberation"], L("Alvo único", "Single target"), L("Abre a rotação.", "Opens the rotation."), "free"),
+   G("Herald of Blood", ["Poison II", "Bursting Plague", "Bleed I"], L("Explosões", "Explosions"), L("30 Spirit.", "30 Spirit."), "core", 1, SP30),
+   G("Into the Breach", ["Harmonic Remnants II", "Remnant Potency III"], L("Chamas de Chayula", "Flames of Chayula"), L("Da ascendência Waking Dream.", "From the Waking Dream ascendancy."), "free", since=24),
+   G("Pounce", [], L("Mobilidade", "Mobility"), L("Talisman no Weapon Set 2.", "Talisman on Weapon Set 2."), "free"),
+  ],
+  cheap=[L("Aljava com dano plano", "Quiver with flat damage"), "Blackheart"],
+  full=["Splinterheart", L("Amor Mandragora (Set 2)", "Amor Mandragora (Set 2)")],
+  stats=[L("Dano plano", "Flat damage"), L("Vida e resistências", "Life and resistances")],
+  tree=L("Ainda dano genérico; comece a ir para os nós de veneno.", "Still generic damage; start heading to poison nodes."),
+  avoid=[L("Toxic Growth sem Concentrated Area", "Toxic Growth without Concentrated Area"), L("Relançar a Toxic Growth antes das pústulas explodirem", "Recasting Toxic Growth before pustules explode")],
+  exit=[L("1ª ascendência: Waking Dream", "1st ascendancy: Waking Dream")]),
+
+ dict(id="a3", name=L("Ato 3", "Act 3"), lv=[30, 44], tag=L("Plague Bearer + Choice of Power", "Plague Bearer + Choice of Power"),
+  carry=L("Você: veneno + Plague Bearer", "You: poison + Plague Bearer"), dmgSplit=[100, 0],
+  goal=L("Segundo Spirit (Azak Bog): Plague Bearer — guarda o veneno causado e, ao ativar com 100%, solta tudo e explode as pústulas de uma vez. Agora pegue todos os notables de veneno (Crippling, Stacking, Lasting, Leeching, Escalating e Building Toxins). 2ª ascendência: Lucid Dreaming → Choice of Power (todas as chamas roxas: triplica o DPS segundo o Goratha). No nível 40, runeforge o Splinterheart com Medved's Crest of the Circle.",
+         "Second Spirit (Azak Bog): Plague Bearer — stores the poison you deal and, when activated at 100%, releases it all and pops the pustules at once. Now take every poison notable (Crippling, Stacking, Lasting, Leeching, Escalating and Building Toxins). 2nd ascendancy: Lucid Dreaming → Choice of Power (all flames purple: triples DPS according to Goratha). At level 40, runeforge Splinterheart with Medved's Crest of the Circle."),
+  rotation=[L("Clear: Poisonburst até o Plague Bearer chegar a 100%", "Clear: Poisonburst until Plague Bearer hits 100%"), L("Ative o Plague Bearer", "Activate Plague Bearer"), L("Boss: Vine Arrow → Toxic Growth → Poisonburst → Plague Bearer → Toxic Growth", "Boss: Vine Arrow → Toxic Growth → Poisonburst → Plague Bearer → Toxic Growth")],
+  gems=[
+   G("Poisonburst Arrow", ["Bleed II", "Bursting Plague", "Escalating Poison"], L("Clear + carga do Plague Bearer", "Clear + Plague Bearer charge"), L("Mesmo papel.", "Same role."), "free"),
+   G("Toxic Growth", ["Concentrated Area", "Escalating Poison", "Deadly Poison II", "Long Fuse I"], L("Alvo único", "Single target"), L("4 links.", "4 links."), "free"),
+   G("Vine Arrow", ["Prolonged Duration I", "Swift Affliction I", "Deliberation"], L("Abre o boss", "Opens the boss"), L("Mesmo papel.", "Same role."), "free"),
+   G("Herald of Blood", ["Poison II", "Bursting Plague", "Bleed I"], L("Explosões", "Explosions"), L("30 Spirit.", "30 Spirit."), "core", 1, SP30),
+   G("Plague Bearer", ["Magnified Area I", "Chaos Mastery"], L("Burst de veneno", "Poison burst"), L("30 Spirit. Use o ativo com 100%.", "30 Spirit. Use the active at 100%."), "core", 2, SP30),
+   G("Into the Breach", ["Harmonic Remnants II", "Remnant Potency III"], L("Chamas roxas", "Purple flames"), L("Choice of Power.", "Choice of Power."), "free"),
+   G("Pounce", [], L("Mobilidade", "Mobility"), L("Set 2.", "Set 2."), "free"),
+  ],
+  cheap=[L("Splinterheart runeforged (40)", "Runeforged Splinterheart (40)")],
+  full=[L("Spirit no peito e amuleto (Blasphemy depois)", "Spirit on chest and amulet (Blasphemy later)")],
+  stats=[L("Dano plano", "Flat damage"), L("Spirit no peito/amuleto", "Spirit on chest/amulet"), L("Atributos", "Attributes")],
+  tree=L("Notables de veneno; First Teachings of the Keeper e First Principle of the Hollow (liberam The Hollowkeeper).", "Poison notables; First Teachings of the Keeper and First Principle of the Hollow (unlock The Hollowkeeper)."),
+  avoid=[L("Ativar Plague Bearer antes de 100%", "Activating Plague Bearer before 100%")],
+  exit=[L("2ª ascendência: Choice of Power", "2nd ascendancy: Choice of Power"), L("Azak Bog (+30 Spirit)", "Azak Bog (+30 Spirit)")]),
+
+ dict(id="a4", name=L("Ato 4 + Interlúdios", "Act 4 + Interludes"), lv=[45, 64], tag=L("Herald of Plague + Blasphemy", "Herald of Plague + Blasphemy"),
+  carry=L("Você: cadeia de explosões", "You: explosion chain"), dmgSplit=[100, 0],
+  goal=L("Terceiro Spirit: Herald of Plague (matar inimigo envenenado espalha o veneno). Com Spirit no equipamento e Inteligência, Blasphemy + Repulsion com Living Lightning — qualquer hit de raio cria minions que ativam a Repulsion. A Repulsion não usa o dano da arma, mas usa o dano plano de anéis, aljava e luvas. Wind Dancer para defesa.",
+         "Third Spirit: Herald of Plague (killing a poisoned enemy spreads its poison). With Spirit on gear and Intelligence, Blasphemy + Repulsion with Living Lightning — any lightning hit creates minions that proc Repulsion. Repulsion doesn't use weapon damage, but it does use flat damage from rings, quiver and gloves. Wind Dancer for defence."),
+  rotation=[L("Poisonburst Arrow: veneno + sangramento", "Poisonburst Arrow: poison + bleed"), L("Heralds + Repulsion explodem o resto", "Heralds + Repulsion blow up the rest"), L("Plague Bearer a 100%", "Plague Bearer at 100%")],
+  gems=[
+   G("Poisonburst Arrow", ["Bleed III", "Bursting Plague", "Escalating Poison", "Deadly Poison II"], L("Clear", "Clear"), L("Mesmo papel.", "Same role."), "free"),
+   G("Toxic Growth", ["Concentrated Area", "Escalating Poison", "Deadly Poison II", "Long Fuse I"], L("Alvo único", "Single target"), L("Mesmo papel.", "Same role."), "free"),
+   G("Vine Arrow", ["Prolonged Duration II", "Swift Affliction II", "Deliberation"], L("Abre o boss", "Opens the boss"), L("Mesmo papel.", "Same role."), "free"),
+   G("Herald of Blood", ["Poison III", "Bursting Plague", "Bleed III"], L("Explosões", "Explosions"), L("30 Spirit.", "30 Spirit."), "core", 1, SP30),
+   G("Plague Bearer", ["Magnified Area I", "Chaos Mastery", "Deadly Poison II"], L("Burst de veneno", "Poison burst"), L("30 Spirit.", "30 Spirit."), "core", 2, SP30),
+   G("Herald of Plague", ["Chaos Mastery"], L("Espalha veneno", "Spreads poison"), L("30 Spirit.", "30 Spirit."), "core", 3, SP30),
+   G("Blasphemy", ["Repulsion", "Magnified Area I", "Living Lightning"], L("Repulsion em aura", "Repulsion aura"), L("Precisa de Spirit no equipamento e Inteligência. Reserva conforme a curse.", "Needs Spirit on gear and Intelligence. Reserves based on the curse."), "opt", 1, L("Confira no jogo", "Check in game")),
+   G("Wind Dancer", [], L("Defesa", "Defence"), L("Evasão por estágio; repele ao ser atingido. 30 Spirit.", "Evasion per stage; knocks back when hit. 30 Spirit."), "opt", 2, SP30),
+   G("Into the Breach", ["Harmonic Remnants II", "Remnant Potency III"], L("Chamas roxas", "Purple flames"), L("Mesmo papel.", "Same role."), "free"),
+  ],
+  cheap=[L("Aljava com físico + raio", "Quiver with physical + lightning"), L("Anéis com dano plano", "Rings with flat damage")],
+  full=[L("Peito de Evasão com Spirit", "Evasion chest with Spirit"), L("Amuleto com Spirit", "Amulet with Spirit")],
+  stats=[L("Spirit", "Spirit"), L("Dano plano (Repulsion também usa)", "Flat damage (Repulsion uses it too)"), L("Inteligência", "Intelligence")],
+  tree=L("Notables de veneno e primeiro caminho de Evasion/ES.", "Poison notables and first Evasion/ES path."),
+  avoid=[L("Blasphemy sem Inteligência", "Blasphemy without Intelligence")],
+  exit=[L("Lythara (+40 Spirit)", "Lythara (+40 Spirit)"), L("Três heralds/buffs ativos", "Three heralds/buffs active")]),
+
+ dict(id="maps", name=L("Mapas", "Maps"), lv=[65, 79], tag=L("Snapshot do Set 2 + Chayula's Gift", "Set 2 snapshot + Chayula's Gift"),
+  carry=L("Você: veneno em cadeia", "You: chained poison"), dmgSplit=[100, 0],
+  goal=L("O truque dos mapas: o Weapon Set 2 tem SÓ nós de Remnant. Entre em qualquer área com o Set 2 (Talisman em Wolf Form deixa óbvio) e troque para o Set 1 — os nós ficam 'snapshotados' a área inteira. Esqueceu? Relog ou saia e entre. 3ª ascendência: Chayula's Gift (Chaos Resistance dobrada, +10% máxima). Ghost Dance substitui o Pounce quando sobrar Spirit. Fork no Poisonburst. Peito de Evasão alta e capacete de ES pura para Subterfuge Mask.",
+         "The maps trick: Weapon Set 2 has ONLY Remnant nodes. Enter any area with Set 2 (a Talisman in Wolf Form makes it obvious) and swap to Set 1 — the nodes stay 'snapshotted' for the whole area. Forgot? Relog or leave and re-enter. 3rd ascendancy: Chayula's Gift (Chaos Resistance doubled, +10% max). Ghost Dance replaces Pounce when Spirit allows. Fork on Poisonburst. High Evasion chest and pure ES helmet for Subterfuge Mask."),
+  rotation=[L("Entre na área com o Set 2 → troque para o Set 1", "Enter the area on Set 2 → swap to Set 1"), L("Poisonburst Arrow até o Plague Bearer encher", "Poisonburst Arrow until Plague Bearer fills"), L("Boss: Vine Arrow → Toxic Growth → Plague Bearer → Toxic Growth", "Boss: Vine Arrow → Toxic Growth → Plague Bearer → Toxic Growth")],
+  gems=[
+   G("Poisonburst Arrow", ["Bleed III", "Bursting Plague", "Escalating Poison", "Deadly Poison II", "Fork"], L("Clear fora da tela", "Off-screen clear"), L("Fork.", "Fork."), "free"),
+   G("Toxic Growth", ["Concentrated Area", "Escalating Poison", "Deadly Poison II", "Long Fuse II", "Arakaali's Lust"], L("Alvo único", "Single target"), L("Arakaali's Lust: lineage barata.", "Arakaali's Lust: cheap lineage."), "free"),
+   G("Vine Arrow", ["Prolonged Duration II", "Deliberation", "Swift Affliction II", "Magnified Area II", "Stoicism II"], L("Abre o boss", "Opens the boss"), L("Mesmo papel.", "Same role."), "free"),
+   G("Plague Bearer", ["Chaos Mastery", "Astral Projection", "Deadly Poison II", "Exploit Weakness", "Magnified Area II"], L("Burst à distância", "Ranged burst"), L("Astral Projection: à distância.", "Astral Projection: ranged."), "core", 1, SP30),
+   G("Herald of Blood", ["Poison III", "Bursting Plague", "Bleed III", "Magnified Area II", "Admixture"], L("Explosões", "Explosions"), L("30 Spirit.", "30 Spirit."), "core", 2, SP30),
+   G("Herald of Plague", ["Chaos Mastery"], L("Espalha veneno", "Spreads poison"), L("30 Spirit.", "30 Spirit."), "core", 3, SP30),
+   G("Wind Dancer", ["Rage II", "Maim", "Blind II", "Life Leech III"], L("Defesa", "Defence"), L("30 Spirit.", "30 Spirit."), "core", 4, SP30),
+   G("Ghost Dance", ["Cooldown Recovery II"], L("Recuperação", "Recovery"), L("Ghost Shrouds recuperam ES pela Evasão. Qualidade reduz o custo.", "Ghost Shrouds recover ES based on Evasion. Quality lowers the cost."), "opt", 1, SP30),
+   G("Blasphemy", ["Repulsion", "Magnified Area II", "Bleed III", "Living Lightning II"], L("Repulsion", "Repulsion"), L("Boss: troque Repulsion por Despair.", "Bosses: swap Repulsion for Despair."), "opt", 2, L("Confira no jogo", "Check in game")),
+   G("Into the Breach", ["Harmonic Remnants II", "Remnant Potency III", "Khatal's Rejuvenation"], L("Chamas roxas", "Purple flames"), L("Khatal's: cooldown do Ghost Dance.", "Khatal's: Ghost Dance cooldown."), "free"),
+  ],
+  cheap=[L("Talisman no Set 2 (Hysseg's Claw)", "Talisman on Set 2 (Hysseg's Claw)"), "Nascent Hope", "Ngamahu's Chosen"],
+  full=[L("Obliterator Bow + Countess Seske's Rune of Archery + Idol of Thruldana", "Obliterator Bow + Countess Seske's Rune of Archery + Idol of Thruldana"), L("Primed Quiver", "Primed Quiver"), L("Remnant effect em anéis/amuleto (Omen of the Liege)", "Remnant effect on rings/amulet (Omen of the Liege)")],
+  stats=[L("+ nível de projéteis", "+ projectile levels"), L("Dano plano em anéis, luvas e aljava", "Flat damage on rings, gloves and quiver"), L("Remnant effect", "Remnant effect"), L("Evasão/ES e Spirit", "Evasion/ES and Spirit")],
+  tree=L("Set 2: só nós de Remnant (Remnant Attraction primeiro). Set 1: dano (Master Fletching). Defesa: Subterfuge Mask.", "Set 2: only Remnant nodes (Remnant Attraction first). Set 1: damage (Master Fletching). Defence: Subterfuge Mask."),
+  avoid=[L("Entrar no mapa com o Set 1", "Entering the map on Set 1")],
+  exit=[L("3ª ascendência: Chayula's Gift", "3rd ascendancy: Chayula's Gift"), L("Breach: matar Tul e Esh", "Breach: kill Tul and Esh")]),
+
+ dict(id="archon", name=L("Archon de Chayula", "Archon of Chayula"), lv=[80, 89], tag=L("Tornados de caos", "Chaos tornadoes"),
+  carry=L("Você + tornados do Archon", "You + Archon tornadoes"), dmgSplit=[70, 30],
+  goal=L("Complete a questline do Breach (Tul e Esh) e pegue Archon of Chayula no último Trial. Ganhe Glory causando caos (cerca de 1 segundo) e vire o Archon: 20% more dano físico e de caos e tornados de caos que aplicam Wither e explodem as pústulas da Toxic Growth assim que nascem. Depois do buff há 20 s de bloqueio — o instill oculto Dominion remove o bloqueio (buff menor). Capacete com Cyclonic Alloy melhora o uptime.",
+         "Finish the Breach questline (Tul and Esh) and take Archon of Chayula on the last Trial. Build Glory by dealing chaos (about 1 second) and become the Archon: 20% more physical and chaos damage and chaos tornadoes that apply Wither and pop Toxic Growth pustules as they spawn. After the buff there's a 20 s lockout — the hidden Dominion instill removes it (smaller buff). A Cyclonic Alloy helmet improves uptime."),
+  rotation=[L("Archon of Chayula sempre que disponível", "Archon of Chayula whenever available"), L("Vine Arrow algumas vezes", "Vine Arrow a few times"), L("Toxic Growth a cada dois ataques (os tornados detonam)", "Toxic Growth every other attack (tornadoes detonate)"), L("Plague Bearer", "Plague Bearer"), L("Muito dano no Archon: spam de Toxic Growth", "Very high Archon damage: spam Toxic Growth")],
+  gems=[
+   G("Archon of Chayula", ["Prolonged Duration II", "Magnified Area II", "Poison III", "Withering Touch", "Corrosion"], L("Buff + tornados", "Buff + tornadoes"), L("Poison III detona as pústulas.", "Poison III detonates pustules."), "free"),
+   G("Poisonburst Arrow", ["Bleed III", "Bursting Plague", "Escalating Poison", "Deadly Poison II", "Fork"], L("Clear", "Clear"), L("Mesmo papel.", "Same role."), "free"),
+   G("Toxic Growth", ["Concentrated Area", "Escalating Poison", "Deadly Poison II", "Long Fuse II", "Arakaali's Lust"], L("Alvo único", "Single target"), L("Mesmo papel.", "Same role."), "free"),
+   G("Vine Arrow", ["Prolonged Duration II", "Deliberation", "Swift Affliction II", "Magnified Area II", "Stoicism II"], L("Abre o boss", "Opens the boss"), L("Mesmo papel.", "Same role."), "free"),
+   G("Plague Bearer", ["Chaos Mastery", "Astral Projection", "Deadly Poison II", "Exploit Weakness", "Magnified Area II"], L("Burst", "Burst"), L("30 Spirit.", "30 Spirit."), "core", 1, SP30),
+   G("Herald of Blood", ["Poison III", "Bursting Plague", "Bleed III", "Magnified Area II", "Admixture"], L("Explosões", "Explosions"), L("30 Spirit.", "30 Spirit."), "core", 2, SP30),
+   G("Herald of Plague", ["Chaos Mastery"], L("Espalha veneno", "Spreads poison"), L("30 Spirit.", "30 Spirit."), "core", 3, SP30),
+   G("Wind Dancer", ["Rage II", "Maim", "Blind II", "Life Leech III"], L("Defesa", "Defence"), L("30 Spirit.", "30 Spirit."), "core", 4, SP30),
+   G("Ghost Dance", ["Cooldown Recovery II"], L("Recuperação", "Recovery"), L("30 Spirit.", "30 Spirit."), "core", 5, SP30),
+   G("Blasphemy", ["Repulsion", "Magnified Area II", "Bleed III", "Living Lightning II"], L("Repulsion", "Repulsion"), L("Boss: Despair.", "Bosses: Despair."), "opt", 1, L("Confira no jogo", "Check in game")),
+   G("Into the Breach", ["Harmonic Remnants II", "Remnant Potency III", "Khatal's Rejuvenation"], L("Chamas roxas", "Purple flames"), L("Mesmo papel.", "Same role."), "free"),
+  ],
+  cheap=[L("Capacete de ES com Cyclonic Alloy", "ES helmet with Cyclonic Alloy"), L("Rune of Reach no capacete", "Rune of Reach in the helmet")],
+  full=[L("Instill Dominion no amuleto", "Dominion instill on the amulet"), "The Fall of the Axe"],
+  stats=[L("Dano de caos", "Chaos damage"), L("Duração (tornados)", "Duration (tornadoes)"), L("Chaos Resistance (dobrada)", "Chaos Resistance (doubled)")],
+  tree=L("4ª ascendência: Archon of Chayula. Spectral Ward com Evasão/ES.", "4th ascendancy: Archon of Chayula. Spectral Ward with Evasion/ES."),
+  avoid=[L("Lançar Toxic Growth sem parar fora do Archon", "Nonstop Toxic Growth outside Archon")],
+  exit=[L("Archon + rotação de boss", "Archon + boss rotation"), L("~40% de crítico para o min-max", "~40% crit for min-max")]),
+
+ dict(id="max", name=L("Min-max: crítico", "Min-max: crit"), lv=[90, 100], tag=L("Garukhan's Resolve + Mageblood", "Garukhan's Resolve + Mageblood"),
+  carry=L("Você crítico + Archon", "Crit you + Archon"), dmgSplit=[65, 35],
+  goal=L("Para o min-max a build vira crítico: meta de 50% de chance (capacete, aljava, amuleto e jewels) para Garukhan's Resolve na Toxic Growth. Absent Amulet com implicit de Eternal Rage libera Tacati's Ire; Her Declaration no Ghost Dance. Time-Lost Emerald de raio grande perto de Dizzying Hits/Stupefy com crítico. Craiceann's Rune of Warding + The Hollowkeeper = imune a curses. Mageblood (ou Headhunter) e Rite of Passage (Cat; Serpent é a alternativa barata).",
+         "For min-max the build goes crit: 50% chance goal (helmet, quiver, amulet and jewels) for Garukhan's Resolve on Toxic Growth. An Absent Amulet with the Eternal Rage implicit enables Tacati's Ire; Her Declaration on Ghost Dance. A large-radius Time-Lost Emerald near Dizzying Hits/Stupefy with crit. Craiceann's Rune of Warding + The Hollowkeeper = curse immune. Mageblood (or Headhunter) and Rite of Passage (Cat; Serpent is the cheap alternative)."),
+  rotation=[L("Archon of Chayula", "Archon of Chayula"), L("Vine Arrow x2", "Vine Arrow x2"), L("Toxic Growth → Plague Bearer → Toxic Growth", "Toxic Growth → Plague Bearer → Toxic Growth")],
+  gems=[
+   G("Archon of Chayula", ["Prolonged Duration II", "Magnified Area II", "Poison III", "Withering Touch", "Uul-Netol's Embrace"], L("Buff + tornados", "Buff + tornadoes"), L("Uul-Netol's: Armour Break.", "Uul-Netol's: Armour Break."), "free"),
+   G("Toxic Growth", ["Concentrated Area", "Deadly Poison II", "Long Fuse II", "Arakaali's Lust", "Garukhan's Resolve"], L("Alvo único crítico", "Crit single target"), L("Garukhan's só com ~50% de crítico.", "Garukhan's only at ~50% crit."), "free"),
+   G("Poisonburst Arrow", ["Bleed III", "Bursting Plague", "Escalating Poison", "Deadly Poison II", "Fork"], L("Clear", "Clear"), L("Mesmo papel.", "Same role."), "free"),
+   G("Vine Arrow", ["Prolonged Duration II", "Deliberation", "Swift Affliction II", "Magnified Area II", "Stoicism II"], L("Abre o boss", "Opens the boss"), L("Mesmo papel.", "Same role."), "free"),
+   G("Plague Bearer", ["Astral Projection", "Tacati's Ire", "Vorana's Siege", "Deadly Poison II", "Exploit Weakness"], L("Burst", "Burst"), L("Tacati's Ire com Rage do Absent Amulet.", "Tacati's Ire with Rage from Absent Amulet."), "core", 1, SP30),
+   G("Herald of Blood", ["Poison III", "Bursting Plague", "Bleed III", "Magnified Area II", "Admixture"], L("Explosões", "Explosions"), L("30 Spirit.", "30 Spirit."), "core", 2, SP30),
+   G("Herald of Plague", ["Chaos Mastery"], L("Espalha veneno", "Spreads poison"), L("30 Spirit.", "30 Spirit."), "core", 3, SP30),
+   G("Wind Dancer", ["Rage II", "Maim", "Blind II", "Life Leech III"], L("Defesa", "Defence"), L("30 Spirit.", "30 Spirit."), "core", 4, SP30),
+   G("Ghost Dance", ["Cooldown Recovery II", "Her Declaration"], L("Recuperação", "Recovery"), L("Her Declaration fica mais barata aqui.", "Her Declaration is cheaper here."), "core", 5, SP30),
+   G("Blasphemy", ["Repulsion", "Magnified Area II", "Bleed III", "Living Lightning II", "Poison III"], L("Repulsion", "Repulsion"), L("Mesmo papel.", "Same role."), "opt", 1, L("Confira no jogo", "Check in game")),
+   G("Into the Breach", ["Harmonic Remnants II", "Remnant Potency III", "Khatal's Rejuvenation"], L("Chamas roxas", "Purple flames"), L("Mesmo papel.", "Same role."), "free"),
+  ],
+  cheap=[L("Absent Amulet (Eternal Rage) com Spirit e + projéteis", "Absent Amulet (Eternal Rage) with Spirit and + projectiles"), "The Fall of the Axe", "Nascent Hope"],
+  full=["Mageblood", "Rite of Passage", L("Time-Lost Emerald (raio grande)", "Time-Lost Emerald (large radius)")],
+  stats=[L("Chance de crítico até 50%", "Crit chance up to 50%"), L("Onslaught ao matar no arco", "Onslaught on kill on the bow"), L("Movement speed", "Movement speed")],
+  tree=L("Notables de crítico: Heartstopping, Heartbreaking, Struck Through, True Strike, For the Jugular. Defesa: Enhanced Reflexes, Beastial Skin.", "Crit notables: Heartstopping, Heartbreaking, Struck Through, True Strike, For the Jugular. Defence: Enhanced Reflexes, Beastial Skin."),
+  avoid=[L("Garukhan's Resolve abaixo de 50% de crítico", "Garukhan's Resolve below 50% crit"), L("Mageblood sem Diamond Flask sem 50% de crítico", "Mageblood without Diamond Flask when under 50% crit")],
+  exit=[L("Pinnacles e mapas juiced", "Pinnacles and juiced maps")]),
+]
+PH = {p["id"]: p for p in PHASES}
+
+BOX = {
+ "a2": ("1", [L("Toxic Growth por vez", "Toxic Growth at a time")], L("Relançar antes das pústulas explodirem destrói as antigas.", "Recasting before the pustules explode destroys the old ones.")),
+ "a3": ("100%", [L("Plague Bearer", "Plague Bearer")], L("Ative o Plague Bearer só com 100% guardado.", "Activate Plague Bearer only at 100% stored.")),
+ "maps": ("Set 2", [L("ao entrar na área", "when entering the area")], L("Entre com o Set 2, troque para o Set 1: os nós de Remnant ficam ativos.", "Enter on Set 2, swap to Set 1: Remnant nodes stay active.")),
+ "archon": ("20 s", [L("bloqueio do Archon", "Archon lockout")], L("Depois do buff, 20 s até poder usar de novo (Dominion remove).", "After the buff, 20 s before reuse (Dominion removes it).")),
+ "max": ("50%", [L("chance de crítico", "crit chance")], L("Meta para Garukhan's Resolve.", "Goal for Garukhan's Resolve.")),
+}
+SPIRIT_NOTE = {
+ "a1": L("Herald of Blood (30).", "Herald of Blood (30)."),
+ "a3": L("Herald of Blood (30) + Plague Bearer (30).", "Herald of Blood (30) + Plague Bearer (30)."),
+ "a4": L("+ Herald of Plague (30), Wind Dancer (30); Blasphemy com Spirit do equipamento.", "+ Herald of Plague (30), Wind Dancer (30); Blasphemy with gear Spirit."),
+ "maps": L("Ordem: Plague Bearer → Herald of Blood → Herald of Plague → Wind Dancer → Ghost Dance → Blasphemy.", "Order: Plague Bearer → Herald of Blood → Herald of Plague → Wind Dancer → Ghost Dance → Blasphemy."),
+ "archon": L("Cinco buffs de 30 (150) + Blasphemy: peito e amuleto com Spirit alto.", "Five 30-Spirit buffs (150) + Blasphemy: chest and amulet with high Spirit."),
+ "max": L("+ Her Declaration no Ghost Dance.", "+ Her Declaration on Ghost Dance."),
+}
+for pid, (n, types, note) in BOX.items():
+    PH[pid]["skeletons"] = {"n": n, "types": types, "note": note}
+for pid, note in SPIRIT_NOTE.items():
+    PH[pid]["spiritNote"] = note
+
+MILESTONES = {
+ 1: L("Poisonburst Arrow + Vine Arrow.", "Poisonburst Arrow + Vine Arrow."),
+ 10: L("King in the Mists (+30): Herald of Blood com Bleed I e Bursting Plague.", "King in the Mists (+30): Herald of Blood with Bleed I and Bursting Plague."),
+ 14: L("Toxic Growth + Concentrated Area.", "Toxic Growth + Concentrated Area."),
+ 24: L("1ª ascendência: Waking Dream (chamas de Chayula).", "1st ascendancy: Waking Dream (Flames of Chayula)."),
+ 35: L("Azak Bog (+30): Plague Bearer. Notables de veneno.", "Azak Bog (+30): Plague Bearer. Poison notables."),
+ 40: L("2ª ascendência: Choice of Power. Runeforge o Splinterheart.", "2nd ascendancy: Choice of Power. Runeforge Splinterheart."),
+ 50: L("Herald of Plague; Blasphemy + Repulsion com Spirit no equipamento.", "Herald of Plague; Blasphemy + Repulsion with gear Spirit."),
+ 62: L("Lythara (+40 Spirit). Wind Dancer.", "Lythara (+40 Spirit). Wind Dancer."),
+ 65: L("Talisman no Set 2: snapshot dos nós de Remnant.", "Talisman on Set 2: Remnant node snapshot."),
+ 68: L("3ª ascendência: Chayula's Gift. Fork no Poisonburst.", "3rd ascendancy: Chayula's Gift. Fork on Poisonburst."),
+ 72: L("Ghost Dance no lugar do Pounce. Obliterator Bow + runas.", "Ghost Dance instead of Pounce. Obliterator Bow + runes."),
+ 80: L("Breach (Tul e Esh) → Archon of Chayula.", "Breach (Tul and Esh) → Archon of Chayula."),
+ 90: L("Min-max crítico: Garukhan's Resolve, Absent Amulet, Mageblood.", "Crit min-max: Garukhan's Resolve, Absent Amulet, Mageblood."),
+}
+
+ASCENDANCY = [
+ dict(order=1, key="waking", node="Waking Dream", when=L("1º Trial (~nível 24)", "1st Trial (~level 24)"), text=L("Concede Into the Breach: chamas de Chayula nascem em volta de você como Remnants.", "Grants Into the Breach: Flames of Chayula spawn around you as Remnants."), why=L("Roxa = 7% do dano como caos; vermelha = leech de vida; azul = leech de mana.", "Purple = 7% of damage as chaos; red = life leech; blue = mana leech.")),
+ dict(order=2, key="lucid", node="Lucid Dreaming", when=L("2º Trial (~nível 40)", "2nd Trial (~level 40)"), text=L("Libera a escolha entre Choice of Power, Mana e Life.", "Unlocks the choice between Choice of Power, Mana and Life."), why=L("Caminho para Choice of Power.", "Path to Choice of Power.")),
+ dict(order=3, key="power", node="Choice of Power", when=L("2º Trial (~nível 40)", "2nd Trial (~level 40)"), text=L("Remnants 50% mais fortes e coletadas 50% mais longe; todas as chamas são roxas.", "Remnants 50% stronger and collected 50% further; all flames are purple."), why=L("O maior multiplicador da build.", "The build's biggest multiplier.")),
+ dict(order=4, key="gift", node="Chayula's Gift", when=L("3º Trial (~nível 68)", "3rd Trial (~level 68)"), text=L("+10% Chaos Resistance máxima; Chaos Resistance dobrada.", "+10% maximum Chaos Resistance; Chaos Resistance doubled."), why=L("Caos no cap fácil e caminho para o Archon.", "Easy chaos cap and path to Archon.")),
+ dict(order=5, key="archon", node="Archon of Chayula", when=L("4º Trial + Breach (~nível 80)", "4th Trial + Breach (~level 80)"), text=L("Concede Archon of Chayula.", "Grants Archon of Chayula."), why=L("20% more físico e caos + tornados com Wither que detonam pústulas.", "20% more physical and chaos + Wither tornadoes that pop pustules.")),
+]
+ASC_UNLOCK = [24, 40, 40, 68, 80]
+
+KEY_PASSIVES = [
+ dict(node="Choice of Power", type=L("Ascendência", "Ascendancy"), text=L("Todas as chamas roxas, 50% mais efeito.", "All flames purple, 50% more effect."), when="40+", why=L("Dano como caos multiplicado.", "Multiplied damage as chaos.")),
+ dict(node="Subterfuge Mask", type="Notable", text=L("Defesa com capacete de ES pura.", "Defence with a pure ES helmet."), when="65+", why=L("Pede capacete só de ES.", "Needs an ES-only helmet.")),
+ dict(node="Master Fletching", type="Notable", text=L("Dano de arco no Set 1.", "Bow damage on Set 1."), when="65+", why=L("Set 1 = dano.", "Set 1 = damage.")),
+ dict(node="The Hollowkeeper", type="Notable", text=L("Com Craiceann's Rune of Warding: imune a curses.", "With Craiceann's Rune of Warding: curse immune."), when="45+", why=L("Pede First Teachings of the Keeper e First Principle of the Hollow.", "Requires First Teachings of the Keeper and First Principle of the Hollow.")),
+]
+TREE_STAGES = [
+ dict(lv="1–29", focus=L("increased Damage", "increased Damage"), dmg="Poisonburst + Toxic Growth", **{"def": L("Vida + resist", "Life + resist")}, spirit="Herald of Blood", dont=L("Relançar Toxic Growth", "Recasting Toxic Growth")),
+ dict(lv="30–64", focus=L("Notables de veneno", "Poison notables"), dmg="Plague Bearer + Heralds", **{"def": L("Evasão/ES", "Evasion/ES")}, spirit="PB, HoB, HoP", dont=L("Blasphemy sem Int", "Blasphemy without Int")),
+ dict(lv="65–89", focus=L("Set 2 = Remnants", "Set 2 = Remnants"), dmg="Archon of Chayula", **{"def": "Subterfuge Mask · Spectral Ward"}, spirit="+ Wind Dancer, Ghost Dance", dont=L("Entrar no mapa no Set 1", "Entering maps on Set 1")),
+ dict(lv="90–100", focus=L("Crítico", "Crit"), dmg="Garukhan's Resolve", **{"def": "Enhanced Reflexes · Beastial Skin"}, spirit="Her Declaration", dont=L("Crítico abaixo de 50%", "Crit below 50%")),
+]
+
+UNIQUES = [
+ U("Splinterheart", L("Arco", "Bow"), L("Arma", "Weapon"), "a1", L("% dano físico, precisão, velocidade de projétil e projéteis se dividem para +2 alvos.", "% physical damage, accuracy, projectile speed and projectiles split towards +2 targets."), L("Melhor arco do leveling; runeforge no 40 e dura até os mapas.", "Best leveling bow; runeforge at 40 and it lasts into maps."), L("Arco rare com físico.", "Rare physical bow.")),
+ U("Blackheart", L("Anel", "Ring"), L("Acessório", "Accessory"), "a2", L("Regen de vida, caos adicionado a ataques, Armour aplica a caos.", "Life regen, added chaos to attacks, Armour applies to chaos."), L("Anel barato do leveling.", "Cheap leveling ring."), L("Anel com dano plano.", "Ring with flat damage.")),
+ U("Amor Mandragora", L("Talisman (Set 2)", "Talisman (Set 2)"), L("Arma", "Weapon"), "a2", L("Físico adicionado, Inteligência, duração de skill, Hinder na Presence.", "Added physical, Intelligence, skill duration, Hinder in Presence."), L("Talisman do Set 2 no leveling (Pounce).", "Set 2 leveling talisman (Pounce)."), "Hysseg's Claw"),
+ U("Hysseg's Claw", L("Talisman (Set 2)", "Talisman (Set 2)"), L("Arma", "Weapon"), "maps", L("% físico, 5% movement speed, atributos.", "% physical, 5% movement speed, attributes."), L("Set 2 do snapshot (Wolf Form).", "Snapshot Set 2 (Wolf Form)."), L("Qualquer Talisman.", "Any Talisman.")),
+ U("Nascent Hope", "Charm", "Charm", "maps", L("Recarga de ES ao usar; chance de carga ao matar.", "ES recharge on use; charge chance on kill."), L("Defesa de ES.", "ES defence."), "Thawing Charm"),
+ U("Ngamahu's Chosen", "Charm", "Charm", "maps", L("Rage máxima ao usar.", "Maximum Rage on use."), L("Rage barata.", "Cheap Rage."), "Ruby Charm"),
+ U("The Fall of the Axe", "Charm", "Charm", "archon", L("Onslaught durante o efeito.", "Onslaught during effect."), L("Velocidade.", "Speed."), "Silver Charm"),
+ U("Rite of Passage", "Charm", "Charm", "max", L("Possessão por espíritos (Cat, Stag, Boar, Serpent).", "Spirit possession (Cat, Stag, Boar, Serpent)."), L("Cat é o melhor; Serpent é mais barato.", "Cat is best; Serpent is cheaper."), "The Fall of the Axe"),
+ U("Mageblood", L("Cinto", "Belt"), L("Acessório", "Accessory"), "max", L("Legados de flask permanentes.", "Permanent flask legacies."), L("Min-max; Diamond Flask se não tiver 50% de crítico.", "Min-max; Diamond Flask if not at 50% crit."), "Headhunter"),
+ U("Headhunter", L("Cinto", "Belt"), L("Acessório", "Accessory"), "max", L("Ao matar rare, ganha os mods dele por 60 s.", "Killing a rare grants its modifiers for 60 s."), L("Alternativa de luxo para mapas.", "Luxury maps alternative."), L("Cinto rare com vida/resist.", "Rare life/resist belt.")),
+]
+
+GEAR = [
+ dict(slot=L("Arco", "Bow"), cheap="Splinterheart", value=L("Arco de físico runeforged", "Runeforged physical bow"), full=L("Obliterator Bow: físico, crítico, Onslaught ao matar", "Obliterator Bow: physical, crit, Onslaught on kill"), affix=L("% físico; físico plano; + projéteis; flecha adicional", "% physical; flat physical; + projectiles; additional arrow"), note=BOW_RUNE),
+ dict(slot=L("Aljava", "Quiver"), cheap=L("Toxic Quiver com dano plano", "Toxic Quiver with flat damage"), value="Primed Quiver", full=L("Primed Quiver: físico + raio + bow damage + crítico", "Primed Quiver: physical + lightning + bow damage + crit"), affix=L("Dano plano; attack speed", "Flat damage; attack speed"), note=""),
+ dict(slot=L("Talisman (Set 2)", "Talisman (Set 2)"), cheap="Amor Mandragora", value="Hysseg's Claw", full="Hysseg's Claw", affix=L("Só para o snapshot", "Snapshot only"), note=L("Wolf Form.", "Wolf Form.")),
+ dict(slot=L("Capacete", "Helmet"), cheap=L("Vida + resist", "Life + resist"), value=L("ES pura (Subterfuge Mask)", "Pure ES (Subterfuge Mask)"), full=L("ES + crítico + Cyclonic Alloy", "ES + crit + Cyclonic Alloy"), affix=L("% ES; crítico", "% ES; crit"), note="Rune of Reach"),
+ dict(slot="Body Armour", cheap=L("Evasão/ES", "Evasion/ES"), value=L("Evasão alta + Spirit", "High Evasion + Spirit"), full=L("Evasão + Spirit 55+ + Chaos Resistance", "Evasion + 55+ Spirit + Chaos Resistance"), affix=L("Spirit; % Evasão; Deflection", "Spirit; % Evasion; Deflection"), note="Craiceann's Rune of Warding"),
+ dict(slot=L("Luvas", "Gloves"), cheap=L("Dano plano", "Flat damage"), value=L("Físico + raio plano", "Flat physical + lightning"), full=L("Físico + raio + attack speed ('Marksman': + projéteis)", "Physical + lightning + attack speed ('Marksman': + projectiles)"), affix=L("Dano plano; attack speed", "Flat damage; attack speed"), note=""),
+ dict(slot=L("Botas", "Boots"), cheap=L("Movement Speed", "Movement Speed"), value=L("30% MS + Evasão/ES", "30% MS + Evasion/ES"), full=L("30% MS + Deflection", "30% MS + Deflection"), affix=L("MS; ES; resist", "MS; ES; resist"), note="Farrul's Rune of the Chase"),
+ dict(slot=L("Amuleto", "Amulet"), cheap=L("Spirit + vida", "Spirit + life"), value=L("Spirit + remnant effect", "Spirit + remnant effect"), full=L("Absent Amulet: Spirit, +3 projéteis, crítico", "Absent Amulet: Spirit, +3 projectiles, crit"), affix=L("Spirit; + projéteis; remnant effect", "Spirit; + projectiles; remnant effect"), note=L("Instill: Serrated Edges (barato) ou Dominion.", "Instill: Serrated Edges (cheap) or Dominion.")),
+ dict(slot=L("Anéis", "Rings"), cheap="Blackheart", value=L("Físico plano + resist", "Flat physical + resist"), full=L("Físico plano + remnant effect (Liege)", "Flat physical + remnant effect (Liege)"), affix=L("Dano plano; remnant effect; resist", "Flat damage; remnant effect; resist"), note=""),
+ dict(slot=L("Cinto", "Belt"), cheap=L("Vida + resist", "Life + resist"), value=L("Vida + resist + charm slots", "Life + resist + charm slots"), full="Mageblood · Headhunter", affix=L("Vida; resist", "Life; resist"), note=""),
+ dict(slot="Charms", cheap="Thawing · Silver · Ruby", value="Nascent Hope · Ngamahu's Chosen", full="Rite of Passage · The Fall of the Axe", affix="", note=""),
+]
+BUY_ORDER = [
+ dict(p=1, item="Splinterheart", phase="1–64", cost=L("Barato", "Cheap"), impact=L("Dano do leveling", "Leveling damage")),
+ dict(p=2, item=L("Dano plano em anéis/luvas/aljava", "Flat damage on rings/gloves/quiver"), phase="1+", cost=L("Barato", "Cheap"), impact=L("Todo o dano", "All damage")),
+ dict(p=3, item=L("Spirit no peito e amuleto", "Spirit on chest and amulet"), phase="45+", cost=L("Valor", "Value"), impact=L("Heralds + Blasphemy", "Heralds + Blasphemy")),
+ dict(p=4, item="Hysseg's Claw", phase="65+", cost=L("Barato", "Cheap"), impact="Snapshot"),
+ dict(p=5, item=L("Obliterator Bow + Seske + Thruldana", "Obliterator Bow + Seske + Thruldana"), phase="70+", cost=L("Valor", "Value"), impact=L("Clear e boss", "Clear and boss")),
+ dict(p=6, item=L("Absent Amulet", "Absent Amulet"), phase="90+", cost=L("Valor", "Value"), impact="Tacati's Ire"),
+ dict(p=7, item="Mageblood · Rite of Passage", phase="90+", cost=L("Luxo", "Luxury"), impact="Min-max"),
+]
+
+TRICKS = [
+ {"cat": "Snapshot", "lvl": L("Médio", "Medium"), "title": L("Nós de Remnant de graça", "Free Remnant nodes"), "body": L("Coloque só nós de Remnant no Weapon Set 2. Entrar numa área com o Set 2 fixa esses nós para a área inteira; troque para o Set 1 e jogue. Faça uma tecla só para trocar de set.", "Put only Remnant nodes on Weapon Set 2. Entering an area on Set 2 locks those nodes for the whole area; swap to Set 1 and play. Bind a key just for swapping sets.")},
+ {"cat": "Toxic Growth", "lvl": L("Fácil", "Easy"), "title": L("Uma de cada vez", "One at a time"), "body": L("Relançar a Toxic Growth destrói as pústulas antigas. Espere explodirem — exceto no Archon com muito dano, quando os tornados detonam na hora.", "Recasting Toxic Growth destroys the old pustules. Wait for them to explode — except on Archon with high damage, when tornadoes detonate them instantly.")},
+ {"cat": "Herald of Blood", "lvl": L("Médio", "Medium"), "title": L("Corrente que se alimenta", "Self-feeding chain"), "body": L("A explosão do Herald of Blood não sangra, mas a do Bursting Plague sim. Com Bleed nos dois, cada morte gera outra.", "Herald of Blood's explosion doesn't bleed, but Bursting Plague's does. With Bleed on both, every kill creates another.")},
+ {"cat": "Repulsion", "lvl": L("Médio", "Medium"), "title": L("Living Lightning ativa sozinho", "Living Lightning triggers itself"), "body": L("Qualquer hit de raio cria minions de Living Lightning, que ativam a Repulsion. Dano plano de raio em aljava/luvas faz tudo funcionar.", "Any lightning hit creates Living Lightning minions, which proc Repulsion. Flat lightning damage on quiver/gloves makes it all work.")},
+ {"cat": "Archon", "lvl": L("Avançado", "Advanced"), "title": L("Dominion", "Dominion"), "body": L("O instill oculto Dominion no amuleto remove o bloqueio de 20 s do Archon (buff menor): uptime de 100%.", "The hidden Dominion instill on the amulet removes Archon's 20 s lockout (smaller buff): 100% uptime.")},
+ {"cat": "Remnants", "lvl": L("Médio", "Medium"), "title": L("Efeito das chamas", "Flame effect"), "body": L("Remnant effect em anéis/amuleto (Omen of the Liege + Preserved Collarbone: prefixo do Amanamu), Rune of Reach no capacete e Remnant Potency III somam no buff roxo.", "Remnant effect on rings/amulet (Omen of the Liege + Preserved Collarbone: Amanamu prefix), Rune of Reach in the helmet and Remnant Potency III all add to the purple buff.")},
+ {"cat": L("Boss", "Boss"), "lvl": L("Fácil", "Easy"), "title": L("Despair no boss", "Despair on bosses"), "body": L("Para bosses difíceis, troque Repulsion por Despair no Blasphemy.", "For hard bosses, swap Repulsion for Despair in Blasphemy.")},
+ {"cat": L("Arco", "Bow"), "lvl": L("Médio", "Medium"), "title": L("Terceira flecha", "Third arrow"), "body": L("Countess Seske's Rune of Archery dá uma flecha; busque 100% de Surpassing chance (arco + árvore) para a terceira — mira muito melhor.", "Countess Seske's Rune of Archery gives one arrow; aim for 100% Surpassing chance (bow + tree) for a third — much better targeting.")},
+]
+
+TROUBLESHOOT = [
+ (L("Pouco dano no boss", "Low boss damage"), L("Concentrated Area na Toxic Growth? Está relançando antes de explodirem? Falta dano plano em anéis/aljava/luvas? Esses são os três culpados segundo o Goratha.", "Concentrated Area on Toxic Growth? Recasting before they explode? Missing flat damage on rings/quiver/gloves? Those are the three culprits according to Goratha.")),
+ (L("Chamas roxas fracas no mapa", "Weak purple flames in maps"), L("Você entrou com o Set 1. Relog ou saia e entre com o Set 2.", "You entered on Set 1. Relog or leave and re-enter on Set 2.")),
+ (L("Não consigo usar o Archon", "I can't use Archon"), L("Precisa matar Tul e Esh na questline do Breach, ter o nó e Glory cheia. Depois do buff, 20 s de bloqueio.", "You need to kill Tul and Esh in the Breach questline, own the node and have full Glory. After the buff, 20 s lockout.")),
+ (L("Herald of Blood não explode nada", "Herald of Blood explodes nothing"), L("Os inimigos precisam morrer sangrando: Bleed nos supports do Poisonburst e do herald.", "Enemies must die while bleeding: Bleed on Poisonburst's and the herald's supports.")),
+ (L("Faltam atributos", "Short on attributes"), L("Abaixe o nível do Herald of Blood e pegue +atributos em anéis/amuleto.", "Lower Herald of Blood's level and get +attributes on rings/amulet.")),
+]
+
+ATLAS_CHECK = [
+ dict(stage=L("Antes do T1", "Before T1"), goal=L("3 buffs de Spirit · Choice of Power", "3 Spirit buffs · Choice of Power"), gear="Splinterheart"),
+ dict(stage="T1–T10", goal=L("Snapshot do Set 2 · Chayula's Gift", "Set 2 snapshot · Chayula's Gift"), gear="Hysseg's Claw"),
+ dict(stage="T11–T15", goal=L("Breach: Tul e Esh", "Breach: Tul and Esh"), gear=L("Obliterator Bow + runas", "Obliterator Bow + runes")),
+ dict(stage="Pinnacle", goal=L("Archon + crítico 50%", "Archon + 50% crit"), gear="Absent Amulet · Mageblood"),
+]
+
+CRAFT = [
+ L("Remnant effect: Omen of the Liege + Preserved Collarbone em anéis/amuleto (prefixo do Amanamu).", "Remnant effect: Omen of the Liege + Preserved Collarbone on rings/amulet (Amanamu prefix)."),
+ L("Capacete: craft com Cyclonic Alloy para mais uptime do Archon.", "Helmet: craft with Cyclonic Alloy for more Archon uptime."),
+ L("Arco: Idol of Thruldana (+1 limite de veneno) e Countess Seske's Rune of Archery.", "Bow: Idol of Thruldana (+1 poison cap) and Countess Seske's Rune of Archery."),
+]
+
+T("item", "Splinterheart", 1, L("Confira o nível no item", "Check the level on the item"), L("Leveling; runeforge no 40.", "Leveling; runeforge at 40."), L("Projéteis se dividem.", "Projectiles split."), "—", L("Arco rare com físico.", "Rare physical bow."))
+T("asc", "Choice of Power", 40, L("2º Trial", "2nd Trial"), L("Assim que possível.", "As soon as possible."), L("Todas as chamas roxas.", "All flames purple."), "—", "—")
+T("item", "Hysseg's Claw", 1, L("Confira o nível no item", "Check the level on the item"), L("Mapas (Set 2).", "Maps (Set 2)."), L("Snapshot dos nós de Remnant.", "Remnant node snapshot."), "—", L("Qualquer Talisman.", "Any Talisman."))
+T("asc", "Archon of Chayula", 80, L("4º Trial + Breach", "4th Trial + Breach"), L("Depois de Tul e Esh.", "After Tul and Esh."), L("Tornados e 20% more.", "Tornadoes and 20% more."), "—", "—")
+T("skill", "Garukhan's Resolve", 90, L("Lineage", "Lineage"), L("Com ~50% de crítico.", "At ~50% crit."), L("Muito dano na Toxic Growth.", "Huge Toxic Growth damage."), L("Abaixo de 50% não compensa.", "Below 50% it's not worth it."), "—")
+T("item", "Mageblood", 1, L("Confira o nível no item", "Check the level on the item"), L("Min-max.", "Min-max."), L("Legados permanentes.", "Permanent legacies."), "—", "Headhunter")
+
+CASES = [
+ (L("Ato 1 muito lento", "Act 1 too slow"), L("Suba com granadas ou Twister até o 14 e troque quando pegar a Toxic Growth.", "Level with grenades or Twister until 14 and swap once you get Toxic Growth.")),
+ (L("E se o snapshot for corrigido?", "What if snapshotting gets fixed?"), L("Pegue 'remnant pickup further' no equipamento e na árvore: a build continua funcionando, com menos dano.", "Get 'remnant pickup further' on gear and tree: the build still works, with less damage.")),
+ (L("Sem crítico no min-max", "No crit for min-max"), L("Fique na fase Archon (não crítica) e use Diamond Flask com Mageblood.", "Stay on the Archon (non-crit) phase and use Diamond Flask with Mageblood.")),
+]
+
+SOURCES = [
+ dict(name="Goratha — Poisonburst Arrow Acolyte of Chayula (Maxroll planner)", use=L("Três perfis (Campaign, Mapping, Min Max), rotações, notas e FAQ", "Three profiles (Campaign, Mapping, Min Max), rotations, notes and FAQ"), url=PLANNER_URL),
+ dict(name="poe.ninja — Acolyte of Chayula (Forbidden Rites)", use=L("Preços e meta", "Prices and meta"), url="https://poe.ninja/poe2/builds/forbiddenrites?class=Acolyte+of+Chayula"),
+ dict(name="Path of Building (PoE2)", use=L("Descrições, Spirit e textos de mods", "Descriptions, Spirit and mod texts"), url="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2"),
+ dict(name="RePoE2", use=L("Nomes e ícones das bases", "Base names and icons"), url="https://repoe-fork.github.io/poe2/"),
+]
+FIXES = [
+ L("O planner tem três perfis; as fases dos Atos 1–2 e dos Interlúdios são cortes da ordem de alocação real do Goratha, e a fase Archon usa o perfil Mapping com a ascendência completa.", "The planner has three profiles; the Act 1–2 and Interlude phases are cuts of Goratha's real allocation order, and the Archon phase uses the Mapping profile with the full ascendancy."),
+ L("O planner foi criado no patch 0.5.4 e está atualizado para 0.5.5; o snapshot do Set 2 é um bug — o app mostra o plano B se for corrigido.", "The planner was created in patch 0.5.4 and updated for 0.5.5; the Set 2 snapshot is a bug — the app shows plan B if it gets fixed."),
+ L("Spirit do Blasphemy depende da curse e não está nos dados: confira no jogo.", "Blasphemy's Spirit depends on the curse and isn't in the data: check in game."),
+]
+
+UI = dict(
+ carry=r"^(Poisonburst Arrow|Toxic Growth|Archon of Chayula)$", box=L("CHAVE", "KEY"), spiritWhat=L("(heralds e buffs)", "(heralds and buffs)"),
+ mechBtn=L("Abrir Chamas & Archon", "Open Flames & Archon"), dmg2=L("Tornados", "Tornadoes"), dmgBar=L("Seu dano / tornados do Archon (aprox.)", "Your damage / Archon tornadoes (approx.)"),
+ dmgLegend=L("Tornados do Archon (proporção aproximada)", "Archon tornadoes (approximate ratio)"),
+ earlyGone=L("Contagion já saiu: passou do nível {u}.", "Contagion is gone: you're past level {u}."),
+ earlyNote=L("Só no começo; sai no nível ~{u}.", "Early only; leaves around level {u}."),
+ treeIntro=L("Árvore real do planner do Goratha. Campanha: dano e veneno. Mapas: Set 2 só com Remnants (snapshot). Min-max: crítico.", "Real tree from Goratha's planner. Campaign: damage and poison. Maps: Set 2 with only Remnants (snapshot). Min-max: crit."),
+ set1=L("dano (arco)", "damage (bow)"), set2=L("Remnants (snapshot)", "Remnants (snapshot)"), asc="Acolyte of Chayula", cls="Monk",
+ respecTip=L("Ao entrar no min-max, a árvore ganha notables de crítico: compare com a fase anterior.", "When entering min-max, the tree gains crit notables: compare with the previous phase."),
+ routeIntro=L("Sete fases: Poisonburst e Herald of Blood no Ato 1, Toxic Growth e chamas de Chayula, Plague Bearer e Choice of Power, heralds e Blasphemy, snapshot nos mapas, Archon e o min-max crítico.", "Seven phases: Poisonburst and Herald of Blood in Act 1, Toxic Growth and Flames of Chayula, Plague Bearer and Choice of Power, heralds and Blasphemy, maps snapshot, Archon and crit min-max."),
+ socketPrio=["Poisonburst Arrow", "Toxic Growth", "Archon of Chayula", "Plague Bearer", "Herald of Blood"],
+ permIntro=L("Nada disso volta depois. Spirit paga os heralds, Plague Bearer, Wind Dancer e Ghost Dance — todos de 30.", "None of this comes back later. Spirit pays for the heralds, Plague Bearer, Wind Dancer and Ghost Dance — all 30 each."),
+ atlasCards=[[L("Breach", "Breach"), L("A questline do Breach (Tul e Esh) libera o Archon of Chayula: priorize no atlas.", "The Breach questline (Tul and Esh) unlocks Archon of Chayula: prioritize it on the atlas.")],
+             [L("Mapas ruins", "Bad maps"), L("Monstros com muita resistência a caos ou reflexo de veneno atrasam o clear. Relog se entrar com o Set errado.", "Monsters with high chaos resistance or poison reflect slow the clear. Relog if you entered on the wrong Set.")]],
+ foot=L("Guia baseado no planner do Goratha (Maxroll), dados do Path of Building e do RePoE2 e preços do poe.ninja", "Guide based on Goratha's planner (Maxroll), Path of Building and RePoE2 data and poe.ninja prices"),
+)
+
+CHAR = dict(
+ intro=L("Marque o que você tem. As recomendações e as abas Skills, Itens, Árvore e Chamas & Archon se adaptam na hora. Tudo fica salvo neste navegador.", "Tick what you have. Recommendations and the Skills, Items, Tree and Flames & Archon tabs adapt instantly. Everything is saved in this browser."),
+ nums=[["spirit", L("Spirit máximo", "Max Spirit"), L("ex.: 150", "e.g. 150")], ["crit", L("Chance de crítico (%)", "Crit chance (%)"), L("ex.: 35", "e.g. 35")], ["chaos", L("Chaos Resistance (%)", "Chaos Resistance (%)"), ""]],
+ tiles=[[L("Spirit reservado", "Spirit reserved"), "used"], [L("Spirit livre", "Spirit free"), "free"], [L("Crítico (%)", "Crit (%)"), "crit"]],
+ buffs=[dict(key="hob", name="Herald of Blood", cost=30), dict(key="pb", name="Plague Bearer", cost=30), dict(key="hop", name="Herald of Plague", cost=30), dict(key="wd", name="Wind Dancer", cost=30), dict(key="gd", name="Ghost Dance", cost=30)],
+ own=[
+  ["gear", "Splinterheart", "Splinterheart"], ["gear", "talisman", L("Talisman no Set 2", "Talisman on Set 2")], ["gear", "obliterator", "Obliterator Bow"], ["gear", "seske", "Countess Seske's Rune of Archery"], ["gear", "thruldana", "Idol of Thruldana"],
+  ["gear", "absent", "Absent Amulet"], ["gear", "Mageblood", "Mageblood"], ["gear", "Rite of Passage", "Rite of Passage"],
+  ["gem", "hob", "Herald of Blood (30)"], ["gem", "pb", "Plague Bearer (30)"], ["gem", "hop", "Herald of Plague (30)"], ["gem", "wd", "Wind Dancer (30)"], ["gem", "gd", "Ghost Dance (30)"], ["gem", "blasph", "Blasphemy + Repulsion"],
+  ["gem", "conc", L("Concentrated Area na Toxic Growth", "Concentrated Area on Toxic Growth")], ["gem", "fork", L("Fork no Poisonburst", "Fork on Poisonburst")], ["gem", "garukhan", "Garukhan's Resolve"],
+  ["tree", "snapshot", L("Set 2 só com nós de Remnant", "Set 2 with only Remnant nodes")], ["tree", "breach", L("Breach: Tul e Esh mortos", "Breach: Tul and Esh killed")],
+  ["asc", "waking", "Waking Dream"], ["asc", "lucid", "Lucid Dreaming"], ["asc", "power", "Choice of Power"], ["asc", "gift", "Chayula's Gift"], ["asc", "archon", "Archon of Chayula"],
+ ],
+ rules=[
+  dict(when=dict(lvMin=14, notOwn=["conc"]), lvl="bad", t=L("Toxic Growth sem Concentrated Area", "Toxic Growth without Concentrated Area"), d=L("As pústulas não se sobrepõem: principal causa de pouco dano no boss.", "Pustules don't overlap: the main cause of low boss damage."), tab="skills"),
+  dict(when=dict(own=["garukhan"], numLt=["crit", 50]), lvl="bad", t=L("Garukhan's Resolve abaixo de 50% de crítico", "Garukhan's Resolve below 50% crit"), d=L("Não compensa o custo: volte para a fase Archon.", "Not worth the cost: go back to the Archon phase."), tab="mech"),
+  dict(when=dict(own=["Mageblood"], numLt=["crit", 50]), lvl="tip", t=L("Mageblood sem 50% de crítico", "Mageblood without 50% crit"), d=L("Use Diamond Flask.", "Use a Diamond Flask."), tab="gear"),
+  dict(when=dict(lvMin=65, notOwn=["snapshot"]), lvl="warn", t=L("Monte o snapshot do Set 2", "Set up the Set 2 snapshot"), d=L("Só nós de Remnant no Set 2 e entre nas áreas com ele.", "Only Remnant nodes on Set 2 and enter areas with it."), tab="mech"),
+  dict(when=dict(lvMin=75, notOwn=["breach"]), lvl="tip", t=L("Questline do Breach", "Breach questline"), d=L("Tul e Esh liberam o Archon of Chayula.", "Tul and Esh unlock Archon of Chayula."), tab="atlas"),
+  dict(when=dict(own=["gift"], numLt=["chaos", 75]), lvl="tip", t=L("Chaos Resistance baixa com Chayula's Gift", "Low Chaos Resistance with Chayula's Gift"), d=L("A resistência é dobrada: um pouco no equipamento já leva ao cap.", "Resistance is doubled: a little on gear reaches the cap."), tab="gear"),
+  dict(when=dict(lvMin=42, notOwn=["power"]), lvl="warn", t=L("Choice of Power pendente", "Choice of Power pending"), d=L("O maior multiplicador da build.", "The build's biggest multiplier."), tab="asc"),
+  dict(when=dict(lvMin=26, notOwn=["waking"]), lvl="warn", t=L("1ª ascendência pendente", "1st ascendancy pending"), d="Waking Dream.", tab="asc"),
+  dict(when=dict(lvMin=45, notOwn=["hop"]), lvl="tip", t="Herald of Plague", d=L("Espalha o veneno ao matar: clear muito melhor.", "Spreads poison on kill: much better clear."), tab="skills"),
+  dict(when=dict(lvMin=68, notOwn=["fork"]), lvl="tip", t="Fork", d=L("Clear fora da tela no Poisonburst.", "Off-screen clear on Poisonburst."), tab="skills"),
+ ],
+)
+ADAPT_SWAPS = [
+ dict(pids=["archon", "max"], when=dict(notOwn=["archon"]), gemsFrom="maps", note=L("Sem Archon of Chayula: mostrando o setup dos mapas.", "No Archon of Chayula: showing the maps setup.")),
+ dict(pids=["max"], when=dict(own=["archon"], notOwn=["garukhan"]), gemsFrom="archon", note=L("Sem Garukhan's Resolve: mostrando o setup não crítico do Archon.", "No Garukhan's Resolve: showing the non-crit Archon setup.")),
+]
+TREE_RULES = [
+ dict(when=dict(lvMin=65, notOwn=["snapshot"]), t=L("Weapon Set 2: coloque só nós de Remnant (Remnant Attraction primeiro).", "Weapon Set 2: put only Remnant nodes (Remnant Attraction first)."), node=None),
+]
+TIMING_KEY = {"Splinterheart": "Splinterheart", "Choice of Power": "power", "Archon of Chayula": "archon", "Garukhan's Resolve": "garukhan", "Mageblood": "Mageblood"}
+
+MECH = dict(
+ title=L("Chamas & Archon", "Flames & Archon"),
+ intro=L("Como o Acolyte de veneno funciona: explosões em cadeia no clear, chamas roxas de Chayula multiplicando o dano e o Archon detonando as pústulas no boss.", "How the poison Acolyte works: chained explosions for clear, Chayula's purple flames multiplying damage and the Archon detonating pustules on bosses."),
+ sections=[
+  dict(type="cards", cards=[
+   [L("1. Cadeia de explosões", "1. Explosion chain"), L("Poisonburst Arrow envenena e faz sangrar em área. Inimigo envenenado morre → Herald of Plague espalha o veneno e Bursting Plague explode; inimigo sangrando morre → Herald of Blood explode. As explosões matam o próximo, que explode de novo.", "Poisonburst Arrow poisons and bleeds in an area. A poisoned enemy dies → Herald of Plague spreads the poison and Bursting Plague explodes; a bleeding enemy dies → Herald of Blood explodes. The explosions kill the next one, which explodes again.")],
+   [L("2. Chamas de Chayula", "2. Flames of Chayula"), L("Into the Breach (Waking Dream) faz chamas nascerem como Remnants: roxa = % do dano como caos, vermelha = vida, azul = mana. Choice of Power deixa todas roxas, 50% mais fortes e coletadas de mais longe.", "Into the Breach (Waking Dream) spawns flames as Remnants: purple = % of damage as chaos, red = life, blue = mana. Choice of Power makes them all purple, 50% stronger and collected from further away.")],
+   [L("3. Pústulas", "3. Pustules"), L("Toxic Growth solta pústulas que detonam depois de um tempo — ou antes e mais forte se forem envenenadas. Plague Bearer (100%) e os tornados do Archon envenenam todas de uma vez.", "Toxic Growth drops pustules that detonate after a delay — or sooner and harder when poisoned. Plague Bearer (100%) and Archon's tornadoes poison them all at once.")],
+   [L("4. Archon of Chayula", "4. Archon of Chayula"), L("Glory enche causando caos (~1 s). Ativo: 20% more físico e caos e tornados que aplicam Wither. Acabou: 20 s de bloqueio. Libera com a questline do Breach (Tul e Esh) e o último Trial.", "Glory fills by dealing chaos (~1 s). Active: 20% more physical and chaos and tornadoes applying Wither. Ends: 20 s lockout. Unlocked by the Breach questline (Tul and Esh) and the last Trial.")],
+  ]),
+  dict(type="steps", h=L("Snapshot do Weapon Set 2", "Weapon Set 2 snapshot"), steps=[
+   [L("Árvore", "Tree"), L("Weapon Set 2 só com nós de Remnant (Remnant Attraction primeiro); Set 1 com dano.", "Weapon Set 2 with only Remnant nodes (Remnant Attraction first); Set 1 with damage.")],
+   [L("Talisman", "Talisman"), L("Talisman no Set 2 em Wolf Form: dá movement speed e deixa óbvio em qual set você está.", "Talisman on Set 2 in Wolf Form: grants movement speed and makes it obvious which set you're on.")],
+   [L("Tecla", "Key"), L("Configure uma tecla só para trocar de set.", "Bind a key just for swapping sets.")],
+   [L("Entrar", "Enter"), L("Entre em toda área/mapa com o Set 2.", "Enter every area/map on Set 2.")],
+   [L("Trocar", "Swap"), L("Troque para o Set 1: os nós de Remnant continuam valendo até sair da área.", "Swap to Set 1: Remnant nodes keep working until you leave the area.")],
+   [L("Errou?", "Mistake?"), L("Entrou no Set 1: relog ou saia e entre de novo.", "Entered on Set 1: relog or leave and re-enter.")],
+  ]),
+  dict(type="rotation", blocks=[
+   [L("Clear", "Clear"), [L("Poisonburst Arrow até o Plague Bearer chegar a 100%", "Poisonburst Arrow until Plague Bearer hits 100%"), L("Ative o Plague Bearer", "Activate Plague Bearer"), L("Pouco dano: Vine Arrow e Toxic Growth em packs mágicos", "Low damage: Vine Arrow and Toxic Growth on magic packs"), L("Archon quando disponível", "Archon when available")]],
+   [L("Boss", "Boss"), [L("Archon of Chayula", "Archon of Chayula"), L("Vine Arrow algumas vezes", "Vine Arrow a few times"), L("Toxic Growth a cada dois ataques", "Toxic Growth every other attack"), L("Plague Bearer", "Plague Bearer"), L("Alterne Toxic Growth e Plague Bearer", "Alternate Toxic Growth and Plague Bearer")]],
+  ]),
+  dict(type="spirit", h=L("Spirit dos heralds e buffs", "Herald and buff Spirit"), p=L("Marque o que você usa. Custos do Path of Building.", "Tick what you use. Costs from Path of Building."),
+       note=L("Blasphemy reserva conforme a curse: confira no jogo.", "Blasphemy reserves based on the curse: check in game.")),
+  dict(type="timeline", h=L("Arco por nível", "Bow by level"), items=[
+   dict(lv=1, t=L("Arco branco do vendor", "White vendor bow"), d=L("Transmutation/Augmentation até físico.", "Transmutation/Augmentation until physical.")),
+   dict(lv=16, t="Splinterheart", d=L("Projéteis se dividem: clear enorme no leveling.", "Projectiles split: huge leveling clear.")),
+   dict(lv=40, t=L("Splinterheart runeforged", "Runeforged Splinterheart"), d=L("Com Medved's Crest of the Circle: dura até os mapas.", "With Medved's Crest of the Circle: lasts into maps.")),
+   dict(lv=78, t="Obliterator Bow", d=L("Físico alto + Countess Seske's Rune of Archery + Idol of Thruldana.", "High physical + Countess Seske's Rune of Archery + Idol of Thruldana.")),
+  ]),
+ ],
+)
+
+exec(open(os.path.join(HERE, "bcraft.py"), encoding="utf-8").read())
+
+
+def build(QUESTS_PT):
+    quests = []
+    for q in QUESTS_PT:
+        q = dict(q)
+        if q["boss"] == "Mighty Silverfist":
+            q["reward"] = L("2 Weapon Set Passive Points (Set 2 = Remnants)", "2 Weapon Set Passive Points (Set 2 = Remnants)"); q["prio"] = "Alta"
+        quests.append(q)
+    return dict(league=LEAGUE, patch=PATCH, updated=UPDATED, snap="15/09/2026", phases=PHASES, milestones=MILESTONES, gear=GEAR, uniques=UNIQUES, idols=[],
+                sets={}, jewelSets={}, optimizations=[], tricks=TRICKS, fixes=FIXES, sources=SOURCES, keyPassives=KEY_PASSIVES, treeStages=TREE_STAGES,
+                buyOrder=BUY_ORDER, supWhy=SUPWHY, guideUrl=PLANNER_URL, troubleshoot=[dict(q=a, a=b) for a, b in TROUBLESHOOT], quests=quests,
+                atlas={}, atlasCheck=ATLAS_CHECK, ascendancy=ASCENDANCY, ascUnlock=ASC_UNLOCK, timing=BOOK.TIMING, timingCases=[dict(q=a, a=b) for a, b in CASES],
+                craft=CRAFT, current={"note": "", "items": []}, meta=None, beasts=[], auraPriority=[], hunt=None,
+                ui=UI, char=CHAR, mech=MECH, adaptSwaps=ADAPT_SWAPS, treeRules=TREE_RULES, timingKey=TIMING_KEY, phaseAct=PHASE_ACT, treeOrder=ORDER + ["uber"], craftKit=CRAFT_KIT)

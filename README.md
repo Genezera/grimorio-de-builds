@@ -11,9 +11,14 @@ Site: https://genezera.github.io/trilha-silverfist/
 | `index.html` · `en.html` | Página inicial para escolher a build · Build picker (PT · EN) |
 | `silverfist/index.html` · `silverfist/en.html` | Huntress · Spirit Walker — Mighty Silverfist zoo (guia do Mattjestic) |
 | `oracle/index.html` · `oracle/en.html` | Druid · Oracle — Spell Totem (guia do Lowepe) |
+| `tactician/index.html` · `tactician/en.html` | Mercenary · Tactician — Pin2Win Grenades (guia do BlazeworksTV) |
+| `infernalist/index.html` · `infernalist/en.html` | Witch · Infernalist — Spark → Cast on Critical Comet, recoup e CoA de luxo (guias do Ignatius e do kingkongor) |
+| `acolyte/index.html` · `acolyte/en.html` | Monk · Acolyte of Chayula — Poisonburst Arrow + Archon of Chayula (planner do Goratha, Maxroll) |
+| `pathfinder/index.html` · `pathfinder/en.html` | Ranger · Pathfinder — poison bow → Corpsewade Decompose (guias do Skadoosh) |
+| `smith/index.html` · `smith/en.html` | Warrior · Smith of Kitava — Shield Wall + Avatar of Fire (guia do Lexd) |
 | `rites/index.html` · `rites/en.html` | Liga Forbidden Rites — guia das 8 challenges (checklists, planejador de Omens, progresso salvo) |
 
-O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:` e `oracle1:`).
+O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:`, `oracle1:`, `tactician1:`, `infernalist1:`, `acolyte1:`, `pathfinder1:`, `smith1:`).
 The **PT / EN** switch changes language; each build's progress is shared between both versions.
 
 O site é 100% estático (HTML + JS) e também funciona abrindo os arquivos direto no navegador.
@@ -39,6 +44,9 @@ oracle/                       app Oracle (index.html, en.html, assets/assets.js)
 planilha/                     planilha Excel do Silverfist · Silverfist Excel workbook (PT)
 tools/                        scripts do Silverfist + página inicial · Silverfist + landing scripts
 tools/oracle/                 scripts do Oracle · Oracle scripts
+tactician/ infernalist/ acolyte/ pathfinder/ smith/   apps gerados pelo kit · kit-generated apps
+tools/kit/                    kit genérico de builds (extract/maxroll → kassets → kpatch → kbuild, js/, craftkit)
+tools/builds/<build>/         dados de cada build do kit (bdata.py, bcraft.py) · per-build kit data
 ```
 
 ## Regenerar / Rebuild (opcional)
@@ -70,7 +78,8 @@ python obuild.py              # ../../oracle/index.html, en.html, assets/assets.
 
 - Dados Silverfist: `tools/chober.py`; tradução `tools/i18n/en_*.json` e `tools/ui_en.py`.
 - Dados Oracle: `tools/oracle/odata.py` (textos bilíngues), lógica `ochar.js`, `oadapt.js`, `ototem.js`.
-- Dados de jogo: Path of Building PoE2 (`tools/dl/pob/`), preços poe.ninja.
+- Builds do kit: `python tools/kit/extract.py <build> <fonte>` (Mobalytics) ou `python tools/kit/maxroll.py <build> <fonte> "Perfil|pontos|nome"` (Maxroll), depois `kassets.py`, `kpatch.py` e `kbuild.py <build>` (o `build_all.py` já roda os três).
+- Dados de jogo: Path of Building PoE2 (`tools/dl/pob/`), bases do RePoE2 (`tools/dl/repoe_*.json`), preços poe.ninja.
 
 ## Verificação / Verification
 

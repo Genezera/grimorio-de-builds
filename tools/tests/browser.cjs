@@ -18,11 +18,11 @@ const server=http.createServer((req,res)=>{
       page.on('response',r=>{if(r.url().startsWith(base+'/')&&r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
       await page.route('https://fonts.googleapis.com/**',route=>route.abort());
       await page.route('https://fonts.gstatic.com/**',route=>route.abort());
-      for(const file of ['index.html','en.html','silverfist/index.html','silverfist/en.html','oracle/index.html','oracle/en.html']){
+      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith'].flatMap(b=>[b+'/index.html',b+'/en.html'])]){
         await page.goto(base+'/'+file);await page.waitForLoadState('domcontentloaded');pages++;
         if(!file.includes('/')){
-          assert.equal(await page.locator('.build').count(),2);
-          assert.equal(await page.locator('.primary').count(),2);
+          assert.equal(await page.locator('.build').count(),7);
+          assert.equal(await page.locator('.primary').count(),7);
         }else{
           assert.equal(await page.locator('#navGroups button').count(),4);
           const ids=await page.locator('#tabs button').evaluateAll(xs=>xs.map(x=>x.dataset.tab));
@@ -62,8 +62,8 @@ const server=http.createServer((req,res)=>{
           assert.equal(await page.locator('[data-use-weight]').count(),1);
           await page.locator('[data-use-weight]').click();
           assert.ok(Number(await page.locator('#cc-p').inputValue())>0);
-          await page.locator('#cw-prefix').fill('0');await page.locator('#cw-prefix').press('Tab');
-          assert.equal(await page.locator('[data-use-weight]').count(),0);
+          await page.locator('#cw-prefix').fill('0');await page.locator('#cw-prefix').press('Tab');await page.locator('#cw-suffix').fill('0');await page.locator('#cw-suffix').press('Tab');
+          assert.equal(await page.locator('[data-use-weight]').count(),0,file+' weight after prefix 0');
           const model=await page.evaluate(()=>craftPublishedChance([
             {kind:'normal',name:'a',text:'mana',level:75,gen:'Prefix',family:'mana',weight:1},
             {kind:'normal',name:'b',text:'life',level:75,gen:'Prefix',family:'life',weight:9}
@@ -120,7 +120,7 @@ const server=http.createServer((req,res)=>{
     for(const width of [320,1920]){
       const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
       page.on('pageerror',e=>errors.push(e.message));
-      for(const build of ['silverfist','oracle']){
+      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith']){
         await page.goto(base+'/'+build+'/en.html');await page.evaluate(()=>setLv(95));pages++;
         for(const id of await page.evaluate(()=>TABS.map(x=>x[0]))){
           await page.evaluate(id=>guideGo(id),id);

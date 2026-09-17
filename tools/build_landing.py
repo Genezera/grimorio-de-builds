@@ -10,6 +10,15 @@ IC = {
  "sf_main": ico(SF, "gemIcon", "Tame Beast"), "sf_a": ico(SF, "uniqIcon", "Chober Chaber"), "sf_b": ico(SF, "uniqIcon", "Sylvan's Effigy"), "sf_c": ico(SF, "gemIcon", "Pain Offering"),
  "or_main": ico(OR, "gemIcon", "Spell Totem"), "or_a": ico(OR, "supIcon", "Grim Pillars"), "or_b": ico(OR, "gemIcon", "Archmage"), "or_c": ico(OR, "uniqIcon", "Soul Mantle"),
 }
+def kit(bid): return json.load(open(os.path.join(HERE, "builds", bid, "assets.json"), encoding="utf-8"))
+for key, bid, picks in (("ta", "tactician", [("gemIcon", "Explosive Grenade"), ("gemIcon", "Cluster Grenade"), ("gemIcon", "Mirage Archer"), ("uniqIcon", "Sanguis Heroum")]),
+                        ("in", "infernalist", [("gemIcon", "Spark"), ("gemIcon", "Cast on Critical"), ("gemIcon", "Demon Form"), ("uniqIcon", "Sacrosanctum")]),
+                        ("ac", "acolyte", [("gemIcon", "Poisonburst Arrow"), ("gemIcon", "Herald of Blood"), ("gemIcon", "Toxic Growth"), ("uniqIcon", "Splinterheart")]),
+                        ("pf", "pathfinder", [("gemIcon", "Decompose"), ("gemIcon", "Poisonburst Arrow"), ("gemIcon", "Plague Bearer"), ("uniqIcon", "Corpsewade")]),
+                        ("sk", "smith", [("gemIcon", "Shield Wall"), ("gemIcon", "Resonating Shield"), ("gemIcon", "Infernal Cry"), ("uniqIcon", "Nebuloch")])):
+    A = kit(bid)
+    for suf, (table, name) in zip(("main", "a", "b", "c"), picks):
+        IC[f"{key}_{suf}"] = ico(A, table, name)
 TXT = {
  "pt": dict(lang="pt-BR", title="Grimório de Builds · PoE 2", eyebrow="Path of Exile 2 · 0.5.5 · Forbidden Rites", h1="Grimório de Builds",
    lead="Escolha a build. Cada guia vai do nível 1 ao 100, explica cada gem, support, item e passiva, e se adapta ao que você marca: seu nível, seu Spirit e os itens que você já tem.",

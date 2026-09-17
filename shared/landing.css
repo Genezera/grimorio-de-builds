@@ -76,6 +76,11 @@ h1 em{font-style:normal;display:inline-block;font-size:.62em;font-weight:700;bac
   box-shadow:inset 0 1px 0 rgba(236,214,163,.12),0 30px 60px -30px #000;transition:transform .7s var(--ease),border-color .4s,box-shadow .6s}
 .build.or{--acc:var(--or);--acc2:#e2465f;--metal:#b7bfd9;--metal-hi:#eef1fb;--surface:rgba(16,15,28,.86);border-color:#45475f}
 .build.or h2{font-family:"Cinzel Decorative","Cinzel",serif}
+.build.ta{--acc:#ff8a3d;--acc2:#9fd24b;--metal:#b89a70;--metal-hi:#f0dcb0;--surface:rgba(20,15,11,.86);border-color:#4f4638}
+.build.in{--acc:#ff5a2e;--acc2:#ffb347;--metal:#c98a6a;--metal-hi:#f6d8c6;--surface:rgba(24,10,8,.86);border-color:#5a3328}
+.build.ac{--acc:#b57bff;--acc2:#5fe3a1;--metal:#a996c9;--metal-hi:#ece2fb;--surface:rgba(16,11,26,.86);border-color:#43365c}
+.build.pf{--acc:#8fd14f;--acc2:#d3e36a;--metal:#9fb58a;--metal-hi:#e4f1d6;--surface:rgba(11,18,11,.86);border-color:#35492f}
+.build.sk{--acc:#ff9f43;--acc2:#e2465f;--metal:#c4a27a;--metal-hi:#f3e0c8;--surface:rgba(22,14,10,.86);border-color:#54402d}
 .build::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;background:
   linear-gradient(var(--metal),var(--metal)) left 8px top 8px/22px 1px no-repeat,linear-gradient(var(--metal),var(--metal)) left 8px top 8px/1px 22px no-repeat,
   linear-gradient(var(--metal),var(--metal)) right 8px top 8px/22px 1px no-repeat,linear-gradient(var(--metal),var(--metal)) right 8px top 8px/1px 22px no-repeat,
