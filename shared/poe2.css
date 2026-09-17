@@ -585,3 +585,31 @@ html[data-build] #navigator.stuck{background-color:var(--ground)}
 /* celular/tablet: equipamentos do crafting quebram linha em vez de sair da tela; sem "Imprimir" no celular (sobra espaço para a busca) */
 @media (max-width:980px){html[data-build] .craft-items{flex-wrap:wrap;overflow:visible}}
 @media (max-width:480px){html[data-build] #guidePrint{display:none}}
+
+/* ---------- linha do tempo de itens (aba da mecânica): ícone do item, slot e nível */
+html[data-build] .gearline{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+html[data-build] .glrow{display:grid;grid-template-columns:auto auto 1fr;gap:12px;align-items:center;padding:8px 10px;border:1px solid var(--edge);border-radius:var(--r);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--stone2) 70%,transparent),transparent);opacity:.72}
+html[data-build] .glrow.on{opacity:1;border-color:color-mix(in srgb,var(--gild) 45%,var(--edge))}
+html[data-build] .glrow.next{opacity:1;border-color:color-mix(in srgb,var(--accent) 55%,var(--edge));box-shadow:0 0 0 1px var(--accent-g)}
+html[data-build] .glpics{display:flex;gap:6px;align-items:center;min-width:44px}
+html[data-build] .glpics img{width:42px;height:42px;object-fit:contain;border:1px solid var(--edge2);border-radius:2px;background:#0c0c0e}
+html[data-build] .glrow b{color:var(--gild-hi)}
+html[data-build] .glrow small{display:block;color:var(--mute);line-height:1.45}
+html[data-build] .glslot{display:inline-block;margin-left:6px;padding:1px 7px;border:1px solid var(--edge2);border-radius:999px;font:600 .66rem/1.5 var(--ui);color:var(--accent-hi);letter-spacing:.04em;text-transform:uppercase}
+@media (max-width:560px){
+  html[data-build] .glrow{grid-template-columns:auto 1fr;row-gap:6px}
+  html[data-build] .glpics{grid-column:1;grid-row:2}
+  html[data-build] .glrow>div{grid-column:2;grid-row:2}
+  html[data-build] .glpics img{width:36px;height:36px}
+}
+
+/* ---------- progressão por nível dentro do card do slot (aba Itens): o que usar agora fica aceso */
+html[data-build] .gearlv{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+html[data-build] .glv{display:inline-flex;align-items:center;gap:6px;padding:3px 8px 3px 3px;border:1px solid var(--edge);border-radius:999px;
+  font:600 .72rem/1.4 var(--ui);color:var(--mute);background:color-mix(in srgb,var(--stone2) 60%,transparent);opacity:.75}
+html[data-build] .glv img{width:26px;height:26px;object-fit:contain;border-radius:50%;background:#0b0b0d;border:1px solid var(--edge2)}
+html[data-build] .glv i{font-style:normal;color:var(--faint);letter-spacing:.06em}
+html[data-build] .glv.on{opacity:1;color:var(--gild-hi);border-color:color-mix(in srgb,var(--gild) 60%,var(--edge));background:var(--gild-g)}
+html[data-build] .glv.on i{color:var(--gild)}
+html[data-build] .glv.nx{opacity:1;color:var(--accent-hi);border-color:color-mix(in srgb,var(--accent) 45%,var(--edge))}

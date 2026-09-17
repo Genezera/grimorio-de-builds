@@ -1,0 +1,852 @@
+====================================================================================================
+鬼火繼續噴油 97 Martial Artist life 1880 ES 4683 spirit 150 MS 136
+  keystones: []
+  SKILL: ['Rend', 'Heightened Charges', 'Prolonged Duration II', 'Rapid Attacks III', 'Rage III', 'Innervate'] [('Rend', 37850)]
+  SKILL: ['Oil Barrage', 'Rapid Attacks II', 'Salvo', 'Ricochet II', 'Nova Projectiles I', 'Elemental Armament II'] [('Oil Barrage', 427389)]
+  SKILL: ['Wind Dancer', 'Maim', 'Blind II', 'Rage II', 'Magnified Area II', 'Her Declaration'] 
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Charge Profusion II'] 
+  SKILL: ['Pounce', 'Rapid Attacks III', 'Cooldown Recovery II', "Sniper's Mark", 'Charge Profusion II', 'Mark of Siphoning II'] [('Pounce', 4009)]
+  SKILL: ['Hollow Focus', 'Magnified Area II', 'Knockback', 'Blind II', 'Cooldown Recovery II'] [('Hollow Focus', 206)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Boundless Energy II', 'Energy Retention', 'Efficiency II'] [('Lightning Warp', 2739)]
+  SKILL: ['Ferocious Roar', 'Echoing Cry', 'Raging Cry', 'Armour Demolisher II', 'Cooldown Recovery II'] 
+  SKILL: ['War Banner', 'Prolonged Duration II', "Daresso's Passion", 'Refraction II', 'Magnified Area II'] 
+  SKILL: ['Charge Regulation', 'Armour Demolisher I', "Uhtred's Omen"] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +3 to Level of all Projectile Skills ; Allocates Thaumaturgic Generator
+  ITEM Boots | RunicRare | Runeforged Daggerfoot Shoes | 35% increased Movement Speed ; 93% increased Evasion and Energy Shield ; +102 to maximum Life ; +42% to Fire Resistance ; +28% to Lightning Resistance ; +12 to Dexterity ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM BodyArmour | Rare | Sleek Jacket | +155 to Evasion Rating ; +49 to maximum Energy Shield ; 33% increased Evasion and Energy Shield ; +35% to Cold Resistance ; +36% to Lightning Resistance ; 3.3 Life Regeneration per second ; 36% increased Armour, Evasion and Energy Shield ; Bonded: +40 to maxim
+  ITEM Ring | Rare | Iron Ring | Adds 1 to 4 Physical Damage to Attacks ; Adds 2 to 69 Lightning damage to Attacks ; 33% increased Lightning Damage ; +123 to maximum Mana ; 16% increased Rarity of Items found ; +18% to all Elemental Resistances ; +42% to Fire Resistance
+  ITEM Ring2 | Rare | Sapphire Ring | +30% to Cold Resistance ; Adds 1 to 85 Lightning damage to Attacks ; 20% increased Cold Damage ; 16% increased Rarity of Items found ; +23% to Chaos Resistance
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 20% more Global Evasion Rating and Energy Shield ; Attacks Gain 18% of Damage as Extra Fire Damage ; 12% less damage taken while on Low Life ; +2.98% to Critical Hit
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Chakra | Currency | Saqawal's Rune of Erosion | Helmets: 25% increased Exposure Effect
+  ITEM Chakra | Currency | Thane Grannell's Rune of Mastery | Gloves: 30% increased Magnitude of Non-Damaging Ailments you inflict
+  ITEM Chakra | Currency | The Greatwolf's Rune of Willpower | Body Armours: 15% of Damage is taken from Mana before Life
+  ITEM Belt | Unique | Headhunter / Heavy Belt | 27% increased Stun Threshold ; Has 2 Charm Slots ; +56 to maximum Life ; +27 to Strength ; +40 to Dexterity ; When you kill a Rare monster, you gain its Modifiers for 60 seconds
+  ITEM Helm | Rare | Faridun Mask | +79 to Evasion Rating ; +29 to maximum Energy Shield ; 94% increased Evasion and Energy Shield ; +164 to maximum Life ; +30 to Intelligence ; +41% to Chaos Resistance ; +13% to Chaos Resistance
+  ITEM Weapon2 | Rare | Jade Talisman | 154% increased Physical Damage ; Adds 39 to 75 Physical Damage ; Adds 93 to 134 Fire Damage ; Grants 5 Life per Enemy Hit ; 20% increased Physical Damage ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: 20% increased effect of Fully Broken Armour 
+  FLASK Rite of Passage Golden Charm
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK  Concentrated Ultimate Life Flask of the Copious
+  FLASK The Fall of the Axe Silver Charm
+  FLASK Nascent Hope Thawing Charm
+  JEWEL Prism of Belief Diamond +3 to Level of all Oil Barrage Skills
+  JEWEL Dragon Bliss Sapphire 11% increased Critical Hit Chance ; Recover 2% of maximum Mana on Kill ; 15% increased Elemental Damage
+  JEWEL Heart of the Well Diamond 
+  ASC Martial Artist | mainSkill 6
+====================================================================================================
+Mamamamamaaa_FR 97 Martial Artist life 1 ES 8849 spirit 164 MS 127
+  keystones: ['Dance with Death', 'Chaos Inoculation']
+  SKILL: ['Rend', 'Prolonged Duration II', 'Rapid Attacks III', 'Heightened Charges', 'Rage III', 'Blazing Critical'] [('Rend', 174404)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', 'Charge Profusion II', "Ailith's Chimes"] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Arc', 'Boundless Energy II', 'Energy Retention', 'Soul Drain'] [('Lightning Warp', 8166)]
+  SKILL: ['Pounce', 'Cooldown Recovery II', 'Rapid Attacks III', "Sniper's Mark", 'Eternal Mark', 'Charge Profusion II'] [('Pounce', 11897)]
+  SKILL: ['Wind Dancer', 'Maim', 'Blind II', 'Magnified Area II', 'Rage II', "Uhtred's Rite"] 
+  SKILL: ['Ferocious Roar', 'Echoing Cry', 'Raging Cry', "Helbrym's Hide", 'Magnified Area II', 'Cooldown Recovery II'] 
+  SKILL: ['Whirling Slash', "Medved's Felling", 'Rapid Attacks III', 'Blazing Critical', 'Knockback', "Rigwald's Ferocity"] [('Whirling Slash', 7242)]
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Ricochet II', 'Elemental Armament II', "Rakiata's Flow"] [('Oil Barrage', 2808705)]
+  SKILL: ['Herald of Thunder', "Uruk's Smelting", 'Armour Break III', 'Elemental Armament II', 'Concentrated Area', 'Armour Explosion'] 
+  SKILL: ['Trinity', 'Cold Mastery', 'Armour Demolisher II', "Uhtred's Augury"] 
+  SKILL: ['Spear Stab', 'Bleed II', 'Rage II'] 
+  SKILL: ['Charge Regulation', 'Armour Demolisher I', "Uhtred's Omen"] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  SKILL: ['Spear Throw'] 
+  ITEM Belt | Unique | Mageblood / Utility Belt | Has 3 Charm Slots ; 20% of Flask Recovery applied Instantly ; Legacy of Silver ; Legacy of Jade ; Legacy of Diamond ; Legacy of Sulphur ; All Mage's Legacies have 47% increased effect per duplicate Mage's Legacy you have
+  ITEM Boots | Rare | Charmed Shoes | 30% increased Movement Speed ; +75 to Evasion Rating ; +23 to maximum Energy Shield ; +29 to Dexterity ; +45% to Fire Resistance ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM BodyArmour | Unique | Morior Invictus / Grand Regalia | 392% increased Armour, Evasion and Energy Shield ; +7 to all Attributes per Socket filled ; 11% increased Global Armour, Evasion and Energy Shield per Socket filled ; +9% to all Elemental Resistances per Socket filled ; +30 to Armour ; +30 to Evasion Rating ; 
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Weapon | Unique | Skysliver / Winged Spear | No Physical Damage ; Adds 1 to 120 Lightning Damage ; 28% increased Attack Speed ; 99% increased chance to Shock ; Rolls only the minimum or maximum Damage value for each Damage Type ; 10% increased Attack Speed
+  ITEM Ring | Rare | Gold Ring | 15% increased Rarity of Items found ; Adds 25 to 45 Fire damage to Attacks ; 19% increased Rarity of Items found ; +42% to Lightning Resistance
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +4 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 16% more Global Evasion Rating and Energy Shield ; +2.46% to Critical 
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Thane Grannell's Rune of Mastery | Gloves: 30% increased Magnitude of Non-Damaging Ailments you inflict
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +49 to Spirit ; Allocates Thaumaturgic Generator
+  ITEM Ring2 | Unique | Kalandra's Touch / Ring | Reflects opposite Ring
+  ITEM Helm | Rare | Ancestral Tiara | +67 to maximum Energy Shield ; 133% increased Energy Shield ; +35 to maximum Life ; +80% to Cold Resistance ; Raven-Touched ; Allocates Zarokh's Gift
+  ITEM Weapon2 | Rare | Spiny Talisman | 110% increased Elemental Damage with Attacks ; 28% increased Attack Speed ; 50% increased Attack Damage against Rare or Unique Enemies ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: +1 to Level of all Attack Skills ; Bonded: 8% chance to gain an
+  FLASK  Sunburst Golden Charm of the Surgeon
+  FLASK Beira's Anguish Dousing Charm
+  FLASK Nascent Hope Thawing Charm
+  FLASK Blood of the Warrior Gargantuan Life Flask
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  JEWEL Apocalypse Vessel Sapphire 22% increased maximum Energy Shield ; 29% increased Critical Damage Bonus
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Massive Ring ; Passives in Radius can be Allocated without being connected to your tree ; -12% to all Elemental Resistances
+  JEWEL Soul Solace Time-Lost Sapphire 23% increased Effect of Small Passive Skills in Radius
+  JEWEL Prism of Belief Diamond +2 to Level of all Oil Barrage Skills
+  JEWEL Heart of the Well Diamond 
+  ASC Martial Artist | mainSkill 12
+====================================================================================================
+Zongjinx_Forbidden_rite 97 Martial Artist life 1546 ES 3175 spirit 250 MS 140
+  keystones: []
+  SKILL: ['Rend', 'Rapid Attacks II', 'Prolonged Duration II', 'Elemental Armament II', 'Heightened Charges', 'Rage III'] [('Rend', 182096)]
+  SKILL: ['Spirit Vessel', 'Arctic Howl', 'Meat Shield II', 'Holy Descent', "Romira's Requital", 'Hulking Minions'] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Ball Lightning', 'Energy Retention', 'Boundless Energy II', 'Refutation'] [('Lightning Warp', 1349)]
+  SKILL: ['Cast on Block', 'Thunderstorm', 'Magnified Area II', 'Boundless Energy II', 'Knockback', 'Ice Nova'] [('Thunderstorm', 478)]
+  SKILL: ['Raise Shield', 'Stun II', 'Knockback', 'Vanguard II', 'Magnified Area II', 'Freeze'] [('Raise Shield', 4303)]
+  SKILL: ['Pounce', 'Opening Move', 'Fist of War II', 'Cooldown Recovery II', 'Charged Mark', "Brutus' Brain"] [('Pounce', 11983)]
+  SKILL: ['Wind Dancer', 'Knockback', 'Blind II', "Uhtred's Rite", 'Rage II', 'Magnified Area II'] 
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Charge Profusion II'] 
+  SKILL: ['Flame Breath', 'Rapid Attacks II', 'Burgeon II', 'Concentrated Area', 'Elemental Armament II', 'Fire Mastery'] [('Flame Breath', 564928)]
+  SKILL: ['Oil Barrage', 'Salvo', 'Nova Projectiles I', 'Pinpoint Critical', "Rakiata's Flow", "Dominus' Grasp"] [('Oil Barrage', 913134)]
+  SKILL: ['Mana Remnants', 'Harmonic Remnants II', 'Remnant Potency I', "Uruk's Smelting", "Khatal's Rejuvenation"] 
+  SKILL: ['Ghost Dance', 'Armour Demolisher II', 'Cooldown Recovery II'] 
+  SKILL: ['Charge Regulation', 'Armour Demolisher II', "Uhtred's Omen"] 
+  SKILL: ['Arctic Armour', 'Cooldown Recovery II'] 
+  ITEM Helm | Unique | Alpha's Howl / Armoured Cap | 100% increased Evasion Rating ; +100 to Spirit ; +71% to Cold Resistance ; Presence Radius is doubled ; Projectiles have 15% chance to Fork ; Bonded: Projectiles have 25% chance for an additional Projectile when Forking
+  ITEM Weapon | Rare | Ashbark Talisman | 55% increased Flammability Magnitude ; Adds 116 to 157 Fire Damage ; Adds 5 to 293 Lightning Damage ; 106% increased Elemental Damage with Attacks ; +4.59% to Critical Hit Chance ; 40% increased Elemental Damage with Attacks ; 50% increased Attack Damage again
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Belt | Unique | Headhunter / Heavy Belt | 28% increased Stun Threshold ; Has 2 Charm Slots ; +46 to maximum Life ; +37 to Strength ; +39 to Dexterity ; When you kill a Rare monster, you gain its Modifiers for 60 seconds
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Gloves | RunicRare | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; Attacks Gain 11% of Damage as Extra Fire Damage ; Attacks Gain 16% of Damage as Extra Cold Damage ; +1% to Maximum Ch
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; +19 to Strength ; Allocates Thaumaturgic Generator
+  ITEM Ring | Rare | Gold Ring | 15% increased Rarity of Items found ; Adds 18 to 28 Cold damage to Attacks ; Adds 2 to 70 Lightning damage to Attacks ; +468 to Accuracy Rating ; +37% to Fire Resistance ; +39% to Lightning Resistance
+  ITEM Boots | Rare | Daggerfoot Shoes | 35% increased Movement Speed ; 133% increased Evasion and Energy Shield ; +40% to Cold Resistance ; +27% to Chaos Resistance ; +72 to Stun Threshold ; +13% to Chaos Resistance
+  ITEM Ring2 | Rare | Topaz Ring | +20% to Lightning Resistance ; Adds 15 to 37 Fire damage to Attacks ; Adds 2 to 72 Lightning damage to Attacks ; +188 to Evasion Rating ; +10% to all Elemental Resistances ; +30% to Cold Resistance ; +28% to Lightning Resistance
+  ITEM Offhand2 | Unique | Svalinn / Crucible Tower Shield | +78 to maximum Runic Ward ; 231% increased Armour ; Chance to Block Damage is Lucky ; You take 3% of damage from Blocked Hits ; 8% increased Attack Speed if you have Blocked Recently ; Bonded: +3% to maximum Block chance
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +89 to Deflection Rating per 50 missing Energy Shield ; 243% increased Evasion and Energy Shield ; +27 to Dexterity ; Companions have 40% increased maximum Life ; 10% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; +30 to A
+  FLASK Nascent Hope Thawing Charm
+  FLASK  Acolyte's Ultimate Life Flask of the Perpetual
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK The Fall of the Axe Silver Charm
+  FLASK Rite of Passage Golden Charm
+  JEWEL Prism of Belief Diamond +2 to Level of all Oil Barrage Skills
+  JEWEL Damnation Bliss Time-Lost Sapphire Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance ; Notable Passive Skills in Radius also grant Recover 1% of maximum Mana on Kill ; Small Passive Skills in Radius also gran
+  JEWEL Chimeric Hope Time-Lost Sapphire Notable Passive Skills in Radius also grant 9% increased Critical Damage Bonus ; Small Passive Skills in Radius also grant 2% increased maximum Energy Shield
+  JEWEL Heart of the Well Diamond 
+  JEWEL Brood Creed Sapphire 18% increased maximum Energy Shield ; Recover 1% of maximum Mana on Kill ; 24% increased Shock Duration ; 13% increased Damage while Shapeshifted
+  JEWEL Cataclysm Stone Sapphire 15% increased maximum Energy Shield ; Recover 1% of maximum Mana on Kill ; 12% increased Damage while Shapeshifted ; 6% increased Duration of Damaging Ailments on Enemies
+  ASC Martial Artist | mainSkill 13
+====================================================================================================
+YAKHYAEV 96 Martial Artist life 1629 ES 1195 spirit 210 MS 129
+  keystones: []
+  SKILL: ['Rend', 'Rapid Attacks II', 'Prolonged Duration II', 'Heightened Charges', "Helbrym's Hide", 'Rage III'] [('Rend', 93239)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Magnified Area II', 'Blind II', 'Culling Strike II', 'Living Lightning II'] [('Hollow Focus', 188)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Boundless Energy II', 'Energy Retention', 'Soul Drain'] [('Lightning Warp', 1353)]
+  SKILL: ['Pounce', 'Rapid Attacks III', 'Cooldown Recovery II', "Sniper's Mark", 'Rage III', "Uhtred's Constellation"] [('Pounce', 2232)]
+  SKILL: ['Oil Barrage', 'Salvo', 'Nova Projectiles I', 'Ricochet II', 'Hit and Run', 'Pinpoint Critical'] [('Oil Barrage', 385462)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Boundless Energy II', 'Energy Retention', 'Life Drain'] [('Lightning Warp', 1353)]
+  SKILL: ['Herald of Thunder', "Uruk's Smelting", 'Elemental Armament II', 'Blind II', 'Armour Break III'] 
+  SKILL: ['Devour', 'Charge Profusion II', 'Thrill of the Kill II', 'Blazing Critical', 'Rapid Attacks III'] [('Devour', 61712)]
+  SKILL: ['Wind Dancer', 'Pin II', 'Rage III', 'Magnified Area II', 'Knockback'] 
+  SKILL: ['Mana Remnants', 'Harmonic Remnants II', 'Remnant Potency I', "Khatal's Rejuvenation"] 
+  SKILL: ['Ferocious Roar', 'Echoing Cry', 'Raging Cry'] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  ITEM Boots | Rare | Quickslip Shoes | 30% increased Movement Speed ; 37% increased Evasion and Energy Shield ; +18 to maximum Life ; +31 to Dexterity ; +30% to Fire Resistance ; +37% to Cold Resistance ; +82 to Stun Threshold ; +13% to Chaos Resistance
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; 43% increased Armour ; +50 to Spirit ; Allocates Bounty Hunter
+  ITEM Weapon2 | Rare | Spiny Talisman | Adds 128 to 198 Fire Damage ; Adds 11 to 283 Lightning Damage ; 106% increased Elemental Damage with Attacks ; Attacks with this Weapon Penetrate 25% Elemental Resistances ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: 8% chance to gain an addit
+  ITEM Ring2 | Rare | Prismatic Ring | +8% to all Elemental Resistances ; Adds 2 to 48 Lightning damage to Attacks ; 18% increased Rarity of Items found ; +29 to Intelligence ; +38% to Lightning Resistance
+  ITEM Ring | Rare | Gold Ring | 14% increased Rarity of Items found ; Adds 26 to 42 Fire damage to Attacks ; Adds 13 to 18 Cold damage to Attacks ; +38% to Fire Resistance ; Leech 7.58% of Physical Attack Damage as Life
+  ITEM BodyArmour | Rare | Slipstrike Vest | +188 to Evasion Rating ; 94% increased Evasion Rating ; +21 to Dexterity ; +36% to Cold Resistance ; Gain Deflection Rating equal to 20% of Evasion Rating ; 36% increased Armour, Evasion and Energy Shield ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum 
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +4 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; +2% to Maximum Lightning Resistance ; +27% to all Elemental Resistance
+  ITEM Chakra | Currency | Courtesan Mannan's Rune of Cruelty | Gloves: 20% increased Magnitude of Damaging Ailments you inflict
+  ITEM Chakra | Currency | Rune of Acrobatics | Weapon: Flasks gain 0.2 charges per Second ; Boots: +0.3 metres to Dodge Roll distance
+  ITEM Chakra | Currency | The Greatwolf's Rune of Willpower | Body Armours: 15% of Damage is taken from Mana before Life
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 44% increased Evasion Rating ; +110 to Accuracy Rating ; +51 to maximum Mana ; 117% increased Culling Strike Threshold
+  ITEM Belt | Rare | Ornate Belt | Has 2 Charm Slots ; 10% reduced Charm Charges used ; +171 to maximum Life ; 31% increased Charm Effect Duration ; +35 to Strength ; +25% to Chaos Resistance ; 11 to 19 Physical Thorns damage
+  FLASK  Potent Ultimate Life Flask of the Distiller
+  FLASK Ngamahu's Chosen Ruby Charm
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK Breath of the Mountains Sapphire Charm
+  FLASK Sanguis Heroum Staunching Charm
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Medium-Small Ring ; Passives in Radius can be Allocated without being connected to your tree ; -5% to all Elemental Resistances
+  JEWEL Against the Darkness Time-Lost Diamond Notable Passive Skills in Radius also grant Gain 4% of Damage as Extra Lightning Damage ; Small Passive Skills in Radius also grant +3% to Lightning Resistance
+  JEWEL Heart of the Well Diamond 
+  JEWEL Brood Eye Sapphire 10% increased Cold Damage ; 6% increased Critical Hit Chance ; 13% increased Critical Damage Bonus ; 7% increased Damage while Shapeshifted
+  ASC Martial Artist | mainSkill 9
+====================================================================================================
+GorinM 96 Martial Artist life 1 ES 5352 spirit 176 MS 103
+  keystones: ['Dance with Death', 'Chaos Inoculation']
+  SKILL: ['Rend', 'Rapid Attacks III', 'Heightened Charges', 'Rage III', 'Prolonged Duration II', 'Hit and Run'] [('Rend', 77991)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Overabundance II', 'Blind II', 'Magnified Area II', 'Culling Strike II'] [('Hollow Focus', 140)]
+  SKILL: ['Whirling Slash', "Medved's Felling", 'Rapid Attacks III', 'Culmination II', 'Knockback', 'Blazing Critical'] [('Whirling Slash', 1498)]
+  SKILL: ['Herald of Thunder', "Uruk's Smelting", 'Armour Break III', 'Elemental Armament II', 'Longshot II', 'Culling Strike II'] 
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Ricochet II', 'Elemental Armament II', 'Pinpoint Critical'] [('Oil Barrage', 483899)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', 'Ritualistic Curse', "Ailith's Chimes"] 
+  SKILL: ['Pounce', 'Rapid Attacks III', 'Cooldown Recovery II', "Brutus' Brain", "Sniper's Mark", 'Charge Profusion II'] [('Pounce', 4233)]
+  SKILL: ['Spirit Vessel', 'Arctic Howl', 'Hulking Minions', 'Loyalty', 'Meat Shield II'] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Energy Retention', 'Compressed Duration II', 'Boundless Energy II'] [('Lightning Warp', 1135)]
+  SKILL: ['Wind Dancer', 'Rage II', 'Knockback', 'Maim', 'Blind II'] 
+  SKILL: ['War Banner', "Daresso's Passion", 'Prolonged Duration II', 'Magnified Area II'] 
+  SKILL: ['Charge Regulation', 'Armour Demolisher I'] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  SKILL: ['Spear Throw'] 
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +95 to Deflection Rating per 50 missing Energy Shield ; 292% increased Evasion and Energy Shield ; +22 to Dexterity ; Companions have 37% increased maximum Life ; 15% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; +30 to A
+  ITEM Ring2 | Rare | Amethyst Ring | +12% to Chaos Resistance ; Adds 13 to 25 Physical Damage to Attacks ; Adds 26 to 44 Fire damage to Attacks ; 29% increased Chaos Damage ; +30% to Cold Resistance ; +36% to Lightning Resistance ; 68% increased Mana Regeneration Rate
+  ITEM Ring | Rare | Ruby Ring | +28% to Fire Resistance ; Adds 13 to 23 Physical Damage to Attacks ; Adds 1 to 68 Lightning damage to Attacks ; +10% to all Elemental Resistances ; +29% to Fire Resistance ; 41% increased Mana Regeneration Rate
+  ITEM Boots | Rare | Daggerfoot Shoes | +69 to Evasion Rating ; +23 to maximum Energy Shield ; 85% increased Evasion and Energy Shield ; +38% to Lightning Resistance ; Gain Deflection Rating equal to 20% of Evasion Rating ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Lif
+  ITEM Weapon | Unique | Skysliver / Winged Spear | No Physical Damage ; Adds 1 to 120 Lightning Damage ; 30% increased Attack Speed ; 51% increased chance to Shock ; Rolls only the minimum or maximum Damage value for each Damage Type ; 10% increased Attack Speed
+  ITEM Chakra | Currency | Greater Resolve Rune | All Equipment: +12 to Intelligence
+  ITEM Chakra | Currency | Greater Resolve Rune | All Equipment: +12 to Intelligence
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Attacks Gain 12% of Damage as Extra Physical Damage ; Attacks Gain 19% of Damage as Extra Cold Damage ; +2% to Maximum Lightning Resistance ; +21% to Lightning Resis
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Weapon2 | Rare | Spiny Talisman | 74% increased Physical Damage ; Adds 32 to 60 Cold Damage ; Adds 17 to 332 Lightning Damage ; +155 to Accuracy Rating ; 40% increased Elemental Damage with Attacks ; 50% increased Attack Damage against Rare or Unique Enemies ; Gain 5% of Damage as Extra Damage
+  ITEM Helm | Rare | Ancestral Tiara | +69 to maximum Energy Shield ; +21 to Intelligence ; +29% to Fire Resistance ; 23 Life Regeneration per second ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana ; +26 to Spirit
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; +1 to Level of all Projectile Skills ; Allocates Adaptable Assault
+  ITEM Belt | Unique | Headhunter / Heavy Belt | 30% increased Stun Threshold ; Has 2 Charm Slots ; +48 to maximum Life ; +29 to Strength ; +30 to Dexterity ; When you kill a Rare monster, you gain its Modifiers for 60 seconds
+  FLASK Nascent Hope Thawing Charm
+  FLASK Rite of Passage Golden Charm
+  FLASK Beira's Anguish Dousing Charm
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK Opportunity Ultimate Life Flask
+  JEWEL Megalomaniac Diamond 
+  JEWEL Prism of Belief Diamond +2 to Level of all Oil Barrage Skills
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Massive Ring ; Passives in Radius can be Allocated without being connected to your tree ; -7% to all Elemental Resistances
+  JEWEL Heart of the Well Diamond 
+  ASC Martial Artist | mainSkill 11
+====================================================================================================
+오일먹고취한놈 96 Martial Artist life 1608 ES 3175 spirit 204 MS 137
+  keystones: ['Sacrifice of Sight']
+  SKILL: ['Rend', 'Pinpoint Critical', 'Prolonged Duration II', 'Blazing Critical', 'Rage III', 'Inexorable Critical II'] [('Rend', 124437)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Boundless Energy II', 'Energy Retention', 'Soul Drain'] [('Lightning Warp', 1374)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Profane Ritual', 'Boundless Energy II', 'Energy Retention', 'Fluke'] [('Lightning Warp', 1374)]
+  SKILL: ['Pounce', 'Freezing Mark', 'Mark of Siphoning II', 'Cooldown Recovery II', 'Holy Descent', 'Rage III'] [('Pounce', 21402)]
+  SKILL: ['Devour', 'Culling Strike II', 'Rage III', 'Thrill of the Kill II', 'Prolonged Duration II', 'Rapid Attacks III'] [('Devour', 165623)]
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Ricochet II', 'Fork', "Rakiata's Flow"] [('Oil Barrage', 1457279)]
+  SKILL: ['Mana Remnants', 'Harmonic Remnants II', 'Remnant Potency I', "Khatal's Rejuvenation"] 
+  SKILL: ['Ferocious Roar', 'Echoing Cry', 'Raging Cry', 'Magnified Area II'] 
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II'] 
+  SKILL: ['Charge Regulation', 'Cannibalism I'] 
+  SKILL: ['Ghost Dance'] 
+  SKILL: ['Trinity'] 
+  ITEM Weapon2 | Rare | Fungal Talisman | Adds 124 to 178 Cold Damage ; +4.97% to Critical Hit Chance ; 80% increased Elemental Damage with Attacks ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: 8% chance to gain an additional random Charge when you gain a Charge
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Attacks Gain 23% of Damage as Extra Physical Damage ; Attacks Gain 20% of Damage as Extra Fire Damage ; Attacks Gain 18% of Damage as Extra Cold Damage ; +2.46% to C
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; +34 to Intelligence ; Allocates Bounty Hunter
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 49% increased Evasion Rating ; +124 to Accuracy Rating ; +46 to maximum Mana ; 122% increased Culling Strike Threshold ; 15% chance when you gain a Power Charge to gain an additional Power Charge ; Bonded: +1 to Maximum Power Charges
+  ITEM Ring2 | Unique | Kalandra's Touch / Ring | Reflects opposite Ring
+  ITEM BodyArmour | Rare | Sleek Jacket | 36% increased Armour, Evasion and Energy Shield ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum Mana
+  ITEM Ring | Rare | Ruby Ring | +28% to Fire Resistance ; Adds 33 to 46 Fire damage to Attacks ; Adds 1 to 56 Lightning damage to Attacks ; +30 to Dexterity ; +40% to Fire Resistance ; +43% to Cold Resistance
+  ITEM Boots | Rare | Sekhema Sandals | 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Belt | Unique | Mageblood / Utility Belt | Has 3 Charm Slots ; 20% of Flask Recovery applied Instantly ; Legacy of Amethyst ; Legacy of Diamond ; Legacy of Quicksilver ; Legacy of Diamond ; All Mage's Legacies have 41% increased effect per duplicate Mage's Legacy you have
+  FLASK  Effervescent Ultimate Life Flask of the Mixologist
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK The Fall of the Axe Silver Charm
+  FLASK For Utopia Stone Charm
+  FLASK Rite of Passage Golden Charm
+  JEWEL Against the Darkness Time-Lost Diamond Notable Passive Skills in Radius also grant Gain 4% of Damage as Extra Fire Damage ; Notable Passive Skills in Radius also grant Gain 4% of Damage as Extra Lightning Damage
+  JEWEL Undying Hate Timeless Jewel Glorifying the defilement of 14045 souls in tribute to Ulaman
+Passives in radius are Conquered by the Abyssals
+Desecration makes this item unstable ; Historic
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Medium-Small Ring ; Passives in Radius can be Allocated without being connected to your tree ; -5% to all Elemental Resistances
+  JEWEL Pandemonium Bliss Time-Lost Sapphire Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance ; Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus
+  JEWEL Blight Lens Sapphire 18% increased Critical Hit Chance ; 26% increased Critical Damage Bonus ; 11% increased Damage while Shapeshifted
+  ASC Martial Artist | mainSkill 11
+====================================================================================================
+sCaLLyxLL 95 Martial Artist life 1592 ES 1923 spirit 202 MS 136
+  keystones: ['Sacrifice of Sight']
+  SKILL: ['Rend', 'Rapid Attacks II', 'Prolonged Duration II', 'Rage III', 'Heightened Charges', "Helbrym's Hide"] [('Rend', 66843)]
+  SKILL: ['Hollow Focus', 'Blind II', 'Magnified Area II', 'Culling Strike II', 'Cooldown Recovery II', 'Living Lightning II'] [('Hollow Focus', 63)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Energy Retention', 'Boundless Energy II', 'Fluke', 'Soul Drain'] [('Lightning Warp', 2686)]
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry', 'Magnified Area II', 'Enraged Warcry I', 'Cooldown Recovery II'] 
+  SKILL: ['Devour', 'Charge Profusion II', 'Thrill of the Kill II', 'Blazing Critical', 'Prolonged Duration II', 'Rapid Attacks III'] [('Devour', 43713)]
+  SKILL: ['Oil Barrage', 'Ricochet II', 'Salvo', 'Nova Projectiles I', 'Burgeon II', 'Pinpoint Critical'] [('Oil Barrage', 174410)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Energy Retention', 'Boundless Energy II', 'Fluke', 'Life Drain'] [('Lightning Warp', 2686)]
+  SKILL: ['Wind Dancer', 'Blind II', 'Rage III', 'Knockback', 'Magnified Area II'] 
+  SKILL: ['Herald of Thunder', "Uruk's Smelting", 'Armour Break III', 'Elemental Armament II', 'Magnified Area II'] 
+  SKILL: ['Pounce', "Sniper's Mark", 'Rage III', 'Cooldown Recovery II', 'Rapid Attacks III'] [('Pounce', 3569)]
+  SKILL: ['Mana Remnants', 'Remnant Potency I', 'Harmonic Remnants II', "Khatal's Rejuvenation"] 
+  ITEM Helm | Rare | Soaring Mask | 161% increased Evasion and Energy Shield ; +45 to maximum Life ; +26 to maximum Mana ; 24% increased Critical Hit Chance ; +29 to Intelligence ; Gain Deflection Rating equal to 16% of Evasion Rating ; 15% chance when you gain a Power Charge to gain an addition
+  ITEM Belt | Unique | Headhunter / Heavy Belt | 23% increased Stun Threshold ; Has 3 Charm Slots ; +59 to maximum Life ; +30 to Strength ; +26 to Dexterity ; When you kill a Rare monster, you gain its Modifiers for 60 seconds
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; 14% of Damage taken Recouped as Life ; Allocates Bounty Hunter
+  ITEM Ring | Rare | Gold Ring | 15% increased Rarity of Items found ; Adds 6 to 10 Physical Damage to Attacks ; Adds 2 to 39 Lightning damage to Attacks ; 17% increased Rarity of Items found ; +33 to Strength ; +40% to Lightning Resistance ; +24% to Chaos Resistance
+  ITEM Gloves | RunicRare | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; Has +4 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Attacks Gain 21% of Da
+  ITEM Chakra | Currency | The Greatwolf's Rune of Claws | Gloves: Adds 5 to 12 Physical Damage to Attacks
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | The Greatwolf's Rune of Willpower | Body Armours: 15% of Damage is taken from Mana before Life
+  ITEM Chakra | Currency | Emergent Instinct | Helmets: Targets that are Blinded, Maimed, and Bleeding cannot Evade your Hits ; Gloves: Regenerate 5% of maximum Life per Second if you have used a Command Skill Recently ; Body Armours: Thorns Damage is Lucky against targets with Fully Broken Armour
+  ITEM Boots | Rare | Dragonscale Boots | 35% increased Movement Speed ; +126 to Evasion Rating ; 69% increased Evasion Rating ; +33 to Dexterity ; +44% to Fire Resistance ; +40% to Cold Resistance ; +18% to Cold Resistance ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM BodyArmour | Rare | Slipstrike Vest | +287 to Evasion Rating ; +52 to Spirit ; +37% to Fire Resistance ; +40% to Cold Resistance ; Gain Deflection Rating equal to 20% of Evasion Rating ; +18% to Fire Resistance ; +18% to Cold Resistance ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum Mana
+  ITEM Weapon | Rare | Spiny Talisman | 65% increased Physical Damage ; Adds 27 to 45 Physical Damage ; Adds 1 to 114 Lightning Damage ; +155 to Accuracy Rating ; 20% increased Physical Damage ; 50% increased Attack Damage against Rare or Unique Enemies ; Gain 5% of Damage as Extra Damage of all Ele
+  ITEM Ring2 | Unique | Kalandra's Touch / Ring | Reflects opposite Ring
+  FLASK The Fall of the Axe Silver Charm
+  FLASK Rite of Passage Golden Charm
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK  Effervescent Ultimate Life Flask of the Surgeon
+  FLASK Nascent Hope Thawing Charm
+  JEWEL Heart of the Well Diamond 
+  JEWEL Oblivion Glisten Emerald 15% increased Lightning Damage ; 10% increased Attack Damage ; 3% increased Attack Speed with Quarterstaves
+  JEWEL Eagle Ruin Time-Lost Sapphire Small Passive Skills in Radius also grant 2% increased maximum Energy Shield ; Small Passive Skills in Radius also grant Minions deal 2% increased Damage ; Notable Passive Skills in Radius also grant 
+  JEWEL Undying Hate Timeless Jewel Glorifying the defilement of 13260 souls in tribute to Ulaman
+Passives in radius are Conquered by the Abyssals
+Desecration makes this item unstable ; Historic
+  ASC Martial Artist | mainSkill 7
+====================================================================================================
+moondazing 94 Martial Artist life 1 ES 6421 spirit 150 MS 129
+  keystones: ['Chaos Inoculation']
+  SKILL: ['Rend', 'Prolonged Duration II', 'Rage III', 'Hit and Run', 'Rapid Attacks III', 'Heightened Charges'] [('Rend', 62126)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Efficiency II', 'Energy Retention', 'Boundless Energy II'] [('Lightning Warp', 2063)]
+  SKILL: ['Oil Barrage', 'Pinpoint Critical', 'Elemental Armament II', 'Ricochet II', 'Nova Projectiles I', 'Salvo'] [('Oil Barrage', 244556)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Charge Profusion II'] 
+  SKILL: ['Pounce', 'Mark for Death II', 'Freezing Mark', 'Prolonged Duration II', 'Cooldown Recovery II', 'Rapid Attacks III'] [('Pounce', 4016)]
+  SKILL: ['Spirit Vessel', 'Devour', 'Hulking Minions', 'Meat Shield II', "Romira's Requital"] 
+  SKILL: ['Wind Dancer', 'Magnified Area II', 'Blind II', 'Maim', 'Pin I'] 
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry', 'Magnified Area II'] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  SKILL: ['Charge Regulation', 'Clarity I'] 
+  ITEM Weapon | Rare | Spiny Talisman | 130% increased Physical Damage ; Adds 44 to 61 Physical Damage ; Adds 32 to 50 Fire Damage ; 26% increased Stun Duration ; 20% increased Physical Damage ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: 20% increased effect of Fully Broken Armour ;
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; 18% increased Critical Damage Bonus ; Allocates Overwhelming Strike
+  ITEM Chakra | Currency | Thane Grannell's Rune of Mastery | Gloves: 30% increased Magnitude of Non-Damaging Ailments you inflict
+  ITEM Gloves | RunicRare | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; 16% more Global Evasion Rating and Energy Shield ; Attacks Gain 13% of Damage as Extra Physical Damage ; Attacks Gain
+  ITEM Chakra | Currency | Emergent Instinct | Helmets: Targets that are Blinded, Maimed, and Bleeding cannot Evade your Hits ; Gloves: Regenerate 5% of maximum Life per Second if you have used a Command Skill Recently ; Body Armours: Thorns Damage is Lucky against targets with Fully Broken Armour
+  ITEM IncursionArmLeft | Normal | Combat Arm | 7% increased Attack Speed
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Ring | Rare | Ruby Ring | +27% to Fire Resistance ; Adds 7 to 14 Physical Damage to Attacks ; Adds 1 to 42 Lightning damage to Attacks ; 14% increased Rarity of Items found ; +25 to Intelligence ; +8% to all Elemental Resistances ; +35% to Fire Resistance
+  ITEM Ring2 | Rare | Sapphire Ring | +27% to Cold Resistance ; Adds 11 to 19 Physical Damage to Attacks ; Adds 1 to 12 Lightning damage to Attacks ; 11% increased Rarity of Items found ; 15% increased Cast Speed ; +16% to all Elemental Resistances ; +44% to Lightning Resistance
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +84 to Deflection Rating per 50 missing Energy Shield ; 308% increased Evasion and Energy Shield ; +32 to Dexterity ; Companions have 47% increased maximum Life ; 13% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; 40% incr
+  ITEM Belt | Unique | Ingenuity / Utility Belt | Has 2 Charm Slots ; 20% of Flask Recovery applied Instantly ; 1% reduced Charm Charges gained ; 23% increased bonuses gained from left Equipped Ring ; 25% increased bonuses gained from right Equipped Ring ; +13 to Dexterity
+  ITEM Boots | Rare | Daggerfoot Shoes | 100% increased Evasion and Energy Shield ; +23% to Cold Resistance ; Gain Deflection Rating equal to 19% of Evasion Rating ; +246 to Stun Threshold ; 20% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Helm | Rare | Ancestral Tiara | 20% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  FLASK Nascent Hope Thawing Charm
+  FLASK  Tidebound Stone Charm of the Wide
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK  Mistbound Dousing Charm of the Abundant
+  JEWEL Heart of the Well Diamond 
+  JEWEL Kraken Prism Emerald 10% increased Attack Damage ; 8% increased Elemental Damage ; 10% increased Crossbow Reload Speed
+  JEWEL Luminous Eye Emerald 9% increased Attack Damage ; 9% increased Elemental Damage ; Mark Skills have 28% increased Skill Effect Duration
+  ASC Martial Artist | mainSkill 4
+====================================================================================================
+kasamorisen 94 Martial Artist life 1434 ES 4751 spirit 150 MS 131
+  keystones: ['Sacrifice of Sight']
+  SKILL: ['Rend', 'Pinpoint Critical', 'Rage III', 'Blazing Critical', 'Inexorable Critical II', 'Prolonged Duration II'] [('Rend', 76467)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Culling Strike II', 'Prolonged Duration II', 'Fire Penetration II', 'Fire Attunement'] [('Hollow Focus', 133)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Soul Drain', 'Boundless Energy II', 'Energy Retention'] [('Lightning Warp', 5393)]
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Hit and Run', 'Ricochet II', "Rakiata's Flow"] [('Oil Barrage', 828748)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Profane Ritual', 'Energy Retention', 'Boundless Energy II', 'Fluke'] [('Lightning Warp', 5393)]
+  SKILL: ['Devour', 'Culling Strike II', 'Rage III', 'Thrill of the Kill II', 'Prolonged Duration II', 'Rageforged II'] [('Devour', 169002)]
+  SKILL: ['Mana Remnants', 'Remnant Potency I', 'Harmonic Remnants II', "Khatal's Rejuvenation"] 
+  SKILL: ['Pounce', 'Mark of Siphoning II', 'Cooldown Recovery II', 'Holy Descent'] [('Pounce', 8016)]
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry'] 
+  SKILL: ['Trinity', 'Fire Mastery'] 
+  SKILL: ['Charge Regulation'] 
+  SKILL: ['Elemental Invocation'] 
+  ITEM Weapon | Rare | Spiny Talisman | Adds 120 to 188 Cold Damage ; 126% increased Elemental Damage with Attacks ; +5% to Critical Hit Chance ; 5% increased Attack Speed ; 50% increased Attack Damage against Rare or Unique Enemies ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: +1 to
+  ITEM Boots | Rare | Sekhema Sandals | 20% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; +29% to Fire Resistance ; Allocates Prism Guard
+  ITEM Ring | Rare | Amethyst Ring | +8% to Chaos Resistance ; Adds 18 to 30 Physical Damage to Attacks ; Adds 1 to 30 Lightning damage to Attacks ; +16% to all Elemental Resistances ; +24% to Cold Resistance ; 51% increased Mana Regeneration Rate
+  ITEM Belt | Unique | Mageblood / Utility Belt | Has 3 Charm Slots ; 20% of Flask Recovery applied Instantly ; Legacy of Silver ; Legacy of Silver ; Legacy of Granite ; Legacy of Basalt ; All Mage's Legacies have 46% increased effect per duplicate Mage's Legacy you have
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 59% increased Evasion Rating ; +112 to Accuracy Rating ; +49 to maximum Mana ; 100% increased Culling Strike Threshold ; +26% to Chaos Resistance
+  ITEM IncursionLegLeft | Normal | Evasive Leg | 30% increased Evasion Rating
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM IncursionLegRight | Normal | Sturdy Leg | 24% increased Stun Threshold
+  ITEM IncursionArmLeft | Normal | Combat Arm | 10% increased Attack Speed
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 15% more Global Evasion Rating and Energy Shield ; Attacks Gain 15% of
+  ITEM Chakra | Currency | Perfect Storm Rune | Martial Weapon: Adds 1 to 40 Lightning Damage ; Wand or Staff: Gain 12% of Damage as Extra Lightning Damage ; Armour: +22% to Lightning Resistance
+  ITEM Chakra | Currency | Perfect Glacial Rune | Martial Weapon: Adds 16 to 20 Cold Damage ; Wand or Staff: Gain 12% of Damage as Extra Cold Damage ; Armour: +22% to Cold Resistance
+  ITEM IncursionArmRight | Normal | Caster Arm | 10% increased Cast Speed
+  ITEM Ring2 | Rare | Amethyst Ring | +8% to Chaos Resistance ; Adds 10 to 17 Cold damage to Attacks ; Adds 2 to 71 Lightning damage to Attacks ; 25% increased Fire Damage ; +29 to Strength ; +24% to Cold Resistance
+  ITEM BodyArmour | Rare | Sleek Jacket | +157 to Evasion Rating ; +45 to maximum Energy Shield ; +45% to Fire Resistance ; +39% to Cold Resistance ; 31.5 Life Regeneration per second ; 60% increased Armour, Evasion and Energy Shield ; Bonded: +60 to maximum Life ; Bonded: +60 to maximum Mana
+  FLASK Rite of Passage Golden Charm
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK For Utopia Stone Charm
+  FLASK  Dizzying Ultimate Life Flask of the Distiller
+  FLASK The Fall of the Axe Silver Charm
+  JEWEL Heart of the Well Diamond 
+  JEWEL Undying Hate Timeless Jewel Glorifying the defilement of 25315 souls in tribute to Ulaman
+Passives in radius are Conquered by the Abyssals
+Desecration makes this item unstable ; Historic
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Medium-Small Ring ; Passives in Radius can be Allocated without being connected to your tree ; -8% to all Elemental Resistances
+  JEWEL Megalomaniac Diamond 
+  ASC Martial Artist | mainSkill 9
+====================================================================================================
+노블사층 94 Martial Artist life 1449 ES 3153 spirit 149 MS 126
+  keystones: ['Sacrifice of Sight']
+  SKILL: ['Rend', 'Inexorable Critical II', 'Prolonged Duration II', 'Blazing Critical', 'Pinpoint Critical', 'Rage III'] [('Rend', 51522)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Magnified Area II', 'Living Lightning II', 'Blind II', 'Culling Strike II'] [('Hollow Focus', 132)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Energy Retention', 'Boundless Energy II', 'Soul Drain'] [('Lightning Warp', 1141)]
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Ricochet II', 'Hit and Run', "Rakiata's Flow"] [('Oil Barrage', 666752)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Profane Ritual', 'Energy Retention', 'Boundless Energy II', 'Fluke'] [('Lightning Warp', 1141)]
+  SKILL: ['Pounce', 'Freezing Mark', 'Holy Descent', 'Mark of Siphoning II', 'Cooldown Recovery II'] [('Pounce', 2712)]
+  SKILL: ['Devour', 'Culling Strike II', 'Rapid Attacks III', 'Thrill of the Kill II', 'Prolonged Duration II'] [('Devour', 28026)]
+  SKILL: ['Mana Remnants', 'Remnant Potency I', 'Harmonic Remnants II', "Khatal's Rejuvenation"] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II', 'Clarity I'] 
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry'] 
+  SKILL: ['Trinity'] 
+  SKILL: ['Eternal Rage'] 
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 53% increased Evasion Rating ; +136 to Accuracy Rating ; +72 to maximum Mana ; 117% increased Culling Strike Threshold ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +49 to Spirit ; +20 to all Attributes ; Allocates Infusion of Power
+  ITEM Ring2 | Rare | Ruby Ring | +27% to Fire Resistance ; Adds 29 to 40 Fire damage to Attacks ; Adds 1 to 66 Lightning damage to Attacks ; +29 to Strength ; Leech 7.59% of Physical Attack Damage as Life
+  ITEM Belt | Rare | Ornate Belt | Has 2 Charm Slots ; 10% reduced Charm Charges used ; +240 to Armour ; +79 to maximum Mana ; 15% increased Flask Life Recovery rate ; +53% to Chaos Resistance
+  ITEM Weapon2 | Unique | Amor Mandragora / Changeling Talisman | Adds 16 to 25 Physical Damage ; +9 to Intelligence ; 15% increased Skill Effect Duration ; Enemies in your Presence are Hindered ; Gain 1 Druidic Prowess for every 20 total Rage spent
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Ring | Rare | Topaz Ring | +22% to Lightning Resistance ; Adds 9 to 16 Physical Damage to Attacks ; Adds 24 to 34 Cold damage to Attacks ; 24% increased Fire Damage ; +27 to Strength ; +30% to Lightning Resistance ; Leech 7.79% of Physical Attack Damage as Life
+  ITEM Chakra | Currency | The Greatwolf's Rune of Willpower | Body Armours: 15% of Damage is taken from Mana before Life
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Saqawal's Rune of Memory | Helmets: 2% increased Experience gain
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 19% more Global Evasion Rating and Energy Shield ; 25% more Attack damage while on Low Mana ; +2% to Maximum Lightning Resistance ; +34% to Lightning Resistance ; +2
+  ITEM BodyArmour | Rare | Sleek Jacket | +191 to Evasion Rating ; +62 to maximum Energy Shield ; 40% increased Evasion and Energy Shield ; +32 to Dexterity ; +39% to Cold Resistance ; 36% increased Armour, Evasion and Energy Shield ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum Mana
+  ITEM Weapon | Rare | Spiny Talisman | Adds 112 to 193 Fire Damage ; Adds 37 to 51 Cold Damage ; 27% increased Attack Speed ; 50% increased Attack Damage against Rare or Unique Enemies ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: +1 to Level of all Attack Skills ; Bonded: 8% chance
+  ITEM Boots | Rare | Daggerfoot Shoes | 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  FLASK Nascent Hope Thawing Charm
+  FLASK  Substantial Ultimate Mana Flask of the Wide
+  FLASK  Investigator's Stone Charm of the Doctor
+  FLASK Beira's Anguish Dousing Charm
+  FLASK  Effervescent Ultimate Life Flask of the Ample
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Medium-Small Ring ; Passives in Radius can be Allocated without being connected to your tree ; -5% to all Elemental Resistances
+  JEWEL Heart of the Well Diamond 
+  JEWEL Megalomaniac Diamond 
+  JEWEL Undying Hate Timeless Jewel Glorifying the defilement of 24534 souls in tribute to Ulaman
+Passives in radius are Conquered by the Abyssals
+Desecration makes this item unstable ; Historic
+  ASC Martial Artist | mainSkill 10
+====================================================================================================
+Spitwarper 93 Martial Artist life 1432 ES 4280 spirit 148 MS 97
+  keystones: ['Sacrifice of Sight']
+  SKILL: ['Rend', 'Rapid Attacks II', 'Prolonged Duration II', 'Rage III', 'Embitter', 'Magnified Area II'] [('Rend', 103232)]
+  SKILL: ['Oil Barrage', 'Salvo', 'Ricochet II', 'Nova Projectiles I', 'Pinpoint Critical', 'Burgeon II'] [('Oil Barrage', 318766)]
+  SKILL: ['Hollow Focus', 'Magnified Area II', 'Culling Strike II', 'Cooldown Recovery II', 'Blind II'] [('Hollow Focus', 97)]
+  SKILL: ['Spirit Vessel', 'Arctic Howl', 'Meat Shield II', 'Hulking Minions', "Romira's Requital"] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Boundless Energy II', 'Energy Retention', 'Fluke'] [('Lightning Warp', 1236)]
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry', 'Enraged Warcry II', "Helbrym's Hide"] 
+  SKILL: ['Wind Dancer', 'Blind II', 'Cooldown Recovery II', 'Maim'] 
+  SKILL: ['War Banner', 'Magnified Area II', 'Prolonged Duration II', "Daresso's Passion"] 
+  SKILL: ['Devour', 'Thrill of the Kill II', 'Charge Profusion II', 'Prolonged Duration II'] [('Devour', 118050)]
+  SKILL: ['Herald of Thunder', 'Magnified Area II', 'Elemental Armament II', 'Culling Strike II'] 
+  SKILL: ['Pounce', 'Mark for Death II', 'Mark of Siphoning II'] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  SKILL: ['Charge Regulation'] 
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 55% increased Evasion Rating ; +113 to Accuracy Rating ; +49 to maximum Mana ; 100% increased Culling Strike Threshold ; +13% to Chaos Resistance
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +48 to Spirit ; +15% to all Elemental Resistances ; Allocates Bounty Hunter
+  ITEM Belt | Unique | Ingenuity / Utility Belt | Has 2 Charm Slots ; 20% of Flask Recovery applied Instantly ; 18% reduced Charm Charges gained ; 9% increased Charm Charges used ; 29% increased bonuses gained from left Equipped Ring ; 27% increased bonuses gained from right Equipped Ring
+  ITEM Weapon | Rare | Fungal Talisman | 146% increased Physical Damage ; Adds 95 to 143 Fire Damage ; +2.22% to Critical Hit Chance ; +17% to Critical Damage Bonus ; 36% increased Physical Damage ; Bonded: 40% increased effect of Fully Broken Armour
+  ITEM Ring | Rare | Amethyst Ring | +11% to Chaos Resistance ; Adds 11 to 20 Cold damage to Attacks ; Adds 4 to 63 Lightning damage to Attacks ; +130 to maximum Mana ; +21% to Fire Resistance ; +30% to Cold Resistance ; +24% to Lightning Resistance ; 5% increased Skill Speed
+  ITEM Boots | Rare | Sekhema Sandals | 94% increased Energy Shield ; +73 to maximum Mana ; +44% to Fire Resistance ; +44% to Lightning Resistance ; +23% to Chaos Resistance ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Ring2 | Rare | Topaz Ring | +24% to Lightning Resistance ; Adds 16 to 25 Physical Damage to Attacks ; Adds 2 to 33 Lightning damage to Attacks ; +100 to maximum Mana ; +31 to Dexterity ; +32 to Intelligence ; +29% to Cold Resistance
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 17% more Global Evasion Rating and Energy Shield ; Attacks Gain 22% of
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +99 to Deflection Rating per 50 missing Energy Shield ; 294% increased Evasion and Energy Shield ; +29 to Dexterity ; Companions have 32% increased maximum Life ; 13% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; 36% incr
+  FLASK Beira's Anguish Dousing Charm
+  FLASK  Opaque Ultimate Mana Flask of the Medic
+  FLASK  Dizzying Transcendent Life Flask of the Copious
+  FLASK  Floral Thawing Charm of the Plentiful
+  FLASK  Sunny Stone Charm of the Practitioner
+  JEWEL Undying Hate Timeless Jewel Glorifying the defilement of 23742 souls in tribute to Ulaman
+Passives in radius are Conquered by the Abyssals
+Desecration makes this item unstable ; Historic
+  JEWEL Heart of the Well Diamond 
+  JEWEL Sol Ornament Emerald 13% increased Critical Damage Bonus for Attack Damage ; 20% increased Damage with Hits against Rare and Unique Enemies ; 14% increased Damage while you have an active Charm ; 10% increased Flask Charg
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Medium-Small Ring ; Passives in Radius can be Allocated without being connected to your tree ; -7% to all Elemental Resistances
+  ASC Martial Artist | mainSkill 8
+====================================================================================================
+nephaphlegm 92 Martial Artist life 1545 ES 2183 spirit 100 MS 132
+  keystones: []
+  SKILL: ['Rend', 'Prolonged Duration II', 'Heightened Charges', 'Rage III', 'Rapid Attacks II', 'Blazing Critical'] [('Rend', 95043)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Magnified Area I', 'Culling Strike II', 'Armour Demolisher II', 'Armour Break III'] [('Hollow Focus', 184)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Lightning Attunement'] 
+  SKILL: ['Oil Barrage', 'Ricochet II', 'Nova Projectiles I', 'Fork', 'Salvo', 'Pinpoint Critical'] [('Oil Barrage', 332671)]
+  SKILL: ['Spirit Vessel', 'Arctic Howl', 'Meat Shield II', "Romira's Requital", "Catha's Brilliance"] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Profane Ritual', 'Boundless Energy II', 'Energy Retention'] [('Lightning Warp', 1057)]
+  SKILL: ['Wind Dancer', 'Blind II', 'Maim', 'Rage II', 'Magnified Area I'] 
+  SKILL: ['Pounce', 'Cooldown Recovery II', "Brutus' Brain", 'Crater', 'Holy Descent'] [('Pounce', 9572)]
+  SKILL: ['Devour', 'Empowered Sparks II', 'Charge Profusion II', 'Thrill of the Kill II', 'Rage III'] [('Devour', 95705)]
+  SKILL: ['Ferocious Roar', 'Echoing Cry', 'Raging Cry', 'Corrupting Cry II'] 
+  SKILL: ['Flame Breath'] 
+  ITEM Ring2 | Rare | Topaz Ring | +26% to Lightning Resistance ; Adds 7 to 17 Physical Damage to Attacks ; Adds 12 to 22 Fire damage to Attacks ; Adds 1 to 51 Lightning damage to Attacks ; +10 to Intelligence ; 12.5 Life Regeneration per second ; Gain 11 Life per enemy killed
+  ITEM Weapon2 | Rare | Thunder Talisman | 30% increased Magnitude of Shock you inflict ; 135% increased Physical Damage ; Adds 57 to 89 Fire Damage ; +4.99% to Critical Hit Chance ; +23 to Strength ; 18% increased Physical Damage ; Gain 13% of Damage as Extra Chaos Damage ; Gain 5% of Damage as Extra 
+  ITEM Boots | Rare | Quickslip Shoes | 30% increased Movement Speed ; +71 to Evasion Rating ; +23 to maximum Energy Shield ; 35% increased Evasion and Energy Shield ; +30% to Lightning Resistance ; +25% to Chaos Resistance ; +90 to Stun Threshold ; 18% increased Armour, Evasion and Energy Shield ; 
+  ITEM Belt | Rare | Heavy Belt | 23% increased Stun Threshold ; Has 3 Charm Slots ; +327 to Armour ; 34% increased Flask Mana Recovery rate ; +31 to Strength ; +39% to Cold Resistance ; +34% to Lightning Resistance ; 70 to 122 Physical Thorns damage
+  ITEM Ring | Rare | Amethyst Ring | +13% to Chaos Resistance ; Adds 13 to 19 Physical Damage to Attacks ; Adds 15 to 21 Fire damage to Attacks ; Adds 1 to 58 Lightning damage to Attacks ; +33 to Intelligence ; +34% to Fire Resistance ; 21% increased Mana Regeneration Rate ; 15% increased Light R
+  ITEM Gloves | Rare | War Wraps | Adds 20 to 34 Fire damage to Attacks ; Adds 1 to 47 Lightning damage to Attacks ; +31% to Cold Resistance ; +29% to Lightning Resistance ; +18% to Chaos Resistance ; 30% increased Magnitude of Non-Damaging Ailments you inflict ; Bonded: 15% increased Duration 
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +3 to Level of all Projectile Skills
+  ITEM Chakra | Currency | Desert Rune | Martial Weapon: Adds 7 to 11 Fire Damage ; Wand or Staff: Gain 8% of Damage as Extra Fire Damage ; Armour: +14% to Fire Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Resolve Rune | All Equipment: +12 to Intelligence
+  ITEM Weapon | Magic | Bladed Quarterstaff of Ruin | +4.37% to Critical Hit Chance
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Helm | Rare | Grinning Mask | 174% increased Evasion and Energy Shield ; +49 to maximum Life ; +39 to maximum Mana ; 33% increased Critical Hit Chance ; +40% to Cold Resistance ; 19.7 Life Regeneration per second ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Li
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +97 to Deflection Rating per 50 missing Energy Shield ; 260% increased Evasion and Energy Shield ; +27 to Dexterity ; Companions have 47% increased maximum Life ; 10% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; 36% incr
+  FLASK  Concentrated Ultimate Mana Flask of the Medic
+  FLASK Nascent Hope Thawing Charm
+  FLASK  Full-bodied Ultimate Life Flask of the Verdant
+  FLASK  Vibrant Stone Charm of the Apprentice
+  FLASK  Dawnlit Dousing Charm of the Constant
+  JEWEL Bramble Shard Time-Lost Sapphire Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus ; Notable Passive Skills in Radius also grant Recover 1% of maximum Life on Kill ; Small Passive Skills in Radius also g
+  JEWEL Dragon Stone Sapphire 7% increased Chaos Damage ; 7% increased Critical Hit Chance ; 13% increased Damage while Shapeshifted ; Gain additional Stun Threshold equal to 14% of maximum Energy Shield
+  JEWEL Plague Creed Emerald 15% increased Critical Hit Chance for Attacks ; Herald Skills deal 25% increased Damage ; 17% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds ; 15% increased Stun Thr
+  JEWEL Heart of the Well Diamond 
+  ASC Martial Artist | mainSkill 9
+====================================================================================================
+OiledUpNineS 91 Martial Artist life 2211 ES 802 spirit 218 MS 130
+  keystones: []
+  SKILL: ['Rend', 'Prolonged Duration II', 'Brink II', 'Rapid Attacks II', 'Rage III', 'Heightened Charges'] [('Rend', 32344)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Magnified Area II', 'Armour Break III', 'Culling Strike II', 'Overabundance II'] [('Hollow Focus', 38)]
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Ricochet II', 'Fork', 'Hit and Run'] [('Oil Barrage', 98569)]
+  SKILL: ['Devour', 'Charge Profusion II', 'Rapid Attacks II', 'Blazing Critical', 'Thrill of the Kill II', 'Prolonged Duration II'] [('Devour', 35951)]
+  SKILL: ['Cast on Critical', 'Energy Retention', 'Lightning Warp', 'Fluke', 'Boundless Energy II', 'Efficiency II'] [('Lightning Warp', 780)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes"] 
+  SKILL: ['Wind Dancer', 'Blind II', 'Maim', 'Knockback', 'Cooldown Recovery II'] 
+  SKILL: ['Herald of Thunder', "Uruk's Smelting", 'Armour Break III', 'Blind II'] 
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry'] 
+  SKILL: ['Wing Blast', 'Charge Profusion I'] 
+  SKILL: ['Lingering Illusion', 'Charge Profusion I'] 
+  SKILL: ['Spear Throw'] 
+  ITEM Belt | Rare | Utility Belt | Has 3 Charm Slots ; 20% of Flask Recovery applied Instantly ; +120 to maximum Life ; +64 to maximum Mana ; +22 to Strength ; +26% to Fire Resistance ; +44% to Lightning Resistance
+  ITEM Amulet | Rare | Solar Amulet | +13 to Spirit ; +104 to maximum Life ; +162 to maximum Mana ; +50 to Spirit ; +21 to all Attributes ; +26 to Dexterity ; +39% to Cold Resistance ; Allocates Piercing Claw
+  ITEM Boots | Rare | Drakeskin Boots | 30% increased Movement Speed ; +116 to Evasion Rating ; +136 to maximum Life ; 25% reduced Attribute Requirements ; Gain Deflection Rating equal to 22% of Evasion Rating ; +208 to Stun Threshold ; +18% to Cold Resistance ; Bonded: +20 to maximum Life ; Bonded:
+  ITEM Ring | Rare | Topaz Ring | +26% to Lightning Resistance ; Adds 5 to 11 Physical Damage to Attacks ; +134 to Accuracy Rating ; +86 to maximum Life ; +15% to all Elemental Resistances ; +34% to Fire Resistance ; +13% to Chaos Resistance
+  ITEM Ring2 | Rare | Iron Ring | Adds 1 to 4 Physical Damage to Attacks ; Adds 2 to 61 Lightning damage to Attacks ; +269 to Accuracy Rating ; +31 to Intelligence ; +27% to Chaos Resistance ; Leech 7.45% of Physical Attack Damage as Life
+  ITEM BodyArmour | Rare | Slipstrike Vest | 102% increased Evasion Rating ; +193 to maximum Life ; +55 to Spirit ; +26% to Fire Resistance ; Gain Deflection Rating equal to 24% of Evasion Rating ; 40% increased Armour, Evasion and Energy Shield ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum Mana
+  ITEM Helm | Rare | Desert Cap | 57% increased Evasion Rating ; +239 to Accuracy Rating ; +99 to maximum Life ; 31% increased Critical Hit Chance ; +40% to Cold Resistance ; +34% to Lightning Resistance ; +18% to Cold Resistance ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Weapon2 | Rare | War Spear | 35% increased Projectile Speed with this Weapon ; 58% increased Physical Damage ; Adds 1 to 4 Physical Damage ; 56% increased Elemental Damage with Attacks ; +1.1% to Critical Hit Chance ; 15% increased Attack Speed ; +16 to Dexterity
+  ITEM Gloves | RunicRare | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; 11% more Global Evasion Rating and Energy Shield ; Attacks Gain 17% of Damage as Extra Physical Damage ; 17% chance t
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Weapon | Rare | Howling Talisman | +15% to Block chance ; 141% increased Physical Damage ; +3.19% to Critical Hit Chance ; +25 to Strength ; 13% increased Stun Duration ; 40% increased Physical Damage ; Bonded: 40% increased effect of Fully Broken Armour
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  FLASK Ngamahu's Chosen Ruby Charm
+  FLASK  Potent Ultimate Life Flask of the Brewer
+  FLASK  Mistbound Antidote Charm of the Doctor
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK Sanguis Heroum Staunching Charm
+  JEWEL Sol Eye Sapphire 13% increased Critical Hit Chance ; Recover 2% of maximum Life on Kill ; Offerings have 20% increased Maximum Life ; 12% increased Magnitude of Shock you inflict
+  JEWEL Bramble Cut Time-Lost Sapphire Small Passive Skills in Radius also grant Damage Penetrates 1% Cold Resistance ; Small Passive Skills in Radius also grant 2% increased Damage if you have Consumed a Corpse Recently ; Notable Passive 
+  JEWEL Soul Vessel Emerald 9% increased Flask Effect Duration ; 12% increased Critical Hit Chance for Attacks ; 12% increased Attack Damage ; Damage Penetrates 5% Lightning Resistance
+  ASC Martial Artist | mainSkill 4
+====================================================================================================
+Ritesrongie 91 Martial Artist life 1 ES 7797 spirit 150 MS 129
+  keystones: ['Chaos Inoculation']
+  SKILL: ['Rend', 'Rapid Attacks II', 'Prolonged Duration II', 'Heightened Charges', 'Rage III', 'Blazing Critical'] [('Rend', 146075)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Arc', 'Energy Retention', 'Boundless Energy II', 'Rapid Casting II'] [('Lightning Warp', 1398)]
+  SKILL: ['Oil Barrage', 'Ricochet II', 'Salvo', 'Nova Projectiles I', 'Elemental Armament II', 'Pinpoint Critical'] [('Oil Barrage', 466737)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Charge Profusion II'] 
+  SKILL: ['Wind Dancer', 'Maim', 'Blind II', 'Rage II', 'Cooldown Recovery II', 'Magnified Area II'] 
+  SKILL: ['Spirit Vessel', 'Devour', 'Loyalty', 'Meat Shield II', "Catha's Brilliance"] 
+  SKILL: ['Pounce', 'Rapid Attacks III', 'Cooldown Recovery II', "Sniper's Mark", 'Eternal Mark'] [('Pounce', 5500)]
+  SKILL: ['Herald of Thunder', 'Elemental Armament II', 'Longshot II', 'Armour Break III', "Uruk's Smelting"] 
+  SKILL: ['Devour', 'Charge Profusion II', 'Brambleslam'] 
+  SKILL: ['Charge Regulation', 'Armour Demolisher II'] 
+  ITEM Ring2 | Rare | Prismatic Ring | +12% to all Elemental Resistances ; Adds 7 to 13 Physical Damage to Attacks ; Adds 2 to 81 Lightning damage to Attacks ; +100 to maximum Mana ; +36% to Fire Resistance
+  ITEM Belt | Rare | Fine Belt | Has 2 Charm Slots ; Flasks gain 0.17 charges per Second ; +168 to maximum Life ; 29% increased Flask Life Recovery rate ; +31 to Strength ; 44 to 68 Physical Thorns damage
+  ITEM Boots | Rare | Daggerfoot Shoes | 30% increased Movement Speed ; +126 to maximum Life ; +45% to Cold Resistance ; +45% to Lightning Resistance ; +18% to Chaos Resistance ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Thane Grannell's Rune of Mastery | Gloves: 30% increased Magnitude of Non-Damaging Ailments you inflict
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +4 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 20% more Global Evasion Rating and Energy Shield ; +2% to Maximum Ligh
+  ITEM Weapon | Rare | Spiny Talisman | Adds 113 to 189 Fire Damage ; Adds 112 to 187 Cold Damage ; +3.65% to Critical Hit Chance ; 50% increased Attack Damage against Rare or Unique Enemies ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: +1 to Level of all Attack Skills ; Bonded: 8% c
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; 46% increased Evasion Rating ; +50 to Spirit ; +28 to Dexterity ; Allocates Serrated Edges
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +96 to Deflection Rating per 50 missing Energy Shield ; 298% increased Evasion and Energy Shield ; +27 to Dexterity ; Companions have 33% increased maximum Life ; 10% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; +30 to A
+  ITEM Helm | Rare | Ancestral Tiara | 131% increased Energy Shield ; +37 to maximum Life ; +25 to maximum Mana ; +39% to Fire Resistance ; +39% to Cold Resistance ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Ring | Rare | Prismatic Ring | +10% to all Elemental Resistances ; Adds 15 to 36 Physical Damage to Attacks ; Adds 2 to 45 Lightning damage to Attacks ; +23 to Strength ; +31 to Dexterity ; +38% to Fire Resistance
+  FLASK  Analyst's Staunching Charm of the Practitioner
+  FLASK  Vibrant Stone Charm of the Mixologist
+  FLASK Blood of the Warrior Gargantuan Life Flask
+  FLASK  Aqueous Thawing Charm of the Brewer
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  JEWEL Controlled Metamorphosis Diamond Only affects Passives in Massive Ring ; Passives in Radius can be Allocated without being connected to your tree ; -11% to all Elemental Resistances
+  JEWEL Hypnotic Stone Time-Lost Sapphire Notable Passive Skills in Radius also grant 6% increased Critical Hit Chance for Spells ; Small Passive Skills in Radius also grant 3% increased maximum Energy Shield
+  JEWEL Heart of the Well Diamond 
+  JEWEL Sol Curio Sapphire 19% increased maximum Energy Shield ; 14% increased Critical Hit Chance ; Gain additional Ailment Threshold equal to 15% of maximum Energy Shield ; 13% increased Damage while Shapeshifted
+  ASC Martial Artist | mainSkill 5
+====================================================================================================
+ปลาทูกินแมว 91 Martial Artist life 1502 ES 2018 spirit 206 MS 127
+  keystones: ['Dance with Death']
+  SKILL: ['Rend', 'Rage III', 'Rapid Attacks II', 'Heightened Charges', 'Magnified Area II', 'Culling Strike II'] [('Rend', 101272)]
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Flame Wall', 'Fluke', 'Energy Retention', 'Boundless Energy II'] [('Lightning Warp', 858)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', 'Charge Profusion II', "Ailith's Chimes"] 
+  SKILL: ['Whirling Slash', 'Knockback', 'Rapid Attacks III', "Medved's Felling", 'Magnified Area II', 'Culling Strike II'] [('Whirling Slash', 1994)]
+  SKILL: ['Oil Barrage', 'Salvo', 'Ricochet II', "Garukhan's Resolve", 'Nova Projectiles I', "Rakiata's Flow"] [('Oil Barrage', 1235561)]
+  SKILL: ['Herald of Thunder', 'Elemental Armament II', 'Supercritical', 'Culling Strike II', 'Armour Explosion', "Vorana's Siege"] 
+  SKILL: ['Wind Dancer', 'Blind II', 'Maim', 'Knockback', 'Cooldown Recovery II'] 
+  SKILL: ['Devour', 'Charge Profusion II', 'Thrill of the Kill', 'Rapid Attacks II', 'Enduring Impact II'] [('Devour', 63680)]
+  SKILL: ['Hollow Focus', 'Magnified Area II', 'Cooldown Recovery I'] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II'] 
+  SKILL: ['Spear Throw'] 
+  SKILL: ['Charge Regulation'] 
+  ITEM Boots | RunicUnique | Runemastered Cinched Boots | 30% increased Movement Speed ; 118% increased Evasion Rating ; +92 to maximum Life ; Gain Deflection Rating equal to 59% of Evasion Rating ; -7% to amount of Damage Prevented by Deflection ; Cannot be Light Stunned by Deflected Hits ; +18% to Fire Resistance ;
+  ITEM Ring | Rare | Topaz Ring | +21% to Lightning Resistance ; Adds 22 to 30 Physical Damage to Attacks ; Adds 4 to 82 Lightning damage to Attacks ; +40% to Fire Resistance ; +45% to Cold Resistance ; +44% to Lightning Resistance
+  ITEM BodyArmour | Unique | Morior Invictus / Grand Regalia | 371% increased Armour, Evasion and Energy Shield ; +7 to all Attributes per Socket filled ; +13% to Chaos Resistance per Socket filled ; +14 to Spirit per Socket filled ; +30 to Armour ; +30 to Evasion Rating ; +10 to maximum Energy Shield ; 20% increased Armo
+  ITEM Gloves | Unique | Maligaro's Virtuosity / Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 11% more Global Evasion Rating and Energy Shield ; 23% increased Critical Damage Bonus ; 10% chance to gain Onslaught for 4 seconds on Hit ; Critical Hit chance for 
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Chakra | Currency | Thane Grannell's Rune of Mastery | Gloves: 30% increased Magnitude of Non-Damaging Ailments you inflict
+  ITEM Chakra | Currency | Perfect Storm Rune | Martial Weapon: Adds 1 to 40 Lightning Damage ; Wand or Staff: Gain 12% of Damage as Extra Lightning Damage ; Armour: +22% to Lightning Resistance
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Ring2 | Unique | Kalandra's Touch / Ring | Reflects opposite Ring
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +3 to Level of all Projectile Skills ; Allocates Thaumaturgic Generator
+  ITEM Weapon | Unique | Skysliver / Winged Spear | No Physical Damage ; Adds 1 to 125 Lightning Damage ; 31% increased Attack Speed ; 83% increased chance to Shock ; Rolls only the minimum or maximum Damage value for each Damage Type ; 5% increased Attack Speed
+  ITEM Weapon2 | Rare | Maji Talisman | +7 to Maximum Rage ; Adds 111 to 189 Fire Damage ; Adds 123 to 188 Cold Damage ; Adds 5 to 220 Lightning Damage ; 40% increased Elemental Damage with Attacks ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: 8% chance to gain an additional random C
+  ITEM Belt | Unique | Mageblood / Utility Belt | Has 3 Charm Slots ; 20% of Flask Recovery applied Instantly ; Legacy of Sulphur ; Legacy of Sulphur ; Legacy of Granite ; Legacy of Sulphur ; All Mage's Legacies have 41% increased effect per duplicate Mage's Legacy you have
+  ITEM Helm | RunicUnique | Runemastered Covert Hood | 56% increased Evasion Rating ; +101 to Accuracy Rating ; +54 to maximum Mana ; 100% increased Culling Strike Threshold ; 15% chance when you gain a Power Charge to gain an additional Power Charge ; Bonded: +1 to Maximum Power Charges ; +1 to Maximum Power Char
+  FLASK  Seething Ultimate Life Flask of the Copious
+  FLASK Nascent Hope Thawing Charm
+  FLASK Beira's Anguish Dousing Charm
+  FLASK Rite of Passage Golden Charm
+  FLASK  Prolonged Ultimate Mana Flask of the Practitioner
+  JEWEL Maelström Spark Time-Lost Sapphire Notable Passive Skills in Radius also grant 9% increased Critical Damage Bonus ; Notable Passive Skills in Radius also grant 2% increased Skill Speed while Shapeshifted ; Small Passive Skills in Radiu
+  JEWEL Prism of Belief Diamond +3 to Level of all Oil Barrage Skills
+  JEWEL Phoenix Essence Time-Lost Emerald Upgrades Radius to Large ; Small Passive Skills in Radius also grant 2% increased Projectile Damage
+  JEWEL Megalomaniac Diamond 
+  ASC Martial Artist | mainSkill 9
+====================================================================================================
+Pipilipipi 89 Martial Artist life 1872 ES 1210 spirit 206 MS 122
+  keystones: ['Sacrifice of Sight']
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Fluke', 'Boundless Energy II', 'Energy Retention', 'Soul Drain'] [('Lightning Warp', 4233)]
+  SKILL: ['Herald of Thunder', 'Blind II', 'Magnified Area II', 'Elemental Armament II', "Uruk's Smelting", 'Armour Break III'] 
+  SKILL: ['Pounce', 'Eternal Mark', "Sniper's Mark", 'Rapid Attacks II', "Uhtred's Constellation", 'Cooldown Recovery II'] [('Pounce', 3446)]
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Ricochet II', 'Salvo', 'Burgeon II', 'Pinpoint Critical'] [('Oil Barrage', 188817)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Charge Profusion II'] 
+  SKILL: ['Rend', 'Prolonged Duration I', 'Heightened Charges', 'Rapid Attacks II', "Helbrym's Hide"] [('Rend', 68263)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Blind II', 'Magnified Area II', 'Living Lightning II'] [('Hollow Focus', 70)]
+  SKILL: ['Devour', 'Charge Profusion II', 'Thrill of the Kill II', 'Blazing Critical', 'Culling Strike II'] [('Devour', 78424)]
+  SKILL: ['Wind Dancer', 'Blind II', 'Magnified Area II', 'Rage III', 'Knockback'] 
+  SKILL: ['Ghost Dance', 'Cooldown Recovery II', 'Precision II', 'Clarity II'] 
+  SKILL: ['Mana Remnants', 'Remnant Potency I', 'Harmonic Remnants II', "Khatal's Rejuvenation"] 
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry'] 
+  ITEM Ring | Rare | Sapphire Ring | +22% to Cold Resistance ; Adds 10 to 17 Cold damage to Attacks ; Adds 1 to 45 Lightning damage to Attacks ; +96 to maximum Life ; +29 to Strength ; +73% to Lightning Resistance
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Weapon2 | Rare | Crescent Quarterstaff | Adds 12 to 16 Physical Damage ; Adds 2 to 41 Lightning Damage ; 66% increased Elemental Damage with Attacks ; Leeches 5.82% of Physical Damage as Mana ; 16% increased Physical Damage ; Bonded: 20% increased effect of Fully Broken Armour
+  ITEM Chakra | Currency | Farrul's Rune of the Chase | Boots: 5% increased Movement Speed
+  ITEM Gloves | RunicRare | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; Attacks Gain 12% of Damage as Extra Physical Damage ; 16% chance to gain Onslaught for 4 seconds on Hit ; +2.97% to C
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Thane Grannell's Rune of Mastery | Gloves: 30% increased Magnitude of Non-Damaging Ailments you inflict
+  ITEM Belt | Rare | Wide Belt | Has 1 Charm Slot ; 26% increased Flask Charges gained ; +158 to Armour ; +86 to maximum Life ; +103 to maximum Mana ; +19 to Strength ; +32% to Fire Resistance ; +37% to Lightning Resistance
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +50 to Spirit ; 23% increased Critical Hit Chance ; Allocates Bounty Hunter
+  ITEM Chakra | Currency | Greater Robust Rune | All Equipment: +12 to Strength
+  ITEM BodyArmour | Unique | Morior Invictus / Grand Regalia | 320% increased Armour, Evasion and Energy Shield ; +7 to all Attributes per Socket filled ; +11% to Chaos Resistance per Socket filled ; +14 to Spirit per Socket filled ; 76% increased Armour, Evasion and Energy Shield ; Bonded: +80 to maximum Life ; Bonded: +
+  ITEM Ring2 | Rare | Prismatic Ring | +9% to all Elemental Resistances ; Adds 7 to 12 Cold damage to Attacks ; Adds 2 to 37 Lightning damage to Attacks ; +108 to maximum Life ; +3% to all Elemental Resistances ; +30% to Fire Resistance ; +40% to Cold Resistance
+  ITEM Boots | RunicRare | Runeforged Treerunner Shoes | 25% increased Movement Speed ; 74% increased Evasion and Energy Shield ; +143 to maximum Life ; +26 to Dexterity ; +27% to Fire Resistance ; +33% to Cold Resistance ; +18% to Lightning Resistance ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Weapon | Rare | Thunder Talisman | 22% increased Magnitude of Shock you inflict ; 196% increased Physical Damage ; Adds 31 to 53 Physical Damage ; +113 to Accuracy Rating ; +4.11% to Critical Hit Chance ; 25% increased Stun Duration ; 50% increased Attack Damage against Rare or Unique Enemies ;
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 44% increased Evasion Rating ; +117 to Accuracy Rating ; +43 to maximum Mana ; 112% increased Culling Strike Threshold ; 15% chance when you gain a Power Charge to gain an additional Power Charge ; Bonded: +1 to Maximum Power Charges
+  FLASK Lavianga's Spirits Gargantuan Mana Flask
+  FLASK Breath of the Mountains Sapphire Charm
+  FLASK Beira's Anguish Dousing Charm
+  FLASK  Bubbling Ultimate Life Flask of the Surgeon
+  JEWEL Undying Hate Timeless Jewel Glorifying the defilement of 27277 souls in tribute to Ulaman
+Passives in radius are Conquered by the Abyssals
+Desecration makes this item unstable ; Historic
+  JEWEL Bramble Sliver Emerald 6% increased Lightning Damage ; 11% increased Charm Effect Duration ; 2% increased Attack Speed with Bows ; 11% increased Projectile Damage
+  JEWEL Heart of the Well Diamond 
+  JEWEL Fulgent Vessel Time-Lost Sapphire Notable Passive Skills in Radius also grant 6% increased Critical Damage Bonus ; Notable Passive Skills in Radius also grant Recover 1% of maximum Life on Kill ; Small Passive Skills in Radius also gr
+  ASC Martial Artist | mainSkill 11
+====================================================================================================
+OnepointOwaiter 88 Martial Artist life 1660 ES 4719 spirit 150 MS 135
+  keystones: ['Dance with Death']
+  SKILL: ['Pounce', 'Mark for Death II', 'Holy Descent', 'Cooldown Recovery II', 'Rapid Attacks II', "Brutus' Brain"] [('Pounce', 8379)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', "Ailith's Chimes", 'Culmination II', 'Charge Profusion II'] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Profane Ritual', 'Boundless Energy II', 'Energy Retention', 'Efficiency II'] [('Lightning Warp', 882)]
+  SKILL: ['Oil Barrage', 'Perpetual Charge', 'Projectile Acceleration III', 'Elemental Armament II', 'Salvo', 'Nova Projectiles I'] [('Oil Barrage', 197972)]
+  SKILL: ['Rend', 'Innervate', 'Rapid Attacks II', 'Blazing Critical', 'Heightened Charges'] [('Rend', 69340)]
+  SKILL: ['Spirit Vessel', "Romira's Requital", 'Hulking Minions', 'Meat Shield II', 'Arctic Howl'] 
+  SKILL: ['Flame Breath', 'Rapid Attacks II', 'Elemental Armament II', 'Deliberation', 'Fire Mastery'] [('Flame Breath', 286115)]
+  SKILL: ['Whirling Slash', 'Rapid Attacks III', 'Rage III', 'Knockback', 'Pinpoint Critical'] [('Whirling Slash', 1066)]
+  SKILL: ['Devour', 'Charge Profusion II', 'Thrill of the Kill', 'Empowered Sparks II', 'Efficiency II'] [('Devour', 78782)]
+  SKILL: ['Spear Throw'] 
+  ITEM Chakra | Currency | Craiceann's Rune of Recovery | Body Armours: 30% increased Energy Shield Recharge Rate
+  ITEM Chakra | Currency | Craiceann's Rune of Warding | Body Armours: 50% reduced effect of Curses on you
+  ITEM Chakra | Currency | Rune of Accumulation | Gloves: ; Gain 3 Life per Enemy Hit with Attacks ; Gain 1 Mana per Enemy Hit with Attacks ; Crossbow, Bow or Spear: On Hitting an enemy, gains maximum added Cold damage equal to the enemy's Power for 20 seconds, up to a total of 32
+  ITEM Gloves | RunicRare | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; Attacks Gain 20% of Damage as Extra Physical Damage ; Attacks Gain 19% of Damage as Extra Fire Damage ; Leech 9% of P
+  ITEM Amulet | Rare | Stellar Amulet | +6 to all Attributes ; +50 to Spirit ; +16% to all Elemental Resistances
+  ITEM Belt | Rare | Double Belt | Has 3 Charm Slots ; 20% increased Charm Charges gained ; +171 to maximum Life ; 26% increased Charm Effect Duration ; +32 to Strength ; +24% to Chaos Resistance
+  ITEM Ring2 | Unique | Kalandra's Touch / Ring | Reflects opposite Ring
+  ITEM Weapon2 | Rare | Spiny Talisman | 141% increased Physical Damage ; Adds 74 to 115 Cold Damage ; +20% to Critical Damage Bonus ; 40% increased Elemental Damage with Attacks ; Gain 5% of Damage as Extra Damage of all Elements ; Bonded: 8% chance to gain an additional random Charge when you gain 
+  ITEM Boots | Rare | Daggerfoot Shoes | +49 to Evasion Rating ; +20 to maximum Energy Shield ; 98% increased Evasion and Energy Shield ; +28 to Intelligence ; +45% to Cold Resistance ; +39% to Lightning Resistance ; 5% increased Movement Speed ; Bonded: 10% increased Cooldown Recovery Rate
+  ITEM Helm | Rare | Ancestral Tiara | +62 to maximum Energy Shield ; 134% increased Energy Shield ; +38 to maximum Life ; +29 to Intelligence ; +37% to Cold Resistance ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Weapon | Unique | Skysliver / Winged Spear | No Physical Damage ; Adds 1 to 87 Lightning Damage ; 28% increased Attack Speed ; 51% increased chance to Shock ; Rolls only the minimum or maximum Damage value for each Damage Type ; 10% increased Attack Speed
+  ITEM Ring | Rare | Sapphire Ring | +29% to Cold Resistance ; Adds 21 to 33 Physical Damage to Attacks ; Adds 4 to 73 Lightning damage to Attacks ; +33 to Intelligence ; +35% to Fire Resistance ; +37% to Lightning Resistance
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +92 to Deflection Rating per 50 missing Energy Shield ; 297% increased Evasion and Energy Shield ; +22 to Dexterity ; Companions have 37% increased maximum Life ; 10% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; +30 to A
+  FLASK Nascent Hope Thawing Charm
+  FLASK Ngamahu's Chosen Ruby Charm
+  FLASK Sanguis Heroum Staunching Charm
+  FLASK  Concentrated Ultimate Life Flask of the Wide
+  FLASK  Abundant Ultimate Mana Flask of the Apprentice
+  JEWEL Brood Curio Emerald 19% increased Evasion Rating ; 13% increased Critical Damage Bonus for Attack Damage ; 12% increased Projectile Damage
+  JEWEL Fulgent Essence Emerald 6% increased Projectile Speed ; 18% increased Critical Damage Bonus for Attack Damage ; 11% increased Damage with Hits against Rare and Unique Enemies
+  JEWEL Foe Wound Emerald 11% increased Evasion Rating ; 8% increased Critical Hit Chance for Attacks ; 10% increased Elemental Damage
+  ASC Martial Artist | mainSkill 5
+====================================================================================================
+Lnknprk 84 Martial Artist life 1415 ES 601 spirit 250 MS 129
+  keystones: []
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Ricochet II', 'Salvo', 'Fork', 'Burgeon II'] [('Oil Barrage', 126999)]
+  SKILL: ['Devour', 'Culling Strike II', 'Thrill of the Kill II', 'Blazing Critical', 'Rapid Attacks III', 'Prolonged Duration II'] [('Devour', 32697)]
+  SKILL: ['Rend', "Helbrym's Hide", 'Rage III', 'Prolonged Duration II', 'Heightened Charges'] [('Rend', 46499)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', "Ailith's Chimes", 'Culmination II'] 
+  SKILL: ['Cast on Critical', 'Lightning Warp', 'Energy Retention', 'Fluke', 'Boundless Energy II'] [('Lightning Warp', 972)]
+  SKILL: ['Herald of Thunder', 'Elemental Armament II', 'Magnified Area II', 'Armour Break III', 'Blind II'] 
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Echoing Cry'] 
+  SKILL: ['Charge Regulation', 'Armour Demolisher II'] 
+  SKILL: ['Pounce'] 
+  SKILL: ['Ghost Dance'] 
+  ITEM Boots | Rare | Cavalry Boots | 30% increased Movement Speed ; +82 to maximum Life ; +31 to Dexterity ; +36% to Fire Resistance ; +302 to Stun Threshold
+  ITEM Weapon | Rare | Spiny Talisman | 59% increased Physical Damage ; Adds 69 to 109 Cold Damage ; Adds 2 to 84 Lightning Damage ; +129 to Accuracy Rating ; +4.21% to Critical Hit Chance ; +4 to Level of all Melee Skills ; Leeches 8.14% of Physical Damage as Life ; 50% increased Attack Damage agai
+  ITEM Helm | Unique | Myris Uxor / Covert Hood | 42% increased Evasion Rating ; +117 to Accuracy Rating ; +54 to maximum Mana ; 100% increased Culling Strike Threshold ; 15% chance when you gain a Power Charge to gain an additional Power Charge ; Bonded: +1 to Maximum Power Charges
+  ITEM BodyArmour | RunicUnique | Runemastered Pilgrim Vestments | 81% increased Armour and Energy Shield ; +100 to Spirit ; +14% to all Elemental Resistances ; Gain no inherent bonus from Intelligence
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 18% more Global Evasion Rating and Energy Shield ; Attacks Gain 17% of
+  ITEM Belt | Unique | Meginord's Girdle / Rawhide Belt | 24% increased Life Recovery from Flasks ; Has 2 Charm Slots ; +48 to Strength ; +14% to Cold Resistance ; 50% increased Flask Charges used ; 100% increased Flask Charges gained
+  ITEM Ring | Rare | Topaz Ring | +20% to Lightning Resistance ; Adds 16 to 28 Fire damage to Attacks ; +153 to Evasion Rating ; +30 to Intelligence ; +36% to Cold Resistance
+  ITEM Ring2 | Rare | Emerald Ring | +124 to Accuracy Rating ; Adds 1 to 40 Lightning damage to Attacks ; 16% increased Chaos Damage ; +63 to Evasion Rating ; +9% to all Elemental Resistances ; +25% to Cold Resistance ; +37% to Lightning Resistance
+  ITEM Amulet | Rare | Bloodstone Amulet | +32 to maximum Life ; +411 to Accuracy Rating ; 17% increased maximum Energy Shield ; +50 to Spirit ; +15% to all Elemental Resistances ; +35% to Lightning Resistance ; 24% of Damage taken Recouped as Life
+  FLASK  Sunny Sapphire Charm of the Apprentice
+  FLASK Breath of the Mountains Sapphire Charm
+  FLASK  Seething Ultimate Life Flask of the Constant
+  FLASK  Seething Ultimate Mana Flask of the Abundant
+  JEWEL  Engaging Emerald of Alacrity 2% increased Attack Speed ; 13% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds
+  JEWEL Gale Drop Sapphire 15% increased Critical Hit Chance ; 18% increased Damage if you have Consumed a Corpse Recently ; 7% increased chance to inflict Ailments ; 12% increased Damage while Shapeshifted
+  ASC Martial Artist | mainSkill 2
+====================================================================================================
+海南杀猪爹 82 Martial Artist life 1500 ES 3047 spirit 150 MS 121
+  keystones: []
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Fork', 'Ricochet II', 'Hit and Run'] [('Oil Barrage', 85006)]
+  SKILL: ['Rend', 'Rapid Attacks II', 'Innervate', 'Elemental Armament II', 'Prolonged Duration II'] [('Rend', 28018)]
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Overabundance I', 'Stun III', 'Magnified Area II'] [('Hollow Focus', 10)]
+  SKILL: ['Cast on Elemental Ailment', 'Lightning Warp', 'Profane Ritual', 'Charge Profusion II', 'Boundless Energy II'] [('Lightning Warp', 1121)]
+  SKILL: ['Elemental Weakness', 'Heightened Curse', 'Magnified Area II', 'Cursed Ground', 'Ritualistic Curse'] 
+  SKILL: ['Pounce', 'Holy Descent', 'Freezing Mark', 'Mark for Death II'] [('Pounce', 1880)]
+  SKILL: ['Devour', 'Charge Profusion II', 'Rapid Attacks III'] 
+  SKILL: ['Combat Frenzy', 'Charge Profusion II', 'Cannibalism I'] 
+  SKILL: ['Ferocious Roar', 'Raging Cry', 'Magnified Area II'] 
+  ITEM Weapon | Rare | Wildwood Talisman | Adds 57 to 104 Fire Damage ; Adds 72 to 120 Cold Damage ; Adds 2 to 223 Lightning Damage ; +50 to Accuracy Rating ; Leeches 7.52% of Physical Damage as Life ; 15% increased Light Radius ; 36% increased Physical Damage ; Bonded: 40% increased effect of Fully Br
+  ITEM Amulet | Rare | Jade Amulet | +12 to Dexterity ; 12% increased Spell Damage ; 12% increased maximum Energy Shield ; +50 to Spirit ; +2 to Level of all Projectile Skills
+  ITEM Boots | Rare | Charmed Shoes | 25% increased Movement Speed ; 96% increased Evasion and Energy Shield ; +37% to Cold Resistance ; Gain Deflection Rating equal to 15% of Evasion Rating ; 1.2 Life Regeneration per second
+  ITEM Chakra | Currency | Storm Rune | Martial Weapon: Adds 1 to 20 Lightning Damage ; Wand or Staff: Gain 8% of Damage as Extra Lightning Damage ; Armour: +14% to Lightning Resistance
+  ITEM Gloves | Unique | Grip of Winter / Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 12% more Global Evasion Rating and Energy Shield ; Attacks Gain 15% of Damage as Extra Cold Damage ; +2% to Maximum Cold Resistance ; +17% to Cold Resistance ; All D
+  ITEM Ring | Rare | Amethyst Ring | +11% to Chaos Resistance ; +103 to Evasion Rating ; +69 to maximum Mana ; +12 to all Attributes ; +21 to Strength ; +20% to Lightning Resistance
+  ITEM Helm | Rare | Jungle Tiara | +47 to maximum Energy Shield ; 65% increased Energy Shield ; +26 to maximum Life ; +31 to maximum Mana ; +39% to Fire Resistance
+  ITEM Belt | Rare | Fine Belt | Has 2 Charm Slots ; Flasks gain 0.17 charges per Second ; +119 to maximum Life ; 24% increased Flask Mana Recovery rate ; +15 to Strength ; +31% to Fire Resistance ; 10.9 Life Regeneration per second ; 52 to 75 Physical Thorns damage
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Greater Glacial Rune | Martial Weapon: Adds 9 to 15 Cold Damage ; Wand or Staff: Gain 10% of Damage as Extra Cold Damage ; Armour: +18% to Cold Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Chakra | Currency | Desert Rune | Martial Weapon: Adds 7 to 11 Fire Damage ; Wand or Staff: Gain 8% of Damage as Extra Fire Damage ; Armour: +14% to Fire Resistance
+  ITEM Ring2 | Rare | Topaz Ring | +22% to Lightning Resistance ; Adds 7 to 13 Cold damage to Attacks ; +88 to Evasion Rating ; +107 to maximum Mana ; +21 to Strength ; +36% to Fire Resistance ; +19% to Cold Resistance
+  ITEM BodyArmour | Rare | Sleek Jacket | +18% to Cold Resistance ; +18% to Lightning Resistance ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum Mana
+  FLASK  Sunburst Stone Charm of the Distiller
+  FLASK  Bubbling Ultimate Life Flask of the Sylvan
+  FLASK  Persistent Ultimate Mana Flask of the Foliage
+  FLASK  Examiner's Amethyst Charm of the Continuous
+  FLASK  Examiner's Staunching Charm of the Copious
+  JEWEL Dragon Spark Ruby 16% increased Damage against Enemies with Fully Broken Armour ; 13% increased Damage while Shapeshifted ; 4% increased Skill Speed while Shapeshifted
+  JEWEL Damnation Breath Sapphire 6% increased Critical Hit Chance for Spells ; Damage Penetrates 8% Cold Resistance ; 7% increased Damage while Shapeshifted
+  JEWEL Sol Hope Emerald Damage Penetrates 9% Lightning Resistance ; 14% increased Magnitude of Ailments you inflict ; 19% increased Elemental Ailment Threshold
+  JEWEL Armageddon Solace Emerald 5% increased Lightning Damage ; 10% increased Flask Effect Duration ; 8% increased Elemental Damage ; 9% chance to Daze on Hit
+  ASC Martial Artist | mainSkill 6
+====================================================================================================
+MyBallsBeDragon 82 Martial Artist life 1 ES 6918 spirit 140 MS 97
+  keystones: ['Chaos Inoculation']
+  SKILL: ['Oil Barrage', 'Salvo', 'Ricochet II', 'Nova Projectiles I', 'Elemental Armament II', 'Fork'] [('Oil Barrage', 69688)]
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes"] 
+  SKILL: ['Cast on Elemental Ailment', 'Lightning Warp', 'Energy Retention', 'Boundless Energy II', 'Fluke'] [('Lightning Warp', 1540)]
+  SKILL: ['Rend', 'Rapid Attacks II', 'Elemental Armament II', 'Prolonged Duration II'] [('Rend', 28426)]
+  SKILL: ['Killing Palm', 'Charge Profusion II', 'Ancestral Call I', 'Thrill of the Kill II'] [('Killing Palm', 12142)]
+  SKILL: ['Pounce', 'Freezing Mark', 'Charged Mark', 'Eternal Mark'] [('Pounce', 742)]
+  SKILL: ['Hollow Focus', 'Magnified Area II', 'Elemental Armament II'] 
+  SKILL: ['Spirit Vessel', 'Lunar Blessing', 'Loyalty'] 
+  SKILL: ['Herald of Thunder', 'Elemental Armament II', 'Magnified Area I'] 
+  SKILL: ['Devour', 'Charge Profusion II'] 
+  SKILL: ['Charge Regulation'] 
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +85 to Deflection Rating per 50 missing Energy Shield ; 288% increased Evasion and Energy Shield ; +30 to Dexterity ; Companions have 43% increased maximum Life ; 12% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; 18% incr
+  ITEM Helm | Rare | Sorcerous Tiara | +61 to maximum Energy Shield ; +81 to maximum Life ; 35% reduced Attribute Requirements ; +40% to Fire Resistance ; +38% to Cold Resistance ; 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana ; 18% redu
+  ITEM Belt | Unique | Meginord's Girdle / Rawhide Belt | 24% increased Life Recovery from Flasks ; Has 1 Charm Slot ; +45 to Strength ; +12% to Cold Resistance ; 50% increased Flask Charges used ; 100% increased Flask Charges gained
+  ITEM Gloves | RunicUnique | Runeforged Fists of Stone | Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +1 to maximum Runic Ward per player level ; 15% more Global Evasion Rating and Energy Shield ; Attacks Gain 13% of Damage as Extra Cold Damage ; +3% to Maximum C
+  ITEM Weapon | Rare | Lunar Quarterstaff | 85% increased Physical Damage ; Adds 26 to 49 Physical Damage ; Adds 52 to 80 Fire Damage ; 25% reduced Attribute Requirements ; Grants 5 Life per Enemy Hit ; 54% increased Physical Damage ; Bonded: 60% increased effect of Fully Broken Armour
+  ITEM Boots | Rare | Dunerunner Sandals | 18% increased Armour, Evasion and Energy Shield ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Amulet | Rare | Lapis Amulet | +13 to Intelligence ; +57 to maximum Energy Shield ; 42% increased maximum Energy Shield ; +40 to Spirit ; 19% increased Critical Hit Chance ; 14% increased Critical Damage Bonus ; +7% to all Elemental Resistances
+  ITEM Ring | Rare | Prismatic Ring | +8% to all Elemental Resistances ; Adds 24 to 34 Fire damage to Attacks ; Adds 9 to 15 Cold damage to Attacks ; 15% increased Lightning Damage ; +6% to all Elemental Resistances ; +17% to Cold Resistance ; +29% to Lightning Resistance
+  ITEM Ring2 | Rare | Prismatic Ring | +10% to all Elemental Resistances ; Adds 14 to 26 Physical Damage to Attacks ; 30% increased Lightning Damage ; +29% to Cold Resistance ; +30% to Lightning Resistance ; 38% increased Mana Regeneration Rate
+  ITEM Weapon2 | RunicUnique | Runeforged Vicious Talisman | 104% increased Physical Damage ; +9 to all Attributes ; 38% reduced Presence Area of Effect ; Copy a random Modifier from each enemy in your Presence when
+you Shapeshift to an Animal form
+Modifiers gained this way are lost after 30 seconds or when you next Sha
+  FLASK  Sunny Thawing Charm of the Constant
+  FLASK  Floral Stone Charm
+  FLASK  Effervescent Giant Mana Flask of the Foliage
+  FLASK  Undiluted Ultimate Life Flask
+  JEWEL Glyph Glisten Sapphire 14% increased Freeze Buildup ; 7% increased Skill Effect Duration ; 15% increased Magnitude of Ailments you inflict
+  JEWEL Prism of Belief Diamond +1 to Level of all Oil Barrage Skills
+  ASC Martial Artist | mainSkill 6
+====================================================================================================
+Soje_Fo_Ma 81 Martial Artist life 1559 ES 2429 spirit 100 MS 126
+  keystones: ['Dance with Death']
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II', 'Overabundance II', 'Culling Strike II', 'Magnified Area II'] 
+  SKILL: ['Oil Barrage', 'Fork', 'Nova Projectiles I', 'Salvo', 'Ricochet II'] [('Oil Barrage', 41469)]
+  SKILL: ['Devour', 'Thrill of the Kill II', 'Charge Profusion II', 'Rage III', 'Blazing Critical'] [('Devour', 18834)]
+  SKILL: ['Pounce', 'Opening Move', 'Rapid Attacks II', 'Cooldown Recovery II', 'Eternal Mark'] [('Pounce', 1704)]
+  SKILL: ['Rend', 'Rapid Attacks II', 'Prolonged Duration II', 'Rage I'] [('Rend', 17476)]
+  SKILL: ['Cast on Elemental Ailment', 'Lightning Warp', 'Energy Retention', 'Boundless Energy II'] [('Lightning Warp', 839)]
+  SKILL: ['Whirling Slash', 'Rapid Attacks I', 'Pinpoint Critical'] 
+  SKILL: ['Herald of Thunder', 'Concentrated Area'] 
+  SKILL: ['Spear Throw'] 
+  SKILL: ['Lingering Illusion'] 
+  SKILL: ['War Banner'] 
+  SKILL: ['Charge Regulation'] 
+  ITEM Amulet | Rare | Lapis Amulet | +12 to Intelligence ; 19% increased Spell Damage ; +28 to maximum Mana ; 19% increased Rarity of Items found ; 27% increased Critical Damage Bonus ; +14% to all Elemental Resistances ; +9% to Cold Resistance
+  ITEM Boots | Rare | Treerunner Shoes | 25% increased Movement Speed ; 64% increased Evasion and Energy Shield ; 25% reduced Attribute Requirements ; +28% to Fire Resistance ; +21% to Lightning Resistance
+  ITEM Weapon | RunicUnique | Runeforged War Spear | 28% increased Projectile Speed with this Weapon ; Adds 15 to 26 Physical Damage ; +100 to Evasion Rating ; 14% increased Attack Speed ; 52% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds ; 60% increased Projectile Dama
+  ITEM Gloves | Unique | Grip of Winter / Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; 13% more Global Evasion Rating and Energy Shield ; Attacks Gain 13% of Damage as Extra Cold Damage ; +2% to Maximum Cold Resistance ; +18% to Cold Resistance ; All D
+  ITEM Belt | Rare | Ornate Belt | Has 1 Charm Slot ; 10% reduced Charm Charges used ; +67 to maximum Mana ; +10% to Fire Resistance ; +17% to Cold Resistance ; 15% reduced Charm Charges used
+  ITEM Ring2 | Rare | Prismatic Ring | +10% to all Elemental Resistances ; +117 to maximum Life ; +20 to Intelligence ; +12% to all Elemental Resistances ; Gain 2 Mana per enemy killed
+  ITEM Ring | Rare | Topaz Ring | +29% to Lightning Resistance ; 8% increased Chaos Damage ; +61 to Accuracy Rating ; +28 to Evasion Rating ; +17% to Fire Resistance ; +10% to Cold Resistance ; Leech 5.02% of Physical Attack Damage as Mana
+  ITEM BodyArmour | Rare | Sleek Jacket | +152 to Evasion Rating ; +44 to maximum Energy Shield ; +6 to Dexterity ; +33% to Lightning Resistance ; 50% reduced Duration of Bleeding on You ; 36% increased Armour, Evasion and Energy Shield ; Bonded: +40 to maximum Life ; Bonded: +40 to maximum Mana
+  ITEM Weapon2 | Rare | Jade Talisman | 49% increased Physical Damage ; Adds 32 to 74 Physical Damage ; Adds 135 to 220 Fire Damage ; +104 to Accuracy Rating ; +2.55% to Critical Hit Chance ; 26% increased Stun Duration ; 36% increased Physical Damage ; Bonded: 40% increased effect of Fully Broken A
+  ITEM Helm | Rare | Wrapped Cap | +65 to Evasion Rating ; 63% increased Evasion Rating ; +88 to maximum Mana ; 16% increased Critical Hit Chance ; +35% to Fire Resistance ; +13% to Cold Resistance
+  FLASK  Bright Stone Charm of the Distiller
+  FLASK  Effervescent Ultimate Life Flask of the Surgeon
+  FLASK  Compact Ultimate Mana Flask of the Copious
+  FLASK  Analyst's Thawing Charm
+  JEWEL Dragon Shard Emerald 8% increased Critical Hit Chance for Attacks ; 6% increased Elemental Damage ; Companions deal 11% increased Damage
+  JEWEL Soul Ruin Emerald 3% increased Attack Speed ; 10% chance to Daze on Hit ; 15% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds
+  JEWEL Empyrean Wound Emerald 9% increased Lightning Damage ; 14% increased Critical Hit Chance for Attacks ; 7% chance to Poison on Hit ; 12% increased Magnitude of Shock you inflict
+  ASC Martial Artist | mainSkill 5
+====================================================================================================
+Konvel_FR_Monk 81 Martial Artist life 1409 ES 2941 spirit 146 MS 120
+  keystones: []
+  SKILL: ['Blasphemy', 'Repulsion', 'Living Lightning II', 'Culmination II', "Ailith's Chimes", 'Charge Profusion II'] 
+  SKILL: ['Oil Barrage', 'Nova Projectiles I', 'Salvo', 'Fork', 'Ricochet II', 'Burgeon II'] [('Oil Barrage', 50514)]
+  SKILL: ['Spirit Vessel', 'Devour', 'Loyalty', 'Meat Shield II', 'Holy Descent'] 
+  SKILL: ['Cast on Elemental Ailment', 'Lightning Warp', 'Magnified Area II', 'Boundless Energy II', 'Energy Retention'] [('Lightning Warp', 1470)]
+  SKILL: ['Furious Slam', 'Aftershock II', 'Magnified Area II', 'Heft'] [('Furious Slam', 2628)]
+  SKILL: ['Rend', 'Rapid Attacks II', 'Rage III'] 
+  SKILL: ['Hollow Focus', 'Cooldown Recovery II'] 
+  SKILL: ['Pounce', 'Cooldown Recovery II'] 
+  SKILL: ['Devour', 'Charge Profusion II'] 
+  SKILL: ['Herald of Thunder', 'Magnified Area II'] 
+  SKILL: ['Wind Dancer'] 
+  SKILL: ['Ghost Dance'] 
+  SKILL: ['Ferocious Roar'] 
+  ITEM Ring | Rare | Emerald Ring | +139 to Accuracy Rating ; Adds 12 to 18 Fire damage to Attacks ; Adds 10 to 15 Cold damage to Attacks ; +252 to Accuracy Rating ; +29 to Strength ; +28% to Cold Resistance
+  ITEM Helm | Rare | Pariah Mask | +223 to Accuracy Rating ; +85 to maximum Life ; +101 to maximum Mana ; +21% to Cold Resistance ; +24% to Lightning Resistance ; 2.3 Life Regeneration per second ; +18% to Fire Resistance ; Bonded: +20 to maximum Life ; Bonded: +20 to maximum Mana
+  ITEM Boots | Rare | Treerunner Shoes | 20% increased Movement Speed ; +36 to Evasion Rating ; +12 to maximum Energy Shield ; +30 to maximum Mana ; +19% to Lightning Resistance ; Gain Deflection Rating equal to 8% of Evasion Rating ; 1.8 Life Regeneration per second ; +18% to Fire Resistance ; Bonde
+  ITEM Gloves | Rare | Fists of Stone | Has +3 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Has +2 to Evasion Rating per player level ; Has +1 to maximum Energy Shield per player level ; Attacks Gain 12% of Damage as Extra Cold Damage ; 14% chance to gain O
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Chakra | Currency | Greater Storm Rune | Martial Weapon: Adds 1 to 30 Lightning Damage ; Wand or Staff: Gain 10% of Damage as Extra Lightning Damage ; Armour: +18% to Lightning Resistance
+  ITEM Ring2 | Rare | Iron Ring | Adds 1 to 4 Physical Damage to Attacks ; Adds 7 to 14 Cold damage to Attacks ; Adds 1 to 27 Lightning damage to Attacks ; +14 to Evasion Rating ; 12% increased Rarity of Items found ; +13% to Cold Resistance ; 22% increased Mana Regeneration Rate ; 15% increas
+  ITEM Belt | Rare | Ornate Belt | Has 1 Charm Slot ; 10% reduced Charm Charges used ; +67 to maximum Life ; 24% increased Flask Mana Recovery rate ; 19% increased Charm Effect Duration ; +15% to Cold Resistance ; +24% to Lightning Resistance ; 23% increased Charm Charges gained
+  ITEM Chakra | Currency | Greater Desert Rune | Martial Weapon: Adds 13 to 16 Fire Damage ; Wand or Staff: Gain 10% of Damage as Extra Fire Damage ; Armour: +18% to Fire Resistance
+  ITEM Weapon | Rare | Voltfang Talisman | 20% increased Magnitude of Shock you inflict ; 123% increased Physical Damage ; Adds 26 to 40 Fire Damage ; +11 to Accuracy Rating ; +2.07% to Critical Hit Chance ; 14% increased Attack Speed ; 5% increased Light Radius ; Adds 2 to 60 Lightning Damage ; Bonded
+  ITEM Amulet | Rare | Absent Amulet | -1 Prefix Modifier allowed ; -1 Suffix Modifier allowed ; +46 to maximum Energy Shield ; 17% increased Rarity of Items found ; +3 to Level of all Projectile Skills ; Allocates Paragon
+  ITEM BodyArmour | Unique | Forgotten Warden / Primal Markings | +85 to Deflection Rating per 50 missing Energy Shield ; 298% increased Evasion and Energy Shield ; +27 to Dexterity ; Companions have 42% increased maximum Life ; 10% of Damage from Deflected Hits is taken from Damageable Companion's Life before you ; +36% to 
+  FLASK  Abundant Gargantuan Mana Flask of the Verdant
+  FLASK  Floral Thawing Charm of the Medic
+  FLASK  Dense Colossal Life Flask of the Doctor
+  JEWEL Brood Pause Emerald 13% increased Projectile Damage ; Mark Skills have 11% increased Use Speed ; Projectiles have 11% chance for an additional Projectile when Forking ; Companions have 19% increased maximum Life
+  JEWEL Behemoth Ruin Emerald 7% increased Projectile Speed ; 10% chance to Pierce an Enemy ; 8% increased Projectile Damage ; 11% increased Crossbow Reload Speed
+  ASC Martial Artist | mainSkill 9
+
+COUNTS [('G:Cast on Critical', 23), ('G:Rend', 22), ('G:Oil Barrage', 22), ('G:Pounce', 20), ('G:Devour', 17), ('G:Hollow Focus', 16), ('G:Ferocious Roar', 15), ('G:Wind Dancer', 14), ('G:Blasphemy', 14), ('G:Charge Regulation', 13), ('G:Ghost Dance', 13), ('G:Herald of Thunder', 13), ("U:Lavianga's Spirits", 12), ('U:Nascent Hope', 10), ('G:Spirit Vessel', 9), ('U:Forgotten Warden', 9), ('U:Rite of Passage', 7), ('G:Mana Remnants', 7), ('U:Myris Uxor', 7), ('G:Spear Throw', 6), ("U:Beira's Anguish", 6), ('U:The Fall of the Axe', 5), ('G:Whirling Slash', 5), ("U:Kalandra's Touch", 5), ('G:War Banner', 4), ('U:Headhunter', 4), ('G:Trinity', 4), ('U:Mageblood', 4), ('U:Skysliver', 4), ('G:Cast on Elemental Ailment', 4), ('U:Morior Invictus', 3), ('G:Flame Breath', 3), ("U:Ngamahu's Chosen", 3), ('U:Breath of the Mountains', 3), ('U:Sanguis Heroum', 3), ('U:Blood of the Warrior', 2), ('U:For Utopia', 2), ('U:Ingenuity', 2), ('G:Lingering Illusion', 2), ("U:Meginord's Girdle", 2), ('U:Grip of Winter', 2), ('G:Spear Stab', 1), ('G:Cast on Block', 1), ('G:Raise Shield', 1), ('G:Arctic Armour', 1), ("U:Alpha's Howl", 1), ('U:Svalinn', 1), ('U:Opportunity', 1), ('G:Elemental Invocation', 1), ('G:Eternal Rage', 1), ('U:Amor Mandragora', 1), ('G:Wing Blast', 1), ("U:Maligaro's Virtuosity", 1), ('G:Elemental Weakness', 1), ('G:Combat Frenzy', 1), ('G:Killing Palm', 1), ('G:Furious Slam', 1)]

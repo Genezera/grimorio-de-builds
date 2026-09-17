@@ -1,0 +1,14 @@
+360x780 rites/index.html page: GAP: 697px empty at y=24302
+360x780 rites/en.html page: GAP: 675px empty at y=23904
+390x844 rites/index.html page: GAP: 563px empty at y=22932
+390x844 rites/en.html page: GAP: 563px empty at y=22402
+412x915 rites/index.html page: GAP: 563px empty at y=22292
+412x915 rites/en.html page: GAP: 542px empty at y=21933
+844x390 rites/index.html page: GAP: 517px empty at y=16071
+844x390 rites/en.html page: GAP: 517px empty at y=15944
+768x1024 rites/index.html page: GAP: 512px empty at y=16116
+768x1024 rites/en.html page: GAP: 512px empty at y=16023
+820x1180 rites/index.html page: GAP: 515px empty at y=16094
+820x1180 rites/en.html page: GAP: 515px empty at y=15929
+1024x768 rites/index.html page: GAP: 521px empty at y=14631
+1024x768 rites/en.html page: GAP: 521px empty at y=14555

@@ -1,0 +1,32 @@
+360x780 done · problems so far: 2
+390x844 done · problems so far: 4
+412x915 done · problems so far: 6
+844x390 done · problems so far: 8
+768x1024 done · problems so far: 10
+820x1180 done · problems so far: 12
+1024x768 done · problems so far: 14
+1180x820 done · problems so far: 20
+{
+ "checks": 4128,
+ "problems": 20
+}
+360x780 rites/index.html page: GAP: 763px empty at y=24660
+360x780 rites/en.html page: GAP: 741px empty at y=24278
+390x844 rites/index.html page: GAP: 629px empty at y=23336
+390x844 rites/en.html page: GAP: 629px empty at y=22760
+412x915 rites/index.html page: GAP: 629px empty at y=22665
+412x915 rites/en.html page: GAP: 608px empty at y=22306
+844x390 rites/index.html page: GAP: 588px empty at y=16071
+844x390 rites/en.html page: GAP: 588px empty at y=15944
+768x1024 rites/index.html page: GAP: 575px empty at y=16116
+768x1024 rites/en.html page: GAP: 575px empty at y=16023
+820x1180 rites/index.html page: GAP: 584px empty at y=16094
+820x1180 rites/en.html page: GAP: 584px empty at y=15929
+1024x768 rites/index.html page: GAP: 599px empty at y=14631
+1024x768 rites/en.html page: GAP: 599px empty at y=14555
+1180x820 rites/index.html page: GAP: 175px empty at y=6080
+1180x820 rites/index.html page: GAP: 175px empty at y=7542
+1180x820 rites/index.html page: GAP: 177px empty at y=8802
+1180x820 rites/en.html page: GAP: 175px empty at y=6056
+1180x820 rites/en.html page: GAP: 175px empty at y=7495
+1180x820 rites/en.html page: GAP: 177px empty at y=8785
