@@ -172,7 +172,7 @@ footer a:hover{color:var(--gild-hi)}
 
 /* ---------- reveal */
 .rv-on .build,.rv-on .steps article,.rv-on .knowledge,.rv-on .section-heading,.rv-on .about{opacity:0;translate:0 26px;transition:opacity .9s var(--ease),translate 1s var(--ease),transform .7s var(--ease),border-color .4s,box-shadow .6s}
-.rv-on .in{opacity:1;translate:0 0}
+.rv-on .shown{opacity:1;translate:0 0}
 .hero > div:first-child > *{animation:heroIn 1s var(--ease) both}
 .hero > div:first-child > *:nth-child(2){animation-delay:.1s}.hero > div:first-child > *:nth-child(3){animation-delay:.2s}.hero-note{animation:heroIn 1s .3s var(--ease) both}
 @keyframes heroIn{from{opacity:0;transform:translateY(18px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}

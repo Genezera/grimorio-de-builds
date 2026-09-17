@@ -514,6 +514,8 @@ def build(QUESTS_PT):
             q["reward"] = L("ESCOLHA: 25% increased Mana Regeneration Rate (Lowepe)", "CHOICE: 25% increased Mana Regeneration Rate (Lowepe)"); q["prio"] = "Média"
         if q["boss"] == "Tribal Medicine":
             q["reward"] = L("ESCOLHA (o Lowepe não especifica)", "CHOICE (Lowepe doesn't specify)"); q["prio"] = "Média"
+        if q["boss"] == "Great White One":
+            q["reward"] = L("ESCOLHA (o Lowepe não especifica)", "CHOICE (Lowepe doesn't specify)"); q["prio"] = "Média"
         if q["boss"] == "Tabana's Pillar":
             q["reward"] = L("ESCOLHA: 3% increased Movement Speed (Lowepe)", "CHOICE: 3% increased Movement Speed (Lowepe)")
         quests.append(q)

@@ -116,11 +116,36 @@ asc_nodes, asc_edges, asc_meta = build_graph(lambda n: n.get("ascendancyName") =
 print("main", len(main_nodes), "asc", len(asc_nodes))
 
 VAR = {v["name"]: v for v in D.V["variants"]}
+ASC_IDS = {int(k) for k, n in N.items() if n.get("ascendancyName") == ASC}
+ASC_START = next(k for k in ASC_IDS if N[str(k)].get("isAscendancyStart"))
+def asc_path(target):
+    """Menor caminho (nós da ascendência) do início até o notable."""
+    prev, dq = {ASC_START: None}, deque([ASC_START])
+    while dq:
+        u = dq.popleft()
+        if u == target: break
+        for c in N[str(u)].get("connections", []):
+            v = c["id"]
+            if v in ASC_IDS and v not in prev: prev[v] = u; dq.append(v)
+    if target not in prev: return [target]
+    out, x = [], target
+    while x is not None: out.append(x); x = prev[x]
+    return out
+def asc_for(pid, a):
+    """ASC_PHASE[pid] = notables realmente alocados na fase (corrige variantes com pontos demais para o nível)."""
+    names = getattr(D, "ASC_PHASE", {}).get(pid)
+    if names is None: return a
+    ids = []
+    for nm in names:
+        nid = next(k for k in ASC_IDS if N[str(k)].get("name") == nm)
+        for x in asc_path(nid):
+            if x not in ids: ids.append(x)
+    return ids
 ORDER = D.ORDER
 alloc, passive_icons = {}, {}
 for pid in ORDER:
     t = VAR[D.VMAP[pid]]["tree"]
-    alloc[pid] = {"m": t["m"], "s1": t["s1"], "s2": t["s2"], "a": t["a"]}
+    alloc[pid] = {"m": t["m"], "s1": t["s1"], "s2": t["s2"], "a": asc_for(pid, t["a"])}
     for nid in t["m"] + t["s1"] + t["s2"] + t["a"]:
         if str(nid) not in N: continue
         name, stats, ic, kind = info(nid)

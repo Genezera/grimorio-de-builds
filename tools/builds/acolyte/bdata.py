@@ -50,30 +50,30 @@ def socket_hint(slot, name):
 SUPWHY = {
  "Bleed I": L("Faz o alvo sangrar: liga o Herald of Blood.", "Makes the target bleed: enables Herald of Blood."), "Bleed II": L("Mais sangramento para o Herald of Blood.", "More bleeding for Herald of Blood."), "Bleed III": L("Sangramento forte: explosões do Herald of Blood em cadeia.", "Strong bleed: chained Herald of Blood explosions."),
  "Bursting Plague": L("Inimigos envenenados explodem ao morrer — a explosão também pode sangrar (auto-corrente).", "Poisoned enemies explode on death — the explosion can also bleed (self-chaining)."),
- "Escalating Poison": L("Mais venenos no alvo aumentam o dano do veneno.", "More poisons on the target raise poison damage."),
+ "Escalating Poison": L("Aplica um veneno extra no alvo, com duração menor.", "Applies an extra poison to the target, with shorter duration."),
  "Deadly Poison II": L("Veneno mais forte, menos dano de hit.", "Stronger poison, less hit damage."),
- "Poison II": L("Chance de envenenar.", "Poison chance."), "Poison III": L("Envenena sempre: no Archon, detona as pústulas da Toxic Growth.", "Always poisons: on Archon, detonates Toxic Growth pustules."),
+ "Poison II": L("Chance de envenenar.", "Poison chance."), "Poison III": L("Chance de envenenar e veneno mais forte contra inimigos sangrando (combina com o Bleed); no Archon, o veneno detona as pústulas.", "Poison chance and stronger poison against bleeding enemies (pairs with Bleed); on Archon, the poison detonates the pustules."),
  "Fork": L("As flechas se dividem: clear fora da tela.", "Arrows fork: off-screen clear."),
  "Concentrated Area": L("OBRIGATÓRIO na Toxic Growth: as pústulas se sobrepõem no boss.", "MANDATORY on Toxic Growth: pustules overlap on the boss."),
  "Long Fuse I": L("Pústulas com pavio maior e mais dano.", "Longer fuse and more damage on pustules."), "Long Fuse II": L("Pavio maior, muito mais dano.", "Longer fuse, much more damage."),
  "Arakaali's Lust": L("Lineage barata: muito dano na Toxic Growth com +5 venenos.", "Cheap lineage: huge Toxic Growth damage with +5 poisons."),
- "Garukhan's Resolve": L("Lineage cara: só com ~50% de crítico.", "Expensive lineage: only at ~50% crit."),
+ "Garukhan's Resolve": L("Lineage cara: limita a chance máxima de crítico e rola o crítico duas vezes (Bifurcate). Só vale com ~50% de crítico.", "Expensive lineage: caps max crit chance and rolls crits twice (Bifurcate). Only worth it at ~50% crit."),
  "Prolonged Duration I": L("Planta da Vine Arrow dura mais.", "Vine Arrow plant lasts longer."), "Prolonged Duration II": L("Mais duração: tornados do Archon duram mais.", "More duration: Archon tornadoes last longer."),
  "Swift Affliction I": L("Dano no tempo mais rápido.", "Faster damage over time."), "Swift Affliction II": L("Dano no tempo bem mais rápido.", "Much faster damage over time."),
- "Deliberation": L("Mais dano.", "More damage."), "Stoicism II": L("Mais dano da planta.", "More plant damage."),
+ "Deliberation": L("Mais dano.", "More damage."), "Stoicism II": L("O dano da skill sobe aos poucos até um limite; zera se você der dodge ou usar skill de movimento.", "The skill's damage ramps up to a cap; it resets if you dodge roll or use a travel skill."),
  "Magnified Area I": L("Área maior.", "Larger area."), "Magnified Area II": L("Área maior.", "Larger area."),
  "Chaos Mastery": L("+1 nível em skills de caos.", "+1 level to chaos skills."),
  "Astral Projection": L("Plague Bearer vira à distância.", "Makes Plague Bearer ranged."),
  "Exploit Weakness": L("Mais dano contra Armour quebrada (Corrosion no Archon).", "More damage against broken Armour (Corrosion on Archon)."),
- "Tacati's Ire": L("Lineage: dano com Rage (Absent Amulet).", "Lineage: damage with Rage (Absent Amulet)."), "Vorana's Siege": L("Lineage: área maior e hits fortes em alvo isolado.", "Lineage: larger area and strong hits on isolated targets."),
- "Harmonic Remnants II": L("Chamas de Chayula de mais longe.", "Flames of Chayula from further away."), "Remnant Potency III": L("Chamas mais fortes (mais caos da roxa).", "Stronger flames (more chaos from purple)."),
+ "Tacati's Ire": L("Lineage: o veneno causa dano mais rápido quanto mais Rage você tem (Rage do Absent Amulet).", "Lineage: poison deals damage faster the more Rage you have (Rage from Absent Amulet)."), "Vorana's Siege": L("Lineage: área maior e hits fortes em alvo isolado.", "Lineage: larger area and strong hits on isolated targets."),
+ "Harmonic Remnants II": L("Chamas de Chayula de mais longe.", "Flames of Chayula from further away."), "Remnant Potency III": L("Chamas mais fortes (mais caos da roxa), com um pequeno atraso no efeito.", "Stronger flames (more chaos from purple), with a small delay on the effect."),
  "Khatal's Rejuvenation": L("Lineage: pegar Remnants reduz cooldown (Ghost Dance).", "Lineage: picking Remnants reduces cooldowns (Ghost Dance)."),
  "Repulsion": L("Curse dentro do Blasphemy: explosões ao acertar.", "Curse inside Blasphemy: explosions on hit."),
  "Living Lightning": L("Qualquer hit de raio cria minions que ativam a Repulsion.", "Any lightning hit creates minions that proc Repulsion."), "Living Lightning II": L("Minions de raio ativam a Repulsion sozinhos.", "Lightning minions proc Repulsion by themselves."),
- "Admixture": L("Mais veneno no Herald of Blood.", "More poison on Herald of Blood."),
- "Withering Touch": L("Wither ao acertar: mais dano de caos.", "Wither on hit: more chaos damage."), "Corrosion": L("Quebra Armour (para Exploit Weakness).", "Breaks Armour (for Exploit Weakness)."),
- "Uul-Netol's Embrace": L("Lineage: Armour Break.", "Lineage: Armour Break."),
- "Rage II": L("Rage no Wind Dancer.", "Rage on Wind Dancer."), "Maim": L("Maim nos inimigos repelidos.", "Maims knocked-back enemies."), "Blind II": L("Blind: defesa.", "Blind: defence."), "Life Leech III": L("Leech de vida.", "Life leech."),
+ "Admixture": L("Sangramento mais efetivo em inimigos envenenados e veneno mais efetivo em inimigos sangrando: a build aplica os dois.", "Bleeding is more effective against poisoned enemies and poison more effective against bleeding ones: the build applies both."),
+ "Withering Touch": L("Chance de Wither ao acertar: mais dano de caos.", "Chance to Wither on hit: more chaos damage."), "Corrosion": L("O veneno que a skill aplica também quebra a Armour do alvo (para o Exploit Weakness).", "The poison the skill applies also breaks the target's Armour (for Exploit Weakness)."),
+ "Uul-Netol's Embrace": L("Lineage: caos extra e o dano de caos quebra Armour.", "Lineage: extra chaos damage, and chaos damage breaks Armour."),
+ "Rage II": L("Rage ao acertar ataques melee (Wind Dancer no setup do Goratha).", "Rage on melee attack hits (Wind Dancer in Goratha's setup)."), "Maim": L("Maim nos inimigos repelidos.", "Maims knocked-back enemies."), "Blind II": L("Blind: defesa.", "Blind: defence."), "Life Leech III": L("Leech de vida com o dano físico dos ataques; não para com a vida cheia.", "Life leech from attack physical damage; not removed at full life."),
  "Cooldown Recovery II": L("Ghost Dance volta mais rápido.", "Ghost Dance recovers faster."), "Her Declaration": L("Intimidate na Presence. Reduz o custo quando no Ghost Dance.", "Intimidate in Presence. Cheaper when on Ghost Dance."),
 }
 
@@ -281,6 +281,7 @@ ASCENDANCY = [
  dict(order=5, key="archon", node="Archon of Chayula", when=L("4º Trial + Breach (~nível 80)", "4th Trial + Breach (~level 80)"), text=L("Concede Archon of Chayula.", "Grants Archon of Chayula."), why=L("20% more físico e caos + tornados com Wither que detonam pústulas.", "20% more physical and chaos + Wither tornadoes that pop pustules.")),
 ]
 ASC_UNLOCK = [24, 40, 40, 68, 80]
+ASC_PHASE = {"a2": ["Waking Dream"], "a3": ["Waking Dream", "Lucid Dreaming", "Choice of Power"], "a4": ["Waking Dream", "Lucid Dreaming", "Choice of Power"]}
 
 KEY_PASSIVES = [
  dict(node="Choice of Power", type=L("Ascendência", "Ascendancy"), text=L("Todas as chamas roxas, 50% mais efeito.", "All flames purple, 50% more effect."), when="40+", why=L("Dano como caos multiplicado.", "Multiplied damage as chaos.")),
@@ -383,6 +384,7 @@ SOURCES = [
  dict(name="RePoE2", use=L("Nomes e ícones das bases", "Base names and icons"), url="https://repoe-fork.github.io/poe2/"),
 ]
 FIXES = [
+ L("As árvores de ascendência de algumas variantes do guia tinham mais pontos do que os Trials dão naquele nível; o app mostra só o que dá para alocar em cada fase (2 pontos por Trial).", "Some guide variants had more ascendancy points than the Trials grant at that level; the app only shows what you can allocate in each phase (2 points per Trial)."),
  L("O planner tem três perfis; as fases dos Atos 1–2 e dos Interlúdios são cortes da ordem de alocação real do Goratha, e a fase Archon usa o perfil Mapping com a ascendência completa.", "The planner has three profiles; the Act 1–2 and Interlude phases are cuts of Goratha's real allocation order, and the Archon phase uses the Mapping profile with the full ascendancy."),
  L("O planner foi criado no patch 0.5.4 e está atualizado para 0.5.5; o snapshot do Set 2 é um bug — o app mostra o plano B se for corrigido.", "The planner was created in patch 0.5.4 and updated for 0.5.5; the Set 2 snapshot is a bug — the app shows plan B if it gets fixed."),
  L("Spirit do Blasphemy depende da curse e não está nos dados: confira no jogo.", "Blasphemy's Spirit depends on the curse and isn't in the data: check in game."),
@@ -481,7 +483,9 @@ def build(QUESTS_PT):
     for q in QUESTS_PT:
         q = dict(q)
         if q["boss"] == "Mighty Silverfist":
-            q["reward"] = L("2 Weapon Set Passive Points (Set 2 = Remnants)", "2 Weapon Set Passive Points (Set 2 = Remnants)"); q["prio"] = "Alta"
+            q["reward"] = "2 Weapon Set Passive Points"; q["prio"] = "Alta"
+        if q["boss"] == 'Great White One':
+            q["reward"] = L('ESCOLHA: +30% Armour, Evasion e Energy Shield (Shark Fin): Evasion e ES são a defesa da build', "CHOICE: +30% Armour, Evasion and Energy Shield (Shark Fin): Evasion and ES are the build's defence"); q["prio"] = 'Alta'
         quests.append(q)
     return dict(league=LEAGUE, patch=PATCH, updated=UPDATED, snap="15/09/2026", phases=PHASES, milestones=MILESTONES, gear=GEAR, uniques=UNIQUES, idols=[],
                 sets={}, jewelSets={}, optimizations=[], tricks=TRICKS, fixes=FIXES, sources=SOURCES, keyPassives=KEY_PASSIVES, treeStages=TREE_STAGES,

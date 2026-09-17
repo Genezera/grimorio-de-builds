@@ -329,6 +329,7 @@ ASCENDANCY = [
  dict(order=6, key="sustainable", node="Sustainable Practices", when=L("Uber (80+)", "Uber (80+)"), text=L("50% da Evasion também dá redução de dano elemental.", "50% of Evasion Rating also grants Elemental Damage reduction."), why=L("Substitui o Enduring Elixirs com Mageblood.", "Replaces Enduring Elixirs with Mageblood.")),
 ]
 ASC_UNLOCK = [26, 38, 62, 72, 72, 80]
+ASC_PHASE = {"a4": ["Relentless Pursuit", "Path Seeker"], "a5": ["Relentless Pursuit", "Path Seeker"]}
 
 KEY_PASSIVES = [
  dict(node="Overwhelming Toxicity", type=L("Ascendência", "Ascendancy"), text=L("Dobra o limite de venenos; 50% less duração.", "Doubles the poison cap; 50% less duration."), when="72+", why=L("Não pegue antes de sustentar o máximo de venenos.", "Don't take it before sustaining max poisons.")),
@@ -430,6 +431,7 @@ SOURCES = [
  dict(name="Path of Building (PoE2) — Gems.lua, Skills", use=L("Descrições, custos de Spirit e tiers", "Descriptions, Spirit costs and tiers"), url="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2"),
 ]
 FIXES = [
+ L("As árvores de ascendência de algumas variantes do guia tinham mais pontos do que os Trials dão naquele nível; o app mostra só o que dá para alocar em cada fase (2 pontos por Trial).", "Some guide variants had more ascendancy points than the Trials grant at that level; the app only shows what you can allocate in each phase (2 points per Trial)."),
  L("Os dois guias do Skadoosh viraram uma rota só: leveling (1–57) e Decompose (58+). A árvore muda no 58 (respec).", "Skadoosh's two guides became a single route: leveling (1–57) and Decompose (58+). The tree changes at 58 (respec)."),
  L("Custos: Plague Bearer, Herald of Plague, Withering Presence, Ghost Dance, Wind Dancer, Cast on Minion Death e Grim Feast = 30 Spirit; Sacrifice = 60 (Path of Building). Blood Elemental ≈ 67 (PoE2DB).", "Costs: Plague Bearer, Herald of Plague, Withering Presence, Ghost Dance, Wind Dancer, Cast on Minion Death and Grim Feast = 30 Spirit; Sacrifice = 60 (Path of Building). Blood Elemental ≈ 67 (PoE2DB)."),
  L("O Spirit do endgame é por weapon set: o planejador soma um set de cada vez.", "Endgame Spirit is per weapon set: the planner sums one set at a time."),
@@ -460,7 +462,7 @@ CHAR = dict(
  own=[
   ["gear", "Corpsewade", "Corpsewade"], ["gear", "Snakebite", "Snakebite"], ["gear", "Trenchtimbre", "Trenchtimbre"], ["gear", "sceptres", L("Stoic Sceptre com Spirit nos dois sets", "Spirit Stoic Sceptre on both sets")],
   ["gear", "Shavronne's Satchel", "Shavronne's Satchel"], ["gear", "Astramentis", "Astramentis"], ["gear", "Mageblood", "Mageblood"], ["gear", "respecgold", L("Gold para o respec do 58", "Gold for the level 58 respec")],
-  ["gem", "pbear", "Plague Bearer (30)"], ["gem", "herald", "Herald of Plague (30)"], ["gem", "wither", "Withering Presence (30)"], ["gem", "ghost", "Ghost Dance (30)"], ["gem", "wind", "Wind Dancer (30)"],
+  ["gem", "pbear", "Plague Bearer (30)"], ["gem", "herald", "Herald of Plague (30)"], ["gem", "wither", "Withering Presence (30)"], ["gem", "ghost", "Ghost Dance (30)"], ["gem", "wind", "Wind Dancer (30)"], ["gem", "sniper", L("Skeletal Sniper (30 no nível 20)", "Skeletal Sniper (30 at level 20)")],
   ["gem", "elemental", L("Blood Elemental capturado", "Captured Blood Elemental")], ["gem", "sacrifice", "Sacrifice (60)"], ["gem", "blasph", "Blasphemy + Temporal Chains"], ["gem", "grim", "Grim Feast"], ["gem", "comd", "Cast on Minion Death"],
   ["tree", "respec", L("Árvore do Decompose (respec feito)", "Decompose tree (respec done)")], ["tree", "timeless", L("Timeless jewel", "Timeless jewel")],
   ["asc", "relentless", "Relentless Pursuit"], ["asc", "seeker", "Path Seeker"], ["asc", "elixirs", "Enduring Elixirs"], ["asc", "toxicity", "Overwhelming Toxicity"], ["asc", "wisdom", "Traveller's Wisdom"], ["asc", "sustainable", "Sustainable Practices"],
@@ -521,8 +523,16 @@ def build(QUESTS_PT):
         q = dict(q)
         if q["boss"] == "Mighty Silverfist":
             q["reward"] = "2 Weapon Set Passive Points"; q["prio"] = "Alta"
-        if q["boss"] == "Venom Draught":
-            q["reward"] = L("ESCOLHA: 25% Stun Threshold (Skadoosh)", "CHOICE: 25% Stun Threshold (Skadoosh)"); q["prio"] = "Média"
+        if q["boss"] == 'Medallion':
+            q["reward"] = L('+1 Charm Slot · ESCOLHA: 30% increased Charm Charges gained (Skadoosh)', '+1 Charm Slot · CHOICE: 30% increased Charm Charges gained (Skadoosh)'); q["prio"] = 'Alta'
+        if q["boss"] == 'Venom Draught':
+            q["reward"] = L('ESCOLHA: 25% increased Stun Threshold (Skadoosh)', 'CHOICE: 25% increased Stun Threshold (Skadoosh)'); q["prio"] = 'Média'
+        if q["boss"] == 'Goddess of Justice':
+            q["reward"] = L('ESCOLHA: 30% increased Life Recovery from Flasks (Skadoosh)', 'CHOICE: 30% increased Life Recovery from Flasks (Skadoosh)'); q["prio"] = 'Média'
+        if q["boss"] == 'Great White One':
+            q["reward"] = L('ESCOLHA: +30% Armour, Evasion e Energy Shield (Shark Fin, Skadoosh)', 'CHOICE: +30% Armour, Evasion and Energy Shield (Shark Fin, Skadoosh)'); q["prio"] = 'Alta'
+        if q["boss"] == "Tabana's Pillar":
+            q["reward"] = L('ESCOLHA: 3% increased Movement Speed (Skadoosh: andar é o dano)', 'CHOICE: 3% increased Movement Speed (Skadoosh: walking is the damage)'); q["prio"] = 'CRÍTICA'
         quests.append(q)
     return dict(league=LEAGUE, patch=PATCH, updated=UPDATED, snap="15/09/2026", phases=PHASES, milestones=MILESTONES, gear=GEAR, uniques=UNIQUES, idols=[],
                 sets={}, jewelSets={}, optimizations=[], tricks=TRICKS, fixes=FIXES, sources=SOURCES, keyPassives=KEY_PASSIVES, treeStages=TREE_STAGES,

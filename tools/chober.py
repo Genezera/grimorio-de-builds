@@ -500,6 +500,8 @@ DATA.update(phases=PHASES, milestones=MILESTONES, beasts=BEASTS, auraPriority=AU
 spirit_tiers.cleanup(DATA)
 import timing
 timing.unique_levels(UNIQUES)
+import unique_fill
+unique_fill.apply(UNIQUES)
 DATA.update(timing=timing.TIMING, timingCases=timing.TIMING_CASES)
 timing.effigy_62(DATA)
 import hunting

@@ -333,8 +333,8 @@ MILESTONES = {
  38: L("Azak Bog: Ignagduk (+30 Spirit) → Scavenged Plating.", "Azak Bog: Ignagduk (+30 Spirit) → Scavenged Plating."),
  42: L("The Molten One's Gift na árvore.", "The Molten One's Gift on the tree."),
  45: L("Avatar of Fire. Escudo travado nos dois weapon sets. Sunder.", "Avatar of Fire. Shield locked to both weapon sets. Sunder."),
- 55: L("Trial nível 60: Smith's Masterwork + Kitavan Engraving + Leather Bindings + Heatproofing. Body armour NORMAL.", "Level 60 Trial: Smith's Masterwork + Kitavan Engraving + Leather Bindings + Heatproofing. NORMAL body armour."),
- 58: L("Blood Magic (sem mana). Fire Penetration II no Shield Wall.", "Blood Magic (no mana). Fire Penetration II on Shield Wall."),
+ 60: L("Trial nível 60: Smith's Masterwork + Kitavan Engraving + Leather Bindings + Heatproofing. Body armour NORMAL.", "Level 60 Trial: Smith's Masterwork + Kitavan Engraving + Leather Bindings + Heatproofing. NORMAL body armour."),
+ 61: L("Blood Magic (sem mana), depois do Trial nível 60. Fire Penetration II no Shield Wall.", "Blood Magic (no mana), after the level 60 Trial. Fire Penetration II on Shield Wall."),
  62: L("Kriar Village: Lythara (+40 Spirit).", "Kriar Village: Lythara (+40 Spirit)."),
  66: L("Herald of Ash no set do Shield Wall. Resistências (fogo + Chaos) no cap.", "Herald of Ash on the Shield Wall set. Resistances (fire + Chaos) capped."),
  68: L("Dedication to Kitava (Armour também contra Chaos).", "Dedication to Kitava (Armour also vs Chaos)."),
@@ -354,7 +354,8 @@ ASCENDANCY = [
  dict(order=7, key="forged", node="Forged in Flame", when=L("Mapas T5+", "Maps T5+"), text=L("Mods de resistência máxima a fogo também dão máxima de frio e raio.", "Modifiers to Maximum Fire Resistance also grant Maximum Cold and Lightning Resistance."), why=L("Purity of Fire e Unnatural Resilience sobem todas as máximas.", "Purity of Fire and Unnatural Resilience raise every maximum.")),
  dict(order=8, key="symbol", node="Molten Symbol", when=L("Mapas T5+", "Maps T5+"), text=L("A body armour dá 25% do dano físico recebido como fogo.", "Body Armour grants 25% of Physical Damage from Hits taken as Fire Damage."), why=L("Hits físicos batem na sua resistência a fogo enorme.", "Physical hits run into your huge fire resistance.")),
 ]
-ASC_UNLOCK = [28, 58, 58, 62, 62, 68, 76, 76]
+ASC_UNLOCK = [28, 60, 60, 60, 60, 68, 76, 76]
+ASC_PHASE = {"int": ["Coal Stoker", "Smith's Masterwork", "Kitavan Engraving", "Leather Bindings", "Heatproofing"]}
 
 KEY_PASSIVES = [
  dict(node="Avatar of Fire", type="Keystone", text=L("75% do dano convertido em fogo; não causa dano não-fogo.", "75% of Damage Converted to Fire Damage; Deal no Non-Fire Damage."), when=L("Ato 4 → sempre", "Act 4 → forever"), why=L("Tudo escala com fogo e Ignite; a Fully Broken Armour (The Molten One's Gift) compensa a perda.", "Everything scales with fire and Ignite; Fully Broken Armour (The Molten One's Gift) offsets the loss.")),
@@ -413,6 +414,7 @@ TRICKS = [
  {"cat": L("Dano", "Damage"), "lvl": L("Fácil", "Easy"), "title": L("Infernal Cry sempre antes", "Infernal Cry always first"), "body": L("O Infernal Cry empodera os próximos ataques: Shield Wall empoderado bate muito mais e o Ignite fica mais forte.", "Infernal Cry empowers your next attacks: an empowered Shield Wall hits much harder and its Ignite is stronger.")},
  {"cat": L("Dano", "Damage"), "lvl": L("Médio", "Medium"), "title": L("~40% de fogo recebido", "~40% fire taken"), "body": L("Fully Broken Armour (~20%) e Sundered Armour do Sunder (~20%) contam para fogo com The Molten One's Gift. Aplique os dois antes do nuke.", "Fully Broken Armour (~20%) and Sunder's Sundered Armour (~20%) count for fire with The Molten One's Gift. Apply both before the nuke.")},
  {"cat": L("Dano", "Damage"), "lvl": L("Avançado", "Advanced"), "title": L("Nebuloch + Supercritical", "Nebuloch + Supercritical"), "body": L("Nebuloch gasta uma Endurance Charge por ataque para dar crítico garantido; Supercritical troca chance por dano crítico (a chance não importa). Mantenha charges com Magma Barrier, Armour Break III e o anoint Thaumaturgic Generator.", "Nebuloch spends an Endurance Charge per attack for a guaranteed crit; Supercritical trades chance for crit damage (chance doesn't matter). Keep charges with Magma Barrier, Armour Break III and the Thaumaturgic Generator anoint.")},
+ {"cat": "Nebuloch", "lvl": L("Avançado", "Advanced"), "title": L("Fortifying Cry no Weapon Set 1", "Fortifying Cry on Weapon Set 1"), "body": L("O Lexd notou que detonar Shield Wall com Fortifying Cry usando o Nebuloch gasta TODAS as Endurance Charges de uma vez. Deixe o Fortifying Cry só no Set 1 e o Shield Wall no Set 2: cada Shield Wall seguinte continua critando.", "Lexd noticed that detonating Shield Wall with Fortifying Cry while using Nebuloch consumes ALL your Endurance Charges at once. Keep Fortifying Cry only on Set 1 and Shield Wall on Set 2: each following Shield Wall keeps critting.")},
  {"cat": L("Defesa", "Defence"), "lvl": L("Fácil", "Easy"), "title": L("Resistências com fogo", "Resistances through fire"), "body": L("Coal Stoker converte resistência a fogo em frio e raio (50%); Forged in Flame faz o mesmo com a máxima. Encha de Ruby Rings e fogo.", "Coal Stoker turns fire resistance into cold and lightning (50%); Forged in Flame does the same for the maximum. Stack Ruby Rings and fire.")},
  {"cat": L("Defesa", "Defence"), "lvl": L("Médio", "Medium"), "title": L("Body armour Normal", "Normal body armour"), "body": L("Smith's Masterwork só aceita body Normal (branca). Escolha a base de maior Armour, coloque qualidade, sockets e runas (Runeforged dá Runic Ward para o Scouring Flame).", "Smith's Masterwork only accepts a Normal (white) body. Pick the highest-Armour base and add quality, sockets and runes (Runeforged gives Runic Ward for Scouring Flame).")},
  {"cat": L("Defesa", "Defence"), "lvl": L("Fácil", "Easy"), "title": L("Charms certos", "Right charms"), "body": L("Heatproofing te deixa imune ao dano de Ignite/Bleed/Poison: use charms contra Freeze (Thawing), Stun (Stone) e Slow (Silver).", "Heatproofing makes you immune to Ignite/Bleed/Poison damage: use charms against Freeze (Thawing), Stun (Stone) and Slow (Silver).")},
@@ -467,6 +469,7 @@ SOURCES = [
  dict(name=L("Árvore 0.5 (Path of Building)", "0.5 tree (Path of Building)"), use=L("Nós, ascendência Smith of Kitava e keystones", "Nodes, Smith of Kitava ascendancy and keystones"), url="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2"),
 ]
 FIXES = [
+ L("As árvores de ascendência de algumas variantes do guia tinham mais pontos do que os Trials dão naquele nível; o app mostra só o que dá para alocar em cada fase (2 pontos por Trial).", "Some guide variants had more ascendancy points than the Trials grant at that level; the app only shows what you can allocate in each phase (2 points per Trial)."),
  L("As variantes 'Lategame' e 'Thrillsteel' não entram na rota: a 'Optimized' substitui a primeira e o Thrillsteel aparece como alternativa de capacete.", "The 'Lategame' and 'Thrillsteel' variants aren't in the route: 'Optimized' replaces the first and Thrillsteel appears as a helmet alternative."),
  L("O custo de Spirit da Purity of Fire não está nos dados do Path of Building: confira no jogo.", "Purity of Fire's Spirit cost isn't in Path of Building's data: check in game."),
  L("A ordem e os níveis da ascendência seguem as variantes do guia; os Trials podem ser feitos antes ou depois.", "Ascendancy order and levels follow the guide's variants; Trials can be done earlier or later."),
@@ -544,13 +547,13 @@ MECH = dict(
   dict(type="table", h=L("Weapon sets", "Weapon sets"), cols=[L("Fase", "Phase"), "Weapon Set 1", "Weapon Set 2"], rows=[
    [L("Atos 1–3", "Acts 1–3"), L("Maça + escudo", "Mace + shield"), L("Duas maças (Mace Strike)", "Two maces (Mace Strike)")],
    [L("Ato 4 → mapas", "Act 4 → maps"), L("Maça + escudo: warcries, Resonating Shield, Sunder", "Mace + shield: warcries, Resonating Shield, Sunder"), L("Maça + escudo: Shield Wall, Infernal Cry, Herald of Ash", "Mace + shield: Shield Wall, Infernal Cry, Herald of Ash")],
-   ["T5+", L("Guiding Palm/Sacred Flame + escudo", "Guiding Palm/Sacred Flame + shield"), L("Nebuloch + escudo: Shield Wall (Supercritical)", "Nebuloch + shield: Shield Wall (Supercritical)")],
+   ["T5+", L("Guiding Palm of the Heart/Sacred Flame + escudo", "Guiding Palm of the Heart/Sacred Flame + shield"), L("Nebuloch + escudo: Shield Wall (Supercritical)", "Nebuloch + shield: Shield Wall (Supercritical)")],
    [L("Sempre", "Always"), L("Escudo travado nos dois sets", "Shield locked to both sets"), L("Escudo travado nos dois sets", "Shield locked to both sets")],
   ]),
   dict(type="table", h=L("O que a ascendência grava na body armour", "What the ascendancy engraves on the body armour"), cols=[L("Nó", "Node"), L("Efeito", "Effect"), L("Quando", "When")], rows=[
-   ["Kitavan Engraving", L("+15% vida máxima", "+15% maximum life"), L("Nível ~58", "Level ~58")],
-   ["Leather Bindings", L("Regenera 3% da vida/s", "Regenerate 3% life/s"), L("Nível ~62", "Level ~62")],
-   ["Heatproofing", L("Imune a dano de Ignite/Bleed/Poison", "Unaffected by damaging ailments"), L("Nível ~62", "Level ~62")],
+   ["Kitavan Engraving", L("+15% vida máxima", "+15% maximum life"), L("Nível ~60", "Level ~60")],
+   ["Leather Bindings", L("Regenera 3% da vida/s", "Regenerate 3% life/s"), L("Nível ~60", "Level ~60")],
+   ["Heatproofing", L("Imune a dano de Ignite/Bleed/Poison", "Unaffected by damaging ailments"), L("Nível ~60", "Level ~60")],
    ["Dedication to Kitava", L("+100% da Armour contra Chaos", "+100% of Armour vs Chaos"), L("Mapas", "Maps")],
    ["Molten Symbol", L("25% do físico recebido como fogo", "25% of physical taken as fire"), "T5+"],
   ]),
@@ -560,7 +563,7 @@ MECH = dict(
    dict(lv=1, t=L("Escudo + duas maças", "Shield + two maces"), d=L("Maças com + melee e físico; olhe vendors toda hora.", "Maces with + melee and physical; check vendors constantly.")),
    dict(lv=32, t=L("Escudo ~350 de Armour", "~350 Armour shield"), d=L("Shield Wall + Fortifying Cry apagam bosses.", "Shield Wall + Fortifying Cry delete bosses.")),
    dict(lv=45, t=L("Avatar of Fire", "Avatar of Fire"), d=L("Maça com % dano elemental; escudo nos dois sets.", "Mace with % elemental damage; shield on both sets.")),
-   dict(lv=58, t=L("Body Normal", "Normal body"), d=L("Smith's Masterwork + Blood Magic.", "Smith's Masterwork + Blood Magic.")),
+   dict(lv=60, t=L("Body Normal", "Normal body"), d=L("Trial nível 60: Smith's Masterwork, depois Blood Magic.", "Level 60 Trial: Smith's Masterwork, then Blood Magic.")),
    dict(lv=65, t=L("Escudo 800–900", "800–900 shield"), d=L("Maça +3 melee e resistências no cap.", "+3 melee mace and capped resistances.")),
    dict(lv=74, t="Nebuloch", d=L("Set 2 com Ahn's Citadel + Kaom's Madness.", "Set 2 with Ahn's Citadel + Kaom's Madness.")),
    dict(lv=92, t="Sacred Flame", d=L("Set 1 do setup otimizado.", "Set 1 of the optimized setup.")),
@@ -577,10 +580,16 @@ def build(QUESTS_PT):
         q = dict(q)
         if q["boss"] == "Mighty Silverfist":
             q["reward"] = "2 Weapon Set Passive Points"; q["prio"] = "Alta"
-        if q["boss"] == "Tribal Medicine":
-            q["reward"] = L("ESCOLHA: 30% increased Armour, Evasion e ES", "CHOICE: 30% increased Armour, Evasion and ES"); q["prio"] = "Alta"
-        if q["boss"] == "Venom Draught":
-            q["reward"] = L("ESCOLHA: 25% Stun Threshold (ajuda o Raise Shield)", "CHOICE: 25% Stun Threshold (helps Raise Shield)"); q["prio"] = "Média"
+        if q["boss"] == 'Medallion':
+            q["reward"] = L('+1 Charm Slot · ESCOLHA: 30% increased Charm Effect Duration (Lexd)', '+1 Charm Slot · CHOICE: 30% increased Charm Effect Duration (Lexd)'); q["prio"] = 'Alta'
+        if q["boss"] == 'Venom Draught':
+            q["reward"] = L('ESCOLHA: 25% increased Stun Threshold (Lexd — ajuda o Raise Shield)', 'CHOICE: 25% increased Stun Threshold (Lexd — helps Raise Shield)'); q["prio"] = 'Média'
+        if q["boss"] == 'Goddess of Justice':
+            q["reward"] = L('ESCOLHA: 30% increased Life Recovery from Flasks (Lexd)', 'CHOICE: 30% increased Life Recovery from Flasks (Lexd)'); q["prio"] = 'Média'
+        if q["boss"] == 'Great White One':
+            q["reward"] = L('ESCOLHA: +30% Armour, Evasion e Energy Shield (Shark Fin, Lexd)', 'CHOICE: +30% Armour, Evasion and Energy Shield (Shark Fin, Lexd)'); q["prio"] = 'Alta'
+        if q["boss"] == "Tabana's Pillar":
+            q["reward"] = L('ESCOLHA: 3% increased Movement Speed (Lexd)', 'CHOICE: 3% increased Movement Speed (Lexd)'); q["prio"] = 'CRÍTICA'
         quests.append(q)
     return dict(league=LEAGUE, patch=PATCH, updated=UPDATED, snap="15/09/2026", phases=PHASES, milestones=MILESTONES, gear=GEAR, uniques=UNIQUES, idols=[],
                 sets={}, jewelSets={}, optimizations=[], tricks=TRICKS, fixes=FIXES, sources=SOURCES, keyPassives=KEY_PASSIVES, treeStages=TREE_STAGES,

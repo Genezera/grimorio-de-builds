@@ -15,6 +15,8 @@ for f in ["i18n/en_1.json", "i18n/en_2.json", "i18n/en_3.json"]:
     en.update(json.load(open(f, encoding="utf-8")))
 MAP = {src[k]: v for k, v in en.items()}
 MAP.update(json.load(open("i18n/en_extra.json", encoding="utf-8")))
+import unique_fill
+MAP.update(unique_fill.EN_PAIRS)
 import timing
 MAP.update(timing.EN_PAIRS)
 import hunting

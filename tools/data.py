@@ -366,6 +366,7 @@ QUESTS = [
  ("Ato 3", "Molten Vault", "The Molten Vault", "Reforging Bench", "Média"),
  ("Ato 3", "Aggorat", "Blood Sacrifice", "2 Weapon Set Passive Points", "Alta"),
  ("Ato 4", "Journey's End", "Captain Hartlin", "2 Weapon Set Points + Skill Gem lv13", "Alta"),
+ ("Ato 4", "Whakapanu Island", "Great White One", "ESCOLHA: +30% Armour, Evasion e Energy Shield (Shark Fin)", "Alta"),
  ("Ato 4", "Eye of Hinekora", "Navali's Rest", "5% mana máxima", "Média"),
  ("Ato 4", "Halls of the Dead", "Yama The White", "2 Weapon Set Passive Points", "Alta"),
  ("Ato 4", "Halls of the Dead", "Tawhoa's Test", "+5% resistência a raio", "Alta"),

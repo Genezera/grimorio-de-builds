@@ -532,10 +532,16 @@ def build(QUESTS_PT):
         q = dict(q)
         if q["boss"] == "Mighty Silverfist":
             q["reward"] = "2 Weapon Set Passive Points"; q["prio"] = "Alta"
-        if q["boss"] == "Tribal Medicine":
-            q["reward"] = L("ESCOLHA: 30% increased Armour, Evasion e ES (BlazeworksTV)", "CHOICE: 30% increased Armour, Evasion and ES (BlazeworksTV)"); q["prio"] = "CRÍTICA"
-        if q["boss"] == "Venom Draught":
-            q["reward"] = L("ESCOLHA: 25% Stun Threshold", "CHOICE: 25% Stun Threshold"); q["prio"] = "Média"
+        if q["boss"] == 'Medallion':
+            q["reward"] = L('+1 Charm Slot · ESCOLHA: 30% increased Charm Charges gained (BlazeworksTV)', '+1 Charm Slot · CHOICE: 30% increased Charm Charges gained (BlazeworksTV)'); q["prio"] = 'Alta'
+        if q["boss"] == 'Venom Draught':
+            q["reward"] = L('ESCOLHA: 30% increased Elemental Ailment Threshold (BlazeworksTV)', 'CHOICE: 30% increased Elemental Ailment Threshold (BlazeworksTV)'); q["prio"] = 'Média'
+        if q["boss"] == 'Goddess of Justice':
+            q["reward"] = L('ESCOLHA: 30% increased Mana Recovery from Flasks (BlazeworksTV)', 'CHOICE: 30% increased Mana Recovery from Flasks (BlazeworksTV)'); q["prio"] = 'Média'
+        if q["boss"] == 'Great White One':
+            q["reward"] = L('ESCOLHA: +30% Armour, Evasion e Energy Shield (Shark Fin, BlazeworksTV)', 'CHOICE: +30% Armour, Evasion and Energy Shield (Shark Fin, BlazeworksTV)'); q["prio"] = 'CRÍTICA'
+        if q["boss"] == "Tabana's Pillar":
+            q["reward"] = L('ESCOLHA: 12% increased Cooldown Recovery Rate (BlazeworksTV: mais granadas)', 'CHOICE: 12% increased Cooldown Recovery Rate (BlazeworksTV: more grenades)'); q["prio"] = 'CRÍTICA'
         quests.append(q)
     return dict(league=LEAGUE, patch=PATCH, updated=UPDATED, snap="15/09/2026", phases=PHASES, milestones=MILESTONES, gear=GEAR, uniques=UNIQUES, idols=[],
                 sets={}, jewelSets={}, optimizations=[], tricks=TRICKS, fixes=FIXES, sources=SOURCES, keyPassives=KEY_PASSIVES, treeStages=TREE_STAGES,

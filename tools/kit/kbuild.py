@@ -31,7 +31,7 @@ def tr(s):
     for a, b in SUBS: s = re.sub(a, b, s)
     return s
 def walk(o, key=None):
-    if isinstance(o, dict): return {k: (v if k in SKIP else walk(v, k)) for k, v in o.items()}
+    if isinstance(o, dict): return {k: (v if k in SKIP and not (k == "p" and isinstance(v, str) and v in MAP) else walk(v, k)) for k, v in o.items()}
     if isinstance(o, list): return [walk(v, key) for v in o]
     if isinstance(o, str): return tr(o)
     return o
