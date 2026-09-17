@@ -12,7 +12,7 @@ window.craftDetail = function (oracle) {
     L(`Base Magic → ${ess}`, `Magic base → ${ess}`),
     L(`${base}. Use Orb of Transmutation (Greater = mod nível 44+, Perfect = 70+) e, se o mod servir, Orb of Augmentation. Com o item Magic, use ${ess}: ele vira Rare com ${mod} garantido. Essa essence ocupa o único mod crafted do item — não planeje Alloy ou outra essence depois.`,
       `${base}. Use an Orb of Transmutation (Greater = modifier level 44+, Perfect = 70+) and, if the modifier helps, an Orb of Augmentation. On the Magic item, use ${ess}: it becomes Rare with ${mod} guaranteed. That essence takes the item’s only crafted modifier — do not plan an Alloy or another essence afterwards.`),
-    L("Os dois mods Magic ruins: Orb of Annulment não serve em Magic de forma útil; compre outra base branca (custa quase nada) em vez de insistir.", "Both Magic modifiers are bad: buy another white base (almost free) instead of forcing this one."));
+    L("Annulment pode remover um mod de um item Magic, inclusive um mod bom. Compare esse custo com outra base; Transmutation exige Normal e Augmentation exige um slot Magic livre.", "Annulment can remove a modifier from a Magic item, including a good one. Compare that cost with another base; Transmutation requires Normal and Augmentation requires a free Magic slot."));
   const sideExalt = (side, what) => S_(
     L(`Exalted com lado travado: ${what}`, `Side-locked Exalted: ${what}`),
     L(`Deixe o Omen of ${side === "p" ? "Sinistral" : "Dextral"} Exaltation ativo no inventário e use um Exalted Orb: o mod novo sai só como ${side === "p" ? "prefixo" : "sufixo"}. Greater Exalted (mod nível 35+) corta os tiers baixos; Perfect Exalted (50+) corta ainda mais, mas nenhum dos dois garante T1 nem a família certa.`,
@@ -23,7 +23,7 @@ window.craftDetail = function (oracle) {
     L(`Desecrate: ${bone}${lich ? " + " + lich : ""}`, `Desecrate: ${bone}${lich ? " + " + lich : ""}`),
     L(`Deixe um espaço livre no lado do alvo. Use ${bone} no Rare${lich ? ` com ${lich} ativo (força um mod desse Lich; só funciona em arma e joalheria)` : ""}${sideOmen ? ` e ${sideOmen} (força o lado)` : ""}. O mod fica escondido: revele no Well of Souls com Omen of Abyssal Echoes ativo (permite rerrolar as opções uma vez) e escolha ${want}. O item aceita só 1 mod desecrated.`,
       `Leave a free slot on the target side. Use ${bone} on the Rare${lich ? ` with ${lich} active (forces that Lich’s modifier; weapons and jewellery only)` : ""}${sideOmen ? ` and ${sideOmen} (forces the side)` : ""}. The modifier stays hidden: reveal it at the Well of Souls with an Omen of Abyssal Echoes active (lets you reroll the options once) and pick ${want}. An item holds only 1 desecrated modifier.`),
-    L("Não apareceu: Omen of Light + Orb of Annulment remove só o mod desecrated. Use outro osso e repita. Some Light + Annulment + osso + Echoes ao custo de cada nova tentativa.", "Not offered: Omen of Light + Orb of Annulment removes only the desecrated modifier. Use another bone and retry. Add Light + Annulment + bone + Echoes to the cost of every retry."));
+    L("Não apareceu: Omen of Light + Orb of Annulment remove só o mod desecrated. Use outro osso e repita. Some Light + Annulment + osso + Echoes e todos os Omens de Lich/lado consumidos ao custo de cada nova tentativa.", "Not offered: Omen of Light + Orb of Annulment removes only the desecrated modifier. Use another bone and retry. Include Light + Annulment + bone + Echoes and every consumed Lich/side Omen in each retry cost."));
   const alloy = (name, mod) => S_(
     L(`${name} (mod crafted)`, `${name} (crafted modifier)`),
     L(`${name} remove um mod aleatório e adiciona ${mod}. Use quando o item ainda não tem essence/alloy (limite de 1 crafted) e quando perder qualquer um dos mods atuais for aceitável — ou aplique cedo, com 3–4 mods baratos.`,
@@ -31,12 +31,12 @@ window.craftDetail = function (oracle) {
     L("Levou um mod importante: complete de novo com Exalted de lado travado; não use um segundo Alloy.", "It removed an important modifier: refill it with a side-locked Exalted; do not use a second Alloy."));
   const quality = (scrap, infuser) => S_(
     L("Qualidade, sockets e augments", "Quality, sockets and augments"),
-    L(`${scrap} até 20% de qualidade. ${infuser ? infuser + " passa do máximo em até 10%, mas pode corromper: use só no fim, com o item pronto. " : ""}Artificer’s Orb adiciona socket de augment (armas, wands, staves e armaduras). Coloque a rune/soul core indicada na aba Itens.`,
-      `${scrap} up to 20% quality. ${infuser ? infuser + " goes up to 10% beyond the maximum but can corrupt: use it only at the end, on a finished item. " : ""}Artificer’s Orb adds an augment socket (weapons, wands, staves and armour). Insert the rune/soul core listed on the Items tab.`),
+    L(`${scrap} até 20% de qualidade. Artificer’s Orb adiciona socket de augment (armas, wands, staves e armaduras). Coloque a rune/soul core indicada na aba Itens.${infuser ? " Só depois de terminar os mods, Divines e sockets, considere " + infuser + ": é opcional, pode corromper e permite até 10% além da qualidade máxima." : ""}`,
+      `${scrap} up to 20% quality. Artificer’s Orb adds an augment socket (weapons, wands, staves and armour). Insert the rune/soul core listed on the Items tab.${infuser ? " Only after finishing modifiers, Divines and sockets, consider " + infuser + ": it is optional, can corrupt and allows up to 10% above maximum quality." : ""}`),
     L("Corrompeu: o item não aceita mais crafting. Por isso isso fica por último.", "It corrupted: the item accepts no more crafting. That is why this comes last."));
   const divine = S_(
     L("Divine Orb nos valores", "Divine Orb for values"),
-    L("Divine Orb rerrola só os números dos mods. Omen of Sanctification + Divine Orb santifica o item (multiplica os valores a partir do valor atual); trate o item como terminado depois disso.", "A Divine Orb rerolls only modifier numbers. Omen of Sanctification + Divine Orb sanctifies the item (multiplies values from their current value); treat the item as finished afterwards."),
+    L("Divine Orb rerrola os valores dos mods dentro dos respectivos intervalos; não troca o tier nem o tipo de mod. Faça isso antes de qualquer etapa que possa corromper ou santificar o item.", "A Divine Orb rerolls modifier values within their ranges; it does not change the tier or modifier type. Do this before any step that can corrupt or sanctify the item."),
     L("Rolou pior: outro Divine. Pare quando o ganho for pequeno perto do preço.", "Rolled worse: another Divine. Stop when the gain is small compared to the price."));
   const runeforge = (base, cost) => S_(
     L(`Runeforging na Verisium Anvil (${cost})`, `Runeforging at the Verisium Anvil (${cost})`),
@@ -45,7 +45,7 @@ window.craftDetail = function (oracle) {
     L("Se você não usa skills que gastam Runic Ward, a perda de defesa pode não valer.", "If you use no skills that spend Runic Ward, the defence loss may not be worth it."));
   const tradeStep = (filters, extra) => S_(
     L("Comprar pronto no trade", "Buy it finished on trade"),
-    L(`Filtros: ${filters}. ${extra || ""} Ordene por preço e compare 3–5 opções: um item pronto quase sempre sai mais barato que craftar até esse nível.`, `Filters: ${filters}. ${extra || ""} Sort by price and compare 3–5 listings: a finished item is almost always cheaper than crafting to that level.`),
+    L(`Filtros: ${filters}. ${extra || ""} Ordene por preço e compare 3–5 opções: compare o preço pronto com o orçamento total do craft; a melhor opção depende do mercado e dos mods.`, `Filters: ${filters}. ${extra || ""} Sort by price and compare 3–5 listings: compare the finished price with your total crafting budget; the better option depends on the market and modifiers.`),
     L("Poucos resultados: tire o filtro do mod menos importante ou aceite o tier abaixo.", "Few results: drop the filter for the least important modifier or accept the tier below."));
 
   /* ---------- itens compartilhados com valores por build */
@@ -84,7 +84,7 @@ window.craftDetail = function (oracle) {
         S_(L("Prefixos com Perfect Exalted", "Prefixes with Perfect Exalted"), L("Omen of Sinistral Exaltation + Perfect Exalted Orb até ter Spell Damage alto e o híbrido Spell Damage + Mana. Deixe 1 prefixo livre para o desecrate.", "Omen of Sinistral Exaltation + Perfect Exalted Orb until you have high Spell Damage and the Spell Damage + Mana hybrid. Leave 1 prefix free for the desecrate."), ""),
         desecrate("Preserved Jawbone", "Omen of the Liege", L("“(74–89)% increased Elemental Damage” (vale para Cold) — ou “(55–64)% Spell Damage + Minions deal (55–64)%” como no item do Lowepe", "“(74–89)% increased Elemental Damage” (applies to Cold) — or “(55–64)% Spell Damage + Minions deal (55–64)%” as on Lowepe’s item"), "Omen of Sinistral Necromancy"),
         alloy("Transcendent Alloy", L("(26–31)% Cast Speed + (7–11)% do dano elemental como Cold extra (sufixo; mesma família de Cast Speed natural — escolha um)", "(26–31)% Cast Speed + (7–11)% of Elemental Damage as extra Cold (suffix; same family as natural Cast Speed — pick one)")),
-        quality("Arcanist’s Etcher", "Vaal Arcanist’s Infuser"), divine],
+        divine, quality("Arcanist’s Etcher", "Vaal Arcanist’s Infuser")],
     };
     R.sceptre = {
       base: L("Omen Sceptre (concede Malice; 100 Spirit base). Spirit do cetro conta direto para os totems.", "Omen Sceptre (grants Malice; 100 base Spirit). Sceptre Spirit counts directly toward totems."),
@@ -95,7 +95,7 @@ window.craftDetail = function (oracle) {
         S_(L("Regal pelo sufixo", "Regal on the suffix side"), L("Omen of Dextral Coronation + Regal Orb: o mod novo sai como sufixo e mantém os prefixos livres para o híbrido de Spirit.", "Omen of Dextral Coronation + Regal Orb: the new modifier is a suffix, keeping prefixes open for the Spirit hybrid."), ""),
         sideExalt("p", L("Spirit + Mana (família diferente do % Spirit, então acumula)", "Spirit + Mana (a different family from % Spirit, so it stacks)")), quality("Arcanist’s Etcher", "")],
       lux: [tradeStep("Omen Sceptre ilvl 82 · “(61–65)% increased Spirit” · 2+ prefixos livres", ""), sideExalt("p", L("Spirit + Mana e depois mana", "Spirit + Mana, then mana")), sideExalt("s", L("Mana Regeneration", "Mana Regeneration")),
-        alloy("Sovereign Alloy", L("(20–30)% increased effect of Socketed Augment Items (sufixo) — melhora o talisman do cetro", "(20–30)% increased effect of Socketed Augment Items (suffix) — boosts the sceptre’s talisman")), quality("Arcanist’s Etcher", "Vaal Arcanist’s Infuser"), divine],
+        alloy("Sovereign Alloy", L("(20–30)% increased effect of Socketed Augment Items (sufixo) — melhora o talisman do cetro", "(20–30)% increased effect of Socketed Augment Items (suffix) — boosts the sceptre’s talisman")), divine, quality("Arcanist’s Etcher", "Vaal Arcanist’s Infuser")],
     };
     R.helmet = {
       base: L("Kamasan Tiara (INT, ES) ilvl 82. Runeforged dá Runic Ward para Grim Pillars.", "Kamasan Tiara (INT, ES) ilvl 82. Runeforged adds Runic Ward for Grim Pillars."),
@@ -107,7 +107,7 @@ window.craftDetail = function (oracle) {
         alloy("Expansive Alloy", L("(18–29)% increased Mana Cost Efficiency (prefixo) — reduz o custo dos totems", "(18–29)% increased Mana Cost Efficiency (prefix) — lowers totem costs")),
         sideExalt("s", L("duas resistências", "two resistances")),
         desecrate("Preserved Rib", "", L("Kurgal “(6–10)% Mana Cost Efficiency” ou uma resistência híbrida com Chaos (em armadura só existem desecrates de sufixo; omen de Lich não funciona)", "Kurgal “(6–10)% Mana Cost Efficiency” or a Chaos hybrid resistance (armour only has suffix desecrates; Lich omens do not work)"), ""),
-        runeforge("Kamasan Tiara", "410 Verisium"), quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        runeforge("Kamasan Tiara", "410 Verisium"), divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.body = {
       base: L("Soul Mantle (unique, +75 Spirit e +1 totem) na semana 1; Feathered Raiment rare (implícito 5–10% de dano pela mana antes da vida) no final.", "Soul Mantle (unique, +75 Spirit and +1 totem) in week 1; rare Feathered Raiment (implicit 5–10% damage taken from mana before life) at the end."),
@@ -119,7 +119,7 @@ window.craftDetail = function (oracle) {
       lux: [tradeStep("Feathered Raiment ilvl 80+ · “+# to Spirit” ≥ 57 · “+# to maximum Life” ≥ 190", ""),
         desecrate("Preserved Rib", "", L("Kurgal “(10–20)% of Damage is taken from Mana before Life” (soma com o implícito) ou Amanamu “(6–12)% Spirit Reservation Efficiency”", "Kurgal “(10–20)% of Damage is taken from Mana before Life” (adds to the implicit) or Amanamu “(6–12)% Spirit Reservation Efficiency”"), ""),
         S_("Perfect Essence of the Body", L("Com o item cheio e um mod fraco, Perfect Essence of the Body remove um mod aleatório e adiciona (8–10)% increased maximum Life (conta como seu mod crafted). Risco: pode remover um bom.", "With the item full and one weak modifier, Perfect Essence of the Body removes a random modifier and adds (8–10)% increased maximum Life (counts as your crafted modifier). Risk: it can remove a good one."), L("Levou Spirit: refaça com Omen of Sinistral Exaltation + Exalted.", "It removed Spirit: refill with Omen of Sinistral Exaltation + Exalted.")),
-        runeforge("Feathered Raiment", "480 Verisium"), quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        runeforge("Feathered Raiment", "480 Verisium"), divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.gloves = {
       base: L("Vaal Gloves (INT) ilvl 82; na semana 1 o Lowepe usa Runeforged Ancient Cuffs.", "Vaal Gloves (INT) ilvl 82; in week 1 Lowepe uses Runeforged Ancient Cuffs."),
@@ -129,7 +129,7 @@ window.craftDetail = function (oracle) {
       value: [essStart("Greater Essence of Thawing", "+(31–35)% Cold Resistance", L("Vaal Gloves ilvl 82 brancas; procure vida ou mana no Magic", "White Vaal Gloves ilvl 82; look for life or mana on the Magic item")), sideExalt("p", L("vida e mana", "life and mana")), sideExalt("s", L("Mana per kill ou outra resistência", "Mana per kill or another resistance")), runeforge("Vaal Gloves", L("305 Verisium (Ancient Cuffs: 255)", "305 Verisium (Ancient Cuffs: 255)")), quality("Armourer’s Scrap", "")],
       lux: [S_(L("3 prefixos", "3 prefixes"), L("Transmutation/Augmentation → Regal com Omen of Dextral Coronation → Sinistral Exaltation + Perfect Exalted até vida, mana e ES.", "Transmutation/Augmentation → Regal with Omen of Dextral Coronation → Sinistral Exaltation + Perfect Exalted until life, mana and ES."), ""),
         alloy("Swift Alloy", L("(9–12)% increased Cast Speed (sufixo)", "(9–12)% increased Cast Speed (suffix)")),
-        desecrate("Preserved Rib", "", L("Kurgal “(6–10)% increased Mana Cost Efficiency” ou uma resistência híbrida com Chaos", "Kurgal “(6–10)% increased Mana Cost Efficiency” or a Chaos hybrid resistance"), ""), quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        desecrate("Preserved Rib", "", L("Kurgal “(6–10)% increased Mana Cost Efficiency” ou uma resistência híbrida com Chaos", "Kurgal “(6–10)% increased Mana Cost Efficiency” or a Chaos hybrid resistance"), ""), divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.boots = {
       base: L("Bound Sandals (INT) ilvl 82 — 35% de movimento só em ilvl 82.", "Bound Sandals (INT) ilvl 82 — 35% movement speed only at ilvl 82."),
@@ -141,7 +141,7 @@ window.craftDetail = function (oracle) {
       lux: [S_(L("35% natural", "Natural 35%"), L("Mesma rota, mas só aceite 35% (ilvl 82). Assim o slot crafted fica livre para Spirit.", "Same route, but accept only 35% (ilvl 82). That keeps the crafted slot free for Spirit."), ""),
         alloy("Mystic Alloy", L("+(10–15) to Spirit (sufixo) — mais Spirit para os totems", "+(10–15) to Spirit (suffix) — more Spirit for totems")),
         desecrate("Preserved Rib", "", L("Kurgal “(40–50)% increased Mana Regeneration Rate while stationary” ou resistência híbrida com Chaos", "Kurgal “(40–50)% increased Mana Regeneration Rate while stationary” or a Chaos hybrid resistance"), ""),
-        runeforge("Bound Sandals", "265 Verisium"), quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        runeforge("Bound Sandals", "265 Verisium"), divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.rings = {
       base: L("Prismatic Ring (implícito all Elemental Res) e Lazuli Ring (implícito mana). Cast Speed em anel é raro no pool comum.", "Prismatic Ring (all Elemental Res implicit) and Lazuli Ring (mana implicit). Cast Speed on rings is rare in the normal pool."),
@@ -190,7 +190,7 @@ window.craftDetail = function (oracle) {
       lux: [S_(L("Três prefixos físicos", "Three physical prefixes"), L("Base ilvl 82 → Transmutation/Augmentation por % físico → Regal com Omen of Dextral Coronation → Sinistral Exaltation + Perfect Exalted até flat físico e o híbrido.", "ilvl 82 base → Transmutation/Augmentation for % physical → Regal with Omen of Dextral Coronation → Sinistral Exaltation + Perfect Exalted until flat physical and the hybrid."), L("Se não sair o % físico T1, o Kurgal abaixo substitui (mesma família: nunca os dois).", "If T1 % physical doesn’t appear, the Kurgal below replaces it (same family: never both).")),
         desecrate("Preserved Jawbone", "Omen of the Blackblooded", L("Kurgal “(110–154)% increased Physical Damage” — o −15% de attack speed não afeta companions via Catha’s", "Kurgal “(110–154)% increased Physical Damage” — the −15% attack speed does not affect companions via Catha’s"), "Omen of Sinistral Necromancy"),
         alloy("Transcendent Alloy", L("(15–20)% increased Physical Damage + (7–10) to all Attributes (sufixo)", "(15–20)% increased Physical Damage + (7–10) to all Attributes (suffix)")),
-        quality("Blacksmith’s Whetstone", "Vaal Blacksmith’s Infuser"), divine],
+        divine, quality("Blacksmith’s Whetstone", "Vaal Blacksmith’s Infuser")],
     };
     R.sceptre = {
       base: L("Offhand antes do Sylvan’s Effigy (e segundo set no ultra endgame). Stoic Sceptre concede Discipline; Omen Sceptre concede Malice.", "Offhand before Sylvan’s Effigy (and the second set in ultra endgame). Stoic Sceptre grants Discipline; Omen Sceptre grants Malice."),
@@ -199,7 +199,7 @@ window.craftDetail = function (oracle) {
       cheap: [tradeStep("Sceptre · “% increased Spirit” ≥ 40 · “+# to Level of all Minion Skills” ≥ 2", L("Com Sylvan’s Effigy esse slot já está resolvido.", "With Sylvan’s Effigy this slot is already solved."))],
       value: [essStart("Greater Essence of Command", "Allies in your Presence deal (75–89)% increased Damage", L("Stoic/Omen Sceptre ilvl 78+ branco; procure % Spirit ou +Minion no Magic", "White ilvl 78+ Stoic/Omen Sceptre; look for % Spirit or +Minion on the Magic item")), sideExalt("p", L("% Spirit", "% Spirit")), sideExalt("s", L("+Minion Skills e Allies Attack Speed", "+Minion Skills and Allies Attack Speed")), quality("Arcanist’s Etcher", "")],
       lux: [tradeStep("Sceptre ilvl 82 · “+4 to Level of all Minion Skills” · 2+ prefixos livres", ""), sideExalt("p", L("% Spirit e Allies Damage T1", "% Spirit and T1 Allies Damage")), sideExalt("s", "Presence Area of Effect"),
-        alloy("Sovereign Alloy", L("(20–30)% increased effect of Socketed Augment Items (sufixo) — Monkey Talisman/Primate Idol mais fortes", "(20–30)% increased effect of Socketed Augment Items (suffix) — stronger Monkey Talisman/Primate Idol")), quality("Arcanist’s Etcher", "Vaal Arcanist’s Infuser"), divine],
+        alloy("Sovereign Alloy", L("(20–30)% increased effect of Socketed Augment Items (sufixo) — Monkey Talisman/Primate Idol mais fortes", "(20–30)% increased effect of Socketed Augment Items (suffix) — stronger Monkey Talisman/Primate Idol")), divine, quality("Arcanist’s Etcher", "Vaal Arcanist’s Infuser")],
     };
     R.helmet = {
       base: L("Pariah Mask (DEX/INT) Runeforged, como no endgame do Mattjestic.", "Runeforged Pariah Mask (DEX/INT), as in Mattjestic’s endgame."),
@@ -209,7 +209,7 @@ window.craftDetail = function (oracle) {
       value: [essStart("Greater Essence of Grounding", "+(31–35)% Lightning Resistance", L("Pariah Mask ilvl 82 branca; procure +2 Minion no Magic", "White ilvl 82 Pariah Mask; look for +2 Minion on the Magic item")), sideExalt("p", L("vida e mana", "life and mana")), runeforge("Pariah Mask", "215 Verisium"), quality("Armourer’s Scrap", "")],
       lux: [tradeStep("Pariah Mask ilvl 82 · +2 Minion Skills · Life ≥ 150 · 1 sufixo livre", ""),
         desecrate("Preserved Rib", "", L("Amanamu “(4–8)% increased Spirit Reservation Efficiency of Skills” (cabe mais zoo)", "Amanamu “(4–8)% increased Spirit Reservation Efficiency of Skills” (fits more zoo)"), ""),
-        runeforge("Pariah Mask", "215 Verisium"), quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        runeforge("Pariah Mask", "215 Verisium"), divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.body = {
       base: L("Forgotten Warden (unique) no endgame; antes, rare de Evasion (Swiftstalker Coat / Layered Vest).", "Forgotten Warden (unique) in endgame; before it, an Evasion rare (Swiftstalker Coat / Layered Vest)."),
@@ -231,7 +231,7 @@ window.craftDetail = function (oracle) {
       value: [essStart("Greater Essence of Insulation", "+(31–35)% Fire Resistance", L("Barbed Bracers ilvl 82 brancas; procure vida no Magic", "White ilvl 82 Barbed Bracers; look for life on the Magic item")), sideExalt("p", L("vida e o híbrido Evasion + Life", "life and the Evasion + Life hybrid")), sideExalt("s", L("Deflection", "Deflection")), runeforge("Barbed Bracers", "295 Verisium")],
       lux: [S_(L("Rare sem essence", "Rare without an essence"), L("Monte vida, híbrido e resistências com Regal + Exalted de lado travado — deixe o crafted livre.", "Build life, hybrid and resistances with Regal + side-locked Exalted — keep the crafted slot free."), ""),
         S_("Essence of Horror", L("Com um sufixo fraco, Essence of Horror remove um mod aleatório e adiciona 60% increased effect of Socketed Augment Items (setup Mageblood do Mattjestic: 2 Chaos Soul Cores + rune).", "With a weak suffix, Essence of Horror removes a random modifier and adds 60% increased effect of Socketed Augment Items (Mattjestic’s Mageblood setup: 2 Chaos Soul Cores + rune)."), L("Levou um mod bom: refaça com Exalted de lado travado.", "It removed a good modifier: refill with side-locked Exalted.")),
-        quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.boots = {
       base: L("Drakeskin Boots (DEX) ilvl 82 — 35% de movimento só em ilvl 82.", "Drakeskin Boots (DEX) ilvl 82 — 35% movement speed only at ilvl 82."),
@@ -241,7 +241,7 @@ window.craftDetail = function (oracle) {
       value: [S_(L("Movimento no Magic", "Movement on the Magic item"), L("Drakeskin Boots ilvl 82 brancas → Transmutation/Augmentation até Movement Speed → Regal.", "White ilvl 82 Drakeskin Boots → Transmutation/Augmentation until Movement Speed → Regal."), L("Garantido: Essence of Hysteria num Rare (remove um mod aleatório, adiciona 30% MS, ocupa o crafted).", "Guaranteed: Essence of Hysteria on a Rare (removes a random modifier, adds 30% MS, uses the crafted slot).")),
         sideExalt("s", L("resistências e Deflection", "resistances and Deflection")), runeforge("Drakeskin Boots", "415 Verisium")],
       lux: [S_(L("35% natural + prefixos", "Natural 35% + prefixes"), L("Aceite só 35% natural; Sinistral Exaltation + Perfect Exalted para % Evasion e vida.", "Accept only a natural 35%; Sinistral Exaltation + Perfect Exalted for % Evasion and life."), ""),
-        alloy("Mystic Alloy", L("+(10–15) to Spirit (sufixo) — mais espaço para o zoo", "+(10–15) to Spirit (suffix) — more room for the zoo")), quality("Armourer’s Scrap", "Vaal Armourer’s Infuser"), divine],
+        alloy("Mystic Alloy", L("+(10–15) to Spirit (sufixo) — mais espaço para o zoo", "+(10–15) to Spirit (suffix) — more room for the zoo")), divine, quality("Armourer’s Scrap", "Vaal Armourer’s Infuser")],
     };
     R.rings = {
       base: L("Amethyst Ring (implícito Chaos Res) criado na Genesis Tree com mods de Minion — é o anel do endgame do Mattjestic.", "Amethyst Ring (Chaos Res implicit) grown in the Genesis Tree with Minion modifiers — Mattjestic’s endgame ring."),
@@ -275,7 +275,7 @@ window.craftDetail = function (oracle) {
   R["life-flask"] = flask("life"); R["mana-flask"] = flask("mana");
   R["life-flask"].value = R["life-flask"].lux = R["life-flask"].cheap; R["mana-flask"].value = R["mana-flask"].lux = R["mana-flask"].cheap;
   R.charms = {
-    base: L("Charms rares cobrem um ailment; os endgame são uniques (The Fall of the Axe, Nascent Hope e outros nos sets).", "Rare charms cover one ailment; endgame ones are uniques (The Fall of the Axe, Nascent Hope and others in the sets)."),
+    base: L("Charms Magic cobrem um ailment; os endgame são uniques (The Fall of the Axe, Nascent Hope e outros nos sets).", "Magic charms cover one ailment; endgame ones are uniques (The Fall of the Axe, Nascent Hope and others in the sets)."),
     targets: [], mats: ["Orb of Transmutation", "Orb of Augmentation", "Glassblower's Bauble"],
     cheap: [S_(L("Charm Magic", "Magic charm"), L("Escolha a base pelo que te mata (Thawing = freeze, Antidote = poison, Staunching = bleed, Ruby = ignite). Transmutation/Augmentation até “reduced Charges per use” + duração/efeito.", "Pick the base by what kills you (Thawing = freeze, Antidote = poison, Staunching = bleed, Ruby = ignite). Transmutation/Augmentation until “reduced Charges per use” + duration/effect."), "")],
   };

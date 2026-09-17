@@ -1,4 +1,4 @@
-"""Rebuild all six pages and crafting data, offline, from any working directory."""
+"""Rebuild all eight pages and crafting data, offline, from any working directory."""
 from pathlib import Path
 import subprocess
 import sys

@@ -74,7 +74,7 @@
     switch (c.kind) {
       case 'rites': return `<div class="rites">${D.rites.map(r => { const all = r.bosses.every((b, i) => on(`rite:${r.id}:${i}`)); return `<details class="rite ${all ? 'ok' : ''}" ${all ? '' : ''}><summary><span class="act">${esc(r.act)}</span><b>${esc(r.name)}</b><span class="mini">${r.bosses.filter((b, i) => on(`rite:${r.id}:${i}`)).length}/${r.bosses.length}</span></summary>
         <button type="button" class="btn sm" data-rite="${r.id}">${esc(U.allRite)}</button>
-        <div class="tbl"><table><thead><tr><th></th><th>${esc(U.boss)}</th><th>${esc(U.area)}</th><th>${esc(U.reward)}</th></tr></thead><tbody>${r.bosses.map((b, i) => `<tr class="${on(`rite:${r.id}:${i}`) ? 'on' : ''}"><td>${chk(`rite:${r.id}:${i}`, '<span class="sr">✓</span>')}</td><td data-l="${esc(U.boss)}"><b>${esc(b[0])}</b></td><td data-l="${esc(U.area)}">${esc(b[1])}</td><td data-l="${esc(U.reward)}">${esc(b[2])}</td></tr>`).join('')}</tbody></table></div></details>`; }).join('')}</div>`;
+        <div class="tbl"><table><thead><tr><th></th><th>${esc(U.boss)}</th><th>${esc(U.area)}</th><th>${esc(U.reward)}</th></tr></thead><tbody>${r.bosses.map((b, i) => `<tr class="${on(`rite:${r.id}:${i}`) ? 'on' : ''}"><td>${chk(`rite:${r.id}:${i}`, `<span class="sr">${esc(b[0])}</span>`)}</td><td data-l="${esc(U.boss)}"><b>${esc(b[0])}</b></td><td data-l="${esc(U.area)}">${esc(b[1])}</td><td data-l="${esc(U.reward)}">${esc(b[2])}</td></tr>`).join('')}</tbody></table></div></details>`; }).join('')}</div>`;
       case 'rares': {
         const acts = [...new Set(D.rares.map(r => r.act))];
         return `<div class="rares">${acts.map(a => `<div class="actgroup"><h4>${esc(a)}</h4>${D.rares.map((r, i) => r.act !== a ? '' : `<div class="rare ${on(`rare:${i}`) ? 'on' : ''}">${chk(`rare:${i}`, `<b>${esc(r.name)}</b><small>${esc(r.area)}${r.poi && r.poi !== '—' ? ` · ${esc(r.poi)}` : ''}</small>`)}</div>`).join('')}</div>`).join('')}</div>`;
@@ -93,20 +93,22 @@
   }
 
   function omenRows() {
-    return D.omens.map(o => ({ ...o, total: (o.price || 0) + (o.trigPrice || 0), used: on(`omen:${o.name}`), blocked: (S.hc && o.risk === 'death') || (S.nolow && o.risk === 'risk') }));
+    const valid = n => Number.isFinite(n) && n >= 0;
+    return D.omens.map(o => ({ ...o, total: valid(o.price) && (!o.trig || valid(o.trigPrice)) ? o.price + (o.trig ? o.trigPrice : 0) : null, used: on(`omen:${o.name}`), blocked: (S.hc && o.risk === 'death') || (S.nolow && o.risk === 'risk') }));
   }
   function omenPlanner() {
     const rows = omenRows(), used = rows.filter(r => r.used).length, need = Math.max(0, 18 - used);
-    const plan = rows.filter(r => !r.used && !r.blocked).sort((a, b) => a.total - b.total).slice(0, need);
+    const plan = rows.filter(r => !r.used && !r.blocked && r.total !== null).sort((a, b) => a.total - b.total).slice(0, need);
     const planSet = new Set(plan.map(p => p.name)), cost = plan.reduce((a, r) => a + r.total, 0);
-    const sorted = [...rows].sort((a, b) => (b.used - a.used) || (planSet.has(b.name) - planSet.has(a.name)) || (a.total - b.total));
+    const sorted = [...rows].sort((a, b) => (b.used - a.used) || (planSet.has(b.name) - planSet.has(a.name)) || ((a.total ?? Infinity) - (b.total ?? Infinity)));
+    const incomplete = plan.length < need;
     return `<div class="planner">
-      <div class="plan-head"><div class="plan-sum">${ring(used / 18, 56, `${used}`)}<div><b>${esc(U.plan)}</b><span>${esc(U.planLeft)} <b>${need}</b> · ${esc(U.planCost)}: <b>≈ ${fmt(cost, 2)} div</b></span></div></div>
+      <div class="plan-head"><div class="plan-sum">${ring(used / 18, 56, `${used}`)}<div><b>${esc(U.plan)}</b><span>${esc(U.planLeft)} <b>${need}</b> · ${esc(incomplete ? U.partialCost : U.planCost)}: <b>≈ ${fmt(cost, 2)} div</b></span>${incomplete ? `<p role="status">${esc(U.incompletePlan)} (${plan.length}/${need})</p>` : ''}</div></div>
       <div class="toggles"><label class="sw"><input type="checkbox" data-flag="hc" ${S.hc ? 'checked' : ''}><i></i>${esc(U.hc)}</label><label class="sw"><input type="checkbox" data-flag="nolow" ${S.nolow ? 'checked' : ''}><i></i>${esc(U.nolow)}</label></div></div>
       <div class="tbl"><table class="omens"><thead><tr><th>${esc(U.used)}</th><th>${esc(U.omen)}</th><th>${esc(U.trigger)}</th><th title="${esc(U.total)}">${esc(U.cost)}</th></tr></thead><tbody>
-      ${sorted.map(r => `<tr class="${r.used ? 'on' : ''} ${planSet.has(r.name) ? 'plan' : ''} ${r.blocked ? 'blocked' : ''}"><td>${chk(`omen:${r.name}`, '<span class="sr">✓</span>')}</td><td data-l="${esc(U.omen)}"><span class="om">${icon(r.img)}<b>${esc(r.name)}</b></span>${r.risk === 'death' ? '<em class="warn">☠</em>' : r.risk === 'risk' ? '<em class="warn">♥</em>' : ''}</td><td data-l="${esc(U.trigger)}">${esc(r.how)}${r.trig ? `<small> + ${esc(r.trig)}</small>` : ''}</td><td data-l="${esc(U.cost)}" class="num">${r.price == null ? '—' : `${fmt(r.total, r.total < .1 ? 3 : 2)} div`}</td></tr>`).join('')}
+      ${sorted.map(r => `<tr class="${r.used ? 'on' : ''} ${planSet.has(r.name) ? 'plan' : ''} ${r.blocked ? 'blocked' : ''}"><td>${chk(`omen:${r.name}`, `<span class="sr">${esc(r.name)}</span>`)}</td><td data-l="${esc(U.omen)}"><span class="om">${icon(r.img)}<b>${esc(r.name)}</b></span>${r.risk === 'death' ? '<em class="warn">☠</em>' : r.risk === 'risk' ? '<em class="warn">♥</em>' : ''}</td><td data-l="${esc(U.trigger)}">${esc(r.how)}${r.trig ? `<small> + ${esc(r.trig)}</small>` : ''}</td><td data-l="${esc(U.cost)}" class="num">${r.total === null ? '—' : `${fmt(r.total, r.total < .1 ? 3 : 2)} div`}</td></tr>`).join('')}
       </tbody></table></div>
-      <p class="note">${esc(U.exch)} ${esc(D.reviewed)} · ${esc(U.total)}.</p></div>`;
+      <p class="note">${esc(U.exch)} ${esc(D.reviewed)} · ${esc(U.total)}. ${esc(U.costScope)}</p></div>`;
   }
 
   /* ---------- challenge section */

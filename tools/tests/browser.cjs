@@ -15,6 +15,7 @@ const server=http.createServer((req,res)=>{
     for(const width of [1366,1024,768,390]){
       const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'}),page=await context.newPage();
       page.on('pageerror',e=>errors.push(page.url()+': '+e.message));
+      page.on('response',r=>{if(r.url().startsWith(base+'/')&&r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
       await page.route('https://fonts.googleapis.com/**',route=>route.abort());
       await page.route('https://fonts.gstatic.com/**',route=>route.abort());
       for(const file of ['index.html','en.html','silverfist/index.html','silverfist/en.html','oracle/index.html','oracle/en.html']){
@@ -90,6 +91,30 @@ const server=http.createServer((req,res)=>{
       await page.locator('.langsw a[hreflang="en"]').click();
       assert.equal(new URL(page.url()).hash,'#craft');assert.equal(await page.locator('[data-cstep]').first().isChecked(),true);
       await page.goto(base+'/oracle/index.html#missing-tab');assert.equal(await page.locator('.view.on').count(),1);
+      await context.close();
+    }
+    // Challenge progress and planner costs are independent of the build guides.
+    for(const lang of ['pt','en']){
+      const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+      const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+      await page.goto(base+'/rites/'+(lang==='pt'?'index.html':'en.html'));pages++;
+      assert.equal(await page.locator('.chlist > section').count(),8);
+      await page.locator('details.rite').first().locator('summary').click();
+      await page.locator('[data-rite]').first().click();
+      assert.equal(await page.locator('details.rite.ok').count(),1);
+      await page.locator('[data-num="level"]').fill('90');await page.locator('[data-num="level"]').press('Tab');
+      assert.equal(await page.locator('#master.complete').count(),1);
+      await page.reload();assert.equal(await page.locator('#master.complete').count(),1);
+      await page.locator('.lang a').filter({hasText:lang==='pt'?'EN':'PT'}).click();
+      assert.equal(await page.locator('#master.complete').count(),1);
+      // Missing omen OR activation currency must never count as free.
+      await page.evaluate(()=>{RITES.omens.forEach(o=>o.price=null);document.querySelector('[data-flag="hc"]').click();});
+      assert.equal(await page.locator('.omens tr.plan').count(),0);
+      assert.equal(await page.locator('.plan-head [role="status"]').count(),1);
+      assert.ok((await page.locator('.omens td.num').allTextContents()).every(t=>t==='—'));
+      await page.evaluate(()=>{RITES.omens.forEach(o=>{o.price=1;o.trigPrice=o.trig?null:0;});document.querySelector('[data-flag="nolow"]').click();});
+      assert.equal(await page.locator('.omens tr.plan small').count(),0);
+      if(process.env.SCREENSHOT_DIR)await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`rites-${lang}-390.png`),fullPage:false});
       await context.close();
     }
     for(const width of [320,1920]){

@@ -78,11 +78,12 @@ python obuild.py              # ../../oracle/index.html, en.html, assets/assets.
 python -m unittest discover -s tools/tests -v
 # Com Playwright disponível no Node (e o navegador instalado):
 node tools/tests/browser.cjs
+node tools/tests/recipes.cjs  # ordem de finalização das receitas PT/EN
 # Auditoria de sobreposição (todas as abas, 10 tamanhos de tela, PT/EN):
 node tools/tests/overlap.cjs
 ```
 
-O teste de navegador usa um servidor temporário local, testa as seis páginas em 1366px, 1024px e 768px (tablet) e 390px (celular), percorre todas as abas e as rotas de crafting, verifica overflow, busca, teclado, persistência PT/EN, deep links e limites das calculadoras. `BROWSER_CHANNEL=msedge` permite usar o Edge instalado; `SCREENSHOT_DIR` habilita capturas fora do repositório.
+O teste de navegador usa um servidor temporário local, testa as seis páginas das builds e da entrada em 1366px, 1024px, 768px e 390px, além das duas páginas de challenges. Percorre todas as abas e rotas de crafting, verifica overflow, busca, teclado, persistência PT/EN, deep links, limites das calculadoras e preços ausentes no planejador de Omens. Também verifica as builds no nível 95 em 320px e 1920px. `BROWSER_CHANNEL=msedge` permite usar o Edge instalado; `SCREENSHOT_DIR` habilita capturas fora do repositório.
 
 ## Fontes / Sources
 

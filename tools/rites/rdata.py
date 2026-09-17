@@ -27,9 +27,11 @@ def _prices():
         if not os.path.exists(p):
             continue
         d = json.load(open(p, encoding="utf-8"))
+        if d.get("core", {}).get("primary") != "divine":
+            continue
         names = {i["id"]: i["name"] for i in d.get("items", []) + d.get("core", {}).get("items", [])}
         for l in d.get("lines", []):
-            if l["id"] in names:
+            if l["id"] in names and isinstance(l.get("primaryValue"), (int, float)) and l["primaryValue"] >= 0:
                 out[names[l["id"]]] = l["primaryValue"]
     return out
 
