@@ -12,3 +12,10 @@ tools/dl/web/*.html
 tools/dl/web/report.txt
 test-results/
 tools/tests/overlap-report.txt
+
+# Dumps de pesquisa (personagens do poe.ninja) e relatórios de teste: refazíveis, ficam fora do repo
+tools/dl/martial/
+tools/dl/wyvern/
+tools/dl/gemob/
+tools/tests/mobile-run.log
+tools/tests/mobile-report.txt
