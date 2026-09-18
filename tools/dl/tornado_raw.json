@@ -1,0 +1,114 @@
+{
+  "source": "https://mobalytics.gg/poe-2/builds/dreamcore-tornado-sprinkler",
+  "author": "Dreamcore",
+  "title": "[0.5] Tornado Sprinkler Acolyte of Chayula",
+  "updated": "2026-09-01",
+  "snapshot": "2026-09-17",
+  "ascendancy": {
+    "selected": [24475, 59759, 60251, 34567, 1347, 50098, 11771, 52395, 664],
+    "priority": ["Waking Dream", "Lucid Dreaming", "Choice of Power", "Chayula's Gift", "Archon of Chayula"]
+  },
+  "gemRequirements": {"str": 55, "dex": 70, "int": 65},
+  "variants": [
+    {
+      "key": "main",
+      "name": "Main",
+      "tree": {
+        "main": [10364, 55342, 17248, 53960, 30555, 4203, 49046, 8569, 47177, 39987, 18913, 12419, 56063, 46034, 41029, 25557, 4059, 10382, 21984, 3251, 10131, 44669, 39280, 32951, 46554, 62677, 59362, 45885, 54521, 47168, 50104, 7960, 23382, 59093, 4140, 33722, 47931, 32474, 29611, 41768, 28982, 55190, 1200, 59785, 27296, 59777, 53719, 21387, 63114, 26725, 22975, 27439, 8600, 61490, 38876, 31903, 37612, 13279, 2864, 54818, 15182, 54127, 54282, 52125, 2847, 45272, 42280, 21205, 44176, 57047, 32564, 37519, 17045, 55131, 39207, 33518, 63579, 17532, 24477, 34671, 48418, 37258, 28304, 2491, 21670, 29358, 917, 65160, 46399, 50820, 65472, 9323, 46742, 5695, 32309, 59070, 29009, 5314, 61419, 40313, 58363, 55938, 41394, 56844, 40929, 43633, 18744, 60324, 1506],
+        "set1": [54998, 5800, 27082, 50392, 61409, 31805, 44461, 52298, 51702, 43149, 40292, 25482, 24646, 13075, 26725, 22975, 53719],
+        "set2": [38732, 36639, 8540, 42290, 36814, 28229, 45230, 16499, 3025, 32009, 52254, 50485, 40345, 37991, 61419, 8569, 62677]
+      },
+      "jewels": [{"name": "Heroic Tragedy", "node": 7960, "note": "seed indiferente; o nome precisa ser Vorana (dominado vira Black Scythe Training)"}],
+      "items": {
+        "mainHand_set1": {"n": "Brutus' Lead Sprinkler", "u": 1, "runes": ["Perfect Soul Core of Strength", "Perfect Soul Core of Strength"]},
+        "offHand_set1": {"n": "Brutus' Lead Sprinkler", "u": 1, "runes": ["Fenumus' Rune of Agony"]},
+        "mainHand_set2": {"n": "Cursecarver", "u": 1, "runes": ["Soul Core especial"]},
+        "offHand_set2": {"n": "Arvil's Wheel", "u": 1, "runes": ["Talisman do Ox"]},
+        "helmet": {"n": "Crown of Eyes", "u": 1, "runes": ["Greater Soul Core of Lightning", "Greater Soul Core of Cold"]},
+        "body": {"n": "Irongrasp", "u": 1, "runes": ["Perfect Soul Core of Strength x4"], "note": "versao Runemastered (Runeforging bench); sockets sao mantidos"},
+        "gloves": {"n": "Sirenscale Gloves", "u": 0, "runes": ["Rune of the Ancients"]},
+        "boots": {"n": "Decree of Flight", "u": 1, "runes": ["Perfect Soul Core of Strength", "Perfect Soul Core of Fire"], "note": "opcional: botas rare com MS e resistencias"},
+        "amulet": {"n": "Astramentis", "u": 1, "note": "anoint Dominion: Potent Liquid Contempt + Concentrated Liquid Suffering + Concentrated Liquid Isolation"},
+        "belt": {"n": "Double Belt", "u": 0},
+        "leftRing": {"n": "Original Sin", "u": 1},
+        "rightRing": {"n": "Breach Ring", "u": 0},
+        "flask1": {"n": "Ultimate Life Flask", "u": 0, "note": "trocar por Blood of the Warrior quando dominar a build"},
+        "flask2": {"n": "Lavianga's Spirits", "u": 1},
+        "charm1": {"n": "Nascent Hope", "u": 1},
+        "charm2": {"n": "Sanguis Heroum", "u": 1},
+        "charm3": {"n": "The Fall of the Axe", "u": 1}
+      },
+      "gems": [
+        {"skill": "Archon of Chayula", "sup": ["prolongeddurationsupportplayertwo", "supportaddedchaosdamageplayer", "supportvoranassiege", "supportexecuteplayertwo", "supportclosecombatplayertwo"]},
+        {"skill": "Molten Shower", "sup": ["supportaddedchaosdamageplayer", "supportretreatplayerthree", "supportexecuteplayertwo", "supportmultishotplayertwo", "supportclosecombatplayertwo"], "note": "granted pela Brutus' Lead Sprinkler (uma por maca)"},
+        {"skill": "Molten Shower", "sup": ["supportaddedchaosdamageplayer", "supportretreatplayerthree", "supportexecuteplayertwo", "supportmultishotplayertwo", "supportclosecombatplayertwo"]},
+        {"skill": "Molten Blast", "sup": ["supportrapidattacksplayertwo", "supportnovaprojectilesplayer", "supportsalvoplayer", "supportpoisonplayerthree", "supportmagnifiedareaplayertwo"]},
+        {"skill": "Blasphemy", "sup": ["curseofrepulsionplayer", "supportaddedchaosdamageplayer", "supportclosecombatplayertwo", "supportmagnifiedareaplayertwo", "supportexecuteplayertwo"]},
+        {"skill": "Into the Breach", "sup": ["supportfleetingremnantsplayertwo", "supportinterludeplayerthree", "supportkhatalsrejuvenationplayer"]},
+        {"skill": "Despair", "sup": ["supportatzirisallureplayer", "supportcursedgroundplayer", "supportcurseeffectplayer", "prolongeddurationsupportplayertwo", "supportefficiencyplayertwo"]},
+        {"skill": "Refutation", "sup": ["supportcooldownrecoveryplayertwo", "prolongeddurationsupportplayertwo", "supportrapidcastingplayertwo"]},
+        {"skill": "Convalescence", "sup": ["supportcooldownrecoveryplayertwo", "prolongeddurationsupportplayertwo", "supportcoolheadedplayer", "supportrapidcastingplayertwo"]}
+      ]
+    },
+    {
+      "key": "budget",
+      "name": "Lower Budget",
+      "tree": {
+        "main": [10364, 55342, 17248, 53960, 30555, 4203, 49046, 8569, 47177, 39987, 18913, 12419, 56063, 46034, 41029, 25557, 4059, 10382, 21984, 3251, 10131, 44669, 39280, 32951, 46554, 62677, 59362, 45885, 54521, 47168, 50104, 7960, 23382, 59093, 4140, 33722, 47931, 32474, 29611, 41768, 28982, 55190, 1200, 59785, 27296, 59777, 53719, 21387, 63114, 26725, 22975, 27439, 8600, 61490, 38876, 31903, 37612, 13279, 2864, 54818, 15182, 54127, 54282, 52125, 2847, 45272, 42280, 21205, 44176, 57047, 32564, 37519, 17045, 55131, 39207, 33518, 63579, 17532, 61934, 48418, 21670, 29358, 917, 65160, 46399, 50820, 65472, 9323, 46742, 5695, 32309, 59070, 43842, 28092, 17061, 31773, 40313, 58363, 55938, 41394, 56844, 40929, 43633, 18744, 60324, 1506, 29009, 5314, 61419],
+        "set1": [54998, 5800, 27082, 50392, 61409, 31805, 44461, 52298, 51702, 43149, 40292, 25482, 24646, 13075, 26725, 22975, 53719],
+        "set2": [38732, 36639, 8540, 42290, 36814, 28229, 45230, 16499, 3025, 32009, 52254, 50485, 40345, 37991, 61419, 8569, 62677]
+      },
+      "jewels": [{"name": "Heroic Tragedy", "node": 7960}],
+      "items": {
+        "mainHand_set1": {"n": "Brutus' Lead Sprinkler", "u": 1, "runes": ["Fenumus' Rune of Agony"]},
+        "offHand_set1": {"n": "Brutus' Lead Sprinkler", "u": 1, "runes": ["Greater Soul Core of Strength"]},
+        "helmet": {"n": "Crown of Eyes", "u": 1, "runes": ["Greater Soul Core of Lightning"]},
+        "body": {"n": "Irongrasp", "u": 1, "runes": ["Greater Soul Core of Cold", "Greater Soul Core of Lightning"]},
+        "gloves": {"n": "Sirenscale Gloves", "u": 0, "runes": ["Greater Soul Core of Fire"]},
+        "boots": {"n": "Decree of Flight", "u": 1, "runes": ["Greater Soul Core of Fire"]},
+        "amulet": {"n": "Astramentis", "u": 1},
+        "belt": {"n": "Double Belt", "u": 0},
+        "leftRing": {"n": "Original Sin", "u": 1},
+        "rightRing": {"n": "Prismatic Ring", "u": 0},
+        "flask1": {"n": "Ultimate Life Flask", "u": 0},
+        "flask2": {"n": "Lavianga's Spirits", "u": 1},
+        "charm1": {"n": "Nascent Hope", "u": 1},
+        "charm2": {"n": "Sanguis Heroum", "u": 1},
+        "charm3": {"n": "Silver Charm", "u": 0}
+      },
+      "gems": [
+        {"skill": "Archon of Chayula", "sup": ["prolongeddurationsupportplayertwo", "supportaddedchaosdamageplayer", "supportmagnifiedareaplayertwo", "supportexecuteplayertwo", "supportclosecombatplayertwo"]},
+        {"skill": "Molten Shower", "sup": ["supportaddedchaosdamageplayer", "supportretreatplayerthree", "supportexecuteplayertwo", "supportmultishotplayertwo"]},
+        {"skill": "Molten Shower", "sup": ["supportaddedchaosdamageplayer", "supportretreatplayerthree", "supportexecuteplayertwo", "supportmultishotplayertwo"]},
+        {"skill": "Molten Blast", "sup": ["supportrapidattacksplayertwo", "supportnovaprojectilesplayer", "supportsalvoplayer", "supportpoisonplayerthree"]},
+        {"skill": "Blasphemy", "sup": ["curseofrepulsionplayer", "supportaddedchaosdamageplayer", "supportclosecombatplayertwo", "supportmagnifiedareaplayertwo"]},
+        {"skill": "Into the Breach", "sup": ["supportfleetingremnantsplayertwo", "supportinterludeplayerthree", "supportkhatalsrejuvenationplayer"]},
+        {"skill": "Despair", "sup": ["supportatzirisallureplayer", "supportcursedgroundplayer", "supportefficiencyplayertwo", "supportcurseeffectplayer"]},
+        {"skill": "Refutation", "sup": ["supportcooldownrecoveryplayertwo", "prolongeddurationsupportplayertwo", "supportrapidcastingplayertwo"]},
+        {"skill": "Convalescence", "sup": ["supportcooldownrecoveryplayertwo", "prolongeddurationsupportplayertwo", "supportcoolheadedplayer", "supportrapidcastingplayertwo"]}
+      ]
+    },
+    {
+      "key": "block",
+      "name": "Block Variant",
+      "items": {
+        "mainHand_set1": {"n": "Brutus' Lead Sprinkler", "u": 1},
+        "offHand_set1": {"n": "Svalinn", "u": 1, "runes": ["Talisman do Ox x2"]},
+        "mainHand_set2": {"n": "Cursecarver", "u": 1},
+        "offHand_set2": {"n": "Arvil's Wheel", "u": 1}
+      },
+      "note": "mesma lista da Main trocando uma Brutus' Lead Sprinkler por Svalinn e investindo pontos em Block; menos dano, muito mais seguro"
+    }
+  ],
+  "notes": {
+    "interaction": "Brutus' Lead Sprinkler da chance de triggar Molten Shower ao acertar com a arma, com base na Forca total, e da dano de fogo plano a ataques com base na Forca (mod global). Os tornados do Archon of Chayula contam como acertos da arma e triggam Molten Shower.",
+    "playstyle": "Ao entrar na area, use Molten Blast para gerar Glory suficiente para o Archon of Chayula. Depois disso, os tornados geram Glory ao acertar (Glory so acumula com o buff do Archon inativo), o que permite reusar o Archon a cada ~25 s. O resto e andar e dodge roll.",
+    "weaponSwap": "Archon of Chayula e Molten Blast no Weapon Set 1; Despair no Weapon Set 2. Brutus' Lead Sprinkler no Set 1; Cursecarver + Arvil's Wheel no Set 2. Volte para o Set 1 logo apos o Despair (X ou usando Molten Blast).",
+    "anoint": "Dominion so existe como anoint: Potent Liquid Contempt + Concentrated Liquid Suffering + Concentrated Liquid Isolation, no amuleto (destilar em The Withered Willow).",
+    "timelessJewel": "Heroic Tragedy: o seed nao importa, o nome precisa ser Vorana (a keystone dominada no raio vira Black Scythe Training).",
+    "respec": "So respecar com as 8 ascendencias e nivel 80+. Ao respecar, tire da arvore e pegue de volta subindo de nivel: os dois sockets extras de jewel (6 pontos), Nimble Strength (3), Brute Strength (5), Protraction (4) e Beef (2).",
+    "runes": "Nao compre Perfect Runes na Exchange: compre a Greater e melhore com Masterwork Rune no socket. Fenumus' Rune of Agony e limitada a 1 item.",
+    "archonUnlock": "Archon of Chayula so pode ser alocado depois de completar a linha de quests de Breach no endgame (falando com Chayula); fica atras de Chayula's Gift.",
+    "weaknesses": "Nao e a build mais rapida; sem avoidance (dodge roll constante); fragil se voce nao desviar dos hits."
+  }
+}

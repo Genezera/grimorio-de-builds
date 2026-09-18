@@ -103,6 +103,17 @@ html[data-build="martial"]{
   --text:#dde5ee; --mute:#9eabbb; --faint:#687587;
   --scene-tint:rgba(6,18,34,.56);
 }
+html[data-build="shaman"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#080607; --ground2:#0c0809; --stone:#130d0c; --stone2:#1a1211; --stone3:#241917;
+  --edge:#33231f; --edge2:#55392f;
+  --gild:#d1a75f; --gild-hi:#f6dcab; --gild-lo:#6d5029; --gild-g:rgba(209,167,95,.13);
+  --accent:#2fd9c0; --accent-hi:#a6f3e6; --accent-g:rgba(47,217,192,.16);
+  --accent2:#ff7a2f; --accent2-hi:#ffb387; --accent2-g:rgba(255,122,47,.16);
+  --wisp:#7ef0dd; --wisp-g:rgba(126,240,221,.14);
+  --text:#ece2da; --mute:#b3a094; --faint:#7c6a60;
+  --scene-tint:rgba(36,12,6,.55);
+}
 
 /* ---------- base */
 html[data-build]{scroll-padding-top:190px;-webkit-text-size-adjust:100%;text-size-adjust:100%}

@@ -2,7 +2,7 @@
 from pathlib import Path
 
 SHARED = Path(__file__).resolve().parents[1] / 'shared'
-THEME_COLOR = {'silverfist': '#07080a', 'oracle': '#06060c', 'tactician': '#08080a', 'infernalist': '#0a0505', 'acolyte': '#07050b', 'pathfinder': '#060906', 'smith': '#09070a', 'martial': '#05070b'}
+THEME_COLOR = {'silverfist': '#07080a', 'oracle': '#06060c', 'tactician': '#08080a', 'infernalist': '#0a0505', 'acolyte': '#07050b', 'pathfinder': '#060906', 'smith': '#09070a', 'martial': '#05070b', 'shaman': '#080607'}
 
 def asset_version(*names):
     """Hash curto do conteúdo: muda a URL sempre que o arquivo muda (o GitHub Pages guarda cache por 10 min)."""

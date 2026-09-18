@@ -7902,6 +7902,17 @@
      }
     ]
    }
+  },
+  {
+   "src": "tornado_mobalytics",
+   "title": "Dreamcore — [0.5] Tornado Sprinkler Acolyte of Chayula (Mobalytics)",
+   "url": "https://mobalytics.gg/poe-2/builds/dreamcore-tornado-sprinkler",
+   "author": "Dreamcore",
+   "updatedAt": "2026-09-01",
+   "widgets": [],
+   "notes": null,
+   "profileNotes": {},
+   "rotations": {}
   }
  ],
  "variants": [
@@ -11296,6 +11307,2499 @@
     }
    },
    "desc": ""
+  },
+  {
+   "src": "tornado_mobalytics",
+   "name": "Tornado Sprinkler",
+   "items": {
+    "mainHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength",
+      "Perfect Soul Core of Strength"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Fenumus' Rune of Agony"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Cursecarver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Uniques/Clawmark.dds",
+     "mods": [
+      "(80-100)% increased Spell Damage",
+      "(10-20)% increased Cast Speed",
+      "Lose 10 Life per enemy killed",
+      "(30-50)% increased Mana Regeneration Rate",
+      "+4 to Level of Elemental Weakness Skills",
+      "+4 to Level of Enfeeble Skills",
+      "+4 to Level of Temporal Chains Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Arvil's Wheel",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Shields/Uniques/ArvilsWheel.dds",
+     "mods": [
+      "(60-100)% increased Armour and Evasion",
+      "+(40-60) to maximum Life",
+      "+(40-60) to maximum Mana",
+      "Lose 1% of maximum Life on Kill",
+      "Lose 1% of maximum Mana on Kill",
+      "(30-50)% increased Skill Effect Duration"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Crown of Eyes",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/CrownOfEyes.dds",
+     "mods": [
+      "(100-139)% increased Energy Shield",
+      "+(150-200) to Accuracy Rating",
+      "+(10-15) to all Attributes",
+      "-10% to Fire Resistance",
+      "Increases and Reductions to Spell damage also apply to Attacks"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Lightning",
+      "Greater Soul Core of Cold"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Irongrasp",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/Irongrasp.dds",
+     "mods": [
+      "(100-146)% increased Armour and Evasion",
+      "+(20-29) to Strength",
+      "+(100-150) to Stun Threshold",
+      "Iron Grip",
+      "Iron Will"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength x4"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "Rune of the Ancients"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Decree of Flight",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/BoundlessAuthority.dds",
+     "mods": [
+      "30% increased Movement Speed",
+      "(150-196)% increased Armour and Energy Shield",
+      "(20-28)% faster Dodge Roll",
+      "Gain Guard equal to (10-20)% of missing Energy Shield for 4 seconds when you Dodge Roll",
+      "Maximum amount of Guard is based on maximum Energy Shield instead",
+      "Divine Flight"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength",
+      "Perfect Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Astramentis",
+     "u": 1,
+     "icon": "Art/2DItems/Amulets/Uniques/Astramentis.dds",
+     "mods": [
+      "+(50-95) to all Attributes",
+      "-4 Physical Damage taken from Attack Hits"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Double Belt",
+     "u": 0,
+     "icon": "Art/2DItems/Belts/Basetypes/Belt08.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Original Sin",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/OriginalSin.dds",
+     "mods": [
+      "+(17-23)% to Chaos Resistance",
+      "100% of Elemental Damage Converted to Chaos Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Breach Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/BreachRing.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "(70-80)% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Sanguis Heroum",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/StaunchingUniqueCharm.dds",
+     "mods": [
+      "Gains (0.15-0.2) Charges per Second",
+      "Creates Consecrated Ground on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Archon of Chayula",
+     "slug": "archonofchayula",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Prolonged Duration II",
+      "Chaos Attunement",
+      "Vorana's Siege",
+      "Execute II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Blast",
+     "slug": "moltenblast",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rapid Attacks II",
+      "Nova Projectiles I",
+      "Salvo",
+      "Poison III",
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Repulsion",
+      "Chaos Attunement",
+      "Close Combat II",
+      "Magnified Area II",
+      "Execute II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Into the Breach",
+     "slug": "intothebreach",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despair",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Allure",
+      "Cursed Ground",
+      "Heightened Curse",
+      "Prolonged Duration II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Refutation",
+     "slug": "refutation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Convalescence",
+     "slug": "convalescence",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Cool Headed",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     55342,
+     17248,
+     53960,
+     30555,
+     4203,
+     49046,
+     8569,
+     47177,
+     39987,
+     18913,
+     12419,
+     56063,
+     46034,
+     41029,
+     25557,
+     4059,
+     10382,
+     21984,
+     3251,
+     10131,
+     44669,
+     39280,
+     32951,
+     46554,
+     62677,
+     59362,
+     45885,
+     54521,
+     47168,
+     50104,
+     7960,
+     23382,
+     59093,
+     4140,
+     33722,
+     47931,
+     32474,
+     29611,
+     41768,
+     28982,
+     55190,
+     1200,
+     59785,
+     27296,
+     59777,
+     53719,
+     21387,
+     63114,
+     26725,
+     22975,
+     27439,
+     8600,
+     61490,
+     38876,
+     31903,
+     37612,
+     13279,
+     2864,
+     54818,
+     15182,
+     54127,
+     54282,
+     52125,
+     2847,
+     45272,
+     42280,
+     21205,
+     44176,
+     57047,
+     32564,
+     37519,
+     17045,
+     55131,
+     39207,
+     33518,
+     63579,
+     17532,
+     24477,
+     34671,
+     48418,
+     37258,
+     28304,
+     2491,
+     21670,
+     29358,
+     917,
+     65160,
+     46399,
+     50820,
+     65472,
+     9323,
+     46742,
+     5695,
+     32309,
+     59070,
+     29009,
+     5314,
+     61419,
+     40313,
+     58363,
+     55938,
+     41394,
+     56844,
+     40929,
+     43633,
+     18744,
+     60324,
+     1506
+    ],
+    "s1": [
+     54998,
+     5800,
+     27082,
+     50392,
+     61409,
+     31805,
+     44461,
+     52298,
+     51702,
+     43149,
+     40292,
+     25482,
+     24646,
+     13075,
+     26725,
+     22975,
+     53719
+    ],
+    "s2": [
+     38732,
+     36639,
+     8540,
+     42290,
+     36814,
+     28229,
+     45230,
+     16499,
+     3025,
+     32009,
+     52254,
+     50485,
+     40345,
+     37991,
+     61419,
+     8569,
+     62677
+    ],
+    "a": [
+     24475,
+     59759,
+     60251,
+     34567,
+     1347,
+     50098,
+     11771,
+     52395,
+     664
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": "",
+   "level": 99
+  },
+  {
+   "src": "tornado_mobalytics",
+   "name": "Tornado Sprinkler (Budget)",
+   "items": {
+    "mainHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Fenumus' Rune of Agony"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Strength"
+     ],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Crown of Eyes",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/CrownOfEyes.dds",
+     "mods": [
+      "(100-139)% increased Energy Shield",
+      "+(150-200) to Accuracy Rating",
+      "+(10-15) to all Attributes",
+      "-10% to Fire Resistance",
+      "Increases and Reductions to Spell damage also apply to Attacks"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Lightning"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Irongrasp",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/Irongrasp.dds",
+     "mods": [
+      "(100-146)% increased Armour and Evasion",
+      "+(20-29) to Strength",
+      "+(100-150) to Stun Threshold",
+      "Iron Grip",
+      "Iron Will"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Cold",
+      "Greater Soul Core of Lightning"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Decree of Flight",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/BoundlessAuthority.dds",
+     "mods": [
+      "30% increased Movement Speed",
+      "(150-196)% increased Armour and Energy Shield",
+      "(20-28)% faster Dodge Roll",
+      "Gain Guard equal to (10-20)% of missing Energy Shield for 4 seconds when you Dodge Roll",
+      "Maximum amount of Guard is based on maximum Energy Shield instead",
+      "Divine Flight"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Astramentis",
+     "u": 1,
+     "icon": "Art/2DItems/Amulets/Uniques/Astramentis.dds",
+     "mods": [
+      "+(50-95) to all Attributes",
+      "-4 Physical Damage taken from Attack Hits"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Double Belt",
+     "u": 0,
+     "icon": "Art/2DItems/Belts/Basetypes/Belt08.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Original Sin",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/OriginalSin.dds",
+     "mods": [
+      "+(17-23)% to Chaos Resistance",
+      "100% of Elemental Damage Converted to Chaos Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Prismatic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/PrismaticRing.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "(70-80)% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Sanguis Heroum",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/StaunchingUniqueCharm.dds",
+     "mods": [
+      "Gains (0.15-0.2) Charges per Second",
+      "Creates Consecrated Ground on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Silver Charm",
+     "u": 0,
+     "icon": "Art/2DItems/Charms/Basetypes/SilverCharm.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Archon of Chayula",
+     "slug": "archonofchayula",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Prolonged Duration II",
+      "Chaos Attunement",
+      "Magnified Area II",
+      "Execute II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Blast",
+     "slug": "moltenblast",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rapid Attacks II",
+      "Nova Projectiles I",
+      "Salvo",
+      "Poison III"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Repulsion",
+      "Chaos Attunement",
+      "Close Combat II",
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Into the Breach",
+     "slug": "intothebreach",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despair",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Allure",
+      "Cursed Ground",
+      "Efficiency II",
+      "Heightened Curse"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Refutation",
+     "slug": "refutation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Convalescence",
+     "slug": "convalescence",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Cool Headed",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     55342,
+     17248,
+     53960,
+     30555,
+     4203,
+     49046,
+     8569,
+     47177,
+     39987,
+     18913,
+     12419,
+     56063,
+     46034,
+     41029,
+     25557,
+     4059,
+     10382,
+     21984,
+     3251,
+     10131,
+     44669,
+     39280,
+     32951,
+     46554,
+     62677,
+     59362,
+     45885,
+     54521,
+     47168,
+     50104,
+     7960,
+     23382,
+     59093,
+     4140,
+     33722,
+     47931,
+     32474,
+     29611,
+     41768,
+     28982,
+     55190,
+     1200,
+     59785,
+     27296,
+     59777,
+     53719,
+     21387,
+     63114,
+     26725,
+     22975,
+     27439,
+     8600,
+     61490,
+     38876,
+     31903,
+     37612,
+     13279,
+     2864,
+     54818,
+     15182,
+     54127,
+     54282,
+     52125,
+     2847,
+     45272,
+     42280,
+     21205,
+     44176,
+     57047,
+     32564,
+     37519,
+     17045,
+     55131,
+     39207,
+     33518,
+     63579,
+     17532,
+     61934,
+     48418,
+     21670,
+     29358,
+     917,
+     65160,
+     46399,
+     50820,
+     65472,
+     9323,
+     46742,
+     5695,
+     32309,
+     59070,
+     43842,
+     28092,
+     17061,
+     31773,
+     40313,
+     58363,
+     55938,
+     41394,
+     56844,
+     40929,
+     43633,
+     18744,
+     60324,
+     1506,
+     29009,
+     5314,
+     61419
+    ],
+    "s1": [
+     54998,
+     5800,
+     27082,
+     50392,
+     61409,
+     31805,
+     44461,
+     52298,
+     51702,
+     43149,
+     40292,
+     25482,
+     24646,
+     13075,
+     26725,
+     22975,
+     53719
+    ],
+    "s2": [
+     38732,
+     36639,
+     8540,
+     42290,
+     36814,
+     28229,
+     45230,
+     16499,
+     3025,
+     32009,
+     52254,
+     50485,
+     40345,
+     37991,
+     61419,
+     8569,
+     62677
+    ],
+    "a": [
+     24475,
+     59759,
+     60251,
+     34567,
+     1347,
+     50098,
+     11771,
+     52395,
+     664
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": "",
+   "level": 99
+  },
+  {
+   "src": "tornado_mobalytics",
+   "name": "Tornado Sprinkler A4",
+   "items": {
+    "mainHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Fenumus' Rune of Agony"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Strength"
+     ],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Crown of Eyes",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/CrownOfEyes.dds",
+     "mods": [
+      "(100-139)% increased Energy Shield",
+      "+(150-200) to Accuracy Rating",
+      "+(10-15) to all Attributes",
+      "-10% to Fire Resistance",
+      "Increases and Reductions to Spell damage also apply to Attacks"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Lightning"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Irongrasp",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/Irongrasp.dds",
+     "mods": [
+      "(100-146)% increased Armour and Evasion",
+      "+(20-29) to Strength",
+      "+(100-150) to Stun Threshold",
+      "Iron Grip",
+      "Iron Will"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Cold",
+      "Greater Soul Core of Lightning"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Decree of Flight",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/BoundlessAuthority.dds",
+     "mods": [
+      "30% increased Movement Speed",
+      "(150-196)% increased Armour and Energy Shield",
+      "(20-28)% faster Dodge Roll",
+      "Gain Guard equal to (10-20)% of missing Energy Shield for 4 seconds when you Dodge Roll",
+      "Maximum amount of Guard is based on maximum Energy Shield instead",
+      "Divine Flight"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Astramentis",
+     "u": 1,
+     "icon": "Art/2DItems/Amulets/Uniques/Astramentis.dds",
+     "mods": [
+      "+(50-95) to all Attributes",
+      "-4 Physical Damage taken from Attack Hits"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Double Belt",
+     "u": 0,
+     "icon": "Art/2DItems/Belts/Basetypes/Belt08.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Original Sin",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/OriginalSin.dds",
+     "mods": [
+      "+(17-23)% to Chaos Resistance",
+      "100% of Elemental Damage Converted to Chaos Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Prismatic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/PrismaticRing.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "(70-80)% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Sanguis Heroum",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/StaunchingUniqueCharm.dds",
+     "mods": [
+      "Gains (0.15-0.2) Charges per Second",
+      "Creates Consecrated Ground on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Silver Charm",
+     "u": 0,
+     "icon": "Art/2DItems/Charms/Basetypes/SilverCharm.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Archon of Chayula",
+     "slug": "archonofchayula",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Prolonged Duration II",
+      "Chaos Attunement",
+      "Magnified Area II",
+      "Execute II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Blast",
+     "slug": "moltenblast",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rapid Attacks II",
+      "Nova Projectiles I",
+      "Salvo",
+      "Poison III"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Repulsion",
+      "Chaos Attunement",
+      "Close Combat II",
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Into the Breach",
+     "slug": "intothebreach",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despair",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Allure",
+      "Cursed Ground",
+      "Efficiency II",
+      "Heightened Curse"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Refutation",
+     "slug": "refutation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Convalescence",
+     "slug": "convalescence",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Cool Headed",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     55342,
+     17248,
+     53960,
+     30555,
+     4203,
+     49046,
+     8569,
+     46034,
+     47177,
+     39987,
+     41029,
+     18913,
+     25557,
+     4059,
+     12419,
+     56063,
+     10382,
+     18744,
+     21984,
+     60324,
+     1506,
+     3251,
+     10131,
+     40313,
+     44669,
+     46554,
+     56844,
+     58363,
+     39280,
+     40929,
+     55938,
+     62677,
+     32951,
+     41394,
+     43633,
+     59362,
+     29009,
+     45885,
+     5314,
+     54521,
+     47168,
+     61419,
+     50104,
+     5695,
+     7960,
+     46742,
+     23382,
+     32309,
+     59070,
+     59093,
+     4140,
+     33722,
+     47931,
+     32474,
+     29611,
+     41768,
+     28982,
+     46399,
+     50820,
+     55190,
+     1200,
+     65472,
+     9323,
+     59785,
+     27296,
+     21670,
+     59777,
+     29358,
+     53719
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     24475,
+     59759,
+     60251,
+     34567,
+     1347,
+     50098,
+     11771,
+     52395,
+     664
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": "",
+   "level": 99
+  },
+  {
+   "src": "tornado_mobalytics",
+   "name": "Tornado Sprinkler Maps",
+   "items": {
+    "mainHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength",
+      "Perfect Soul Core of Strength"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Fenumus' Rune of Agony"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Cursecarver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Uniques/Clawmark.dds",
+     "mods": [
+      "(80-100)% increased Spell Damage",
+      "(10-20)% increased Cast Speed",
+      "Lose 10 Life per enemy killed",
+      "(30-50)% increased Mana Regeneration Rate",
+      "+4 to Level of Elemental Weakness Skills",
+      "+4 to Level of Enfeeble Skills",
+      "+4 to Level of Temporal Chains Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Arvil's Wheel",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Shields/Uniques/ArvilsWheel.dds",
+     "mods": [
+      "(60-100)% increased Armour and Evasion",
+      "+(40-60) to maximum Life",
+      "+(40-60) to maximum Mana",
+      "Lose 1% of maximum Life on Kill",
+      "Lose 1% of maximum Mana on Kill",
+      "(30-50)% increased Skill Effect Duration"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Crown of Eyes",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/CrownOfEyes.dds",
+     "mods": [
+      "(100-139)% increased Energy Shield",
+      "+(150-200) to Accuracy Rating",
+      "+(10-15) to all Attributes",
+      "-10% to Fire Resistance",
+      "Increases and Reductions to Spell damage also apply to Attacks"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Lightning",
+      "Greater Soul Core of Cold"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Irongrasp",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/Irongrasp.dds",
+     "mods": [
+      "(100-146)% increased Armour and Evasion",
+      "+(20-29) to Strength",
+      "+(100-150) to Stun Threshold",
+      "Iron Grip",
+      "Iron Will"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength x4"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "Rune of the Ancients"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Decree of Flight",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/BoundlessAuthority.dds",
+     "mods": [
+      "30% increased Movement Speed",
+      "(150-196)% increased Armour and Energy Shield",
+      "(20-28)% faster Dodge Roll",
+      "Gain Guard equal to (10-20)% of missing Energy Shield for 4 seconds when you Dodge Roll",
+      "Maximum amount of Guard is based on maximum Energy Shield instead",
+      "Divine Flight"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength",
+      "Perfect Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Astramentis",
+     "u": 1,
+     "icon": "Art/2DItems/Amulets/Uniques/Astramentis.dds",
+     "mods": [
+      "+(50-95) to all Attributes",
+      "-4 Physical Damage taken from Attack Hits"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Double Belt",
+     "u": 0,
+     "icon": "Art/2DItems/Belts/Basetypes/Belt08.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Original Sin",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/OriginalSin.dds",
+     "mods": [
+      "+(17-23)% to Chaos Resistance",
+      "100% of Elemental Damage Converted to Chaos Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Breach Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/BreachRing.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "(70-80)% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Sanguis Heroum",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/StaunchingUniqueCharm.dds",
+     "mods": [
+      "Gains (0.15-0.2) Charges per Second",
+      "Creates Consecrated Ground on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Archon of Chayula",
+     "slug": "archonofchayula",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Prolonged Duration II",
+      "Chaos Attunement",
+      "Vorana's Siege",
+      "Execute II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Blast",
+     "slug": "moltenblast",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rapid Attacks II",
+      "Nova Projectiles I",
+      "Salvo",
+      "Poison III",
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Repulsion",
+      "Chaos Attunement",
+      "Close Combat II",
+      "Magnified Area II",
+      "Execute II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Into the Breach",
+     "slug": "intothebreach",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despair",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Allure",
+      "Cursed Ground",
+      "Heightened Curse",
+      "Prolonged Duration II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Refutation",
+     "slug": "refutation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Convalescence",
+     "slug": "convalescence",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Cool Headed",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     55342,
+     17248,
+     53960,
+     30555,
+     4203,
+     49046,
+     8569,
+     46034,
+     47177,
+     39987,
+     41029,
+     18913,
+     25557,
+     4059,
+     12419,
+     56063,
+     10382,
+     18744,
+     21984,
+     60324,
+     1506,
+     3251,
+     10131,
+     40313,
+     44669,
+     46554,
+     56844,
+     58363,
+     39280,
+     40929,
+     55938,
+     62677,
+     32951,
+     41394,
+     43633,
+     59362,
+     29009,
+     45885,
+     5314,
+     54521,
+     47168,
+     61419,
+     50104,
+     5695,
+     7960,
+     46742,
+     23382,
+     32309,
+     59070,
+     59093,
+     4140,
+     33722,
+     47931,
+     32474,
+     29611,
+     41768,
+     28982,
+     46399,
+     50820,
+     55190,
+     1200,
+     65472,
+     9323,
+     59785,
+     27296,
+     21670,
+     59777,
+     29358,
+     53719,
+     917,
+     21387,
+     65160,
+     63114,
+     26725,
+     22975,
+     27439,
+     8600,
+     61490,
+     38876,
+     31903,
+     37258,
+     37612,
+     13279,
+     17532,
+     28304,
+     2491,
+     2864,
+     24477,
+     32564,
+     34671,
+     54818,
+     48418,
+     15182,
+     37519
+    ],
+    "s1": [
+     54998,
+     5800,
+     27082,
+     50392,
+     61409,
+     31805,
+     44461,
+     52298,
+     51702,
+     43149,
+     40292,
+     25482,
+     24646,
+     13075,
+     26725,
+     22975,
+     53719
+    ],
+    "s2": [
+     38732,
+     36639,
+     8540,
+     42290,
+     36814,
+     28229,
+     45230,
+     16499,
+     3025,
+     32009,
+     52254,
+     50485,
+     40345,
+     37991,
+     61419,
+     8569,
+     62677
+    ],
+    "a": [
+     24475,
+     59759,
+     60251,
+     34567,
+     1347,
+     50098,
+     11771,
+     52395,
+     664
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": "",
+   "level": 99
+  },
+  {
+   "src": "tornado_mobalytics",
+   "name": "Tornado Sprinkler Archon",
+   "items": {
+    "mainHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength",
+      "Perfect Soul Core of Strength"
+     ],
+     "skill": null
+    },
+    "offHand_set1": {
+     "n": "Brutus' Lead Sprinkler",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrutusLeadSprinkler.dds",
+     "mods": [
+      "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength",
+      "(80-118)% increased Physical Damage",
+      "(5-10)% increased Attack Speed",
+      "+(15-24) to Strength",
+      "5 to 10 Added Attack Fire Damage per 25 Strength"
+     ],
+     "stats": [],
+     "runes": [
+      "Fenumus' Rune of Agony"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Cursecarver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Uniques/Clawmark.dds",
+     "mods": [
+      "(80-100)% increased Spell Damage",
+      "(10-20)% increased Cast Speed",
+      "Lose 10 Life per enemy killed",
+      "(30-50)% increased Mana Regeneration Rate",
+      "+4 to Level of Elemental Weakness Skills",
+      "+4 to Level of Enfeeble Skills",
+      "+4 to Level of Temporal Chains Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Arvil's Wheel",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Shields/Uniques/ArvilsWheel.dds",
+     "mods": [
+      "(60-100)% increased Armour and Evasion",
+      "+(40-60) to maximum Life",
+      "+(40-60) to maximum Mana",
+      "Lose 1% of maximum Life on Kill",
+      "Lose 1% of maximum Mana on Kill",
+      "(30-50)% increased Skill Effect Duration"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Crown of Eyes",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/CrownOfEyes.dds",
+     "mods": [
+      "(100-139)% increased Energy Shield",
+      "+(150-200) to Accuracy Rating",
+      "+(10-15) to all Attributes",
+      "-10% to Fire Resistance",
+      "Increases and Reductions to Spell damage also apply to Attacks"
+     ],
+     "stats": [],
+     "runes": [
+      "Greater Soul Core of Lightning",
+      "Greater Soul Core of Cold"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Irongrasp",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/Irongrasp.dds",
+     "mods": [
+      "(100-146)% increased Armour and Evasion",
+      "+(20-29) to Strength",
+      "+(100-150) to Stun Threshold",
+      "Iron Grip",
+      "Iron Will"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength x4"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [
+      "Rune of the Ancients"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Decree of Flight",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/BoundlessAuthority.dds",
+     "mods": [
+      "30% increased Movement Speed",
+      "(150-196)% increased Armour and Energy Shield",
+      "(20-28)% faster Dodge Roll",
+      "Gain Guard equal to (10-20)% of missing Energy Shield for 4 seconds when you Dodge Roll",
+      "Maximum amount of Guard is based on maximum Energy Shield instead",
+      "Divine Flight"
+     ],
+     "stats": [],
+     "runes": [
+      "Perfect Soul Core of Strength",
+      "Perfect Soul Core of Fire"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Astramentis",
+     "u": 1,
+     "icon": "Art/2DItems/Amulets/Uniques/Astramentis.dds",
+     "mods": [
+      "+(50-95) to all Attributes",
+      "-4 Physical Damage taken from Attack Hits"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Double Belt",
+     "u": 0,
+     "icon": "Art/2DItems/Belts/Basetypes/Belt08.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Original Sin",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/OriginalSin.dds",
+     "mods": [
+      "+(17-23)% to Chaos Resistance",
+      "100% of Elemental Damage Converted to Chaos Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Breach Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/BreachRing.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "(70-80)% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Sanguis Heroum",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/StaunchingUniqueCharm.dds",
+     "mods": [
+      "Gains (0.15-0.2) Charges per Second",
+      "Creates Consecrated Ground on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Archon of Chayula",
+     "slug": "archonofchayula",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Prolonged Duration II",
+      "Chaos Attunement",
+      "Vorana's Siege",
+      "Execute II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Shower",
+     "slug": "moltenshower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Chaos Attunement",
+      "Retreat III",
+      "Execute II",
+      "Multishot II",
+      "Close Combat II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Molten Blast",
+     "slug": "moltenblast",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rapid Attacks II",
+      "Nova Projectiles I",
+      "Salvo",
+      "Poison III",
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blasphemy",
+     "slug": "blasphemy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Repulsion",
+      "Chaos Attunement",
+      "Close Combat II",
+      "Magnified Area II",
+      "Execute II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Into the Breach",
+     "slug": "intothebreach",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Despair",
+     "slug": "despair",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Allure",
+      "Cursed Ground",
+      "Heightened Curse",
+      "Prolonged Duration II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Refutation",
+     "slug": "refutation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Convalescence",
+     "slug": "convalescence",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Prolonged Duration II",
+      "Cool Headed",
+      "Rapid Casting II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     55342,
+     17248,
+     53960,
+     30555,
+     4203,
+     49046,
+     8569,
+     46034,
+     47177,
+     39987,
+     41029,
+     18913,
+     25557,
+     4059,
+     12419,
+     56063,
+     10382,
+     18744,
+     21984,
+     60324,
+     1506,
+     3251,
+     10131,
+     40313,
+     44669,
+     46554,
+     56844,
+     58363,
+     39280,
+     40929,
+     55938,
+     62677,
+     32951,
+     41394,
+     43633,
+     59362,
+     29009,
+     45885,
+     5314,
+     54521,
+     47168,
+     61419,
+     50104,
+     5695,
+     7960,
+     46742,
+     23382,
+     32309,
+     59070,
+     59093,
+     4140,
+     33722,
+     47931,
+     32474,
+     29611,
+     41768,
+     28982,
+     46399,
+     50820,
+     55190,
+     1200,
+     65472,
+     9323,
+     59785,
+     27296,
+     21670,
+     59777,
+     29358,
+     53719,
+     917,
+     21387,
+     65160,
+     63114,
+     26725,
+     22975,
+     27439,
+     8600,
+     61490,
+     38876,
+     31903,
+     37258,
+     37612,
+     13279,
+     17532,
+     28304,
+     2491,
+     2864,
+     24477,
+     32564,
+     34671,
+     54818,
+     48418,
+     15182,
+     37519,
+     39207,
+     17045,
+     33518,
+     54127,
+     55131
+    ],
+    "s1": [
+     54998,
+     5800,
+     27082,
+     50392,
+     61409,
+     31805,
+     44461,
+     52298,
+     51702,
+     43149,
+     40292,
+     25482,
+     24646,
+     13075,
+     26725,
+     22975,
+     53719
+    ],
+    "s2": [
+     38732,
+     36639,
+     8540,
+     42290,
+     36814,
+     28229,
+     45230,
+     16499,
+     3025,
+     32009,
+     52254,
+     50485,
+     40345,
+     37991,
+     61419,
+     8569,
+     62677
+    ],
+    "a": [
+     24475,
+     59759,
+     60251,
+     34567,
+     1347,
+     50098,
+     11771,
+     52395,
+     664
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": "",
+   "level": 99
   }
  ]
 }

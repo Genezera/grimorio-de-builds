@@ -11,6 +11,7 @@
     pathfinder: { p: 'pf', name: 'Pathfinder', motes: 'toxic' },
     smith: { p: 'sk', name: 'Smith of Kitava', motes: 'forge' },
     martial: { p: 'ma', name: 'Martial Artist', motes: 'storm' },
+    shaman: { p: 'sh', name: 'Shaman', motes: 'storm' },
   };
   const build = BUILDS[root.dataset.build] ? root.dataset.build : 'silverfist';
   const CFG = BUILDS[build];

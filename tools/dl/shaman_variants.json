@@ -1,0 +1,3115 @@
+{
+ "guides": [
+  {
+   "src": "ninja",
+   "title": "유치미치잔치 (Shaman 97) — poe.ninja",
+   "url": "https://poe.ninja/poe2/builds/forbiddenrites/character/Jubei-4556/유치미치잔치",
+   "author": "Jubei-4556",
+   "updatedAt": "2026-09-17T20:17:52.310135Z",
+   "widgets": [],
+   "notes": null,
+   "profileNotes": {},
+   "rotations": {}
+  }
+ ],
+ "variants": [
+  {
+   "src": "ninja",
+   "name": "Aspiracional",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493,
+     8831,
+     10131,
+     10159,
+     11184,
+     11741,
+     11825,
+     11838,
+     14231,
+     14267,
+     14446,
+     15775,
+     16466,
+     17602,
+     17702,
+     19044,
+     21387,
+     21984,
+     23382,
+     24287,
+     24721,
+     24786,
+     25026,
+     26135,
+     26196,
+     26725,
+     27082,
+     27296,
+     27705,
+     28002,
+     28175,
+     29009,
+     29240,
+     30657,
+     30808,
+     31238,
+     31765,
+     31977,
+     32194,
+     32763,
+     33722,
+     34015,
+     35046,
+     35564,
+     36379,
+     37629,
+     38463,
+     39131,
+     41394,
+     43281,
+     43633,
+     45319,
+     45885,
+     45918,
+     45923,
+     46554,
+     46742,
+     46882,
+     47168,
+     47359,
+     47931,
+     47976,
+     48116,
+     48305,
+     48552,
+     48773,
+     49938,
+     50084,
+     50104,
+     50498,
+     51048,
+     51561,
+     51741,
+     51934,
+     52125,
+     52319,
+     53719,
+     54099,
+     54127,
+     54282,
+     54521,
+     54984,
+     55041,
+     55048,
+     55190,
+     55802,
+     55933,
+     57513,
+     57821,
+     58814,
+     59093,
+     59362,
+     59538,
+     59777,
+     59785,
+     59798,
+     59799,
+     60735,
+     61403,
+     61419,
+     61834,
+     62498,
+     62677,
+     63114,
+     63400,
+     64471
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "ninja",
+   "name": "A1",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "ninja",
+   "name": "A2",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493,
+     8831,
+     10131,
+     10159,
+     11184,
+     11741,
+     11825,
+     11838,
+     14231,
+     14267,
+     14446,
+     15775,
+     16466,
+     17602,
+     17702,
+     19044,
+     21387,
+     21984
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "ninja",
+   "name": "A3",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493,
+     8831,
+     10131,
+     10159,
+     11184,
+     11741,
+     11825,
+     11838,
+     14231,
+     14267,
+     14446,
+     15775,
+     16466,
+     17602,
+     17702,
+     19044,
+     21387,
+     21984,
+     23382,
+     24287,
+     24721,
+     24786,
+     25026,
+     26135,
+     26196,
+     26725,
+     27082,
+     27296,
+     27705,
+     28002,
+     28175,
+     29009,
+     29240,
+     30657
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "ninja",
+   "name": "A4",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493,
+     8831,
+     10131,
+     10159,
+     11184,
+     11741,
+     11825,
+     11838,
+     14231,
+     14267,
+     14446,
+     15775,
+     16466,
+     17602,
+     17702,
+     19044,
+     21387,
+     21984,
+     23382,
+     24287,
+     24721,
+     24786,
+     25026,
+     26135,
+     26196,
+     26725,
+     27082,
+     27296,
+     27705,
+     28002,
+     28175,
+     29009,
+     29240,
+     30657,
+     30808,
+     31238,
+     31765,
+     31977,
+     32194,
+     32763,
+     33722,
+     34015,
+     35046,
+     35564,
+     36379,
+     37629,
+     38463,
+     39131,
+     41394,
+     43281,
+     43633,
+     45319,
+     45885,
+     45918,
+     45923,
+     46554
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "ninja",
+   "name": "Mapas",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493,
+     8831,
+     10131,
+     10159,
+     11184,
+     11741,
+     11825,
+     11838,
+     14231,
+     14267,
+     14446,
+     15775,
+     16466,
+     17602,
+     17702,
+     19044,
+     21387,
+     21984,
+     23382,
+     24287,
+     24721,
+     24786,
+     25026,
+     26135,
+     26196,
+     26725,
+     27082,
+     27296,
+     27705,
+     28002,
+     28175,
+     29009,
+     29240,
+     30657,
+     30808,
+     31238,
+     31765,
+     31977,
+     32194,
+     32763,
+     33722,
+     34015,
+     35046,
+     35564,
+     36379,
+     37629,
+     38463,
+     39131,
+     41394,
+     43281,
+     43633,
+     45319,
+     45885,
+     45918,
+     45923,
+     46554,
+     46742,
+     46882,
+     47168,
+     47359,
+     47931,
+     47976,
+     48116,
+     48305,
+     48552,
+     48773,
+     49938,
+     50084,
+     50104,
+     50498,
+     51048,
+     51561,
+     51741,
+     51934,
+     52125,
+     52319,
+     53719,
+     54099,
+     54127
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "ninja",
+   "name": "Endgame",
+   "items": {
+    "offHand_set1": {
+     "n": "Rathpith Globe",
+     "u": 1,
+     "icon": "Art/2DItems/Offhand/Foci/Uniques/RathpithGlobe.dds",
+     "mods": [
+      "86% increased Energy Shield",
+      "+82 to maximum Life",
+      "Non-Channelling Spells have 3% increased Critical Hit Chance per 100 maximum Life",
+      "+50 to maximum Mana",
+      "Bonded: +20 to maximum Life",
+      "Bonded: +20 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Mageblood.dds",
+     "mods": [
+      "Has 2 Charm Slots",
+      "20% of Flask Recovery applied Instantly",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Bismuth",
+      "All Mage's Legacies have 50% increased effect per duplicate Mage's Legacy you have"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsInt06.dds",
+     "mods": [
+      "35% increased Movement Speed",
+      "99% increased Energy Shield",
+      "Can have 1 additional Crafted Modifier",
+      "+80 to maximum Mana",
+      "24% increased Mana Cost Efficiency if you haven't Dodge Rolled Recently",
+      "Bonded: +32 to maximum Life",
+      "Bonded: +32 to maximum Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Runemastered Runic Fork",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.dds",
+     "mods": [
+      "+300 to maximum Runic Ward",
+      "Only Runes can be Socketed in this item",
+      "200% increased effect of Socketed Runes",
+      "+1080 to maximum Mana",
+      "+9 to Level of all Spell Skills",
+      "Bonded: 60% increased maximum Mana",
+      "Bonded: Archon recovery period expires 90% faster",
+      "Bonded: Leeches 3% of maximum Life when you Cast a Spell"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Vile Robe",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.dds",
+     "mods": [
+      "+95 to maximum Energy Shield",
+      "108% increased Energy Shield",
+      "+15% to Cold and Chaos Resistances",
+      "+30% to Fire and Chaos Resistances",
+      "+150 to maximum Mana",
+      "Can roll Soul modifiers",
+      "Bonded: +60 to maximum Life",
+      "Bonded: 3% increased maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "8% increased maximum Mana",
+      "+6 to Level of all Spell Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "+72 to maximum Energy Shield",
+      "99% increased Energy Shield",
+      "+143 to maximum Mana",
+      "32% increased Critical Hit Chance",
+      "5% increased maximum Mana",
+      "15% increased Cost Efficiency",
+      "Raven-Touched",
+      "Bonded: Meta Skills have 15% increased Reservation Efficiency"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Mnemonic Ring",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/BreachlordRing_Esh.dds",
+     "mods": [
+      "9% increased maximum Mana",
+      "+267 to maximum Mana",
+      "103% increased Mana Regeneration Rate",
+      "39% increased Mana Cost Efficiency of Spells"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Chiming Staff",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.dds",
+     "mods": [
+      "71% increased Spell Damage",
+      "53% increased Lightning Damage",
+      "+232 to maximum Mana",
+      "+6 to Intelligence",
+      "96% increased Mana Regeneration Rate"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Sirenscale Gloves",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
+     "mods": [
+      "+121 to maximum Mana",
+      "39% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "38% increased Projectile Damage",
+      "+64% Surpassing chance to fire an additional Projectile",
+      "+1 Suffix Modifier allowed",
+      "8% increased Cast Speed",
+      "Can roll Marksman modifiers"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "The Stars Answer",
+     "slug": "thestarsanswer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Zenith II",
+      "Considered Casting",
+      "Arbiter's Ignition",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Powered by Verisium",
+      "Zenith II",
+      "Spell Cascade",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arctic Armour",
+     "slug": "arcticarmour",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cold Mastery",
+      "Knockback",
+      "Zenith II",
+      "Execute III",
+      "Ambush"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Comet",
+     "slug": "comet",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Concentrated Area",
+      "Considered Casting",
+      "Zenith II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Projectile Acceleration III",
+      "Execute III",
+      "Zenith II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Comet",
+      "Comet",
+      "Spell Cascade",
+      "Zenith II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Mana Remnants",
+     "slug": "manaremnants",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency III",
+      "Dialla's Desire",
+      "Khatal's Rejuvenation"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Archmage",
+     "slug": "archmage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Atziri's Communion",
+      "Warm Blooded",
+      "Cool Headed",
+      "Clarity II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Blink",
+     "slug": "blink",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Rapid Casting II",
+      "Efficiency II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Remnants of Kalguur",
+     "slug": "remnantsofkalguur",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II",
+      "Remnant Potency I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "slug": "sigilofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Siphon Elements",
+     "slug": "siphonelements",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Harmonic Remnants II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 97,
+   "tree": {
+    "m": [
+     722,
+     1200,
+     1506,
+     2335,
+     2491,
+     2582,
+     2847,
+     3251,
+     3446,
+     3567,
+     4140,
+     4828,
+     5314,
+     5335,
+     7338,
+     7960,
+     8493,
+     8831,
+     10131,
+     10159,
+     11184,
+     11741,
+     11825,
+     11838,
+     14231,
+     14267,
+     14446,
+     15775,
+     16466,
+     17602,
+     17702,
+     19044,
+     21387,
+     21984,
+     23382,
+     24287,
+     24721,
+     24786,
+     25026,
+     26135,
+     26196,
+     26725,
+     27082,
+     27296,
+     27705,
+     28002,
+     28175,
+     29009,
+     29240,
+     30657,
+     30808,
+     31238,
+     31765,
+     31977,
+     32194,
+     32763,
+     33722,
+     34015,
+     35046,
+     35564,
+     36379,
+     37629,
+     38463,
+     39131,
+     41394,
+     43281,
+     43633,
+     45319,
+     45885,
+     45918,
+     45923,
+     46554,
+     46742,
+     46882,
+     47168,
+     47359,
+     47931,
+     47976,
+     48116,
+     48305,
+     48552,
+     48773,
+     49938,
+     50084,
+     50104,
+     50498,
+     51048,
+     51561,
+     51741,
+     51934,
+     52125,
+     52319,
+     53719,
+     54099,
+     54127,
+     54282,
+     54521,
+     54984,
+     55041,
+     55048,
+     55190,
+     55802,
+     55933,
+     57513,
+     57821,
+     58814,
+     59093,
+     59362,
+     59538,
+     59777,
+     59785,
+     59798,
+     59799,
+     60735,
+     61403,
+     61419,
+     61834,
+     62498
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     1855,
+     16204,
+     33824,
+     35535,
+     42253,
+     46654,
+     58646,
+     61722,
+     61983
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  }
+ ]
+}
