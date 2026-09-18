@@ -6,7 +6,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔮</text></svg>">
 <script>document.documentElement.dataset.build='oracle'</script>
 <meta name="theme-color" content="#06060c">
-<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=93a34c1d"></script>
+<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=5a821e91"></script>
 <title>Oracle of Totems</title>
 <meta name="description" content="Interactive Oracle Spell Totem (Druid) guide — PoE 2 Forbidden Rites">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,6 +119,7 @@ nav.tabs button{border:1px solid transparent;background:transparent;color:var(--
 nav.tabs button:hover{color:var(--gild-hi)}
 nav.tabs button[aria-selected=true]{color:var(--gild-hi);border-color:var(--edge2);background:linear-gradient(180deg,rgba(114,146,202,.16),rgba(114,146,202,.03));box-shadow:inset 0 -2px 0 var(--gild)}
 nav.tabs .count{font-family:var(--mono);font-size:.72rem;color:var(--wisp);margin-left:5px}
+.tabgroup{align-self:center;margin:0 5px 0 12px;color:var(--faint);font:700 .68rem/1 var(--ui);letter-spacing:.09em;text-transform:uppercase}.tabgroup:first-child{margin-left:0}@media(max-width:720px){nav.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabgroup{position:sticky;left:0;background:#08090d;padding:8px 5px;margin-left:8px}nav.tabs button{min-height:42px}}
 
 section.view{display:none;padding-top:24px;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
 section.view.on{display:block}
@@ -710,6 +711,17 @@ html[data-build="martial"]{
   --wisp:#8fe3ff; --wisp-g:rgba(143,227,255,.14);
   --text:#dde5ee; --mute:#9eabbb; --faint:#687587;
   --scene-tint:rgba(6,18,34,.56);
+}
+html[data-build="shaman"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#080607; --ground2:#0c0809; --stone:#130d0c; --stone2:#1a1211; --stone3:#241917;
+  --edge:#33231f; --edge2:#55392f;
+  --gild:#d1a75f; --gild-hi:#f6dcab; --gild-lo:#6d5029; --gild-g:rgba(209,167,95,.13);
+  --accent:#2fd9c0; --accent-hi:#a6f3e6; --accent-g:rgba(47,217,192,.16);
+  --accent2:#ff7a2f; --accent2-hi:#ffb387; --accent2-g:rgba(255,122,47,.16);
+  --wisp:#7ef0dd; --wisp-g:rgba(126,240,221,.14);
+  --text:#ece2da; --mute:#b3a094; --faint:#7c6a60;
+  --scene-tint:rgba(36,12,6,.55);
 }
 
 /* ---------- base */
@@ -1437,7 +1449,8 @@ function setMode(m) {
 }
 function buildTabs() {
   const nav = $("#tabs");
-  nav.innerHTML = TABS.map(([id, l]) => `<button role="tab" type="button" data-tab="${id}" aria-selected="${S.tab === id}">${l}${id === "quests" ? '<span class="count" id="qcount"></span>' : ""}</button>`).join("");
+  const groupAt = {}; (D.tabGroups || []).forEach(([label, ids]) => ids.length && (groupAt[ids[0]] = label));
+  nav.innerHTML = TABS.map(([id, l]) => `${groupAt[id] ? `<span class="tabgroup" role="presentation">${esc(groupAt[id])}</span>` : ""}<button role="tab" type="button" data-tab="${id}" aria-selected="${S.tab === id}">${l}${id === "quests" ? '<span class="count" id="qcount"></span>' : ""}</button>`).join("");
   nav.onclick = e => { const b = e.target.closest("button"); if (b) { S.tab = b.dataset.tab; store.set("tab", S.tab); showTab(); } };
 }
 function showTab() {
@@ -1818,7 +1831,7 @@ function vGear() {
   <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot by slot · budget to full</h2><p>${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Budget</b>" : "<b style='color:#E18C47'>Full</b>"} mode highlights the right row. Prices change fast, so we use ranges.</p></div></div>
   <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
     <div class="hd"><b>${esc(g.slot)}</b><span class="thumbs">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}">`).join("")}</span></div>
-    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
+    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n) || ic((A.baseIcon || {})[x.n]); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
     <div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Budget</span><span>${esc(g.cheap)}</span></div>
     <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Value</span><span>${esc(g.value)}</span></div>
     <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Full</span><span>${esc(g.full)}</span></div>
@@ -1893,12 +1906,13 @@ S.uf = { ph: "todas", cat: "All", tier: "All", sort: "fase" };
 function uniqueCard(u, highlight) {
   const im = uniqImg(u.n); const cur = curPhase();
   const reached = PH_ORDER.indexOf(u.p) <= PH_ORDER.indexOf(cur.id);
+  const owned = typeof own === "function" && own(u.n);
   const tierChip = u.tier === "Cheap" ? "wisp" : u.tier === "Value" ? "gold" : "unique";
   return `<article class="tt unique ucard ${highlight && reached && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""}">
     <div class="th">${esc(u.n)}<small>${esc(u.base || "")} · ${esc(u.slot)}</small></div>
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(u.n)}">` : ""}</div>
       <div class="mods">${(u.mods || []).map(m => `<span>${esc(m)}</span>`).join("") || '<span class="none">Variable mods.</span>'}</div></div>
-    <div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% of zoos</span>` : ""}<span class="chip">lv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
+    ${owned ? `<div class="havebadge">✓ ${T("Marcado em Meu personagem", "Marked in My character")}</div>` : ""}<div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% of zoos</span>` : ""}<span class="chip">lv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
     <div class="txt"><div><b>Why</b>${esc(u.why)}</div>${u.how ? `<div><b>How</b>${esc(u.how)}</div>` : ""}<div><b>Price/versions</b>${esc(u.rf)}</div>${u.alt ? `<div><b>Without it</b>${esc(u.alt)}</div>` : ""}</div>
   </article>`;
 }
@@ -2318,8 +2332,8 @@ function wisps() {
 <script src="../shared/craft.js?v=2083ad36"></script>
 <script src="../shared/weights.js?v=9f9c6d27"></script>
 <script src="../shared/guide.js?v=45aee652"></script>
-<script src="../shared/poe2.js?v=91268601"></script>
-<script src="../shared/build-now.js?v=d44d1d14"></script>
+<script src="../shared/poe2.js?v=8ac58fc1"></script>
+<script src="../shared/build-now.js?v=5a480ac2"></script>
 <script>
 /* ------------------------------------------------ boot */
 $("#league").textContent = D.league + " league · 0.5.5";

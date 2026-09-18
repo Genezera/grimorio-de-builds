@@ -37,12 +37,14 @@
   const BUILDS = {
     silverfist: ['sf', 'Mighty Silverfist', 'Huntress · Spirit Walker'], oracle: ['or', 'Oracle Spell Totem', 'Druid · Oracle'],
     tactician: ['ta', 'Tactician Pin2Win', 'Mercenary · Tactician'], infernalist: ['in', 'Infernalist Comet', 'Witch · Infernalist'],
-    acolyte: ['ac', 'Poisonburst Archon', 'Monk · Acolyte of Chayula'], pathfinder: ['pf', 'Pathfinder Decompose', 'Ranger · Pathfinder'],
+    acolyte: ['ac', 'Tornado Sprinkler', 'Monk · Acolyte of Chayula'], pathfinder: ['pf', 'Pathfinder Decompose', 'Ranger · Pathfinder'],
     smith: ['sk', 'Smith of Kitava', 'Warrior · Smith of Kitava'], martial: ['ma', 'Oil Barrage Teleport', 'Monk · Martial Artist'],
+    shaman: ['sh', 'Tempestade de Mana', 'Druid · Shaman'],
   };
   const PAL = { silverfist: ['#07080a', '#5fe3c1', '#c3a066', '#ecd6a3'], oracle: ['#06060c', '#a58dff', '#b7bfd9', '#eef1fb'], tactician: ['#08080a', '#ff8a3d', '#c9a46a', '#f0dcb0'],
     infernalist: ['#0a0505', '#ff5b1f', '#d9a36b', '#f6d8b0'], acolyte: ['#07050b', '#b35cff', '#c3b2e6', '#efe7ff'], pathfinder: ['#060906', '#7fd957', '#cdbb7c', '#f0e3b4'],
-    smith: ['#09070a', '#ff6a13', '#d08a47', '#f5cf9f'], martial: ['#05070b', '#4cc3ff', '#e0b25c', '#f7deaa'], home: ['#07070a', '#c3a066', '#c3a066', '#ecd6a3'], rites: ['#07050c', '#9b6bff', '#f1b35c', '#ffd894'] };
+    smith: ['#09070a', '#ff6a13', '#d08a47', '#f5cf9f'], martial: ['#05070b', '#4cc3ff', '#e0b25c', '#f7deaa'], shaman: ['#080607', '#2fd9c0', '#d1a75f', '#f6dcab'],
+    home: ['#07070a', '#c3a066', '#c3a066', '#ecd6a3'], rites: ['#07050c', '#9b6bff', '#f1b35c', '#ffd894'] };
   const en = /(^|\/)en\.html$/.test(location.pathname);
   const dir = location.pathname.split('/').filter(Boolean).slice(-2, -1)[0] || '';
   const key = BUILDS[dir] ? dir : dir === 'rites' ? 'rites' : 'home';
