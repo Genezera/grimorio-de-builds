@@ -446,6 +446,8 @@ details.acc div{padding:0 16px 14px;color:var(--mute)}
 .ucard .txt b{font-family:var(--ui);color:var(--gild);font-weight:700;margin-right:4px}
 .ucard.ucur{box-shadow:0 0 0 1px var(--wisp),0 0 22px rgba(127,215,216,.18)}
 .ucard.dim{opacity:.62}
+.ucard.old{opacity:.5}
+.ucard.old .th{text-decoration:line-through;text-decoration-color:var(--faint)}
 .price{font-family:var(--mono);font-size:.82rem}
 .idols td img{width:30px;height:30px;vertical-align:middle;margin-right:8px}
 
@@ -1265,12 +1267,15 @@ function uniqueCard(u, highlight) {
   const im = uniqImg(u.n); const cur = curPhase();
   const reached = PH_ORDER.indexOf(u.p) <= PH_ORDER.indexOf(cur.id);
   const owned = typeof own === "function" && own(u.n);
+  // um item marcado como "tenho" que tem substituto do mesmo slot MAIS NOVO e também marcado deixa de ser "atual"
+  const superseded = typeof own === "function" && Array.isArray(D.uniques) && D.uniques.some(o => o !== u && own(o.n) &&
+    (o.n === u.alt || (o.slot === u.slot && PH_ORDER.indexOf(o.p) > PH_ORDER.indexOf(u.p))));
   const tierChip = u.tier === "Barato" ? "wisp" : u.tier === "Valor" ? "gold" : "unique";
-  return `<article class="tt unique ucard ${highlight && reached && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""}">
+  return `<article class="tt unique ucard ${highlight && reached && !superseded && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""} ${superseded ? "old" : ""}">
     <div class="th">${esc(u.n)}<small>${esc(u.base || "")} · ${esc(u.slot)}</small></div>
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(u.n)}">` : ""}</div>
       <div class="mods">${(u.mods || []).map(m => `<span>${esc(m)}</span>`).join("") || '<span class="none">Mods variáveis.</span>'}</div></div>
-    ${owned ? `<div class="havebadge">✓ ${T("Marcado em Meu personagem", "Marked in My character")}</div>` : ""}<div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% dos zoos</span>` : ""}<span class="chip">nv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
+    ${owned ? `<div class="havebadge">✓ ${T("Marcado em Meu personagem", "Marked in My character")}${superseded ? ` · ${T("substituído", "superseded")}` : ""}</div>` : ""}<div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% dos zoos</span>` : ""}<span class="chip">nv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
     <div class="txt"><div><b>Por quê</b>${esc(u.why)}</div>${u.how ? `<div><b>Como</b>${esc(u.how)}</div>` : ""}<div><b>Preço/versões</b>${esc(u.rf)}</div>${u.alt ? `<div><b>Sem ele</b>${esc(u.alt)}</div>` : ""}</div>
   </article>`;
 }
