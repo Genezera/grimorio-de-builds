@@ -17,9 +17,10 @@ Site: https://genezera.github.io/grimorio-de-builds/
 | `pathfinder/index.html` · `pathfinder/en.html` | Ranger · Pathfinder — poison bow → Corpsewade Decompose (guias do Skadoosh) |
 | `smith/index.html` · `smith/en.html` | Warrior · Smith of Kitava — Shield Wall + Avatar of Fire (guia do Lexd) |
 | `martial/index.html` · `martial/en.html` | Monk · Martial Artist — Oil Barrage + Cast on Critical + Lightning Warp (planner do havoc616, Maxroll + ladder do poe.ninja) |
+| `shaman/index.html` · `shaman/en.html` | Druid · Shaman — Archmage Spark + Comet automatizado por Cast on Critical (os 10 Shamans de maior DPS do poe.ninja) |
 | `rites/index.html` · `rites/en.html` | Liga Forbidden Rites — guia das 8 challenges (checklists, planejador de Omens, progresso salvo) |
 
-O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:`, `oracle1:`, `tactician1:`, `infernalist1:`, `acolyte1:`, `pathfinder1:`, `smith1:`, `martial1:`).
+O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:`, `oracle1:`, `tactician1:`, `infernalist1:`, `acolyte1:`, `pathfinder1:`, `smith1:`, `martial1:`, `shaman1:`).
 The **PT / EN** switch changes language; each build's progress is shared between both versions.
 
 O site é 100% estático (HTML + JS) e também funciona abrindo os arquivos direto no navegador.
@@ -46,7 +47,7 @@ oracle/                       app Oracle (index.html, en.html, assets/assets.js)
 planilha/                     planilha Excel do Silverfist · Silverfist Excel workbook (PT)
 tools/                        scripts do Silverfist + página inicial · Silverfist + landing scripts
 tools/oracle/                 scripts do Oracle · Oracle scripts
-tactician/ infernalist/ acolyte/ pathfinder/ smith/ martial/   apps gerados pelo kit · kit-generated apps
+tactician/ infernalist/ acolyte/ pathfinder/ smith/ martial/ shaman/   apps gerados pelo kit · kit-generated apps
 tools/kit/                    kit genérico de builds (extract/maxroll → kassets → kpatch → kbuild, js/, craftkit)
 tools/builds/<build>/         dados de cada build do kit (bdata.py, bcraft.py) · per-build kit data
 ```

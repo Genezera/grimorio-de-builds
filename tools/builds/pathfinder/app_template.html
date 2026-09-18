@@ -110,7 +110,6 @@ nav.tabs button{border:1px solid transparent;background:transparent;color:var(--
 nav.tabs button:hover{color:var(--gild-hi)}
 nav.tabs button[aria-selected=true]{color:var(--gild-hi);border-color:var(--edge2);background:linear-gradient(180deg,rgba(114,146,202,.16),rgba(114,146,202,.03));box-shadow:inset 0 -2px 0 var(--gild)}
 nav.tabs .count{font-family:var(--mono);font-size:.72rem;color:var(--wisp);margin-left:5px}
-.tabgroup{align-self:center;margin:0 5px 0 12px;color:var(--faint);font:700 .68rem/1 var(--ui);letter-spacing:.09em;text-transform:uppercase}.tabgroup:first-child{margin-left:0}@media(max-width:720px){nav.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabgroup{position:sticky;left:0;background:#08090d;padding:8px 5px;margin-left:8px}nav.tabs button{min-height:42px}}
 
 section.view{display:none;padding-top:24px;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
 section.view.on{display:block}
@@ -446,8 +445,6 @@ details.acc div{padding:0 16px 14px;color:var(--mute)}
 .ucard .txt b{font-family:var(--ui);color:var(--gild);font-weight:700;margin-right:4px}
 .ucard.ucur{box-shadow:0 0 0 1px var(--wisp),0 0 22px rgba(127,215,216,.18)}
 .ucard.dim{opacity:.62}
-.ucard.old{opacity:.5}
-.ucard.old .th{text-decoration:line-through;text-decoration-color:var(--faint)}
 .price{font-family:var(--mono);font-size:.82rem}
 .idols td img{width:30px;height:30px;vertical-align:middle;margin-right:8px}
 
@@ -663,23 +660,6 @@ const S = { lv: store.get("lv", 35), mode: store.get("mode", "cheap"), tab: stor
 S.stage = store.get("stage", "auto");
 function curPhase() { return (S.stage && S.stage !== "auto" && D.phases.find(p => p.id === S.stage)) || phaseOf(S.lv); }
 const phaseOf = lv => D.phases.find(p => lv >= p.lv[0] && lv <= p.lv[1]) || D.phases[D.phases.length - 1];
-/* nível e ato podem não bater (subiu rápido, subiu devagar, voltou para farmar): explica o que muda */
-function stageGap() {
-  const manual = S.stage && S.stage !== "auto"; if (!manual) return "";
-  const p = curPhase(), auto = phaseOf(S.lv);
-  if (p.id === auto.id) return "";
-  const ahead = S.lv < p.lv[0];
-  const gems = (p.gems || []).filter(g => g.since && S.lv < g.since);
-  const falta = Math.max(0, p.lv[0] - S.lv);
-  const txt = ahead
-    ? T(`Você marcou <b>${esc(p.name)}</b> com nível ${S.lv}: está adiantado no jogo e atrasado em nível. Siga o plano desta fase, mas ${gems.length ? `estas skills só abrem mais tarde: ${gems.map(g => `${esc(g.skill)} (nv ${g.since})`).join(", ")}. ` : ""}${falta ? `faltam ${falta} níveis para o plano completo da fase — não gaste currency com o que você ainda não equipa.` : ""}`,
-        `You picked <b>${esc(p.name)}</b> at level ${S.lv}: you are ahead in the campaign and behind in level. Follow this phase's plan, but ${gems.length ? `these skills unlock later: ${gems.map(g => `${esc(g.skill)} (lv ${g.since})`).join(", ")}. ` : ""}${falta ? `you are ${falta} levels short of the full phase plan — don't spend currency on what you can't equip yet.` : ""}`)
-    : T(`Você marcou <b>${esc(p.name)}</b> com nível ${S.lv}: está com nível de sobra para esta fase. Já dá para pegar o setup de <b>${esc(auto.name)}</b> e seguir em frente.`,
-        `You picked <b>${esc(p.name)}</b> at level ${S.lv}: you are over-levelled for this phase. You can already take the <b>${esc(auto.name)}</b> setup and move on.`);
-  return `<div class="adaptbar frame on" style="margin-top:12px"><span>${txt}</span>
-    <button class="btn" type="button" data-stage="auto">${T("Usar meu nível", "Use my level")}</button>
-    ${ahead ? "" : `<button class="btn" type="button" data-stage="${auto.id}">${T(`Ir para ${esc(auto.name)}`, `Go to ${esc(auto.name)}`)}</button>`}</div>`;
-}
 const msList = Object.entries(D.milestones).map(([k, v]) => ({ lv: +k, t: v })).sort((a, b) => a.lv - b.lv);
 const TABS = __TABS__;
 const baseSkill = s => s.replace(/\s*\(.*\)/, "").trim();
@@ -726,8 +706,7 @@ function setMode(m) {
 }
 function buildTabs() {
   const nav = $("#tabs");
-  const groupAt = {}; (D.tabGroups || []).forEach(([label, ids]) => ids.length && (groupAt[ids[0]] = label));
-  nav.innerHTML = TABS.map(([id, l]) => `${groupAt[id] ? `<span class="tabgroup" role="presentation">${esc(groupAt[id])}</span>` : ""}<button role="tab" type="button" data-tab="${id}" aria-selected="${S.tab === id}">${l}${id === "quests" ? '<span class="count" id="qcount"></span>' : ""}</button>`).join("");
+  nav.innerHTML = TABS.map(([id, l]) => `<button role="tab" type="button" data-tab="${id}" aria-selected="${S.tab === id}">${l}${id === "quests" ? '<span class="count" id="qcount"></span>' : ""}</button>`).join("");
   nav.onclick = e => { const b = e.target.closest("button"); if (b) { S.tab = b.dataset.tab; store.set("tab", S.tab); showTab(); } };
 }
 function showTab() {
@@ -917,7 +896,6 @@ function vAgora() {
   return `
   <div class="sechead"><div><div class="label">Nível ${S.lv} · ${S.mode === "cheap" ? "modo barato" : "modo completo"}</div><h2>O que fazer agora</h2></div>
     <span class="chip ${S.mode === "cheap" ? "wisp" : "unique"}">${S.mode === "cheap" ? "Barato: trade com pouco" : "Completo: currency suficiente"}</span></div>
-  ${stageGap()}
   <div class="now stagger">
     <div class="nowcard frame">
       <div class="label">${esc(p.name)} · ${esc(p.tag)}</div>
@@ -1190,7 +1168,7 @@ function vGear() {
   <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot a slot · do barato ao completo</h2><p>O modo ${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Barato</b>" : "<b style='color:#E18C47'>Completo</b>"} acende a linha certa. Preços mudam rápido, então usamos faixas.</p></div></div>
   <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
     <div class="hd"><b>${esc(g.slot)}</b><span class="thumbs">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}">`).join("")}</span></div>
-    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n) || ic((A.baseIcon || {})[x.n]); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
+    ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
     <div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Barato</span><span>${esc(g.cheap)}</span></div>
     <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Valor</span><span>${esc(g.value)}</span></div>
     <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Completo</span><span>${esc(g.full)}</span></div>
@@ -1265,16 +1243,12 @@ S.uf = { ph: "todas", cat: "Todos", tier: "Todas", sort: "fase" };
 function uniqueCard(u, highlight) {
   const im = uniqImg(u.n); const cur = curPhase();
   const reached = PH_ORDER.indexOf(u.p) <= PH_ORDER.indexOf(cur.id);
-  const owned = typeof own === "function" && own(u.n);
-  // um item marcado como "tenho" que tem substituto do mesmo slot MAIS NOVO e também marcado deixa de ser "atual"
-  const superseded = typeof own === "function" && Array.isArray(D.uniques) && D.uniques.some(o => o !== u && own(o.n) &&
-    (o.n === u.alt || (o.slot === u.slot && PH_ORDER.indexOf(o.p) > PH_ORDER.indexOf(u.p))));
   const tierChip = u.tier === "Barato" ? "wisp" : u.tier === "Valor" ? "gold" : "unique";
-  return `<article class="tt unique ucard ${highlight && reached && !superseded && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""} ${superseded ? "old" : ""}">
+  return `<article class="tt unique ucard ${highlight && reached && (S.mode === "full" || u.tier !== "Luxo") ? "ucur" : ""} ${highlight && !reached ? "dim" : ""}">
     <div class="th">${esc(u.n)}<small>${esc(u.base || "")} · ${esc(u.slot)}</small></div>
     <div class="body"><div class="art">${im ? `<img src="${im}" alt="${esc(u.n)}">` : ""}</div>
       <div class="mods">${(u.mods || []).map(m => `<span>${esc(m)}</span>`).join("") || '<span class="none">Mods variáveis.</span>'}</div></div>
-    ${owned ? `<div class="havebadge">✓ ${T("Marcado em Meu personagem", "Marked in My character")}${superseded ? ` · ${T("substituído", "superseded")}` : ""}</div>` : ""}<div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% dos zoos</span>` : ""}<span class="chip">nv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
+    <div class="facts"><span class="chip ${tierChip}">${esc(u.tier)}</span><span class="chip price">${fmtPrice(u.price)}</span>${u.use != null ? `<span class="chip">${u.use}% dos zoos</span>` : ""}<span class="chip">nv ${u.lvl || "—"}</span><span class="chip bear">${esc(phaseName(u.p))}</span></div>
     <div class="txt"><div><b>Por quê</b>${esc(u.why)}</div>${u.how ? `<div><b>Como</b>${esc(u.how)}</div>` : ""}<div><b>Preço/versões</b>${esc(u.rf)}</div>${u.alt ? `<div><b>Sem ele</b>${esc(u.alt)}</div>` : ""}</div>
   </article>`;
 }
@@ -1569,7 +1543,6 @@ document.addEventListener("click", e => { const b = e.target.closest && e.target
 
 /* ------------------------------------------------ events */
 document.addEventListener("change", e => {
-  if (e.target.id === "stageSel") { S.stage = e.target.value; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   if (e.target.id === "ptsIn") { const v = parseInt(e.target.value, 10); if (!isNaN(v)) { S.ptsOv = v; S.ptsOvLv = S.lv; render(); } return; }
   const t = e.target;
   if (t.dataset.key) { S.done[t.dataset.key] = t.checked; store.set("done", S.done); render(); return; }
@@ -1582,7 +1555,6 @@ document.addEventListener("click", e => {
   const t = e.target;
   const gt = t.closest("[data-gotab]"); if (gt) { S.tab = gt.dataset.gotab; store.set("tab", S.tab); showTab(); scrollTo({ top: $("#tabs").offsetTop, behavior: "smooth" }); return; }
   const gn = t.closest("[data-gotree]"); if (gn) { const id = +gn.dataset.gotree; if (S.tab !== "arvore") { S.tab = "arvore"; store.set("tab", S.tab); showTab(); } setTimeout(() => TV && TV.center(id, 0.22), 60); return; }
-  const st = t.closest("[data-stage]"); if (st) { S.stage = st.dataset.stage; store.set("stage", S.stage); S.skillPhase = S.treePhase = S.gearPhase = null; paintStage(); paintRail(); render(); return; }
   const go = t.closest("[data-go]"); if (go) { setLv(+go.dataset.go); return; }
   const lvl = t.closest(".lvl"); if (lvl) { setLv(+lvl.dataset.lv); return; }
   const ph = t.closest("[data-sel] button"); if (ph) { const w = ph.parentElement.dataset.sel; if (w === "tree") S.treePhase = ph.dataset.ph; if (w === "skills") S.skillPhase = ph.dataset.ph; if (w === "gear") S.gearPhase = ph.dataset.ph; render(); return; }
