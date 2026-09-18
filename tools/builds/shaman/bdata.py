@@ -472,6 +472,7 @@ FIXES = [
 ]
 
 UI = dict(
+ setNote=L("rares com mana máxima, ES (que vira mana) e resistências.", "rares with maximum mana, ES (which becomes mana) and resistances."),
  carry=r"^(Spark|Comet|Archmage|Cast on Critical)$", box=L("CHAVE", "KEY"), spiritWhat=L("(Archmage, Cast on Critical e buffs)", "(Archmage, Cast on Critical and buffs)"),
  mechBtn=L("Abrir Mana & Infusões", "Open Mana & Infusions"), dmg2="Comet", dmgBar=L("Spark / Comet (aprox.)", "Spark / Comet (approx.)"),
  dmgLegend=L("Comet (proporção aproximada do dano)", "Comet (approximate share of damage)"),

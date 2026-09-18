@@ -495,6 +495,7 @@ FIXES = [
 ]
 
 UI = dict(
+ setNote=L("rares com Evasão/ES, dano elemental plano e crítico no Talisman.", "rares with Evasion/ES, flat elemental damage and crit on the Talisman."),
  carry=r"^(Oil Barrage|Storm Wave|Glacial Cascade|Cast on Critical)$", box=L("CHAVE", "KEY"), spiritWhat=L("(buffs e Cast on Critical)", "(buffs and Cast on Critical)"),
  mechBtn=L("Abrir Teleporte & Cargas", "Open Teleport & Charges"), dmg2="Lightning Warp", dmgBar=L("Oil Barrage / explosões do Lightning Warp (aprox.)", "Oil Barrage / Lightning Warp explosions (approx.)"),
  dmgLegend=L("Explosões do Lightning Warp (proporção aproximada)", "Lightning Warp explosions (approximate ratio)"),

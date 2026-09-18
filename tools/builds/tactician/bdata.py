@@ -427,6 +427,7 @@ FIXES = [
 ]
 
 UI = dict(
+ setNote=L("rares com dano plano, cooldown e Spirit.", "rares with flat damage, cooldown and Spirit."),
  carry=r"^(Cluster Grenade|Explosive Grenade)$", box=L("GRANADAS", "GRENADES"), spiritWhat=L("(buffs persistentes)", "(persistent buffs)"),
  mechBtn=L("Abrir Pin & Granadas", "Open Pin & Grenades"), dmg2="Mirage Archer", dmgBar=L("Dano seu / do Mirage Archer (aprox.)", "Your damage / Mirage Archer damage (approx.)"),
  dmgLegend=L("dano do Mirage Archer (proporção aproximada)", "Mirage Archer damage (approximate ratio)"),

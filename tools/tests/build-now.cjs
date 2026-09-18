@@ -12,7 +12,7 @@ const openFab=async page=>{await page.evaluate(()=>{const c=document.querySelect
   for(const [width,height] of sizes){
    const context=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'}),page=await context.newPage();
    page.on('pageerror',e=>errors.push(e.message));await page.route(/fonts\.(googleapis|gstatic)\.com/,r=>r.abort());
-   for(const file of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial'].flatMap(b=>[b+'/index.html',b+'/en.html'])){
+   for(const file of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman'].flatMap(b=>[b+'/index.html',b+'/en.html'])){
     await page.goto(base+'/'+file);await page.evaluate(()=>{buildNow.collapsed=false;renderSide();});
     if(width<1440){await openFab(page);assert.equal(await page.locator('#side').getAttribute('aria-modal'),'true');assert.ok(await page.locator('main').evaluate(el=>el.inert));}
     for(const level of [1,35,70,95]){

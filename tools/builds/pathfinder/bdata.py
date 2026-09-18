@@ -438,6 +438,7 @@ FIXES = [
 ]
 
 UI = dict(
+ setNote=L("rares com dano de caos, veneno e defesa.", "rares with chaos damage, poison and defence."),
  carry=r"^(Poisonburst Arrow|Toxic Growth|Decompose)$", box=L("VENENO", "POISON"), spiritWhat=L("(buffs e minions)", "(buffs and minions)"),
  mechBtn=L("Abrir Veneno & Decompose", "Open Poison & Decompose"), dmg2=L("Nuvens do Decompose", "Decompose clouds"), dmgBar=L("Dano seu / das nuvens do Decompose (aprox.)", "Your damage / Decompose clouds (approx.)"),
  dmgLegend=L("nuvens do Decompose (proporção aproximada)", "Decompose clouds (approximate ratio)"),

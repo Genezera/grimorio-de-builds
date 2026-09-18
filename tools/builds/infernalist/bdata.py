@@ -478,6 +478,7 @@ FIXES = [
 ]
 
 UI = dict(
+ setNote=L("rares com dano de spell, crítico e vida/ES.", "rares with spell damage, crit and life/ES."),
  carry=r"^(Spark|Cast on Critical|Cast on Elemental Ailment|Frostbolt)$", box=L("INFUSÕES", "INFUSIONS"), spiritWhat=L("(metas e buffs)", "(metas and buffs)"),
  mechBtn=L("Abrir Infusões & Chama", "Open Infusions & Flame"), dmg2="Comet", dmgBar=L("Dano seu / dos Comets automáticos (aprox.)", "Your damage / automatic Comets (approx.)"),
  dmgLegend=L("Comets disparados (proporção aproximada)", "Triggered Comets (approximate ratio)"),

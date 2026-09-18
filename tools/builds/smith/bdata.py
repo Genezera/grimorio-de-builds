@@ -476,6 +476,7 @@ FIXES = [
 ]
 
 UI = dict(
+ setNote=L("rares com Armour, vida e resistências.", "rares with Armour, life and resistances."),
  carry=r"^(Shield Wall|Mace Strike)$", box=L("ESCUDO", "SHIELD"), spiritWhat=L("(buffs persistentes)", "(persistent buffs)"),
  mechBtn=L("Abrir Escudo & Fogo", "Open Shield & Fire"), dmg2="Herald of Ash", dmgBar=L("Dano seu (aprox.)", "Your damage (approx.)"),
  dmgLegend=L("explosões do Herald of Ash (proporção aproximada)", "Herald of Ash explosions (approximate ratio)"),
