@@ -879,7 +879,7 @@ document.addEventListener("click", e => {
 
 /* ------------------------------------------------ views */
 function vAgora() {
-  const p = curPhase(); const i = D.phases.indexOf(p); const next = D.phases[i + 1];
+  const p = curPhase(); const pa = adaptPhase(p); const i = D.phases.indexOf(p); const next = D.phases[i + 1];
   const last = [...msList].reverse().find(m => m.lv <= S.lv); const nxt = msList.filter(m => m.lv > S.lv).slice(0, 3);
   const chk = (key, html) => `<label class="check ${S.done[key] ? "done" : ""}"><input type="checkbox" data-key="${key}" ${S.done[key] ? "checked" : ""}><span>${html}</span></label>`;
   const exits = p.exit.map((e, k) => chk(`exit:${p.id}:${k}`, esc(e))).join("");
@@ -898,10 +898,10 @@ function vAgora() {
     <span class="chip ${S.mode === "cheap" ? "wisp" : "unique"}">${S.mode === "cheap" ? "Barato: trade com pouco" : "Completo: currency suficiente"}</span></div>
   <div class="now stagger">
     <div class="nowcard frame">
-      <div class="label">${esc(p.name)} · ${esc(p.tag)}</div>
-      <p class="goal">${esc(p.goal)}</p>
-      <div class="split"><div class="bar"><i class="p" style="width:${p.dmgSplit[0]}%"></i><i class="z" style="width:${p.dmgSplit[1]}%"></i></div>
-        <div class="legend"><span>Dano seu ≈ ${p.dmgSplit[0]}%</span><span>Carry: <b style="color:var(--text)">${esc(p.carry)}</b></span><span>${esc(D.ui.dmg2)} ≈ ${p.dmgSplit[1]}%</span></div></div>
+      <div class="label">${esc(pa.name)} · ${esc(pa.tag)}</div>
+      <p class="goal">${esc(pa.goal)}</p>
+      <div class="split"><div class="bar"><i class="p" style="width:${pa.dmgSplit[0]}%"></i><i class="z" style="width:${pa.dmgSplit[1]}%"></i></div>
+        <div class="legend"><span>Dano seu ≈ ${pa.dmgSplit[0]}%</span><span>Carry: <b style="color:var(--text)">${esc(pa.carry)}</b></span><span>${esc(D.ui.dmg2)} ≈ ${pa.dmgSplit[1]}%</span></div></div>
       <div class="divider"></div>
       <div class="ms">${last ? `<span class="n">Nv ${last.lv}</span><span><b>Último marco:</b> ${esc(last.t)}</span>` : ""}${nxt.map(m => `<span class="n next">Nv ${m.lv}</span><span>${esc(m.t)}</span>`).join("")}</div>
     </div>
@@ -1399,7 +1399,8 @@ document.addEventListener("input", e => { const t = e.target; if (t.dataset && t
 /* ------------------------------------------------ adaptar ao meu personagem (kit) */
 S.adapt = store.get("adapt", true);
 const clone = o => JSON.parse(JSON.stringify(o));
-const setItemsRaw = pid => (A.sets[pid] ? A.sets[pid][S.mode] : A.guide[pid]) || [];
+const setsRedirect = pid => { const s = (D.adaptSwaps || []).find(x => x.setsFrom && (x.pid ? x.pid === pid : x.pids ? x.pids.includes(pid) : true) && ruleOk(x.when)); return s && adaptOn() ? s.setsFrom : pid; };
+const setItemsRaw = pid => { const src = setsRedirect(pid); return (A.sets[src] ? A.sets[src][S.mode] : A.guide[src]) || []; };
 const phaseById = id => D.phases.find(x => x.id === id);
 const canUse = n => { const u = D.uniques.find(x => x.n === n); return !u || !u.lvl || u.lvl <= S.lv; };
 const hasUse = n => own(n) && canUse(n);
@@ -1421,6 +1422,9 @@ function adaptPhase(p) {
   const q = clone(p); q._adapted = true;
   for (const s of swapsFor(p.id)) {
     if (s.gemsFrom) { const src = clone(phaseById(s.gemsFrom)); q.gems = src.gems; q.skeletons = src.skeletons; q.spiritNote = src.spiritNote; }
+    /* copyFields: {from: "<fase>", fields: [...]} troca também os textos da fase (goal, rotação, metas) */
+    if (s.copyFields) { const src = clone(phaseById(s.copyFields.from)); for (const k of s.copyFields.fields) if (src[k] !== undefined) q[k] = src[k]; }
+    if (s.fields) Object.assign(q, clone(s.fields));
     if (s.dropGems) q.gems = q.gems.filter(g => !s.dropGems.includes(g.skill));
     if (s.addGems) for (const ag of s.addGems) if (!q.gems.some(g => g.skill === ag.skill)) q.gems.push(clone(ag));
   }

@@ -1,7 +1,8 @@
 /* ------------------------------------------------ adaptar ao meu personagem (kit) */
 S.adapt = store.get("adapt", true);
 const clone = o => JSON.parse(JSON.stringify(o));
-const setItemsRaw = pid => (A.sets[pid] ? A.sets[pid][S.mode] : A.guide[pid]) || [];
+const setsRedirect = pid => { const s = (D.adaptSwaps || []).find(x => x.setsFrom && (x.pid ? x.pid === pid : x.pids ? x.pids.includes(pid) : true) && ruleOk(x.when)); return s && adaptOn() ? s.setsFrom : pid; };
+const setItemsRaw = pid => { const src = setsRedirect(pid); return (A.sets[src] ? A.sets[src][S.mode] : A.guide[src]) || []; };
 const phaseById = id => D.phases.find(x => x.id === id);
 const canUse = n => { const u = D.uniques.find(x => x.n === n); return !u || !u.lvl || u.lvl <= S.lv; };
 const hasUse = n => own(n) && canUse(n);
@@ -23,6 +24,9 @@ function adaptPhase(p) {
   const q = clone(p); q._adapted = true;
   for (const s of swapsFor(p.id)) {
     if (s.gemsFrom) { const src = clone(phaseById(s.gemsFrom)); q.gems = src.gems; q.skeletons = src.skeletons; q.spiritNote = src.spiritNote; }
+    /* copyFields: {from: "<fase>", fields: [...]} troca também os textos da fase (goal, rotação, metas) */
+    if (s.copyFields) { const src = clone(phaseById(s.copyFields.from)); for (const k of s.copyFields.fields) if (src[k] !== undefined) q[k] = src[k]; }
+    if (s.fields) Object.assign(q, clone(s.fields));
     if (s.dropGems) q.gems = q.gems.filter(g => !s.dropGems.includes(g.skill));
     if (s.addGems) for (const ag of s.addGems) if (!q.gems.some(g => g.skill === ag.skill)) q.gems.push(clone(ag));
   }

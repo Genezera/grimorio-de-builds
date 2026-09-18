@@ -68,7 +68,7 @@ rep('${T("(companions estimados)", "(estimated companions)")}', '${T("(totems + 
 rep('<button class="btn" type="button" data-gotab="zoo">Abrir planner de Spirit</button>', '<button class="btn" type="button" data-gotab="totem">${T("Abrir Totems & Mana", "Open Totems & Mana")}</button>')
 
 # ------------------------------------------------------------------ views
-rep("<span>Zoo ≈ ${p.dmgSplit[1]}%</span>", "<span>${T(\"Totems\", \"Totems\")} ≈ ${p.dmgSplit[1]}%</span>")
+rep("<span>Zoo ≈ ${pa.dmgSplit[1]}%</span>", "<span>${T(\"Totems\", \"Totems\")} ≈ ${pa.dmgSplit[1]}%</span>")
 rep('${A.sets[p.id] ? "Set principal desta fase" : "Set de leveling (spear)"}', '${T("Set principal desta fase", "Main set this phase")}')
 line("const OPT_PHASE = {", "const OPT_PHASE = {};")
 line("const TREE_ORDER = [", 'const TREE_ORDER = ["a1", "a2", "a3", "a4", "sw", "int", "ea", "w1", "fin", "uber"];')

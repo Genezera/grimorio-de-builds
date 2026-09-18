@@ -65,7 +65,7 @@ rep('${T("(totems + persistentes)", "(totems + persistent)")}', '${esc(D.ui.spir
 rep('<button class="btn" type="button" data-gotab="totem">${T("Abrir Totems & Mana", "Open Totems & Mana")}</button>', '<button class="btn" type="button" data-gotab="mech">${esc(D.ui.mechBtn)}</button>')
 
 # ------------------------------------------------------------------ views
-rep('<span>${T("Totems", "Totems")} ≈ ${p.dmgSplit[1]}%</span>', '<span>${esc(D.ui.dmg2)} ≈ ${p.dmgSplit[1]}%</span>')
+rep('<span>${T("Totems", "Totems")} ≈ ${pa.dmgSplit[1]}%</span>', '<span>${esc(D.ui.dmg2)} ≈ ${pa.dmgSplit[1]}%</span>')
 line('Árvore real do patch 0.5.5 com o caminho do guia do Lowepe em cada fase.',
      '''  return `<div class="sechead"><div><h2>${T("Árvore de Passivas", "Passive Tree")}</h2><p>${esc(D.ui.treeIntro)} <b style="color:#8DA9D8">${T("Principal", "Main")}</b> · <b style="color:var(--set1)">Weapon Set I = ${esc(D.ui.set1)}</b> · <b style="color:var(--set2)">Weapon Set II = ${esc(D.ui.set2)}</b>. ${T("Contorno verde-claro = nó novo nesta fase.", "Light-green outline = new node this phase.")}</p></div></div>''')
 rep('${T("Ascendência Oracle", "Oracle Ascendancy")}', '${T("Ascendência", "Ascendancy")} ${esc(D.ui.asc)}')
