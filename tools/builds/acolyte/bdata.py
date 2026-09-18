@@ -39,7 +39,7 @@ PHASE_ACT = {"a1": 1, "a2": 2, "a3": 3, "a4": 4, "maps": 6, "archon": 6, "max": 
 ITEM_NOTE = {}
 EXTRA_ICONS = {"Contagion": "Art/2DItems/Gems/New/WitchContagionSkillGem.dds"}
 BOW_RUNE = L("Countess Seske's Rune of Archery (+flecha) + Idol of Thruldana (+1 veneno)", "Countess Seske's Rune of Archery (+arrow) + Idol of Thruldana (+1 poison)")
-MACE_RUNE = L("Perfect Soul Core of Strength", "Perfect Soul Core of Strength")
+MACE_RUNE = L("Perfect Robust Rune", "Perfect Robust Rune")
 
 def socket_hint(slot, name):
     if "Bow" in name or name == "Splinterheart": return [BOW_RUNE]

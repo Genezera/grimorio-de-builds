@@ -11325,8 +11325,8 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength",
-      "Perfect Soul Core of Strength"
+      "Perfect Robust Rune",
+      "Perfect Robust Rune"
      ],
      "skill": null
     },
@@ -11393,8 +11393,8 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Lightning",
-      "Greater Soul Core of Cold"
+      "Greater Storm Rune",
+      "Greater Glacial Rune"
      ],
      "skill": null
     },
@@ -11411,7 +11411,7 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength x4"
+      "Perfect Robust Rune x4"
      ],
      "skill": null
     },
@@ -11421,9 +11421,7 @@
      "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
      "mods": [],
      "stats": [],
-     "runes": [
-      "Rune of the Ancients"
-     ],
+     "runes": [],
      "skill": null
     },
     "boots": {
@@ -11440,8 +11438,8 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength",
-      "Perfect Soul Core of Fire"
+      "Perfect Robust Rune",
+      "Perfect Desert Rune"
      ],
      "skill": null
     },
@@ -11877,7 +11875,7 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Strength"
+      "Greater Robust Rune"
      ],
      "skill": null
     },
@@ -11894,7 +11892,7 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Lightning"
+      "Greater Storm Rune"
      ],
      "skill": null
     },
@@ -11911,8 +11909,8 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Cold",
-      "Greater Soul Core of Lightning"
+      "Greater Glacial Rune",
+      "Greater Storm Rune"
      ],
      "skill": null
     },
@@ -11923,7 +11921,7 @@
      "mods": [],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Fire"
+      "Greater Desert Rune"
      ],
      "skill": null
     },
@@ -11941,7 +11939,7 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Fire"
+      "Greater Desert Rune"
      ],
      "skill": null
     },
@@ -12370,7 +12368,7 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Strength"
+      "Greater Robust Rune"
      ],
      "skill": null
     },
@@ -12387,7 +12385,7 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Lightning"
+      "Greater Storm Rune"
      ],
      "skill": null
     },
@@ -12404,8 +12402,8 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Cold",
-      "Greater Soul Core of Lightning"
+      "Greater Glacial Rune",
+      "Greater Storm Rune"
      ],
      "skill": null
     },
@@ -12416,7 +12414,7 @@
      "mods": [],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Fire"
+      "Greater Desert Rune"
      ],
      "skill": null
     },
@@ -12434,7 +12432,7 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Fire"
+      "Greater Desert Rune"
      ],
      "skill": null
     },
@@ -12771,8 +12769,8 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength",
-      "Perfect Soul Core of Strength"
+      "Perfect Robust Rune",
+      "Perfect Robust Rune"
      ],
      "skill": null
     },
@@ -12839,8 +12837,8 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Lightning",
-      "Greater Soul Core of Cold"
+      "Greater Storm Rune",
+      "Greater Glacial Rune"
      ],
      "skill": null
     },
@@ -12857,7 +12855,7 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength x4"
+      "Perfect Robust Rune x4"
      ],
      "skill": null
     },
@@ -12867,9 +12865,7 @@
      "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
      "mods": [],
      "stats": [],
-     "runes": [
-      "Rune of the Ancients"
-     ],
+     "runes": [],
      "skill": null
     },
     "boots": {
@@ -12886,8 +12882,8 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength",
-      "Perfect Soul Core of Fire"
+      "Perfect Robust Rune",
+      "Perfect Desert Rune"
      ],
      "skill": null
     },
@@ -13292,8 +13288,8 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength",
-      "Perfect Soul Core of Strength"
+      "Perfect Robust Rune",
+      "Perfect Robust Rune"
      ],
      "skill": null
     },
@@ -13360,8 +13356,8 @@
      ],
      "stats": [],
      "runes": [
-      "Greater Soul Core of Lightning",
-      "Greater Soul Core of Cold"
+      "Greater Storm Rune",
+      "Greater Glacial Rune"
      ],
      "skill": null
     },
@@ -13378,7 +13374,7 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength x4"
+      "Perfect Robust Rune x4"
      ],
      "skill": null
     },
@@ -13388,9 +13384,7 @@
      "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.dds",
      "mods": [],
      "stats": [],
-     "runes": [
-      "Rune of the Ancients"
-     ],
+     "runes": [],
      "skill": null
     },
     "boots": {
@@ -13407,8 +13401,8 @@
      ],
      "stats": [],
      "runes": [
-      "Perfect Soul Core of Strength",
-      "Perfect Soul Core of Fire"
+      "Perfect Robust Rune",
+      "Perfect Desert Rune"
      ],
      "skill": null
     },
