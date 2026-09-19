@@ -2,7 +2,7 @@
 """Gera a arte de uma build em shared/art/: <p>-asc (medalhão 720), <p>-asc-bg (fundo desfocado 960), <p>-asc-sm (240) e as três da classe.
 
 A ilustração da ascendência vem do poe2db (Art/2DArt/BaseClassIllustrations/<Nome>Ascendancy.webp); a da classe pode ser copiada de outra build da mesma classe.
-Uso: python mkart.py <prefixo> <ilustracao-da-ascendencia> [<prefixo-da-classe-a-copiar>]"""
+Uso: python mkart.py <prefixo> <ilustracao-da-ascendencia> [<prefixo-da-classe-a-copiar> [cool]]"""
 import os, shutil, sys
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
@@ -52,6 +52,9 @@ def backdrop(src, size):
 def main():
     p, fonte = sys.argv[1], sys.argv[2]
     src = Image.open(fonte)
+    if len(sys.argv) > 4 and sys.argv[4] == "cool":              # variação de cor da mesma ilustração (gelo)
+        r, g, bl = src.convert("RGB").split()
+        src = Image.merge("RGB", (r.point(lambda v: int(v * .72)), g.point(lambda v: int(v * .96)), bl.point(lambda v: min(255, int(v * 1.14)))))
     medallion(src, 720).save(os.path.join(ART, f"{p}-asc.webp"), "WEBP", quality=88, method=6)
     backdrop(src, 960).save(os.path.join(ART, f"{p}-asc-bg.webp"), "WEBP", quality=80, method=6)
     medallion(src, 240).save(os.path.join(ART, f"{p}-asc-sm.webp"), "WEBP", quality=88, method=6)

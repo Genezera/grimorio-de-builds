@@ -127,6 +127,18 @@ html[data-build="legionnaire"]{
   --scene-tint:rgba(24,20,6,.5);
 }
 
+html[data-build="whirling"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#05080c; --ground2:#090d13; --stone:#0e141b; --stone2:#141c25; --stone3:#1c2530;
+  --edge:#25313d; --edge2:#3f5568;
+  --gild:#9fb6c9; --gild-hi:#e3f4ff; --gild-lo:#4b6070; --gild-g:rgba(159,182,201,.13);
+  --accent:#6fd6ff; --accent-hi:#c4efff; --accent-g:rgba(111,214,255,.16);
+  --accent2:#c6a3ff; --accent2-hi:#e4d3ff; --accent2-g:rgba(198,163,255,.16);
+  --wisp:#a8e6ff; --wisp-g:rgba(168,230,255,.14);
+  --text:#e6eef5; --mute:#a3b1bf; --faint:#6a7887;
+  --scene-tint:rgba(6,18,30,.52);
+}
+
 /* ---------- base */
 html[data-build]{scroll-padding-top:190px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html[data-build] body{font-family:var(--body);font-size:clamp(15.5px,.36vw + 14px,18px);line-height:1.62;color:var(--text);background:var(--ground);overflow-x:hidden}

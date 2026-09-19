@@ -82,6 +82,7 @@ h1 em{font-style:normal;display:inline-block;font-size:.62em;font-weight:700;bac
 .build.pf{--acc:#8fd14f;--acc2:#d3e36a;--metal:#9fb58a;--metal-hi:#e4f1d6;--surface:rgba(11,18,11,.86);border-color:#35492f}
 .build.sk{--acc:#ff9f43;--acc2:#e2465f;--metal:#c4a27a;--metal-hi:#f3e0c8;--surface:rgba(22,14,10,.86);border-color:#54402d}
 .build.lg{--acc:#ffd23f;--acc2:#4db8ff;--metal:#b9a27a;--metal-hi:#f1e2bd;--surface:rgba(14,14,12,.86);border-color:#4f4a3a}
+.build.gw{--acc:#6fd6ff;--acc2:#c6a3ff;--metal:#9fb6c9;--metal-hi:#e3f4ff;--surface:rgba(8,13,20,.86);border-color:#2f4658}
 .build.ma{--acc:#4cc3ff;--acc2:#ffa62b;--metal:#8fb3cf;--metal-hi:#e2f1fb;--surface:rgba(8,14,22,.86);border-color:#2f4a66}
 .build::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;background:
   linear-gradient(var(--metal),var(--metal)) left 8px top 8px/22px 1px no-repeat,linear-gradient(var(--metal),var(--metal)) left 8px top 8px/1px 22px no-repeat,

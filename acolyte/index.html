@@ -6,7 +6,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
 <script>document.documentElement.dataset.build='acolyte'</script>
 <meta name="theme-color" content="#07050b">
-<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=2db4457e"></script>
+<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=810e4049"></script>
 <title>Sonho de Chayula</title>
 <meta name="description" content="Guia interativo Acolyte of Chayula: veneno na campanha, maça dupla e tornados no endgame (Monk) — PoE 2 Forbidden Rites">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -737,6 +737,18 @@ html[data-build="legionnaire"]{
   --scene-tint:rgba(24,20,6,.5);
 }
 
+html[data-build="whirling"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#05080c; --ground2:#090d13; --stone:#0e141b; --stone2:#141c25; --stone3:#1c2530;
+  --edge:#25313d; --edge2:#3f5568;
+  --gild:#9fb6c9; --gild-hi:#e3f4ff; --gild-lo:#4b6070; --gild-g:rgba(159,182,201,.13);
+  --accent:#6fd6ff; --accent-hi:#c4efff; --accent-g:rgba(111,214,255,.16);
+  --accent2:#c6a3ff; --accent2-hi:#e4d3ff; --accent2-g:rgba(198,163,255,.16);
+  --wisp:#a8e6ff; --wisp-g:rgba(168,230,255,.14);
+  --text:#e6eef5; --mute:#a3b1bf; --faint:#6a7887;
+  --scene-tint:rgba(6,18,30,.52);
+}
+
 /* ---------- base */
 html[data-build]{scroll-padding-top:190px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html[data-build] body{font-family:var(--body);font-size:clamp(15.5px,.36vw + 14px,18px);line-height:1.62;color:var(--text);background:var(--ground);overflow-x:hidden}
@@ -1346,6 +1358,11 @@ html[data-build] .sb-fab.sb-fab-away,.sb-fab.sb-fab-away{opacity:0;transform:tra
 /* estrelas */
 .skfx.fx-stars i{left:calc(var(--x)*1%);top:calc(var(--y)*1%);width:3px;height:3px;border-radius:50%;background:var(--accent-hi);box-shadow:0 0 6px var(--accent);animation:skTwinkle 3.4s ease-in-out infinite;animation-delay:var(--d)}
 
+
+
+/* gelo */
+@keyframes skSnow{0%{transform:translate(0,-6px) rotate(0deg);opacity:0}15%{opacity:.95}100%{transform:translate(var(--dx,10px),58px) rotate(200deg);opacity:0}}
+.skfx.fx-frost i{left:calc(var(--x)*1%);top:2%;width:5px;height:5px;background:var(--accent-hi);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);filter:drop-shadow(0 0 4px var(--accent));animation:skSnow 4.6s ease-in infinite;animation-delay:var(--d)}
 
 /* variante da página inicial: centrada no medalhão do cartão */
 .build-art{position:relative}
@@ -2401,9 +2418,9 @@ function wisps() {
 <script src="../shared/craft.js?v=2083ad36"></script>
 <script src="../shared/weights.js?v=9f9c6d27"></script>
 <script src="../shared/guide.js?v=45aee652"></script>
-<script src="../shared/poe2.js?v=594e019b"></script>
+<script src="../shared/poe2.js?v=494adf4a"></script>
 <script src="../shared/build-now.js?v=5a480ac2"></script>
-<script src="../shared/fx.js?v=ce99e5cd"></script>
+<script src="../shared/fx.js?v=b43c884b"></script>
 <script src="../shared/skin.js?v=42045f49"></script>
 <script>
 /* ------------------------------------------------ boot */
