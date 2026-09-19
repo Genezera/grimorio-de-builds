@@ -1,0 +1,31 @@
+{
+ "date": "2026-09-19 13:09",
+ "passed": true,
+ "steps": [
+  {
+   "step": "registro e rankings (registry)",
+   "ok": true,
+   "must": false
+  },
+  {
+   "step": "candidatas a novas builds (discover)",
+   "ok": true,
+   "must": false
+  },
+  {
+   "step": "auditoria de coerência (audit)",
+   "ok": true,
+   "must": true
+  },
+  {
+   "step": "testes unitários",
+   "ok": true,
+   "must": true
+  }
+ ],
+ "audit": {
+  "errors": 0,
+  "warnings": 14,
+  "info": 82
+ }
+}

@@ -1,0 +1,56 @@
+name: Atualização automática das builds
+
+# Toda segunda às 06:00 UTC (e sob demanda): coleta o poe.ninja, reclassifica, procura candidatas, reconstrói, audita e só então publica.
+# O commit só acontece se a auditoria e os testes passarem; se falharem, abre/atualiza uma issue com o relatório.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-builds
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Dependências
+        run: pip install pillow
+      - name: Ciclo de atualização
+        id: cycle
+        run: python -X utf8 tools/update_all.py
+        continue-on-error: true
+      - name: Publicar (só se aprovado)
+        if: steps.cycle.outcome == 'success'
+        run: |
+          git config user.name "grimorio-bot"
+          git config user.email "grimorio-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "nada mudou"; else
+            git commit -m "Atualização automática: poe.ninja, rankings, candidatas e auditoria ($(date -u +%F))"
+            git push
+          fi
+      - name: Abrir/atualizar issue com o relatório
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PASSED: ${{ steps.cycle.outcome }}
+        run: |
+          {
+            echo "Ciclo automático de $(date -u +%F): **$PASSED**"; echo
+            echo "### Candidatas a novas builds (fora do meta, fortes, sem guia)"; echo; sed -n '5,20p' docs/candidates.md; echo
+            echo "### Auditoria"; echo; head -40 docs/audit.md
+          } > body.md
+          n=$(gh issue list --label automacao --state open --json number --jq '.[0].number')
+          if [ -n "$n" ]; then gh issue edit "$n" --body-file body.md; else gh issue create --title "Automação: candidatas e auditoria" --label automacao --body-file body.md || gh issue create --title "Automação: candidatas e auditoria" --body-file body.md; fi

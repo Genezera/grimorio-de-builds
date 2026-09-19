@@ -1,0 +1,3083 @@
+{
+ "league": "Forbidden Rites",
+ "overview": "forbidden-rites",
+ "snapshot": "1444-20260919-21150",
+ "fetched": "2026-09-19",
+ "characters": 124085,
+ "passiveTree": "PassiveTree-0.5",
+ "ascendancies": {
+  "Gemling Legionnaire": {
+   "n": 46020,
+   "share": 37.09,
+   "top": {
+    "n": 100,
+    "dps": 447000.0,
+    "ehp": 40000.0
+   },
+   "skills": [
+    {
+     "skill": "Oil Grenade",
+     "n": 17179,
+     "share": 37.3,
+     "top": 99,
+     "dps": 200.0,
+     "dpsP75": 400.0,
+     "ehp": 43000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Flameblast",
+     "n": 15705,
+     "share": 34.1,
+     "top": 100,
+     "dps": 228000.0,
+     "dpsP75": 379000.0,
+     "ehp": 45000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Whirling Slash",
+     "n": 14365,
+     "share": 31.2,
+     "top": 100,
+     "dps": 18000.0,
+     "dpsP75": 37000.0,
+     "ehp": 50000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 13312,
+     "share": 28.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Barrage",
+     "n": 13224,
+     "share": 28.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Tornado",
+     "n": 13134,
+     "share": 28.5,
+     "top": 99,
+     "dps": 1100.0,
+     "dpsP75": 1600.0,
+     "ehp": 45000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Frost Bomb",
+     "n": 12814,
+     "share": 27.8,
+     "top": 100,
+     "dps": 3800.0,
+     "dpsP75": 6300.0,
+     "ehp": 32000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Twister",
+     "n": 12742,
+     "share": 27.7,
+     "top": 100,
+     "dps": 533000.0,
+     "dpsP75": 1200000.0,
+     "ehp": 52000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Crossbow Shot",
+     "n": 8881,
+     "share": 19.3,
+     "top": 100,
+     "dps": 700.0,
+     "dpsP75": 1400.0,
+     "ehp": 37000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 8423,
+     "share": 18.3,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 39000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Arc",
+     "n": 6464,
+     "share": 14.0,
+     "top": 100,
+     "dps": 1400000.0,
+     "dpsP75": 2500000.0,
+     "ehp": 13000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 6135,
+     "share": 13.3,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 48000.0,
+     "lv": 99
+    },
+    {
+     "skill": "Falling Thunder",
+     "n": 921,
+     "share": 2.0,
+     "top": 99,
+     "dps": 383000.0,
+     "dpsP75": 671000.0,
+     "ehp": 34000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Glacial Bolt",
+     "n": 1129,
+     "share": 2.5,
+     "top": 97,
+     "dps": 78000.0,
+     "dpsP75": 169000.0,
+     "ehp": 26000.0,
+     "lv": 97
+    }
+   ]
+  },
+  "Martial Artist": {
+   "n": 11679,
+   "share": 9.41,
+   "top": {
+    "n": 100,
+    "dps": 57000.0,
+    "ehp": 82000.0
+   },
+   "skills": [
+    {
+     "skill": "Hollow Focus",
+     "n": 8252,
+     "share": 70.7,
+     "top": 100,
+     "dps": 200.0,
+     "dpsP75": 300.0,
+     "ehp": 76000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Hollow Form",
+     "n": 6949,
+     "share": 59.5,
+     "top": 100,
+     "dps": 700.0,
+     "dpsP75": 1600.0,
+     "ehp": 82000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Rend",
+     "n": 6305,
+     "share": 54.0,
+     "top": 100,
+     "dps": 9100.0,
+     "dpsP75": 19000.0,
+     "ehp": 77000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Pounce",
+     "n": 5005,
+     "share": 42.9,
+     "top": 100,
+     "dps": 600.0,
+     "dpsP75": 1100.0,
+     "ehp": 71000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Devour",
+     "n": 3611,
+     "share": 30.9,
+     "top": 100,
+     "dps": 7000.0,
+     "dpsP75": 13000.0,
+     "ehp": 78000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Charged Staff",
+     "n": 3465,
+     "share": 29.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Tempest Bell",
+     "n": 2865,
+     "share": 24.5,
+     "top": 99,
+     "dps": 37000.0,
+     "dpsP75": 58000.0,
+     "ehp": 57000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Killing Palm",
+     "n": 2553,
+     "share": 21.9,
+     "top": 98,
+     "dps": 54000.0,
+     "dpsP75": 98000.0,
+     "ehp": 85000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 2538,
+     "share": 21.7,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 81000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Shattering Palm",
+     "n": 2490,
+     "share": 21.3,
+     "top": 99,
+     "dps": 47000.0,
+     "dpsP75": 136000.0,
+     "ehp": 90000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 2429,
+     "share": 20.8,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 78000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Falling Thunder",
+     "n": 2339,
+     "share": 20.0,
+     "top": 98,
+     "dps": 385000.0,
+     "dpsP75": 746000.0,
+     "ehp": 80000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Storm Wave",
+     "n": 227,
+     "share": 1.9,
+     "top": 100,
+     "dps": 63000.0,
+     "dpsP75": 109000.0,
+     "ehp": 31000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Lightning Warp",
+     "n": 28,
+     "share": 0.2,
+     "top": 28,
+     "dps": 600.0,
+     "dpsP75": 1200.0,
+     "ehp": 30000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Barrage",
+     "n": 210,
+     "share": 1.8,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Disciple of Varashta": {
+   "n": 11212,
+   "share": 9.04,
+   "top": {
+    "n": 100,
+    "dps": 209000.0,
+    "ehp": 38000.0
+   },
+   "skills": [
+    {
+     "skill": "Kelari's Brutality",
+     "n": 10384,
+     "share": 92.6,
+     "top": 100,
+     "dps": 39000.0,
+     "dpsP75": 65000.0,
+     "ehp": 38000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Kelari, the Tainted Sands",
+     "n": 10384,
+     "share": 92.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Kelari's Deception",
+     "n": 10279,
+     "share": 91.7,
+     "top": 100,
+     "dps": 136000.0,
+     "dpsP75": 229000.0,
+     "ehp": 38000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Navira's Embrace",
+     "n": 6920,
+     "share": 61.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Navira, the Last Mirage",
+     "n": 6920,
+     "share": 61.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Wolf Pack",
+     "n": 6761,
+     "share": 60.3,
+     "top": 100,
+     "dps": 3800.0,
+     "dpsP75": 6500.0,
+     "ehp": 40000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Navira's Fracturing",
+     "n": 6208,
+     "share": 55.4,
+     "top": 100,
+     "dps": 291000.0,
+     "dpsP75": 502000.0,
+     "ehp": 37000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Ruzhan's Brand",
+     "n": 4111,
+     "share": 36.7,
+     "top": 100,
+     "dps": 38000.0,
+     "dpsP75": 62000.0,
+     "ehp": 39000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Ruzhan, the Blazing Sword",
+     "n": 4111,
+     "share": 36.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Ice Nova",
+     "n": 3794,
+     "share": 33.8,
+     "top": 100,
+     "dps": 200.0,
+     "dpsP75": 200.0,
+     "ehp": 37000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Powered by Verisium",
+     "n": 3522,
+     "share": 31.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Ruzhan's Trap",
+     "n": 3155,
+     "share": 28.1,
+     "top": 100,
+     "dps": 2500.0,
+     "dpsP75": 4000.0,
+     "ehp": 42000.0,
+     "lv": 97
+    }
+   ]
+  },
+  "Spirit Walker": {
+   "n": 10297,
+   "share": 8.3,
+   "top": {
+    "n": 100,
+    "dps": 319000.0,
+    "ehp": 41000.0
+   },
+   "skills": [
+    {
+     "skill": "Wild Protector",
+     "n": 9778,
+     "share": 95.0,
+     "top": 100,
+     "dps": 65000.0,
+     "dpsP75": 179000.0,
+     "ehp": 45000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Azmerian Wolf",
+     "n": 6101,
+     "share": 59.3,
+     "top": 100,
+     "dps": 152000.0,
+     "dpsP75": 203000.0,
+     "ehp": 97000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Wolf Pack",
+     "n": 5722,
+     "share": 55.6,
+     "top": 100,
+     "dps": 17000.0,
+     "dpsP75": 27000.0,
+     "ehp": 97000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Companion: Zekoa, the Headcrusher",
+     "n": 5367,
+     "share": 52.1,
+     "top": 100,
+     "dps": 506000.0,
+     "dpsP75": 874000.0,
+     "ehp": 88000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Sniper's Mark",
+     "n": 3052,
+     "share": 29.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Companion: Diretusk Boar",
+     "n": 2827,
+     "share": 27.5,
+     "top": 100,
+     "dps": 131000.0,
+     "dpsP75": 206000.0,
+     "ehp": 78000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Twister",
+     "n": 2677,
+     "share": 26.0,
+     "top": 99,
+     "dps": 255000.0,
+     "dpsP75": 462000.0,
+     "ehp": 28000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Whirling Slash",
+     "n": 2654,
+     "share": 25.8,
+     "top": 99,
+     "dps": 11000.0,
+     "dpsP75": 18000.0,
+     "ehp": 28000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Barrage",
+     "n": 2541,
+     "share": 24.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Vivid Stampede",
+     "n": 2382,
+     "share": 23.1,
+     "top": 100,
+     "dps": 300.0,
+     "dpsP75": 900.0,
+     "ehp": 28000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Companion: Plague Harvester",
+     "n": 1853,
+     "share": 18.0,
+     "top": 100,
+     "dps": 95000.0,
+     "dpsP75": 145000.0,
+     "ehp": 77000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Pain Offering",
+     "n": 1835,
+     "share": 17.8,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Oracle": {
+   "n": 9010,
+   "share": 7.26,
+   "top": {
+    "n": 100,
+    "dps": 123000.0,
+    "ehp": 20000.0
+   },
+   "skills": [
+    {
+     "skill": "Entangle",
+     "n": 7200,
+     "share": 79.9,
+     "top": 100,
+     "dps": 2700.0,
+     "dpsP75": 14000.0,
+     "ehp": 20000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Grim Pillars",
+     "n": 5865,
+     "share": 65.1,
+     "top": 100,
+     "dps": 88000.0,
+     "dpsP75": 252000.0,
+     "ehp": 20000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Mana Tempest",
+     "n": 4019,
+     "share": 44.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 3596,
+     "share": 39.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "n": 3345,
+     "share": 37.1,
+     "top": 100,
+     "dps": 11000.0,
+     "dpsP75": 23000.0,
+     "ehp": 17000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Thrashing Vines",
+     "n": 1503,
+     "share": 16.7,
+     "top": 100,
+     "dps": 191000.0,
+     "dpsP75": 348000.0,
+     "ehp": 16000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Thunderstorm",
+     "n": 1299,
+     "share": 14.4,
+     "top": 100,
+     "dps": 10000.0,
+     "dpsP75": 19000.0,
+     "ehp": 16000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 1174,
+     "share": 13.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Spark",
+     "n": 870,
+     "share": 9.7,
+     "top": 99,
+     "dps": 165000.0,
+     "dpsP75": 955000.0,
+     "ehp": 19000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Comet",
+     "n": 724,
+     "share": 8.0,
+     "top": 100,
+     "dps": 684000.0,
+     "dpsP75": 2400000.0,
+     "ehp": 17000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Pounce",
+     "n": 464,
+     "share": 5.1,
+     "top": 89,
+     "dps": 6500.0,
+     "dpsP75": 20000.0,
+     "ehp": 20000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Bone Cage",
+     "n": 364,
+     "share": 4.0,
+     "top": 100,
+     "dps": 118000.0,
+     "dpsP75": 204000.0,
+     "ehp": 14000.0,
+     "lv": 94
+    }
+   ]
+  },
+  "Deadeye": {
+   "n": 8077,
+   "share": 6.51,
+   "top": {
+    "n": 100,
+    "dps": 420000.0,
+    "ehp": 34000.0
+   },
+   "skills": [
+    {
+     "skill": "Herald of Ice",
+     "n": 7303,
+     "share": 90.4,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 37000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Ice Shot",
+     "n": 7255,
+     "share": 89.8,
+     "top": 100,
+     "dps": 420000.0,
+     "dpsP75": 801000.0,
+     "ehp": 37000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Tornado Shot",
+     "n": 6483,
+     "share": 80.3,
+     "top": 100,
+     "dps": 63000.0,
+     "dpsP75": 96000.0,
+     "ehp": 37000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Snipe",
+     "n": 6331,
+     "share": 78.4,
+     "top": 100,
+     "dps": 44000.0,
+     "dpsP75": 62000.0,
+     "ehp": 35000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Freezing Mark",
+     "n": 6308,
+     "share": 78.1,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Barrage",
+     "n": 5670,
+     "share": 70.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Ice-Tipped Arrows",
+     "n": 3499,
+     "share": 43.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Called Shots",
+     "n": 815,
+     "share": 10.1,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 805,
+     "share": 10.0,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 29000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Bow Shot",
+     "n": 537,
+     "share": 6.6,
+     "top": 100,
+     "dps": 126000.0,
+     "dpsP75": 193000.0,
+     "ehp": 30000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Twister",
+     "n": 334,
+     "share": 4.1,
+     "top": 100,
+     "dps": 309000.0,
+     "dpsP75": 465000.0,
+     "ehp": 25000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Whirling Slash",
+     "n": 306,
+     "share": 3.8,
+     "top": 100,
+     "dps": 9800.0,
+     "dpsP75": 15000.0,
+     "ehp": 24000.0,
+     "lv": 97
+    }
+   ]
+  },
+  "Infernalist": {
+   "n": 4065,
+   "share": 3.28,
+   "top": {
+    "n": 100,
+    "dps": 610000.0,
+    "ehp": 4300.0
+   },
+   "skills": [
+    {
+     "skill": "Comet",
+     "n": 2224,
+     "share": 54.7,
+     "top": 100,
+     "dps": 731000.0,
+     "dpsP75": 1700000.0,
+     "ehp": 2900.0,
+     "lv": 98
+    },
+    {
+     "skill": "Spark",
+     "n": 1914,
+     "share": 47.1,
+     "top": 100,
+     "dps": 193000.0,
+     "dpsP75": 350000.0,
+     "ehp": 2900.0,
+     "lv": 98
+    },
+    {
+     "skill": "Frost Bomb",
+     "n": 1436,
+     "share": 35.3,
+     "top": 100,
+     "dps": 15000.0,
+     "dpsP75": 29000.0,
+     "ehp": 3500.0,
+     "lv": 97
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 1295,
+     "share": 31.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Summon Infernal Hound",
+     "n": 907,
+     "share": 22.3,
+     "top": 100,
+     "dps": 100.0,
+     "dpsP75": 400.0,
+     "ehp": 4300.0,
+     "lv": 97
+    },
+    {
+     "skill": "Powered by Verisium",
+     "n": 698,
+     "share": 17.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Arc",
+     "n": 691,
+     "share": 17.0,
+     "top": 100,
+     "dps": 164000.0,
+     "dpsP75": 260000.0,
+     "ehp": 2900.0,
+     "lv": 98
+    },
+    {
+     "skill": "Ice Nova",
+     "n": 674,
+     "share": 16.6,
+     "top": 100,
+     "dps": 102000.0,
+     "dpsP75": 170000.0,
+     "ehp": 2900.0,
+     "lv": 98
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 632,
+     "share": 15.5,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Entangle",
+     "n": 600,
+     "share": 14.8,
+     "top": 100,
+     "dps": 1700.0,
+     "dpsP75": 3600.0,
+     "ehp": 14000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Lightning Warp",
+     "n": 599,
+     "share": 14.7,
+     "top": 100,
+     "dps": 196000.0,
+     "dpsP75": 342000.0,
+     "ehp": 3600.0,
+     "lv": 97
+    },
+    {
+     "skill": "Ball Lightning",
+     "n": 588,
+     "share": 14.5,
+     "top": 100,
+     "dps": 21000.0,
+     "dpsP75": 42000.0,
+     "ehp": 3500.0,
+     "lv": 97
+    },
+    {
+     "skill": "Cast on Critical",
+     "n": 4065,
+     "share": 100.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Stormweaver": {
+   "n": 3353,
+   "share": 2.7,
+   "top": {
+    "n": 100,
+    "dps": 97000.0,
+    "ehp": 13000.0
+   },
+   "skills": [
+    {
+     "skill": "Spark",
+     "n": 3071,
+     "share": 91.6,
+     "top": 100,
+     "dps": 58000.0,
+     "dpsP75": 142000.0,
+     "ehp": 12000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Frost Bomb",
+     "n": 3008,
+     "share": 89.7,
+     "top": 100,
+     "dps": 2300.0,
+     "dpsP75": 4400.0,
+     "ehp": 13000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Comet",
+     "n": 2802,
+     "share": 83.6,
+     "top": 100,
+     "dps": 94000.0,
+     "dpsP75": 226000.0,
+     "ehp": 12000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Elemental Storm",
+     "n": 1859,
+     "share": 55.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "n": 1638,
+     "share": 48.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Arc",
+     "n": 1637,
+     "share": 48.8,
+     "top": 100,
+     "dps": 40000.0,
+     "dpsP75": 81000.0,
+     "ehp": 15000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 1364,
+     "share": 40.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 1327,
+     "share": 39.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Mana Tempest",
+     "n": 1207,
+     "share": 36.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "n": 1197,
+     "share": 35.7,
+     "top": 100,
+     "dps": 78000.0,
+     "dpsP75": 137000.0,
+     "ehp": 16000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Firestorm",
+     "n": 1121,
+     "share": 33.4,
+     "top": 100,
+     "dps": 15000.0,
+     "dpsP75": 23000.0,
+     "ehp": 12000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Living Bomb",
+     "n": 294,
+     "share": 8.8,
+     "top": 99,
+     "dps": 7300.0,
+     "dpsP75": 30000.0,
+     "ehp": 11000.0,
+     "lv": 97
+    }
+   ]
+  },
+  "Titan": {
+   "n": 2539,
+   "share": 2.05,
+   "top": {
+    "n": 100,
+    "dps": 105000.0,
+    "ehp": 33000.0
+   },
+   "skills": [
+    {
+     "skill": "Shield Wall",
+     "n": 783,
+     "share": 30.8,
+     "top": 100,
+     "dps": 92000.0,
+     "dpsP75": 237000.0,
+     "ehp": 49000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Infernal Cry",
+     "n": 723,
+     "share": 28.5,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Earthshatter",
+     "n": 588,
+     "share": 23.2,
+     "top": 100,
+     "dps": 31000.0,
+     "dpsP75": 63000.0,
+     "ehp": 25000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Resonating Shield",
+     "n": 449,
+     "share": 17.7,
+     "top": 98,
+     "dps": 92000.0,
+     "dpsP75": 164000.0,
+     "ehp": 39000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Boneshatter",
+     "n": 413,
+     "share": 16.3,
+     "top": 100,
+     "dps": 7100.0,
+     "dpsP75": 12000.0,
+     "ehp": 20000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Herald of Blood",
+     "n": 400,
+     "share": 15.8,
+     "top": 100,
+     "dps": 200.0,
+     "dpsP75": 400.0,
+     "ehp": 37000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Mace Strike",
+     "n": 381,
+     "share": 15.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Pounce",
+     "n": 352,
+     "share": 13.9,
+     "top": 97,
+     "dps": 500.0,
+     "dpsP75": 1300.0,
+     "ehp": 44000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Leap Slam",
+     "n": 343,
+     "share": 13.5,
+     "top": 99,
+     "dps": 13000.0,
+     "dpsP75": 45000.0,
+     "ehp": 37000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Harbinger of Madness",
+     "n": 328,
+     "share": 12.9,
+     "top": 100,
+     "dps": 100.0,
+     "dpsP75": 200.0,
+     "ehp": 23000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 323,
+     "share": 12.7,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 19000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Fortifying Cry",
+     "n": 313,
+     "share": 12.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Blood Mage": {
+   "n": 2379,
+   "share": 1.92,
+   "top": {
+    "n": 100,
+    "dps": 1900000.0,
+    "ehp": 18000.0
+   },
+   "skills": [
+    {
+     "skill": "Elemental Weakness",
+     "n": 1023,
+     "share": 43.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 893,
+     "share": 37.5,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Spark",
+     "n": 820,
+     "share": 34.5,
+     "top": 100,
+     "dps": 203000.0,
+     "dpsP75": 484000.0,
+     "ehp": 15000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Dark Consequences",
+     "n": 729,
+     "share": 30.6,
+     "top": 100,
+     "dps": 3300000.0,
+     "dpsP75": 4900000.0,
+     "ehp": 19000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Comet",
+     "n": 652,
+     "share": 27.4,
+     "top": 100,
+     "dps": 296000.0,
+     "dpsP75": 586000.0,
+     "ehp": 16000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Doom Blast",
+     "n": 642,
+     "share": 27.0,
+     "top": 100,
+     "dps": 1200000.0,
+     "dpsP75": 1800000.0,
+     "ehp": 19000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Orb of Storms",
+     "n": 557,
+     "share": 23.4,
+     "top": 100,
+     "dps": 145000.0,
+     "dpsP75": 248000.0,
+     "ehp": 15000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Frost Bomb",
+     "n": 488,
+     "share": 20.5,
+     "top": 100,
+     "dps": 10000.0,
+     "dpsP75": 23000.0,
+     "ehp": 15000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Lightning Bolt",
+     "n": 330,
+     "share": 13.9,
+     "top": 100,
+     "dps": 290000.0,
+     "dpsP75": 510000.0,
+     "ehp": 12000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Herald of Blood",
+     "n": 317,
+     "share": 13.3,
+     "top": 100,
+     "dps": 1100.0,
+     "dpsP75": 2000.0,
+     "ehp": 12000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Despair",
+     "n": 303,
+     "share": 12.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 247,
+     "share": 10.4,
+     "top": 100,
+     "dps": 1000.0,
+     "dpsP75": 1600.0,
+     "ehp": 12000.0,
+     "lv": 94
+    }
+   ]
+  },
+  "Tactician": {
+   "n": 2032,
+   "share": 1.64,
+   "top": {
+    "n": 100,
+    "dps": 1100.0,
+    "ehp": 45000.0
+   },
+   "skills": [
+    {
+     "skill": "Galvanic Shards",
+     "n": 732,
+     "share": 36.0,
+     "top": 100,
+     "dps": 43000.0,
+     "dpsP75": 83000.0,
+     "ehp": 18000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Stormblast Bolts",
+     "n": 698,
+     "share": 34.4,
+     "top": 100,
+     "dps": 78000.0,
+     "dpsP75": 120000.0,
+     "ehp": 18000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Supporting Fire",
+     "n": 670,
+     "share": 33.0,
+     "top": 100,
+     "dps": 288000.0,
+     "dpsP75": 487000.0,
+     "ehp": 27000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 664,
+     "share": 32.7,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 19000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Crossbow Shot",
+     "n": 594,
+     "share": 29.2,
+     "top": 100,
+     "dps": 126000.0,
+     "dpsP75": 254000.0,
+     "ehp": 19000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Wolf Pack",
+     "n": 422,
+     "share": 20.8,
+     "top": 100,
+     "dps": 1400.0,
+     "dpsP75": 4400.0,
+     "ehp": 50000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Gemini Surge",
+     "n": 202,
+     "share": 9.9,
+     "top": 100,
+     "dps": 23000.0,
+     "dpsP75": 30000.0,
+     "ehp": 17000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Pounce",
+     "n": 173,
+     "share": 8.5,
+     "top": 100,
+     "dps": 200.0,
+     "dpsP75": 500.0,
+     "ehp": 20000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Mace Strike",
+     "n": 139,
+     "share": 6.8,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Explosive Grenade",
+     "n": 79,
+     "share": 3.9,
+     "top": 79,
+     "dps": 15000.0,
+     "dpsP75": 33000.0,
+     "ehp": 9800.0,
+     "lv": 90
+    },
+    {
+     "skill": "Cluster Grenade",
+     "n": 61,
+     "share": 3.0,
+     "top": 61,
+     "dps": 7600.0,
+     "dpsP75": 14000.0,
+     "ehp": 8600.0,
+     "lv": 90
+    },
+    {
+     "skill": "Flash Grenade",
+     "n": 61,
+     "share": 3.0,
+     "top": 61,
+     "dps": 4500.0,
+     "dpsP75": 11000.0,
+     "ehp": 9900.0,
+     "lv": 90
+    },
+    {
+     "skill": "Gas Grenade",
+     "n": 22,
+     "share": 1.1,
+     "top": 22,
+     "dps": 1900.0,
+     "dpsP75": 4700.0,
+     "ehp": 8900.0,
+     "lv": 87
+    },
+    {
+     "skill": "Oil Grenade",
+     "n": 51,
+     "share": 2.5,
+     "top": 51,
+     "dps": 6600.0,
+     "dpsP75": 13000.0,
+     "ehp": 9600.0,
+     "lv": 89
+    }
+   ]
+  },
+  "Acolyte of Chayula": {
+   "n": 1900,
+   "share": 1.53,
+   "top": {
+    "n": 100,
+    "dps": 400.0,
+    "ehp": 43000.0
+   },
+   "skills": [
+    {
+     "skill": "Archon of Chayula",
+     "n": 1224,
+     "share": 64.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Herald of Blood",
+     "n": 1047,
+     "share": 55.1,
+     "top": 100,
+     "dps": 1500.0,
+     "dpsP75": 2600.0,
+     "ehp": 39000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Poisonburst Arrow",
+     "n": 828,
+     "share": 43.6,
+     "top": 98,
+     "dps": 356000.0,
+     "dpsP75": 597000.0,
+     "ehp": 41000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Toxic Growth",
+     "n": 807,
+     "share": 42.5,
+     "top": 98,
+     "dps": 20000.0,
+     "dpsP75": 35000.0,
+     "ehp": 41000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Vine Arrow",
+     "n": 700,
+     "share": 36.8,
+     "top": 98,
+     "dps": 80000.0,
+     "dpsP75": 112000.0,
+     "ehp": 38000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Despair",
+     "n": 369,
+     "share": 19.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Gas Arrow",
+     "n": 157,
+     "share": 8.3,
+     "top": 98,
+     "dps": 16000.0,
+     "dpsP75": 28000.0,
+     "ehp": 36000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Spearfield",
+     "n": 141,
+     "share": 7.4,
+     "top": 100,
+     "dps": 14000.0,
+     "dpsP75": 21000.0,
+     "ehp": 36000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Entangle",
+     "n": 135,
+     "share": 7.1,
+     "top": 100,
+     "dps": 1300.0,
+     "dpsP75": 2200.0,
+     "ehp": 15000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Pounce",
+     "n": 135,
+     "share": 7.1,
+     "top": 69,
+     "dps": 1000.0,
+     "dpsP75": 2100.0,
+     "ehp": 27000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Twister",
+     "n": 117,
+     "share": 6.2,
+     "top": 100,
+     "dps": 56000.0,
+     "dpsP75": 81000.0,
+     "ehp": 23000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Dark Consequences",
+     "n": 116,
+     "share": 6.1,
+     "top": 100,
+     "dps": 19000.0,
+     "dpsP75": 42000.0,
+     "ehp": 12000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Tornado",
+     "n": 17,
+     "share": 0.9,
+     "top": 17,
+     "dps": 1500.0,
+     "dpsP75": 2900.0,
+     "ehp": 12000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Molten Shower",
+     "n": 113,
+     "share": 5.9,
+     "top": 100,
+     "dps": 18000.0,
+     "dpsP75": 26000.0,
+     "ehp": 15000.0,
+     "lv": 93
+    }
+   ]
+  },
+  "Lich": {
+   "n": 1791,
+   "share": 1.44,
+   "top": {
+    "n": 100,
+    "dps": 600.0,
+    "ehp": 37000.0
+   },
+   "skills": [
+    {
+     "skill": "Contagion",
+     "n": 642,
+     "share": 35.8,
+     "top": 100,
+     "dps": 10000.0,
+     "dpsP75": 17000.0,
+     "ehp": 28000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Essence Drain",
+     "n": 630,
+     "share": 35.2,
+     "top": 100,
+     "dps": 122000.0,
+     "dpsP75": 265000.0,
+     "ehp": 28000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Dark Effigy",
+     "n": 620,
+     "share": 34.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Despair",
+     "n": 591,
+     "share": 33.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 375,
+     "share": 20.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Chaos Bolt",
+     "n": 335,
+     "share": 18.7,
+     "top": 100,
+     "dps": 82000.0,
+     "dpsP75": 150000.0,
+     "ehp": 28000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Pain Offering",
+     "n": 313,
+     "share": 17.5,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Wolf Pack",
+     "n": 280,
+     "share": 15.6,
+     "top": 100,
+     "dps": 15000.0,
+     "dpsP75": 27000.0,
+     "ehp": 28000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Entangle",
+     "n": 239,
+     "share": 13.3,
+     "top": 100,
+     "dps": 30000.0,
+     "dpsP75": 46000.0,
+     "ehp": 22000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 238,
+     "share": 13.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Thunderstorm",
+     "n": 236,
+     "share": 13.2,
+     "top": 100,
+     "dps": 5200.0,
+     "dpsP75": 7400.0,
+     "ehp": 22000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Ravenous Swarm",
+     "n": 235,
+     "share": 13.1,
+     "top": 100,
+     "dps": 300.0,
+     "dpsP75": 300.0,
+     "ehp": 27000.0,
+     "lv": 94
+    }
+   ]
+  },
+  "Ritualist": {
+   "n": 1580,
+   "share": 1.27,
+   "top": {
+    "n": 100,
+    "dps": 42000.0,
+    "ehp": 24000.0
+   },
+   "skills": [
+    {
+     "skill": "Barrage",
+     "n": 397,
+     "share": 25.1,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 351,
+     "share": 22.2,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 21000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Spark",
+     "n": 277,
+     "share": 17.5,
+     "top": 100,
+     "dps": 300.0,
+     "dpsP75": 24000.0,
+     "ehp": 21000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Twister",
+     "n": 257,
+     "share": 16.3,
+     "top": 100,
+     "dps": 171000.0,
+     "dpsP75": 350000.0,
+     "ehp": 21000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Whirling Slash",
+     "n": 240,
+     "share": 15.2,
+     "top": 100,
+     "dps": 11000.0,
+     "dpsP75": 21000.0,
+     "ehp": 21000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Ice Shot",
+     "n": 233,
+     "share": 14.7,
+     "top": 98,
+     "dps": 65000.0,
+     "dpsP75": 168000.0,
+     "ehp": 15000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 232,
+     "share": 14.7,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 23000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Tornado Shot",
+     "n": 199,
+     "share": 12.6,
+     "top": 100,
+     "dps": 19000.0,
+     "dpsP75": 44000.0,
+     "ehp": 15000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Freezing Mark",
+     "n": 129,
+     "share": 8.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Profane Ritual",
+     "n": 120,
+     "share": 7.6,
+     "top": 100,
+     "dps": 400.0,
+     "dpsP75": 600.0,
+     "ehp": 33000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Frost Wall",
+     "n": 117,
+     "share": 7.4,
+     "top": 100,
+     "dps": 200.0,
+     "dpsP75": 400.0,
+     "ehp": 21000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Frostbolt",
+     "n": 117,
+     "share": 7.4,
+     "top": 100,
+     "dps": 900.0,
+     "dpsP75": 1900.0,
+     "ehp": 21000.0,
+     "lv": 96
+    }
+   ]
+  },
+  "Witchhunter": {
+   "n": 1319,
+   "share": 1.06,
+   "top": {
+    "n": 100,
+    "dps": 29000.0,
+    "ehp": 31000.0
+   },
+   "skills": [
+    {
+     "skill": "Herald of Thunder",
+     "n": 417,
+     "share": 31.6,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 28000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Freezing Mark",
+     "n": 400,
+     "share": 30.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Galvanic Shards",
+     "n": 377,
+     "share": 28.6,
+     "top": 100,
+     "dps": 10000.0,
+     "dpsP75": 22000.0,
+     "ehp": 25000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Explosive Grenade",
+     "n": 372,
+     "share": 28.2,
+     "top": 99,
+     "dps": 35000.0,
+     "dpsP75": 104000.0,
+     "ehp": 29000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Stormblast Bolts",
+     "n": 332,
+     "share": 25.2,
+     "top": 100,
+     "dps": 42000.0,
+     "dpsP75": 67000.0,
+     "ehp": 25000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 293,
+     "share": 22.2,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 22000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Emergency Reload",
+     "n": 232,
+     "share": 17.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Fragmentation Rounds",
+     "n": 229,
+     "share": 17.4,
+     "top": 99,
+     "dps": 18000.0,
+     "dpsP75": 30000.0,
+     "ehp": 20000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Frostbolt",
+     "n": 225,
+     "share": 17.1,
+     "top": 100,
+     "dps": 1200.0,
+     "dpsP75": 1600.0,
+     "ehp": 26000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Frost Wall",
+     "n": 220,
+     "share": 16.7,
+     "top": 100,
+     "dps": 300.0,
+     "dpsP75": 400.0,
+     "ehp": 26000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Permafrost Bolts",
+     "n": 208,
+     "share": 15.8,
+     "top": 98,
+     "dps": 8700.0,
+     "dpsP75": 18000.0,
+     "ehp": 19000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Crossbow Shot",
+     "n": 200,
+     "share": 15.2,
+     "top": 100,
+     "dps": 76000.0,
+     "dpsP75": 110000.0,
+     "ehp": 22000.0,
+     "lv": 94
+    }
+   ]
+  },
+  "Shaman": {
+   "n": 1113,
+   "share": 0.9,
+   "top": {
+    "n": 100,
+    "dps": 786000.0,
+    "ehp": 25000.0
+   },
+   "skills": [
+    {
+     "skill": "Spark",
+     "n": 311,
+     "share": 27.9,
+     "top": 100,
+     "dps": 771000.0,
+     "dpsP75": 1400000.0,
+     "ehp": 22000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Walking Calamity",
+     "n": 287,
+     "share": 25.8,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Maul",
+     "n": 250,
+     "share": 22.5,
+     "top": 100,
+     "dps": 64000.0,
+     "dpsP75": 102000.0,
+     "ehp": 20000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Rampage",
+     "n": 233,
+     "share": 20.9,
+     "top": 100,
+     "dps": 35000.0,
+     "dpsP75": 53000.0,
+     "ehp": 19000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Entangle",
+     "n": 226,
+     "share": 20.3,
+     "top": 100,
+     "dps": 21000.0,
+     "dpsP75": 39000.0,
+     "ehp": 25000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Furious Slam",
+     "n": 201,
+     "share": 18.1,
+     "top": 100,
+     "dps": 34000.0,
+     "dpsP75": 53000.0,
+     "ehp": 19000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Shockwave Totem",
+     "n": 194,
+     "share": 17.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Grim Pillars",
+     "n": 174,
+     "share": 15.6,
+     "top": 100,
+     "dps": 410000.0,
+     "dpsP75": 732000.0,
+     "ehp": 24000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Wolf Pack",
+     "n": 174,
+     "share": 15.6,
+     "top": 100,
+     "dps": 7900.0,
+     "dpsP75": 15000.0,
+     "ehp": 27000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 159,
+     "share": 14.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Lunar Assault",
+     "n": 148,
+     "share": 13.3,
+     "top": 99,
+     "dps": 17000.0,
+     "dpsP75": 27000.0,
+     "ehp": 15000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Comet",
+     "n": 143,
+     "share": 12.8,
+     "top": 100,
+     "dps": 1000000.0,
+     "dpsP75": 2200000.0,
+     "ehp": 21000.0,
+     "lv": 97
+    }
+   ]
+  },
+  "Chronomancer": {
+   "n": 1105,
+   "share": 0.89,
+   "top": {
+    "n": 100,
+    "dps": 161000.0,
+    "ehp": 19000.0
+   },
+   "skills": [
+    {
+     "skill": "Frost Bomb",
+     "n": 714,
+     "share": 64.6,
+     "top": 100,
+     "dps": 31000.0,
+     "dpsP75": 46000.0,
+     "ehp": 11000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Frost Wall",
+     "n": 637,
+     "share": 57.6,
+     "top": 100,
+     "dps": 15000.0,
+     "dpsP75": 23000.0,
+     "ehp": 11000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Comet",
+     "n": 624,
+     "share": 56.5,
+     "top": 100,
+     "dps": 228000.0,
+     "dpsP75": 365000.0,
+     "ehp": 11000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Elemental Weakness",
+     "n": 610,
+     "share": 55.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Ice Nova",
+     "n": 561,
+     "share": 50.8,
+     "top": 100,
+     "dps": 147000.0,
+     "dpsP75": 233000.0,
+     "ehp": 11000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 356,
+     "share": 32.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Time Freeze",
+     "n": 268,
+     "share": 24.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Snap",
+     "n": 225,
+     "share": 20.4,
+     "top": 100,
+     "dps": 51000.0,
+     "dpsP75": 86000.0,
+     "ehp": 11000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Time Snap",
+     "n": 179,
+     "share": 16.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Inevitable Agony",
+     "n": 178,
+     "share": 16.1,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Frostbolt",
+     "n": 134,
+     "share": 12.1,
+     "top": 100,
+     "dps": 66000.0,
+     "dpsP75": 124000.0,
+     "ehp": 17000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Despair",
+     "n": 126,
+     "share": 11.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Pathfinder": {
+   "n": 1105,
+   "share": 0.89,
+   "top": {
+    "n": 100,
+    "dps": 507000.0,
+    "ehp": 29000.0
+   },
+   "skills": [
+    {
+     "skill": "Ice Shot",
+     "n": 450,
+     "share": 40.7,
+     "top": 100,
+     "dps": 790000.0,
+     "dpsP75": 1500000.0,
+     "ehp": 35000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Tornado Shot",
+     "n": 427,
+     "share": 38.6,
+     "top": 100,
+     "dps": 83000.0,
+     "dpsP75": 178000.0,
+     "ehp": 36000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 423,
+     "share": 38.3,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 36000.0,
+     "lv": 98
+    },
+    {
+     "skill": "Barrage",
+     "n": 320,
+     "share": 29.0,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Freezing Mark",
+     "n": 275,
+     "share": 24.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Snipe",
+     "n": 231,
+     "share": 20.9,
+     "top": 98,
+     "dps": 32000.0,
+     "dpsP75": 43000.0,
+     "ehp": 32000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Despair",
+     "n": 192,
+     "share": 17.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Poisonburst Arrow",
+     "n": 188,
+     "share": 17.0,
+     "top": 100,
+     "dps": 104000.0,
+     "dpsP75": 182000.0,
+     "ehp": 22000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Toxic Growth",
+     "n": 186,
+     "share": 16.8,
+     "top": 100,
+     "dps": 6500.0,
+     "dpsP75": 12000.0,
+     "ehp": 22000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Gas Arrow",
+     "n": 161,
+     "share": 14.6,
+     "top": 100,
+     "dps": 6700.0,
+     "dpsP75": 11000.0,
+     "ehp": 20000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Gas Grenade",
+     "n": 148,
+     "share": 13.4,
+     "top": 100,
+     "dps": 4500.0,
+     "dpsP75": 7800.0,
+     "ehp": 17000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Bow Shot",
+     "n": 133,
+     "share": 12.0,
+     "top": 100,
+     "dps": 113000.0,
+     "dpsP75": 311000.0,
+     "ehp": 32000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Decompose",
+     "n": 22,
+     "share": 2.0,
+     "top": 22,
+     "dps": 55000.0,
+     "dpsP75": 75000.0,
+     "ehp": 19000.0,
+     "lv": 92
+    }
+   ]
+  },
+  "Warbringer": {
+   "n": 954,
+   "share": 0.77,
+   "top": {
+    "n": 100,
+    "dps": 36000.0,
+    "ehp": 20000.0
+   },
+   "skills": [
+    {
+     "skill": "Ancestral Spirits",
+     "n": 524,
+     "share": 54.9,
+     "top": 99,
+     "dps": 200.0,
+     "dpsP75": 300.0,
+     "ehp": 15000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Cluster Grenade",
+     "n": 502,
+     "share": 52.6,
+     "top": 99,
+     "dps": 31000.0,
+     "dpsP75": 46000.0,
+     "ehp": 15000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Voltaic Grenade",
+     "n": 453,
+     "share": 47.5,
+     "top": 99,
+     "dps": 3600.0,
+     "dpsP75": 4800.0,
+     "ehp": 14000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Infernal Cry",
+     "n": 222,
+     "share": 23.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Oil Grenade",
+     "n": 197,
+     "share": 20.6,
+     "top": 99,
+     "dps": 3800.0,
+     "dpsP75": 5800.0,
+     "ehp": 13000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Fortifying Cry",
+     "n": 179,
+     "share": 18.8,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Shield Wall",
+     "n": 165,
+     "share": 17.3,
+     "top": 100,
+     "dps": 46000.0,
+     "dpsP75": 102000.0,
+     "ehp": 20000.0,
+     "lv": 91
+    },
+    {
+     "skill": "Forge Hammer",
+     "n": 146,
+     "share": 15.3,
+     "top": 99,
+     "dps": 6800.0,
+     "dpsP75": 10000.0,
+     "ehp": 26000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Crossbow Shot",
+     "n": 138,
+     "share": 14.5,
+     "top": 100,
+     "dps": 10000.0,
+     "dpsP75": 15000.0,
+     "ehp": 13000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Earthshatter",
+     "n": 137,
+     "share": 14.4,
+     "top": 98,
+     "dps": 18000.0,
+     "dpsP75": 26000.0,
+     "ehp": 25000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Encase in Jade",
+     "n": 108,
+     "share": 11.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Mace Strike",
+     "n": 103,
+     "share": 10.8,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Abyssal Lich": {
+   "n": 902,
+   "share": 0.73,
+   "top": {
+    "n": 100,
+    "dps": 191000.0,
+    "ehp": 27000.0
+   },
+   "skills": [
+    {
+     "skill": "Entangle",
+     "n": 510,
+     "share": 56.5,
+     "top": 100,
+     "dps": 103000.0,
+     "dpsP75": 149000.0,
+     "ehp": 28000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Thunderstorm",
+     "n": 482,
+     "share": 53.4,
+     "top": 100,
+     "dps": 10000.0,
+     "dpsP75": 15000.0,
+     "ehp": 28000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Thrashing Vines",
+     "n": 476,
+     "share": 52.8,
+     "top": 100,
+     "dps": 119000.0,
+     "dpsP75": 184000.0,
+     "ehp": 28000.0,
+     "lv": 97
+    },
+    {
+     "skill": "Bonestorm",
+     "n": 456,
+     "share": 50.6,
+     "top": 100,
+     "dps": 107000.0,
+     "dpsP75": 156000.0,
+     "ehp": 28000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Sigil of Power",
+     "n": 348,
+     "share": 38.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Twister",
+     "n": 225,
+     "share": 24.9,
+     "top": 99,
+     "dps": 108000.0,
+     "dpsP75": 187000.0,
+     "ehp": 20000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Whirling Slash",
+     "n": 215,
+     "share": 23.8,
+     "top": 99,
+     "dps": 8000.0,
+     "dpsP75": 11000.0,
+     "ehp": 20000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Barrage",
+     "n": 214,
+     "share": 23.7,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Bone Cage",
+     "n": 101,
+     "share": 11.2,
+     "top": 100,
+     "dps": 158000.0,
+     "dpsP75": 292000.0,
+     "ehp": 24000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 93,
+     "share": 10.3,
+     "top": 93,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 17000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Contagion",
+     "n": 69,
+     "share": 7.6,
+     "top": 69,
+     "dps": 7100.0,
+     "dpsP75": 11000.0,
+     "ehp": 24000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Dark Effigy",
+     "n": 65,
+     "share": 7.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Smith of Kitava": {
+   "n": 828,
+   "share": 0.67,
+   "top": {
+    "n": 100,
+    "dps": 90000.0,
+    "ehp": 28000.0
+   },
+   "skills": [
+    {
+     "skill": "Infernal Cry",
+     "n": 475,
+     "share": 57.4,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Shield Wall",
+     "n": 418,
+     "share": 50.5,
+     "top": 100,
+     "dps": 99000.0,
+     "dpsP75": 167000.0,
+     "ehp": 29000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Fortifying Cry",
+     "n": 300,
+     "share": 36.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Detonate Dead",
+     "n": 253,
+     "share": 30.6,
+     "top": 100,
+     "dps": 25000.0,
+     "dpsP75": 36000.0,
+     "ehp": 15000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Resonating Shield",
+     "n": 238,
+     "share": 28.7,
+     "top": 99,
+     "dps": 25000.0,
+     "dpsP75": 65000.0,
+     "ehp": 32000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Walking Calamity",
+     "n": 140,
+     "share": 16.9,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Molten Crash",
+     "n": 137,
+     "share": 16.5,
+     "top": 100,
+     "dps": 21000.0,
+     "dpsP75": 30000.0,
+     "ehp": 26000.0,
+     "lv": 91
+    },
+    {
+     "skill": "Sunder",
+     "n": 134,
+     "share": 16.2,
+     "top": 99,
+     "dps": 6200.0,
+     "dpsP75": 13000.0,
+     "ehp": 27000.0,
+     "lv": 92
+    },
+    {
+     "skill": "Shield Charge",
+     "n": 133,
+     "share": 16.1,
+     "top": 100,
+     "dps": 2800.0,
+     "dpsP75": 6700.0,
+     "ehp": 31000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Mace Strike",
+     "n": 129,
+     "share": 15.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Living Bomb",
+     "n": 108,
+     "share": 13.0,
+     "top": 100,
+     "dps": 2600.0,
+     "dpsP75": 4000.0,
+     "ehp": 18000.0,
+     "lv": 90
+    },
+    {
+     "skill": "Comet",
+     "n": 99,
+     "share": 12.0,
+     "top": 99,
+     "dps": 700.0,
+     "dpsP75": 1000.0,
+     "ehp": 17000.0,
+     "lv": 90
+    },
+    {
+     "skill": "Earthquake",
+     "n": 7,
+     "share": 0.8,
+     "top": 7,
+     "dps": 3600.0,
+     "dpsP75": 17000.0,
+     "ehp": 11000.0,
+     "lv": 88
+    }
+   ]
+  },
+  "Amazon": {
+   "n": 582,
+   "share": 0.47,
+   "top": {
+    "n": 100,
+    "dps": 202000.0,
+    "ehp": 27000.0
+   },
+   "skills": [
+    {
+     "skill": "Herald of Thunder",
+     "n": 244,
+     "share": 41.9,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 19000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Herald of Ice",
+     "n": 217,
+     "share": 37.3,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 22000.0,
+     "lv": 96
+    },
+    {
+     "skill": "Barrage",
+     "n": 178,
+     "share": 30.6,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Ice Shot",
+     "n": 146,
+     "share": 25.1,
+     "top": 100,
+     "dps": 108000.0,
+     "dpsP75": 241000.0,
+     "ehp": 17000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Whirling Slash",
+     "n": 134,
+     "share": 23.0,
+     "top": 100,
+     "dps": 5400.0,
+     "dpsP75": 9700.0,
+     "ehp": 25000.0,
+     "lv": 94
+    },
+    {
+     "skill": "Lightning Spear",
+     "n": 131,
+     "share": 22.5,
+     "top": 99,
+     "dps": 124000.0,
+     "dpsP75": 242000.0,
+     "ehp": 12000.0,
+     "lv": 91
+    },
+    {
+     "skill": "Tornado Shot",
+     "n": 131,
+     "share": 22.5,
+     "top": 100,
+     "dps": 33000.0,
+     "dpsP75": 44000.0,
+     "ehp": 16000.0,
+     "lv": 95
+    },
+    {
+     "skill": "Freezing Mark",
+     "n": 117,
+     "share": 20.1,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "n": 106,
+     "share": 18.2,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Storm Lance",
+     "n": 101,
+     "share": 17.4,
+     "top": 99,
+     "dps": 26000.0,
+     "dpsP75": 52000.0,
+     "ehp": 11000.0,
+     "lv": 89
+    },
+    {
+     "skill": "Twister",
+     "n": 101,
+     "share": 17.4,
+     "top": 100,
+     "dps": 58000.0,
+     "dpsP75": 126000.0,
+     "ehp": 16000.0,
+     "lv": 93
+    },
+    {
+     "skill": "Ice-Tipped Arrows",
+     "n": 89,
+     "share": 15.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    }
+   ]
+  },
+  "Invoker": {
+   "n": 195,
+   "share": 0.16,
+   "top": {
+    "n": 100,
+    "dps": 187000.0,
+    "ehp": 27000.0
+   },
+   "skills": [
+    {
+     "skill": "Herald of Ice",
+     "n": 100,
+     "share": 51.3,
+     "top": 100,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 21000.0,
+     "lv": 91
+    },
+    {
+     "skill": "Herald of Thunder",
+     "n": 97,
+     "share": 49.7,
+     "top": 97,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": 21000.0,
+     "lv": 91
+    },
+    {
+     "skill": "Charged Staff",
+     "n": 63,
+     "share": 32.3,
+     "top": 0,
+     "dps": null,
+     "dpsP75": null,
+     "ehp": null,
+     "lv": null
+    },
+    {
+     "skill": "Whirling Assault",
+     "n": 55,
+     "share": 28.2,
+     "top": 54,
+     "dps": 35000.0,
+     "dpsP75": 63000.0,
+     "ehp": 25000.0,
+     "lv": 91
+    },
+    {
+     "skill": "Tempest Bell",
+     "n": 53,
+     "share": 27.2,
+     "top": 53,
+     "dps": 24000.0,
+     "dpsP75": 44000.0,
+     "ehp": 22000.0,
+     "lv": 90
+    },
+    {
+     "skill": "Falling Thunder",
+     "n": 43,
+     "share": 22.1,
+     "top": 42,
+     "dps": 80000.0,
+     "dpsP75": 150000.0,
+     "ehp": 26000.0,
+     "lv": 92
+    }
+   ]
+  }
+ }
+}

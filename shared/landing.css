@@ -206,3 +206,16 @@ footer a:hover{color:var(--gild-hi)}
 .build .quick-links{display:none}
 .build-grid{gap:clamp(20px,2.6vw,36px)}
 .build{border-radius:18px}
+
+/* ---------- classificador: filtros, ordenação e notas por build (landing_registry.py + landing-filter.js) ---------- */
+.build-filter{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end;margin:0 0 14px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(10,10,16,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.build-filter label{display:grid;gap:4px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.build-filter select{min-width:150px;max-width:100%;padding:9px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:#0d0d14;color:#f2ecdf;font:inherit;font-size:.92rem;letter-spacing:0;text-transform:none}
+.build-filter output{margin-left:auto;font-size:.85rem;color:rgba(255,255,255,.7);align-self:center}
+.rank-note{margin:0 0 18px;font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.55)}
+.build-rate{display:flex;flex-wrap:wrap;gap:6px 12px;margin:2px 0 12px;font-size:.78rem;color:rgba(255,255,255,.7)}
+.build-rate b{color:#e8c66a;letter-spacing:1px;font-weight:400}
+.build-rate em{font-style:normal;padding:1px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.build-rate em.meta-meta{color:#f0a36a;border-color:rgba(240,163,106,.5)} .build-rate em.meta-alternativa{color:#8fd0a8;border-color:rgba(143,208,168,.5)} .build-rate em.meta-fora-do-meta{color:#b9a3ff;border-color:rgba(185,163,255,.55)}
+.build[hidden]{display:none!important}
+@media (max-width:640px){.build-filter select{min-width:0;width:100%}.build-filter label{flex:1 1 44%}}

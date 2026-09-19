@@ -1,0 +1,584 @@
+{
+ "date": "2026-09-19",
+ "errors": 0,
+ "warnings": 14,
+ "info": 82,
+ "issues": [
+  {
+   "level": "I",
+   "build": "tactician",
+   "code": "tree-respec",
+   "msg": "int→cannon: 2 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "tactician",
+   "code": "tree-respec",
+   "msg": "cannon→t15: 28 nós saem da árvore (respec)"
+  },
+  {
+   "level": "W",
+   "build": "infernalist",
+   "code": "gem-since",
+   "msg": "a4: Spellslinger só entra no nível 65, depois do fim da fase (59): não aparece nela"
+  },
+  {
+   "level": "W",
+   "build": "infernalist",
+   "code": "unique-missing",
+   "msg": "a4.cheap: 'Pyrophyte Staff' não tem entrada em UNIQUES"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "support-orphan",
+   "msg": "Esh's Prowess: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "support-orphan",
+   "msg": "Helbrym's Hide: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "support-orphan",
+   "msg": "Herbalism I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "support-orphan",
+   "msg": "Herbalism II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "support-orphan",
+   "msg": "Rakiata's Flow: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "tree-respec",
+   "msg": "a4→maps: 17 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "tree-respec",
+   "msg": "maps→recoup: 31 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "tree-respec",
+   "msg": "recoup→frost: 44 nós saem da árvore (respec)"
+  },
+  {
+   "level": "W",
+   "build": "acolyte",
+   "code": "unique-orphan",
+   "msg": "Blackgleam: está em UNIQUES mas nenhuma fase, slot ou compra usa"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Corrosion: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Garukhan's Resolve: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Her Declaration: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Living Lightning: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Tacati's Ire: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Uul-Netol's Embrace: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "support-orphan",
+   "msg": "Withering Touch: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "tree-respec",
+   "msg": "a2→a3: 8 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "tree-respec",
+   "msg": "a3→a4: 10 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "tree-respec",
+   "msg": "a4→maps: 9 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
+   "code": "tree-respec",
+   "msg": "maps→archon: 85 nós saem da árvore (respec)"
+  },
+  {
+   "level": "W",
+   "build": "acolyte",
+   "code": "guide-url",
+   "msg": "sem GUIDE_URL do guia de referência"
+  },
+  {
+   "level": "W",
+   "build": "pathfinder",
+   "code": "spirit",
+   "msg": "end: 307 de Spirit em reservas no nível 79, com 100 de quests (+ 200 de itens, ascendência e atlas é o teto plausível)"
+  },
+  {
+   "level": "W",
+   "build": "pathfinder",
+   "code": "unique-missing",
+   "msg": "a4.cheap: 'Toxic Quiver' não tem entrada em UNIQUES"
+  },
+  {
+   "level": "I",
+   "build": "pathfinder",
+   "code": "tree-respec",
+   "msg": "a3→a4: 1 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "pathfinder",
+   "code": "tree-respec",
+   "msg": "a5→start: 29 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "pathfinder",
+   "code": "tree-respec",
+   "msg": "start→end: 29 nós saem da árvore (respec)"
+  },
+  {
+   "level": "W",
+   "build": "pathfinder",
+   "code": "tree-connect",
+   "msg": "max: 7 nós da árvore principal não ligam ao início da classe"
+  },
+  {
+   "level": "W",
+   "build": "smith",
+   "code": "unique-orphan",
+   "msg": "Thrillsteel: está em UNIQUES mas nenhuma fase, slot ou compra usa"
+  },
+  {
+   "level": "W",
+   "build": "smith",
+   "code": "unique-missing",
+   "msg": "t15.full: 'Breach Ring' não tem entrada em UNIQUES"
+  },
+  {
+   "level": "I",
+   "build": "smith",
+   "code": "support-orphan",
+   "msg": "Steadfast II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "smith",
+   "code": "tree-respec",
+   "msg": "a3→a4: 10 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "smith",
+   "code": "tree-respec",
+   "msg": "a4→int: 4 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "smith",
+   "code": "tree-respec",
+   "msg": "int→maps: 4 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "smith",
+   "code": "tree-respec",
+   "msg": "maps→t10: 13 nós saem da árvore (respec)"
+  },
+  {
+   "level": "W",
+   "build": "martial",
+   "code": "unique-missing",
+   "msg": "swap.full: 'Runeforged Fists of Stone' não tem entrada em UNIQUES"
+  },
+  {
+   "level": "I",
+   "build": "martial",
+   "code": "support-orphan",
+   "msg": "Burgeon II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "martial",
+   "code": "support-orphan",
+   "msg": "Culling Strike II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "martial",
+   "code": "support-orphan",
+   "msg": "Hit and Run: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "martial",
+   "code": "support-orphan",
+   "msg": "Profane Ritual: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "martial",
+   "code": "tree-respec",
+   "msg": "a4→swap: 51 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Ambush: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Arcane Surge: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Biting Frost I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Chain II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Deep Freeze: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Elemental Discharge: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Energy Capacitor: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Fork: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Magnified Area II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Pierce I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Pinpoint Critical: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Shock Conduction: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Supercritical: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "support-orphan",
+   "msg": "Wildshards I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "tree-start",
+   "msg": "a1: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "tree-start",
+   "msg": "a2: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "tree-start",
+   "msg": "a3: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "tree-start",
+   "msg": "a4: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "tree-start",
+   "msg": "maps: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "W",
+   "build": "shaman",
+   "code": "tree-connect",
+   "msg": "endgame: 87 nós da árvore principal não ligam ao início da classe"
+  },
+  {
+   "level": "W",
+   "build": "shaman",
+   "code": "tree-connect",
+   "msg": "max: 11 nós da árvore principal não ligam ao início da classe"
+  },
+  {
+   "level": "W",
+   "build": "shaman",
+   "code": "guide-url",
+   "msg": "sem GUIDE_URL do guia de referência"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Ancestral Call II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Armour Demolisher II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Behead II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Bleed I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Bleed II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Blind II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Bounty II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Compressed Duration II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Concentrated Area: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Cooldown Recovery II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Culling Strike II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Life Leech I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Longshot II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Overabundance II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Overcharge: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Pin I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "support-orphan",
+   "msg": "Prolonged Duration II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "tree-start",
+   "msg": "endgame: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "tree-respec",
+   "msg": "maps→endgame: 13 nós saem da árvore (respec)"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "tree-start",
+   "msg": "max: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
+  },
+  {
+   "level": "W",
+   "build": "whirling",
+   "code": "opt-empty",
+   "msg": "Charms: nenhuma opção barata no nível 1"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Armour Explosion: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Charged Mark: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Efficiency II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Eternal Mark: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Longshot II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Mark for Death II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Mark of Siphoning II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Multishot I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "support-orphan",
+   "msg": "Shock: explicado em SUPWHY mas nunca usado"
+  }
+ ]
+}
