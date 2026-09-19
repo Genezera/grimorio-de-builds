@@ -48,7 +48,7 @@ html[data-build] #navigator nav.tabs.sk-open button.sk-sec,html[data-build] #nav
 html[data-build] #skMore{order:1;border-radius:999px;padding:8px 12px;font:inherit;font-family:var(--ui);font-weight:700;font-size:.88rem;color:var(--mute);background:none;border:1px dashed var(--sk-line);cursor:pointer;white-space:nowrap}
 html[data-build] #skMore:hover,html[data-build] #skMore[aria-expanded=true]{color:var(--text);border-style:solid}
 html[data-build] #skMore.has-active{color:var(--accent-hi);border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:var(--accent-g)}
-html[data-build] nav.tabs.sk-open{flex-wrap:wrap;row-gap:6px}
+html[data-build] #navigator nav.tabs.sk-open{flex-wrap:wrap;row-gap:6px}
 @media (max-width:820px){
   html[data-build] #navigator{position:relative;top:0}
   html[data-build] #navigator nav.tabs{overflow-x:auto;scrollbar-width:none}
