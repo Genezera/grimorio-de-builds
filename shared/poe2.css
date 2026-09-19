@@ -115,6 +115,18 @@ html[data-build="shaman"]{
   --scene-tint:rgba(36,12,6,.55);
 }
 
+html[data-build="legionnaire"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Rajdhani","Arial Narrow",sans-serif; --body:"Source Serif 4",Georgia,serif;
+  --ground:#060709; --ground2:#0a0c0f; --stone:#111419; --stone2:#171b21; --stone3:#20252d;
+  --edge:#2b2e34; --edge2:#4a4a48;
+  --gild:#b9a27a; --gild-hi:#f1e2bd; --gild-lo:#5c4f38; --gild-g:rgba(185,162,122,.13);
+  --accent:#ffd23f; --accent-hi:#fff0a8; --accent-g:rgba(255,210,63,.16);
+  --accent2:#4db8ff; --accent2-hi:#a9dcff; --accent2-g:rgba(77,184,255,.16);
+  --wisp:#ffe98a; --wisp-g:rgba(255,233,138,.14);
+  --text:#e8eaee; --mute:#a5abb5; --faint:#6c737f;
+  --scene-tint:rgba(24,20,6,.5);
+}
+
 /* ---------- base */
 html[data-build]{scroll-padding-top:190px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html[data-build] body{font-family:var(--body);font-size:clamp(15.5px,.36vw + 14px,18px);line-height:1.62;color:var(--text);background:var(--ground);overflow-x:hidden}

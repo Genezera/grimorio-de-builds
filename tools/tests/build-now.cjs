@@ -2,7 +2,7 @@ const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'../..');
 const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://local').pathname));if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(err,data)=>{if(err)return res.writeHead(404).end();res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css'})[path.extname(file)]||'application/octet-stream');res.end(data);});});
-const openFab=async page=>{await page.evaluate(()=>{const c=document.querySelector('.console');scrollTo(0,c?c.getBoundingClientRect().bottom+scrollY+40:0);dispatchEvent(new Event('scroll'));});await page.waitForFunction(()=>!document.getElementById('sbFab').classList.contains('sb-fab-away'));await openFab(page);};
+const openFab=async page=>{await page.evaluate(()=>{const c=document.querySelector('.console');scrollTo(0,c?c.getBoundingClientRect().bottom+scrollY+40:0);dispatchEvent(new Event('scroll'));});await page.waitForFunction(()=>!document.getElementById('sbFab').classList.contains('sb-fab-away'));await page.locator('#sbFab').click();};
 (async()=>{
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  const base=`http://127.0.0.1:${server.address().port}`,errors=[];
@@ -12,7 +12,7 @@ const openFab=async page=>{await page.evaluate(()=>{const c=document.querySelect
   for(const [width,height] of sizes){
    const context=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'}),page=await context.newPage();
    page.on('pageerror',e=>errors.push(e.message));await page.route(/fonts\.(googleapis|gstatic)\.com/,r=>r.abort());
-   for(const file of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman'].flatMap(b=>[b+'/index.html',b+'/en.html'])){
+   for(const file of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire'].flatMap(b=>[b+'/index.html',b+'/en.html'])){
     await page.goto(base+'/'+file);await page.evaluate(()=>{buildNow.collapsed=false;renderSide();});
     if(width<1440){await openFab(page);assert.equal(await page.locator('#side').getAttribute('aria-modal'),'true');assert.ok(await page.locator('main').evaluate(el=>el.inert));}
     for(const level of [1,35,70,95]){

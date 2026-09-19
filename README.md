@@ -18,9 +18,10 @@ Site: https://genezera.github.io/grimorio-de-builds/
 | `smith/index.html` · `smith/en.html` | Warrior · Smith of Kitava — Shield Wall + Avatar of Fire (guia do Lexd) |
 | `martial/index.html` · `martial/en.html` | Monk · Martial Artist — Oil Barrage + Cast on Critical + Lightning Warp (planner do havoc616, Maxroll + ladder do poe.ninja) |
 | `shaman/index.html` · `shaman/en.html` | Druid · Shaman — Archmage Spark + Comet automatizado por Cast on Critical (os 10 Shamans de maior DPS do poe.ninja) |
+| `legionnaire/index.html` · `legionnaire/en.html` | Mercenary · Gemling Legionnaire — Falling Thunder com cajado e Power Charges (PoB nível 96 do poe.ninja) |
 | `rites/index.html` · `rites/en.html` | Liga Forbidden Rites — guia das 8 challenges (checklists, planejador de Omens, progresso salvo) |
 
-O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:`, `oracle1:`, `tactician1:`, `infernalist1:`, `acolyte1:`, `pathfinder1:`, `smith1:`, `martial1:`, `shaman1:`).
+O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:`, `oracle1:`, `tactician1:`, `infernalist1:`, `acolyte1:`, `pathfinder1:`, `smith1:`, `martial1:`, `shaman1:`, `legionnaire1:`).
 The **PT / EN** switch changes language; each build's progress is shared between both versions.
 
 O site é 100% estático (HTML + JS) e também funciona abrindo os arquivos direto no navegador.
@@ -28,7 +29,7 @@ The site is fully static (HTML + JS) and also works by opening the files directl
 
 ## Oficina e navegação / Workshop and navigation
 
-- Todas as seis páginas foram redesenhadas, com versões PT/EN, layout responsivo e contraste de leitura maior.
+- Todas as páginas usam a mesma camada visual **skin v3** (`shared/skin.css`, `shared/skin.js`, `shared/fx.css`, `shared/fx.js`): cabeçalho compacto, navegação em uma linha (Agora · Power/mecânica · Rota · Skills · Itens · Árvore · Ascendência + menu **Mais** com Meu personagem, Uniques, Crafting, Quests, Truques, Diagnóstico e Fontes), painéis planos, seções secundárias da aba Agora dobradas e uma animação de assinatura por classe (raio, fogo, forja, inferno, vazio, veneno, espíritos, estrelas) no medalhão de cada build e nos cartões da página inicial. Tudo respeita `prefers-reduced-motion`.
 - Navegação por assunto, busca local por itens/skills/conceitos (`Ctrl/Cmd+K`), links diretos às seções e impressão da seção aberta.
 - Crafting nas duas builds: 12 categorias de equipamentos, três rotas de investimento (comprar · craft progressivo · avançado) com receitas concretas por build em `shared/craft-detail.js` — alvos com ilvl, essence/omen/osso/alloy pelo nome, custos de Verisium, materiais com preço do poe.ninja e o que fazer se falhar.
 - Glossário de mecânicas, consulta de pesos com hipótese explícita e simulador de custo/risco, incluindo compra pronta e orçamento de 90%.
@@ -47,10 +48,17 @@ oracle/                       app Oracle (index.html, en.html, assets/assets.js)
 planilha/                     planilha Excel do Silverfist · Silverfist Excel workbook (PT)
 tools/                        scripts do Silverfist + página inicial · Silverfist + landing scripts
 tools/oracle/                 scripts do Oracle · Oracle scripts
-tactician/ infernalist/ acolyte/ pathfinder/ smith/ martial/ shaman/   apps gerados pelo kit · kit-generated apps
+tactician/ infernalist/ acolyte/ pathfinder/ smith/ martial/ shaman/ legionnaire/   apps gerados pelo kit · kit-generated apps
 tools/kit/                    kit genérico de builds (extract/maxroll → kassets → kpatch → kbuild, js/, craftkit)
 tools/builds/<build>/         dados de cada build do kit (bdata.py, bcraft.py) · per-build kit data
 ```
+
+## Adicionar uma build a partir de um Path of Building / Adding a build from a PoB
+
+1. Baixe o código do PoB (ex.: `https://poe.ninja/poe2/pob/raw/<id>`) para `tools/dl/<build>_pob.txt`.
+2. Crie `tools/builds/<build>/mkvariants.py` (veja o do Legionnaire): `kit/pobxml.py` decodifica o PoB, corta a árvore por pontos em fases e monta os itens de cada fase. `pobxml.walk_order` gera a ordem de alocação que a classe realmente consegue seguir (útil quando o PoB parte de outro ponto inicial, como com a joia Split Personality).
+3. Escreva `bdata.py` (fases, gems por nível, uniques, textos PT/EN) e, se quiser crafting, `bcraft.py`.
+4. `python tools/kit/mkart.py <prefixo> <ilustração>` gera a arte da build em `shared/art/`; registre a build em `shared/poe2.js`, `shared/poe2.css`, `shared/loader.js`, `shared/fx.js`, `tools/enhance.py`, `tools/build_all.py`, `tools/build_landing.py`, `tools/landing_v2.py` e nas listas de `tools/tests`.
 
 ## Regenerar / Rebuild (opcional)
 

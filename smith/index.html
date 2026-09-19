@@ -6,7 +6,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 <script>document.documentElement.dataset.build='smith'</script>
 <meta name="theme-color" content="#09070a">
-<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=5a821e91"></script>
+<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=2db4457e"></script>
 <title>Forja de Kitava</title>
 <meta name="description" content="Guia interativo Smith of Kitava Shield Wall + Avatar of Fire (Warrior) — PoE 2 Forbidden Rites">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -725,6 +725,18 @@ html[data-build="shaman"]{
   --scene-tint:rgba(36,12,6,.55);
 }
 
+html[data-build="legionnaire"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Rajdhani","Arial Narrow",sans-serif; --body:"Source Serif 4",Georgia,serif;
+  --ground:#060709; --ground2:#0a0c0f; --stone:#111419; --stone2:#171b21; --stone3:#20252d;
+  --edge:#2b2e34; --edge2:#4a4a48;
+  --gild:#b9a27a; --gild-hi:#f1e2bd; --gild-lo:#5c4f38; --gild-g:rgba(185,162,122,.13);
+  --accent:#ffd23f; --accent-hi:#fff0a8; --accent-g:rgba(255,210,63,.16);
+  --accent2:#4db8ff; --accent2-hi:#a9dcff; --accent2-g:rgba(77,184,255,.16);
+  --wisp:#ffe98a; --wisp-g:rgba(255,233,138,.14);
+  --text:#e8eaee; --mute:#a5abb5; --faint:#6c737f;
+  --scene-tint:rgba(24,20,6,.5);
+}
+
 /* ---------- base */
 html[data-build]{scroll-padding-top:190px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html[data-build] body{font-family:var(--body);font-size:clamp(15.5px,.36vw + 14px,18px);line-height:1.62;color:var(--text);background:var(--ground);overflow-x:hidden}
@@ -1301,6 +1313,131 @@ html[data-build] #sbShade:not([hidden]){z-index:80;background:rgba(0,0,0,.7);bac
 @media print{html[data-build] #side,html[data-build] #sbFab,html[data-build] #sbShade{display:none!important}}
 html[data-build] .sb-fab.sb-fab-away,.sb-fab.sb-fab-away{opacity:0;transform:translateY(16px);pointer-events:none}
 .sb-fab{transition:opacity .25s ease,transform .25s ease}
+
+/* FX v1 — animação de assinatura por classe (usada pelas builds e pela página inicial). Decorativa; respeita prefers-reduced-motion. */
+@keyframes skIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes skPulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes skSpin{to{transform:rotate(360deg)}}
+@keyframes skFlick{0%,86%,100%{opacity:0}88%{opacity:.95}90%{opacity:.15}92%{opacity:1}96%{opacity:0}}
+@keyframes skRise{0%{transform:translateY(0) scale(1);opacity:0}15%{opacity:.9}100%{transform:translateY(-46px) scale(.3);opacity:0}}
+@keyframes skDrift{0%{transform:translate(0,0);opacity:0}20%{opacity:.85}100%{transform:translate(var(--dx,14px),-38px);opacity:0}}
+@keyframes skRipple{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+@keyframes skTwinkle{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1.15)}}
+
+/* assinatura da classe: fica atrás do medalhão */
+.skfx{position:absolute;left:0;top:0;width:var(--m,110px);height:var(--m,110px);pointer-events:none;z-index:0}
+.brand-row{position:relative}
+.asc-medal{z-index:1}
+.skfx i{position:absolute;display:block}
+/* raio */
+.skfx.fx-lightning svg{position:absolute;inset:-34%;width:168%;height:168%;overflow:visible}
+.skfx.fx-lightning path{fill:none;stroke:var(--accent-hi);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px var(--accent));opacity:0;animation:skFlick 5.4s infinite}
+.skfx.fx-lightning path:nth-child(2){animation-delay:1.7s}.skfx.fx-lightning path:nth-child(3){animation-delay:3.1s}.skfx.fx-lightning path:nth-child(4){animation-delay:4.2s}
+/* fogo / forja / inferno */
+.skfx.fx-fire i,.skfx.fx-forge i,.skfx.fx-hell i{bottom:8%;left:calc(var(--x)*1%);width:4px;height:4px;border-radius:50%;background:radial-gradient(circle,var(--accent-hi),var(--accent));box-shadow:0 0 8px var(--accent);animation:skRise 3.2s ease-out infinite;animation-delay:var(--d)}
+.skfx.fx-forge i{border-radius:1px;transform:rotate(45deg)}
+.skfx.fx-hell i{background:radial-gradient(circle,#ffd9b0,var(--accent2,var(--accent)))}
+/* vazio */
+.skfx.fx-void i{inset:2%;border-radius:50%;border:1px solid var(--accent);animation:skRipple 4.8s ease-out infinite;animation-delay:var(--d)}
+/* veneno */
+.skfx.fx-toxic i{left:calc(var(--x)*1%);bottom:12%;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle,var(--accent-hi),transparent 70%);animation:skDrift 4.2s ease-out infinite;animation-delay:var(--d)}
+/* espíritos */
+.skfx.fx-spirit i{left:calc(var(--x)*1%);bottom:14%;width:5px;height:14px;border-radius:50%;background:linear-gradient(var(--wisp),transparent);filter:blur(.6px);animation:skDrift 5s ease-out infinite;animation-delay:var(--d)}
+/* estrelas */
+.skfx.fx-stars i{left:calc(var(--x)*1%);top:calc(var(--y)*1%);width:3px;height:3px;border-radius:50%;background:var(--accent-hi);box-shadow:0 0 6px var(--accent);animation:skTwinkle 3.4s ease-in-out infinite;animation-delay:var(--d)}
+
+
+/* variante da página inicial: centrada no medalhão do cartão */
+.build-art{position:relative}
+.build-art .skfx{left:50%;top:50%;transform:translate(-50%,-50%);width:var(--m,240px);height:var(--m,240px);z-index:0}
+.build-art .medal{z-index:1}
+@media (prefers-reduced-motion:reduce){.skfx,.skfx *{animation:none!important}}
+
+/* SKIN v3 — camada final sobre guide.css + poe2.css + build-now.css, igual para todas as builds.
+   Objetivo: menos ruído, mais leitura. Cabeçalho compacto, navegação em uma linha, painéis planos e uma animação de assinatura por classe.
+   Tudo é decorativo (respeita prefers-reduced-motion) e o guia funciona sem ele. */
+
+html[data-build]{
+  --sk-r:14px;--sk-line:color-mix(in srgb,var(--text) 9%,transparent);--sk-glass:color-mix(in srgb,var(--stone) 72%,transparent);
+  --sk-ease:cubic-bezier(.2,.8,.2,1);--sk-glow:color-mix(in srgb,var(--accent) 34%,transparent);
+}
+
+/* ---------- cabeçalho: uma faixa só (marca + nível) ---------- */
+html[data-build] header.console{grid-template-columns:minmax(0,1fr) minmax(320px,400px);gap:clamp(16px,2.6vw,36px);align-items:center;padding:6px 0 10px}
+html[data-build] .brand .eyebrow{gap:10px;margin:0}
+html[data-build] .brand .eyebrow .pill.league,html[data-build] .brand .eyebrow .homebtn.rites-link,html[data-build] .brand .divider.orn{display:none}
+html[data-build] .brand .eyebrow .homebtn{border:0;background:none;padding:2px 0;color:var(--mute);letter-spacing:.08em;font-size:.82rem;box-shadow:none}
+html[data-build] .brand .eyebrow .homebtn:hover{color:var(--accent-hi)}
+html[data-build] .brand .pill{background:none;border:1px solid var(--sk-line);color:var(--mute);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+html[data-build] .brand-row{margin-top:10px;gap:clamp(14px,2vw,26px)}
+html[data-build] .asc-medal{--m:clamp(78px,7.6vw,116px);position:relative}
+html[data-build] .asc-medal .cap{display:none}
+html[data-build] .brand h1{font-size:clamp(1.7rem,1.6vw + 1.1rem,3rem);line-height:1.04;text-wrap:balance}
+html[data-build] .brand h1 small{margin-top:8px;font-size:clamp(.7rem,.25vw + .64rem,.84rem);letter-spacing:.16em;opacity:.9}
+html[data-build] .brand > p{margin:12px 0 0;font-size:clamp(.94rem,.2vw + .9rem,1.04rem);line-height:1.55;max-width:60ch}
+html[data-build] #readingGuide,html[data-build] #navGroups,html[data-build] #guidePrint,html[data-build] .where .hrail,html[data-build] canvas#wisps{display:none!important}
+
+/* cartão de nível */
+html[data-build] .where.frame{padding:16px 18px;gap:12px;border-radius:var(--sk-r);background:linear-gradient(180deg,color-mix(in srgb,var(--stone2) 88%,transparent),color-mix(in srgb,var(--ground) 92%,transparent));box-shadow:0 20px 50px -28px #000,inset 0 1px 0 var(--sk-line)}
+html[data-build] .where .orbLv{width:64px;height:64px}
+html[data-build] .where .orbLv b{font-size:1.7rem}
+html[data-build] #mode button small{display:none}
+html[data-build] #mode button{padding:8px 10px}
+html[data-build] .stagesel{margin-top:6px}
+
+/* ---------- navegação: uma linha, 7 abas + Mais ---------- */
+html[data-build] #navigator{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:8px 10px;border-radius:var(--sk-r);position:sticky;top:8px;z-index:30;
+  background:color-mix(in srgb,var(--ground) 82%,transparent);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border:1px solid var(--sk-line);box-shadow:0 12px 40px -18px #000}
+html[data-build] #navigator::before{display:none}
+html[data-build] #navigator nav.tabs{order:0;flex:1 1 auto;min-width:0;padding:0;-webkit-mask:none;mask:none;overflow:visible;display:flex;flex-wrap:nowrap;gap:2px;position:relative}
+html[data-build] #navigator #guideTools{order:2;flex:0 1 160px;min-width:130px;margin:0;padding:0;border:0;background:none;position:relative}
+html[data-build] #guideTools .guide-tools-actions{display:none}
+html[data-build] #guideSearch{height:38px;border-radius:999px;background:color-mix(in srgb,var(--stone) 70%,transparent);border:1px solid var(--sk-line);font-size:.88rem}
+html[data-build] nav.tabs button{border-radius:999px;padding:8px 10px;border:1px solid transparent;font-size:.88rem;letter-spacing:.02em;white-space:nowrap;background:none;transition:color .25s,background .25s,transform .25s var(--sk-ease)}
+html[data-build] nav.tabs button::before{display:none!important}
+html[data-build] nav.tabs button[aria-selected=true]{background:var(--accent-g);border-color:color-mix(in srgb,var(--accent) 45%,transparent);color:var(--accent-hi);box-shadow:0 0 22px -8px var(--sk-glow)}
+html[data-build] nav.tabs button:hover:not([aria-selected=true]){background:color-mix(in srgb,var(--text) 6%,transparent);color:var(--text)}
+html[data-build] #navigator nav.tabs button[hidden]:not(.sk-sec){display:inline-flex!important}
+html[data-build] nav.tabs button.sk-sec,html[data-build] #navigator nav.tabs button.sk-sec[hidden]{display:none!important}
+html[data-build] #navigator nav.tabs.sk-open button.sk-sec,html[data-build] #navigator nav.tabs.sk-open button.sk-sec[hidden]{display:inline-flex!important;align-items:center;gap:6px}
+html[data-build] #skMore{order:1;border-radius:999px;padding:8px 12px;font:inherit;font-family:var(--ui);font-weight:700;font-size:.88rem;color:var(--mute);background:none;border:1px dashed var(--sk-line);cursor:pointer;white-space:nowrap}
+html[data-build] #skMore:hover,html[data-build] #skMore[aria-expanded=true]{color:var(--text);border-style:solid}
+html[data-build] #skMore.has-active{color:var(--accent-hi);border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:var(--accent-g)}
+html[data-build] nav.tabs.sk-open{flex-wrap:wrap;row-gap:6px}
+@media (max-width:820px){
+  html[data-build] #navigator{position:relative;top:0}
+  html[data-build] #navigator nav.tabs{overflow-x:auto;scrollbar-width:none}
+  html[data-build] #navigator #guideTools{flex:1 1 100%}
+  html[data-build] header.console{grid-template-columns:1fr}
+}
+
+/* ---------- painéis planos ---------- */
+html[data-build] .frame,html[data-build] .panel.frame{border-radius:var(--sk-r);border:1px solid var(--sk-line);background:linear-gradient(180deg,color-mix(in srgb,var(--stone2) 78%,transparent),color-mix(in srgb,var(--stone) 70%,transparent));box-shadow:0 18px 44px -30px #000;transition:transform .35s var(--sk-ease),border-color .3s,box-shadow .35s}
+html[data-build] .frame::before{display:none}
+html[data-build] .frame:hover{border-color:color-mix(in srgb,var(--accent) 38%,var(--sk-line));box-shadow:0 22px 50px -28px #000,0 0 30px -14px var(--sk-glow)}
+html[data-build] .sechead{margin:8px 0 14px}
+html[data-build] .sechead h2{font-size:clamp(1.3rem,.8vw + 1rem,1.9rem)}
+html[data-build] .sechead p{max-width:70ch}
+html[data-build] .nowcard .goal{font-size:1.02rem;line-height:1.65}
+html[data-build] .sk-hide{display:none!important}
+html[data-build] details.sk-more{margin:18px 0;border:1px dashed var(--sk-line);border-radius:var(--sk-r);background:color-mix(in srgb,var(--stone) 40%,transparent)}
+html[data-build] details.sk-more>summary{cursor:pointer;list-style:none;padding:13px 18px;font-family:var(--ui);font-weight:700;letter-spacing:.06em;color:var(--mute);display:flex;justify-content:space-between;align-items:center}
+html[data-build] details.sk-more>summary::-webkit-details-marker{display:none}
+html[data-build] details.sk-more>summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);transition:transform .3s var(--sk-ease)}
+html[data-build] details.sk-more[open]>summary::after{transform:rotate(45deg)}
+html[data-build] details.sk-more[open]>summary{color:var(--text);border-bottom:1px dashed var(--sk-line)}
+html[data-build] details.sk-more>.sk-body{padding:14px}
+
+/* ---------- animações ---------- */
+/* ---------- animações ---------- */
+html[data-build] .view.on{animation:skIn .55s var(--sk-ease) both}
+html[data-build] .view.on .stagger>*{animation:skIn .6s var(--sk-ease) both}
+html[data-build] .view.on .stagger>*:nth-child(2){animation-delay:.06s}html[data-build] .view.on .stagger>*:nth-child(3){animation-delay:.12s}
+html[data-build] .view.on .stagger>*:nth-child(4){animation-delay:.18s}html[data-build] .view.on .stagger>*:nth-child(n+5){animation-delay:.24s}
+html[data-build] .gem.frame:hover,html[data-build] .ucard:hover{transform:translateY(-3px)}
+
+
+@media (prefers-reduced-motion:reduce){html[data-build] .view.on,html[data-build] .view.on .stagger>*{animation:none!important}}
 
 </style>
 </head>
@@ -2246,8 +2383,10 @@ function wisps() {
 <script src="../shared/craft.js?v=2083ad36"></script>
 <script src="../shared/weights.js?v=9f9c6d27"></script>
 <script src="../shared/guide.js?v=45aee652"></script>
-<script src="../shared/poe2.js?v=8ac58fc1"></script>
+<script src="../shared/poe2.js?v=594e019b"></script>
 <script src="../shared/build-now.js?v=5a480ac2"></script>
+<script src="../shared/fx.js?v=ce99e5cd"></script>
+<script src="../shared/skin.js?v=42045f49"></script>
 <script>
 /* ------------------------------------------------ boot */
 $("#league").textContent = "Liga " + D.league + " · 0.5.5";

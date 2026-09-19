@@ -281,7 +281,7 @@ def grow(have, targets, prefer, out):
         t = front[0]; have.add(t); rem.discard(t); out.append(t)
 orders = {}; prev_set = set()
 for i, pid in enumerate(ORDER):
-    P = alloc[pid]["m"]; have = {START}; out = []
+    P = alloc[pid]["m"]; have = {getattr(D, "PHASE_START", {}).get(pid, START)}; out = []
     grow(have, P, prev_set, out)
     for nxt in ORDER[i + 1:]:
         grow(have, alloc[nxt]["m"], set(), out)

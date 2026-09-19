@@ -81,6 +81,7 @@ h1 em{font-style:normal;display:inline-block;font-size:.62em;font-weight:700;bac
 .build.ac{--acc:#b57bff;--acc2:#5fe3a1;--metal:#a996c9;--metal-hi:#ece2fb;--surface:rgba(16,11,26,.86);border-color:#43365c}
 .build.pf{--acc:#8fd14f;--acc2:#d3e36a;--metal:#9fb58a;--metal-hi:#e4f1d6;--surface:rgba(11,18,11,.86);border-color:#35492f}
 .build.sk{--acc:#ff9f43;--acc2:#e2465f;--metal:#c4a27a;--metal-hi:#f3e0c8;--surface:rgba(22,14,10,.86);border-color:#54402d}
+.build.lg{--acc:#ffd23f;--acc2:#4db8ff;--metal:#b9a27a;--metal-hi:#f1e2bd;--surface:rgba(14,14,12,.86);border-color:#4f4a3a}
 .build.ma{--acc:#4cc3ff;--acc2:#ffa62b;--metal:#8fb3cf;--metal-hi:#e2f1fb;--surface:rgba(8,14,22,.86);border-color:#2f4a66}
 .build::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;background:
   linear-gradient(var(--metal),var(--metal)) left 8px top 8px/22px 1px no-repeat,linear-gradient(var(--metal),var(--metal)) left 8px top 8px/1px 22px no-repeat,
@@ -198,3 +199,9 @@ footer a:hover{color:var(--gild-hi)}
 @media (pointer:coarse){.language a,.quick-links a{min-height:44px;display:inline-grid;place-items:center}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv-on .build,.rv-on .steps article,.rv-on .knowledge,.rv-on .section-heading,.rv-on .about{opacity:1;translate:none}}
 @media print{.scene{display:none}body{background:#fff;color:#111}.build-grid{display:block}.build{break-inside:avoid;background:#fff}.language,.build-art,.primary,.quick-links{display:none}p,h1,h2,span{color:#111!important;-webkit-text-fill-color:#111}.wrap{width:100%}}
+
+/* ---------- skin v3: cartões mais simples ---------- */
+.build-facts>div:nth-child(n+3){display:none}
+.build .quick-links{display:none}
+.build-grid{gap:clamp(20px,2.6vw,36px)}
+.build{border-radius:18px}

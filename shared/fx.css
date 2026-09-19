@@ -1,0 +1,38 @@
+/* FX v1 — animação de assinatura por classe (usada pelas builds e pela página inicial). Decorativa; respeita prefers-reduced-motion. */
+@keyframes skIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes skPulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes skSpin{to{transform:rotate(360deg)}}
+@keyframes skFlick{0%,86%,100%{opacity:0}88%{opacity:.95}90%{opacity:.15}92%{opacity:1}96%{opacity:0}}
+@keyframes skRise{0%{transform:translateY(0) scale(1);opacity:0}15%{opacity:.9}100%{transform:translateY(-46px) scale(.3);opacity:0}}
+@keyframes skDrift{0%{transform:translate(0,0);opacity:0}20%{opacity:.85}100%{transform:translate(var(--dx,14px),-38px);opacity:0}}
+@keyframes skRipple{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+@keyframes skTwinkle{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1.15)}}
+
+/* assinatura da classe: fica atrás do medalhão */
+.skfx{position:absolute;left:0;top:0;width:var(--m,110px);height:var(--m,110px);pointer-events:none;z-index:0}
+.brand-row{position:relative}
+.asc-medal{z-index:1}
+.skfx i{position:absolute;display:block}
+/* raio */
+.skfx.fx-lightning svg{position:absolute;inset:-34%;width:168%;height:168%;overflow:visible}
+.skfx.fx-lightning path{fill:none;stroke:var(--accent-hi);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px var(--accent));opacity:0;animation:skFlick 5.4s infinite}
+.skfx.fx-lightning path:nth-child(2){animation-delay:1.7s}.skfx.fx-lightning path:nth-child(3){animation-delay:3.1s}.skfx.fx-lightning path:nth-child(4){animation-delay:4.2s}
+/* fogo / forja / inferno */
+.skfx.fx-fire i,.skfx.fx-forge i,.skfx.fx-hell i{bottom:8%;left:calc(var(--x)*1%);width:4px;height:4px;border-radius:50%;background:radial-gradient(circle,var(--accent-hi),var(--accent));box-shadow:0 0 8px var(--accent);animation:skRise 3.2s ease-out infinite;animation-delay:var(--d)}
+.skfx.fx-forge i{border-radius:1px;transform:rotate(45deg)}
+.skfx.fx-hell i{background:radial-gradient(circle,#ffd9b0,var(--accent2,var(--accent)))}
+/* vazio */
+.skfx.fx-void i{inset:2%;border-radius:50%;border:1px solid var(--accent);animation:skRipple 4.8s ease-out infinite;animation-delay:var(--d)}
+/* veneno */
+.skfx.fx-toxic i{left:calc(var(--x)*1%);bottom:12%;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle,var(--accent-hi),transparent 70%);animation:skDrift 4.2s ease-out infinite;animation-delay:var(--d)}
+/* espíritos */
+.skfx.fx-spirit i{left:calc(var(--x)*1%);bottom:14%;width:5px;height:14px;border-radius:50%;background:linear-gradient(var(--wisp),transparent);filter:blur(.6px);animation:skDrift 5s ease-out infinite;animation-delay:var(--d)}
+/* estrelas */
+.skfx.fx-stars i{left:calc(var(--x)*1%);top:calc(var(--y)*1%);width:3px;height:3px;border-radius:50%;background:var(--accent-hi);box-shadow:0 0 6px var(--accent);animation:skTwinkle 3.4s ease-in-out infinite;animation-delay:var(--d)}
+
+
+/* variante da página inicial: centrada no medalhão do cartão */
+.build-art{position:relative}
+.build-art .skfx{left:50%;top:50%;transform:translate(-50%,-50%);width:var(--m,240px);height:var(--m,240px);z-index:0}
+.build-art .medal{z-index:1}
+@media (prefers-reduced-motion:reduce){.skfx,.skfx *{animation:none!important}}

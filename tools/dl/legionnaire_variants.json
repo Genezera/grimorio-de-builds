@@ -1,0 +1,3242 @@
+{
+ "guides": [
+  {
+   "src": "pob",
+   "title": "Gemling Legionnaire 96 — poe.ninja PoB",
+   "url": "https://poe.ninja/poe2/pob/29764",
+   "author": "poe.ninja",
+   "updatedAt": null,
+   "widgets": [],
+   "notes": null,
+   "profileNotes": {},
+   "rotations": {}
+  }
+ ],
+ "variants": [
+  {
+   "src": "pob",
+   "name": "A1",
+   "items": {},
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     55802,
+     58814,
+     51048,
+     17702
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "A2",
+   "items": {
+    "charm1": {
+     "n": "Breath of the Mountains",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SapphireUniqueCharm.dds",
+     "mods": [
+      "(10-15)% reduced Charges per use",
+      "Grants a Power Charge on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     24287,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     32763,
+     14267,
+     30808,
+     15775,
+     11598,
+     44516,
+     2113
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "A3",
+   "items": {
+    "charm1": {
+     "n": "Breath of the Mountains",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SapphireUniqueCharm.dds",
+     "mods": [
+      "(10-15)% reduced Charges per use",
+      "Grants a Power Charge on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Redflare Conduit",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/RedflareConduit.dds",
+     "mods": [
+      "+(50-70) to maximum Mana",
+      "+(20-30)% to Lightning Resistance",
+      "20% chance to gain a Power Charge on Hit",
+      "Lose all Power Charges on reaching maximum Power Charges",
+      "Shocks you when you reach maximum Power Charges"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Powertread",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Powertread.dds",
+     "mods": [
+      "(15-20)% increased Movement Speed",
+      "(60-80)% increased Evasion and Energy Shield",
+      "+(10-20) to Intelligence",
+      "+1 to Maximum Power Charges",
+      "12% increased Critical Damage Bonus per Power Charge"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     24287,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     32763,
+     14267,
+     30808,
+     15775,
+     11598,
+     44516,
+     2113,
+     54984,
+     11825,
+     47374,
+     18049,
+     5802,
+     14262,
+     34623,
+     14769,
+     40471,
+     7847,
+     326,
+     31449,
+     9444,
+     722,
+     31765,
+     57821
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "A4",
+   "items": {
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Redflare Conduit",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/RedflareConduit.dds",
+     "mods": [
+      "+(50-70) to maximum Mana",
+      "+(20-30)% to Lightning Resistance",
+      "20% chance to gain a Power Charge on Hit",
+      "Lose all Power Charges on reaching maximum Power Charges",
+      "Shocks you when you reach maximum Power Charges"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Powertread",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Powertread.dds",
+     "mods": [
+      "(15-20)% increased Movement Speed",
+      "(60-80)% increased Evasion and Energy Shield",
+      "+(10-20) to Intelligence",
+      "+1 to Maximum Power Charges",
+      "12% increased Critical Damage Bonus per Power Charge"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Grip of Kulemak",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TokenOfPassage05.dds",
+     "mods": [
+      "(31-38)% increased Armour",
+      "(5-9)% increased maximum Mana",
+      "(15-25)% increased Critical Damage Bonus",
+      "(37-39)% increased Evasion Rating",
+      "Hits against you have (20-30)% reduced Critical Damage Bonus",
+      "(5-9)% increased maximum Life",
+      "(20-30)% reduced Presence Area of Effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     24287,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     32763,
+     14267,
+     30808,
+     15775,
+     11598,
+     44516,
+     2113,
+     54984,
+     11825,
+     47374,
+     18049,
+     5802,
+     14262,
+     34623,
+     14769,
+     40471,
+     7847,
+     326,
+     31449,
+     9444,
+     722,
+     31765,
+     57821,
+     51741,
+     61834,
+     17088,
+     11604,
+     56045,
+     61196,
+     58329,
+     56360,
+     64643,
+     27176,
+     16705,
+     34621,
+     535,
+     20677,
+     4346,
+     4519,
+     13724,
+     38493,
+     23040,
+     13407,
+     13419,
+     14958
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "Mapas",
+   "items": {
+    "belt": {
+     "n": "Darkness Enthroned",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/DarknessEnthroned.dds",
+     "mods": [
+      "Has 3 Charm Slots",
+      "Flasks gain 0.17 charges per Second",
+      "100% increased effect of Socketed Augment Items",
+      "This item gains bonuses from Socketed Items as though it was a Body Armour"
+     ],
+     "stats": [],
+     "runes": [
+      "Idol of Eramir",
+      "Fox Idol"
+     ],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "Used when you become Frozen",
+      "20% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "71% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Used when you are affected by a Slow",
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "Art/2DItems/Charms/Basetypes/StoneCharm.dds",
+     "mods": [
+      "Used when you become Stunned",
+      "28% increased Duration",
+      "23% reduced Charges per use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Blood Spire",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff04.dds",
+     "mods": [
+      "Adds 96 to 132 Fire Damage",
+      "117% increased Elemental Damage with Attacks",
+      "26% increased Attack Speed",
+      "20% increased Stun Duration",
+      "Adds 7 to 252 Lightning Damage",
+      "+3 to Level of all Attack Skills"
+     ],
+     "stats": [],
+     "runes": [
+      "Saqawal's Rune of the Sky",
+      "Farrul's Rune of the Hunt"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Brimstone Torc",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "Allocates Paragon",
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "Grants Skill: Level 18 Eternal Rage",
+      "42% increased maximum Energy Shield",
+      "+4 to Level of all Melee Skills",
+      "+5% to Quality of all Skills",
+      "23% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Gloom Crown",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.dds",
+     "mods": [
+      "+2 to Maximum Power Charges",
+      "+62 to maximum Energy Shield",
+      "+37% to Cold Resistance",
+      "+33% to Lightning Resistance",
+      "73% increased Energy Shield",
+      "33% increased Energy Shield",
+      "+35 to maximum Life"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "408"
+      }
+     ],
+     "runes": [
+      "Greater Glacial Rune"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Redflare Conduit",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/RedflareConduit.dds",
+     "mods": [
+      "+66 to maximum Mana",
+      "+30% to Lightning Resistance",
+      "20% chance to gain a Power Charge on Hit",
+      "Gain a Power Charge every Second if you haven't lost Power Charges Recently",
+      "Recover 4% of maximum Mana when you consume a Power Charge"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "166"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "52"
+      },
+      {
+       "name": "Ward",
+       "value": "156"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune",
+      "Soul Core of Tacati",
+      "Soul Core of Citaqualotl"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Storm Fingers",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.dds",
+     "mods": [
+      "34% increased Energy Shield",
+      "Adds 24 to 35 Fire damage to Attacks",
+      "Adds 1 to 44 Lightning damage to Attacks",
+      "+35 to maximum Life",
+      "+2 to Level of all Melee Skills",
+      "+43% to Cold Resistance",
+      "+41% to Lightning Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "79"
+      },
+      {
+       "name": "Ward",
+       "value": "25"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Powertread",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Powertread.dds",
+     "mods": [
+      "19% increased Movement Speed",
+      "60% increased Evasion and Energy Shield",
+      "+14 to Intelligence",
+      "+1 to Maximum Power Charges",
+      "12% increased Critical Damage Bonus per Power Charge"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "134"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "44"
+      },
+      {
+       "name": "Ward",
+       "value": "34"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune",
+      "Greater Glacial Rune",
+      "Greater Storm Rune"
+     ],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Grip of Kulemak",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TokenOfPassage05.dds",
+     "mods": [
+      "6% increased Skill Speed",
+      "Inflict Abyssal Wasting on Hit",
+      "49% increased maximum Energy Shield",
+      "35% increased Critical Hit Chance",
+      "18% increased Critical Damage Bonus",
+      "30% faster start of Energy Shield Recharge",
+      "21% reduced Presence Area of Effect",
+      "27% reduced Light Radius"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [
+      "Gains 0.15 Charges per Second",
+      "24% of Recovery applied Instantly"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     24287,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     32763,
+     14267,
+     30808,
+     15775,
+     11598,
+     44516,
+     2113,
+     54984,
+     11825,
+     47374,
+     18049,
+     5802,
+     14262,
+     34623,
+     14769,
+     40471,
+     7847,
+     326,
+     31449,
+     9444,
+     722,
+     31765,
+     57821,
+     51741,
+     61834,
+     17088,
+     11604,
+     56045,
+     61196,
+     58329,
+     56360,
+     64643,
+     27176,
+     16705,
+     34621,
+     535,
+     20677,
+     4346,
+     4519,
+     13724,
+     38493,
+     23040,
+     13407,
+     13419,
+     14958,
+     17548,
+     33946,
+     34074,
+     23259,
+     22864,
+     56847,
+     28835,
+     28044,
+     42794,
+     31433,
+     55088,
+     34168,
+     55621,
+     38537,
+     54983,
+     39369,
+     36576,
+     25055,
+     41580,
+     5305,
+     3431,
+     43082,
+     4157
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "Endgame",
+   "items": {
+    "belt": {
+     "n": "Darkness Enthroned",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/DarknessEnthroned.dds",
+     "mods": [
+      "Has 3 Charm Slots",
+      "Flasks gain 0.17 charges per Second",
+      "100% increased effect of Socketed Augment Items",
+      "This item gains bonuses from Socketed Items as though it was a Body Armour"
+     ],
+     "stats": [],
+     "runes": [
+      "Idol of Eramir",
+      "Fox Idol"
+     ],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "Used when you become Frozen",
+      "20% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "71% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Used when you are affected by a Slow",
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "Art/2DItems/Charms/Basetypes/StoneCharm.dds",
+     "mods": [
+      "Used when you become Stunned",
+      "28% increased Duration",
+      "23% reduced Charges per use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Blood Spire",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff04.dds",
+     "mods": [
+      "Adds 96 to 132 Fire Damage",
+      "117% increased Elemental Damage with Attacks",
+      "26% increased Attack Speed",
+      "20% increased Stun Duration",
+      "Adds 7 to 252 Lightning Damage",
+      "+3 to Level of all Attack Skills"
+     ],
+     "stats": [],
+     "runes": [
+      "Saqawal's Rune of the Sky",
+      "Farrul's Rune of the Hunt"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Brimstone Torc",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "Allocates Paragon",
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "Grants Skill: Level 18 Eternal Rage",
+      "42% increased maximum Energy Shield",
+      "+4 to Level of all Melee Skills",
+      "+5% to Quality of all Skills",
+      "23% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Gloom Crown",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.dds",
+     "mods": [
+      "+2 to Maximum Power Charges",
+      "+62 to maximum Energy Shield",
+      "+37% to Cold Resistance",
+      "+33% to Lightning Resistance",
+      "73% increased Energy Shield",
+      "33% increased Energy Shield",
+      "+35 to maximum Life"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "408"
+      }
+     ],
+     "runes": [
+      "Greater Glacial Rune"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Redflare Conduit",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/RedflareConduit.dds",
+     "mods": [
+      "+66 to maximum Mana",
+      "+30% to Lightning Resistance",
+      "20% chance to gain a Power Charge on Hit",
+      "Gain a Power Charge every Second if you haven't lost Power Charges Recently",
+      "Recover 4% of maximum Mana when you consume a Power Charge"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "166"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "52"
+      },
+      {
+       "name": "Ward",
+       "value": "156"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune",
+      "Soul Core of Tacati",
+      "Soul Core of Citaqualotl"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Storm Fingers",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.dds",
+     "mods": [
+      "34% increased Energy Shield",
+      "Adds 24 to 35 Fire damage to Attacks",
+      "Adds 1 to 44 Lightning damage to Attacks",
+      "+35 to maximum Life",
+      "+2 to Level of all Melee Skills",
+      "+43% to Cold Resistance",
+      "+41% to Lightning Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "79"
+      },
+      {
+       "name": "Ward",
+       "value": "25"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Powertread",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Powertread.dds",
+     "mods": [
+      "19% increased Movement Speed",
+      "60% increased Evasion and Energy Shield",
+      "+14 to Intelligence",
+      "+1 to Maximum Power Charges",
+      "12% increased Critical Damage Bonus per Power Charge"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "134"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "44"
+      },
+      {
+       "name": "Ward",
+       "value": "34"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune",
+      "Greater Glacial Rune",
+      "Greater Storm Rune"
+     ],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Grip of Kulemak",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TokenOfPassage05.dds",
+     "mods": [
+      "6% increased Skill Speed",
+      "Inflict Abyssal Wasting on Hit",
+      "49% increased maximum Energy Shield",
+      "35% increased Critical Hit Chance",
+      "18% increased Critical Damage Bonus",
+      "30% faster start of Energy Shield Recharge",
+      "21% reduced Presence Area of Effect",
+      "27% reduced Light Radius"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [
+      "Gains 0.15 Charges per Second",
+      "24% of Recovery applied Instantly"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Adonia's Ego",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Uniques/CourtlyDiscord.dds",
+     "mods": [
+      "Grants Skill: Level 18 Power Siphon",
+      "Grants Skill: Pinnacle of Power",
+      "+100 to maximum Mana",
+      "+3 to Level of all Spell Skills",
+      "16% increased Cast Speed",
+      "-10% to all Elemental Resistances per Power Charge",
+      "+1 to Maximum Power Charges"
+     ],
+     "stats": [],
+     "runes": [
+      "Saqawal's Rune of the Sky"
+     ],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     20024,
+     44223,
+     49220,
+     4157,
+     34168,
+     55088,
+     61196,
+     13419,
+     56045,
+     58329,
+     11604,
+     14958,
+     31950,
+     56360,
+     17548,
+     8569,
+     17088,
+     64643,
+     27176,
+     47177,
+     61834,
+     16705,
+     40760,
+     51741,
+     21779,
+     34621,
+     57821,
+     57204,
+     535,
+     31765,
+     38541,
+     20677,
+     61601,
+     722,
+     36231,
+     59538,
+     3336,
+     4346,
+     15775,
+     47976,
+     4519,
+     11598,
+     14446,
+     29959,
+     30615,
+     30808,
+     13724,
+     65204,
+     6891,
+     14267,
+     44516,
+     45702,
+     61403,
+     2113,
+     56265,
+     21984,
+     31692,
+     32763,
+     46197,
+     326,
+     14262,
+     48773,
+     27705,
+     31449,
+     34623,
+     38493,
+     9444,
+     2582,
+     14769,
+     23040,
+     55621,
+     13407,
+     38537,
+     40471,
+     48116,
+     56847,
+     7847,
+     28835,
+     34015,
+     54983,
+     28044,
+     39369,
+     24287,
+     54984,
+     5305,
+     11825,
+     24786,
+     36576,
+     3431,
+     25055,
+     30657,
+     42794,
+     47374,
+     60735,
+     31433,
+     41580,
+     43082,
+     18049,
+     38463,
+     5802,
+     46882,
+     17702,
+     51048,
+     33946,
+     58814,
+     34074,
+     55802,
+     2847,
+     23259
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "Aspiracional",
+   "items": {
+    "belt": {
+     "n": "Darkness Enthroned",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/DarknessEnthroned.dds",
+     "mods": [
+      "Has 3 Charm Slots",
+      "Flasks gain 0.17 charges per Second",
+      "100% increased effect of Socketed Augment Items",
+      "This item gains bonuses from Socketed Items as though it was a Body Armour"
+     ],
+     "stats": [],
+     "runes": [
+      "Idol of Eramir",
+      "Fox Idol"
+     ],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "Used when you become Frozen",
+      "20% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "71% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Sacred Flame",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Scepters/Uniques/SacredFlame.dds",
+     "mods": [
+      "Grants Skill: Level 20 Purity of Fire",
+      "Gain 44% of Damage as Extra Fire Damage",
+      "Allies in your Presence Regenerate 2.6% of their Maximum Life per second",
+      "Allies in your Presence Gain 26% of Damage as Extra Fire Damage",
+      "Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Spirit",
+       "value": "100"
+      }
+     ],
+     "runes": [
+      "Purity of Fire"
+     ],
+     "skill": null
+    },
+    "charm2": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Used when you are affected by a Slow",
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Stone Charm",
+     "u": 0,
+     "icon": "Art/2DItems/Charms/Basetypes/StoneCharm.dds",
+     "mods": [
+      "Used when you become Stunned",
+      "28% increased Duration",
+      "23% reduced Charges per use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Blood Spire",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff04.dds",
+     "mods": [
+      "Adds 96 to 132 Fire Damage",
+      "117% increased Elemental Damage with Attacks",
+      "26% increased Attack Speed",
+      "20% increased Stun Duration",
+      "Adds 7 to 252 Lightning Damage",
+      "+3 to Level of all Attack Skills"
+     ],
+     "stats": [],
+     "runes": [
+      "Saqawal's Rune of the Sky",
+      "Farrul's Rune of the Hunt"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Brimstone Torc",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "Allocates Paragon",
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "Grants Skill: Level 18 Eternal Rage",
+      "42% increased maximum Energy Shield",
+      "+4 to Level of all Melee Skills",
+      "+5% to Quality of all Skills",
+      "23% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Gloom Crown",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.dds",
+     "mods": [
+      "+2 to Maximum Power Charges",
+      "+62 to maximum Energy Shield",
+      "+37% to Cold Resistance",
+      "+33% to Lightning Resistance",
+      "73% increased Energy Shield",
+      "33% increased Energy Shield",
+      "+35 to maximum Life"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "408"
+      }
+     ],
+     "runes": [
+      "Greater Glacial Rune"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Redflare Conduit",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/RedflareConduit.dds",
+     "mods": [
+      "+66 to maximum Mana",
+      "+30% to Lightning Resistance",
+      "20% chance to gain a Power Charge on Hit",
+      "Gain a Power Charge every Second if you haven't lost Power Charges Recently",
+      "Recover 4% of maximum Mana when you consume a Power Charge"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "166"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "52"
+      },
+      {
+       "name": "Ward",
+       "value": "156"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune",
+      "Soul Core of Tacati",
+      "Soul Core of Citaqualotl"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Storm Fingers",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.dds",
+     "mods": [
+      "34% increased Energy Shield",
+      "Adds 24 to 35 Fire damage to Attacks",
+      "Adds 1 to 44 Lightning damage to Attacks",
+      "+35 to maximum Life",
+      "+2 to Level of all Melee Skills",
+      "+43% to Cold Resistance",
+      "+41% to Lightning Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "79"
+      },
+      {
+       "name": "Ward",
+       "value": "25"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Powertread",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Powertread.dds",
+     "mods": [
+      "19% increased Movement Speed",
+      "60% increased Evasion and Energy Shield",
+      "+14 to Intelligence",
+      "+1 to Maximum Power Charges",
+      "12% increased Critical Damage Bonus per Power Charge"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "134"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "44"
+      },
+      {
+       "name": "Ward",
+       "value": "34"
+      }
+     ],
+     "runes": [
+      "Greater Desert Rune",
+      "Greater Glacial Rune",
+      "Greater Storm Rune"
+     ],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Grip of Kulemak",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TokenOfPassage05.dds",
+     "mods": [
+      "6% increased Skill Speed",
+      "Inflict Abyssal Wasting on Hit",
+      "49% increased maximum Energy Shield",
+      "35% increased Critical Hit Chance",
+      "18% increased Critical Damage Bonus",
+      "30% faster start of Energy Shield Recharge",
+      "21% reduced Presence Area of Effect",
+      "27% reduced Light Radius"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/MirrorRing.dds",
+     "mods": [
+      "Reflects opposite Ring"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [
+      "Gains 0.15 Charges per Second",
+      "24% of Recovery applied Instantly"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Adonia's Ego",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Wands/Uniques/CourtlyDiscord.dds",
+     "mods": [
+      "Grants Skill: Level 18 Power Siphon",
+      "Grants Skill: Pinnacle of Power",
+      "+100 to maximum Mana",
+      "+3 to Level of all Spell Skills",
+      "16% increased Cast Speed",
+      "-10% to all Elemental Resistances per Power Charge",
+      "+1 to Maximum Power Charges"
+     ],
+     "stats": [],
+     "runes": [
+      "Saqawal's Rune of the Sky"
+     ],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Quarterstaff Strike",
+     "slug": "quarterstaffstrike",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Bleed II",
+      "Behead II",
+      "Life Leech II",
+      "Ancestral Call II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Armour Demolisher II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Eternal Rage",
+     "slug": "eternalrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Pinnacle of Power",
+     "slug": "pinnacleofpower",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Heightened Charges",
+      "Cooldown Recovery II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Power Siphon",
+     "slug": "powersiphon",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Warm Blooded",
+      "Vitality II",
+      "Strong Hearted",
+      "Cool Headed",
+      "Precision II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Life Leech III",
+      "Magnified Area II",
+      "Pin I",
+      "Freeze",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Arc",
+     "slug": "arc",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Unleash"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Darts",
+     "slug": "frostdarts",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Orb of Storms",
+     "slug": "orbofstorms",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overabundance II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Incinerate",
+     "slug": "incinerate",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Frost Wall",
+     "slug": "frostwall",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaff",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Innervate",
+      "Blazing Critical",
+      "Thrill of the Kill II",
+      "Ice Bite II",
+      "Perpetual Charge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Nova Projectiles I",
+      "Perpetual Charge",
+      "Rapid Attacks II",
+      "Elemental Armament II",
+      "Rakiata's Flow"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Spark",
+     "slug": "spark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Compressed Duration II",
+      "Bounty II",
+      "Prolonged Duration II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Culling Strike II",
+      "Longshot II",
+      "Lightning Mastery"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Lightning Warp",
+     "slug": "lightningwarp",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Overcharge"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweakness",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Spell Cascade"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 96,
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     20024,
+     44223,
+     49220,
+     4157,
+     34168,
+     55088,
+     61196,
+     13419,
+     56045,
+     58329,
+     11604,
+     14958,
+     31950,
+     56360,
+     17548,
+     8569,
+     17088,
+     64643,
+     27176,
+     47177,
+     61834,
+     16705,
+     40760,
+     51741,
+     21779,
+     34621,
+     57821,
+     57204,
+     535,
+     31765,
+     38541,
+     20677,
+     61601,
+     722,
+     36231,
+     59538,
+     3336,
+     4346,
+     15775,
+     47976,
+     4519,
+     11598,
+     14446,
+     29959,
+     30615,
+     30808,
+     13724,
+     65204,
+     6891,
+     14267,
+     44516,
+     45702,
+     61403,
+     2113,
+     56265,
+     21984,
+     31692,
+     32763,
+     46197,
+     326,
+     14262,
+     48773,
+     27705,
+     31449,
+     34623,
+     38493,
+     9444,
+     2582,
+     14769,
+     23040,
+     55621,
+     13407,
+     38537,
+     40471,
+     48116,
+     56847,
+     7847,
+     28835,
+     34015,
+     54983,
+     28044,
+     39369,
+     24287,
+     54984,
+     5305,
+     11825,
+     24786,
+     36576,
+     3431,
+     25055,
+     30657,
+     42794,
+     47374,
+     60735,
+     31433,
+     41580,
+     43082,
+     18049,
+     38463,
+     5802,
+     46882,
+     17702,
+     51048,
+     33946,
+     58814,
+     34074,
+     55802,
+     2847,
+     23259,
+     22864,
+     52125,
+     54099,
+     8493,
+     54282,
+     54127,
+     64471,
+     28175,
+     2491,
+     50986
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     14429,
+     45248,
+     34882,
+     60287,
+     11641,
+     30996,
+     63259,
+     55582,
+     55536,
+     3084
+    ],
+    "attr": null,
+    "jewels": {}
+   },
+   "desc": ""
+  }
+ ]
+}

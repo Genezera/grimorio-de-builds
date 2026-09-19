@@ -1,3 +1,6 @@
+// skin v3: as abas principais ficam à vista; as demais abrem pelo botão "Mais".
+async function offenders(page){return page.evaluate(()=>{const W=innerWidth;return [...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.right>W+1&&!e.closest('#poeScene')&&getComputedStyle(e).position!=='fixed';}).slice(0,3).map(e=>e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+'.'+String(e.className).slice(0,30)+'→'+Math.round(e.getBoundingClientRect().right)).join(' | ');});}
+async function openTab(page,id){const b=page.locator(`[data-tab="${id}"]`);if(!(await b.isVisible()))await page.locator('#skMore').click();await b.click();}
 /* Run with Node and Playwright. Uses an ephemeral local HTTP server, no build network. */
 const { chromium } = require('playwright');
 const fs=require('node:fs'), path=require('node:path'), http=require('node:http'), assert=require('node:assert/strict');
@@ -18,20 +21,19 @@ const server=http.createServer((req,res)=>{
       page.on('response',r=>{if(r.url().startsWith(base+'/')&&r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
       await page.route('https://fonts.googleapis.com/**',route=>route.abort());
       await page.route('https://fonts.gstatic.com/**',route=>route.abort());
-      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman'].flatMap(b=>[b+'/index.html',b+'/en.html'])]){
+      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire'].flatMap(b=>[b+'/index.html',b+'/en.html'])]){
         await page.goto(base+'/'+file);await page.waitForLoadState('domcontentloaded');pages++;
         if(!file.includes('/')){
-          assert.equal(await page.locator('.build').count(),9);
-          assert.equal(await page.locator('.primary').count(),9);
+          assert.equal(await page.locator('.build').count(),10);
+          assert.equal(await page.locator('.primary').count(),10);
         }else{
           assert.equal(await page.locator('#navGroups button').count(),4);
           const ids=await page.locator('#tabs button').evaluateAll(xs=>xs.map(x=>x.dataset.tab));
           for(const id of ids){
-            const group=await page.evaluate(id=>guideGroup(id),id);
-            await page.locator(`[data-group="${group}"]`).click();await page.locator(`[data-tab="${id}"]`).click();
+            await openTab(page,id);
             assert.equal(await page.locator(`#v-${id}`).isVisible(),true,file+' '+id);
             assert.ok((await page.locator(`#v-${id}`).innerText()).length>30,file+' empty '+id);
-            if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${file} #${id}`);
+            if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${file} #${id} ${await offenders(page)}`);
             tabs++;
           }
           // Search really returns content matches, including accent-independent queries.
@@ -42,7 +44,7 @@ const server=http.createServer((req,res)=>{
           await page.locator('#guideSearch').fill('zzzzzznonsense');
           assert.equal(await page.locator('[data-search-go]').count(),0);
           await page.keyboard.press('Escape');
-          await page.locator('[data-group="1"]').click();await page.locator('[data-tab="craft"]').click();
+          await openTab(page,'craft');
           await page.locator('[data-cview="recipes"]').click();
           for(const id of await page.locator('[data-citem]').evaluateAll(xs=>xs.map(x=>x.dataset.citem))){
             await page.locator(`[data-citem="${id}"]`).click();
@@ -79,11 +81,11 @@ const server=http.createServer((req,res)=>{
           await page.locator('#cc-p').fill('0');assert.equal(await page.locator('.calc-results').count(),0);
           await page.locator('[data-cview="recipes"]').click();
           // Roving tab index and arrow navigation.
-          await page.locator('[data-tab="craft"]').focus();await page.keyboard.press('ArrowRight');
+          if(!(await page.locator('[data-tab="craft"]').isVisible()))await page.locator('#skMore').click();await page.locator('[data-tab="craft"]').focus();await page.keyboard.press('ArrowRight');
           assert.equal(await page.locator('#tabs [role="tab"][aria-selected="true"]').count(),1);
-          await page.locator('[data-tab="craft"]').click();
+          await openTab(page,'craft');
         }
-        if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${file}`);
+        if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${file} ${await offenders(page)}`);
         if(process.env.SCREENSHOT_DIR){fs.mkdirSync(process.env.SCREENSHOT_DIR,{recursive:true});await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`${file.replace('/','-')}-${width}.png`),fullPage:false});}
       }
       // Language switch preserves deep link and build-specific crafting progress.
@@ -120,7 +122,7 @@ const server=http.createServer((req,res)=>{
     for(const width of [320,1920]){
       const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
       page.on('pageerror',e=>errors.push(e.message));
-      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman']){
+      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire']){
         await page.goto(base+'/'+build+'/en.html');await page.evaluate(()=>setLv(95));pages++;
         for(const id of await page.evaluate(()=>TABS.map(x=>x[0]))){
           await page.evaluate(id=>guideGo(id),id);
