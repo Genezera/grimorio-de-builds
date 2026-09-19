@@ -1412,7 +1412,9 @@ html[data-build] nav.tabs.sk-open{flex-wrap:wrap;row-gap:6px}
 }
 
 /* ---------- painéis planos ---------- */
-html[data-build] .frame,html[data-build] .panel.frame{border-radius:var(--sk-r);border:1px solid var(--sk-line);background:linear-gradient(180deg,color-mix(in srgb,var(--stone2) 78%,transparent),color-mix(in srgb,var(--stone) 70%,transparent));box-shadow:0 18px 44px -30px #000;transition:transform .35s var(--sk-ease),border-color .3s,box-shadow .35s}
+html[data-build] .frame,html[data-build] .panel.frame{border-radius:var(--sk-r);border:1px solid var(--sk-line);box-shadow:0 18px 44px -30px #000;transition:transform .35s var(--sk-ease),border-color .3s,box-shadow .35s}
+/* .tablewrap tem o próprio fundo (sombras que indicam rolagem horizontal): não sobrescrever */
+html[data-build] .frame:not(.tablewrap),html[data-build] .panel.frame:not(.tablewrap){background:linear-gradient(180deg,color-mix(in srgb,var(--stone2) 78%,transparent),color-mix(in srgb,var(--stone) 70%,transparent))}
 html[data-build] .frame::before{display:none}
 html[data-build] .frame:hover{border-color:color-mix(in srgb,var(--accent) 38%,var(--sk-line));box-shadow:0 22px 50px -28px #000,0 0 30px -14px var(--sk-glow)}
 html[data-build] .sechead{margin:8px 0 14px}
@@ -1438,6 +1440,9 @@ html[data-build] .gem.frame:hover,html[data-build] .ucard:hover{transform:transl
 
 
 @media (prefers-reduced-motion:reduce){html[data-build] .view.on,html[data-build] .view.on .stagger>*{animation:none!important}}
+
+/* tabelas largas: em tablet rolam na horizontal em vez de espremer as colunas */
+@media (max-width:900px){html[data-build] .tablewrap > table{min-width:max(100%,780px)}}
 
 </style>
 </head>
