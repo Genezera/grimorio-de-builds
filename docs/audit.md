@@ -1,6 +1,6 @@
 # Auditoria das builds — 2026-09-19
 
-**0 erros · 0 avisos · 63 informações**
+**0 erros · 0 avisos · 64 informações**
 
 ## Informações
 
@@ -40,6 +40,7 @@
 - `shaman` **support-orphan** — Shock Conduction: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Supercritical: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Wildshards I: explicado em SUPWHY mas nunca usado
+- `shaman` **jewels-none** — o guia de origem não define joias: a aba Árvore mostra o aviso
 - `shaman` **guide-url** — sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)
 - `legionnaire` **support-orphan** — Ancestral Call II: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Armour Demolisher II: explicado em SUPWHY mas nunca usado

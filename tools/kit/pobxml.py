@@ -13,7 +13,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 sys.path.insert(0, HERE)
 import common  # noqa: E402
-import ninja   # noqa: E402  (grow_order, NODES, arte dos itens)
+import ninja   # noqa: E402
+import jewels as _jw  # noqa: E402  (grow_order, NODES, arte dos itens)
 
 SLOTS = {"Weapon 1": "mainHand_set1", "Weapon 2": "offHand_set1", "Weapon 1 Swap": "mainHand_set2", "Weapon 2 Swap": "offHand_set2", "Helmet": "helmet", "Body Armour": "body",
          "Gloves": "gloves", "Boots": "boots", "Amulet": "amulet", "Ring 1": "leftRing", "Ring 2": "rightRing", "Belt": "belt", "Charm 1": "charm1", "Charm 2": "charm2",
@@ -208,7 +209,7 @@ def tree(root, limit=None, order=None):
     main = [n for n in todos if not ninja.NODES.get(str(n), {}).get("ascendancyName")]
     ordem = order if order is not None else ninja.grow_order(main, ninja.CLASS_START[root.find("Build").get("className")])
     m = ordem[:limit] if limit else ordem
-    return {"m": m, "s1": [], "s2": [], "a": asc, "attr": None, "jewels": {}}
+    return {"m": m, "s1": [], "s2": [], "a": asc, "attr": None, "jewels": _jw.from_pob(root)}
 
 
 def main():

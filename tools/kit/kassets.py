@@ -295,6 +295,14 @@ for i, pid in enumerate(ORDER):
     orders[pid] = {"o": out, "n": len(P)}; prev_set = set(P)
     print(pid, "fase", len(P), "ordem", len(out))
 orders["uber"] = orders[ORDER[-1]]; alloc["uber"] = alloc[ORDER[-1]]
+import jewels as JW
+jewels_out = JW.collect(VAR, D, alloc, ORDER, N, adj)                            # joias e jewel sockets (PoB ou Mobalytics)
+for _j in jewels_out:                                                              # ícone dos uniques (poe.ninja)
+    if _j["u"] and _j["n"] not in uniq_icon:
+        _e = common.ECO.get(_j["n"]) or {}
+        _k = icon_url(_e.get("icon"), "U_" + re.sub(r"[^A-Za-z]", "", _j["n"]), 96)
+        if _k: uniq_icon[_j["n"]] = _k
+print("joias", len(jewels_out), [(j["n"], j["near"], j["first"]) for j in jewels_out][:8])
 QUEST = [[8, 1], [12, 2], [18, 3], [22, 4], [26, 5], [30, 6], [34, 8], [40, 10], [45, 12], [50, 14], [54, 16], [58, 18], [62, 20], [66, 22], [70, 24]]
 kinds = {n[0]: n[3] for n in main_nodes}
 
@@ -319,7 +327,7 @@ for g in getattr(D, "GEAR", []):
 A = dict(icons=ICONS, baseIcon=base_icon, tree=dict(nodes=main_nodes, edges=main_edges, meta={str(k): v for k, v in main_meta.items()}),
          asc=dict(nodes=asc_nodes, edges=asc_edges, meta={str(k): v for k, v in asc_meta.items()}),
          alloc=alloc, notables=notables, passiveIcon={str(k): v for k, v in passive_icons.items()}, gemIcon=gem_icon, metaNotables=[],
-         sets=sets_out, supIcon=sup_icon, uniqIcon=uniq_icon, guide=guide, order=orders, quest=QUEST,
+         sets=sets_out, supIcon=sup_icon, uniqIcon=uniq_icon, guide=guide, order=orders, quest=QUEST, jewels=jewels_out,
          nodeKind={str(k): v for k, v in kinds.items() if v in (1, 2, 3)})
 json.dump(A, open(os.path.join(OUTDIR, "assets.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 need_sup = sorted({s for p in D.PHASES for g in p["gems"] for s in g["sup"]} - set(sup_icon))

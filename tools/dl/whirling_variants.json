@@ -357,7 +357,92 @@
     "s2": [],
     "a": [],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -759,7 +844,92 @@
     ],
     "a": [],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -1188,7 +1358,92 @@
     ],
     "a": [],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -1651,7 +1906,92 @@
     ],
     "a": [],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -2143,7 +2483,92 @@
     ],
     "a": [],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -2723,7 +3148,92 @@
      30996
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -3425,7 +3935,92 @@
      30996
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 46882,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 18% of Damage as Extra Fire Damage",
+       "Gain 14% of Damage as Extra Cold Damage",
+       "Recover 2% of maximum Life on Kill",
+       "Recover 1% of maximum Mana on Kill"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+3 to Level of all Glacial Bolt Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+6 to Intelligence",
+       "Passives in Radius of Blood Magic can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Jack of all Trades",
+       "Allocates Rapid Reload"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 55190,
+      "n": "Spirit Bliss",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Crossbows",
+       "Notable Passive Skills in Radius also grant 7% increased Magnitude of Shock you inflict",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 26725,
+      "n": "Loath Vessel",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "3% increased Attack Speed",
+       "10% increased Attack Damage",
+       "4% increased Attack Speed with Spears",
+       "11% increased Damage with Crossbows"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   }

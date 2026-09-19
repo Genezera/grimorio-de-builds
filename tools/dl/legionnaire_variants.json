@@ -281,7 +281,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -583,7 +681,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -931,7 +1127,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -1318,7 +1612,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -1919,7 +2311,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -2555,7 +3045,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -3234,7 +3822,105 @@
      3084
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Dragon Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "16% increased Critical Hit Chance for Attacks",
+       "4% increased Attack Speed",
+       "14% increased Damage with Quarterstaves",
+       "6% increased Elemental Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 21984,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 2491,
+      "n": "Prism of Belief",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "+2 to Level of all Falling Thunder Skills"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "Heart of the Well",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Gain 13% of Damage as Extra Cold Damage",
+       "Gain 15% of Damage as Extra Lightning Damage",
+       "2% increased Attack Speed",
+       "+1% to Maximum Lightning Resistance"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Hypnotic Wound",
+      "u": false,
+      "base": "Sapphire",
+      "mods": [
+       "11% increased Cold Damage",
+       "15% increased Critical Hit Chance",
+       "Recover 2% of maximum Mana on Kill",
+       "20% increased Magnitude of Damaging Ailments you inflict with Critical Hits"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Blight Joy",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "4% increased Attack Speed",
+       "4% increased Attack Speed with Quarterstaves",
+       "15% increased Elemental Damage",
+       "15% increased Lightning Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Loose Flesh",
+       "Allocates Lust for Power"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   }

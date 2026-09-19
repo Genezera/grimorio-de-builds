@@ -325,6 +325,8 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .chip.cost-value{color:#e6c979;border-color:rgba(230,201,121,.4)} .chip.cost-lux{color:#d8a4ff;border-color:rgba(216,164,255,.45)}
 .optnext{margin:2px 0 0;color:var(--mute);font-size:.86rem;line-height:1.4} .optnext b{color:var(--text)}
 .tier.locked{opacity:.55} .tier .lk{color:var(--mute);font-size:.8rem;margin-left:6px;white-space:nowrap}
+.nrow.ahead{opacity:.72} .nrow small{display:block;color:var(--mute);line-height:1.4;margin-top:2px} .nrow .rk{font-family:var(--ui);font-weight:800;font-size:.8rem;color:var(--gild-hi);min-width:1.2em;text-align:center}
+.jw-note{margin:2px 0 8px;padding:0 6px;color:var(--mute);font-size:.86rem;line-height:1.4}
 .optnone{color:var(--mute);font-size:.88rem;margin:2px 0 0}
 .slot .lvnote{font-family:var(--ui);font-size:.8rem;color:var(--mute);margin:0}
 
@@ -1086,6 +1088,10 @@ class TreeView {
       const [id, x, y, k] = this.hover; const rad = Math.max(k === 2 ? 80 : k === 1 ? 52 : 30, 6 / s) * 1.5;
       ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI * 2); ctx.strokeStyle = "#fff5d6"; ctx.lineWidth = 2 / s; ctx.stroke();
     }
+    if (typeof A !== "undefined" && A.jewels) {
+      for (const j of A.jewels) { const i = this.idx.get(j.node); if (i == null) continue; const n = this.nodes[i]; const rad = Math.max(58, 6 / s) * 1.7;
+        ctx.beginPath(); ctx.arc(n[1], n[2], rad, 0, Math.PI * 2); ctx.strokeStyle = "#E8C66A"; ctx.lineWidth = Math.max(3 / s, 20); ctx.shadowColor = "#E8C66A"; ctx.shadowBlur = 12 * r; ctx.stroke(); ctx.shadowBlur = 0; }
+    }
     if (this.metaSet) {
       for (const n of this.nodes) { if (!this.metaSet.has(n[0])) continue; const rad = Math.max(n[3] === 2 ? 80 : 52, 5 / s) * 1.55;
         ctx.beginPath(); ctx.arc(n[1], n[2], rad, 0, Math.PI * 2); ctx.strokeStyle = "#B98AF0"; ctx.lineWidth = Math.max(2.4 / s, 16); ctx.shadowColor = "#A77BE0"; ctx.shadowBlur = 14 * r; ctx.stroke(); ctx.shadowBlur = 0; }
@@ -1120,6 +1126,16 @@ class TreeView {
 }
 let TV = null, AV = null;
 const TREE_ORDER = D.treeOrder;
+function jewelsPanel(pid) {
+  const idx = id => TREE_ORDER.indexOf(id);
+  const phaseName = id => (D.phases.find(p => p.id === id) || {}).name || "";
+  return `<div class="plate">${T("Joias e jewel sockets", "Jewels and jewel sockets")}</div>
+  <p class="jw-note">${T("Cada joia vai no socket indicado — anel dourado no mapa da árvore. Clique para centralizar.", "Each jewel goes in the socket shown — gold ring on the tree map. Click to centre it.")}</p>
+  <div class="nlist">${A.jewels.map((j, i) => { const im = j.u ? uniqImg(j.n) : ""; const on = j.first && idx(j.first) <= idx(pid);
+    return `<div class="nrow k3 ${on ? "" : "ahead"}" data-gotree="${j.node}">${im ? `<img src="${im}" alt="">` : `<img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">`}<div><b>${i + 1}. ${esc(j.n)} <span class="chip ${j.u ? "unique" : "rare"}" style="font-size:.7rem">${j.u ? "Unique" : "Rare"}</span></b>
+      <small>${T("Socket perto de", "Socket near")} <span style="color:var(--text)">${esc(j.near || "?")}</span>${j.first ? ` · ${on ? T("já alocado nesta fase", "allocated in this phase") : T("aloque na fase", "allocate in phase")} ${on ? "" : esc(phaseName(j.first))}` : ""}${j.where === "s1" ? ` · Weapon Set I` : j.where === "s2" ? ` · Weapon Set II` : ""}</small>
+      ${j.mods && j.mods.length ? `<small>${j.mods.map(esc).join(" · ")}</small>` : ""}${j.radius ? `<small>${T("Raio", "Radius")}: ${esc(j.radius)}${j.corrupted ? " · " + T("corrompida", "corrupted") : ""}</small>` : ""}</div></div>`; }).join("")}</div>`;
+}
 function vArvore() {
   const pid = S.treePhase || curPhase().id;
   const nt = A.notables[pid]; const name = (D.phases.find(p => p.id === pid) || D.phases[D.phases.length - 1]).name;
@@ -1146,6 +1162,7 @@ function vArvore() {
       ${ts.extra ? `<p style="padding:6px 10px;color:var(--gild-hi);margin:0">Você tem ${ts.extra} ponto(s) além do caminho completo do guia: coloque em vida, Spirit ou resistência perto do caminho.</p>` : ""}
       <div class="plate">Notables · ${esc(name)}${lvBased ? ` (nível ${S.lv})` : ""}</div>
       <div class="nlist">${ts.notables.filter(n => n.k !== 3).map(n => `<div class="nrow k${n.k} ${n.new ? "new" : ""}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt=""><div><b>${esc(n.n)} ${n.new ? '<span class="chip wisp" style="font-size:.7rem">novo</span>' : ""}${n.ahead ? '<span class="chip bear" style="font-size:.7rem">da próxima fase</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
+      ${A.jewels && A.jewels.length ? jewelsPanel(pid) : `<div class="divider"></div><p class="jw-note">${T("O guia de origem não define joias para esta build: use a joia que der vida, resistência ou o dano que você usa.", "The source guide doesn't define jewels for this build: use whatever gives life, resistances or the damage you use.")}</p>`}
       ${A.metaNotables.length ? `<div class="divider"></div><p class="label" style="padding:0 6px">${T("Notables do meta", "Meta notables")}</p>` : ""}
       ${A.metaNotables.map(n => `<div class="nrow k${n.k}" data-gotree="${n.id}"><img src="${ic(n.ic) || ""}" alt="" style="border-color:#AA7BE0"><div><b>${esc(n.n)} <span class="chip bear" style="font-size:.7rem">${n.pct}%</span>${ts.m.includes(n.id) ? ' <span class="chip gold" style="font-size:.7rem">no guia</span>' : ""}</b><small>${esc(n.s.join(" · "))}</small></div></div>`).join("")}
       ${nt.removed.length ? `<div class="divider"></div><p class="label" style="padding:0 6px">Removidos nesta fase</p><p style="padding:0 6px;color:var(--faint);margin:4px 0">${nt.removed.map(esc).join(" · ")}</p>` : ""}
@@ -1167,7 +1184,8 @@ function mountTree() {
   const prev = i > 0 ? A.alloc[TREE_ORDER[i - 1]] : null; const prevIds = prev ? new Set([...prev.m, ...prev.s1, ...prev.s2]) : new Set();
   const tip = (el, meta) => (n, x, y) => {
     if (!n) { el.style.display = "none"; return; } const m = meta[n[0]]; if (!m) { el.style.display = "none"; return; }
-    el.innerHTML = `<div class="th">${esc(m[0])}</div><div class="st">${(m[1] || []).map(s => `<span>${esc(s)}</span>`).join("") || "<span>—</span>"}</div>`;
+    const jw = (typeof A !== "undefined" && A.jewels || []).find(j => j.node === n[0]); const lines = jw ? [`${jw.n} · ${jw.u ? "Unique" : "Rare"}`, ...(jw.mods || [])] : (m[1] || []);
+    el.innerHTML = `<div class="th">${esc(m[0])}${jw ? " ◆" : ""}</div><div class="st">${lines.map(s => `<span>${esc(s)}</span>`).join("") || "<span>—</span>"}</div>`;
     el.style.display = "block"; const box = el.parentElement.getBoundingClientRect();
     el.style.left = Math.min(x + 16, box.width - 330) + "px"; el.style.top = Math.min(y + 16, box.height - 120) + "px";
   };

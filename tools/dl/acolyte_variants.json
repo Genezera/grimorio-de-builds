@@ -8442,11 +8442,51 @@
      "63888": 0,
      "65009": 1
     },
-    "jewels": {
-     "32763": 15,
-     "60735": 16,
-     "61834": 17
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 67
@@ -9099,11 +9139,51 @@
      "63888": 0,
      "65009": 2
     },
-    "jewels": {
-     "32763": 35,
-     "60735": 36,
-     "61834": 37
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 79
@@ -9793,11 +9873,51 @@
      "63888": 0,
      "65009": 2
     },
-    "jewels": {
-     "32763": 28,
-     "60735": 29,
-     "61834": 73
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 92
@@ -10229,11 +10349,51 @@
      "63888": 0,
      "65009": 1
     },
-    "jewels": {
-     "32763": 15,
-     "60735": 16,
-     "61834": 17
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -10693,11 +10853,51 @@
      "63888": 0,
      "65009": 1
     },
-    "jewels": {
-     "32763": 15,
-     "60735": 16,
-     "61834": 17
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -11300,11 +11500,51 @@
      "63888": 0,
      "65009": 2
     },
-    "jewels": {
-     "32763": 35,
-     "60735": 36,
-     "61834": 37
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -11836,7 +12076,51 @@
      664
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 99
@@ -12329,7 +12613,51 @@
      664
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 99
@@ -12747,7 +13075,51 @@
      664
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 99
@@ -13266,7 +13638,51 @@
      664
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 99
@@ -13790,7 +14206,51 @@
      664
     ],
     "attr": null,
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Charm Damage While Using",
+       "Lightning Damage",
+       "Poison Duration"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Attack Critical Damage",
+       "Evasion"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Ailment Threshold",
+       "Damage Vs Rare Or Unique",
+       "Forking Projectiles",
+       "Hazard Damage"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 99

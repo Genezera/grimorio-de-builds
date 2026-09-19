@@ -91,6 +91,7 @@ for a, b in C.get("recolor", {}).items():
 
 leftover = [w for w in ("Lowepe", "Spell Totem", "totemCalc", "Grim Pillars", "Druid") if w in t]
 assert not leftover, f"sobras do Oracle: {leftover}"
-exec(open(os.path.join(HERE, "gearopts_patch.py"), encoding="utf-8").read())      # ranking por nível (com opts) e linhas travadas por nível (sem opts)
+exec(open(os.path.join(HERE, "gearopts_patch.py"), encoding="utf-8").read())
+exec(open(os.path.join(HERE, "jewels_patch.py"), encoding="utf-8").read())      # painel de joias e anel dourado nos sockets      # ranking por nível (com opts) e linhas travadas por nível (sem opts)
 open(os.path.join(BDIR, "app_template.html"), "w", encoding="utf-8").write(t)
 print(BID, "template ok", len(t))

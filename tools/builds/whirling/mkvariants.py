@@ -9,7 +9,7 @@ import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..", "..")
 sys.path.insert(0, os.path.join(ROOT, "kit"))
-import pobxml, ninja  # noqa: E402
+import pobxml, ninja, jewels  # noqa: E402
 
 URL = "https://mobalytics.gg/poe-2/profile/stone-dagger-zuckm8/builds/whirling-glacial-bolt-gemling-poe2-0-5"
 root = pobxml.decode(open(os.path.join(ROOT, "dl", "whirling_pob.txt"), encoding="utf-8").read().strip())
@@ -87,5 +87,5 @@ for nome, pts, n1, n2, its in CUTS:
 FINAL_WALK = pobxml.walk_nodes(FINAL["m"], START, PRIORITY)
 for nome, tr, m_order, its in (("Endgame", EARLY, WALK, EARLY_ITEMS), ("Aspiracional", FINAL, FINAL_WALK, FULL)):
     out.append({"src": "mobalytics", "name": nome, "items": its, "gems": G, "level": 97,
-                "tree": {"m": m_order, "s1": S1 if tr is EARLY else tr["s1"], "s2": S2 if tr is EARLY else tr["s2"], "a": ASC, "attr": None, "jewels": {}}, "desc": ""})
+                "tree": {"m": m_order, "s1": S1 if tr is EARLY else tr["s1"], "s2": S2 if tr is EARLY else tr["s2"], "a": ASC, "attr": None, "jewels": jewels.from_pob(root)}, "desc": ""})
 pobxml.write("whirling", root, out, URL)

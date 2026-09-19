@@ -10557,7 +10557,66 @@
      19370
     ],
     "attr": {},
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 100
@@ -11105,11 +11164,66 @@
      51546
     ],
     "attr": {},
-    "jewels": {
-     "32763": 34,
-     "60735": 18,
-     "61834": 33
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 100
@@ -11700,11 +11814,66 @@
      51546
     ],
     "attr": {},
-    "jewels": {
-     "32763": 34,
-     "60735": 18,
-     "61834": 33
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 100
@@ -12330,11 +12499,66 @@
      51546
     ],
     "attr": {},
-    "jewels": {
-     "32763": 35,
-     "60735": 36,
-     "61834": 37
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 100
@@ -12979,12 +13203,66 @@
      51546
     ],
     "attr": {},
-    "jewels": {
-     "32763": 107,
-     "46882": 108,
-     "60735": 42,
-     "61834": 106
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 100
@@ -13611,12 +13889,66 @@
      51546
     ],
     "attr": {},
-    "jewels": {
-     "32763": 38,
-     "46882": 41,
-     "60735": 40,
-     "61834": 39
-    }
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": "",
    "level": 100
@@ -13878,7 +14210,66 @@
     "s2": [],
     "a": [],
     "attr": {},
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -14213,7 +14604,66 @@
      34081
     ],
     "attr": {},
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -14579,7 +15029,66 @@
      19370
     ],
     "attr": {},
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   },
@@ -14978,7 +15487,66 @@
      19370
     ],
     "attr": {},
-    "jewels": {}
+    "jewels": [
+     {
+      "node": 32763,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Rare Emerald",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "Projectile Damage",
+       "Attack Critical Damage",
+       "Attack Critical Chance",
+       "Attack Speed"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Time-Lost Sapphire",
+      "u": false,
+      "base": "Time-Lost Sapphire",
+      "mods": [
+       "Radius Energy Shield",
+       "Radius Critical Chance",
+       "Radius Critical Damage"
+      ],
+      "radius": "variável",
+      "corrupted": false,
+      "note": ""
+     }
+    ]
    },
    "desc": ""
   }

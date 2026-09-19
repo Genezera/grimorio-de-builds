@@ -2,7 +2,7 @@
  "date": "2026-09-19",
  "errors": 0,
  "warnings": 0,
- "info": 63,
+ "info": 64,
  "issues": [
   {
    "level": "I",
@@ -219,6 +219,12 @@
    "build": "shaman",
    "code": "support-orphan",
    "msg": "Wildshards I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "jewels-none",
+   "msg": "o guia de origem não define joias: a aba Árvore mostra o aviso"
   },
   {
    "level": "I",

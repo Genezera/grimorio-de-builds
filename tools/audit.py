@@ -140,6 +140,18 @@ def check_tree(bid, B):
             if lost: add("W", bid, "tree-connect", f"{pid}: {lost} de {n} nós da árvore não ligam ao início da classe pelos nós anteriores (caminho que o jogador não consegue seguir)")
 
 
+def check_jewels(bid, B):
+    """Joias: o jogador precisa saber em qual jewel socket cada uma vai. Sem dados = aviso honesto; socket que nenhuma fase aloca = incoerência."""
+    p = os.path.join(HERE, "builds", bid, "assets.json")
+    if not os.path.exists(p): return
+    J = json.load(open(p, encoding="utf-8")).get("jewels") or []
+    if not J:
+        add("I", bid, "jewels-none", "o guia de origem não define joias: a aba Árvore mostra o aviso"); return
+    for j in J:
+        if j.get("first") is None: add("W", bid, "jewel-socket", f"{j['n']}: o socket {j['node']} não é alocado em nenhuma fase da árvore")
+        if not j.get("mods") and not j.get("u"): add("I", bid, "jewel-mods", f"{j['n']} (socket {j['node']}): sem lista de afixos")
+
+
 def check_sources(bid, B):
     if not getattr(B, "SOURCES", None): add("E", bid, "sources", "sem fontes")
     for s in getattr(B, "SOURCES", []):
@@ -183,7 +195,7 @@ def main():
         if e.get("kit"):
             B = load(bid)
             if B:
-                for fn in (check_phases, check_spirit, check_uniques, check_supports, check_tree, check_sources): fn(bid, B)
+                for fn in (check_phases, check_spirit, check_uniques, check_supports, check_tree, check_jewels, check_sources): fn(bid, B)
         check_pages(dict(e, key=e["key"]))
     E = [i for i in issues if i["level"] == "E"]; W = [i for i in issues if i["level"] == "W"]; I = [i for i in issues if i["level"] == "I"]
     json.dump(dict(date=time.strftime("%Y-%m-%d"), errors=len(E), warnings=len(W), info=len(I), issues=issues), open(os.path.join(HERE, "dl", "audit.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
