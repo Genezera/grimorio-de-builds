@@ -1,7 +1,12 @@
 {
- "date": "2026-09-19 13:09",
+ "date": "2026-09-19 16:22",
  "passed": true,
  "steps": [
+  {
+   "step": "coleta poe.ninja (ninja_meta)",
+   "ok": true,
+   "must": false
+  },
   {
    "step": "registro e rankings (registry)",
    "ok": true,
@@ -9,6 +14,11 @@
   },
   {
    "step": "candidatas a novas builds (discover)",
+   "ok": true,
+   "must": false
+  },
+  {
+   "step": "reconstrução de todas as páginas (build_all)",
    "ok": true,
    "must": false
   },
