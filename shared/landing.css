@@ -219,3 +219,5 @@ footer a:hover{color:var(--gild-hi)}
 .build-rate em.meta-meta{color:#f0a36a;border-color:rgba(240,163,106,.5)} .build-rate em.meta-alternativa{color:#8fd0a8;border-color:rgba(143,208,168,.5)} .build-rate em.meta-fora-do-meta{color:#b9a3ff;border-color:rgba(185,163,255,.55)}
 .build[hidden]{display:none!important}
 @media (max-width:640px){.build-filter select{min-width:0;width:100%}.build-filter label{flex:1 1 44%}}
+.build.tw{--acc:#9be564;--acc2:#ffb347;--metal:#b9c9a0;--metal-hi:#eef7d6;--surface:rgba(9,14,10,.86);border-color:#3a4f3a}
+.build.sh{--acc:#2fd9c0;--acc2:#d1a75f;--metal:#d1a75f;--metal-hi:#f6dcab;--surface:rgba(12,9,9,.86);border-color:#4a3a2a}

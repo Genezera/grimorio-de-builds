@@ -60,7 +60,7 @@ function audit(scopeSel) {
   const base = `http://127.0.0.1:${server.address().port}`;
   const browser = await chromium.launch({ headless: true, ...(process.env.BROWSER_CHANNEL ? { channel: process.env.BROWSER_CHANNEL } : {}) });
   const problems = []; let checks = 0;
-  const pages = (process.env.PAGES || ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling'].flatMap(b => [b + '/index.html', b + '/en.html']).concat(['index.html', 'en.html', 'rites/index.html', 'rites/en.html']).join(',')).split(',');
+  const pages = (process.env.PAGES || ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister'].flatMap(b => [b + '/index.html', b + '/en.html']).concat(['index.html', 'en.html', 'rites/index.html', 'rites/en.html']).join(',')).split(',');
   try {
     for (const [w, h] of SIZES) {
       const ctx = await browser.newContext({ viewport: { width: w, height: h }, reducedMotion: 'reduce', hasTouch: w < 1024 });
@@ -68,7 +68,7 @@ function audit(scopeSel) {
       await page.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
       for (const file of pages) {
         await page.goto(`${base}/${file}`); await page.waitForTimeout(250);
-        const isBuild = /silverfist|oracle|tactician|infernalist|acolyte|pathfinder|smith|martial|shaman|legionnaire|whirling/.test(file);
+        const isBuild = /silverfist|oracle|tactician|infernalist|acolyte|pathfinder|smith|martial|shaman|legionnaire|whirling|twister/.test(file);
         const run = async (label, scope) => {
           await page.evaluate(() => scrollTo(0, 0)); await page.waitForTimeout(60);
           const r = await page.evaluate(audit, scope); checks++;

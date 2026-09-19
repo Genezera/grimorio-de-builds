@@ -22,7 +22,8 @@ for key, bid, picks in (("ta", "tactician", [("gemIcon", "Explosive Grenade"), (
                         ("ma", "martial", [("gemIcon", "Oil Barrage"), ("gemIcon", "Lightning Warp"), ("gemIcon", "Cast on Critical"), ("uniqIcon", "Forgotten Warden")]),
                         ("sh", "shaman", [("gemIcon", "Spark"), ("gemIcon", "Comet"), ("gemIcon", "Archmage"), ("uniqIcon", "Sire of Shards")]),
                         ("lg", "legionnaire", [("gemIcon", "Falling Thunder"), ("gemIcon", "Charged Staff"), ("gemIcon", "Herald of Thunder"), ("uniqIcon", "Redflare Conduit")]),
-                        ("gw", "whirling", [("gemIcon", "Permafrost Bolts"), ("gemIcon", "Glacial Bolt"), ("gemIcon", "Whirling Slash"), ("uniqIcon", "Rampart Raptor")])):
+                        ("gw", "whirling", [("gemIcon", "Permafrost Bolts"), ("gemIcon", "Glacial Bolt"), ("gemIcon", "Whirling Slash"), ("uniqIcon", "Rampart Raptor")]),
+                        ("tw", "twister", [("gemIcon", "Twister"), ("gemIcon", "Whirling Slash"), ("gemIcon", "Barrage"), ("uniqIcon", "Sacred Flame")])):
     A = kit(bid)
     for suf, (table, name) in zip(("main", "a", "b", "c"), picks):
         IC[f"{key}_{suf}"] = ico(A, table, name)

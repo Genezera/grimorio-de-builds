@@ -100,8 +100,9 @@ def check_uniques(bid, B):
     for g in getattr(B, "GEAR", []):
         for o in g.get("opts") or []:
             if o["lv"] < 1 or o["lv"] > 100: add("E", bid, "opt-level", f"{g['slot']}: {o['n']} com nível {o['lv']}")
-        if g.get("opts"):
+        if g.get("opts") and not g.get("no_cheap"):                                       # no_cheap: slot que por desenho só tem opção de valor/luxo
             for lv in ((10, 25, 40, 60, 80, 95) if str(g["slot"]).startswith("Charms") else (1, 10, 25, 40, 60, 80, 95)):     # charms só existem depois da quest do Medallion
+                if lv < g.get("from_lv", 0): continue                                            # slot que só existe a partir de um nível (ex.: Set 2)
                 if not [o for o in g["opts"] if o["lv"] <= lv and o["c"] in ("free", "cheap")]: add("W", bid, "opt-empty", f"{g['slot']}: nenhuma opção barata no nível {lv}")
 
 
@@ -148,7 +149,7 @@ def check_jewels(bid, B):
     if not J:
         add("I", bid, "jewels-none", "o guia de origem não define joias: a aba Árvore mostra o aviso"); return
     for j in J:
-        if j.get("first") is None: add("W", bid, "jewel-socket", f"{j['n']}: o socket {j['node']} não é alocado em nenhuma fase da árvore")
+        if j.get("first") is None and not j.get("via"): add("W", bid, "jewel-socket", f"{j['n']}: o socket {j['node']} não é alocado em nenhuma fase da árvore")
         if not j.get("mods") and not j.get("u"): add("I", bid, "jewel-mods", f"{j['n']} (socket {j['node']}): sem lista de afixos")
 
 
@@ -157,6 +158,47 @@ def check_sources(bid, B):
     for s in getattr(B, "SOURCES", []):
         if not str(s.get("url", "")).startswith("http"): add("E", bid, "source-url", f"fonte sem URL: {s.get('name')}")
     if not getattr(B, "GUIDE_URL", ""): add("I", bid, "guide-url", "sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)")
+
+
+REQUIRED = ["PHASES", "MILESTONES", "SUPWHY", "ASCENDANCY", "ASC_UNLOCK", "KEY_PASSIVES", "TREE_STAGES", "UNIQUES", "GEAR", "BUY_ORDER", "TRICKS", "TROUBLESHOOT", "ATLAS_CHECK", "CRAFT", "CASES",
+            "SOURCES", "FIXES", "UI", "CHAR", "TREE_RULES", "MECH", "CRAFT_KIT", "TXT", "TABS", "ORDER", "VMAP", "CONFIG"]
+
+
+def check_contract(bid, B):
+    """O contrato de uma build (docs/COMO-ADICIONAR-BUILD.md): tudo o que precisa existir para o jogador conseguir seguir do nível 1 ao 100."""
+    for k in REQUIRED:
+        v = getattr(B, k, None)
+        if v in (None, "", [], {}): add("E", bid, "contract-missing", f"falta {k}")
+    ids = [p["id"] for p in B.PHASES]
+    if len(ids) < 5: add("W", bid, "contract-phases", f"só {len(ids)} fases: o contrato pede campanha (Atos), mapas e endgame")
+    for p in B.PHASES:
+        for k in ("goal", "rotation", "gems", "stats", "tree", "avoid", "exit", "cheap", "full"):
+            if k not in p: add("E", bid, "contract-phase-field", f"{p['id']}: falta '{k}'")
+    if not any(g.get("opts") for g in getattr(B, "GEAR", [])): add("I", bid, "contract-gear-opts", "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível")
+    if not getattr(B, "FIXES", None): add("E", bid, "contract-honesty", "sem FIXES: diga o que é adaptação, estimativa ou aproximação")
+    if not (getattr(B, "MECH", {}) or {}).get("sections"): add("E", bid, "contract-mech", "MECH sem seções")
+    tabs = {t[0] for t in getattr(B, "TABS", [])}
+    for t in ("agora", "meu", "rota", "skills", "gear", "arvore", "asc", "quests", "fontes"):
+        if t not in tabs: add("E", bid, "contract-tab", f"aba obrigatória ausente: {t}")
+    ck = getattr(B, "CRAFT_KIT", {}) or {}
+    if "amulet" not in {i.get("id") for i in ck.get("items", [])}: add("E", bid, "contract-craft", "o kit de crafting precisa do item 'amulet' (o teste de navegador usa)")
+
+
+def check_registration(entry):
+    """Uma build só existe de verdade quando está registrada em todos os lugares compartilhados."""
+    folder, key = entry["folder"], entry["key"]
+    def has(rel, needle):
+        p = os.path.join(REPO, rel)
+        return os.path.exists(p) and needle in open(p, encoding="utf-8").read()
+    where = [("shared/fx.js", folder), ("shared/loader.js", folder), ("shared/poe2.js", folder), ("shared/poe2.css", f'data-build="{folder}"'),
+             ("tools/enhance.py", f"'{folder}'"), ("tools/landing_v2.py", f"'{folder}'"), ("tools/registry.py", f'folder="{folder}"'),
+             ("tools/tests/mobile.cjs", f"'{folder}'"), ("tools/tests/browser.cjs", f"'{folder}'")]
+    if key != "sf": where.append(("shared/landing.css", f".build.{key}"))              # Silverfist é o estilo base do card
+    if entry.get("kit"): where += [("tools/build_all.py", f"'{folder}'"), ("tools/tests/test_links.py", f'"{folder}"'), ("tools/build_landing.py", f'"{folder}"')]
+    for rel, needle in where:
+        if not has(rel, needle): add("E", key, "register-missing", f"{folder} não está registrada em {rel}")
+    for f in (f"shared/art/{key}-asc.webp", f"shared/art/{key}-class.webp"):
+        if not os.path.exists(os.path.join(REPO, f)): add("E", key, "art-missing", f"falta {f}")
 
 
 def check_pages(entry):
@@ -195,7 +237,8 @@ def main():
         if e.get("kit"):
             B = load(bid)
             if B:
-                for fn in (check_phases, check_spirit, check_uniques, check_supports, check_tree, check_jewels, check_sources): fn(bid, B)
+                for fn in (check_contract, check_phases, check_spirit, check_uniques, check_supports, check_tree, check_jewels, check_sources): fn(bid, B)
+        check_registration(e)
         check_pages(dict(e, key=e["key"]))
     E = [i for i in issues if i["level"] == "E"]; W = [i for i in issues if i["level"] == "W"]; I = [i for i in issues if i["level"] == "I"]
     json.dump(dict(date=time.strftime("%Y-%m-%d"), errors=len(E), warnings=len(W), info=len(I), issues=issues), open(os.path.join(HERE, "dl", "audit.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

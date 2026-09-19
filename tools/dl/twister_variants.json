@@ -1,0 +1,4256 @@
+{
+ "guides": [
+  {
+   "src": "pob",
+   "title": "Gemling Legionnaire 100 — poe.ninja PoB",
+   "url": "https://maxroll.gg/poe2/pob/834d3y0q",
+   "author": "poe.ninja",
+   "updatedAt": null,
+   "widgets": [],
+   "notes": null,
+   "profileNotes": {},
+   "rotations": {}
+  }
+ ],
+ "variants": [
+  {
+   "src": "pob",
+   "name": "A1",
+   "items": {
+    "mainHand_set1": {
+     "n": "Hardwood Spear",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear01.dds",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Enfolding Dawn",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/EnfoldingDawn.dds",
+     "mods": [
+      "(50-100)% increased Armour and Energy Shield",
+      "+100 to Spirit",
+      "+(5-15)% to all Elemental Resistances",
+      "Gain no inherent bonus from Intelligence"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Meginord's Girdle",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/MeginordsGirdle.dds",
+     "mods": [
+      "+(40-50) to Strength",
+      "+(10-15)% to Cold Resistance",
+      "50% increased Flask Charges used",
+      "100% increased Flask Charges gained"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59915,
+     2455,
+     48588,
+     13081,
+     44605,
+     8092,
+     59028,
+     41210,
+     43578,
+     49657,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "A2",
+   "items": {
+    "mainHand_set1": {
+     "n": "Skysliver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/Uniques/Skysliver.dds",
+     "mods": [
+      "No Physical Damage",
+      "Adds 1 to (80-120) Lightning Damage",
+      "(15-30)% increased Attack Speed",
+      "(50-100)% increased chance to Shock",
+      "Rolls only the minimum or maximum Damage value for each Damage Type"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Enfolding Dawn",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/EnfoldingDawn.dds",
+     "mods": [
+      "(50-100)% increased Armour and Energy Shield",
+      "+100 to Spirit",
+      "+(5-15)% to all Elemental Resistances",
+      "Gain no inherent bonus from Intelligence"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Meginord's Girdle",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/MeginordsGirdle.dds",
+     "mods": [
+      "+(40-50) to Strength",
+      "+(10-15)% to Cold Resistance",
+      "50% increased Flask Charges used",
+      "100% increased Flask Charges gained"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Wanderlust",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Wanderlust.dds",
+     "mods": [
+      "20% increased Movement Speed",
+      "+(10-20) to maximum Energy Shield",
+      "+5 to Dexterity",
+      "Your speed is unaffected by Slows"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Thrillsteel",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/Thrillsteel.dds",
+     "mods": [
+      "Onslaught"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59915,
+     2455,
+     48588,
+     13081,
+     44605,
+     8092,
+     59028,
+     41210,
+     43578,
+     49657,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     54099,
+     8493,
+     64471,
+     43843,
+     17417,
+     3652,
+     56714,
+     54437,
+     2397,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "A3",
+   "items": {
+    "mainHand_set1": {
+     "n": "Skysliver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/Uniques/Skysliver.dds",
+     "mods": [
+      "No Physical Damage",
+      "Adds 1 to (80-120) Lightning Damage",
+      "(15-30)% increased Attack Speed",
+      "(50-100)% increased chance to Shock",
+      "Rolls only the minimum or maximum Damage value for each Damage Type"
+     ],
+     "stats": [],
+     "runes": [
+      "Thrud's Might"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Enfolding Dawn",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/EnfoldingDawn.dds",
+     "mods": [
+      "(50-100)% increased Armour and Energy Shield",
+      "+100 to Spirit",
+      "+(5-15)% to all Elemental Resistances",
+      "Gain no inherent bonus from Intelligence"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Meginord's Girdle",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/MeginordsGirdle.dds",
+     "mods": [
+      "+(40-50) to Strength",
+      "+(10-15)% to Cold Resistance",
+      "50% increased Flask Charges used",
+      "100% increased Flask Charges gained"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Wanderlust",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Wanderlust.dds",
+     "mods": [
+      "20% increased Movement Speed",
+      "+(10-20) to maximum Energy Shield",
+      "+5 to Dexterity",
+      "Your speed is unaffected by Slows"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Thrillsteel",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/Thrillsteel.dds",
+     "mods": [
+      "Onslaught"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59915,
+     2455,
+     48588,
+     13081,
+     44605,
+     8092,
+     59028,
+     41210,
+     43578,
+     49657,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     54099,
+     8493,
+     64471,
+     43843,
+     17417,
+     3652,
+     56714,
+     54437,
+     2397,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     21225,
+     38369,
+     18910,
+     10265,
+     24287,
+     14226,
+     5305,
+     3431,
+     43082,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     38493,
+     23040
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "A4",
+   "items": {
+    "mainHand_set1": {
+     "n": "Skysliver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/Uniques/Skysliver.dds",
+     "mods": [
+      "No Physical Damage",
+      "Adds 1 to (80-120) Lightning Damage",
+      "(15-30)% increased Attack Speed",
+      "(50-100)% increased chance to Shock",
+      "Rolls only the minimum or maximum Damage value for each Damage Type"
+     ],
+     "stats": [],
+     "runes": [
+      "Thrud's Might"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Widow's Reign",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/WidowsReign.dds",
+     "mods": [
+      "(101-149)% increased Armour and Evasion",
+      "+(100-150) to maximum Life",
+      "+(17-23)% to Chaos Resistance",
+      "+(201-300) to Ailment Threshold"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Cat O' Nine Tails",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/CatONineTails.dds",
+     "mods": [
+      "+(120-199) to maximum Life",
+      "Regenerate 5% of maximum Life per second if you have been Hit Recently",
+      "(25-50)% increased Life Recovery rate",
+      "Life Recovery other than Flasks cannot Recover Life to above Low Life",
+      "Gain Physical Thorns damage equal to 8% - 12% of maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Wanderlust",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Wanderlust.dds",
+     "mods": [
+      "20% increased Movement Speed",
+      "+(10-20) to maximum Energy Shield",
+      "+5 to Dexterity",
+      "Your speed is unaffected by Slows"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Thrillsteel",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/Thrillsteel.dds",
+     "mods": [
+      "Onslaught"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59915,
+     2455,
+     48588,
+     13081,
+     44605,
+     8092,
+     59028,
+     41210,
+     43578,
+     49657,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     54099,
+     8493,
+     64471,
+     43843,
+     17417,
+     3652,
+     56714,
+     54437,
+     2397,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     21225,
+     38369,
+     18910,
+     10265,
+     24287,
+     14226,
+     5305,
+     3431,
+     43082,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     38493,
+     23040,
+     13407,
+     55621,
+     38537,
+     54984,
+     11825,
+     42794,
+     31433,
+     54983,
+     23702,
+     57196,
+     3660,
+     25619,
+     34201,
+     24922,
+     17077,
+     51463,
+     4364,
+     23736,
+     30905,
+     64140,
+     8697,
+     62510
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "Mapas",
+   "items": {
+    "mainHand_set1": {
+     "n": "Skysliver",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/Uniques/Skysliver.dds",
+     "mods": [
+      "No Physical Damage",
+      "Adds 1 to (80-120) Lightning Damage",
+      "(15-30)% increased Attack Speed",
+      "(50-100)% increased chance to Shock",
+      "Rolls only the minimum or maximum Damage value for each Damage Type"
+     ],
+     "stats": [],
+     "runes": [
+      "Thrud's Might"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Widow's Reign",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/WidowsReign.dds",
+     "mods": [
+      "(101-149)% increased Armour and Evasion",
+      "+(100-150) to maximum Life",
+      "+(17-23)% to Chaos Resistance",
+      "+(201-300) to Ailment Threshold"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Blackheart",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/Blackheart.dds",
+     "mods": [
+      "(3-6) Life Regeneration per second",
+      "Adds (4-6) to (8-10) Chaos Damage to Attacks",
+      "+(10-20)% of Armour also applies to Chaos Damage",
+      "25% chance to Intimidate Enemies for 4 seconds on Hit"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "The Taming",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TheTaming.dds",
+     "mods": [
+      "+(10-20)% to all Elemental Resistances",
+      "(10-17)% increased Damage for each type of Elemental Ailment on Enemy",
+      "Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Cat O' Nine Tails",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/CatONineTails.dds",
+     "mods": [
+      "+(120-199) to maximum Life",
+      "Regenerate 5% of maximum Life per second if you have been Hit Recently",
+      "(25-50)% increased Life Recovery rate",
+      "Life Recovery other than Flasks cannot Recover Life to above Low Life",
+      "Gain Physical Thorns damage equal to 8% - 12% of maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Wanderlust",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Boots/Uniques/Wanderlust.dds",
+     "mods": [
+      "20% increased Movement Speed",
+      "+(10-20) to maximum Energy Shield",
+      "+5 to Dexterity",
+      "Your speed is unaffected by Slows"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Thrillsteel",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/Helmets/Uniques/Thrillsteel.dds",
+     "mods": [
+      "Onslaught"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "(20-25)% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "(70-80)% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59915,
+     2455,
+     48588,
+     13081,
+     44605,
+     8092,
+     59028,
+     41210,
+     43578,
+     49657,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     54099,
+     8493,
+     64471,
+     43843,
+     17417,
+     3652,
+     56714,
+     54437,
+     2397,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     21225,
+     38369,
+     18910,
+     10265,
+     24287,
+     14226,
+     5305,
+     3431,
+     43082,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     38493,
+     23040,
+     13407,
+     55621,
+     38537,
+     54984,
+     11825,
+     42794,
+     31433,
+     54983,
+     23702,
+     57196,
+     3660,
+     25619,
+     34201,
+     24922,
+     17077,
+     51463,
+     4364,
+     23736,
+     30905,
+     64140,
+     8697,
+     62510,
+     36114,
+     56818,
+     63445,
+     17118,
+     27493,
+     19342,
+     46296,
+     32763,
+     14267,
+     30808,
+     15775,
+     15343,
+     60239,
+     18314,
+     58593,
+     33463,
+     41877,
+     24958,
+     9050,
+     37691,
+     56453,
+     12078,
+     57462
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "Endgame",
+   "items": {
+    "mainHand_set1": {
+     "n": "Armageddon Edge",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear04.dds",
+     "mods": [
+      "Grants Skill: Spear Throw",
+      "30% increased Explicit Speed Modifier magnitudes",
+      "Adds 10 to 22 Physical Damage",
+      "36% increased Attack Speed",
+      "Leeches 8.66% of Physical Damage as Mana",
+      "29% increased effect of Socketed Augment Items",
+      "+478 to Accuracy Rating",
+      "10% increased Attack Speed"
+     ],
+     "stats": [],
+     "runes": [
+      "Thrud's Might",
+      "Soul Core of Quipolatl"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Mind Edge",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear10.dds",
+     "mods": [
+      "Grants Skill: Spear Throw",
+      "Adds 9 to 216 Lightning Damage",
+      "Adds 99 to 137 Fire Damage",
+      "95% increased Elemental Damage with Attacks",
+      "+4.4% to Critical Hit Chance",
+      "+2 to Level of all Attack Skills",
+      "22% chance to gain Onslaught on Killing Hits with this Weapon"
+     ],
+     "stats": [],
+     "runes": [
+      "Soul Core of Ticaba",
+      "Saqawal's Rune of the Sky"
+     ],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Sacred Flame",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Scepters/Uniques/SacredFlame.dds",
+     "mods": [
+      "23% increased Spirit",
+      "Grants Skill: Level 19 Purity of Fire",
+      "Gain 60% of Damage as Extra Fire Damage",
+      "Allies in your Presence Regenerate 2.2% of their Maximum Life per second",
+      "Allies in your Presence Gain 29% of Damage as Extra Fire Damage",
+      "Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Spirit",
+       "value": "138"
+      }
+     ],
+     "runes": [
+      "Rabbit Idol"
+     ],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Foe Keep",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "Allocates Thaumaturgic Generator",
+      "+72 to maximum Energy Shield",
+      "19% increased Rarity of Items found",
+      "+42% to Fire Resistance",
+      "+42% to Lightning Resistance",
+      "18% increased Rarity of Items found",
+      "99% increased Energy Shield"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "488"
+      }
+     ],
+     "runes": [
+      "Raven-Touched Shard",
+      "Perfect Iron Rune"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Morior Invictus",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/MoriorInvictus_M.dds",
+     "mods": [
+      "388% increased Armour, Evasion and Energy Shield",
+      "+13% to Chaos Resistance per Socket filled",
+      "12% increased Global Armour, Evasion and Energy Shield per Socket filled",
+      "+9% to all Elemental Resistances per Socket filled"
+     ],
+     "stats": [
+      {
+       "name": "Armour",
+       "value": "1241"
+      },
+      {
+       "name": "Evasion",
+       "value": "1142"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "351"
+      }
+     ],
+     "runes": [
+      "Idol of Eramir",
+      "Fox Idol",
+      "Craiceann's Rune of Warding",
+      "The Greatwolf's Rune of Willpower",
+      "Rune of Foundations"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Phoenix Claw",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt04.dds",
+     "mods": [
+      "Adds 4 to 67 Lightning damage to Attacks",
+      "36% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "+22% to Chaos Resistance",
+      "Mark Skills have 38% increased Use Speed",
+      "36% increased Projectile Damage"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "41"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "12"
+      },
+      {
+       "name": "Ward",
+       "value": "166"
+      }
+     ],
+     "runes": [
+      "Kolr's Hunt"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Armageddon Pace",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsDexInt04.dds",
+     "mods": [
+      "+78 to Evasion Rating",
+      "+25 to maximum Energy Shield",
+      "62% increased Evasion and Energy Shield",
+      "17% increased Rarity of Items found",
+      "+31% to Cold Resistance",
+      "+40% to Lightning Resistance",
+      "39% increased Evasion and Energy Shield",
+      "+121 to Stun Threshold"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "526"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "164"
+      }
+     ],
+     "runes": [
+      "Greater Glacial Rune"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Gale Gorget",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "Allocates Paragon",
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "Grants Skill: Level 20 Cast on Critical",
+      "+3 to Level of all Projectile Skills",
+      "+50 to Spirit",
+      "37% increased Global Armour, Evasion and Energy Shield",
+      "+5% to Quality of all Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Entropy Coil",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/UnsetRing.dds",
+     "mods": [
+      "Grants 1 additional Skill Slot",
+      "+115 to maximum Life",
+      "35% increased Rarity of Items found",
+      "+28% to Lightning Resistance",
+      "+34% to Fire Resistance",
+      "Adds 13 to 18 Cold damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "The Taming",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TheTaming.dds",
+     "mods": [
+      "14% increased Rarity of Items found",
+      "+10% to all Elemental Resistances",
+      "+21% to all Elemental Resistances",
+      "22% increased Damage for each type of Elemental Ailment on Enemy",
+      "Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces",
+      "Wind Skills which can be boosted by Elemental Ground Surfaces count",
+      "as being boosted by Ignited, Shocked, and Chilled Ground"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "Used when you become Frozen",
+      "25% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Used when you are affected by a Slow",
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [
+      "50% reduced Amount Recovered",
+      "Instant Recovery",
+      "26% reduced Charges per use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "70% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Cat O' Nine Tails",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/CatONineTails.dds",
+     "mods": [
+      "+(120-199) to maximum Life",
+      "Regenerate 5% of maximum Life per second if you have been Hit Recently",
+      "(25-50)% increased Life Recovery rate",
+      "Life Recovery other than Flasks cannot Recover Life to above Low Life",
+      "Gain Physical Thorns damage equal to 8% - 12% of maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     54099,
+     8493,
+     64471,
+     43843,
+     17417,
+     3652,
+     56714,
+     54437,
+     2397,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     21225,
+     38369,
+     18910,
+     10265,
+     24287,
+     14226,
+     5305,
+     3431,
+     43082,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     38493,
+     23040,
+     13407,
+     55621,
+     38537,
+     54984,
+     11825,
+     42794,
+     31433,
+     54983,
+     23702,
+     57196,
+     3660,
+     25619,
+     63445,
+     32763,
+     14267,
+     30808,
+     15775,
+     15343,
+     60239,
+     18314,
+     58593,
+     33463,
+     41877,
+     24958,
+     9050,
+     37691,
+     56453,
+     12078,
+     57462,
+     33713,
+     26107,
+     42750,
+     50635,
+     25971,
+     17088,
+     11604,
+     56045,
+     61196,
+     32545,
+     34233,
+     14725,
+     49220,
+     44223,
+     20024,
+     42857,
+     10364,
+     24647,
+     43691,
+     21746,
+     32701,
+     43877,
+     51522,
+     56493,
+     60735,
+     42658,
+     63566,
+     62350,
+     56928,
+     45100,
+     7163,
+     10472,
+     14262,
+     21336,
+     21945,
+     26556,
+     26572,
+     26598,
+     19880,
+     11472,
+     27422,
+     2021,
+     28175,
+     2491,
+     33366,
+     10944,
+     34623,
+     14769,
+     37951,
+     39369,
+     40270,
+     40471,
+     7847,
+     41020,
+     3994,
+     34908,
+     41873,
+     44776,
+     14539,
+     38728,
+     47514,
+     49356,
+     51707,
+     55193,
+     55995,
+     57970,
+     21537,
+     59657,
+     42078,
+     61718,
+     38342,
+     61834,
+     62984,
+     5009,
+     17254,
+     20677,
+     29306,
+     43944,
+     49984,
+     52191,
+     60138,
+     61601
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     3084,
+     11641,
+     14429,
+     30996,
+     34882,
+     45248,
+     55536,
+     55582,
+     60287,
+     63259
+    ],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  },
+  {
+   "src": "pob",
+   "name": "Aspiracional",
+   "items": {
+    "mainHand_set1": {
+     "n": "Armageddon Edge",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear04.dds",
+     "mods": [
+      "Grants Skill: Spear Throw",
+      "30% increased Explicit Speed Modifier magnitudes",
+      "Adds 10 to 22 Physical Damage",
+      "36% increased Attack Speed",
+      "Leeches 8.66% of Physical Damage as Mana",
+      "29% increased effect of Socketed Augment Items",
+      "+478 to Accuracy Rating",
+      "10% increased Attack Speed"
+     ],
+     "stats": [],
+     "runes": [
+      "Thrud's Might",
+      "Soul Core of Quipolatl"
+     ],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Mind Edge",
+     "u": 0,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear10.dds",
+     "mods": [
+      "Grants Skill: Spear Throw",
+      "Adds 9 to 216 Lightning Damage",
+      "Adds 99 to 137 Fire Damage",
+      "95% increased Elemental Damage with Attacks",
+      "+4.4% to Critical Hit Chance",
+      "+2 to Level of all Attack Skills",
+      "22% chance to gain Onslaught on Killing Hits with this Weapon"
+     ],
+     "stats": [],
+     "runes": [
+      "Soul Core of Ticaba",
+      "Saqawal's Rune of the Sky"
+     ],
+     "skill": null
+    },
+    "offHand_set2": {
+     "n": "Sacred Flame",
+     "u": 1,
+     "icon": "Art/2DItems/Weapons/OneHandWeapons/Scepters/Uniques/SacredFlame.dds",
+     "mods": [
+      "23% increased Spirit",
+      "Grants Skill: Level 19 Purity of Fire",
+      "Gain 60% of Damage as Extra Fire Damage",
+      "Allies in your Presence Regenerate 2.2% of their Maximum Life per second",
+      "Allies in your Presence Gain 29% of Damage as Extra Fire Damage",
+      "Enemies in your Presence Resist Elemental Damage based on their Lowest Resistance"
+     ],
+     "stats": [
+      {
+       "name": "Spirit",
+       "value": "138"
+      }
+     ],
+     "runes": [
+      "Rabbit Idol"
+     ],
+     "skill": null
+    },
+    "helmet": {
+     "n": "Foe Keep",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.dds",
+     "mods": [
+      "Allocates Thaumaturgic Generator",
+      "+72 to maximum Energy Shield",
+      "19% increased Rarity of Items found",
+      "+42% to Fire Resistance",
+      "+42% to Lightning Resistance",
+      "18% increased Rarity of Items found",
+      "99% increased Energy Shield"
+     ],
+     "stats": [
+      {
+       "name": "Energy Shield",
+       "value": "488"
+      }
+     ],
+     "runes": [
+      "Raven-Touched Shard",
+      "Perfect Iron Rune"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Morior Invictus",
+     "u": 1,
+     "icon": "Art/2DItems/Armours/BodyArmours/Uniques/MoriorInvictus_M.dds",
+     "mods": [
+      "388% increased Armour, Evasion and Energy Shield",
+      "+13% to Chaos Resistance per Socket filled",
+      "12% increased Global Armour, Evasion and Energy Shield per Socket filled",
+      "+9% to all Elemental Resistances per Socket filled"
+     ],
+     "stats": [
+      {
+       "name": "Armour",
+       "value": "1241"
+      },
+      {
+       "name": "Evasion",
+       "value": "1142"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "351"
+      }
+     ],
+     "runes": [
+      "Idol of Eramir",
+      "Fox Idol",
+      "Craiceann's Rune of Warding",
+      "The Greatwolf's Rune of Willpower",
+      "Rune of Foundations"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Phoenix Claw",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt04.dds",
+     "mods": [
+      "Adds 4 to 67 Lightning damage to Attacks",
+      "36% increased Projectile Speed",
+      "+2 to Level of all Projectile Skills",
+      "+22% to Chaos Resistance",
+      "Mark Skills have 38% increased Use Speed",
+      "36% increased Projectile Damage"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "41"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "12"
+      },
+      {
+       "name": "Ward",
+       "value": "166"
+      }
+     ],
+     "runes": [
+      "Kolr's Hunt"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Armageddon Pace",
+     "u": 0,
+     "icon": "Art/2DItems/Armours/Boots/Basetypes/BootsDexInt04.dds",
+     "mods": [
+      "+78 to Evasion Rating",
+      "+25 to maximum Energy Shield",
+      "62% increased Evasion and Energy Shield",
+      "17% increased Rarity of Items found",
+      "+31% to Cold Resistance",
+      "+40% to Lightning Resistance",
+      "39% increased Evasion and Energy Shield",
+      "+121 to Stun Threshold"
+     ],
+     "stats": [
+      {
+       "name": "Evasion",
+       "value": "526"
+      },
+      {
+       "name": "Energy Shield",
+       "value": "164"
+      }
+     ],
+     "runes": [
+      "Greater Glacial Rune"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Gale Gorget",
+     "u": 0,
+     "icon": "Art/2DItems/Amulets/Basetypes/AbsentAmulet.dds",
+     "mods": [
+      "Allocates Paragon",
+      "-1 Prefix Modifier allowed",
+      "-1 Suffix Modifier allowed",
+      "Grants Skill: Level 20 Cast on Critical",
+      "+3 to Level of all Projectile Skills",
+      "+50 to Spirit",
+      "37% increased Global Armour, Evasion and Energy Shield",
+      "+5% to Quality of all Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Entropy Coil",
+     "u": 0,
+     "icon": "Art/2DItems/Rings/Basetypes/UnsetRing.dds",
+     "mods": [
+      "Grants 1 additional Skill Slot",
+      "+115 to maximum Life",
+      "35% increased Rarity of Items found",
+      "+28% to Lightning Resistance",
+      "+34% to Fire Resistance",
+      "Adds 13 to 18 Cold damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "The Taming",
+     "u": 1,
+     "icon": "Art/2DItems/Rings/Uniques/TheTaming.dds",
+     "mods": [
+      "14% increased Rarity of Items found",
+      "+10% to all Elemental Resistances",
+      "+21% to all Elemental Resistances",
+      "22% increased Damage for each type of Elemental Ailment on Enemy",
+      "Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces",
+      "Wind Skills which can be boosted by Elemental Ground Surfaces count",
+      "as being boosted by Ignited, Shocked, and Chilled Ground"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Headhunter",
+     "u": 1,
+     "icon": "Art/2DItems/Belts/Uniques/Headhunter.dds",
+     "mods": [
+      "25% increased Stun Threshold",
+      "Has 2 Charm Slots",
+      "+60 to maximum Life",
+      "+35 to Strength",
+      "+35 to Dexterity",
+      "When you kill a Rare monster, you gain its Modifiers for 60 seconds"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/ThawingUniqueCharm.dds",
+     "mods": [
+      "Used when you become Frozen",
+      "25% Chance to gain a Charge when you kill an enemy",
+      "Energy Shield Recharge starts on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Rite of Passage",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/GoldenUniqueCharm.dds",
+     "mods": [
+      "Used when you kill a Rare or Unique enemy",
+      "Possessed by Spirit Of The Wolf for 17 seconds on use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "Art/2DItems/Charms/Uniques/SilverUniqueCharm.dds",
+     "mods": [
+      "Used when you are affected by a Slow",
+      "Grants Onslaught during effect"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "Art/2DItems/Flasks/Basetypes/FlaskLife09.dds",
+     "mods": [
+      "50% reduced Amount Recovered",
+      "Instant Recovery",
+      "26% reduced Charges per use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "Art/2DItems/Flasks/Uniques/LaviangasSpirit.dds",
+     "mods": [
+      "This Flask cannot be Used but applies its Effect constantly",
+      "70% reduced Amount Recovered"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Spear Throw",
+     "slug": "spearthrow",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Perpetual Charge",
+      "Gambleshot"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Virtuous Barrier",
+     "slug": "virtuousbarrier",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Cast on Critical",
+     "slug": "castoncritical",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Frost Wall",
+      "Boundless Energy II",
+      "Cold Mastery",
+      "Glacier"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Purity of Fire",
+     "slug": "purityoffire",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Her Declaration",
+      "Clarity II",
+      "Vitality II",
+      "Cannibalism II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancer",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Ambush",
+      "Blind II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Combat Frenzy",
+     "slug": "combatfrenzy",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Empowered Sparks I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Twister",
+     "slug": "twister",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Projectile Acceleration III",
+      "Verglas",
+      "Rakiata's Flow",
+      "Garukhan's Resolve"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Sniper's Mark",
+     "slug": "snipersmark",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Charge Profusion II",
+      "Eternal Mark",
+      "Mark for Death II",
+      "Armour Demolisher II",
+      "Breachlord's Rift"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Barrage",
+     "slug": "barrage",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Heightened Charges",
+      "Perpetual Charge",
+      "Efficiency II",
+      "Uhtred's Constellation",
+      "Olroth's Conviction"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinity",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Fire Mastery",
+      "Atziri's Communion"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Charge Regulation",
+     "slug": "chargeregulation",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Direstrike I"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Ice",
+     "slug": "heraldofice",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Armour Break III",
+      "Armour Explosion",
+      "Uruk's Smelting"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslash",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Rage III",
+      "Rapid Attacks III",
+      "Blazing Critical",
+      "Magnified Area II",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Infernal Cry",
+     "slug": "infernalcry",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunder",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Execute III",
+      "Magnified Area II",
+      "Pinpoint Critical",
+      "Embitter",
+      "Freeze"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdance",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [
+      "Cooldown Recovery II",
+      "Armour Demolisher II",
+      "Direstrike II"
+     ],
+     "supIcons": {},
+     "weaponSet": null
+    },
+    {
+     "skill": "Berserk",
+     "slug": "berserk",
+     "icon": null,
+     "skillIcon": null,
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null
+    }
+   ],
+   "level": 100,
+   "tree": {
+    "m": [
+     59779,
+     42350,
+     61438,
+     28510,
+     10247,
+     28370,
+     63526,
+     48635,
+     21755,
+     54127,
+     54282,
+     52125,
+     2847,
+     54099,
+     8493,
+     64471,
+     43843,
+     17417,
+     3652,
+     56714,
+     54437,
+     2397,
+     55802,
+     58814,
+     51048,
+     17702,
+     46882,
+     38463,
+     30657,
+     24786,
+     21225,
+     38369,
+     18910,
+     10265,
+     24287,
+     14226,
+     5305,
+     3431,
+     43082,
+     34015,
+     48116,
+     2582,
+     27705,
+     48773,
+     38493,
+     23040,
+     13407,
+     55621,
+     38537,
+     54984,
+     11825,
+     42794,
+     31433,
+     54983,
+     23702,
+     57196,
+     3660,
+     25619,
+     63445,
+     32763,
+     14267,
+     30808,
+     15775,
+     15343,
+     60239,
+     18314,
+     58593,
+     33463,
+     41877,
+     24958,
+     9050,
+     37691,
+     56453,
+     12078,
+     57462,
+     33713,
+     26107,
+     42750,
+     50635,
+     25971,
+     17088,
+     11604,
+     56045,
+     61196,
+     32545,
+     34233,
+     14725,
+     49220,
+     44223,
+     20024,
+     42857,
+     10364,
+     24647,
+     43691,
+     21746,
+     32701,
+     43877,
+     51522,
+     56493,
+     60735,
+     42658,
+     63566,
+     62350,
+     56928,
+     45100,
+     7163,
+     10472,
+     14262,
+     21336,
+     21945,
+     26556,
+     26572,
+     26598,
+     19880,
+     11472,
+     27422,
+     2021,
+     28175,
+     2491,
+     33366,
+     10944,
+     34623,
+     14769,
+     37951,
+     39369,
+     40270,
+     40471,
+     7847,
+     41020,
+     3994,
+     34908,
+     41873,
+     44776,
+     14539,
+     38728,
+     47514,
+     49356,
+     51707,
+     55193,
+     55995,
+     57970,
+     21537,
+     59657,
+     42078,
+     61718,
+     38342,
+     61834,
+     62984,
+     5009,
+     17254,
+     20677,
+     29306,
+     43944,
+     49984,
+     52191,
+     60138,
+     61601
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     3084,
+     11641,
+     14429,
+     30996,
+     34882,
+     45248,
+     55536,
+     55582,
+     60287,
+     63259
+    ],
+    "attr": null,
+    "jewels": [
+     {
+      "node": 2491,
+      "n": "Voices",
+      "u": true,
+      "base": "Sapphire",
+      "mods": [
+       "Allocates 2 Sinister Jewel sockets"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 26178,
+      "n": "Fulgent Prism",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "35% increased Critical Damage Bonus with Spears",
+       "7% increased Projectile Speed",
+       "7% increased Attack Speed with Spears",
+       "7% increased Attack Speed",
+       "59% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 32763,
+      "n": "Ghoul Creed",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 3% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed with Spears",
+       "Notable Passive Skills in Radius also grant 2% increased Attack Speed",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 46882,
+      "n": "Megalomaniac",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Allocates Augmented Flesh",
+       "Allocates Desperate Times"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 54127,
+      "n": "From Nothing",
+      "u": true,
+      "base": "Diamond",
+      "mods": [
+       "Passives in Radius of Resonance can be Allocated",
+       "without being connected to your tree"
+      ],
+      "radius": "Small",
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 60735,
+      "n": "Split Personality",
+      "u": true,
+      "base": "Ruby",
+      "mods": [
+       "Can Allocate Passive Skills from the Shadow's starting point"
+      ],
+      "radius": null,
+      "corrupted": true,
+      "note": ""
+     },
+     {
+      "node": 61834,
+      "n": "Rapture Joy",
+      "u": false,
+      "base": "Time-Lost Emerald",
+      "mods": [
+       "Notable Passive Skills in Radius also grant 7% increased Critical Hit Chance for Attacks",
+       "Notable Passive Skills in Radius also grant 2% increased Projectile Speed",
+       "Notable Passive Skills in Radius also grant 10% increased Critical Damage Bonus for Attack Damage",
+       "Notable Passive Skills in Radius also grant 8% increased Critical Damage Bonus with Spears",
+       "Upgrades Radius to Very Large"
+      ],
+      "radius": "Very Large",
+      "corrupted": false,
+      "note": ""
+     },
+     {
+      "node": 62152,
+      "n": "Soul Sliver",
+      "u": false,
+      "base": "Emerald",
+      "mods": [
+       "36% increased Critical Damage Bonus with Spears",
+       "6% increased Projectile Speed",
+       "7% increased Attack Speed",
+       "7% increased Attack Speed with Spears",
+       "60% increased Effect of Suffixes"
+      ],
+      "radius": null,
+      "corrupted": false,
+      "note": ""
+     }
+    ]
+   },
+   "desc": ""
+  }
+ ]
+}

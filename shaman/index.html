@@ -6,7 +6,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌩</text></svg>">
 <script>document.documentElement.dataset.build='shaman'</script>
 <meta name="theme-color" content="#080607">
-<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=cd82fb21"></script>
+<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=1e0ef9f8"></script>
 <title>Tempestade de Mana</title>
 <meta name="description" content="Guia interativo Druid Shaman Archmage Spark + Comet (Cast on Critical) — PoE 2 Forbidden Rites">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1278,6 +1278,18 @@ html[data-build] .glv.on{opacity:1;color:var(--gild-hi);border-color:color-mix(i
 html[data-build] .glv.on i{color:var(--gild)}
 html[data-build] .glv.nx{opacity:1;color:var(--accent-hi);border-color:color-mix(in srgb,var(--accent) 45%,var(--edge))}
 
+html[data-build="twister"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#070a08; --ground2:#0b100c; --stone:#101710; --stone2:#172018; --stone3:#1f2a20;
+  --edge:#2a3a2b; --edge2:#485f49;
+  --gild:#b9c9a0; --gild-hi:#eef7d6; --gild-lo:#5b6b48; --gild-g:rgba(185,201,160,.13);
+  --accent:#9be564; --accent-hi:#d3f5b0; --accent-g:rgba(155,229,100,.16);
+  --accent2:#ffb347; --accent2-hi:#ffd9a0; --accent2-g:rgba(255,179,71,.16);
+  --wisp:#c4f19a; --wisp-g:rgba(196,241,154,.14);
+  --text:#e9f0e2; --mute:#a9b7a0; --faint:#6f7d66;
+  --scene-tint:rgba(8,22,10,.5);
+}
+
 /* Build companion: readable rows instead of a compressed equipment doll. */
 html[data-build] #side{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-width:0;background:linear-gradient(160deg,var(--stone3),var(--ground) 65%);box-shadow:inset 1px 0 var(--edge);isolation:isolate;overflow:hidden}
 #side *{box-sizing:border-box;min-width:0}
@@ -1937,7 +1949,7 @@ function jewelsPanel(pid) {
   <p class="jw-note">${T("Cada joia vai no socket indicado — anel dourado no mapa da árvore. Clique para centralizar.", "Each jewel goes in the socket shown — gold ring on the tree map. Click to centre it.")}</p>
   <div class="nlist">${A.jewels.map((j, i) => { const im = j.u ? uniqImg(j.n) : ""; const on = j.first && idx(j.first) <= idx(pid);
     return `<div class="nrow k3 ${on ? "" : "ahead"}" data-gotree="${j.node}">${im ? `<img src="${im}" alt="">` : `<img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">`}<div><b>${i + 1}. ${esc(j.n)} <span class="chip ${j.u ? "unique" : "rare"}" style="font-size:.7rem">${j.u ? "Unique" : "Rare"}</span></b>
-      <small>${T("Socket perto de", "Socket near")} <span style="color:var(--text)">${esc(j.near || "?")}</span>${j.first ? ` · ${on ? T("já alocado nesta fase", "allocated in this phase") : T("aloque na fase", "allocate in phase")} ${on ? "" : esc(phaseName(j.first))}` : ""}${j.where === "s1" ? ` · Weapon Set I` : j.where === "s2" ? ` · Weapon Set II` : ""}</small>
+      <small>${T("Socket perto de", "Socket near")} <span style="color:var(--text)">${esc(j.near || "?")}</span>${j.first ? ` · ${on ? T("já alocado nesta fase", "allocated in this phase") : T("aloque na fase", "allocate in phase")} ${on ? "" : esc(phaseName(j.first))}` : ""}${j.via ? ` · ${T("socket aberto pela joia", "socket opened by the jewel")} ${esc(j.via)}` : ""}${j.where === "s1" ? ` · Weapon Set I` : j.where === "s2" ? ` · Weapon Set II` : ""}</small>
       ${j.mods && j.mods.length ? `<small>${j.mods.map(esc).join(" · ")}</small>` : ""}${j.radius ? `<small>${T("Raio", "Radius")}: ${esc(j.radius)}${j.corrupted ? " · " + T("corrompida", "corrupted") : ""}</small>` : ""}</div></div>`; }).join("")}</div>`;
 }
 function vArvore() {
@@ -2471,9 +2483,9 @@ function wisps() {
 <script src="../shared/craft.js?v=2083ad36"></script>
 <script src="../shared/weights.js?v=9f9c6d27"></script>
 <script src="../shared/guide.js?v=498112ae"></script>
-<script src="../shared/poe2.js?v=494adf4a"></script>
+<script src="../shared/poe2.js?v=00077294"></script>
 <script src="../shared/build-now.js?v=5a480ac2"></script>
-<script src="../shared/fx.js?v=b43c884b"></script>
+<script src="../shared/fx.js?v=776552a9"></script>
 <script src="../shared/skin.js?v=42045f49"></script>
 <script>
 /* ------------------------------------------------ boot */

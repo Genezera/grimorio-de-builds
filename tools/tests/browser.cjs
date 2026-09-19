@@ -21,11 +21,11 @@ const server=http.createServer((req,res)=>{
       page.on('response',r=>{if(r.url().startsWith(base+'/')&&r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
       await page.route('https://fonts.googleapis.com/**',route=>route.abort());
       await page.route('https://fonts.gstatic.com/**',route=>route.abort());
-      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling'].flatMap(b=>[b+'/index.html',b+'/en.html'])]){
+      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister'].flatMap(b=>[b+'/index.html',b+'/en.html'])]){
         await page.goto(base+'/'+file);await page.waitForLoadState('domcontentloaded');pages++;
         if(!file.includes('/')){
-          assert.equal(await page.locator('.build').count(),11);
-          assert.equal(await page.locator('.primary').count(),11);
+          assert.equal(await page.locator('.build').count(),12);
+          assert.equal(await page.locator('.primary').count(),12);
         }else{
           assert.equal(await page.locator('#navGroups button').count(),4);
           const ids=await page.locator('#tabs button').evaluateAll(xs=>xs.map(x=>x.dataset.tab));
@@ -122,7 +122,7 @@ const server=http.createServer((req,res)=>{
     for(const width of [320,1920]){
       const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
       page.on('pageerror',e=>errors.push(e.message));
-      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling']){
+      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister']){
         await page.goto(base+'/'+build+'/en.html');await page.evaluate(()=>setLv(95));pages++;
         for(const id of await page.evaluate(()=>TABS.map(x=>x[0]))){
           await page.evaluate(id=>guideGo(id),id);

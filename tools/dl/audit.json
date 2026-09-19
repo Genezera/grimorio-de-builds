@@ -2,13 +2,25 @@
  "date": "2026-09-19",
  "errors": 0,
  "warnings": 0,
- "info": 61,
+ "info": 105,
  "issues": [
+  {
+   "level": "I",
+   "build": "tactician",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
+  },
   {
    "level": "I",
    "build": "tactician",
    "code": "tree-respec",
    "msg": "t15: a árvore tem 20 nós a menos que a fase anterior (respec)"
+  },
+  {
+   "level": "I",
+   "build": "infernalist",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
   },
   {
    "level": "I",
@@ -61,6 +73,12 @@
   {
    "level": "I",
    "build": "acolyte",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
+  },
+  {
+   "level": "I",
+   "build": "acolyte",
    "code": "support-orphan",
    "msg": "Corrosion: explicado em SUPWHY mas nunca usado"
   },
@@ -108,9 +126,27 @@
   },
   {
    "level": "I",
+   "build": "pathfinder",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
+  },
+  {
+   "level": "I",
+   "build": "smith",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
+  },
+  {
+   "level": "I",
    "build": "smith",
    "code": "support-orphan",
    "msg": "Steadfast II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "martial",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
   },
   {
    "level": "I",
@@ -135,6 +171,12 @@
    "build": "martial",
    "code": "support-orphan",
    "msg": "Profane Ritual: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "shaman",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
   },
   {
    "level": "I",
@@ -231,6 +273,12 @@
    "build": "shaman",
    "code": "guide-url",
    "msg": "sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)"
+  },
+  {
+   "level": "I",
+   "build": "legionnaire",
+   "code": "contract-gear-opts",
+   "msg": "sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível"
   },
   {
    "level": "I",
@@ -369,6 +417,222 @@
    "build": "whirling",
    "code": "tree-respec",
    "msg": "endgame: a árvore tem 2 nós a menos que a fase anterior (respec)"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Ahn's Citadel: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Armour Demolisher I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Biting Frost II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Charged Mark: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Close Combat I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Close Combat II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Concentrated Area: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Deliberation: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Dialla's Desire: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Echoing Cry: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Elemental Armament I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Elemental Focus: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Enraged Warcry II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Expanse: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Frozen Spite: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Kaom's Madness: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Knockback: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Longshot II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Mark of Siphoning II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Minion Mastery: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Morrigan's Insight: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Multishot I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Multishot II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Pierce III: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Prolonged Duration II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Raging Cry: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Rakiata's Flow: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Rapid Casting II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Rigwald's Ferocity: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Ritualistic Curse: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Shock: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Slow Potency: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Temporal Chains: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Uhtred's Augury: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Vitality II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Vorana's Siege: explicado em SUPWHY mas nunca usado"
   }
  ]
 }

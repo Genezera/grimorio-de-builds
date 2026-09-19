@@ -52,11 +52,11 @@
     tactician: ['ta', 'Tactician Pin2Win', 'Mercenary · Tactician'], infernalist: ['in', 'Infernalist Comet', 'Witch · Infernalist'],
     acolyte: ['ac', 'Tornado Sprinkler', 'Monk · Acolyte of Chayula'], pathfinder: ['pf', 'Pathfinder Decompose', 'Ranger · Pathfinder'],
     smith: ['sk', 'Smith of Kitava', 'Warrior · Smith of Kitava'], martial: ['ma', 'Oil Barrage Teleport', 'Monk · Martial Artist'],
-    shaman: ['sh', 'Tempestade de Mana', 'Druid · Shaman'], legionnaire: ['lg', 'Trovão Cortante', 'Mercenary · Gemling Legionnaire'], whirling: ['gw', 'Ciclone de Gelo', 'Mercenary · Gemling Legionnaire'],
+    shaman: ['sh', 'Tempestade de Mana', 'Druid · Shaman'], legionnaire: ['lg', 'Trovão Cortante', 'Mercenary · Gemling Legionnaire'], whirling: ['gw', 'Ciclone de Gelo', 'Mercenary · Gemling Legionnaire'], twister: ['tw', 'Tornado da Lança', 'Mercenary · Gemling Legionnaire'],
   };
   const PAL = { silverfist: ['#07080a', '#5fe3c1', '#c3a066', '#ecd6a3'], oracle: ['#06060c', '#a58dff', '#b7bfd9', '#eef1fb'], tactician: ['#08080a', '#ff8a3d', '#c9a46a', '#f0dcb0'],
     infernalist: ['#0a0505', '#ff5b1f', '#d9a36b', '#f6d8b0'], acolyte: ['#07050b', '#b35cff', '#c3b2e6', '#efe7ff'], pathfinder: ['#060906', '#7fd957', '#cdbb7c', '#f0e3b4'],
-    smith: ['#09070a', '#ff6a13', '#d08a47', '#f5cf9f'], martial: ['#05070b', '#4cc3ff', '#e0b25c', '#f7deaa'], shaman: ['#080607', '#2fd9c0', '#d1a75f', '#f6dcab'], legionnaire: ['#060709', '#ffd23f', '#b9a27a', '#f1e2bd'], whirling: ['#05080c', '#6fd6ff', '#9fb6c9', '#e3f4ff'],
+    smith: ['#09070a', '#ff6a13', '#d08a47', '#f5cf9f'], martial: ['#05070b', '#4cc3ff', '#e0b25c', '#f7deaa'], shaman: ['#080607', '#2fd9c0', '#d1a75f', '#f6dcab'], legionnaire: ['#060709', '#ffd23f', '#b9a27a', '#f1e2bd'], whirling: ['#05080c', '#6fd6ff', '#9fb6c9', '#e3f4ff'], twister: ['#070a08', '#9be564', '#b9c9a0', '#eef7d6'],
     home: ['#07070a', '#c3a066', '#c3a066', '#ecd6a3'], rites: ['#07050c', '#9b6bff', '#f1b35c', '#ffd894'] };
   const en = /(^|\/)en\.html$/.test(location.pathname);
   const dir = location.pathname.split('/').filter(Boolean).slice(-2, -1)[0] || '';

@@ -110,6 +110,9 @@ def collect(VAR, D, alloc, ORDER, N, adj):
                 if (nn.get("isNotable") or nn.get("isKeystone")) and not nn.get("ascendancyName"):
                     near = nn.get("name"); break
                 dq.append((w, d + 1))
-        out.append(dict(j, first=first, where=where, near=near))
+        via = None
+        if first is None and any("Sinister" in m for x in best for m in x.get("mods", [])):
+            via = next((x["n"] for x in best if any("Sinister" in m for m in x.get("mods", []))), None)   # socket que só abre por outra joia (ex.: Voices)
+        out.append(dict(j, first=first, where=where, near=near, via=via))
     out.sort(key=lambda x: (x["first"] is None, ORDER.index(x["first"]) if x["first"] else 99))
     return out

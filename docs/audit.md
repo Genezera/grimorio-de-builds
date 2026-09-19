@@ -1,10 +1,12 @@
 # Auditoria das builds — 2026-09-19
 
-**0 erros · 0 avisos · 61 informações**
+**0 erros · 0 avisos · 105 informações**
 
 ## Informações
 
+- `tactician` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `tactician` **tree-respec** — t15: a árvore tem 20 nós a menos que a fase anterior (respec)
+- `infernalist` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `infernalist` **support-orphan** — Esh's Prowess: explicado em SUPWHY mas nunca usado
 - `infernalist` **support-orphan** — Helbrym's Hide: explicado em SUPWHY mas nunca usado
 - `infernalist` **support-orphan** — Herbalism I: explicado em SUPWHY mas nunca usado
@@ -13,6 +15,7 @@
 - `infernalist` **tree-respec** — recoup: a árvore tem 4 nós a menos que a fase anterior (respec)
 - `infernalist` **tree-respec** — frost: a árvore tem 16 nós a menos que a fase anterior (respec)
 - `infernalist` **tree-respec** — max: a árvore tem 5 nós a menos que a fase anterior (respec)
+- `acolyte` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `acolyte` **support-orphan** — Corrosion: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Garukhan's Resolve: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Her Declaration: explicado em SUPWHY mas nunca usado
@@ -21,11 +24,15 @@
 - `acolyte` **support-orphan** — Uul-Netol's Embrace: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Withering Touch: explicado em SUPWHY mas nunca usado
 - `acolyte` **guide-url** — sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)
+- `pathfinder` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
+- `smith` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `smith` **support-orphan** — Steadfast II: explicado em SUPWHY mas nunca usado
+- `martial` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `martial` **support-orphan** — Burgeon II: explicado em SUPWHY mas nunca usado
 - `martial` **support-orphan** — Culling Strike II: explicado em SUPWHY mas nunca usado
 - `martial` **support-orphan** — Hit and Run: explicado em SUPWHY mas nunca usado
 - `martial` **support-orphan** — Profane Ritual: explicado em SUPWHY mas nunca usado
+- `shaman` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `shaman` **support-orphan** — Ambush: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Arcane Surge: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Biting Frost I: explicado em SUPWHY mas nunca usado
@@ -42,6 +49,7 @@
 - `shaman` **support-orphan** — Wildshards I: explicado em SUPWHY mas nunca usado
 - `shaman` **jewels-none** — o guia de origem não define joias: a aba Árvore mostra o aviso
 - `shaman` **guide-url** — sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)
+- `legionnaire` **contract-gear-opts** — sem ranking de opções por slot (GEAR opts): a aba Itens usa as linhas fixas travadas por nível
 - `legionnaire` **support-orphan** — Ancestral Call II: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Armour Demolisher II: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Behead II: explicado em SUPWHY mas nunca usado
@@ -65,3 +73,39 @@
 - `whirling` **support-orphan** — Multishot I: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Shock: explicado em SUPWHY mas nunca usado
 - `whirling` **tree-respec** — endgame: a árvore tem 2 nós a menos que a fase anterior (respec)
+- `twister` **support-orphan** — Ahn's Citadel: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Armour Demolisher I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Biting Frost II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Charged Mark: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Close Combat I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Close Combat II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Concentrated Area: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Deliberation: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Dialla's Desire: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Echoing Cry: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Elemental Armament I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Elemental Focus: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Enraged Warcry II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Expanse: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Frozen Spite: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Kaom's Madness: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Knockback: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Longshot II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Mark of Siphoning II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Minion Mastery: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Morrigan's Insight: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Multishot I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Multishot II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Pierce III: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Prolonged Duration II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Raging Cry: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Rakiata's Flow: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Rapid Casting II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Rigwald's Ferocity: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Ritualistic Curse: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Shock: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Slow Potency: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Temporal Chains: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Uhtred's Augury: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Vitality II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Vorana's Siege: explicado em SUPWHY mas nunca usado

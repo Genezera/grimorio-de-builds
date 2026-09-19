@@ -578,6 +578,60 @@
    },
    "meta": "meta",
    "status": "ativa"
+  },
+  {
+   "key": "tw",
+   "folder": "twister",
+   "cls": "Mercenary",
+   "asc": "Gemling Legionnaire",
+   "title": "Tornado da Lança",
+   "ninja": {
+    "ascShare": 37.09,
+    "ascN": 46020,
+    "skill": "Twister",
+    "skillShare": 27.7,
+    "dps": 533000.0,
+    "ehp": 52000.0,
+    "top": 100
+   },
+   "tags": [
+    "spear",
+    "crit",
+    "elemental"
+   ],
+   "clear": 5,
+   "boss": 4,
+   "ease0": 3,
+   "kit": true,
+   "ranks": {},
+   "complexity": {
+    "phases": 7,
+    "gems": 13,
+    "rotation": 3,
+    "reservations": 7,
+    "supports": 35,
+    "uniques": 16,
+    "tricks": 7,
+    "score": 48.0
+   },
+   "dmgPct": 0.9545454545454546,
+   "ehpPct": 0.9204545454545454,
+   "ease": 3,
+   "easeSrc": "guia",
+   "damage": 5,
+   "damageSrc": "poe.ninja",
+   "survival": 5,
+   "scores": {
+    "ease": 3,
+    "hard": 3,
+    "damage": 5,
+    "clear": 5,
+    "boss": 4,
+    "clearboss": 4.5,
+    "survival": 5
+   },
+   "meta": "meta",
+   "status": "ativa"
   }
  ],
  "order": {
@@ -590,6 +644,7 @@
    "or",
    "ac",
    "sk",
+   "tw",
    "pf",
    "ma",
    "in"
@@ -602,6 +657,7 @@
    "or",
    "ac",
    "sk",
+   "tw",
    "ta",
    "sh",
    "lg",
@@ -612,6 +668,7 @@
    "in",
    "sh",
    "lg",
+   "tw",
    "or",
    "pf",
    "sk",
@@ -623,6 +680,7 @@
   "clear": [
    "ma",
    "gw",
+   "tw",
    "sf",
    "or",
    "ta",
@@ -644,11 +702,13 @@
    "ma",
    "sh",
    "lg",
-   "gw"
+   "gw",
+   "tw"
   ],
   "clearboss": [
    "ma",
    "gw",
+   "tw",
    "sf",
    "or",
    "ta",
@@ -662,6 +722,7 @@
   "survival": [
    "sf",
    "gw",
+   "tw",
    "sk",
    "ma",
    "lg",
@@ -678,6 +739,7 @@
    "ta",
    "ac",
    "pf",
+   "tw",
    "sh",
    "gw",
    "sk",

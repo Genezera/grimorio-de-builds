@@ -60,7 +60,7 @@ GEAR_OPTS = {
   O("Soul Mantle", "u", 36, 85, ("+75 de Spirit e Armour + ES (Sacrificial Mantle, nível 36). A base exige 33 de Força e 33 de Inteligência: confira os atributos.", "+75 Spirit and Armour + ES (Sacrificial Mantle, level 36). The base needs 33 Strength and 33 Intelligence: check your attributes.")),
   O("Widow's Reign", "u", 45, 90, ("101–149% de Armour e Evasion, +100–150 de vida e 17–23% de resistência a caos (Knight Armour, nível 45): a melhor defesa barata do meio do jogo.", "101–149% Armour and Evasion, +100–150 life and 17–23% chaos resistance (Knight Armour, level 45): the best cheap defence of the mid game.")),
   O("Lightning Coil", "u", 50, 80, ("80–120% de Armour e Evasion, +80–100 de vida e +Destreza (Ancestral Mail, nível 50).", "80–120% Armour and Evasion, +80–100 life and +Dexterity (Ancestral Mail, level 50).")),
-  O("Morior Invictus", "u", 65, 96, ("O do autor: +300–400% de Armour, Evasion e ES e vida, atributos, resistências e Spirit por socket cheio. ~6 Divines.", "The author's: +300–400% Armour, Evasion and ES and life, attributes, resistances and Spirit per filled socket. ~6 Divines.")),
+  O("Morior Invictus", "u", 65, 96, ("O do autor: +300–400% de Armour, Evasion e ES e vida, atributos, resistências e regeneração por socket cheio (o mod de Spirit, +10–14 por socket, é um dos que ele pode rolar). ~6 Divines.", "The author's: +300–400% Armour, Evasion and ES and life, attributes, resistances and regeneration per filled socket (the Spirit mod, +10–14 per socket, is one it can roll). ~6 Divines.")),
  ],
  "gloves": [
   O(L("Luvas rare de Armour com vida e resistências", "Armour rare gloves with life and resistances"), "r", 1, 55, ("Vida e resistências primeiro. NUNCA aceite 'chance de projétil extra' (o autor diz que está bugada).", "Life and resistances first. NEVER accept 'chance for an extra projectile' (the author says it's bugged).")),
@@ -100,7 +100,7 @@ GEAR_OPTS = {
  ],
  "belt": [
   O(L("Cinto rare com vida e resistências", "Rare belt with life and resistances"), "r", 1, 55, ("Vida e resistências que faltarem.", "Whatever life and resistances you're missing.")),
-  O("Meginord's Girdle", "u", 1, 70, ("+40–50 de Força, +10–15% de resistência a frio e muito mais cargas de flask (Rawhide Belt).", "+40–50 Strength, +10–15% cold resistance and far more flask charges (Rawhide Belt).")),
+  O("Meginord's Girdle", "u", 1, 70, ("+40–50 de Força, +10–15% de resistência a frio e os flasks gastam 50% mais cargas (desvantagem) (Rawhide Belt).", "+40–50 Strength, +10–15% cold resistance and flasks use 50% more charges (a drawback) (Rawhide Belt).")),
   O("Goregirdle", "u", 25, 78, ("+20–30 de Força, 10–20 de regeneração de vida e defende com 200% da Armour (Plate Belt, nível 25).", "+20–30 Strength, 10–20 life regeneration and defends with 200% of Armour (Plate Belt, level 25).")),
   O("Ryslatha's Coil", "u", 31, 76, ("+80–100 de vida, 30–50% de recuperação de flask e 30–40% mais dano físico máximo (Ornate Belt, nível 31).", "+80–100 life, 30–50% flask recovery and 30–40% more maximum physical attack damage (Ornate Belt, level 31).")),
   O("Waistgate", "u", 50, 72, ("+50–80 de vida e de mana e 20–30% de recuperação de flask (Heavy Belt, nível 50).", "+50–80 life and mana and 20–30% flask recovery (Heavy Belt, level 50).")),

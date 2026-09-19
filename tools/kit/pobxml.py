@@ -244,3 +244,74 @@ def write(bid, root, variants, url=""):
 
 if __name__ == "__main__":
     main()
+
+
+_STAT = re.compile(r"(\d+)% (?:increased|more) ([^;]*)", re.I)
+_LIFE = re.compile(r"\+(\d+) to maximum Life", re.I)
+
+
+def node_score(n):
+    """Valor de um nó para quem está subindo de nível: dano, velocidade, crítico e vida (números do próprio nó). Atributos e nós vazios valem 0."""
+    s = 0.0
+    for line in ninja.NODES[str(n)].get("stats") or []:
+        m = _STAT.match(line)
+        if m:
+            v, t = int(m.group(1)), m.group(2).lower()
+            if "damage" in t and not any(k in t for k in ("taken", "recovery", "duration", "threshold")): s += v
+            elif any(k in t for k in ("attack speed", "cast speed", "skill speed")): s += 1.5 * v
+            elif "projectile speed" in t or "movement speed" in t: s += .5 * v
+            elif "critical" in t: s += .7 * v
+            elif "maximum life" in t: s += 3 * v
+            continue
+        m = _LIFE.match(line)
+        if m: s += int(m.group(1)) / 8
+    return s
+
+
+def walk_greedy(nodes, start, score=node_score):
+    """Ordem de alocação 'dano primeiro': a cada passo pega o alvo com maior (valor do caminho até ele) / (nº de pontos gastos), sempre conectado ao que já está alocado.
+    Nós que não ligam ao início entram no fim, na ordem dada."""
+    from collections import deque
+    ADJ = ninja.ADJ
+    allowed = set(nodes) | {start}; have, order = {start}, []
+    sc = {n: score(n) for n in allowed}
+    remaining = [n for n in nodes if n != start]
+    while remaining:
+        prev, dq = {h: None for h in have}, deque(have)
+        while dq:
+            u = dq.popleft()
+            for v in ADJ.get(u, ()):
+                if v in allowed and v not in prev:
+                    prev[v] = u; dq.append(v)
+        best, best_key = None, None
+        for t in remaining:
+            if t not in prev: continue
+            path, x = [], t
+            while x not in have:
+                path.append(x); x = prev[x]
+            key = (sum(sc[y] for y in path) / len(path), -len(path))
+            if best_key is None or key > best_key: best, best_key = list(reversed(path)), key
+        if best is None: break
+        for x in best:
+            have.add(x); order.append(x)
+        remaining = [n for n in remaining if n not in have]
+    return order + remaining
+
+
+def walk_greedy_root(root):
+    """Como walk_order (parte do início da classe pelo caminho da árvore do PoB), mas com a ordem 'dano primeiro'. Devolve (ordem, nós que exigem outro ponto de partida)."""
+    conector, resto = walk_order(root, [])
+    start = ninja.CLASS_START[root.find("Build").get("className")]
+    order = walk_greedy(conector + resto, start)
+    conn = set(walk_greedy_reach(order, start))
+    return [n for n in order if n in conn], [n for n in order if n not in conn]
+
+
+def walk_greedy_reach(order, start):
+    have, changed, rest = {start}, True, list(order)
+    while changed:
+        changed = False
+        for n in list(rest):
+            if ninja.ADJ.get(n, set()) & have:
+                have.add(n); rest.remove(n); changed = True
+    return have - {start}

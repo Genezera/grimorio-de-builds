@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
   fs.readFile(file, (err, data) => { if (err) { res.writeHead(404).end(); return; } res.setHeader('Content-Type', ({ '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp' })[path.extname(file)] || 'application/octet-stream'); res.end(data); });
 });
 const SIZES = (process.env.SIZES || '360x780,390x844,412x915,844x390,768x1024,820x1180,1024x768,1180x820').split(',').map(s => s.split('x').map(Number));
-const BUILDS = ['silverfist', 'oracle', 'tactician', 'infernalist', 'acolyte', 'pathfinder', 'smith', 'martial', 'shaman', 'legionnaire', 'whirling'];
+const BUILDS = ['silverfist', 'oracle', 'tactician', 'infernalist', 'acolyte', 'pathfinder', 'smith', 'martial', 'shaman', 'legionnaire', 'whirling','twister'];
 const PAGES = (process.env.PAGES || BUILDS.flatMap(b => [b + '/index.html', b + '/en.html']).concat(['index.html', 'en.html', 'rites/index.html', 'rites/en.html']).join(',')).split(',');
 
 function lint(scopeSel) {

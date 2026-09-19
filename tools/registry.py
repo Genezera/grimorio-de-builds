@@ -28,6 +28,7 @@ IDENT = [
  dict(key="sh", folder="shaman", cls="Druid", asc="Shaman", title="Tempestade de Mana", ninja=["Spark", "Comet"], tags=["spells", "mana", "lightning"], clear=4, boss=4, ease0=4, kit=True),
  dict(key="lg", folder="legionnaire", cls="Mercenary", asc="Gemling Legionnaire", title="Trovão Cortante", ninja=["Falling Thunder"], tags=["quarterstaff", "lightning", "charges"], clear=4, boss=4, ease0=3, kit=True),
  dict(key="gw", folder="whirling", cls="Mercenary", asc="Gemling Legionnaire", title="Ciclone de Gelo", ninja=["Whirling Slash", "Glacial Bolt"], tags=["crossbow", "cold", "spear"], clear=5, boss=4, ease0=4, kit=True),
+ dict(key="tw", folder="twister", cls="Mercenary", asc="Gemling Legionnaire", title="Tornado da Lança", ninja=["Twister", "Spear Throw", "Whirling Slash"], tags=["spear", "crit", "elemental"], clear=5, boss=4, ease0=3, kit=True),
 ]
 
 

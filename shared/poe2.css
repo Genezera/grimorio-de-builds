@@ -648,3 +648,15 @@ html[data-build] .glv i{font-style:normal;color:var(--faint);letter-spacing:.06e
 html[data-build] .glv.on{opacity:1;color:var(--gild-hi);border-color:color-mix(in srgb,var(--gild) 60%,var(--edge));background:var(--gild-g)}
 html[data-build] .glv.on i{color:var(--gild)}
 html[data-build] .glv.nx{opacity:1;color:var(--accent-hi);border-color:color-mix(in srgb,var(--accent) 45%,var(--edge))}
+
+html[data-build="twister"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#070a08; --ground2:#0b100c; --stone:#101710; --stone2:#172018; --stone3:#1f2a20;
+  --edge:#2a3a2b; --edge2:#485f49;
+  --gild:#b9c9a0; --gild-hi:#eef7d6; --gild-lo:#5b6b48; --gild-g:rgba(185,201,160,.13);
+  --accent:#9be564; --accent-hi:#d3f5b0; --accent-g:rgba(155,229,100,.16);
+  --accent2:#ffb347; --accent2-hi:#ffd9a0; --accent2-g:rgba(255,179,71,.16);
+  --wisp:#c4f19a; --wisp-g:rgba(196,241,154,.14);
+  --text:#e9f0e2; --mute:#a9b7a0; --faint:#6f7d66;
+  --scene-tint:rgba(8,22,10,.5);
+}
