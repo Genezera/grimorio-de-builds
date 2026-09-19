@@ -1,0 +1,205 @@
+#===============================================================================================================
+# WHIRLING GLACIAL BOLT — Mercenary · Gemling Legionnaire (guia: grimorio-de-builds / whirling)
+# Camada da build: destaca o que a build usa e esconde armas normais/mágicas que ela nunca usa.
+# Cores: azul-gelo = peça da build. Para desligar o esconde-armas, apague o bloco 'Hide' no fim desta camada.
+#===============================================================================================================
+
+# --- Uniques da build (o filtro enxerga só a base; confira o nome: Tense Crossbow = Rampart Raptor, Winged Spear = Skysliver, Garment = Tabula Rasa, Iron Ring = Blackheart, Rawhide Belt = Meginord's Girdle, Wrapped Sandals = Wanderlust, Spired Greathelm = Thrillsteel, Grand Regalia = Morior Invictus)
+Show # build: uniques
+	Rarity Unique
+	BaseType == "Tense Crossbow" "Winged Spear" "Garment" "Iron Ring" "Rawhide Belt" "Wrapped Sandals" "Spired Greathelm" "Grand Regalia"
+	SetFontSize 45
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Star
+
+# --- Spear branca: a Whirling Slash precisa de uma spear no Weapon Set 1 desde o nível 1
+Show # build: spear branca do começo
+	AreaLevel <= 20
+	Class == "Spears"
+	Rarity Normal
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 1 Cyan Diamond
+
+# --- Gems que viram peça da build (o nível do Uncut é o tier da skill)
+Show # build: Uncut Skill Gem nível 7 — Glacial Bolt: a skill principal do nível 24 ao 100
+	GemLevel 7
+	BaseType "Uncut Skill Gem"
+	SetFontSize 44
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Triangle
+
+Show # build: Uncut Skill Gem nível 11 — Emergency Reload / Seismic Cry
+	GemLevel 11
+	BaseType "Uncut Skill Gem"
+	SetFontSize 44
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Triangle
+
+Show # build: Uncut Skill Gem nível 3 — Pounce (endgame)
+	GemLevel 3
+	BaseType "Uncut Skill Gem"
+	SetFontSize 44
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Triangle
+
+Show # build: Uncut Spirit Gem nível 4 — Herald of Ice · War Banner · Scavenged Plating · Arctic Armour (30 Spirit cada)
+	GemLevel 4
+	BaseType "Uncut Spirit Gem"
+	SetFontSize 44
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Triangle
+
+Show # build: Uncut Spirit Gem nível 14 — Berserk (endgame)
+	GemLevel 14
+	BaseType "Uncut Spirit Gem"
+	SetFontSize 44
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Triangle
+
+Show # build: suportes Uncut de tier baixo (I–V)
+	GemLevel >= 1
+	GemLevel <= 5
+	BaseType "Uncut Support Gem"
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 1 Cyan Circle
+
+# --- Suportes de Lineage do endgame
+Show # build: Lineage
+	Class == "Skill Gems" "Support Gems"
+	BaseType == "Ahn's Citadel" "Kaom's Madness" "Vorana's Siege" "Rakiata's Flow" "Rigwald's Ferocity" "Uhtred's Augury" "Dialla's Desire"
+	SetFontSize 45
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	SetBackgroundColor 8 34 62 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 0 Cyan Star
+
+# --- Runas de gelo (arma) 
+Show # build: runas de gelo
+	Class == "Augment"
+	BaseType == "Lesser Glacial Rune" "Glacial Rune" "Greater Glacial Rune" "Perfect Glacial Rune"
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 1 Cyan Square
+
+# --- Bases de craft do endgame (ilvl alto, só de mapas em diante)
+Show # build: Desolate Crossbow — Glacial Bolt no endgame
+	AreaLevel >= 65
+	ItemLevel >= 82
+	Class == "Crossbows"
+	BaseType == "Desolate Crossbow"
+	Rarity Normal Magic Rare
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 2 Cyan Diamond
+
+Show # build: Imperial Greathelm — Capacete de Armour
+	AreaLevel >= 65
+	ItemLevel >= 82
+	Class == "Helmets"
+	BaseType == "Imperial Greathelm"
+	Rarity Normal Magic Rare
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 2 Cyan Diamond
+
+Show # build: Massive Mitts — Luvas de Armour
+	AreaLevel >= 65
+	ItemLevel >= 78
+	Class == "Gloves"
+	BaseType == "Massive Mitts"
+	Rarity Normal Magic Rare
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 2 Cyan Diamond
+
+Show # build: Vaal Greaves — Botas de Armour (35% de movimento)
+	AreaLevel >= 65
+	ItemLevel >= 82
+	Class == "Boots"
+	BaseType == "Vaal Greaves"
+	Rarity Normal Magic Rare
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 2 Cyan Diamond
+
+Show # build: Absent Amulet — Spirit para as reservas
+	AreaLevel >= 65
+	ItemLevel >= 75
+	Class == "Amulets"
+	BaseType == "Absent Amulet"
+	Rarity Normal Magic Rare
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	PlayEffect Cyan Temp
+	MinimapIcon 2 Cyan Diamond
+
+# --- Anéis rare do leveling (~30 e ~50): dano adicionado, vida e resistências
+Show # build: anéis rare do leveling
+	AreaLevel <= 65
+	Class == "Rings"
+	Rarity Rare
+	SetFontSize 40
+	SetTextColor 111 214 255 255
+	SetBorderColor 111 214 255 255
+	PlayAlertSound 2 200
+	MinimapIcon 2 Cyan Diamond
+
+# --- Esconde armas normais/mágicas que a build não usa (spear e besta ficam; Talisman fica para o Pounce)
+Hide # build: armas e off hands que a build nunca usa
+	Rarity Normal Magic
+	Class == "Bows" "Wands" "Staves" "Quarterstaves" "Sceptres" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Bucklers" "Shields"
+
+#===============================================================================================================
+# FIM DA CAMADA DA BUILD
+#===============================================================================================================
