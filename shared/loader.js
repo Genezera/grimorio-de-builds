@@ -10,10 +10,23 @@
   const siteBase = src ? new URL('../', src) : new URL('./', location.href);   // .../trilha-silverfist/
   const art = new URL('shared/art/', siteBase).href;
 
-  /* ---- modo leve: celular, tablet touch e aparelhos fracos (sem blur, partículas nem animações infinitas; ver loader.css) */
-  const mem = navigator.deviceMemory || 8, cores = navigator.hardwareConcurrency || 8, saveData = !!(navigator.connection && navigator.connection.saveData);
-  const lite = qs.has('lite') || (!qs.has('full') && (matchMedia('(pointer: coarse)').matches || innerWidth < 900 || mem <= 4 || cores <= 4 || saveData));
+  /* ---- modo leve: celular, tablet touch e aparelhos fracos (sem blur, partículas nem animações infinitas; ver loader.css).
+     Núcleos e memória NÃO entram na decisão: o Brave e o Firefox embaralham esses valores e ligavam o modo leve em PCs fortes (animações sumiam).
+     Aparelho fraco de verdade é medido em execução (fps). ?full / ?lite escolhem na hora e ficam salvos neste navegador. */
+  const store = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; };
+  if (qs.has('full')) store('poe.motion', 'full'); else if (qs.has('lite')) store('poe.motion', 'lite');
+  const saveData = !!(navigator.connection && navigator.connection.saveData);
+  const weak = matchMedia('(pointer: coarse)').matches || innerWidth < 900 || saveData;
+  const pref = qs.has('lite') ? 'lite' : qs.has('full') ? 'full' : store('poe.motion');
+  const lite = pref ? pref === 'lite' : weak;
   if (lite) root.classList.add('lite');
+  else if (!pref) {           // fps: se a página roda a menos de ~20 quadros/s, liga o modo leve
+    addEventListener('load', () => setTimeout(() => {
+      let n = 0, t0 = 0, worst = 0;
+      const tick = t => { if (t0) worst += t - t0; t0 = t; if (++n < 41) requestAnimationFrame(tick); else if (worst / 40 > 50 && !document.hidden) root.classList.add('lite'); };
+      if (!document.hidden) requestAnimationFrame(tick);
+    }, 2500), { once: true });
+  }
 
   /* ---- prerender every page of the site on hover/touch (Chrome/Edge); from inside a build, the home page eagerly */
   if (!navigator.webdriver && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
