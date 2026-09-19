@@ -31,6 +31,8 @@ class Book:
     def U(self, n, slot, cat, p, why, how, alt, lvl=None):
         e = ECO.get(n, {})
         price = round(e["price"], 3) if e.get("price") is not None else None
+        if lvl is None:
+            lvl = e.get("req")                                              # sem nível no guia: o do poe.ninja
         return dict(n=n, slot=slot, cat=cat, lvl=lvl, p=p, use=None, rf="", why=why, how=how, alt=alt, price=price, base=e.get("base", ""),
                     mods=e.get("mods", []), iconUrl=e.get("icon"), tier="Barato" if (price or 0) < 0.1 else "Valor" if (price or 0) < 3 else "Luxo")
 
@@ -48,14 +50,18 @@ class Book:
 
 
 def _eco():
-    out = {}
+    out, req = {}, {}
     for f in glob.glob(os.path.join(ROOT, "dl", "eco_*.json")):
         for l in json.load(open(f, encoding="utf-8")).get("lines", []):
+            if l.get("levelRequired") not in (None, ""):
+                req.setdefault(l["name"], set()).add(int(l["levelRequired"]))            # nível exigido: o menor entre as variantes (Tense/Runeforged/Runemastered)
             bt = l["baseType"]
             if l["name"] in out and bt.startswith(("Runemastered", "Runeforged")):
                 continue
             out[l["name"]] = {"price": l.get("primaryValue"), "icon": l.get("icon"), "base": bt.replace("Runemastered ", "").replace("Runeforged ", ""),
                               "mods": [re.sub(r"\[([^|\]]+\|)?([^\]]+)\]", r"\2", m["text"]) for m in l.get("explicitModifiers", []) if "\n" not in m["text"]][:7]}
+    for n, r in req.items():
+        if n in out: out[n]["req"] = max(1, min(r))
     return out
 
 

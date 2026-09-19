@@ -1,32 +1,14 @@
 {
  "date": "2026-09-19",
  "errors": 0,
- "warnings": 14,
- "info": 82,
+ "warnings": 0,
+ "info": 63,
  "issues": [
   {
    "level": "I",
    "build": "tactician",
    "code": "tree-respec",
-   "msg": "int→cannon: 2 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "tactician",
-   "code": "tree-respec",
-   "msg": "cannon→t15: 28 nós saem da árvore (respec)"
-  },
-  {
-   "level": "W",
-   "build": "infernalist",
-   "code": "gem-since",
-   "msg": "a4: Spellslinger só entra no nível 65, depois do fim da fase (59): não aparece nela"
-  },
-  {
-   "level": "W",
-   "build": "infernalist",
-   "code": "unique-missing",
-   "msg": "a4.cheap: 'Pyrophyte Staff' não tem entrada em UNIQUES"
+   "msg": "t15: a árvore tem 20 nós a menos que a fase anterior (respec)"
   },
   {
    "level": "I",
@@ -62,25 +44,19 @@
    "level": "I",
    "build": "infernalist",
    "code": "tree-respec",
-   "msg": "a4→maps: 17 nós saem da árvore (respec)"
+   "msg": "recoup: a árvore tem 4 nós a menos que a fase anterior (respec)"
   },
   {
    "level": "I",
    "build": "infernalist",
    "code": "tree-respec",
-   "msg": "maps→recoup: 31 nós saem da árvore (respec)"
+   "msg": "frost: a árvore tem 16 nós a menos que a fase anterior (respec)"
   },
   {
    "level": "I",
    "build": "infernalist",
    "code": "tree-respec",
-   "msg": "recoup→frost: 44 nós saem da árvore (respec)"
-  },
-  {
-   "level": "W",
-   "build": "acolyte",
-   "code": "unique-orphan",
-   "msg": "Blackgleam: está em UNIQUES mas nenhuma fase, slot ou compra usa"
+   "msg": "max: a árvore tem 5 nós a menos que a fase anterior (respec)"
   },
   {
    "level": "I",
@@ -127,116 +103,14 @@
   {
    "level": "I",
    "build": "acolyte",
-   "code": "tree-respec",
-   "msg": "a2→a3: 8 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "acolyte",
-   "code": "tree-respec",
-   "msg": "a3→a4: 10 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "acolyte",
-   "code": "tree-respec",
-   "msg": "a4→maps: 9 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "acolyte",
-   "code": "tree-respec",
-   "msg": "maps→archon: 85 nós saem da árvore (respec)"
-  },
-  {
-   "level": "W",
-   "build": "acolyte",
    "code": "guide-url",
-   "msg": "sem GUIDE_URL do guia de referência"
-  },
-  {
-   "level": "W",
-   "build": "pathfinder",
-   "code": "spirit",
-   "msg": "end: 307 de Spirit em reservas no nível 79, com 100 de quests (+ 200 de itens, ascendência e atlas é o teto plausível)"
-  },
-  {
-   "level": "W",
-   "build": "pathfinder",
-   "code": "unique-missing",
-   "msg": "a4.cheap: 'Toxic Quiver' não tem entrada em UNIQUES"
-  },
-  {
-   "level": "I",
-   "build": "pathfinder",
-   "code": "tree-respec",
-   "msg": "a3→a4: 1 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "pathfinder",
-   "code": "tree-respec",
-   "msg": "a5→start: 29 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "pathfinder",
-   "code": "tree-respec",
-   "msg": "start→end: 29 nós saem da árvore (respec)"
-  },
-  {
-   "level": "W",
-   "build": "pathfinder",
-   "code": "tree-connect",
-   "msg": "max: 7 nós da árvore principal não ligam ao início da classe"
-  },
-  {
-   "level": "W",
-   "build": "smith",
-   "code": "unique-orphan",
-   "msg": "Thrillsteel: está em UNIQUES mas nenhuma fase, slot ou compra usa"
-  },
-  {
-   "level": "W",
-   "build": "smith",
-   "code": "unique-missing",
-   "msg": "t15.full: 'Breach Ring' não tem entrada em UNIQUES"
+   "msg": "sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)"
   },
   {
    "level": "I",
    "build": "smith",
    "code": "support-orphan",
    "msg": "Steadfast II: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "smith",
-   "code": "tree-respec",
-   "msg": "a3→a4: 10 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "smith",
-   "code": "tree-respec",
-   "msg": "a4→int: 4 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "smith",
-   "code": "tree-respec",
-   "msg": "int→maps: 4 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "smith",
-   "code": "tree-respec",
-   "msg": "maps→t10: 13 nós saem da árvore (respec)"
-  },
-  {
-   "level": "W",
-   "build": "martial",
-   "code": "unique-missing",
-   "msg": "swap.full: 'Runeforged Fists of Stone' não tem entrada em UNIQUES"
   },
   {
    "level": "I",
@@ -261,12 +135,6 @@
    "build": "martial",
    "code": "support-orphan",
    "msg": "Profane Ritual: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "martial",
-   "code": "tree-respec",
-   "msg": "a4→swap: 51 nós saem da árvore (respec)"
   },
   {
    "level": "I",
@@ -355,50 +223,8 @@
   {
    "level": "I",
    "build": "shaman",
-   "code": "tree-start",
-   "msg": "a1: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "I",
-   "build": "shaman",
-   "code": "tree-start",
-   "msg": "a2: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "I",
-   "build": "shaman",
-   "code": "tree-start",
-   "msg": "a3: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "I",
-   "build": "shaman",
-   "code": "tree-start",
-   "msg": "a4: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "I",
-   "build": "shaman",
-   "code": "tree-start",
-   "msg": "maps: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "W",
-   "build": "shaman",
-   "code": "tree-connect",
-   "msg": "endgame: 87 nós da árvore principal não ligam ao início da classe"
-  },
-  {
-   "level": "W",
-   "build": "shaman",
-   "code": "tree-connect",
-   "msg": "max: 11 nós da árvore principal não ligam ao início da classe"
-  },
-  {
-   "level": "W",
-   "build": "shaman",
    "code": "guide-url",
-   "msg": "sem GUIDE_URL do guia de referência"
+   "msg": "sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)"
   },
   {
    "level": "I",
@@ -501,30 +327,6 @@
    "build": "legionnaire",
    "code": "support-orphan",
    "msg": "Prolonged Duration II: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "legionnaire",
-   "code": "tree-start",
-   "msg": "endgame: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "I",
-   "build": "legionnaire",
-   "code": "tree-respec",
-   "msg": "maps→endgame: 13 nós saem da árvore (respec)"
-  },
-  {
-   "level": "I",
-   "build": "legionnaire",
-   "code": "tree-start",
-   "msg": "max: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada"
-  },
-  {
-   "level": "W",
-   "build": "whirling",
-   "code": "opt-empty",
-   "msg": "Charms: nenhuma opção barata no nível 1"
   },
   {
    "level": "I",

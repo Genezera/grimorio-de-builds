@@ -60,8 +60,17 @@ def check_spirit(bid, B):
             if g.get("sp") == "core":
                 m = re.search(r"\d+", str(g.get("cost", "")))
                 if m and not (g.get("until") and g["until"] < p["lv"][0]) and not (g.get("since") and g["since"] > p["lv"][1]): cost += int(m.group())
+        if "Set 2" in str(p.get("spiritNote", "")): continue                        # a build alterna dois conjuntos de Spirit por Weapon Set: a soma não vale
         lv = p["lv"][1] if p["lv"][1] <= 100 else 100
         if cost > spirit_budget(lv) + 200: add("W", bid, "spirit", f"{p['id']}: {cost} de Spirit em reservas no nível {lv}, com {spirit_budget(lv)} de quests (+ 200 de itens, ascendência e atlas é o teto plausível)")
+
+
+def base_names():
+    global _BASES
+    if "_BASES" not in globals():
+        d = json.load(open(os.path.join(HERE, "dl", "repoe_base_items.json"), encoding="utf-8"))
+        _BASES = {v["name"] for v in d.values() if v.get("name")}
+    return _BASES
 
 
 def check_uniques(bid, B):
@@ -77,12 +86,14 @@ def check_uniques(bid, B):
         for o in g.get("opts") or []: used.add(o["n"])
     for b in getattr(B, "BUY_ORDER", []): used.add(b["item"])
     blob = " ".join(used)
+    src = open(os.path.join(HERE, "builds", bid, "bdata.py"), encoding="utf-8").read()
     for n in sorted(uniq):
-        if n not in blob: add("W", bid, "unique-orphan", f"{n}: está em UNIQUES mas nenhuma fase, slot ou compra usa")
+        # órfão = nenhum slot/fase/compra usa E o nome não é citado em nenhum outro texto do guia (só na própria definição)
+        if n not in blob and src.count(n) <= 1: add("W", bid, "unique-orphan", f"{n}: está em UNIQUES mas nada no guia usa ou cita")
     for p in B.PHASES:
         for k in ("cheap", "full"):
             for x in p.get(k, []):
-                if isinstance(x, str) and re.match(r"^[A-Z][A-Za-z']*(?: (?:of|the|and)| [A-Z][A-Za-z']*)*$", x) and x not in uniq and len(x) < 30 and not any(x in str(g.get("slot", "")) for g in getattr(B, "GEAR", [])):
+                if isinstance(x, str) and re.match(r"^[A-Z][A-Za-z']*(?: (?:of|the|and)| [A-Z][A-Za-z']*)*$", x) and x not in uniq and len(x) < 30 and re.sub(r"^(Runeforged|Runemastered) ", "", x) not in base_names() and not any(x in str(g.get("slot", "")) for g in getattr(B, "GEAR", [])):
                     add("W", bid, "unique-missing", f"{p['id']}.{k}: '{x}' não tem entrada em UNIQUES")
     for u in getattr(B, "UNIQUES", []):
         if u.get("p") not in {p["id"] for p in B.PHASES}: add("E", bid, "unique-phase", f"{u['n']}: fase '{u.get('p')}' não existe")
@@ -90,7 +101,7 @@ def check_uniques(bid, B):
         for o in g.get("opts") or []:
             if o["lv"] < 1 or o["lv"] > 100: add("E", bid, "opt-level", f"{g['slot']}: {o['n']} com nível {o['lv']}")
         if g.get("opts"):
-            for lv in (1, 10, 25, 40, 60, 80, 95):
+            for lv in ((10, 25, 40, 60, 80, 95) if str(g["slot"]).startswith("Charms") else (1, 10, 25, 40, 60, 80, 95)):     # charms só existem depois da quest do Medallion
                 if not [o for o in g["opts"] if o["lv"] <= lv and o["c"] in ("free", "cheap")]: add("W", bid, "opt-empty", f"{g['slot']}: nenhuma opção barata no nível {lv}")
 
 
@@ -102,36 +113,38 @@ def check_supports(bid, B):
 
 
 def check_tree(bid, B):
-    p = os.path.join(HERE, "dl", f"{bid}_variants.json")
+    """Usa a ordem de alocação que a página realmente mostra (assets.json > order): cada fase = os N primeiros nós dessa ordem.
+    Um nó que não liga ao início da classe pelos nós já alocados é um passo que o jogador não consegue dar."""
+    p = os.path.join(HERE, "builds", bid, "assets.json")
     if not os.path.exists(p):
-        add("W", bid, "tree-missing", "sem variantes de árvore"); return
-    V = {v["name"]: v for v in json.load(open(p, encoding="utf-8"))["variants"]}
+        add("W", bid, "tree-missing", "sem assets.json (rode kassets)"); return
+    A = json.load(open(p, encoding="utf-8"))
     start = getattr(B, "START", None) or ninja.CLASS_START.get(getattr(B, "CLASS", ""))
-    prev, prev_id = None, None
+    order = A.get("order", {})
+    prev_n = 0
     for pid in getattr(B, "ORDER", [p_["id"] for p_ in B.PHASES]):
-        v = V.get(getattr(B, "VMAP", {}).get(pid))
-        if not v: add("W", bid, "tree-phase", f"{pid}: sem variante de árvore"); continue
-        m = set(v["tree"]["m"])
-        if start and m:                                                            # conectado a partir do início da classe (ou de uma joia que o guia usa)
-            seen, stack = {start}, [start]
+        o = order.get(pid)
+        if not o: add("W", bid, "tree-phase", f"{pid}: sem ordem de árvore"); continue
+        nodes, n = o["o"], o["n"]
+        if n < prev_n: add("I", bid, "tree-respec", f"{pid}: a árvore tem {prev_n - n} nós a menos que a fase anterior (respec)")
+        prev_n = n
+        cut = set(nodes[:n])
+        st0 = getattr(B, "PHASE_START", {}).get(pid, start)                       # a build pode partir de outro ponto (joia Split Personality)
+        if st0 and cut:
+            seen, stack = {st0}, [st0]
             while stack:
                 u = stack.pop()
                 for w in ninja.ADJ.get(u, ()):
-                    if w in m and w not in seen: seen.add(w); stack.append(w)
-            lost = m - seen
-            if lost and len(lost) > .8 * len(m): add("I", bid, "tree-start", f"{pid}: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada")
-            elif lost and len(lost) > 3: add("W", bid, "tree-connect", f"{pid}: {len(lost)} nós da árvore principal não ligam ao início da classe")
-        if prev is not None and pid != "max" and prev_id != "endgame":
-            drop = prev - m
-            if drop: add("I", bid, "tree-respec", f"{prev_id}→{pid}: {len(drop)} nós saem da árvore (respec)")
-        prev, prev_id = m, pid
+                    if w in cut and w not in seen: seen.add(w); stack.append(w)
+            lost = len(cut - seen)
+            if lost: add("W", bid, "tree-connect", f"{pid}: {lost} de {n} nós da árvore não ligam ao início da classe pelos nós anteriores (caminho que o jogador não consegue seguir)")
 
 
 def check_sources(bid, B):
     if not getattr(B, "SOURCES", None): add("E", bid, "sources", "sem fontes")
     for s in getattr(B, "SOURCES", []):
         if not str(s.get("url", "")).startswith("http"): add("E", bid, "source-url", f"fonte sem URL: {s.get('name')}")
-    if not getattr(B, "GUIDE_URL", ""): add("W", bid, "guide-url", "sem GUIDE_URL do guia de referência")
+    if not getattr(B, "GUIDE_URL", ""): add("I", bid, "guide-url", "sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)")
 
 
 def check_pages(entry):

@@ -1,36 +1,18 @@
 # Auditoria das builds — 2026-09-19
 
-**0 erros · 14 avisos · 82 informações**
-
-## Avisos
-
-- `infernalist` **gem-since** — a4: Spellslinger só entra no nível 65, depois do fim da fase (59): não aparece nela
-- `infernalist` **unique-missing** — a4.cheap: 'Pyrophyte Staff' não tem entrada em UNIQUES
-- `acolyte` **unique-orphan** — Blackgleam: está em UNIQUES mas nenhuma fase, slot ou compra usa
-- `acolyte` **guide-url** — sem GUIDE_URL do guia de referência
-- `pathfinder` **spirit** — end: 307 de Spirit em reservas no nível 79, com 100 de quests (+ 200 de itens, ascendência e atlas é o teto plausível)
-- `pathfinder` **unique-missing** — a4.cheap: 'Toxic Quiver' não tem entrada em UNIQUES
-- `pathfinder` **tree-connect** — max: 7 nós da árvore principal não ligam ao início da classe
-- `smith` **unique-orphan** — Thrillsteel: está em UNIQUES mas nenhuma fase, slot ou compra usa
-- `smith` **unique-missing** — t15.full: 'Breach Ring' não tem entrada em UNIQUES
-- `martial` **unique-missing** — swap.full: 'Runeforged Fists of Stone' não tem entrada em UNIQUES
-- `shaman` **tree-connect** — endgame: 87 nós da árvore principal não ligam ao início da classe
-- `shaman` **tree-connect** — max: 11 nós da árvore principal não ligam ao início da classe
-- `shaman` **guide-url** — sem GUIDE_URL do guia de referência
-- `whirling` **opt-empty** — Charms: nenhuma opção barata no nível 1
+**0 erros · 0 avisos · 63 informações**
 
 ## Informações
 
-- `tactician` **tree-respec** — int→cannon: 2 nós saem da árvore (respec)
-- `tactician` **tree-respec** — cannon→t15: 28 nós saem da árvore (respec)
+- `tactician` **tree-respec** — t15: a árvore tem 20 nós a menos que a fase anterior (respec)
 - `infernalist` **support-orphan** — Esh's Prowess: explicado em SUPWHY mas nunca usado
 - `infernalist` **support-orphan** — Helbrym's Hide: explicado em SUPWHY mas nunca usado
 - `infernalist` **support-orphan** — Herbalism I: explicado em SUPWHY mas nunca usado
 - `infernalist` **support-orphan** — Herbalism II: explicado em SUPWHY mas nunca usado
 - `infernalist` **support-orphan** — Rakiata's Flow: explicado em SUPWHY mas nunca usado
-- `infernalist` **tree-respec** — a4→maps: 17 nós saem da árvore (respec)
-- `infernalist` **tree-respec** — maps→recoup: 31 nós saem da árvore (respec)
-- `infernalist` **tree-respec** — recoup→frost: 44 nós saem da árvore (respec)
+- `infernalist` **tree-respec** — recoup: a árvore tem 4 nós a menos que a fase anterior (respec)
+- `infernalist` **tree-respec** — frost: a árvore tem 16 nós a menos que a fase anterior (respec)
+- `infernalist` **tree-respec** — max: a árvore tem 5 nós a menos que a fase anterior (respec)
 - `acolyte` **support-orphan** — Corrosion: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Garukhan's Resolve: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Her Declaration: explicado em SUPWHY mas nunca usado
@@ -38,23 +20,12 @@
 - `acolyte` **support-orphan** — Tacati's Ire: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Uul-Netol's Embrace: explicado em SUPWHY mas nunca usado
 - `acolyte` **support-orphan** — Withering Touch: explicado em SUPWHY mas nunca usado
-- `acolyte` **tree-respec** — a2→a3: 8 nós saem da árvore (respec)
-- `acolyte` **tree-respec** — a3→a4: 10 nós saem da árvore (respec)
-- `acolyte` **tree-respec** — a4→maps: 9 nós saem da árvore (respec)
-- `acolyte` **tree-respec** — maps→archon: 85 nós saem da árvore (respec)
-- `pathfinder` **tree-respec** — a3→a4: 1 nós saem da árvore (respec)
-- `pathfinder` **tree-respec** — a5→start: 29 nós saem da árvore (respec)
-- `pathfinder` **tree-respec** — start→end: 29 nós saem da árvore (respec)
+- `acolyte` **guide-url** — sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)
 - `smith` **support-orphan** — Steadfast II: explicado em SUPWHY mas nunca usado
-- `smith` **tree-respec** — a3→a4: 10 nós saem da árvore (respec)
-- `smith` **tree-respec** — a4→int: 4 nós saem da árvore (respec)
-- `smith` **tree-respec** — int→maps: 4 nós saem da árvore (respec)
-- `smith` **tree-respec** — maps→t10: 13 nós saem da árvore (respec)
 - `martial` **support-orphan** — Burgeon II: explicado em SUPWHY mas nunca usado
 - `martial` **support-orphan** — Culling Strike II: explicado em SUPWHY mas nunca usado
 - `martial` **support-orphan** — Hit and Run: explicado em SUPWHY mas nunca usado
 - `martial` **support-orphan** — Profane Ritual: explicado em SUPWHY mas nunca usado
-- `martial` **tree-respec** — a4→swap: 51 nós saem da árvore (respec)
 - `shaman` **support-orphan** — Ambush: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Arcane Surge: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Biting Frost I: explicado em SUPWHY mas nunca usado
@@ -69,11 +40,7 @@
 - `shaman` **support-orphan** — Shock Conduction: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Supercritical: explicado em SUPWHY mas nunca usado
 - `shaman` **support-orphan** — Wildshards I: explicado em SUPWHY mas nunca usado
-- `shaman` **tree-start** — a1: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
-- `shaman` **tree-start** — a2: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
-- `shaman` **tree-start** — a3: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
-- `shaman` **tree-start** — a4: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
-- `shaman` **tree-start** — maps: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
+- `shaman` **guide-url** — sem GUIDE_URL de um guia de referência único (a build vem de várias fontes?)
 - `legionnaire` **support-orphan** — Ancestral Call II: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Armour Demolisher II: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Behead II: explicado em SUPWHY mas nunca usado
@@ -91,9 +58,6 @@
 - `legionnaire` **support-orphan** — Overcharge: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Pin I: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Prolonged Duration II: explicado em SUPWHY mas nunca usado
-- `legionnaire` **tree-start** — endgame: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
-- `legionnaire` **tree-respec** — maps→endgame: 13 nós saem da árvore (respec)
-- `legionnaire` **tree-start** — max: a árvore não parte do início conhecido da classe (a build usa outro ponto de partida, como uma joia): conexão não verificada
 - `whirling` **support-orphan** — Armour Explosion: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Charged Mark: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Efficiency II: explicado em SUPWHY mas nunca usado

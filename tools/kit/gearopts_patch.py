@@ -16,6 +16,7 @@ css = """
 .chip.cost-free{color:#86efac;border-color:rgba(134,239,172,.4)} .chip.cost-cheap{color:var(--wisp);border-color:rgba(127,215,216,.35)}
 .chip.cost-value{color:#e6c979;border-color:rgba(230,201,121,.4)} .chip.cost-lux{color:#d8a4ff;border-color:rgba(216,164,255,.45)}
 .optnext{margin:2px 0 0;color:var(--mute);font-size:.86rem;line-height:1.4} .optnext b{color:var(--text)}
+.tier.locked{opacity:.55} .tier .lk{color:var(--mute);font-size:.8rem;margin-left:6px;white-space:nowrap}
 .optnone{color:var(--mute);font-size:.88rem;margin:2px 0 0}
 .slot .lvnote{font-family:var(--ui);font-size:.8rem;color:var(--mute);margin:0}
 """
@@ -40,6 +41,16 @@ function optRow(o, i) {
   return `<li class="opt ${i === 0 ? "best" : ""}"><span class="rk">#${i + 1}</span>${im ? `<img src="${im}" alt="">` : `<span class="noimg"></span>`}<div><b>${esc(o.n)}</b><small>${esc(o.w)}</small></div>
     <span class="ochips"><span class="chip ${o.k === "u" ? "unique" : "rare"}">${o.k === "u" ? "Unique" : "Rare"}</span><span class="chip cost-${o.c}">${T(c[0], c[1])}${o.p != null && o.p >= .01 ? ` · ~${o.p} div` : ""}</span><i>${T("Nv", "Lv")} ${o.lv}</i></span></li>`;
 }
+function tierLock(text, lv) {                       // linha fixa (Barato/Valor/Completo) que só cita uniques de nível acima do seu: mostra o nível em vez de esconder
+  const names = uniquesIn(text); if (!names.length) return 0;
+  const lvs = names.map(n => (D.uniques.find(u => u.n === n) || {}).lvl);
+  if (lvs.some(x => !x)) return 0;
+  const min = Math.min(...lvs); return min > lv ? min : 0;
+}
+function tierRows(g, lv, tiers) {
+  const row = (k, label, text) => { const lock = tierLock(text, lv); return `<div class="tier ${k} ${tiers.includes(k) ? "on" : ""} ${lock ? "locked" : ""}"><span class="k">${label}</span><span>${esc(text)}${lock ? ` <span class="lk">🔒 ${T("a partir do nível", "from level")} ${lock}</span>` : ""}</span></div>`; };
+  return row("cheap", "Barato", g.cheap) + row("value", "Valor", g.value) + row("full", "Completo", g.full);
+}
 function optsBlock(g, lv) {
   const { list, next } = gearRank(g, lv);
   const top = list.slice(0, 4);
@@ -54,9 +65,7 @@ t = t.replace(old, new, 1)
 old_t = """    <div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Barato</span><span>${esc(g.cheap)}</span></div>
     <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Valor</span><span>${esc(g.value)}</span></div>
     <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Completo</span><span>${esc(g.full)}</span></div>"""
-new_t = """    ${g.opts ? optsBlock(g, lvView) : `<div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Barato</span><span>${esc(g.cheap)}</span></div>
-    <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Valor</span><span>${esc(g.value)}</span></div>
-    <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Completo</span><span>${esc(g.full)}</span></div>`}"""
+new_t = """    ${g.opts ? optsBlock(g, lvView) : tierRows(g, lvView, tiers)}"""
 assert old_t in t
 t = t.replace(old_t, new_t, 1)
 old_u = "const u = uniquesIn(g.cheap + g.value + g.full);"
@@ -71,7 +80,8 @@ t = t.replace("<h2 style=\"font-size:1.4rem\">Slot a slot · do barato ao comple
 # 4) aba Agora: 'Compre / use' = melhor opção de cada slot para o nível atual
 old_a = """<ul class="clean ${S.mode === "full" ? "gold" : ""}">${modeList(p).map(x => { const u = uniquesIn(x); return `<li><span>${esc(x)}${u.length ? `<span style="display:inline-flex;gap:4px;margin-left:6px;vertical-align:middle">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}" style="width:26px;height:26px;object-fit:contain">`).join("")}</span>` : ""}</span></li>`; }).join("")}</ul>"""
 assert old_a in t
-new_a = """<ul class="clean ${S.mode === "full" ? "gold" : ""}">${D.gear.filter(g => g.opts).map(g => { const o = gearRank(g, S.lv).list[0]; if (!o) return ""; const im = o.k === "u" ? uniqImg(o.n) : ""; return `<li><span><small style="color:var(--mute)">${esc(g.slot)}</small> · ${esc(o.n)}${im ? `<img src="${im}" alt="" style="width:26px;height:26px;object-fit:contain;margin-left:6px;vertical-align:middle">` : ""} <span class="chip ${o.k === "u" ? "unique" : "rare"}" style="margin-left:4px">${o.k === "u" ? "Unique" : "Rare"}</span></span></li>`; }).join("")}</ul>
+new_a = """${D.gear.some(g => g.opts) ? `<ul class="clean ${S.mode === "full" ? "gold" : ""}">${D.gear.filter(g => g.opts).map(g => { const o = gearRank(g, S.lv).list[0]; if (!o) return ""; const im = o.k === "u" ? uniqImg(o.n) : ""; return `<li><span><small style="color:var(--mute)">${esc(g.slot)}</small> · ${esc(o.n)}${im ? `<img src="${im}" alt="" style="width:26px;height:26px;object-fit:contain;margin-left:6px;vertical-align:middle">` : ""} <span class="chip ${o.k === "u" ? "unique" : "rare"}" style="margin-left:4px">${o.k === "u" ? "Unique" : "Rare"}</span></span></li>`; }).join("")}</ul>
       <p class="optnext" style="margin-top:8px">${T("O melhor de cada slot para o nível " + S.lv + ". Veja as alternativas na aba Itens.", "The best for each slot at level " + S.lv + ". See the alternatives in the Items tab.")}</p>"""
+new_a = new_a + "` : `" + old_a + "`}"          # builds sem opções por slot mantêm a lista antiga
 t = t.replace(old_a, new_a, 1)
 
