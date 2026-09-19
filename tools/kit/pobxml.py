@@ -148,6 +148,59 @@ def walk_order(root, priority):
     return order, sorted(resto)
 
 
+def walk_nodes(nodes, start, priority):
+    """Ordem de alocação de uma lista de nós que JÁ é alcançável a partir de `start`: notable por notable na ordem de `priority`
+    (sempre pelo menor caminho dentro de `nodes`); o resto entra no fim pela vizinhança."""
+    from collections import deque
+    N, ADJ = ninja.NODES, ninja.ADJ
+    allowed = set(nodes) | {start}
+    have, order = {start}, []
+    byname = {}
+    for n in nodes:
+        d = N[str(n)]
+        if d.get("isNotable") or d.get("isKeystone"):
+            byname[d["name"]] = n
+
+    def path_to(target):
+        pv, q = {h: None for h in have}, deque(have)
+        while q:
+            u = q.popleft()
+            if u == target:
+                out, y = [], u
+                while y is not None:
+                    out.append(y); y = pv[y]
+                return list(reversed(out))
+            for v in ADJ.get(u, ()):
+                if v in pv or v not in allowed:
+                    continue
+                pv[v] = u; q.append(v)
+        return []
+    for nome in priority:
+        if nome in byname and byname[nome] not in have:
+            for n in path_to(byname[nome]):
+                if n not in have:
+                    have.add(n); order.append(n)
+    rest = [n for n in nodes if n not in have]
+    changed = True
+    while rest and changed:
+        changed = False
+        for n in list(rest):
+            if ADJ.get(n, set()) & have:
+                have.add(n); order.append(n); rest.remove(n); changed = True
+    return order + rest
+
+
+def order_set(setnodes, main_nodes, start):
+    """Ordem dos nós de Weapon Set: sempre vizinhos do que já está alocado (árvore principal + set)."""
+    have = {start} | set(main_nodes); out = []; rem = [n for n in setnodes if n not in have]; ch = True
+    while rem and ch:
+        ch = False
+        for n in list(rem):
+            if ninja.ADJ.get(n, set()) & have:
+                have.add(n); out.append(n); rem.remove(n); ch = True
+    return out + rem
+
+
 def tree(root, limit=None, order=None):
     sp = root.find("Tree").findall("Spec")[0]
     todos = [int(x) for x in sp.get("nodes").split(",") if x]

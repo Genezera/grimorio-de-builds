@@ -3,7 +3,7 @@
 
 O guia do autor tem 3 variantes — Leveling, Endgame (Early) e Endgame — e um PoB do endgame (nível 97, dl/whirling_pob.txt).
 Os ids de passivas (mainTree/set1Tree/set2Tree/ascendancyTree) e os itens das duas primeiras variantes foram lidos da página; os itens do endgame vêm do PoB.
-A variante Leveling é UMA só (87 pontos, sem ascendência): as fases A1–A4 são cortes dela por pontos, na ordem que a Mercenary consegue alocar.
+O plano de leveling é uma adaptação: as fases A1–Mapas são cortes (17/34/50/72/85 pontos) da árvore Endgame (Early) do autor, na ordem que a Mercenary consegue alocar, com os Weapon Sets crescendo junto.
 Uso: python mkvariants.py"""
 import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -50,12 +50,17 @@ def uniq(name, base, runes=()):
 
 
 RR = lambda base, runes: uniq("Rampart Raptor", base, runes)
-BASE_A1 = {"mainHand_set1": RR("Tense Crossbow", ["Lesser Glacial Rune"]), "body": uniq("Tabula Rasa", "Garment"), "leftRing": uniq("Blackheart", "Iron Ring"),
+_spears = sorted([b for b in ninja.BASES.values() if b.get("item_class") == "Spear" and b.get("name") and (b.get("visual_identity") or {}).get("dds_file")], key=lambda b: b.get("drop_level", 0))
+SPEAR = rare(_spears[0]["name"], runes=[])               # spear branca do vendor: só precisa existir para a Whirling Slash
+SKY = lambda base, runes=(): uniq("Skysliver", base, runes)
+BASE_A1 = {"mainHand_set1": SPEAR, "mainHand_set2": RR("Tense Crossbow", ["Lesser Glacial Rune"]), "body": uniq("Tabula Rasa", "Garment"), "leftRing": uniq("Blackheart", "Iron Ring"),
            "rightRing": uniq("Blackheart", "Iron Ring"), "belt": uniq("Meginord's Girdle", "Rawhide Belt")}
-A2 = dict(BASE_A1, boots=uniq("Wanderlust", "Wrapped Sandals"), helmet=uniq("Thrillsteel", "Spired Greathelm"))
-A2["mainHand_set1"] = RR("Tense Crossbow", ["Greater Glacial Rune"])
-A3 = dict(A2, mainHand_set1=RR("Runeforged Tense Crossbow", ["Greater Glacial Rune", "Greater Glacial Rune"]), boots=uniq("Wanderlust", "Runemastered Wrapped Sandals"))
-A4 = dict(A3, mainHand_set1=RR("Runemastered Tense Crossbow", ["Greater Glacial Rune", "Greater Glacial Rune"]), helmet=uniq("Thrillsteel", "Runemastered Spired Greathelm"))
+A2 = dict(BASE_A1, boots=uniq("Wanderlust", "Wrapped Sandals"), helmet=uniq("Thrillsteel", "Spired Greathelm"), mainHand_set1=SKY("Winged Spear"),
+          mainHand_set2=RR("Tense Crossbow", ["Greater Glacial Rune"]))
+A3 = dict(A2, mainHand_set1=SKY("Runeforged Winged Spear", ["Soul Core of Speed"]), mainHand_set2=RR("Runeforged Tense Crossbow", ["Greater Glacial Rune", "Greater Glacial Rune"]),
+          boots=uniq("Wanderlust", "Runemastered Wrapped Sandals"))
+A4 = dict(A3, mainHand_set2=RR("Runemastered Tense Crossbow", ["Greater Glacial Rune", "Greater Glacial Rune"]),
+          helmet=uniq("Thrillsteel", "Runemastered Spired Greathelm"))
 EARLY_ITEMS = {
     "helmet": rare("Imperial Greathelm"), "body": uniq("Morior Invictus", "Grand Regalia", ["Warding Rune of Heart", "Fox Idol", "Panther Idol", "Tecrod's Gaze", "Rune of the Ancients"]),
     "gloves": rare("Massive Mitts", runes=["Rune of Warping"]), "boots": rare("Vaal Greaves", runes=["Perfect Life Rune"]), "amulet": rare("Absent Amulet"),
@@ -65,25 +70,22 @@ EARLY_ITEMS = {
 }
 FULL = pobxml.items(root)
 
-VARIANTS = [("A1", 17, BASE_A1), ("A2", 34, A2), ("A3", 50, A3), ("A4", 72, A4), ("Mapas", 87, A4)]
+PRIORITY = ["Hard to Kill", "Battle-hardened", "Sand in the Eyes", "Authority", "Adrenaline Rush", "Acceleration", "Colossal Weapon", "Dance with Death", "Battle Trance", "Primal Growth",
+            "Maiming Strike", "Beef", "Iron Reflexes"]
+WALK = pobxml.walk_nodes(EARLY["m"], START, PRIORITY)
+S1 = pobxml.order_set(EARLY["s1"], EARLY["m"], START)
+S2 = pobxml.order_set(EARLY["s2"], EARLY["m"], START)
+# fase: (nome, pontos da árvore principal, nós de Weapon Set 1, nós de Weapon Set 2, itens): os pontos de Weapon Set vêm 2 a 2 das quests
+CUTS = [("A1", 17, 0, 0, BASE_A1), ("A2", 34, 2, 2, A2), ("A3", 50, 6, 6, A3), ("A4", 72, 12, 12, A4), ("Mapas", 85, 20, 20, A4)]
 G = pobxml.gems(root)
-WALK = ninja.grow_order(LEVELING, START)
-reach = ninja.grow_order  # noqa: F841
 out = []
-for nome, pts, its in VARIANTS:
+for nome, pts, n1, n2, its in CUTS:
     v = pobxml.variant(root, nome, pts, its, G, WALK)
-    v["tree"]["a"] = []                  # a variante Leveling do autor não tem ascendência; o guia libera os Trials em ASC_PHASE
+    v["tree"]["s1"] = S1[:n1]; v["tree"]["s2"] = S2[:n2]
+    v["tree"]["a"] = []                  # a ascendência de cada fase é liberada por ASC_PHASE (bdata)
     out.append(v)
-for nome, tr, its in (("Endgame", EARLY, EARLY_ITEMS), ("Aspiracional", FINAL, FULL)):
-    m_order = ninja.grow_order(tr["m"], START)
+FINAL_WALK = pobxml.walk_nodes(FINAL["m"], START, PRIORITY)
+for nome, tr, m_order, its in (("Endgame", EARLY, WALK, EARLY_ITEMS), ("Aspiracional", FINAL, FINAL_WALK, FULL)):
     out.append({"src": "mobalytics", "name": nome, "items": its, "gems": G, "level": 97,
-                "tree": {"m": m_order, "s1": tr["s1"], "s2": tr["s2"], "a": ASC, "attr": None, "jewels": {}}, "desc": ""})
+                "tree": {"m": m_order, "s1": S1 if tr is EARLY else tr["s1"], "s2": S2 if tr is EARLY else tr["s2"], "a": ASC, "attr": None, "jewels": {}}, "desc": ""})
 pobxml.write("whirling", root, out, URL)
-# conectividade a partir do início da Mercenary (nós fora do alcance = "From Nothing")
-have = {START}; ch = True; S = set(LEVELING)
-while ch:
-    ch = False
-    for n in list(S):
-        if n not in have and ninja.ADJ.get(n, set()) & have:
-            have.add(n); ch = True
-print("Leveling: alcançáveis a partir do início da Mercenary:", len(have & S), "de", len(S))
