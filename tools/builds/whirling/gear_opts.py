@@ -3,7 +3,15 @@
 # Nível = requisito da base do item (RePoE); preço = poe.ninja (Divines); mods = poe.ninja. A nota (s) é o meu julgamento de encaixe para Whirling Slash + Glacial Bolt
 # (Armour/Evasion e vida, Spirit, movimento, velocidade e dano do que a build usa) — não é um número do jogo. Barato = Grátis + Barato; Completo = todos.
 # Custo: free < 0,05 Div · cheap < 1 · value < 30 · lux (ou item do PoB do autor sem preço).
-import common as _c
+import common as _c, glob as _g, json as _j, os as _os, re as _re
+
+# nível exigido do unique = o que o poe.ninja mostra no item (levelRequired); o menor entre as variantes (Tense/Runeforged/Runemastered...). 0 vira 1.
+_REQ = {}
+for _f in _g.glob(_os.path.join(_os.path.dirname(_c.__file__), "..", "dl", "eco_Unique*.json")):
+    for _l in _j.load(open(_f, encoding="utf-8"))["lines"]:
+        if _l.get("levelRequired") not in (None, ""):
+            _REQ.setdefault(_l["name"], set()).add(int(_l["levelRequired"]))
+_LV = _re.compile(r"\s*\((?:[^()]*?, )?(?:nível|level) \d+\)|, (?:nível|level) \d+(?=\))")
 
 
 def O(n, kind, lv, s, why, cost=None, tip=None):
@@ -12,14 +20,16 @@ def O(n, kind, lv, s, why, cost=None, tip=None):
     if kind == "u":
         e = _c.ECO.get(n) or {}
         price = e.get("price")
+        if n in _REQ:
+            lv = max(1, min(_REQ[n]))
+            why = tuple(_re.sub(r"\s*\((?:([^()]*?), )?(?:nível|level) \d+\)", lambda m: f" ({m.group(1)})" if m.group(1) else "", w) for w in why)     # o nível já aparece no selo
         cost = cost or ("free" if price is not None and price < .05 else "cheap" if price is not None and price < 1 else "value" if price is not None and price < 30 else "lux")
     return dict(n=n, k=kind, lv=lv, c=cost or "free", s=s, p=round(price, 3) if price is not None else None, w=L(*why), tip=tip)
 
 
 GEAR_OPTS = {
  "crossbow": [
-  O(L("Besta inicial (a que você já tem)", "Starting crossbow"), "r", 1, 30, ("Do nível 1 ao 3, até poder usar a Rampart Raptor.", "From level 1 to 3, until you can use the Rampart Raptor.")),
-  O("Rampart Raptor", "u", 4, 90, ("A besta do leveling: +40–60% de dano físico, +30–40% de velocidade de ataque, −30% de recarga e munição infinita depois de recarregar. Tense Crossbow exige nível 4. Runeforged no 38, Runemastered no 55.", "The leveling crossbow: +40–60% physical damage, +30–40% attack speed, −30% reload and infinite ammo after reloading. Tense Crossbow needs level 4. Runeforged at 38, Runemastered at 55.")),
+  O("Rampart Raptor", "u", 1, 90, ("A besta do leveling: +40–60% de dano físico, +30–40% de velocidade de ataque, −30% de recarga e munição infinita depois de recarregar. Sem requisito de nível (só ~8 de Força e Destreza). Runeforged no 38, Runemastered no 55.", "The leveling crossbow: +40–60% physical damage, +30–40% attack speed, −30% reload and infinite ammo after reloading. No level requirement (just ~8 Strength and Dexterity). Runeforged at 38, Runemastered at 55.")),
   O(L("Besta rare com + níveis de Attack e dano elemental", "Rare crossbow with + Attack levels and elemental damage"), "r", 60, 84, ("Passa a Rampart Raptor quando você tem + níveis de Attack e dano elemental adicionado (Perfect Essence of Battle ajuda).", "Beats the Rampart Raptor once you have + Attack levels and added elemental damage (Perfect Essence of Battle helps)."), cost="value"),
   O(L("Desolate Crossbow rare ilvl 82", "Rare Desolate Crossbow ilvl 82"), "r", 77, 94, ("A besta do endgame do autor (base nível 77): +3 níveis de Attack e dano de fogo e raio adicionados. Veja a aba Crafting.", "The author's endgame crossbow (base level 77): +3 Attack levels and added fire and lightning damage. See the Crafting tab."), cost="value"),
  ],
@@ -54,7 +64,7 @@ GEAR_OPTS = {
  ],
  "gloves": [
   O(L("Luvas rare de Armour com vida e resistências", "Armour rare gloves with life and resistances"), "r", 1, 55, ("Vida e resistências primeiro. NUNCA aceite 'chance de projétil extra' (o autor diz que está bugada).", "Life and resistances first. NEVER accept 'chance for an extra projectile' (the author says it's bugged).")),
-  O("Lochtonial Caress", "u", 16, 77, ("10–15% de velocidade de skill e +40–60 de vida (Tempered Mitts, nível 16): acelera a Whirling Slash e o Glacial Bolt.", "10–15% skill speed and +40–60 life (Tempered Mitts, level 16): speeds up Whirling Slash and Glacial Bolt.")),
+  O("Lochtonial Caress", "u", 16, 77, ("10–15% de velocidade de skill e +40–60 de vida (Tempered Mitts): acelera a Whirling Slash e o Glacial Bolt.", "10–15% skill speed and +40–60 life (Tempered Mitts, level 16): speeds up Whirling Slash and Glacial Bolt.")),
   O("Atziri's Acuity", "u", 33, 82, ("150–199% de Armour, +100–149 de vida e leech de vida (Moulded Mitts, nível 33).", "150–199% Armour, +100–149 life and life leech (Moulded Mitts, level 33).")),
   O("Empire's Grasp", "u", 52, 74, ("150–199% de Armour, +20–30 de Força e vida por morte (Titan Mitts, nível 52).", "150–199% Armour, +20–30 Strength and life per kill (Titan Mitts, level 52).")),
   O(L("Luvas rare de Armour ilvl 78+ com vida e dano de frio adicionado", "Rare Armour gloves ilvl 78+ with life and added cold damage"), "r", 60, 84, ("Vida, Armour e dano de frio adicionado a ataques (aba Crafting).", "Life, Armour and added cold damage to attacks (Crafting tab)."), cost="cheap"),
@@ -64,7 +74,7 @@ GEAR_OPTS = {
  "boots": [
   O(L("Botas rare com movimento e vida", "Rare boots with movement and life"), "r", 1, 58, ("Movimento primeiro (a build gira o tempo todo), depois vida e resistências.", "Movement first (the build spins all the time), then life and resistances.")),
   O("Corpsewade", "u", 11, 60, ("10% de movimento, 30–50% de Armour e Força (Iron Greaves, nível 11).", "10% movement, 30–50% Armour and Strength (Iron Greaves, level 11).")),
-  O("Wanderlust", "u", 11, 73, ("20% de movimento e imunidade à lentidão (Wrapped Sandals, nível 11; a base exige 17 de Inteligência).", "20% movement and immunity to Slow (Wrapped Sandals, level 11; the base needs 17 Intelligence).")),
+  O("Wanderlust", "u", 11, 73, ("20% de movimento e imunidade à lentidão (Wrapped Sandals; a base exige 17 de Inteligência).", "20% movement and immunity to Slow (Wrapped Sandals; the base needs 17 Intelligence).")),
   O("The Infinite Pursuit", "u", 16, 74, ("10% de movimento, 100–150% de Armour e +80–100 de vida (Bronze Greaves, nível 16).", "10% movement, 100–150% Armour and +80–100 life (Bronze Greaves, level 16).")),
   O("Trampletoe", "u", 27, 68, ("15% de movimento e 50–100% de Armour (Trimmed Greaves, nível 27); a base exige mais atributos.", "15% movement and 50–100% Armour (Trimmed Greaves, level 27); it raises attribute requirements.")),
   O("Birth of Fury", "u", 33, 84, ("20% de movimento, +40–60 de vida e 20–30% de resistência a fogo (Stone Greaves, nível 33).", "20% movement, +40–60 life and 20–30% fire resistance (Stone Greaves, level 33).")),
@@ -73,8 +83,8 @@ GEAR_OPTS = {
  ],
  "amulet": [
   O(L("Amuleto rare com vida e resistências", "Rare amulet with life and resistances"), "r", 1, 55, ("Vida e resistências que faltarem.", "Whatever life and resistances you're missing.")),
-  O("Idol of Uldurn", "u", 1, 66, ("+60–80 de vida e +Destreza (Crimson Amulet): bom no Ato 1.", "+60–80 life and +Dexterity (Crimson Amulet): good in Act 1.")),
-  O("Ligurium Talisman", "u", 8, 70, ("+25–35 de Spirit e ES (Lapis Amulet, nível 8): Spirit extra cedo.", "+25–35 Spirit and ES (Lapis Amulet, level 8): early extra Spirit.")),
+  O("Idol of Uldurn", "u", 1, 66, ("+60–80 de vida e +Destreza (Crimson Amulet): vida por quase nada no Ato 2 e 3.", "+60–80 life and +Dexterity (Crimson Amulet): life for almost nothing in Acts 2 and 3.")),
+  O("Ligurium Talisman", "u", 8, 70, ("+25–35 de Spirit e ES (Lapis Amulet): Spirit extra por quase nada.", "+25–35 Spirit and ES (Lapis Amulet): extra Spirit for almost nothing.")),
   O("Beacon of Azis", "u", 30, 74, ("+30 de Spirit e +60–99 de mana (Solar Amulet, nível 30).", "+30 Spirit and +60–99 mana (Solar Amulet, level 30).")),
   O(L("Amuleto rare com Spirit, vida e resistências", "Rare amulet with Spirit, life and resistances"), "r", 30, 80, ("Spirit paga as reservas; procure +Spirit e vida (aba Crafting).", "Spirit pays for the reservations; look for +Spirit and life (Crafting tab)."), cost="cheap"),
   O(L("Absent Amulet rare (Spirit) ilvl 75+", "Rare Absent Amulet (Spirit) ilvl 75+"), "r", 50, 90, ("A base do autor: implícito de Spirit. +3 de nível de projéteis é o sonho.", "The author's base: Spirit implicit. +3 projectile level is the dream."), cost="value"),
