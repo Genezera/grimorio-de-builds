@@ -1,6 +1,6 @@
 # Auditoria das builds — 2026-09-19
 
-**0 erros · 0 avisos · 64 informações**
+**0 erros · 0 avisos · 61 informações**
 
 ## Informações
 
@@ -60,11 +60,8 @@
 - `legionnaire` **support-orphan** — Pin I: explicado em SUPWHY mas nunca usado
 - `legionnaire` **support-orphan** — Prolonged Duration II: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Armour Explosion: explicado em SUPWHY mas nunca usado
-- `whirling` **support-orphan** — Charged Mark: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Efficiency II: explicado em SUPWHY mas nunca usado
-- `whirling` **support-orphan** — Eternal Mark: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Longshot II: explicado em SUPWHY mas nunca usado
-- `whirling` **support-orphan** — Mark for Death II: explicado em SUPWHY mas nunca usado
-- `whirling` **support-orphan** — Mark of Siphoning II: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Multishot I: explicado em SUPWHY mas nunca usado
 - `whirling` **support-orphan** — Shock: explicado em SUPWHY mas nunca usado
+- `whirling` **tree-respec** — endgame: a árvore tem 2 nós a menos que a fase anterior (respec)

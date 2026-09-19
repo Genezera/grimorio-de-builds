@@ -19,7 +19,7 @@ Site: https://genezera.github.io/grimorio-de-builds/
 | `martial/index.html` · `martial/en.html` | Monk · Martial Artist — Oil Barrage + Cast on Critical + Lightning Warp (planner do havoc616, Maxroll + ladder do poe.ninja) |
 | `shaman/index.html` · `shaman/en.html` | Druid · Shaman — Archmage Spark + Comet automatizado por Cast on Critical (os 10 Shamans de maior DPS do poe.ninja) |
 | `legionnaire/index.html` · `legionnaire/en.html` | Mercenary · Gemling Legionnaire — Falling Thunder com cajado e Power Charges (PoB nível 96 do poe.ninja) |
-| `whirling/index.html` · `whirling/en.html` | Mercenary · Gemling Legionnaire — Whirling Slash + Glacial Bolt (besta de gelo; a build de endgame já no leveling, Whirling Slash desde o nível 1 e Glacial Bolt do ~24, sem respec) — guia do Phylaris POE (Mobalytics) |
+| `whirling/index.html` · `whirling/en.html` | Mercenary · Gemling Legionnaire — Whirling Slash + Glacial Bolt (besta de gelo; skills do endgame já no leveling: Whirling Slash desde o nível 1 e Glacial Bolt do ~24; árvore de dano na campanha e respec no 79) — guia do Phylaris POE (Mobalytics) |
 | `whirling/whirling-glacial-bolt.filter` | Loot filter da build (camada para colar no topo do seu filtro); `python tools/build_filter.py --install` monta por cima do NeverSink e grava em Documents/My Games/Path of Exile 2 |
 | `rites/index.html` · `rites/en.html` | Liga Forbidden Rites — guia das 8 challenges (checklists, planejador de Omens, progresso salvo) |
 

@@ -2,7 +2,7 @@
  "date": "2026-09-19",
  "errors": 0,
  "warnings": 0,
- "info": 64,
+ "info": 61,
  "issues": [
   {
    "level": "I",
@@ -344,37 +344,13 @@
    "level": "I",
    "build": "whirling",
    "code": "support-orphan",
-   "msg": "Charged Mark: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "whirling",
-   "code": "support-orphan",
    "msg": "Efficiency II: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
    "build": "whirling",
    "code": "support-orphan",
-   "msg": "Eternal Mark: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "whirling",
-   "code": "support-orphan",
    "msg": "Longshot II: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "whirling",
-   "code": "support-orphan",
-   "msg": "Mark for Death II: explicado em SUPWHY mas nunca usado"
-  },
-  {
-   "level": "I",
-   "build": "whirling",
-   "code": "support-orphan",
-   "msg": "Mark of Siphoning II: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -387,6 +363,12 @@
    "build": "whirling",
    "code": "support-orphan",
    "msg": "Shock: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "whirling",
+   "code": "tree-respec",
+   "msg": "endgame: a árvore tem 2 nós a menos que a fase anterior (respec)"
   }
  ]
 }

@@ -72,16 +72,30 @@ FULL = pobxml.items(root)
 
 PRIORITY = ["Hard to Kill", "Battle-hardened", "Sand in the Eyes", "Authority", "Adrenaline Rush", "Acceleration", "Colossal Weapon", "Dance with Death", "Battle Trance", "Primal Growth",
             "Maiming Strike", "Beef", "Iron Reflexes"]
-WALK = pobxml.walk_nodes(EARLY["m"], START, PRIORITY)
+WALK = pobxml.walk_nodes(EARLY["m"], START, PRIORITY)                      # árvore do Endgame (Early): 79+ (respec)
+# CAMPANHA: a árvore de LEVELING do autor (87 pontos). Nos primeiros 72 pontos ela tem +251% de dano de projétil; a do endgame tem 0% (medido nos nós): por isso a campanha NÃO segue a do endgame.
+LWALK = ninja.grow_order(LEVELING, START)
+
+
+def reachable(extra):
+    seen, st, allowed = {START}, [START], set(LEVELING) | set(extra) | {START}
+    while st:
+        u = st.pop()
+        for w in ninja.ADJ.get(u, ()):
+            if w in allowed and w not in seen: seen.add(w); st.append(w)
+    return seen
+_r1, _r2 = reachable(EARLY["s1"]), reachable(EARLY["s2"])
 S1 = pobxml.order_set(EARLY["s1"], EARLY["m"], START)
 S2 = pobxml.order_set(EARLY["s2"], EARLY["m"], START)
-# fase: (nome, pontos da árvore principal, nós de Weapon Set 1, nós de Weapon Set 2, itens): os pontos de Weapon Set vêm 2 a 2 das quests
-CUTS = [("A1", 17, 0, 0, BASE_A1), ("A2", 34, 2, 2, A2), ("A3", 50, 6, 6, A3), ("A4", 72, 12, 12, A4), ("Mapas", 85, 20, 20, A4)]
+S1C = [n for n in pobxml.order_set(EARLY["s1"], LEVELING, START) if n not in set(LEVELING) and n in _r1]      # nós de Weapon Set que ligam à árvore de leveling
+S2C = [n for n in pobxml.order_set(EARLY["s2"], LEVELING, START) if n not in set(LEVELING) and n in _r2]
+# fase: (nome, pontos da árvore de leveling, nós de Weapon Set 1, nós de Weapon Set 2, itens): os pontos de Weapon Set vêm 2 a 2 das quests
+CUTS = [("A1", 17, 0, 0, BASE_A1), ("A2", 34, 2, 2, A2), ("A3", 50, 4, 4, A3), ("A4", 72, 8, 4, A4), ("Mapas", 87, 10, 4, A4)]
 G = pobxml.gems(root)
 out = []
 for nome, pts, n1, n2, its in CUTS:
-    v = pobxml.variant(root, nome, pts, its, G, WALK)
-    v["tree"]["s1"] = S1[:n1]; v["tree"]["s2"] = S2[:n2]
+    v = pobxml.variant(root, nome, pts, its, G, LWALK)
+    v["tree"]["s1"] = S1C[:n1]; v["tree"]["s2"] = S2C[:n2]
     v["tree"]["a"] = []                  # a ascendência de cada fase é liberada por ASC_PHASE (bdata)
     out.append(v)
 FINAL_WALK = pobxml.walk_nodes(FINAL["m"], START, PRIORITY)
