@@ -311,6 +311,22 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 
 .slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
 .slot{padding:14px;display:grid;gap:9px;align-content:start}
+.opts{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:auto 34px minmax(0,1fr);gap:4px 10px;align-items:center;padding:9px 10px;border:1px solid var(--edge2);border-radius:10px;background:rgba(255,255,255,.02)}
+.opt.best{border-color:rgba(114,146,202,.65);background:rgba(114,146,202,.10)}
+.opt .rk{font-family:var(--ui);font-weight:800;font-size:.8rem;color:var(--mute)} .opt.best .rk{color:var(--gild-hi)}
+.opt img,.opt .noimg{width:34px;height:34px;object-fit:contain}
+.opt b{display:block;font-size:.95rem;line-height:1.25}
+.opt small{display:block;color:var(--mute);line-height:1.4;margin-top:2px;font-size:.84rem}
+.opt .ochips{grid-column:2 / -1;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.opt .ochips i{font-style:normal;color:var(--mute);font-size:.8rem}
+.chip.rare{color:#e6c979;border-color:rgba(230,201,121,.4);background:rgba(230,201,121,.08)}
+.chip.cost-free{color:#86efac;border-color:rgba(134,239,172,.4)} .chip.cost-cheap{color:var(--wisp);border-color:rgba(127,215,216,.35)}
+.chip.cost-value{color:#e6c979;border-color:rgba(230,201,121,.4)} .chip.cost-lux{color:#d8a4ff;border-color:rgba(216,164,255,.45)}
+.optnext{margin:2px 0 0;color:var(--mute);font-size:.86rem;line-height:1.4} .optnext b{color:var(--text)}
+.optnone{color:var(--mute);font-size:.88rem;margin:2px 0 0}
+.slot .lvnote{font-family:var(--ui);font-size:.8rem;color:var(--mute);margin:0}
+
 .slot .hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .slot .hd b{font-family:var(--display);font-weight:700;color:var(--gild-hi)}
 .slot .thumbs{display:flex;gap:4px}
@@ -793,6 +809,27 @@ function gemGrid(p, useLv, detailed) {
 }
 const setItems = pid => adaptItems(pid, setItemsRaw(pid));
 const modeList = p => S.mode === "cheap" ? p.cheap : p.full;
+const COSTN = { free: ["Grátis", "Free"], cheap: ["Barato", "Cheap"], value: ["Valor", "Value"], lux: ["Luxo", "Luxury"] };
+const optOk = o => S.mode === "cheap" ? (o.c === "free" || o.c === "cheap") : true;
+function gearRank(g, lv) {
+  const list = (g.opts || []).filter(o => o.lv <= lv && optOk(o)).sort((a, b) => b.s - a.s || b.lv - a.lv);
+  const best = list[0];
+  const next = (g.opts || []).filter(o => o.lv > lv && optOk(o) && (!best || o.s > best.s)).sort((a, b) => a.lv - b.lv || b.s - a.s)[0];
+  return { list, next };
+}
+function optRow(o, i) {
+  const im = o.k === "u" ? uniqImg(o.n) : "";
+  const c = COSTN[o.c] || COSTN.free;
+  return `<li class="opt ${i === 0 ? "best" : ""}"><span class="rk">#${i + 1}</span>${im ? `<img src="${im}" alt="">` : `<span class="noimg"></span>`}<div><b>${esc(o.n)}</b><small>${esc(o.w)}</small></div>
+    <span class="ochips"><span class="chip ${o.k === "u" ? "unique" : "rare"}">${o.k === "u" ? "Unique" : "Rare"}</span><span class="chip cost-${o.c}">${T(c[0], c[1])}${o.p != null && o.p >= .01 ? ` · ~${o.p} div` : ""}</span><i>${T("Nv", "Lv")} ${o.lv}</i></span></li>`;
+}
+function optsBlock(g, lv) {
+  const { list, next } = gearRank(g, lv);
+  const top = list.slice(0, 4);
+  return `<p class="lvnote">${T(`Melhores para o nível ${lv} · modo ${S.mode === "cheap" ? "barato" : "completo"} (ranking do guia)`, `Best for level ${lv} · ${S.mode === "cheap" ? "budget" : "full"} mode (guide ranking)`)}</p>
+    ${top.length ? `<ol class="opts">${top.map(optRow).join("")}</ol>` : `<p class="optnone">${T("Nada deste slot nesse nível: use o que cair.", "Nothing for this slot at that level: use what drops.")}</p>`}
+    ${next ? `<p class="optnext">${T("Próximo upgrade", "Next upgrade")} · ${T("Nv", "Lv")} ${next.lv}: <b>${esc(next.n)}</b></p>` : ""}`;
+}
 function uniquesIn(text) { return Object.keys(A.uniqIcon).filter(n => text.includes(n) && A.uniqIcon[n]); }
 
 /* ------------------------------------------------ side panel */
@@ -907,7 +944,8 @@ function vAgora() {
     </div>
     <div class="panel frame">
       <h3>${S.mode === "cheap" ? "Compre / use (barato)" : "Compre / use (completo)"}</h3>
-      <ul class="clean ${S.mode === "full" ? "gold" : ""}">${modeList(p).map(x => { const u = uniquesIn(x); return `<li><span>${esc(x)}${u.length ? `<span style="display:inline-flex;gap:4px;margin-left:6px;vertical-align:middle">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}" style="width:26px;height:26px;object-fit:contain">`).join("")}</span>` : ""}</span></li>`; }).join("")}</ul>
+      <ul class="clean ${S.mode === "full" ? "gold" : ""}">${D.gear.filter(g => g.opts).map(g => { const o = gearRank(g, S.lv).list[0]; if (!o) return ""; const im = o.k === "u" ? uniqImg(o.n) : ""; return `<li><span><small style="color:var(--mute)">${esc(g.slot)}</small> · ${esc(o.n)}${im ? `<img src="${im}" alt="" style="width:26px;height:26px;object-fit:contain;margin-left:6px;vertical-align:middle">` : ""} <span class="chip ${o.k === "u" ? "unique" : "rare"}" style="margin-left:4px">${o.k === "u" ? "Unique" : "Rare"}</span></span></li>`; }).join("")}</ul>
+      <p class="optnext" style="margin-top:8px">${T("O melhor de cada slot para o nível " + S.lv + ". Veja as alternativas na aba Itens.", "The best for each slot at level " + S.lv + ". See the alternatives in the Items tab.")}</p>
       <div class="label" style="margin:16px 0 6px">Prioridade de stats</div>
       <div class="links">${p.stats.map((s, k) => `<span class="chip ${k === 0 ? "gold" : ""}">${k + 1}. ${esc(s)}</span>`).join("")}</div>
       <div class="label" style="margin:16px 0 6px">Evite</div>
@@ -1161,17 +1199,18 @@ function vSkills() {
 function vGear() {
   const sel = S.gearPhase ? D.phases.find(p => p.id === S.gearPhase) : curPhase();
   const tiers = S.mode === "cheap" ? ["cheap"] : ["value", "full"];
-  return `<div class="sechead"><div><h2>Itens</h2><p>Primeiro, o set completo da fase escolhida. Depois, cada slot do barato ao completo.</p></div></div>
+  const lvView = S.gearPhase ? sel.lv[1] : S.lv;
+  return `<div class="sechead"><div><h2>Itens</h2><p>Cada slot mostra as melhores opções para o seu nível — uniques ou rares — em ordem de encaixe na build. Troque Barato/Completo no topo para ver as opções acessíveis ou todas.</p></div></div>
   ${phaseSel(sel.id, "gear")}
   ${sel.id === curPhase().id ? adaptBanner("gear") : ""}
   <p style="color:var(--mute);margin:12px 0 0">${T(`Set principal da fase no modo <b>${S.mode === "cheap" ? "barato" : "completo"}</b>: rares com +níveis de spell, Spirit, mana e resistências. Troque o modo no topo para ver o outro set.`, `Main phase set in <b>${S.mode === "cheap" ? "budget" : "full"}</b> mode: rares with +spell levels, Spirit, mana and resistances. Switch the mode at the top to see the other set.`)}</p><div class="items stagger" style="margin-top:14px">${setItems(sel.id).map(itemCard).join("")}</div>
-  <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot a slot · do barato ao completo</h2><p>O modo ${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Barato</b>" : "<b style='color:#E18C47'>Completo</b>"} acende a linha certa. Preços mudam rápido, então usamos faixas.</p></div></div>
-  <div class="slots stagger">${D.gear.map(g => { const u = uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
+  <div class="sechead" style="margin-top:30px"><div><h2 style="font-size:1.4rem">Slot a slot · ranking para o seu nível</h2><p>O modo ${S.mode === "cheap" ? "<b style='color:var(--wisp)'>Barato</b>" : "<b style='color:#E18C47'>Completo</b>"} acende a linha certa. Preços mudam rápido, então usamos faixas.</p></div></div>
+  <div class="slots stagger">${D.gear.map(g => { const u = g.opts ? [...new Set(g.opts.filter(o => o.k === "u" && A.uniqIcon[o.n]).map(o => o.n))].slice(0, 6) : uniquesIn(g.cheap + g.value + g.full); return `<article class="slot frame">
     <div class="hd"><b>${esc(g.slot)}</b><span class="thumbs">${u.map(n => `<img src="${uniqImg(n)}" alt="${esc(n)}" title="${esc(n)}">`).join("")}</span></div>
     ${g.lvls ? `<div class="gearlv">${g.lvls.map((x, i) => { const im = uniqImg(x.n) || gemImg(x.n); const nx = g.lvls[i + 1]; const on = S.lv >= x.lv && (!nx || S.lv < nx.lv); const next = !on && S.lv < x.lv && (!i || S.lv >= g.lvls[i - 1].lv); return `<span class="glv ${on ? "on" : ""} ${next ? "nx" : ""}" title="${esc(x.n)}">${im ? `<img src="${im}" alt="">` : ""}<i>${T("Nv", "Lv")} ${x.lv}</i>${esc(x.n)}</span>`; }).join("")}</div>` : ""}
-    <div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Barato</span><span>${esc(g.cheap)}</span></div>
+    ${g.opts ? optsBlock(g, lvView) : `<div class="tier cheap ${tiers.includes("cheap") ? "on" : ""}"><span class="k">Barato</span><span>${esc(g.cheap)}</span></div>
     <div class="tier value ${tiers.includes("value") ? "on" : ""}"><span class="k">Valor</span><span>${esc(g.value)}</span></div>
-    <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Completo</span><span>${esc(g.full)}</span></div>
+    <div class="tier full ${tiers.includes("full") ? "on" : ""}"><span class="k">Completo</span><span>${esc(g.full)}</span></div>`}
     <div class="affix"><b>Affixes:</b> ${esc(g.affix)}</div>${g.note ? `<div class="note">${esc(g.note)}</div>` : ""}</article>`; }).join("")}</div>
   <div class="sechead" style="margin-top:28px"><div><h2 style="font-size:1.4rem">Ordem de compra</h2><p>Onde cada Exalt rende mais, do primeiro ao último.</p></div></div>
   <ol class="buy">${D.buyOrder.map(b => { const u = uniquesIn(b.item)[0]; return `<li class="frame"><span class="i">${String(b.p).padStart(2, "0")}</span>${u ? `<img src="${uniqImg(u)}" alt="">` : "<span></span>"}<div><b>${esc(b.item)}</b><small>${esc(b.impact)} · ${esc(b.phase)}</small></div><span class="chip ${/Alto|alto/.test(b.cost) ? "unique" : "wisp"}">${esc(b.cost)}</span></li>`; }).join("")}</ol>`;

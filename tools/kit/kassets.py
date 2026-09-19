@@ -243,6 +243,12 @@ for pid in ORDER:
 for u in D.UNIQUES:
     k = icon_url(u.get("iconUrl"), "U_" + re.sub(r"[^A-Za-z]", "", u["n"]), 96)
     if k: uniq_icon[u["n"]] = k
+for _g in getattr(D, "GEAR", []):                       # ícones dos uniques que só aparecem como opção de slot (aba Itens)
+    for _o in _g.get("opts") or []:
+        if _o.get("k") == "u" and _o["n"] not in uniq_icon:
+            _e = common.ECO.get(_o["n"]) or {}
+            k = icon_url(_e.get("icon"), "U_" + re.sub(r"[^A-Za-z]", "", _o["n"]), 96)
+            if k: uniq_icon[_o["n"]] = k
 
 # ------------------------------------------------------------ ordem de alocação por nível
 adj = {}

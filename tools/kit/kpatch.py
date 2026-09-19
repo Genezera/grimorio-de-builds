@@ -91,5 +91,7 @@ for a, b in C.get("recolor", {}).items():
 
 leftover = [w for w in ("Lowepe", "Spell Totem", "totemCalc", "Grim Pillars", "Druid") if w in t]
 assert not leftover, f"sobras do Oracle: {leftover}"
+if any(g.get("opts") for g in getattr(B, "GEAR", [])):
+    exec(open(os.path.join(HERE, "gearopts_patch.py"), encoding="utf-8").read())
 open(os.path.join(BDIR, "app_template.html"), "w", encoding="utf-8").write(t)
 print(BID, "template ok", len(t))
