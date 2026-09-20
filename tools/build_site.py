@@ -15,7 +15,7 @@ for f in ["i18n/en_1.json", "i18n/en_2.json", "i18n/en_3.json"]:
     en.update(json.load(open(f, encoding="utf-8")))
 MAP = {src[k]: v for k, v in en.items()}
 MAP.update(json.load(open("i18n/en_extra.json", encoding="utf-8")))
-import unique_fill
+import unique_fill, sf_jewels
 MAP.update(unique_fill.EN_PAIRS)
 import timing
 MAP.update(timing.EN_PAIRS)
@@ -57,15 +57,19 @@ DATA_EN["supWhy"] = {k: tr(v) for k, v in D.DATA["supWhy"].items()}
 DATA_EN["updated"] = D.DATA.get("updated", "")
 
 A = json.load(open("assets.json", encoding="utf-8"))
-A_EN_TXT = {"sets": walk(A["sets"]), "guide": walk(A["guide"])}
+A["jewels"], A["jewelsBy"] = sf_jewels.compute(A["alloc"], D.UNIQUES)          # joias por jewel socket (guia do Mattjestic), calculadas a cada build
+MAP.update(sf_jewels.EN_PAIRS)
+A_EN_TXT = {"sets": walk(A["sets"]), "guide": walk(A["guide"]), "jewels": walk(A.get("jewels", [])), "jewelsBy": walk(A.get("jewelsBy", {}))}
 
 # ---------- assets compartilhados (funciona em file:// e GitHub Pages)
 imgs = {k: "data:image/png;base64," + base64.b64encode(open("media/" + k, "rb").read()).decode()
         for k in ["image.png", "image2.png", "image4.png", "image5.png"]}
 open(OUT + "/assets/assets.js", "w", encoding="utf-8").write("window.__A=" + safe(A) + ";\nwindow.__IMG=" + safe(imgs) + ";\n")
 
-tpl = open("app_template.html", encoding="utf-8").read()
+tpl = sf_jewels.patch(open("app_template.html", encoding="utf-8").read())
 HEAD = '<!doctype html>\n<html lang="{lang}">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>">\n'
+
+UI = list(UI) + sf_jewels.UI_PAIRS
 
 def page(lang):
     t = tpl
