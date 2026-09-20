@@ -21,8 +21,8 @@ UPDATED = "19/09/2026"
 CONFIG = dict(dir="twister", build="twister", store="twister1", emoji="🌪", pill="Mercenary · Gemling Legionnaire",
               fonts="family=Cinzel:wght@500;700;900&family=Oxanium:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,500;0,600;1,400")
 TXT = {
- "pt": dict(TITLE="Tornado da Lança", DESC="Guia interativo Mercenary Gemling Legionnaire Twister + Whirling Slash (spear, crítico e elementos, do nível 1 ao 100) — PoE 2 Forbidden Rites",
-            H1S="Twister e Whirling Slash na spear desde o nível 1 · o redemoinho vira tornado · crítico e elementos", H1="O Tornado da Lança",
+ "pt": dict(TITLE="Spear Twister", DESC="Guia interativo Mercenary Gemling Legionnaire Twister + Whirling Slash (spear, crítico e elementos, do nível 1 ao 100) — PoE 2 Forbidden Rites",
+            H1S="Twister e Whirling Slash na spear desde o nível 1 · o redemoinho vira tornado · crítico e elementos", H1="The Spear Twister",
             LEAD="A Whirling Slash levanta um redemoinho; o Twister encosta nele, consome e cria tornados extras. São duas skills de spear do nível 1 ao 100. Diga seu nível e o que você já tem, e o guia mostra o que fazer agora, gema por gema, item por item, até o Twister de endgame."),
  "en": dict(TITLE="Spear Twister", DESC="Interactive Mercenary Gemling Legionnaire Twister + Whirling Slash guide (spear, crit and elements, level 1 to 100) — PoE 2 Forbidden Rites",
             H1S="Twister and Whirling Slash on the spear from level 1 · the whirlwind becomes a tornado · crit and elements", H1="The Spear Twister",

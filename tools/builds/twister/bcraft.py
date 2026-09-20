@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Oficina de crafting do Tornado da Lança (executado dentro de bdata.py: usa L, BOOK). Tiers e ilvl do cache do PoE2DB (tools/dl/web/mods_*.json).
+# Oficina de crafting do Spear Twister (executado dentro de bdata.py: usa L, BOOK). Tiers e ilvl do cache do PoE2DB (tools/dl/web/mods_*.json).
 # Enxuta de propósito: as peças em que vale gastar currency (a besta e três peças de Armour); body, botas de leveling e cintos são unique.
 import craftkit
 K = craftkit.Kit(BOOK); S = K.S; P, X, DS, DP, C = K.P, K.X, K.D, K.DP, K.C

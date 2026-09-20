@@ -18,8 +18,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="shaman", build="shaman", store="shaman1", emoji="🌩", pill="Druid · Shaman",
               fonts="family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Oxanium:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,500;0,600;1,400")
 TXT = {
- "pt": dict(TITLE="Tempestade de Mana", DESC="Guia interativo Druid Shaman Archmage Spark + Comet (Cast on Critical) — PoE 2 Forbidden Rites",
-            H1S="Spark desde o nível 1 · Comet automático nos mapas · uma barra de mana que é dano e vida ao mesmo tempo", H1="A Tempestade de Mana",
+ "pt": dict(TITLE="Mana Storm", DESC="Guia interativo Druid Shaman Archmage Spark + Comet (Cast on Critical) — PoE 2 Forbidden Rites",
+            H1S="Spark desde o nível 1 · Comet automático nos mapas · uma barra de mana que é dano e vida ao mesmo tempo", H1="The Mana Storm",
             LEAD="Build de um botão: sua mana vira dano de raio (Archmage), o Spark cobre a tela inteira e o Comet cai sozinho a cada crítico. Diga seu nível, seu ato e o que você já tem."),
  "en": dict(TITLE="Mana Storm", DESC="Interactive Druid Shaman Archmage Spark + Comet (Cast on Critical) guide — PoE 2 Forbidden Rites",
             H1S="Spark from level 1 · automatic Comet in maps · one mana bar that is both damage and life", H1="The Mana Storm",

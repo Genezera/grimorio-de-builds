@@ -43,8 +43,8 @@ open(OUT + "/assets/assets.js", "w", encoding="utf-8").write("window.__A=" + saf
 tpl = open(os.path.join(HERE, "app_template.html"), encoding="utf-8").read()
 HEAD = '<!doctype html>\n<html lang="{lang}">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔮</text></svg>">\n'
 TXT = {
- "pt": dict(TITLE="Oráculo dos Totems", DESC="Guia interativo Oracle Spell Totem (Druid) — PoE 2 Forbidden Rites",
-            H1S="Spell Totem · Spark → Grim Pillars · guia do Lowepe explicado", H1="O Oráculo dos Totems",
+ "pt": dict(TITLE="Oracle of Totems", DESC="Guia interativo Oracle Spell Totem (Druid) — PoE 2 Forbidden Rites",
+            H1S="Spell Totem · Spark → Grim Pillars · guia do Lowepe explicado", H1="The Oracle of Totems",
             LEAD="Spells físicos no leveling, a troca para Spell Totem no fim do Ato 4 e Grim Pillars + Archmage no Atlas. Diga seu nível e o que você tem: o guia calcula quantos totems cabem no seu Spirit e mostra o que fazer, equipar e passivas."),
  "en": dict(TITLE="Oracle of Totems", DESC="Interactive Oracle Spell Totem (Druid) guide — PoE 2 Forbidden Rites",
             H1S="Spell Totem · Spark → Grim Pillars · Lowepe's guide explained", H1="The Oracle of Totems",

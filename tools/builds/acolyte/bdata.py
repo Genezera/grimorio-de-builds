@@ -17,8 +17,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="acolyte", build="acolyte", store="acolyte1", emoji="🌀", pill="Monk · Acolyte of Chayula",
               fonts="family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Cormorant+SC:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400")
 TXT = {
- "pt": dict(TITLE="Sonho de Chayula", DESC="Guia interativo Acolyte of Chayula: veneno na campanha, maça dupla e tornados no endgame (Monk) — PoE 2 Forbidden Rites",
-            H1S="Poisonburst Arrow até o Ato 4 · Brutus' Lead Sprinkler + Archon dali em diante — do Goratha ao Dreamcore", H1="O Sonho de Chayula",
+ "pt": dict(TITLE="Chayula's Dream", DESC="Guia interativo Acolyte of Chayula: veneno na campanha, maça dupla e tornados no endgame (Monk) — PoE 2 Forbidden Rites",
+            H1S="Poisonburst Arrow até o Ato 4 · Brutus' Lead Sprinkler + Archon dali em diante — do Goratha ao Dreamcore", H1="Chayula's Dream",
             LEAD="Uma flecha envenena o pack e os heralds explodem em cadeia — rápido e barato até o meio da campanha. No nível 45 a Força assume: duas Brutus' Lead Sprinkler substituem o arco, e tudo que você já investiu continua valendo até o nível 80, quando os tornados do Archon começam a disparar sozinhos. Diga seu nível e o que você tem."),
  "en": dict(TITLE="Chayula's Dream", DESC="Interactive Acolyte of Chayula guide: poison through the campaign, dual maces and tornadoes at endgame (Monk) — PoE 2 Forbidden Rites",
             H1S="Poisonburst Arrow through Act 4 · Brutus' Lead Sprinkler + Archon from there on — from Goratha to Dreamcore", H1="Chayula's Dream",

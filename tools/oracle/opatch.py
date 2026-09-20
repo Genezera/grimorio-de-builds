@@ -22,7 +22,7 @@ def block(start, end, new):
     t = t[:i] + new + "\n" + t[j:]
 
 # ------------------------------------------------------------------ cabeçalho, fontes, storage
-rep("<title>Trilha do Silverfist</title>", "<title>__TITLE__</title>")
+rep("<title>Silverfist Trail</title>", "<title>__TITLE__</title>")
 rep('content="Guia interativo Spirit Walker / Mighty Silverfist — PoE 2 Forbidden Rites"', 'content="__DESC__"')
 rep("family=Cinzel:wght@500;700;900&family=Alegreya+SC:wght@400;500;700&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600",
     "family=Cinzel+Decorative:wght@700;900&family=Marcellus&family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;600")

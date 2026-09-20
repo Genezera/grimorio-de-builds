@@ -16,8 +16,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="smith", build="smith", store="smith1", emoji="🛡️", pill="Warrior · Smith of Kitava",
               fonts="family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400")
 TXT = {
- "pt": dict(TITLE="Forja de Kitava", DESC="Guia interativo Smith of Kitava Shield Wall + Avatar of Fire (Warrior) — PoE 2 Forbidden Rites",
-            H1S="Shield Wall + Avatar of Fire · escudo, fogo e armadura · guia do Lexd explicado", H1="A Forja de Kitava",
+ "pt": dict(TITLE="Kitava's Forge", DESC="Guia interativo Smith of Kitava Shield Wall + Avatar of Fire (Warrior) — PoE 2 Forbidden Rites",
+            H1S="Shield Wall + Avatar of Fire · escudo, fogo e armadura · guia do Lexd explicado", H1="Kitava's Forge",
             LEAD="O Warrior mais tanque do jogo: muros de terra que explodem em fogo, Ignite no boss e uma body armour forjada pela ascendência. Diga seu nível e o que você tem: o guia mostra skills, escudo e maça da fase, passivas e o Spirit das suas auras."),
  "en": dict(TITLE="Kitava's Forge", DESC="Interactive Smith of Kitava Shield Wall + Avatar of Fire (Warrior) guide — PoE 2 Forbidden Rites",
             H1S="Shield Wall + Avatar of Fire · shield, fire and armour · Lexd's guide explained", H1="Kitava's Forge",

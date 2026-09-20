@@ -1,10 +1,10 @@
 # Pares exatos (PT -> EN) aplicados ao template para gerar en.html. Aplicados do mais longo ao mais curto.
 UI = [
-("<title>Trilha do Silverfist</title>", "<title>Silverfist Trail</title>"),
+("<title>Silverfist Trail</title>", "<title>Silverfist Trail</title>"),
 ('aria-label="Trilha de níveis"', 'aria-label="Level trail"'),
 ('<span class="lv-top">Nv 1</span>', '<span class="lv-top">Lv 1</span>'),
 ('<span class="lv-bot">Nv 100</span>', '<span class="lv-bot">Lv 100</span>'),
-("Rota Chober Chaber · guia Mattjestic explicado</small>A Trilha do Mighty Silverfist", "Chober Chaber route · Mattjestic's guide explained</small>The Mighty Silverfist Trail"),
+("Rota Chober Chaber · guia Mattjestic explicado</small>The Mighty Silverfist Trail", "Chober Chaber route · Mattjestic's guide explained</small>The Mighty Silverfist Trail"),
 ("Spear no começo, o macaco no Ato 3 e o zoo completo no Atlas — sem nenhuma queda de dano. Diga seu nível e quanto quer gastar: o guia mostra o que fazer, o que equipar e quais passivas pegar agora.", "Spear at the start, the monkey in Act 3 and the full zoo in the Atlas — with no damage dips. Set your level and how much you want to spend: the guide shows what to do, what to equip and which passives to take right now."),
 ("<small>NÍVEL</small>", "<small>LEVEL</small>"),
 ('<div class="label">Você está em</div>', '<div class="label">You are in</div>'),

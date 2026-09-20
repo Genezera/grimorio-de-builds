@@ -19,8 +19,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="martial", build="martial", store="martial1", emoji="⚡", pill="Monk · Martial Artist",
               fonts="family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Oxanium:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,500;0,600;1,400")
 TXT = {
- "pt": dict(TITLE="Oil Barrage Teleporte", DESC="Guia interativo Martial Artist Oil Barrage + Cast on Critical + Lightning Warp (Monk) — PoE 2 Forbidden Rites",
-            H1S="Storm Wave na campanha · Oil Barrage nos mapas · Lightning Warp teleportando de pack em pack", H1="O Dragão de Óleo",
+ "pt": dict(TITLE="Oil Barrage Teleport", DESC="Guia interativo Martial Artist Oil Barrage + Cast on Critical + Lightning Warp (Monk) — PoE 2 Forbidden Rites",
+            H1S="Storm Wave na campanha · Oil Barrage nos mapas · Lightning Warp teleportando de pack em pack", H1="The Oil Dragon",
             LEAD="Você vira wyvern, cospe óleo elétrico na tela inteira e cada crítico enche o Cast on Critical: o Lightning Warp te teleporta para dentro do próximo inimigo e explode tudo em volta. Diga seu nível e o que você tem."),
  "en": dict(TITLE="Oil Barrage Teleport", DESC="Interactive Martial Artist Oil Barrage + Cast on Critical + Lightning Warp (Monk) guide — PoE 2 Forbidden Rites",
             H1S="Storm Wave in the campaign · Oil Barrage in maps · Lightning Warp teleporting from pack to pack", H1="The Oil Dragon",

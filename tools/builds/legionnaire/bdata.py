@@ -21,8 +21,8 @@ UPDATED = "19/09/2026"
 CONFIG = dict(dir="legionnaire", build="legionnaire", store="legionnaire1", emoji="⚡", pill="Mercenary · Gemling Legionnaire",
               fonts="family=Cinzel:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400")
 TXT = {
- "pt": dict(TITLE="Trovão Cortante", DESC="Guia interativo Mercenary Gemling Legionnaire Falling Thunder (cajado + Power Charges) — PoE 2 Forbidden Rites",
-            H1S="Falling Thunder · cajado · Power Charges · do nível 1 ao 100 a partir de um PoB real de 192M de DPS", H1="O Trovão Cortante",
+ "pt": dict(TITLE="Cleaving Thunder", DESC="Guia interativo Mercenary Gemling Legionnaire Falling Thunder (cajado + Power Charges) — PoE 2 Forbidden Rites",
+            H1S="Falling Thunder · cajado · Power Charges · do nível 1 ao 100 a partir de um PoB real de 192M de DPS", H1="Cleaving Thunder",
             LEAD="Você bate no chão com um cajado carregado de raio e cada Power Charge vira um projétil. Diga seu nível e o que você já tem: o guia mostra o que fazer agora, gema por gema, item por item, até o build de endgame."),
  "en": dict(TITLE="Cleaving Thunder", DESC="Interactive Mercenary Gemling Legionnaire Falling Thunder (quarterstaff + Power Charges) guide — PoE 2 Forbidden Rites",
             H1S="Falling Thunder · quarterstaff · Power Charges · level 1 to 100 from a real 192M-DPS PoB", H1="Cleaving Thunder",

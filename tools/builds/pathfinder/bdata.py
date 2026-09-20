@@ -17,8 +17,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="pathfinder", build="pathfinder", store="pathfinder1", emoji="🧪", pill="Ranger · Pathfinder",
               fonts="family=Cinzel:wght@500;700;900&family=Alegreya+Sans+SC:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400")
 TXT = {
- "pt": dict(TITLE="Trilha Venenosa", DESC="Guia interativo Pathfinder Poison Bow → Corpsewade Decompose (Ranger) — PoE 2 Forbidden Rites",
-            H1S="Poison bow no leveling · Corpsewade Decompose no endgame · guias do Skadoosh explicados", H1="A Trilha Venenosa",
+ "pt": dict(TITLE="Venom Trail", DESC="Guia interativo Pathfinder Poison Bow → Corpsewade Decompose (Ranger) — PoE 2 Forbidden Rites",
+            H1S="Poison bow no leveling · Corpsewade Decompose no endgame · guias do Skadoosh explicados", H1="The Venom Trail",
             LEAD="Suba de nível com arco de veneno (Poisonburst Arrow, Toxic Growth, Contagion) e, no 58, vire o Pathfinder que envenena o mapa só andando: cada passo com Corpsewade solta Decompose nos corpos. Diga seu nível e o que você tem: o guia mostra skills, weapon sets, passivas e o Spirit dos dois sets."),
  "en": dict(TITLE="Venom Trail", DESC="Interactive Pathfinder Poison Bow → Corpsewade Decompose (Ranger) guide — PoE 2 Forbidden Rites",
             H1S="Poison bow while leveling · Corpsewade Decompose in endgame · Skadoosh's guides explained", H1="The Venom Trail",

@@ -17,8 +17,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="infernalist", build="infernalist", store="infernalist1", emoji="🔥", pill="Witch · Infernalist",
               fonts="family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Cormorant+SC:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400")
 TXT = {
- "pt": dict(TITLE="Pacto Infernal", DESC="Guia interativo Infernalist Spark → Cast on Critical Comet (Witch) — PoE 2 Forbidden Rites",
-            H1S="Spark no leveling · Cast on Critical Comet no endgame · guias do Ignatius e do kingkongor explicados", H1="O Pacto Infernal",
+ "pt": dict(TITLE="Infernal Pact", DESC="Guia interativo Infernalist Spark → Cast on Critical Comet (Witch) — PoE 2 Forbidden Rites",
+            H1S="Spark no leveling · Cast on Critical Comet no endgame · guias do Ignatius e do kingkongor explicados", H1="The Infernal Pact",
             LEAD="Faíscas e infusões na campanha, Comets caindo a cada crítico nos mapas e o Pyromantic Pact transformando o próprio dano em regeneração. Diga seu nível e o que você tem: o guia mostra a rotação, as infusões, o Spirit das metas e cada passiva."),
  "en": dict(TITLE="Infernal Pact", DESC="Interactive Infernalist Spark → Cast on Critical Comet (Witch) guide — PoE 2 Forbidden Rites",
             H1S="Spark while leveling · Cast on Critical Comet in endgame · Ignatius's and kingkongor's guides explained", H1="The Infernal Pact",

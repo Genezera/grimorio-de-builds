@@ -16,8 +16,8 @@ UPDATED = "17/09/2026"
 CONFIG = dict(dir="tactician", build="tactician", store="tactician1", emoji="💣", pill="Mercenary · Tactician",
               fonts="family=Cinzel:wght@500;700;900&family=Oswald:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400")
 TXT = {
- "pt": dict(TITLE="Tactician das Granadas", DESC="Guia interativo Tactician Pin2Win Grenades (Mercenary) — PoE 2 Forbidden Rites",
-            H1S="Pin2Win Grenades · crossbow do nível 1 ao T15 · guia do BlazeworksTV explicado", H1="O Tactician das Granadas",
+ "pt": dict(TITLE="Grenade Tactician", DESC="Guia interativo Tactician Pin2Win Grenades (Mercenary) — PoE 2 Forbidden Rites",
+            H1S="Pin2Win Grenades · crossbow do nível 1 ao T15 · guia do BlazeworksTV explicado", H1="The Grenade Tactician",
             LEAD="Prenda os inimigos no lugar com Pin e exploda tudo com granadas de fogo, gás e óleo. Do Ato 1 ao Trarthan Cannon e à Siege Crossbow: diga seu nível e o que você tem, e o guia mostra skills, crossbow da fase, passivas e o Spirit das suas auras."),
  "en": dict(TITLE="Grenade Tactician", DESC="Interactive Tactician Pin2Win Grenades (Mercenary) guide — PoE 2 Forbidden Rites",
             H1S="Pin2Win Grenades · crossbow from level 1 to T15 · BlazeworksTV's guide explained", H1="The Grenade Tactician",

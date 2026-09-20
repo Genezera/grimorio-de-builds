@@ -20,8 +20,8 @@ UPDATED = "19/09/2026"
 CONFIG = dict(dir="whirling", build="whirling", store="whirling1", emoji="❄", pill="Mercenary · Gemling Legionnaire",
               fonts="family=Cinzel:wght@500;700;900&family=Oxanium:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,500;0,600;1,400")
 TXT = {
- "pt": dict(TITLE="Ciclone de Gelo", DESC="Guia interativo Mercenary Gemling Legionnaire Whirling Glacial Bolt (besta de gelo, do nível 1 ao 100, a mesma build a campanha inteira) — PoE 2 Forbidden Rites",
-            H1S="Whirling Slash na spear desde o nível 1 · Glacial Bolt do nível 24 · as skills do endgame durante toda a campanha, com a árvore de dano na campanha e respec no 79", H1="O Ciclone de Gelo",
+ "pt": dict(TITLE="Frost Cyclone", DESC="Guia interativo Mercenary Gemling Legionnaire Whirling Glacial Bolt (besta de gelo, do nível 1 ao 100, a mesma build a campanha inteira) — PoE 2 Forbidden Rites",
+            H1S="Whirling Slash na spear desde o nível 1 · Glacial Bolt do nível 24 · as skills do endgame durante toda a campanha, com a árvore de dano na campanha e respec no 79", H1="The Frost Cyclone",
             LEAD="A build final já é a build do nível 1: a spear gira e quebra o gelo, a besta congela e planta as paredes de cristal. Diga seu nível e o que você já tem, e o guia mostra o que fazer agora, gema por gema, item por item, até o Whirling Glacial Bolt de endgame (um respec de árvore no 79)."),
  "en": dict(TITLE="Frost Cyclone", DESC="Interactive Mercenary Gemling Whirling Glacial Bolt guide (ice crossbow, level 1 to 100, the same build through the whole campaign) — PoE 2 Forbidden Rites",
             H1S="Whirling Slash on the spear from level 1 · Glacial Bolt from level 24 · the endgame skills all through the campaign, damage tree in the campaign and a respec at 79", H1="The Frost Cyclone",

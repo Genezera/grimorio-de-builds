@@ -25,10 +25,10 @@ IDENT = [
  dict(key="pf", folder="pathfinder", cls="Ranger", asc="Pathfinder", title="Pathfinder Decompose", ninja=["Decompose", "Poisonburst Arrow"], tags=["poison", "bow", "minions"], clear=4, boss=3, ease0=3, kit=True),
  dict(key="sk", folder="smith", cls="Warrior", asc="Smith of Kitava", title="Smith of Kitava Shield Wall", ninja=["Shield Wall", "Earthquake"], tags=["tank", "melee", "fire"], clear=3, boss=4, ease0=4, kit=True),
  dict(key="ma", folder="martial", cls="Monk", asc="Martial Artist", title="Oil Barrage Teleport", ninja=["Storm Wave", "Lightning Warp", "Barrage"], tags=["crit", "teleport", "lightning"], clear=5, boss=4, ease0=2, kit=True),
- dict(key="sh", folder="shaman", cls="Druid", asc="Shaman", title="Tempestade de Mana", ninja=["Spark", "Comet"], tags=["spells", "mana", "lightning"], clear=4, boss=4, ease0=4, kit=True),
- dict(key="lg", folder="legionnaire", cls="Mercenary", asc="Gemling Legionnaire", title="Trovão Cortante", ninja=["Falling Thunder"], tags=["quarterstaff", "lightning", "charges"], clear=4, boss=4, ease0=3, kit=True),
- dict(key="gw", folder="whirling", cls="Mercenary", asc="Gemling Legionnaire", title="Ciclone de Gelo", ninja=["Whirling Slash", "Glacial Bolt"], tags=["crossbow", "cold", "spear"], clear=5, boss=4, ease0=4, kit=True),
- dict(key="tw", folder="twister", cls="Mercenary", asc="Gemling Legionnaire", title="Tornado da Lança", ninja=["Twister", "Spear Throw", "Whirling Slash"], tags=["spear", "crit", "elemental"], clear=5, boss=4, ease0=3, kit=True),
+ dict(key="sh", folder="shaman", cls="Druid", asc="Shaman", title="Mana Storm", ninja=["Spark", "Comet"], tags=["spells", "mana", "lightning"], clear=4, boss=4, ease0=4, kit=True),
+ dict(key="lg", folder="legionnaire", cls="Mercenary", asc="Gemling Legionnaire", title="Cleaving Thunder", ninja=["Falling Thunder"], tags=["quarterstaff", "lightning", "charges"], clear=4, boss=4, ease0=3, kit=True),
+ dict(key="gw", folder="whirling", cls="Mercenary", asc="Gemling Legionnaire", title="Frost Cyclone", ninja=["Whirling Slash", "Glacial Bolt"], tags=["crossbow", "cold", "spear"], clear=5, boss=4, ease0=4, kit=True),
+ dict(key="tw", folder="twister", cls="Mercenary", asc="Gemling Legionnaire", title="Spear Twister", ninja=["Twister", "Spear Throw", "Whirling Slash"], tags=["spear", "crit", "elemental"], clear=5, boss=4, ease0=3, kit=True),
 ]
 
 

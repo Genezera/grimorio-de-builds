@@ -55,7 +55,7 @@ def main():
     if len(sys.argv) > 4 and sys.argv[4] == "cool":              # variação de cor da mesma ilustração (gelo)
         r, g, bl = src.convert("RGB").split()
         src = Image.merge("RGB", (r.point(lambda v: int(v * .72)), g.point(lambda v: int(v * .96)), bl.point(lambda v: min(255, int(v * 1.14)))))
-    if len(sys.argv) > 4 and sys.argv[4] == "wind":                                 # variação verde-vento (Tornado da Lança)
+    if len(sys.argv) > 4 and sys.argv[4] == "wind":                                 # variação verde-vento (Spear Twister)
         r, g, bl = src.convert("RGB").split()
         src = Image.merge("RGB", (r.point(lambda v: int(v * .82)), g.point(lambda v: min(255, int(v * 1.12))), bl.point(lambda v: int(v * .78))))
     medallion(src, 720).save(os.path.join(ART, f"{p}-asc.webp"), "WEBP", quality=88, method=6)
