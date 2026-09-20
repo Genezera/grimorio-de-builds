@@ -141,6 +141,66 @@ def check_tree(bid, B):
             if lost: add("W", bid, "tree-connect", f"{pid}: {lost} de {n} nós da árvore não ligam ao início da classe pelos nós anteriores (caminho que o jogador não consegue seguir)")
 
 
+_NOTABLES = {}
+
+
+def _notable_names():
+    if not _NOTABLES:
+        for k, n in ninja.NODES.items():
+            if (n.get("isNotable") or n.get("isKeystone")) and not n.get("ascendancyName") and len(n.get("name") or "") >= 8:
+                _NOTABLES.setdefault(n["name"], set()).add(int(k))
+    return _NOTABLES
+
+
+def _cited(text):
+    """Nomes de notável/keystone citados no texto (os mais longos primeiro; um nome dentro de outro, ou parte de um nome próprio maior, não conta)."""
+    names, out = _notable_names(), []
+    txt = text
+    for nm in sorted(names, key=len, reverse=True):
+        for m in re.finditer(r"(?<![A-Za-z])" + re.escape(nm) + r"(?![A-Za-z])", txt):
+            before, after = txt[:m.start()], txt[m.end():]
+            if re.search(r"[A-Z][a-z']+ $", before) or re.match(r" [A-Z]", after): continue        # parte de um nome próprio maior (item, gem, ascendência)
+            out.append(nm)
+            txt = txt[:m.start()] + " " * len(nm) + txt[m.end():]
+            break
+    return out
+
+
+_FWD = re.compile(r"pr[óo]xim|next|at[ée] |towards?|road|pathing|caminho|s[óo] entra|only come|nos cortes|a partir d", re.I)
+
+
+def _forward(text, nm):
+    """A frase que cita o nó fala de caminho ou de um corte futuro (\"caminho até X\", \"X vem no próximo corte\"): não é promessa desta fase."""
+    for sent in re.split(r"(?<=[.;])\s", text):
+        if nm in sent and _FWD.search(sent): return True
+    return False
+
+
+def check_tree_text(bid, B):
+    """O texto 'Árvore' de cada fase só pode citar notables que o corte dessa fase (ou seus Weapon Sets) realmente tem.
+    Foi assim que o guia do Shaman prometia Brain Storm e Chakra of Elements numa árvore que nunca os alocava."""
+    p = os.path.join(HERE, "builds", bid, "assets.json")
+    if not os.path.exists(p): return
+    A = json.load(open(p, encoding="utf-8"))
+    names = _notable_names()
+    for ph in B.PHASES:
+        o, al = A.get("order", {}).get(ph["id"]), A.get("alloc", {}).get(ph["id"])
+        tx = ph.get("tree")
+        if not o or not al or not tx: continue
+        text = tx if isinstance(tx, str) else (tx.get("pt") if isinstance(tx, dict) else str(tx))
+        have = set(o["o"][:o["n"]]) | set(al.get("s1", [])) | set(al.get("s2", []))
+        miss = [nm for nm in _cited(text or "") if not (names[nm] & have) and not _forward(text, nm)]
+        if miss: add("W", bid, "tree-text", f"{ph['id']}: o texto da Árvore cita {', '.join(miss)}, que o corte dessa fase não tem")
+
+
+def check_tree_damage(bid, B):
+    """Meça o dano da árvore por fase (kit/deepcheck.py). Uma fase de campanha com 17+ nós e nenhum dano nem velocidade repete o bug da Whirling e do Legionnaire."""
+    import deepcheck
+    for pid, lv, n, t in deepcheck.tree_rows(bid, B):
+        if lv and lv[0] >= 5 and lv[1] <= 64 and n >= 10 and t["dmg"] + t["spd"] + t["flat"] < 30:
+            add("W", bid, "tree-damage", f"{pid} (níveis {lv[0]}–{lv[1]}): a árvore tem {n} nós e só {t['dmg']}% de dano e {t['spd']}% de velocidade somados")
+
+
 def check_jewels(bid, B):
     """Joias: o jogador precisa saber em qual jewel socket cada uma vai. Sem dados = aviso honesto; socket que nenhuma fase aloca = incoerência."""
     p = os.path.join(HERE, "builds", bid, "assets.json")
@@ -237,7 +297,7 @@ def main():
         if e.get("kit"):
             B = load(bid)
             if B:
-                for fn in (check_contract, check_phases, check_spirit, check_uniques, check_supports, check_tree, check_jewels, check_sources): fn(bid, B)
+                for fn in (check_contract, check_phases, check_spirit, check_uniques, check_supports, check_tree, check_tree_text, check_tree_damage, check_jewels, check_sources): fn(bid, B)
         check_registration(e)
         check_pages(dict(e, key=e["key"]))
     E = [i for i in issues if i["level"] == "E"]; W = [i for i in issues if i["level"] == "W"]; I = [i for i in issues if i["level"] == "I"]

@@ -30,8 +30,11 @@ Como baixar: PoB do Maxroll → `curl https://maxroll.gg/poe2/api/pob/<id>` (tex
 
 **Árvore**
 - Cada fase é um corte (17/34/50/72/95 pontos) numa ordem de alocação **conectada** a partir do início da classe.
-- **Meça o dano por fase** (some `% increased ... Damage`, velocidade, crítico, vida dos nós). Uma árvore de campanha com 0% de dano é erro: foi exatamente o bug da Whirling. Se a build tem nós de **mecânica** sem número (cargas, minions), eles vão primeiro numa lista manual (`PRIORITY`): a ordem gulosa `pobxml.walk_greedy` pode pular eles.
+- **Meça o dano por fase** com `python tools/deepcheck.py <bid>` (soma `% increased ... Damage`, velocidade, crítico e vida dos nós de cada corte; a auditoria `tree-damage` reprova campanha com 17+ nós e quase nenhum dano). Uma árvore de campanha com 0% de dano é erro: foi exatamente o bug da Whirling. Se a build tem nós de **mecânica** sem número (cargas, minions), eles vão primeiro numa lista manual (`PRIORITY`): a ordem gulosa `pobxml.walk_greedy` pode pular eles.
 - Se a campanha usa nós que saem no endgame, diga quantos e **quando** é o respec.
+- **A árvore de campanha não precisa ser um corte da árvore final.** Se o caminho da árvore final a partir do início da classe é uma fila de nós de atributo (Legionnaire: 16 nós, Shaman: 25), a campanha fica sem dano por 30 níveis. Nesse caso monte a campanha com `pobxml.staged_greedy` (ordem 'dano primeiro' em estágios que fecham nos cortes 17/34/50/72/95) sobre a árvore final + os nós a até ~14 passos do início, use `kit/treescore.py` para medir o valor de cada nó **para esta build** (um caster não quer nó de melee; um Legionnaire não quer projétil) e diga em `FIXES` que é adaptação e quando é o respec (ver `builds/shaman/retree.py` e `builds/legionnaire/mkvariants.py`).
+- **Nós de mecânica no nível certo.** Passe em `must={corte: [nomes]}` os notáveis/keystones que a build precisa (ex.: Elemental Equilibrium no corte do nível 32–45) e em `ban=` os que só fazem sentido depois. Se o caminho até o nó não cabe nos pontos do corte, ele entra no corte seguinte: ajuste o texto e o `when` de `KEY_PASSIVES`.
+- **O texto da fase só pode citar o que o corte tem.** A auditoria (`tree-text`) compara os notáveis citados no texto 'Árvore' de cada fase com os nós do corte e dos Weapon Sets. Prometer Brain Storm numa árvore que nunca o aloca foi o problema do Shaman.
 - Joias: qual joia em qual socket (`kit/jewels.py` lê PoB, Mobalytics e Maxroll). Sem joias na fonte: a aba avisa e a auditoria registra `jewels-none`.
 
 **Itens**
@@ -101,4 +104,4 @@ Como baixar: PoB do Maxroll → `curl https://maxroll.gg/poe2/api/pob/<id>` (tex
 
 ## 6. O que a auditoria cobra (resumo)
 
-Contrato completo, faixas de nível sem lacuna, suportes sem explicação, uniques definidos e nunca usados, níveis de item, Spirit plausível, árvore conectada pela ordem que a página mostra, sockets de joia alocados, fontes com URL, páginas e arquivos existentes, build registrada em todos os arquivos compartilhados, snapshot do poe.ninja recente. Detalhes em `docs/AUTOMACAO.md`.
+Contrato completo, texto de árvore que só cita notáveis que o corte tem, dano de árvore por fase, faixas de nível sem lacuna, suportes sem explicação, uniques definidos e nunca usados, níveis de item, Spirit plausível, árvore conectada pela ordem que a página mostra, sockets de joia alocados, fontes com URL, páginas e arquivos existentes, build registrada em todos os arquivos compartilhados, snapshot do poe.ninja recente. Detalhes em `docs/AUTOMACAO.md`.

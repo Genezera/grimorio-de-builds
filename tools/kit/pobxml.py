@@ -315,3 +315,65 @@ def walk_greedy_reach(order, start):
             if ninja.ADJ.get(n, set()) & have:
                 have.add(n); rest.remove(n); changed = True
     return have - {start}
+
+
+def staged_greedy(nodes, start, score, cuts, must=None, ban=None):
+    """Ordem 'dano primeiro' em ESTÁGIOS que fecham exatamente nos cortes da fase (ex.: 17/34/50/72/95).
+    - `must[i]`: nomes de nós que precisam estar alocados até o corte i (a fase que os libera); o caminho até eles entra primeiro.
+    - `ban[i]`: nomes que ficam de fora até o corte i (keystones que só fazem sentido depois).
+    - Cada passo escolhe o alvo com maior (valor do caminho)/(pontos gastos) que caiba nos pontos que faltam para o corte; tudo conectado ao que já está alocado.
+    Devolve (ordem conectada, nós que não ligam ao início — vão para o fim)."""
+    from collections import deque
+    ADJ = ninja.ADJ
+    must, ban = must or {}, ban or {}
+    allowed = set(nodes) | {start}
+    sc = {n: score(n) for n in allowed}
+    by_name = {}
+    for n in allowed:
+        by_name.setdefault(ninja.NODES[str(n)].get("name"), []).append(n)
+    have, order = {start}, []
+
+    def paths(banned):
+        prev, dq = {h: None for h in have}, deque(have)
+        while dq:
+            u = dq.popleft()
+            for v in ADJ.get(u, ()):
+                if v in allowed and v not in prev and ninja.NODES[str(v)].get("name") not in banned:
+                    prev[v] = u; dq.append(v)
+        return prev
+
+    def path_to(prev, t):
+        p, x = [], t
+        while x not in have:
+            p.append(x); x = prev[x]
+        return list(reversed(p))
+
+    for i, cut in enumerate(cuts):
+        banned = {nm for j, names in ban.items() if j >= i for nm in names}
+        for nm in must.get(i, ()):
+            for t in by_name.get(nm, ()):
+                if t in have: continue
+                prev = paths(banned - {nm})
+                if t not in prev: continue
+                p = path_to(prev, t)
+                if len(order) + len(p) <= cut:
+                    for x in p: have.add(x); order.append(x)
+        while len(order) < cut:
+            prev = paths(banned)
+            best, best_key = None, None
+            for t in allowed:
+                if t in have or t not in prev: continue
+                p = path_to(prev, t)
+                if len(order) + len(p) > cut: continue
+                key = (sum(sc[y] for y in p) / len(p), -len(p))
+                if best_key is None or key > best_key: best, best_key = p, key
+            if best is None: break
+            for x in best: have.add(x); order.append(x)
+    prev = paths(set())                                                   # o que sobrar: tudo que ainda liga, o resto vai para o fim
+    while True:
+        rest = [n for n in nodes if n not in have and n != start and n in prev]
+        if not rest: break
+        t = max(rest, key=lambda n: sc[n])
+        for x in path_to(prev, t): have.add(x); order.append(x)
+        prev = paths(set())
+    return order, [n for n in nodes if n not in have and n != start]

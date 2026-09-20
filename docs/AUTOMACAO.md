@@ -30,6 +30,8 @@ Rodar à mão: `python tools/update_all.py` (`--no-fetch` usa o snapshot salvo; 
 
 Faixas de nível sem lacuna nem sobreposição, gems que entram depois do fim da fase, supports sem explicação, uniques definidos e nunca usados (ou usados sem definição), níveis inválidos, slots sem opção barata, Spirit acima do plausível, árvore desconectada do início da classe, fontes sem URL, páginas ausentes, `undefined`/`NaN` no texto visível, arquivos de `shared/` referenciados e inexistentes, pastas com `index.html` fora do registro, snapshot velho e builds em `revisar` (ninguém mais usa a skill principal).
 
+- **Texto de árvore × corte** (`tree-text`): o texto "Árvore" de cada fase só pode citar notáveis que o corte dessa fase (ou seus Weapon Sets) realmente tem; falar de caminho ou de "próximo corte" é permitido.
+- **Dano de árvore por fase** (`tree-damage`, `tools/deepcheck.py`): campanha (níveis 5–64) com 10+ nós e menos de 30 pontos somados de dano, velocidade e dano plano vira aviso. O número é medido na árvore, não no jogo.
 - **Erro** reprova o ciclo. **Aviso** vai para o relatório. **Info** mostra o estado.
 - Build com status `revisar` é a candidata a sair: o ciclo **avisa**, não apaga. Para aposentar, mude `status` para `aposentada` no registro — ela some da landing e das listas, e o histórico do Git guarda tudo.
 

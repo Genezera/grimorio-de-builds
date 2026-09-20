@@ -27,12 +27,34 @@ ITEMS = {
     "Endgame": without("rightRing", "offHand_set2"),
     "Aspiracional": FULL,
 }
-# Notables na ordem em que fazem sentido para quem sobe de nível (o caminho até elas é sempre o mais curto a partir da Mercenary)
-PRIORITY = ["Martial Artistry", "Stand and Deliver", "The Fabled Stag", "One with the Storm", "The Power Within", "Deadly Force", "Heartbreaking", "Moment of Truth", "For the Jugular",
-            "Tainted Strike", "Coming Calamity", "Catalysis", "Crashing Wave", "Heartstopping", "Struck Through", "Maiming Strike", "Acceleration", "Flow Like Water",
-            "Critical Exploit", "Careful Assassin", "True Strike", "Throatseeker", "Overflowing Power"]
-WALK, RESTO = pobxml.walk_order(root, PRIORITY)
-print("caminho da Mercenary:", len(WALK), "nós; exigem a joia Split Personality:", len(RESTO))
+# CAMPANHA (A1–Mapas): o caminho do PoB até as notables de crítico de cajado fica a 16–30 passos do início da Mercenary (uma fila de atributos: 0% de dano até o nível 30).
+# Aqui a campanha é uma ADAPTAÇÃO: nós de dano de ataque/melee/elemental/crítico perto do início da Mercenary, na ordem 'dano primeiro' (pobxml.staged_greedy) com o valor de
+# cada nó medido para esta build (kit/treescore.py: sem projétil, spell, minion...). O respec do 79 troca tudo pela árvore exata do PoB.
+import treescore  # noqa: E402
+from collections import deque  # noqa: E402
+_MAIN = {n for n in (int(x) for x in root.find("Tree").findall("Spec")[0].get("nodes").split(",") if x) if not ninja.NODES[str(n)].get("ascendancyName")}
+_START = ninja.CLASS_START["Mercenary"]
+
+
+def _local(start, radius):
+    dist, dq = {start: 0}, deque([start])
+    while dq:
+        u = dq.popleft()
+        if dist[u] >= radius: continue
+        for v in ninja.ADJ.get(u, ()):
+            nd = ninja.NODES.get(str(v))
+            if v in dist or not nd or nd.get("ascendancyName") or nd.get("isMastery") or nd.get("classStartIndex") is not None: continue
+            dist[v] = dist[u] + 1; dq.append(v)
+    return set(dist) - {start}
+
+
+_score = treescore.make(good=("attack", "melee", "quarterstaff", "staves", "staff", "lightning", "elemental", "physical", "damage"),
+                        bad=("spell", "minion", "totem", "trap", "mine", "bow", "crossbow", "grenade", "companion", "projectile", "chain", "pierce", "fork",
+                              "one handed", "one-handed", "ally", "allies", "presence", "fire damage", "cold damage", "chaos", "flammability"))
+WALK, _ = pobxml.staged_greedy(list(_MAIN | _local(_START, 14)), _START, lambda n: _score(n) * (1 if n in _MAIN else .75), [17, 34, 50, 72, 95],
+                              {3: ["The Fabled Stag"], 4: ["The Power Within", "One with the Storm"]})   # as cargas entram quando o guia já tem fonte de carga (Redflare no 33)
+RESTO = []
+print("campanha (adaptação): ", len(WALK), "nós, a até 14 passos do início da Mercenary;", sum(1 for n in WALK if n in _MAIN), "deles também estão na árvore do PoB")
 # (nome, pontos, usa o caminho da Mercenary?)
 CUTS = [("A1", 17, True), ("A2", 34, True), ("A3", 50, True), ("A4", 72, True), ("Mapas", 95, True), ("Endgame", 111, False), ("Aspiracional", None, False)]
 # Endgame e Aspiracional: a árvore EXATA do PoB. Ela parte do início do Monk (44683), aberto pela joia Split Personality no socket 21984.

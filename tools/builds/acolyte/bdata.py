@@ -109,7 +109,7 @@ PHASES = [
   cheap=["Plaguefinger", "Luminous Pace", "Asphyxia's Wrath", L("Arco com dano físico", "Bow with physical damage")],
   full=["Meginord's Girdle", "Blackheart", "Surefooted Sigil"],
   stats=[L("Dano plano de ataque", "Flat attack damage"), L("% dano físico no arco", "% physical damage on the bow"), L("Atributos (apertados)", "Attributes (tight)")],
-  tree=L("Nós de 'increased Damage' baratos: Concussive Attack, Blinding Strike, Killer Instinct.", "Cheap 'increased Damage' nodes: Concussive Attack, Blinding Strike, Killer Instinct."),
+  tree=L("Velocidade primeiro: Flow Like Water (+8% de velocidade de ataque e cast), Flow State (+5% de velocidade de skill) e Mindful Awareness (evasão e ES). Os nós de dano vêm nos próximos cortes: Blinding Strike a partir do 16, Concussive Attack e Killer Instinct a partir do 30.", "Speed first: Flow Like Water (+8% attack and cast speed), Flow State (+5% skill speed) and Mindful Awareness (evasion and ES). The damage nodes come in the next cuts: Blinding Strike from 16, Concussive Attack and Killer Instinct from 30."),
   avoid=[L("Herald of Blood nível alto sem atributos", "High-level Herald of Blood without attributes")],
   exit=[L("King in the Mists: Herald of Blood", "King in the Mists: Herald of Blood"), L("Nível 14: Toxic Growth", "Level 14: Toxic Growth")]),
 

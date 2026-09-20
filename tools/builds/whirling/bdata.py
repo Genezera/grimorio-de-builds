@@ -244,7 +244,7 @@ PHASES = [
    G("Trinity", ["Cold Mastery", "Uhtred's Augury", "Armour Demolisher I"], L("Elementos", "Elements"), L("Vem do amuleto (nível 20): dá Afinidade de Fogo, Gelo e Raio e mais dano elemental. 100 Spirit.", "Comes from the amulet (level 20): builds Fire, Cold and Lightning Affinity and more elemental damage. 100 Spirit."), "core", 2, L("100 Spirit", "100 Spirit")),
   ],
   cheap=[L("Igual ao Endgame (Early)", "Same as Endgame (Early)")], full=["Mageblood", "Rite of Passage"],
-  stats=[L("Dano", "Damage")], tree=L("A árvore final do autor: 92 pontos + 30 + 31 nos Weapon Sets, com os notables 'From Nothing' (Blood Magic): confira o PoB.", "The author's final tree: 92 points + 30 + 31 on the Weapon Sets, with the 'From Nothing' notables (Blood Magic): check the PoB."),
+  stats=[L("Dano", "Damage")], tree=L("A árvore final do autor: 92 pontos + 30 + 31 nos Weapon Sets, com o jewel From Nothing: confira o PoB.", "The author's final tree: 92 points + 30 + 31 on the Weapon Sets, with the From Nothing jewel: check the PoB."),
   avoid=[L("Gastar Divines antes de fechar resistência e Spirit", "Spending Divines before resistances and Spirit are closed")], exit=[]),
 ]
 PH = {p["id"]: p for p in PHASES}
