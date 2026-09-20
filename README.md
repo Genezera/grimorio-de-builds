@@ -1,118 +1,194 @@
-# Grimório de Builds · Build Grimoire — Path of Exile 2
+# Build Grimoire — Path of Exile 2 build guides
 
-Guias interativos de build para Path of Exile 2 — patch 0.5.5, liga Forbidden Rites. Cada guia vai do nível 1 ao 100, explica cada gem, support, item, unique e passiva, e se adapta ao que você marca em **Meu personagem** (nível, Spirit, itens que já tem).
+Interactive, level 1 → 100 build guides for **Path of Exile 2** (patch 0.5.5, Forbidden Rites league), published as a static website.
 
-Interactive build guides for Path of Exile 2 — patch 0.5.5, Forbidden Rites league. Each guide goes from level 1 to 100, explains every gem, support, item, unique and passive, and adapts to what you tick in **My character** (level, Spirit, items you already own).
+**Live site:** https://genezera.github.io/grimorio-de-builds/
 
-Site: https://genezera.github.io/grimorio-de-builds/
+Each guide walks a build through the whole game: which skill and support gems to run at every level, which items to wear (a ranked list per slot, unique or rare, in a "cheap" and a "full" mode), which passive tree nodes to take and when, what each ascendancy point does, what to craft, and what to do when something goes wrong. The guide adapts to what the player ticks in **My character** (level, Spirit, items already owned). The site is available in Portuguese and English (**PT / EN** switch); this README is English only.
 
-| Página / Page | Conteúdo / Content |
+> Fan project, not affiliated with Grinding Gear Games. Path of Exile is a trademark of Grinding Gear Games.
+
+---
+
+## What this project is
+
+A **build-guide generator plus the site it produces**. A small Python toolkit takes a build's source data (a Path of Building code, a Maxroll planner, a Mobalytics guide, poe.ninja ladder data), combines it with game data (gem tiers and descriptions, base items, passive tree, prices) and writes one self-contained, interactive HTML app per build. A weekly GitHub Actions job refreshes market data, re-ranks the builds, looks for strong builds that have no guide yet, rebuilds everything, audits the result and only publishes if the audit and the tests pass.
+
+Design goals:
+
+- **Followable from level 1.** The guide never asks for something the player cannot have yet (gem tier, item level, Spirit budget, tree connectivity are all checked against data).
+- **Honest about what is measured and what is not.** Anything adapted or estimated says so in the guide (see [Limitations](#limitations)). Nothing is invented: levels, tiers and prices come from data or are labelled as approximate.
+- **Static and portable.** No backend, no framework, no build step on the visitor's side. It also works when the files are opened straight from disk.
+
+## The builds
+
+| Guide | Name | Build | Source |
+|---|---|---|---|
+| `silverfist/` | **The Mighty Silverfist Trail** | Huntress · Spirit Walker — Mighty Silverfist companion zoo | Mattjestic, imortilize, Zizaran (Mobalytics / Maxroll) |
+| `oracle/` | **The Oracle of Totems** | Druid · Oracle — Spell Totem | Lowepe (Mobalytics) |
+| `tactician/` | **Grenade Tactician** | Mercenary · Tactician — Pin2Win Grenades | BlazeworksTV |
+| `infernalist/` | **Infernal Pact** | Witch · Infernalist — Spark → Cast on Critical Comet, recoup and a luxury CoA version | Ignatius, kingkongor |
+| `acolyte/` | **Chayula's Dream** | Monk · Acolyte of Chayula — Poisonburst Arrow, then Tornado Sprinkler + Archon of Chayula | Goratha (Maxroll) |
+| `pathfinder/` | **Venom Trail** | Ranger · Pathfinder — poison bow → Corpsewade Decompose | Skadoosh |
+| `smith/` | **Kitava's Forge** | Warrior · Smith of Kitava — Shield Wall + Avatar of Fire | Lexd (Mobalytics) |
+| `martial/` | **Oil Barrage Teleport** | Monk · Martial Artist — Oil Barrage + Cast on Critical + Lightning Warp | havoc616 (Maxroll) + poe.ninja ladder |
+| `shaman/` | **Mana Storm** | Druid · Shaman — Archmage Spark + Cast on Critical Comet | Top 10 Shamans by DPS on poe.ninja |
+| `legionnaire/` | **Cleaving Thunder** | Mercenary · Gemling Legionnaire — Falling Thunder quarterstaff with Power Charges | poe.ninja Path of Building (level 96) |
+| `whirling/` | **Frost Cyclone** | Mercenary · Gemling Legionnaire — Whirling Slash + Glacial Bolt (ice crossbow) | Phylaris POE (Mobalytics) |
+| `twister/` | **Spear Twister** | Mercenary · Gemling Legionnaire — Spear Throw Twister | Maxroll Path of Building |
+| `rites/` | **Forbidden Rites Challenges** | Forbidden Rites league guide — the 8 challenges (checklists, Omen planner, saved progress) | — |
+
+Every guide has a Portuguese page (`index.html`) and an English page (`en.html`); the landing page (`/index.html`, `/en.html`) lets visitors filter and rank the builds (easiest, hardest, damage, clear, boss, most durable, off-meta).
+
+`whirling/whirling-glacial-bolt.filter` is a loot-filter layer for the Whirling build; `python tools/build_filter.py --install` layers it on top of NeverSink's filter and writes it to the game's filter folder.
+
+## What a guide contains
+
+- **Now** — one prioritized action at a time for the current level.
+- **Route** — seven phases (Acts 1–4, Maps, Endgame, Max) with goals, rotation, gems, supports, stats, tree, things to avoid and exit conditions.
+- **Skills & supports** — when each gem becomes available, why each support is there, Spirit reservation budget.
+- **Items** — per slot, ranked options for the player's level in *cheap* and *full* modes, with unique levels taken from poe.ninja's level requirement, price classes and a "next upgrade" pointer.
+- **Passive tree** — the allocation order for every phase, the notable/keystone schedule, jewel sockets and which jewel goes where, and the respec point when the leveling tree differs from the final one.
+- **Ascendancy** — the four Trials in order, what each node does and why it matters for this build.
+- **Crafting workshop** — 12 equipment categories, three investment routes (buy, progressive craft, advanced) with concrete recipes.
+- **Tricks, troubleshooting, atlas checklist, quests, timeline, sources.**
+- **My character** — tick what you own; every tab adapts.
+
+## How it works
+
+```
+sources ──► extract ──► variants ──► assets ──► template patch ──► HTML app
+(PoB, Maxroll,  (per-build   (tree per   (icons,     (kpatch.py:        (kbuild.py + enhance.py:
+ Mobalytics,     scripts)     phase,      passive     gear ranking,      bilingual, inlined
+ poe.ninja)                   items)      order)      jewels, ...)       CSS/JS, versioned assets)
+```
+
+1. **Collect** — a build's Path of Building code, planner or guide is downloaded into `tools/dl/`. Game data comes from Path of Building's PoE2 data (`tools/dl/pob/`: gems, tiers, skill descriptions), RePoE2 (base items), PoE2DB (crafting pools) and poe.ninja (economy and ladder).
+2. **Variants** — `tools/builds/<build>/mkvariants.py` (or the extract scripts in `tools/kit/`) turn the source into per-phase variants: the tree cut at 17/34/50/72/95 points, the items of each phase and the jewels.
+3. **Build data** — `tools/builds/<build>/bdata.py` holds the guide itself as Python data: phases, gems per level, supports and why, uniques, gear rankings, tree stages, ascendancy, tricks, troubleshooting, timeline, sources. All text is bilingual (`L(pt, en)`).
+4. **Assets** — `kit/kassets.py` builds the icon set and computes the **allocation order** of the passive tree for every phase (each phase is a connected cut from the class start; nothing the player cannot actually click).
+5. **Template patch and build** — `kit/kpatch.py` generates the build's app template and applies the gear-ranking and jewel patches; `kit/kbuild.py` renders it; `tools/enhance.py` inlines CSS/JS and versions the shared assets.
+6. **Landing page and league page** — `tools/build_landing.py`, `landing_v2.py`, `landing_registry.py` and `build_rites.py`.
+
+`tools/build_all.py` runs the whole pipeline (about 4 minutes).
+
+### Passive-tree logic
+
+The kit reads the game's passive tree (`tools/tree.json`) and can:
+
+- walk a Path of Building tree in an order the class can really allocate (`pobxml.walk_order`), including trees that start elsewhere through the Split Personality jewel;
+- order nodes "damage first" (`pobxml.walk_greedy`) or in **stages** that close exactly on the phase cuts and force mechanic nodes at the right level (`pobxml.staged_greedy`);
+- score nodes *for one specific build* (`kit/treescore.py`): a caster does not want melee nodes, a quarterstaff build does not want projectile nodes.
+
+When a source only has an endgame tree and the road from the class start is a line of attribute nodes, the leveling tree is built separately and the guide states the respec level.
+
+## The weekly automation
+
+`.github/workflows/update.yml` runs every Monday at 06:00 UTC (and on demand) and calls `tools/update_all.py`:
+
+| Step | Script | What it does |
+|---|---|---|
+| Collect | `ninja_meta.py` | Reads poe.ninja's build API for the current league: usage per ascendancy and skill, DPS/EHP of top characters |
+| Classify | `registry.py` | Class, ascendancy, playstyle and the rankings |
+| Discover | `discover.py` | Lists strong, off-meta ascendancy + skill combinations that have no guide → `docs/candidates.md` |
+| Rebuild | `build_all.py` | Regenerates every page |
+| Audit | `audit.py` | Finds anything lost, broken or impossible to follow → `docs/audit.md` |
+| Tests | `unittest` | Repository test suite |
+| Publish | workflow | Commits **only if the audit and the tests pass**; otherwise opens or updates an issue with the report |
+
+**What the audit checks:** contract completeness, level ranges without gaps or overlaps, gems that enter after their phase ends, supports without an explanation, uniques defined but never used (or used but undefined), Spirit budget against quest rewards, passive-tree connectivity along the order the page actually shows, jewel sockets, notables named in a phase's tree text that the phase's tree does not contain, tree damage per phase (`tools/deepcheck.py`), sources with URLs, registration in every shared file, page and asset existence, and a fresh poe.ninja snapshot.
+
+**What is not automatic:** writing a new guide (the cycle finds candidates and shows the numbers; phases, items, tree and rotation need curation), judging whether a build is *fun* or *easy to follow*, clear-speed rankings (poe.ninja exposes no clear measure, so those are editorial 1–5 scores and the landing says so), and playing the build. See [`docs/AUTOMACAO.md`](docs/AUTOMACAO.md).
+
+## Tech stack
+
+| Layer | Technology |
 |---|---|
-| `index.html` · `en.html` | Página inicial para escolher a build · Build picker (PT · EN) |
-| `silverfist/index.html` · `silverfist/en.html` | Huntress · Spirit Walker — Mighty Silverfist zoo (guia do Mattjestic) |
-| `oracle/index.html` · `oracle/en.html` | Druid · Oracle — Spell Totem (guia do Lowepe) |
-| `tactician/index.html` · `tactician/en.html` | Mercenary · Tactician — Pin2Win Grenades (guia do BlazeworksTV) |
-| `infernalist/index.html` · `infernalist/en.html` | Witch · Infernalist — Spark → Cast on Critical Comet, recoup e CoA de luxo (guias do Ignatius e do kingkongor) |
-| `acolyte/index.html` · `acolyte/en.html` | Monk · Acolyte of Chayula — Poisonburst Arrow + Archon of Chayula (planner do Goratha, Maxroll) |
-| `pathfinder/index.html` · `pathfinder/en.html` | Ranger · Pathfinder — poison bow → Corpsewade Decompose (guias do Skadoosh) |
-| `smith/index.html` · `smith/en.html` | Warrior · Smith of Kitava — Shield Wall + Avatar of Fire (guia do Lexd) |
-| `martial/index.html` · `martial/en.html` | Monk · Martial Artist — Oil Barrage + Cast on Critical + Lightning Warp (planner do havoc616, Maxroll + ladder do poe.ninja) |
-| `shaman/index.html` · `shaman/en.html` | Druid · Shaman — Archmage Spark + Comet automatizado por Cast on Critical (os 10 Shamans de maior DPS do poe.ninja) |
-| `legionnaire/index.html` · `legionnaire/en.html` | Mercenary · Gemling Legionnaire — Falling Thunder com cajado e Power Charges (PoB nível 96 do poe.ninja) |
-| `whirling/index.html` · `whirling/en.html` | Mercenary · Gemling Legionnaire — Whirling Slash + Glacial Bolt (besta de gelo; skills do endgame já no leveling: Whirling Slash desde o nível 1 e Glacial Bolt do ~24; árvore de dano na campanha e respec no 79) — guia do Phylaris POE (Mobalytics) |
-| `whirling/whirling-glacial-bolt.filter` | Loot filter da build (camada para colar no topo do seu filtro); `python tools/build_filter.py --install` monta por cima do NeverSink e grava em Documents/My Games/Path of Exile 2 |
-| `rites/index.html` · `rites/en.html` | Liga Forbidden Rites — guia das 8 challenges (checklists, planejador de Omens, progresso salvo) |
+| Generators and data pipeline | **Python 3** (standard library, plus `Pillow` for images and `openpyxl` for the Silverfist Excel workbook) |
+| Front end | **Vanilla JavaScript**, **HTML** and **CSS**: no framework, no bundler; one generated `index.html`/`en.html` per build plus `assets/assets.js` |
+| Tests | Python `unittest`; **Node.js** with **Playwright** for browser, mobile, overlap and recipe tests |
+| Automation | **GitHub Actions** (weekly cycle), **GitHub Pages** hosting |
+| Data | Path of Building PoE2 data (**Lua** tables read as text), poe.ninja HTTP/JSON API, RePoE2 JSON, PoE2DB pages, Maxroll and Mobalytics guides |
+| Windows helper | one small PowerShell script (`tools/recalc.ps1`) that recalculates the Excel workbook through Excel's COM interface |
 
-O botão **PT / EN** troca de idioma; o progresso de cada build é compartilhado entre as duas versões (localStorage `silverfist2:`, `oracle1:`, `tactician1:`, `infernalist1:`, `acolyte1:`, `pathfinder1:`, `smith1:`, `martial1:`, `shaman1:`, `legionnaire1:`, `whirling1:`).
-The **PT / EN** switch changes language; each build's progress is shared between both versions.
-
-O site é 100% estático (HTML + JS) e também funciona abrindo os arquivos direto no navegador.
-The site is fully static (HTML + JS) and also works by opening the files directly in a browser.
-
-## Oficina e navegação / Workshop and navigation
-
-- Todas as páginas usam a mesma camada visual **skin v3** (`shared/skin.css`, `shared/skin.js`, `shared/fx.css`, `shared/fx.js`): cabeçalho compacto, navegação em uma linha (Agora · Power/mecânica · Rota · Skills · Itens · Árvore · Ascendência + menu **Mais** com Meu personagem, Uniques, Crafting, Quests, Truques, Diagnóstico e Fontes), painéis planos, seções secundárias da aba Agora dobradas e uma animação de assinatura por classe (raio, fogo, forja, inferno, vazio, veneno, espíritos, estrelas) no medalhão de cada build e nos cartões da página inicial. Tudo respeita `prefers-reduced-motion`.
-- Navegação por assunto, busca local por itens/skills/conceitos (`Ctrl/Cmd+K`), links diretos às seções e impressão da seção aberta.
-- Crafting nas duas builds: 12 categorias de equipamentos, três rotas de investimento (comprar · craft progressivo · avançado) com receitas concretas por build em `shared/craft-detail.js` — alvos com ilvl, essence/omen/osso/alloy pelo nome, custos de Verisium, materiais com preço do poe.ninja e o que fazer se falhar.
-- Glossário de mecânicas, consulta de pesos com hipótese explícita e simulador de custo/risco, incluindo compra pronta e orçamento de 90%.
-- Visual Path of Exile 2 (`shared/poe2.css`, `shared/poe2.js`, `shared/art/`): paleta, fontes e arte de ascendência próprias de cada build (Spirit Walker: ouro, teal espectral e carmesim; Oracle: prata, violeta do destino e ciano), cenário de fundo que muda a cada aba, trilha de níveis com gemas, partículas, animações de entrada e layout para celular, tablet, paisagem e ultrawide. Respeita `prefers-reduced-motion`.
-- Tela de carregamento e transições (`shared/loader.css`, `shared/loader.js`): medalhão com a arte da ascendência da build (ou do grimório), anéis e faíscas animados, barra de progresso real e abertura em íris ao revelar a página; ao clicar num link do site, a cortina se fecha já com a build de destino. Não bloqueia cliques, some em até 5 s mesmo em rede lenta, respeita `prefers-reduced-motion` e fica desligada em testes automatizados (`?loader=1` força).
-- Dados de crafting e limites do modelo: [documentação de fontes](tools/craft/README.md).
-
-All six pages share a redesigned responsive interface. Both builds include searchable navigation, section links, printing, persistent crafting plans for 12 equipment categories, a mechanics glossary, an opt-in published-weight explorer and a cost/risk simulator. Unverified weights and undated prices are explicitly labelled.
-
-## Estrutura / Structure
+## Repository layout
 
 ```
-index.html, en.html           página inicial · landing page
-silverfist/                   app Spirit Walker (index.html, en.html, assets/assets.js)
-oracle/                       app Oracle (index.html, en.html, assets/assets.js)
-planilha/                     planilha Excel do Silverfist · Silverfist Excel workbook (PT)
-tools/                        scripts do Silverfist + página inicial · Silverfist + landing scripts
-tools/oracle/                 scripts do Oracle · Oracle scripts
-tactician/ infernalist/ acolyte/ pathfinder/ smith/ martial/ shaman/ legionnaire/ whirling/   apps gerados pelo kit · kit-generated apps
-tools/kit/                    kit genérico de builds (extract/maxroll → kassets → kpatch → kbuild, js/, craftkit)
-tools/builds/<build>/         dados de cada build do kit (bdata.py, bcraft.py) · per-build kit data
+index.html, en.html           landing page (PT / EN)
+<build>/                      generated app: index.html, en.html, assets/assets.js
+planilha/                     Silverfist Excel workbook (built by tools/build_xlsx.py)
+shared/                       shared front end: skin, effects, loader, crafting, build-now panel, art
+tools/
+  build_all.py                full rebuild
+  update_all.py               weekly cycle (collect → classify → discover → rebuild → audit → test)
+  audit.py, deepcheck.py      coherence audit and tree-damage measurement
+  registry.py, ninja_meta.py, discover.py     rankings and candidate discovery
+  kit/                        generic build kit: pobxml, ninja, kassets, kpatch, kbuild, treescore, jewels, craftkit, ...
+  builds/<build>/             per-build data: bdata.py, bcraft.py, gear_opts.py, mkvariants.py
+  craft/                      crafting data and its sources (see tools/craft/README.md)
+  dl/                         downloaded sources and snapshots (PoB data, RePoE, poe.ninja, planners)
+  tests/                      unit tests and Playwright suites
+docs/                         AUTOMACAO.md, COMO-ADICIONAR-BUILD.md, audit.md, candidates.md, ...
+.github/workflows/update.yml  weekly automation
 ```
 
-## Adicionar uma build a partir de um Path of Building / Adding a build from a PoB
+Silverfist and Oracle predate the kit and still have their own scripts (`tools/data.py`, `tools/build_site.py`, `tools/oracle/`); every other build is generated by the kit.
 
-1. Baixe o código do PoB (ex.: `https://poe.ninja/poe2/pob/raw/<id>`) para `tools/dl/<build>_pob.txt`.
-2. Crie `tools/builds/<build>/mkvariants.py` (veja o do Legionnaire): `kit/pobxml.py` decodifica o PoB, corta a árvore por pontos em fases e monta os itens de cada fase. `pobxml.walk_order` gera a ordem de alocação que a classe realmente consegue seguir (útil quando o PoB parte de outro ponto inicial, como com a joia Split Personality).
-3. Escreva `bdata.py` (fases, gems por nível, uniques, textos PT/EN) e, se quiser crafting, `bcraft.py`.
-4. `python tools/kit/mkart.py <prefixo> <ilustração>` gera a arte da build em `shared/art/`; registre a build em `shared/poe2.js`, `shared/poe2.css`, `shared/loader.js`, `shared/fx.js`, `tools/enhance.py`, `tools/build_all.py`, `tools/build_landing.py`, `tools/landing_v2.py` e nas listas de `tools/tests`.
+## Running it locally
 
-## Regenerar / Rebuild (opcional)
-
-Requer Python 3 com `openpyxl` e `Pillow`.
-
-Para reconstruir apenas o site usando os snapshots locais, basta Python 3 (biblioteca padrão):
+Only the standard library is needed to rebuild the site from the saved snapshots:
 
 ```bash
 python tools/build_all.py
-python -m http.server 8000
+python -m http.server 8000      # then open http://localhost:8000
 ```
 
-Abra `http://localhost:8000`. O servidor local oferece uma origem consistente para compartilhar progresso PT/EN; o comportamento de localStorage em `file://` varia por navegador. `openpyxl` e `Pillow` são necessários apenas para os fluxos de planilha/regeneração de imagens abaixo.
+`Pillow` is needed for image generation and `openpyxl` for the Excel workbook. A local server gives PT/EN a single origin so progress is shared between the two versions (`localStorage` behaviour on `file://` varies by browser).
+
+Rebuild a single kit build:
 
 ```bash
 cd tools
-python build_assets.py        # assets.json do Silverfist (árvore, ícones, sets)
-python build_site.py          # ../silverfist/index.html, en.html, assets/assets.js
-python build_xlsx.py          # out.xlsx
-python build_landing.py       # ../index.html e ../en.html (usa assets.json e oracle/assets.json)
-
-cd oracle
-python extract.py             # dl/oracle_variants.json (variantes do Mobalytics)
-python oassets.py             # assets.json do Oracle
-python opatch.py              # app_template.html do Oracle (a partir do template do Silverfist)
-python obuild.py              # ../../oracle/index.html, en.html, assets/assets.js
+python builds/<build>/mkvariants.py        # if the build has one
+python kit/kassets.py <build> && python kit/kpatch.py <build> && python kit/kbuild.py <build>
 ```
 
-- Dados Silverfist: `tools/chober.py`; tradução `tools/i18n/en_*.json` e `tools/ui_en.py`.
-- Dados Oracle: `tools/oracle/odata.py` (textos bilíngues), lógica `ochar.js`, `oadapt.js`, `ototem.js`.
-- Builds do kit: `python tools/kit/extract.py <build> <fonte>` (Mobalytics) ou `python tools/kit/maxroll.py <build> <fonte> "Perfil[@passo]|pontos|nome|Ascendências..."` (Maxroll; perfis com várias variantes viram uma variante cada), depois `kassets.py`, `kpatch.py` e `kbuild.py <build>` (o `build_all.py` já roda os três).
-- Dados de jogo: Path of Building PoE2 (`tools/dl/pob/`), bases do RePoE2 (`tools/dl/repoe_*.json`), preços poe.ninja.
+Run the weekly cycle by hand: `python tools/update_all.py` (`--no-fetch` uses the saved snapshot, `--no-build` only refreshes data and audits).
 
-## Verificação / Verification
+## Verification
 
 ```bash
-python -m unittest discover -s tools/tests -v
-# Com Playwright disponível no Node (e o navegador instalado):
-node tools/tests/browser.cjs
-node tools/tests/recipes.cjs  # ordem de finalização das receitas PT/EN
-node tools/tests/build-now.cjs # painel adaptável, teclado, rolagem e movimento reduzido
-# Auditoria de sobreposição (todas as abas, 10 tamanhos de tela, PT/EN):
-node tools/tests/overlap.cjs
-# Celular e tablet (texto cortado, fora da tela, toque pequeno, fonte minúscula, imagem distorcida, vãos vazios):
-node tools/tests/mobile.cjs
+python tools/audit.py                        # 0 errors and 0 warnings expected
+python -m unittest discover -s tools/tests
+# Node + Playwright (and a browser) required:
+node tools/tests/browser.cjs                 # every page and tab, PT/EN, 4 widths, crafting routes, search, keyboard
+node tools/tests/mobile.cjs                  # phone/tablet: clipped text, off-screen, tiny targets, distorted images
+node tools/tests/overlap.cjs                 # overlap audit, all tabs, 10 screen sizes
+node tools/tests/recipes.cjs                 # crafting recipe order, PT/EN
+node tools/tests/build-now.cjs               # adaptive panel, keyboard, scrolling, reduced motion
 ```
 
-O teste de navegador usa um servidor temporário local, testa as 14 páginas das 7 builds e as duas da entrada em 1366px, 1024px, 768px e 390px, além das duas páginas de challenges. Percorre todas as abas e rotas de crafting, verifica overflow, busca, teclado, persistência PT/EN, deep links, limites das calculadoras e preços ausentes no planejador de Omens. Também verifica as builds no nível 95 em 320px e 1920px. `BROWSER_CHANNEL=msedge` permite usar o Edge instalado; `SCREENSHOT_DIR` habilita capturas fora do repositório.
+The browser suite starts a temporary local server, opens every page (landing, league guide and both languages of every build) at 1366, 1024, 768 and 390 px, walks every tab and crafting route, and fails on any runtime error or horizontal overflow.
 
-## Fontes / Sources
+## Adding a build
 
-Mattjestic, Lowepe, BlazeworksTV, Ignatius, kingkongor, Skadoosh e Lexd (Mobalytics), Goratha e havoc616 (Maxroll), imortilize (Mobalytics), Zizaran (Maxroll), poe.ninja, PoE2DB e dados do Path of Building (PoE2). Preços da liga são um retrato do momento da pesquisa · League prices are a snapshot from research time.
+The step-by-step guide and the contract every build must satisfy (identity, seven phases, skills, tree, items, ascendancy, honest text, crafting, extras) is in [`docs/COMO-ADICIONAR-BUILD.md`](docs/COMO-ADICIONAR-BUILD.md). In short:
 
-Projeto de fã, sem vínculo com a Grinding Gear Games. Path of Exile é marca da Grinding Gear Games.
-Fan project, not affiliated with Grinding Gear Games.
+1. Download the source (Path of Building code, Maxroll planner, Mobalytics guide) into `tools/dl/`.
+2. Create `tools/builds/<build>/mkvariants.py` (copy `twister` or `whirling`), `bdata.py` (start from `twister`), `gear_opts.py` and `bcraft.py`.
+3. Generate art with `kit/mkart.py` and register the build in the shared files (the audit lists whatever is missing).
+4. Run the pipeline, then `audit.py`, the unit tests and the browser/mobile suites. Commit and push; the weekly cycle re-runs everything and publishes only if it still passes.
+
+## Limitations
+
+- **Nobody plays the build automatically.** The audit checks internal coherence and data; it cannot tell whether a leveling route feels good in the game. Numbers such as "tree damage per phase" are sums of node modifiers on the tree, **not** in-game DPS.
+- **Some leveling routes are adaptations.** Many sources only publish an endgame tree or Path of Building. Where the leveling plan is assembled here (gems from gem tiers, tree from a damage-first walk, items from a ranking), the guide says so in its "Fixes / adaptation" notes, including the respec level where the leveling tree differs from the final tree.
+- **Rankings are partly editorial.** Difficulty comes from the guide's own complexity; damage and durability come from poe.ninja's characters; clear and boss scores are editorial.
+- **Prices are a snapshot** of the last successful poe.ninja fetch and change quickly; unique prices from poe.ninja's unique endpoints are not refreshed automatically.
+- **Gem availability** is derived from Path of Building's gem tier; the exact level at which a given uncut gem drops in the game is not verified by data.
+
+## Credits and data sources
+
+Build authors: Mattjestic, imortilize, Zizaran, Lowepe, BlazeworksTV, Ignatius, kingkongor, Goratha, Skadoosh, Lexd, havoc616 and Phylaris POE (Mobalytics and Maxroll guides). Data: [poe.ninja](https://poe.ninja/poe2), [Path of Building (PoE2)](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2), RePoE2, [PoE2DB](https://poe2db.tw), Maxroll and Mobalytics. Loot-filter base: NeverSink.
+
+Fan project, not affiliated with Grinding Gear Games. Path of Exile is a trademark of Grinding Gear Games.
