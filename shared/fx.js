@@ -10,5 +10,5 @@ window.skFx = kind => {
   }
   return fx;
 };
-window.SK_FX = { silverfist: 'spirit', oracle: 'stars', tactician: 'fire', infernalist: 'hell', acolyte: 'void', pathfinder: 'toxic', smith: 'forge', martial: 'lightning', shaman: 'lightning', legionnaire: 'lightning', whirling: 'frost', twister: 'lightning',
-                 sf: 'spirit', or: 'stars', ta: 'fire', in: 'hell', ac: 'void', pf: 'toxic', sk: 'forge', ma: 'lightning', sh: 'lightning', lg: 'lightning', gw: 'frost', tw: 'lightning' };
+window.SK_FX = { silverfist: 'spirit', oracle: 'stars', tactician: 'fire', infernalist: 'hell', acolyte: 'void', pathfinder: 'toxic', smith: 'forge', martial: 'lightning', shaman: 'lightning', legionnaire: 'lightning', whirling: 'frost', twister: 'lightning', hyperspeed: 'lightning',
+                 sf: 'spirit', or: 'stars', ta: 'fire', in: 'hell', ac: 'void', pf: 'toxic', sk: 'forge', ma: 'lightning', sh: 'lightning', lg: 'lightning', gw: 'frost', tw: 'lightning', hs: 'lightning' };

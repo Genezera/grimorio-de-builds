@@ -28,6 +28,7 @@ IDENT = [
  dict(key="sh", folder="shaman", cls="Druid", asc="Shaman", title="Mana Storm", ninja=["Spark", "Comet"], tags=["spells", "mana", "lightning"], clear=4, boss=4, ease0=4, kit=True),
  dict(key="lg", folder="legionnaire", cls="Mercenary", asc="Gemling Legionnaire", title="Cleaving Thunder", ninja=["Falling Thunder"], tags=["quarterstaff", "lightning", "charges"], clear=4, boss=4, ease0=3, kit=True),
  dict(key="gw", folder="whirling", cls="Mercenary", asc="Gemling Legionnaire", title="Frost Cyclone", ninja=["Whirling Slash", "Glacial Bolt"], tags=["crossbow", "cold", "spear"], clear=5, boss=4, ease0=4, kit=True),
+ dict(key="hs", folder="hyperspeed", cls="Monk", asc="Martial Artist", title="Hyper Speed Monk", ninja=["Tempest Flurry", "Staggering Palm", "Falling Thunder", "Hollow Focus"], tags=["unarmed", "speed", "lightning"], clear=5, boss=4, ease0=3, kit=True),
  dict(key="tw", folder="twister", cls="Mercenary", asc="Gemling Legionnaire", title="Spear Twister", ninja=["Twister", "Spear Throw", "Whirling Slash"], tags=["spear", "crit", "elemental"], clear=5, boss=4, ease0=3, kit=True),
 ]
 

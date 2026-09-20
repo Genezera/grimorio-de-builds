@@ -660,3 +660,15 @@ html[data-build="twister"]{
   --text:#e9f0e2; --mute:#a9b7a0; --faint:#6f7d66;
   --scene-tint:rgba(8,22,10,.5);
 }
+
+html[data-build="hyperspeed"]{
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --ui:"Oxanium","Arial Narrow",sans-serif; --body:"Exo 2",system-ui,sans-serif;
+  --ground:#06070d; --ground2:#0a0c15; --stone:#0f1220; --stone2:#161a2c; --stone3:#1e2338;
+  --edge:#2a3050; --edge2:#465285;
+  --gild:#d9c48a; --gild-hi:#f6ecc4; --gild-lo:#6b5f3a; --gild-g:rgba(217,196,138,.13);
+  --accent:#8ea2ff; --accent-hi:#c9d2ff; --accent-g:rgba(142,162,255,.16);
+  --accent2:#ffe066; --accent2-hi:#fff0a8; --accent2-g:rgba(255,224,102,.16);
+  --wisp:#b7c2ff; --wisp-g:rgba(183,194,255,.14);
+  --text:#e8ebf7; --mute:#a3abc9; --faint:#6b7394;
+  --scene-tint:rgba(10,12,34,.5);
+}

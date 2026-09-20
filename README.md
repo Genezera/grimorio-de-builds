@@ -26,6 +26,7 @@ Design goals:
 |---|---|---|---|
 | `silverfist/` | **The Mighty Silverfist Trail** | Huntress · Spirit Walker — Mighty Silverfist companion zoo | Mattjestic, imortilize, Zizaran (Mobalytics / Maxroll) |
 | `oracle/` | **The Oracle of Totems** | Druid · Oracle — Spell Totem | Lowepe (Mobalytics) |
+| `hyperspeed/` | **Hyper Speed Monk** | Monk · Martial Artist — Hollow Palm (unarmed): Tempest Flurry + Staggering Palm + Falling Thunder | Ronarray (Mobalytics) |
 | `tactician/` | **Grenade Tactician** | Mercenary · Tactician — Pin2Win Grenades | BlazeworksTV |
 | `infernalist/` | **Infernal Pact** | Witch · Infernalist — Spark → Cast on Critical Comet, recoup and a luxury CoA version | Ignatius, kingkongor |
 | `acolyte/` | **Chayula's Dream** | Monk · Acolyte of Chayula — Poisonburst Arrow, then Tornado Sprinkler + Archon of Chayula | Goratha (Maxroll) |

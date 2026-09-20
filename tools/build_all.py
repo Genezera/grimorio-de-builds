@@ -5,7 +5,7 @@ import sys
 import os
 
 HERE = Path(__file__).resolve().parent
-KIT_BUILDS = ['tactician', 'infernalist', 'acolyte', 'pathfinder', 'smith', 'martial', 'shaman', 'legionnaire', 'whirling', 'twister']
+KIT_BUILDS = ['tactician', 'infernalist', 'acolyte', 'pathfinder', 'smith', 'martial', 'shaman', 'legionnaire', 'whirling', 'twister', 'hyperspeed']
 steps = [[s] for s in ['craft/build_data.py', 'build_site.py', 'oracle/opatch.py', 'oracle/obuild.py']]
 steps += [[f'kit/{s}', bid] for bid in KIT_BUILDS for s in ('kassets.py', 'kpatch.py', 'kbuild.py')]
 steps += [['build_landing.py'], ['build_rites.py']]

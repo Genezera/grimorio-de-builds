@@ -1,0 +1,3167 @@
+{
+ "guides": [
+  {
+   "src": "mobalytics",
+   "title": "[0.5] Hyper SPEED - Hollow Palm Monk Build (12-18 Attacks Per Second)",
+   "url": "https://mobalytics.gg/poe-2/builds/ronarray-unarmed-hollow-palm-monk",
+   "author": "Ronarray",
+   "updatedAt": "2026-07-02T20:21:02Z",
+   "widgets": []
+  }
+ ],
+ "variants": [
+  {
+   "src": "mobalytics",
+   "name": "A1",
+   "items": {
+    "boots": {
+     "n": "Wrapped Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.avif",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Azure Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/AzureAmulet.avif",
+     "mods": [
+      "+20 to maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Iron Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif",
+     "mods": [
+      "Adds 1 to 4 Lightning damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Iron Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif",
+     "mods": [
+      "Adds 1 to 4 Lightning damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Sapphire Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/SapphireCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "n": "Ironhead Spear",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear02.webp",
+     "mods": [
+      "Adds 1 to 4 Physical Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    }
+   },
+   "gems": [
+    {
+     "skill": "Twister",
+     "slug": "twisterplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TwisterSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/TwisterSkillIcon.webp",
+     "sup": [
+      "Retreat I",
+      "Prolonged Duration I"
+     ],
+     "supIcons": {
+      "Retreat I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RetreatingAssaultSupportGem.webp",
+      "Prolonged Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Whirling Slash",
+     "slug": "whirlingslashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WhirlingSlashSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HuntressWhirlingSlash.webp",
+     "sup": [
+      "Rage I",
+      "Rapid Attacks I"
+     ],
+     "supIcons": {
+      "Rage I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.webp",
+      "Rapid Attacks I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 1
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     7576,
+     33866,
+     49220,
+     14725,
+     34233,
+     32545,
+     61196,
+     56045,
+     38676,
+     27910,
+     53938,
+     36931,
+     11604,
+     17088,
+     42750
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [],
+    "attr": null,
+    "jewels": []
+   },
+   "desc": "If you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later. \nIn 0.5 the early leveling for Monk is easier with Spear and Twisters.\nTo get the Spear + a skill gem early you can create a Huntress and drop Spear + Spear from her into your stash to use at your Monk Character.",
+   "source": "Lvl 1-23"
+  },
+  {
+   "src": "mobalytics",
+   "name": "A2",
+   "items": {
+    "helmet": {
+     "n": "Coral Circlet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt07.avif",
+     "mods": [
+      "+30 to maximum Life",
+      "+42 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Strider Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "33% increased Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Hunting Bracers",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.avif",
+     "mods": [
+      "+20 to maximum Life"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Bound Boots",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.avif",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Bloodstone Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/BloodstoneAmulet.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Sapphire Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/SapphireRing.avif",
+     "mods": [
+      "Adds 1 to 20 Lightning Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+     "mods": [
+      "Adds 1 to 16 Lightning damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Rawhide Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.avif",
+     "mods": [
+      "+16% to Fire Resistance",
+      "+16% to Cold Resistance"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Giant Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Giant Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "skill": "Punch"
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    }
+   },
+   "gems": [
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.avif",
+     "sup": [
+      "Rapid Attacks I",
+      "Rage I"
+     ],
+     "supIcons": {
+      "Rapid Attacks I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif",
+      "Rage I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Storm Wave",
+     "slug": "stormwaveplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/StormWaveSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkStormWave.avif",
+     "sup": [
+      "Upheaval I",
+      "Lightning Attunement",
+      "Elemental Armament I"
+     ],
+     "supIcons": {
+      "Upheaval I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/UpheavalSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Elemental Armament I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Tempest Bell",
+     "slug": "tempestbellplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestBellSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestBell.avif",
+     "sup": [
+      "Overabundance I",
+      "Close Combat I"
+     ],
+     "supIcons": {
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.avif",
+      "Close Combat I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunderplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.avif",
+     "sup": [
+      "Longshot I",
+      "Electrocute"
+     ],
+     "supIcons": {
+      "Longshot I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FarCombatSupportGem.avif",
+      "Electrocute": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElectrocuteSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaffplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ChargedStaffSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkChargedStaff.avif",
+     "sup": [
+      "Shock",
+      "Innervate"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif",
+      "Innervate": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.avif",
+     "sup": [
+      "Heightened Curse"
+     ],
+     "supIcons": {
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     7576,
+     33866,
+     49220,
+     14725,
+     34233,
+     32545,
+     61196,
+     56045,
+     11604,
+     17088,
+     42750,
+     9050,
+     24958,
+     41877,
+     64601,
+     38676,
+     27910,
+     53938,
+     36931,
+     37691,
+     56453,
+     21336,
+     62984,
+     24647,
+     43691,
+     21746,
+     46782,
+     53698,
+     20916,
+     50635,
+     25971,
+     29408
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     9994,
+     11495,
+     34081,
+     19370
+    ],
+    "attr": null,
+    "jewels": []
+   },
+   "desc": "If you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later. \n \nYou can swap into Hollow Palm Technique version around 23-25 Level when you will have a Hollow Palm Notable allocated. \n❗ TO USE SKILLS WITHOUT WEAPONS YOU NEED TO ALLOCATE Hollow Palm Technique",
+   "source": "23+ Unarmed"
+  },
+  {
+   "src": "mobalytics",
+   "name": "A3",
+   "items": {
+    "helmet": {
+     "n": "Coral Circlet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt07.avif",
+     "mods": [
+      "+30 to maximum Life",
+      "+42 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Strider Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "33% increased Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Hunting Bracers",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Bound Boots",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.avif",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Bloodstone Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/BloodstoneAmulet.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Sapphire Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/SapphireRing.avif",
+     "mods": [
+      "Adds 1 to 20 Lightning Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+     "mods": [
+      "Adds 1 to 16 Lightning damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Rawhide Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.avif",
+     "mods": [
+      "+16% to Fire Resistance",
+      "+16% to Cold Resistance"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Giant Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Giant Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "skill": "Punch"
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    }
+   },
+   "gems": [
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.avif",
+     "sup": [
+      "Rapid Attacks I",
+      "Rage III",
+      "Lightning Attunement",
+      "Elemental Armament II"
+     ],
+     "supIcons": {
+      "Rapid Attacks I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Storm Wave",
+     "slug": "stormwaveplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/StormWaveSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkStormWave.avif",
+     "sup": [
+      "Branching Fissures I",
+      "Elemental Armament II",
+      "Lightning Attunement",
+      "Rage III"
+     ],
+     "supIcons": {
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Tempest Bell",
+     "slug": "tempestbellplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestBellSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestBell.avif",
+     "sup": [
+      "Magnified Area II",
+      "Overabundance I",
+      "Close Combat I"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif",
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.avif",
+      "Close Combat I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunderplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.avif",
+     "sup": [
+      "Longshot I",
+      "Electrocute"
+     ],
+     "supIcons": {
+      "Longshot I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FarCombatSupportGem.avif",
+      "Electrocute": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElectrocuteSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Lingering Illusion",
+     "slug": "lingeringillusionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LingeringIllusionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkLingeringIllusion.avif",
+     "sup": [
+      "Charge Profusion I"
+     ],
+     "supIcons": {
+      "Charge Profusion I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaffplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ChargedStaffSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkChargedStaff.avif",
+     "sup": [
+      "Shock",
+      "Innervate"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif",
+      "Innervate": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Ash",
+     "slug": "heraldofashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofAshSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAshSkill.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.avif",
+     "sup": [
+      "Heightened Curse"
+     ],
+     "supIcons": {
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     7576,
+     33866,
+     49220,
+     4157,
+     34168,
+     55088,
+     61196,
+     56045,
+     11604,
+     17088,
+     61834,
+     24958,
+     41877,
+     64601,
+     42750,
+     37691,
+     56453,
+     21336,
+     62984,
+     38676,
+     27910,
+     53938,
+     36931,
+     24647,
+     43691,
+     21746,
+     46782,
+     53698,
+     20916,
+     50635,
+     25971,
+     32545,
+     34233,
+     29408,
+     7054,
+     47009,
+     37250,
+     1420,
+     13419,
+     14958,
+     17548,
+     51741,
+     57821,
+     26034,
+     42805,
+     56838,
+     34324,
+     31765
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     9994,
+     11495,
+     34081,
+     19370,
+     52295,
+     39595
+    ],
+    "attr": null,
+    "jewels": []
+   },
+   "desc": "If you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later.",
+   "source": "Act 3-6"
+  },
+  {
+   "src": "mobalytics",
+   "name": "A4",
+   "items": {
+    "helmet": {
+     "n": "Coral Circlet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt07.avif",
+     "mods": [
+      "+30 to maximum Life",
+      "+42 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Strider Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "33% increased Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Hunting Bracers",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Bound Boots",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.avif",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Bloodstone Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/BloodstoneAmulet.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Sapphire Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/SapphireRing.avif",
+     "mods": [
+      "Adds 1 to 20 Lightning Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+     "mods": [
+      "Adds 1 to 16 Lightning damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Rawhide Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.avif",
+     "mods": [
+      "+16% to Fire Resistance",
+      "+16% to Cold Resistance"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Giant Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Giant Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "skill": "Punch"
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    }
+   },
+   "gems": [
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.avif",
+     "sup": [
+      "Rapid Attacks I",
+      "Rage III",
+      "Lightning Attunement",
+      "Elemental Armament II"
+     ],
+     "supIcons": {
+      "Rapid Attacks I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Storm Wave",
+     "slug": "stormwaveplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/StormWaveSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkStormWave.avif",
+     "sup": [
+      "Branching Fissures I",
+      "Elemental Armament II",
+      "Lightning Attunement",
+      "Rage III"
+     ],
+     "supIcons": {
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Tempest Bell",
+     "slug": "tempestbellplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestBellSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestBell.avif",
+     "sup": [
+      "Magnified Area II",
+      "Overabundance I",
+      "Close Combat I"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif",
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.avif",
+      "Close Combat I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunderplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.avif",
+     "sup": [
+      "Longshot I",
+      "Electrocute"
+     ],
+     "supIcons": {
+      "Longshot I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FarCombatSupportGem.avif",
+      "Electrocute": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElectrocuteSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Lingering Illusion",
+     "slug": "lingeringillusionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LingeringIllusionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkLingeringIllusion.avif",
+     "sup": [
+      "Charge Profusion I"
+     ],
+     "supIcons": {
+      "Charge Profusion I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaffplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ChargedStaffSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkChargedStaff.avif",
+     "sup": [
+      "Shock",
+      "Innervate"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif",
+      "Innervate": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Ash",
+     "slug": "heraldofashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofAshSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAshSkill.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.avif",
+     "sup": [
+      "Heightened Curse"
+     ],
+     "supIcons": {
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     7576,
+     33866,
+     49220,
+     4157,
+     34168,
+     55088,
+     61196,
+     56045,
+     11604,
+     17088,
+     61834,
+     24958,
+     41877,
+     64601,
+     42750,
+     37691,
+     56453,
+     21336,
+     62984,
+     38676,
+     27910,
+     53938,
+     36931,
+     24647,
+     43691,
+     21746,
+     46782,
+     53698,
+     20916,
+     50635,
+     25971,
+     32545,
+     34233,
+     29408,
+     7054,
+     47009,
+     37250,
+     1420,
+     13419,
+     14958,
+     17548,
+     51741,
+     57821,
+     26034,
+     42805,
+     56838,
+     34324,
+     31765,
+     722,
+     25565,
+     17420,
+     18717,
+     60483,
+     58329,
+     31950,
+     8569,
+     55507,
+     38338,
+     13748,
+     9141,
+     5703,
+     15775,
+     30808,
+     14267,
+     32763,
+     14262,
+     41017,
+     45012,
+     64462,
+     17589
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     9994,
+     11495,
+     34081,
+     19370,
+     52295,
+     39595
+    ],
+    "attr": null,
+    "jewels": []
+   },
+   "desc": "If you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later.",
+   "source": "Act 3-6"
+  },
+  {
+   "src": "mobalytics",
+   "name": "Mapas",
+   "items": {
+    "helmet": {
+     "n": "Coral Circlet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt07.avif",
+     "mods": [
+      "+30 to maximum Life",
+      "+42 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "body": {
+     "n": "Strider Vest",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+     "mods": [
+      "+40 to maximum Life",
+      "33% increased Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Hunting Bracers",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "boots": {
+     "n": "Bound Boots",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.avif",
+     "mods": [
+      "10% increased Movement Speed"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Bloodstone Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/BloodstoneAmulet.avif",
+     "mods": [
+      "+2 to Level of all Melee Skills"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Sapphire Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/SapphireRing.avif",
+     "mods": [
+      "Adds 1 to 20 Lightning Damage"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+     "mods": [
+      "Adds 1 to 16 Lightning damage to Attacks"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Rawhide Belt",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.avif",
+     "mods": [
+      "+16% to Fire Resistance",
+      "+16% to Cold Resistance"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Giant Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Giant Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana05.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set1": {
+     "skill": "Punch"
+    },
+    "mainHand_set2": {
+     "skill": "Punch"
+    }
+   },
+   "gems": [
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.avif",
+     "sup": [
+      "Rapid Attacks I",
+      "Rage III",
+      "Lightning Attunement",
+      "Elemental Armament II"
+     ],
+     "supIcons": {
+      "Rapid Attacks I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Storm Wave",
+     "slug": "stormwaveplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/StormWaveSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkStormWave.avif",
+     "sup": [
+      "Branching Fissures I",
+      "Elemental Armament II",
+      "Lightning Attunement",
+      "Rage III"
+     ],
+     "supIcons": {
+      "Branching Fissures I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Tempest Bell",
+     "slug": "tempestbellplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestBellSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestBell.avif",
+     "sup": [
+      "Magnified Area II",
+      "Overabundance I",
+      "Close Combat I"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif",
+      "Overabundance I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.avif",
+      "Close Combat I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Thunder",
+     "slug": "heraldofthunderplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.avif",
+     "sup": [
+      "Longshot I",
+      "Electrocute"
+     ],
+     "supIcons": {
+      "Longshot I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FarCombatSupportGem.avif",
+      "Electrocute": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElectrocuteSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Lingering Illusion",
+     "slug": "lingeringillusionplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LingeringIllusionSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkLingeringIllusion.avif",
+     "sup": [
+      "Charge Profusion I"
+     ],
+     "supIcons": {
+      "Charge Profusion I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaffplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ChargedStaffSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkChargedStaff.avif",
+     "sup": [
+      "Shock",
+      "Innervate"
+     ],
+     "supIcons": {
+      "Shock": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConductionSupportGem.avif",
+      "Innervate": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Ash",
+     "slug": "heraldofashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofAshSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAshSkill.avif",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Frost Bomb",
+     "slug": "frostbombplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.avif",
+     "sup": [
+      "Magnified Area I"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Elemental Weakness",
+     "slug": "elementalweaknessplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElementalWeaknessSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/elementalweakness.avif",
+     "sup": [
+      "Heightened Curse"
+     ],
+     "supIcons": {
+      "Heightened Curse": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CurseEffectSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     7576,
+     33866,
+     49220,
+     4157,
+     34168,
+     55088,
+     61196,
+     56045,
+     11604,
+     17088,
+     61834,
+     24958,
+     41877,
+     64601,
+     42750,
+     37691,
+     56453,
+     21336,
+     62984,
+     38676,
+     27910,
+     53938,
+     36931,
+     24647,
+     43691,
+     21746,
+     46782,
+     53698,
+     20916,
+     50635,
+     25971,
+     32545,
+     34233,
+     29408,
+     7054,
+     47009,
+     37250,
+     1420,
+     13419,
+     14958,
+     17548,
+     51741,
+     57821,
+     26034,
+     42805,
+     56838,
+     34324,
+     31765,
+     722,
+     25565,
+     17420,
+     18717,
+     60483,
+     58329,
+     31950,
+     8569,
+     55507,
+     38338,
+     13748,
+     9141,
+     5703,
+     15775,
+     30808,
+     14267,
+     32763,
+     14262,
+     41017,
+     45012,
+     64462,
+     17589,
+     36085,
+     21945,
+     61718,
+     38342,
+     26572,
+     47514,
+     15356,
+     18815,
+     40990,
+     7809,
+     31888,
+     34300,
+     7405,
+     4850,
+     35503,
+     23764
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     9994,
+     11495,
+     34081,
+     19370,
+     52295,
+     39595
+    ],
+    "attr": null,
+    "jewels": []
+   },
+   "desc": "If you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later.",
+   "source": "Act 3-6"
+  },
+  {
+   "src": "mobalytics",
+   "name": "Waystones",
+   "items": {
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.avif",
+     "mods": [
+      "+33 to maximum Mana",
+      "+31% to Fire Resistance",
+      "+26 to maximum Energy Shield",
+      "78% increased Energy Shield",
+      "15% increased Energy Shield Recharge Rate"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhancegreater"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Sleek Jacket",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.avif",
+     "mods": [
+      "+182 to Evasion Rating",
+      "+31% to Cold Resistance",
+      "+36% to Lightning Resistance",
+      "+56 to maximum Energy Shield",
+      "39% increased Evasion and Energy Shield",
+      "41% faster start of Energy Shield Recharge"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhancegreater",
+      "soulcore-runeenhancegreater"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Opulent Gloves",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt04.avif",
+     "mods": [
+      "Adds 1 to 4 Lightning damage to Attacks",
+      "+26 to maximum Life",
+      "+28 to Dexterity",
+      "27% increased Energy Shield",
+      "Adds 6 to 12 Physical Damage to Attacks",
+      "+2 to Level of all Melee Skills",
+      "14% increased Attack Speed"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-talismanspecial1"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Sekhema Sandals",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt06.avif",
+     "mods": [
+      "+31% to Fire Resistance",
+      "+31% to Cold Resistance",
+      "+36% to Lightning Resistance",
+      "68% increased Energy Shield",
+      "30% increased Movement Speed"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhancegreater"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Amber Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/AmberAmulet.avif",
+     "mods": [
+      "35% increased Critical Hit Chance",
+      "45% increased Evasion Rating",
+      "15% increased Evasion Rating",
+      "+3 to Level of all Melee Skills",
+      "35% increased Critical Damage Bonus",
+      "20% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Sapphire Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/SapphireRing.avif",
+     "mods": [
+      "+11 to all Attributes",
+      "Adds 1 to 4 Lightning damage to Attacks",
+      "+31% to Cold Resistance",
+      "+108 to Evasion Rating",
+      "25% increased Fire Damage",
+      "Leech 4% of Physical Attack Damage as Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Ruby Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+     "mods": [
+      "Adds 1 to 33 Lightning damage to Attacks",
+      "+17% to all Elemental Resistances",
+      "+105 to maximum Mana",
+      "+21% to Fire Resistance",
+      "+41% to Lightning Resistance",
+      "+80 to Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Shavronne's Satchel",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/ShavronnesSatchel.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "Ngamahu's Chosen",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/RubyUniqueCharm.avif",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Silver Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/SilverCharm.avif",
+     "mods": [
+      "29% reduced Charges per use"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Golden Charm",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/GoldenCharm.avif",
+     "mods": [
+      "Gains 0.15 Charges per Second",
+      "Also grants 205 Guard"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.avif",
+     "mods": [
+      "39% increased Charges",
+      "28% of Recovery applied Instantly"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Ultimate Mana Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana09.avif",
+     "mods": [
+      "32% reduced Charges per use",
+      "20% of Recovery applied Instantly"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Storm Wave",
+     "slug": "stormwaveplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/StormWaveSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkStormWave.avif",
+     "sup": [
+      "Lightning Attunement",
+      "Elemental Armament II",
+      "Branching Fissures II",
+      "Rapid Attacks II",
+      "Deliberation"
+     ],
+     "supIcons": {
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif",
+      "Branching Fissures II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.avif",
+      "Rapid Attacks II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif",
+      "Deliberation": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CessationSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.avif",
+     "sup": [
+      "Magnified Area I",
+      "Maim"
+     ],
+     "supIcons": {
+      "Magnified Area I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif",
+      "Maim": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MaimSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Herald of Ash",
+     "slug": "heraldofashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofAshSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAshSkill.webp",
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdanceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GhostDanceSkillGem.avif",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkGhostDance.avif",
+     "sup": [
+      "Compressed Duration I"
+     ],
+     "supIcons": {
+      "Compressed Duration I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LessDurationSupportGem.avif"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.webp",
+     "sup": [
+      "Rapid Attacks II",
+      "Rage III",
+      "Lightning Attunement",
+      "Elemental Armament II"
+     ],
+     "supIcons": {
+      "Rapid Attacks II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.webp",
+      "Lightning Attunement": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": null
+    },
+    {
+     "skill": "Tempest Bell",
+     "slug": "tempestbellplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestBellSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestBell.webp",
+     "sup": [
+      "Ancestral Call II",
+      "Mana Leech",
+      "Concentrated Area",
+      "Heft"
+     ],
+     "supIcons": {
+      "Ancestral Call II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AncestralCallSupportGem.webp",
+      "Mana Leech": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ManaLeechSupportGem.webp",
+      "Concentrated Area": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+      "Heft": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedHeftSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": null
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     20024,
+     44223,
+     49220,
+     4157,
+     34168,
+     55088,
+     61196,
+     56045,
+     11604,
+     17088,
+     61834,
+     24958,
+     41877,
+     64601,
+     51741,
+     57821,
+     31765,
+     59538,
+     47976,
+     14446,
+     61403,
+     56349,
+     21336,
+     62984,
+     38676,
+     27910,
+     53938,
+     36931,
+     26034,
+     42805,
+     56838,
+     42750,
+     37691,
+     56453,
+     50635,
+     25971,
+     13419,
+     722,
+     15775,
+     30808,
+     14267,
+     32763,
+     14262,
+     41017,
+     45012,
+     64462,
+     17589,
+     36085,
+     21945,
+     61718,
+     38342,
+     26572,
+     47514,
+     34324,
+     14958,
+     17548,
+     7054,
+     47009,
+     37250,
+     1420,
+     58329,
+     31950,
+     8569,
+     7405,
+     4850,
+     35503,
+     23764,
+     15343,
+     60239,
+     49356,
+     16705,
+     34621,
+     535,
+     20677,
+     4346,
+     4519,
+     13724,
+     48773,
+     38493,
+     21984,
+     55621,
+     38537,
+     54983,
+     39369,
+     2936,
+     13407,
+     45702,
+     31692,
+     46197,
+     62841,
+     17367,
+     12761,
+     12249,
+     38541,
+     61601,
+     47177,
+     40760,
+     21779,
+     57204,
+     11672,
+     48030,
+     62436,
+     3215
+    ],
+    "s1": [],
+    "s2": [],
+    "a": [
+     9994,
+     11495,
+     34081,
+     19370,
+     20437,
+     39552,
+     52295,
+     39595
+    ],
+    "attr": null,
+    "jewels": [
+     {
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-21984",
+      "prefixSlugs": [
+       "IncreasedEnergyShieldPercent2",
+       "JewelEnergyShieldRecharge"
+      ],
+      "suffixSlugs": [
+       "JewelManaonKill",
+       "JewelStunThresholdfromEnergyShield"
+      ],
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif"
+     },
+     {
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-32763",
+      "prefixSlugs": [
+       "IncreasedEnergyShieldPercent2"
+      ],
+      "suffixSlugs": [
+       "CriticalMultiplier1",
+       "JewelStunThresholdfromEnergyShield"
+      ],
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif"
+     }
+    ]
+   },
+   "desc": "If you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later.",
+   "source": "Waystones / 85+ Wave"
+  },
+  {
+   "src": "mobalytics",
+   "name": "Endgame",
+   "items": {
+    "helmet": {
+     "n": "Ancestral Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.webp",
+     "mods": [
+      "+42% to Fire Resistance",
+      "+59 to maximum Energy Shield",
+      "42% increased Energy Shield",
+      "+43 to maximum Life",
+      "+38% to Cold Resistance",
+      "+45% to Lightning Resistance",
+      "96% increased Energy Shield"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhanceperfect",
+      "soulcore-runeenhanceperfect"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Sleek Jacket",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+     "mods": [
+      "+41% to Fire Resistance",
+      "+41% to Cold Resistance",
+      "+80 to Evasion Rating",
+      "+25 to maximum Energy Shield",
+      "101% increased Evasion and Energy Shield",
+      "Gain Deflection Rating equal to 24% of Evasion Rating"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhanceperfect",
+      "soulcore-runeenhanceperfect"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Fists of Stone",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+     "mods": [
+      "Has +4 to Evasion Rating per player level",
+      "Has +1 to maximum Energy Shield per player level",
+      "Attacks Gain 19% of Damage as Extra Fire Damage",
+      "18% increased Attack Speed when on Full Life",
+      "Recover 3% of maximum Life on Kill",
+      "+54% Surpassing chance to fire an additional Projectile",
+      "Attacks Gain 22% of Damage as Extra Lightning Damage"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runewarpingcreatejewelsocket"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Daggerfoot Shoes",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt04.webp",
+     "mods": [
+      "35% increased Movement Speed",
+      "96% increased Evasion and Energy Shield",
+      "+44% to Fire Resistance",
+      "+42% to Lightning Resistance",
+      "Gain Deflection Rating equal to 23% of Evasion Rating",
+      "+71 to Evasion Rating",
+      "+22 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhanceperfect"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/AbsentAmulet.webp",
+     "mods": [
+      "+4 to Level of all Melee Skills",
+      "+25% to Lightning Resistance",
+      "46% increased Energy Shield from Equipped Body Armour",
+      "{crafted}30% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Breach Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/BreachRing.webp",
+     "mods": [
+      "Adds 4 to 82 Lightning damage to Attacks",
+      "Adds 33 to 46 Fire damage to Attacks",
+      "Adds 32 to 49 Cold damage to Attacks",
+      "15% increased Rarity of Items found",
+      "+35% to Cold Resistance",
+      "Leech 8.52% of Physical Attack Damage as Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/MirrorRing.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Shavronne's Satchel",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/ShavronnesSatchel.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/SilverUniqueCharm.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "For Utopia",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/StoneUniqueCharm.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/ThawingUniqueCharm.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+     "mods": [
+      "28% of Recovery applied Instantly",
+      "33% increased Charges"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Uniques/LaviangasSpirit.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Sinister Quarterstaff",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff03.webp",
+     "mods": [
+      "+3.62% to Critical Hit Chance",
+      "Adds 121 to 167 Fire Damage",
+      "Adds 19 to 357 Lightning Damage",
+      "+22% to Critical Damage Bonus",
+      "+5 to Level of all Melee Skills",
+      "Adds 117 to 188 Cold Damage"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial6",
+      "soulcore-soulcoreenlighten"
+     ],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Hollow Focus",
+     "slug": "hollowfocusplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MartialArtistSpectralBellSkill.webp",
+     "sup": [
+      "Cooldown Recovery II",
+      "Oisin's Oath",
+      "Living Lightning II",
+      "Culmination II",
+      "Ailith's Chimes"
+     ],
+     "supIcons": {
+      "Cooldown Recovery II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+      "Oisin's Oath": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/WalkeroftheWilds.webp",
+      "Living Lightning II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp",
+      "Culmination II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CulminationSupportGem.webp",
+      "Ailith's Chimes": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Monastic.webp"
+     },
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Hollow Resonance",
+     "slug": "hollowresonanceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MartialArtistCarrySpectralBellSkill.webp",
+     "sup": [
+      "Magnified Area II",
+      "Blind II",
+      "Elemental Armament II",
+      "Close Combat II",
+      "Culling Strike II"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+      "Blind II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+      "Close Combat II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.webp",
+      "Culling Strike II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CullingStrikeSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinityplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HuntressTrinitySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HuntressTrinitySkillIcon.webp",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaffplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ChargedStaffSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkChargedStaff.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Culling Strike II",
+      "Innervate",
+      "Embitter",
+      "Blazing Critical"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Culling Strike II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CullingStrikeSupportGem.webp",
+      "Innervate": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.webp",
+      "Embitter": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/EmbitterSupportGem.webp",
+      "Blazing Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 18
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunderplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningStrikeSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkLightningStrike.webp",
+     "sup": [
+      "Pinpoint Critical",
+      "Elemental Armament II",
+      "Blindside",
+      "Elemental Focus",
+      "Lightning Penetration"
+     ],
+     "supIcons": {
+      "Pinpoint Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PinpointCriticalSupportGem.webp",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+      "Blindside": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindsideSupportGem.webp",
+      "Elemental Focus": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+      "Lightning Penetration": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LightningPenetrationSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 19
+    },
+    {
+     "skill": "Killing Palm",
+     "slug": "killingpalmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/KillingPalmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkKillingPalm.webp",
+     "sup": [
+      "Thrill of the Kill",
+      "Charge Profusion II",
+      "Rage III",
+      "Blazing Critical"
+     ],
+     "supIcons": {
+      "Thrill of the Kill": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ThrilloftheKillSupportGem.webp",
+      "Charge Profusion II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.webp",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.webp",
+      "Blazing Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 12
+    },
+    {
+     "skill": "Herald of Ash",
+     "slug": "heraldofashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofAshSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAshSkill.webp",
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 4
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+     "sup": [
+      "Blind II",
+      "Maim",
+      "Magnified Area II"
+     ],
+     "supIcons": {
+      "Blind II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp",
+      "Maim": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MaimSupportGem.webp",
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 15
+    },
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.webp",
+     "sup": [
+      "Crescendo II",
+      "Rapid Attacks III",
+      "Efficiency II",
+      "Medved's Felling",
+      "Rigwald's Ferocity"
+     ],
+     "supIcons": {
+      "Crescendo II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExtendedComboSupportGem.webp",
+      "Rapid Attacks III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp",
+      "Medved's Felling": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/MedvedsFelling.webp",
+      "Rigwald's Ferocity": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Rigwald.webp"
+     },
+     "weaponSet": null,
+     "level": 5
+    },
+    {
+     "skill": "Staggering Palm",
+     "slug": "staggeringpalmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindPalmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkWindPalm.webp",
+     "sup": [
+      "Elemental Armament II",
+      "Execute II",
+      "Pinpoint Critical",
+      "Multishot II",
+      "Retreat II"
+     ],
+     "supIcons": {
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+      "Execute II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExecuteSupportGem.webp",
+      "Pinpoint Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PinpointCriticalSupportGem.webp",
+      "Multishot II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp",
+      "Retreat II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RetreatingAssaultSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdanceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GhostDanceSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkGhostDance.webp",
+     "sup": [
+      "Cooldown Recovery II",
+      "Clarity I"
+     ],
+     "supIcons": {
+      "Cooldown Recovery II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+      "Clarity I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ClaritySupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 18
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     20024,
+     44223,
+     49220,
+     21336,
+     62984,
+     14725,
+     34233,
+     32545,
+     61196,
+     56045,
+     38676,
+     27910,
+     53938,
+     36931,
+     55088,
+     34168,
+     13419,
+     630,
+     17548,
+     24647,
+     43691,
+     21746,
+     46782,
+     53698,
+     20916,
+     11604,
+     17088,
+     61834,
+     24958,
+     9050,
+     37691,
+     56453,
+     51741,
+     57821,
+     26034,
+     42805,
+     56838,
+     50635,
+     25971,
+     16705,
+     34621,
+     535,
+     20677,
+     4346,
+     4519,
+     13724,
+     31765,
+     722,
+     15775,
+     30808,
+     14267,
+     3640,
+     17724,
+     17101,
+     25362,
+     15343,
+     60239,
+     49356,
+     29959,
+     6891,
+     56265,
+     11598,
+     44516,
+     2113,
+     32763,
+     14262,
+     41017,
+     45012,
+     64462,
+     17589,
+     36085,
+     21945,
+     61718,
+     38342,
+     48773,
+     38493,
+     23040,
+     13407,
+     2936,
+     39369,
+     54983,
+     38537,
+     26572,
+     47514,
+     32701,
+     29517,
+     18818,
+     49461,
+     36231,
+     3336,
+     30615,
+     41877,
+     64601,
+     34324,
+     42379,
+     3463,
+     59538,
+     47976,
+     14446,
+     65204,
+     61403,
+     56349,
+     17602,
+     50912,
+     21984,
+     4328
+    ],
+    "s1": [
+     7888,
+     43877,
+     44628,
+     53150,
+     40166,
+     56493,
+     28963,
+     51522,
+     20820,
+     17101,
+     64462,
+     17589,
+     32701,
+     4328,
+     4552,
+     17215,
+     17668,
+     29306
+    ],
+    "s2": [
+     61333,
+     31449,
+     45702,
+     46197,
+     326,
+     31692,
+     9444,
+     59694,
+     52399,
+     14958,
+     13419,
+     17548,
+     14446,
+     2113,
+     38541,
+     61601,
+     60362
+    ],
+    "a": [
+     11495,
+     34081,
+     19370,
+     57449,
+     17356,
+     52295,
+     39595,
+     20437,
+     39552
+    ],
+    "attr": null,
+    "jewels": [
+     {
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelint",
+      "nodeSlug": "node-61834",
+      "prefixSlugs": [
+       "IncreasedEnergyShieldPercent5",
+       "JewelAttackDamage",
+       "JewelEnergyShieldDelay"
+      ],
+      "suffixSlugs": [
+       "JewelManaonKill"
+      ],
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif"
+     },
+     {
+      "isUnique": true,
+      "jewelSlug": "jewel-fouruniquejewel12-heart-of-the-well",
+      "nodeSlug": "node-21984",
+      "prefixSlugs": null,
+      "suffixSlugs": null,
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/RubyJewel.avif"
+     },
+     {
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelradiusdex",
+      "nodeSlug": "node-32763",
+      "prefixSlugs": [
+       "JewelRadiusAttackDamage"
+      ],
+      "suffixSlugs": [
+       "JewelRadiusAttackCriticalDamage",
+       "JewelRadiusAttackSpeed",
+       "JewelRadiusNotableEffectNew"
+      ],
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/EmeraldJewel.avif"
+     }
+    ]
+   },
+   "desc": "HYPER SPEED Hollow Palm Build Variant without expensive gems except one for AS.\nIf you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later when you get currency.",
+   "source": "Normal Endgame"
+  },
+  {
+   "src": "mobalytics",
+   "name": "Aspiracional",
+   "items": {
+    "helmet": {
+     "n": "Kamasan Tiara",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+     "mods": [
+      "+73 to maximum Energy Shield",
+      "41% increased Energy Shield",
+      "+37 to maximum Mana",
+      "+41% to Fire Resistance",
+      "+44% to Cold Resistance",
+      "+43% to Lightning Resistance",
+      "100% increased Energy Shield"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhanceperfect",
+      "soulcore-augmentanoint"
+     ],
+     "skill": null
+    },
+    "body": {
+     "n": "Sleek Jacket",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+     "mods": [
+      "110% increased Evasion and Energy Shield",
+      "+48 to Evasion Rating",
+      "+15 to maximum Energy Shield",
+      "41% increased Evasion and Energy Shield",
+      "+42% to Fire Resistance",
+      "+43% to Cold Resistance",
+      "Gain Deflection Rating equal to 26% of Evasion Rating",
+      "+157 to Evasion Rating",
+      "+46 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhanceperfect",
+      "soulcore-runeenhanceperfect",
+      "soulcore-runeenhanceperfect"
+     ],
+     "skill": null
+    },
+    "gloves": {
+     "n": "Fists of Stone",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+     "mods": [
+      "Has +4 to Evasion Rating per player level",
+      "Has +1 to maximum Energy Shield per player level",
+      "Attacks Gain 19% of Damage as Extra Fire Damage",
+      "18% increased Attack Speed when on Full Life",
+      "Recover 3% of maximum Life on Kill",
+      "+54% Surpassing chance to fire an additional Projectile",
+      "Attacks Gain 22% of Damage as Extra Lightning Damage"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runewarpingcreatejewelsocket"
+     ],
+     "skill": null
+    },
+    "boots": {
+     "n": "Daggerfoot Shoes",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt04.webp",
+     "mods": [
+      "35% increased Movement Speed",
+      "96% increased Evasion and Energy Shield",
+      "+44% to Fire Resistance",
+      "+42% to Lightning Resistance",
+      "Gain Deflection Rating equal to 23% of Evasion Rating",
+      "+71 to Evasion Rating",
+      "+22 to maximum Energy Shield"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runeenhanceperfect"
+     ],
+     "skill": null
+    },
+    "amulet": {
+     "n": "Absent Amulet",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/AbsentAmulet.webp",
+     "mods": [
+      "+4 to Level of all Melee Skills",
+      "+34% to Cold Resistance",
+      "46% increased Energy Shield from Equipped Body Armour",
+      "{crafted}30% increased Global Armour, Evasion and Energy Shield"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "leftRing": {
+     "n": "Refined Breach Ring",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/BreachRing.webp",
+     "mods": [
+      "Adds 1 to 60 Lightning damage to Attacks",
+      "+20% to Chaos Resistance",
+      "Adds 25 to 37 Fire damage to Attacks",
+      "Adds 21 to 32 Cold damage to Attacks",
+      "Leech 8% of Physical Attack Damage as Mana"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "rightRing": {
+     "n": "Kalandra's Touch",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/MirrorRing.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "belt": {
+     "n": "Mageblood",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/mageblood.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm1": {
+     "n": "The Fall of the Axe",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/SilverUniqueCharm.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm2": {
+     "n": "Rite of Passage",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/GoldenUniqueCharm.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "charm3": {
+     "n": "Nascent Hope",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Uniques/ThawingUniqueCharm.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask1": {
+     "n": "Ultimate Life Flask",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+     "mods": [
+      "28% of Recovery applied Instantly",
+      "33% increased Charges"
+     ],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "flask2": {
+     "n": "Lavianga's Spirits",
+     "u": 1,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Uniques/LaviangasSpirit.webp",
+     "mods": [],
+     "stats": [],
+     "runes": [],
+     "skill": null
+    },
+    "mainHand_set2": {
+     "n": "Sinister Quarterstaff",
+     "u": 0,
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff03.webp",
+     "mods": [
+      "+3.62% to Critical Hit Chance",
+      "Adds 121 to 167 Fire Damage",
+      "Adds 19 to 357 Lightning Damage",
+      "+22% to Critical Damage Bonus",
+      "+5 to Level of all Melee Skills",
+      "Adds 117 to 188 Cold Damage"
+     ],
+     "stats": [],
+     "runes": [
+      "soulcore-runespecial6",
+      "soulcore-soulcoreenlighten"
+     ],
+     "skill": null
+    }
+   },
+   "gems": [
+    {
+     "skill": "Hollow Focus",
+     "slug": "hollowfocusplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MartialArtistSpectralBellSkill.webp",
+     "sup": [
+      "Cooldown Recovery II",
+      "Oisin's Oath",
+      "Living Lightning II",
+      "Culmination II",
+      "Ailith's Chimes"
+     ],
+     "supIcons": {
+      "Cooldown Recovery II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+      "Oisin's Oath": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/WalkeroftheWilds.webp",
+      "Living Lightning II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp",
+      "Culmination II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CulminationSupportGem.webp",
+      "Ailith's Chimes": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Monastic.webp"
+     },
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Trinity",
+     "slug": "trinityplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HuntressTrinitySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HuntressTrinitySkillIcon.webp",
+     "sup": [],
+     "supIcons": {},
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Ghost Dance",
+     "slug": "ghostdanceplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/GhostDanceSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkGhostDance.webp",
+     "sup": [
+      "Cooldown Recovery II",
+      "Clarity I"
+     ],
+     "supIcons": {
+      "Cooldown Recovery II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+      "Clarity I": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ClaritySupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 18
+    },
+    {
+     "skill": "Charged Staff",
+     "slug": "chargedstaffplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ChargedStaffSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkChargedStaff.webp",
+     "sup": [
+      "Prolonged Duration II",
+      "Culling Strike II",
+      "Innervate",
+      "Embitter",
+      "Blazing Critical"
+     ],
+     "supIcons": {
+      "Prolonged Duration II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+      "Culling Strike II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CullingStrikeSupportGem.webp",
+      "Innervate": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.webp",
+      "Embitter": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/EmbitterSupportGem.webp",
+      "Blazing Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 18
+    },
+    {
+     "skill": "Killing Palm",
+     "slug": "killingpalmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/KillingPalmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkKillingPalm.webp",
+     "sup": [
+      "Thrill of the Kill II",
+      "Charge Profusion II",
+      "Blazing Critical",
+      "Rage III"
+     ],
+     "supIcons": {
+      "Thrill of the Kill II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ThrilloftheKillSupportGem.webp",
+      "Charge Profusion II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.webp",
+      "Blazing Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 12
+    },
+    {
+     "skill": "Herald of Ash",
+     "slug": "heraldofashplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofAshSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfAshSkill.webp",
+     "sup": [
+      "Magnified Area II"
+     ],
+     "supIcons": {
+      "Magnified Area II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 4
+    },
+    {
+     "skill": "Tempest Flurry",
+     "slug": "tempestflurryplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TempestFlurrySkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkTempestFlurry.webp",
+     "sup": [
+      "Crescendo II",
+      "Rapid Attacks III",
+      "Efficiency II",
+      "Medved's Felling",
+      "Rigwald's Ferocity",
+      "Rage III"
+     ],
+     "supIcons": {
+      "Crescendo II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExtendedComboSupportGem.webp",
+      "Rapid Attacks III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+      "Efficiency II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InspirationSupportGem.webp",
+      "Medved's Felling": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/MedvedsFelling.webp",
+      "Rigwald's Ferocity": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Rigwald.webp",
+      "Rage III": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 5
+    },
+    {
+     "skill": "Falling Thunder",
+     "slug": "fallingthunderplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningStrikeSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkLightningStrike.webp",
+     "sup": [
+      "Pinpoint Critical",
+      "Elemental Armament II",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Volt"
+     ],
+     "supIcons": {
+      "Pinpoint Critical": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/PinpointCriticalSupportGem.webp",
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+      "Elemental Focus": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+      "Rakiata's Flow": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Rakiata.webp",
+      "Volt": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/VoltSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Staggering Palm",
+     "slug": "staggeringpalmplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindPalmSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/MonkWindPalm.webp",
+     "sup": [
+      "Elemental Armament II",
+      "Execute II",
+      "Garukhan's Resolve",
+      "Multishot II",
+      "Retreat II"
+     ],
+     "supIcons": {
+      "Elemental Armament II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+      "Execute II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExecuteSupportGem.webp",
+      "Garukhan's Resolve": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/Lineage/Garukhan.webp",
+      "Multishot II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp",
+      "Retreat II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/RetreatingAssaultSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 20
+    },
+    {
+     "skill": "Wind Dancer",
+     "slug": "winddancerplayer",
+     "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+     "skillIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+     "sup": [
+      "Blind II",
+      "Maim"
+     ],
+     "supIcons": {
+      "Blind II": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp",
+      "Maim": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MaimSupportGem.webp"
+     },
+     "weaponSet": null,
+     "level": 15
+    }
+   ],
+   "tree": {
+    "m": [
+     10364,
+     42857,
+     20024,
+     44223,
+     49220,
+     21336,
+     62984,
+     14725,
+     34233,
+     32545,
+     61196,
+     56045,
+     38676,
+     27910,
+     53938,
+     36931,
+     55088,
+     34168,
+     13419,
+     630,
+     17548,
+     24647,
+     43691,
+     21746,
+     46782,
+     53698,
+     20916,
+     11604,
+     17088,
+     61834,
+     24958,
+     9050,
+     37691,
+     56453,
+     51741,
+     57821,
+     26034,
+     42805,
+     56838,
+     50635,
+     25971,
+     16705,
+     34621,
+     535,
+     20677,
+     4346,
+     4519,
+     13724,
+     31765,
+     722,
+     15775,
+     30808,
+     14267,
+     3640,
+     17724,
+     17101,
+     25362,
+     15343,
+     60239,
+     49356,
+     29959,
+     6891,
+     56265,
+     11598,
+     44516,
+     2113,
+     32763,
+     14262,
+     41017,
+     45012,
+     64462,
+     17589,
+     36085,
+     21945,
+     61718,
+     38342,
+     48773,
+     38493,
+     23040,
+     13407,
+     2936,
+     39369,
+     54983,
+     38537,
+     26572,
+     47514,
+     32701,
+     29517,
+     18818,
+     49461,
+     36231,
+     3336,
+     30615,
+     41877,
+     64601,
+     34324,
+     42379,
+     3463,
+     59538,
+     47976,
+     14446,
+     65204,
+     61403,
+     56349,
+     17602,
+     50912,
+     21984,
+     4328
+    ],
+    "s1": [
+     4552,
+     7888,
+     43877,
+     44628,
+     17668,
+     53150,
+     40166,
+     28963,
+     17215,
+     29306,
+     56493,
+     51522,
+     20820,
+     17101,
+     64462,
+     17589,
+     32701,
+     42379,
+     4328
+    ],
+    "s2": [
+     31449,
+     9782,
+     61601,
+     45702,
+     28021,
+     326,
+     31692,
+     9444,
+     38541,
+     59694,
+     46197,
+     60362,
+     52399,
+     34621,
+     20677,
+     14446,
+     29959,
+     2113,
+     3463,
+     56265
+    ],
+    "a": [
+     34081,
+     19370,
+     53280,
+     41751,
+     20437,
+     39552,
+     52295,
+     39595
+    ],
+    "attr": null,
+    "jewels": [
+     {
+      "isUnique": false,
+      "jewelSlug": "jewel-jewelradiusdex",
+      "nodeSlug": "node-32763",
+      "prefixSlugs": [
+       "JewelRadiusAttackDamage"
+      ],
+      "suffixSlugs": [
+       "JewelRadiusAttackCriticalDamage",
+       "JewelRadiusAttackSpeed",
+       "JewelRadiusNotableEffectNew"
+      ],
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/EmeraldJewel.avif"
+     },
+     {
+      "isUnique": true,
+      "jewelSlug": "jewel-fouruniquejewel12-heart-of-the-well",
+      "nodeSlug": "node-21984",
+      "prefixSlugs": null,
+      "suffixSlugs": null,
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/RubyJewel.avif"
+     },
+     {
+      "isUnique": false,
+      "jewelSlug": "jewel-jeweldiamond",
+      "nodeSlug": "node-61834",
+      "prefixSlugs": [
+       "IncreasedEnergyShieldPercent2"
+      ],
+      "suffixSlugs": [
+       "AttackCriticalStrikeMultiplier6",
+       "CriticalStrikeChance3",
+       "IncreasedAttackSpeed1"
+      ],
+      "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Jewels/SapphireJewel.avif"
+     }
+    ]
+   },
+   "desc": "HYPER SPEED Hollow Palm Build Variant and the Strongest Version out of them all. \nIt's can be expensive and is the pinnacle of the build, you should swap to it only when you get enough currency to get good items.\nIf you wanna League Start Monk - use this build guide and swap to SPEED ENDGAME later.",
+   "source": "Final Endgame"
+  }
+ ]
+}

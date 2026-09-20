@@ -21,17 +21,19 @@ const server=http.createServer((req,res)=>{
       page.on('response',r=>{if(r.url().startsWith(base+'/')&&r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
       await page.route('https://fonts.googleapis.com/**',route=>route.abort());
       await page.route('https://fonts.gstatic.com/**',route=>route.abort());
-      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister'].flatMap(b=>[b+'/index.html',b+'/en.html'])]){
+      const ONLY=(process.env.ONLY||'').split(',').filter(Boolean);            // ONLY=hyperspeed,oracle roda só essas builds (a landing entra com ONLY=landing); sem ONLY roda tudo
+      for(const file of ['index.html','en.html',...['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister','hyperspeed'].flatMap(b=>[b+'/index.html',b+'/en.html'])].filter(f=>!ONLY.length||ONLY.includes(f.includes('/')?f.split('/')[0]:'landing'))){
         await page.goto(base+'/'+file);await page.waitForLoadState('domcontentloaded');pages++;
         if(!file.includes('/')){
-          assert.equal(await page.locator('.build').count(),12);
-          assert.equal(await page.locator('.primary').count(),12);
+          assert.equal(await page.locator('.build').count(),13);
+          assert.equal(await page.locator('.primary').count(),13);
         }else{
           assert.equal(await page.locator('#navGroups button').count(),4);
           const ids=await page.locator('#tabs button').evaluateAll(xs=>xs.map(x=>x.dataset.tab));
           for(const id of ids){
             await openTab(page,id);
             assert.equal(await page.locator(`#v-${id}`).isVisible(),true,file+' '+id);
+            await page.waitForFunction(i=>{const e=document.querySelector('#v-'+i);return e&&e.innerText.length>30},id,{timeout:5000}).catch(()=>{});   // a aba pode levar um instante para pintar sob carga
             assert.ok((await page.locator(`#v-${id}`).innerText()).length>30,file+' empty '+id);
             if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))overflow.push(`${width} ${file} #${id} ${await offenders(page)}`);
             tabs++;
@@ -54,7 +56,7 @@ const server=http.createServer((req,res)=>{
           await page.locator('#craftIlvl').fill('1');await page.locator('#craftIlvl').press('Tab');
           assert.ok(await page.locator('.craft-mods tr.locked').count()>0);
           await page.locator('#craftIlvl').fill('82');await page.locator('#craftIlvl').press('Tab');
-          await page.locator('[data-cstep]').first().check();await page.reload();
+          await page.locator('[data-cstep]').first().check();await page.waitForTimeout(400);await page.reload();
           assert.equal(await page.locator('[data-cstep]').first().isChecked(),true);
           await page.locator('[data-cview="basics"]').click();assert.equal(await page.locator('.craft-glossary article').count(),12);
           await page.locator('[data-cview="calculator"]').click();
@@ -122,7 +124,7 @@ const server=http.createServer((req,res)=>{
     for(const width of [320,1920]){
       const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
       page.on('pageerror',e=>errors.push(e.message));
-      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister']){
+      for(const build of ['silverfist','oracle','tactician','infernalist','acolyte','pathfinder','smith','martial','shaman','legionnaire','whirling','twister','hyperspeed'].filter(x=>!(process.env.ONLY||'').split(',').filter(Boolean).length||(process.env.ONLY||'').split(',').includes(x))){
         await page.goto(base+'/'+build+'/en.html');await page.evaluate(()=>setLv(95));pages++;
         for(const id of await page.evaluate(()=>TABS.map(x=>x[0]))){
           await page.evaluate(id=>guideGo(id),id);

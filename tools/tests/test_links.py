@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.join(ROOT, "kit"))
 sys.path.insert(0, ROOT)
 import common  # noqa: E402
 
-BUILDS = ["tactician", "infernalist", "acolyte", "pathfinder", "smith", "martial", "shaman", "legionnaire", "whirling", "twister"]
+BUILDS = ["tactician", "infernalist", "acolyte", "pathfinder", "smith", "martial", "shaman", "legionnaire", "whirling", "twister", "hyperspeed"]
 TREE = json.load(open(os.path.join(ROOT, "tree.json"), encoding="utf-8"))["nodes"]
 PHRASE = re.compile(r"\b(rare|rares|magic|com|de|do|da|até|sem|mãos|qualquer|any|with|and|or|the)\b", re.I)
 

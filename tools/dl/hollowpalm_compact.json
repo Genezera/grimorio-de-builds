@@ -1,0 +1,2607 @@
+[
+{
+"id": "3",
+"it": {
+"helmet": {
+"n": "Ancestral Tiara",
+"u": 0,
+"i": "2DItems/Armours/Helmets/Basetypes/HelmetInt08.webp",
+"m": [
+"+42% to Fire Resistance",
+"+59 to maximum Energy Shield",
+"42% increased Energy Shield",
+"+43 to maximum Life",
+"+38% to Cold Resistance",
+"+45% to Lightning Resistance",
+"96% increased Energy Shield"
+],
+"r": [
+"soulcore-runeenhanceperfect",
+"soulcore-runeenhanceperfect"
+]
+},
+"body": {
+"n": "Sleek Jacket",
+"u": 0,
+"i": "2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+"m": [
+"+41% to Fire Resistance",
+"+41% to Cold Resistance",
+"+80 to Evasion Rating",
+"+25 to maximum Energy Shield",
+"101% increased Evasion and Energy Shield",
+"Gain Deflection Rating equal to 24% of Evasion Rating"
+],
+"r": [
+"soulcore-runeenhanceperfect",
+"soulcore-runeenhanceperfect"
+]
+},
+"gloves": {
+"n": "Fists of Stone",
+"u": 0,
+"i": "2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+"m": [
+"Has +4 to Evasion Rating per player level",
+"Has +1 to maximum Energy Shield per player level",
+"Attacks Gain 19% of Damage as Extra Fire Damage",
+"18% increased Attack Speed when on Full Life",
+"Recover 3% of maximum Life on Kill",
+"+54% Surpassing chance to fire an additional Projectile",
+"Attacks Gain 22% of Damage as Extra Lightning Damage"
+],
+"r": [
+"soulcore-runewarpingcreatejewelsocket"
+]
+},
+"boots": {
+"n": "Daggerfoot Shoes",
+"u": 0,
+"i": "2DItems/Armours/Boots/Basetypes/BootsDexInt04.webp",
+"m": [
+"35% increased Movement Speed",
+"96% increased Evasion and Energy Shield",
+"+44% to Fire Resistance",
+"+42% to Lightning Resistance",
+"Gain Deflection Rating equal to 23% of Evasion Rating",
+"+71 to Evasion Rating",
+"+22 to maximum Energy Shield"
+],
+"r": [
+"soulcore-runeenhanceperfect"
+]
+},
+"amulet": {
+"n": "Absent Amulet",
+"u": 0,
+"i": "2DItems/Amulets/Basetypes/AbsentAmulet.webp",
+"m": [
+"+4 to Level of all Melee Skills",
+"+25% to Lightning Resistance",
+"46% increased Energy Shield from Equipped Body Armour",
+"{crafted}30% increased Global Armour, Evasion and Energy Shield"
+]
+},
+"leftRing": {
+"n": "Breach Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/BreachRing.webp",
+"m": [
+"Adds 4 to 82 Lightning damage to Attacks",
+"Adds 33 to 46 Fire damage to Attacks",
+"Adds 32 to 49 Cold damage to Attacks",
+"15% increased Rarity of Items found",
+"+35% to Cold Resistance",
+"Leech 8.52% of Physical Attack Damage as Mana"
+]
+},
+"rightRing": {
+"n": "Kalandra's Touch",
+"u": 1,
+"i": "2DItems/Rings/MirrorRing.webp"
+},
+"belt": {
+"n": "Shavronne's Satchel",
+"u": 1,
+"i": "2DItems/Belts/Uniques/ShavronnesSatchel.webp"
+},
+"charm1": {
+"n": "The Fall of the Axe",
+"u": 1,
+"i": "2DItems/Charms/Uniques/SilverUniqueCharm.webp"
+},
+"charm2": {
+"n": "For Utopia",
+"u": 1,
+"i": "2DItems/Charms/Uniques/StoneUniqueCharm.webp"
+},
+"charm3": {
+"n": "Nascent Hope",
+"u": 1,
+"i": "2DItems/Charms/Uniques/ThawingUniqueCharm.webp"
+},
+"flask1": {
+"n": "Ultimate Life Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskLife09.webp",
+"m": [
+"28% of Recovery applied Instantly",
+"33% increased Charges"
+]
+},
+"flask2": {
+"n": "Lavianga's Spirits",
+"u": 1,
+"i": "2DItems/Flasks/Uniques/LaviangasSpirit.webp"
+},
+"mainHand_set2": {
+"n": "Sinister Quarterstaff",
+"u": 0,
+"i": "2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff03.webp",
+"m": [
+"+3.62% to Critical Hit Chance",
+"Adds 121 to 167 Fire Damage",
+"Adds 19 to 357 Lightning Damage",
+"+22% to Critical Damage Bonus",
+"+5 to Level of all Melee Skills",
+"Adds 117 to 188 Cold Damage"
+],
+"r": [
+"soulcore-runespecial6",
+"soulcore-soulcoreenlighten"
+]
+}
+},
+"gems": [
+{
+"k": "Hollow Focus",
+"g": "hollowfocusplayer",
+"l": 20,
+"i": "2DItems/Gems/New/BlankGem.webp",
+"si": "2DArt/SkillIcons/MartialArtistSpectralBellSkill.webp",
+"w": null,
+"sup": [
+[
+"supportcooldownrecoveryplayertwo",
+"2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp"
+],
+[
+"supportoisinsoathplayer",
+"2DItems/Gems/New/NewSupport/Lineage/WalkeroftheWilds.webp"
+],
+[
+"supportlivinglightningplayertwo",
+"2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+],
+[
+"supportculminationplayertwo",
+"2DItems/Gems/New/NewSupport/CulminationSupportGem.webp"
+],
+[
+"supportailithlineageplayer",
+"2DItems/Gems/New/NewSupport/Lineage/Monastic.webp"
+]
+]
+},
+{
+"k": "Hollow Resonance",
+"g": "hollowresonanceplayer",
+"l": 20,
+"i": "2DItems/Gems/New/BlankGem.webp",
+"si": "2DArt/SkillIcons/MartialArtistCarrySpectralBellSkill.webp",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayertwo",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+],
+[
+"supportblindplayertwo",
+"2DItems/Gems/New/NewSupport/BlindSupportGem.webp"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+],
+[
+"supportclosecombatplayertwo",
+"2DItems/Gems/New/NewSupport/CloseCombatSupportGem.webp"
+],
+[
+"supportcullingstrikeplayertwo",
+"2DItems/Gems/New/NewSupport/CullingStrikeSupportGem.webp"
+]
+]
+},
+{
+"k": "Trinity",
+"g": "trinityplayer",
+"l": 20,
+"i": "2DItems/Gems/New/HuntressTrinitySkillGem.webp",
+"si": "2DArt/SkillIcons/HuntressTrinitySkillIcon.webp",
+"w": null,
+"sup": []
+},
+{
+"k": "Charged Staff",
+"g": "chargedstaffplayer",
+"l": 18,
+"i": "2DItems/Gems/New/ChargedStaffSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkChargedStaff.webp",
+"w": null,
+"sup": [
+[
+"prolongeddurationsupportplayertwo",
+"2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+],
+[
+"supportcullingstrikeplayertwo",
+"2DItems/Gems/New/NewSupport/CullingStrikeSupportGem.webp"
+],
+[
+"supportinnervateplayer",
+"2DItems/Gems/New/NewSupport/InnervateSupportGem.webp"
+],
+[
+"supportembitterplayer",
+"2DItems/Gems/New/NewSupport/EmbitterSupportGem.webp"
+],
+[
+"supportblazingcriticalplayer",
+"2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+]
+]
+},
+{
+"k": "Falling Thunder",
+"g": "fallingthunderplayer",
+"l": 19,
+"i": "2DItems/Gems/New/LightningStrikeSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkLightningStrike.webp",
+"w": null,
+"sup": [
+[
+"supportpinpointcriticalplayer",
+"2DItems/Gems/New/NewSupport/PinpointCriticalSupportGem.webp"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+],
+[
+"supportblindsideplayer",
+"2DItems/Gems/New/NewSupport/BlindsideSupportGem.webp"
+],
+[
+"supportelementalfocusplayer",
+"2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp"
+],
+[
+"supportlightningpenetrationplayer",
+"2DItems/Gems/New/NewSupport/LightningPenetrationSupportGem.webp"
+]
+]
+},
+{
+"k": "Killing Palm",
+"g": "killingpalmplayer",
+"l": 12,
+"i": "2DItems/Gems/New/KillingPalmSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkKillingPalm.webp",
+"w": null,
+"sup": [
+[
+"supportthrillofthekillplayer",
+"2DItems/Gems/New/NewSupport/ThrilloftheKillSupportGem.webp"
+],
+[
+"supportchargeprofusionplayertwo",
+"2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.webp"
+],
+[
+"supportrageplayerthree",
+"2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+],
+[
+"supportblazingcriticalplayer",
+"2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+]
+]
+},
+{
+"k": "Herald of Ash",
+"g": "heraldofashplayer",
+"l": 4,
+"i": "2DItems/Gems/New/HeraldofAshSkillGem.webp",
+"si": "2DArt/SkillIcons/HeraldOfAshSkill.webp",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayertwo",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+]
+]
+},
+{
+"k": "Wind Dancer",
+"g": "winddancerplayer",
+"l": 15,
+"i": "2DItems/Gems/New/WindDancerSkillGem.webp",
+"si": "2DArt/SkillIcons/RangerWindDancerSkill.webp",
+"w": null,
+"sup": [
+[
+"supportblindplayertwo",
+"2DItems/Gems/New/NewSupport/BlindSupportGem.webp"
+],
+[
+"supportmaimplayer",
+"2DItems/Gems/New/NewSupport/MaimSupportGem.webp"
+],
+[
+"supportmagnifiedareaplayertwo",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+]
+]
+},
+{
+"k": "Tempest Flurry",
+"g": "tempestflurryplayer",
+"l": 5,
+"i": "2DItems/Gems/New/TempestFlurrySkillGem.webp",
+"si": "2DArt/SkillIcons/MonkTempestFlurry.webp",
+"w": null,
+"sup": [
+[
+"supportcrescendoplayertwo",
+"2DItems/Gems/New/NewSupport/ExtendedComboSupportGem.webp"
+],
+[
+"supportrapidattacksplayerthree",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+],
+[
+"supportefficiencyplayertwo",
+"2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+],
+[
+"supportmedvedsfelling",
+"2DItems/Gems/New/NewSupport/Lineage/MedvedsFelling.webp"
+],
+[
+"supportrigwaldsferocityplayer",
+"2DItems/Gems/New/NewSupport/Lineage/Rigwald.webp"
+]
+]
+},
+{
+"k": "Staggering Palm",
+"g": "staggeringpalmplayer",
+"l": 20,
+"i": "2DItems/Gems/New/WindPalmSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkWindPalm.webp",
+"w": null,
+"sup": [
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+],
+[
+"supportexecuteplayertwo",
+"2DItems/Gems/New/NewSupport/ExecuteSupportGem.webp"
+],
+[
+"supportpinpointcriticalplayer",
+"2DItems/Gems/New/NewSupport/PinpointCriticalSupportGem.webp"
+],
+[
+"supportmultishotplayertwo",
+"2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+],
+[
+"supportretreatplayertwo",
+"2DItems/Gems/New/NewSupport/RetreatingAssaultSupportGem.webp"
+]
+]
+},
+{
+"k": "Ghost Dance",
+"g": "ghostdanceplayer",
+"l": 18,
+"i": "2DItems/Gems/New/GhostDanceSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkGhostDance.webp",
+"w": null,
+"sup": [
+[
+"supportcooldownrecoveryplayertwo",
+"2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp"
+],
+[
+"supportclarityplayer",
+"2DItems/Gems/New/NewSupport/ClaritySupportGem.webp"
+]
+]
+}
+],
+"req": {
+"dex": 90,
+"str": 35,
+"int": 70
+},
+"m": [
+10364,
+42857,
+20024,
+44223,
+49220,
+21336,
+62984,
+14725,
+34233,
+32545,
+61196,
+56045,
+24647,
+43691,
+21746,
+46782,
+53698,
+20916,
+32701,
+29517,
+18818,
+49461,
+50912,
+11604,
+17088,
+61834,
+24958,
+41877,
+64601,
+9050,
+37691,
+56453,
+50635,
+25971,
+51741,
+57821,
+31765,
+59538,
+47976,
+14446,
+61403,
+56349,
+17602,
+21984,
+722,
+15775,
+30808,
+14267,
+32763,
+14262,
+21945,
+61718,
+38342,
+26572,
+47514,
+41017,
+45012,
+64462,
+17589,
+36085,
+48773,
+38493,
+23040,
+13407,
+2936,
+39369,
+54983,
+38537,
+3640,
+17724,
+17101,
+25362,
+11598,
+44516,
+2113,
+29959,
+6891,
+56265,
+15343,
+60239,
+49356,
+36231,
+3336,
+30615,
+65204,
+26034,
+42805,
+56838,
+34324,
+16705,
+34621,
+535,
+20677,
+4346,
+4519,
+13724,
+3463,
+4328,
+13419,
+630,
+17548,
+55088,
+34168,
+42379,
+38676,
+27910,
+53938,
+36931
+],
+"s1": [
+7888,
+43877,
+44628,
+53150,
+40166,
+56493,
+28963,
+51522,
+20820,
+17101,
+64462,
+17589,
+32701,
+4328,
+4552,
+17215,
+17668,
+29306
+],
+"s2": [
+61333,
+31449,
+45702,
+46197,
+326,
+31692,
+9444,
+59694,
+52399,
+14958,
+13419,
+17548,
+14446,
+2113,
+38541,
+61601,
+60362
+],
+"a": [
+11495,
+34081,
+19370,
+57449,
+17356,
+52295,
+39595,
+20437,
+39552
+],
+"attr": [
+"s21746",
+"d48773",
+"d59538",
+"d61403",
+"d61196",
+"d47976",
+"d24958",
+"d43691",
+"d14446",
+"d30808",
+"d29517",
+"d15775",
+"d56045",
+"i14262",
+"i11604",
+"i4328",
+"i57821",
+"i722",
+"i41017",
+"i14267",
+"i16705",
+"i32701",
+"i31765",
+"i3463",
+"i51741",
+"i41877",
+"i24647",
+"i17088",
+"i42379"
+],
+"jw": [
+{
+"isUnique": false,
+"jewelSlug": "jewel-jewelint",
+"nodeSlug": "node-61834",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent5",
+"JewelAttackDamage",
+"JewelEnergyShieldDelay"
+],
+"suffixSlugs": [
+"JewelManaonKill"
+]
+},
+{
+"isUnique": true,
+"jewelSlug": "jewel-fouruniquejewel12-heart-of-the-well",
+"nodeSlug": "node-21984",
+"prefixSlugs": null,
+"suffixSlugs": null
+},
+{
+"isUnique": false,
+"jewelSlug": "jewel-jewelradiusdex",
+"nodeSlug": "node-32763",
+"prefixSlugs": [
+"JewelRadiusAttackDamage"
+],
+"suffixSlugs": [
+"JewelRadiusAttackCriticalDamage",
+"JewelRadiusAttackSpeed",
+"JewelRadiusNotableEffectNew"
+]
+}
+]
+},
+{
+"id": "1310c971-b9d8-4153-9e72-f2a7f907f29e",
+"it": {
+"helmet": {
+"n": "Kamasan Tiara",
+"u": 0,
+"i": "2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+"m": [
+"+73 to maximum Energy Shield",
+"41% increased Energy Shield",
+"+37 to maximum Mana",
+"+41% to Fire Resistance",
+"+44% to Cold Resistance",
+"+43% to Lightning Resistance",
+"100% increased Energy Shield"
+],
+"r": [
+"soulcore-runeenhanceperfect",
+"soulcore-augmentanoint"
+]
+},
+"body": {
+"n": "Sleek Jacket",
+"u": 0,
+"i": "2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+"m": [
+"110% increased Evasion and Energy Shield",
+"+48 to Evasion Rating",
+"+15 to maximum Energy Shield",
+"41% increased Evasion and Energy Shield",
+"+42% to Fire Resistance",
+"+43% to Cold Resistance",
+"Gain Deflection Rating equal to 26% of Evasion Rating",
+"+157 to Evasion Rating",
+"+46 to maximum Energy Shield"
+],
+"r": [
+"soulcore-runeenhanceperfect",
+"soulcore-runeenhanceperfect",
+"soulcore-runeenhanceperfect"
+]
+},
+"gloves": {
+"n": "Fists of Stone",
+"u": 0,
+"i": "2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+"m": [
+"Has +4 to Evasion Rating per player level",
+"Has +1 to maximum Energy Shield per player level",
+"Attacks Gain 19% of Damage as Extra Fire Damage",
+"18% increased Attack Speed when on Full Life",
+"Recover 3% of maximum Life on Kill",
+"+54% Surpassing chance to fire an additional Projectile",
+"Attacks Gain 22% of Damage as Extra Lightning Damage"
+],
+"r": [
+"soulcore-runewarpingcreatejewelsocket"
+]
+},
+"boots": {
+"n": "Daggerfoot Shoes",
+"u": 0,
+"i": "2DItems/Armours/Boots/Basetypes/BootsDexInt04.webp",
+"m": [
+"35% increased Movement Speed",
+"96% increased Evasion and Energy Shield",
+"+44% to Fire Resistance",
+"+42% to Lightning Resistance",
+"Gain Deflection Rating equal to 23% of Evasion Rating",
+"+71 to Evasion Rating",
+"+22 to maximum Energy Shield"
+],
+"r": [
+"soulcore-runeenhanceperfect"
+]
+},
+"amulet": {
+"n": "Absent Amulet",
+"u": 0,
+"i": "2DItems/Amulets/Basetypes/AbsentAmulet.webp",
+"m": [
+"+4 to Level of all Melee Skills",
+"+34% to Cold Resistance",
+"46% increased Energy Shield from Equipped Body Armour",
+"{crafted}30% increased Global Armour, Evasion and Energy Shield"
+]
+},
+"leftRing": {
+"n": "Refined Breach Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/BreachRing.webp",
+"m": [
+"Adds 1 to 60 Lightning damage to Attacks",
+"+20% to Chaos Resistance",
+"Adds 25 to 37 Fire damage to Attacks",
+"Adds 21 to 32 Cold damage to Attacks",
+"Leech 8% of Physical Attack Damage as Mana"
+]
+},
+"rightRing": {
+"n": "Kalandra's Touch",
+"u": 1,
+"i": "2DItems/Rings/MirrorRing.webp"
+},
+"belt": {
+"n": "Mageblood",
+"u": 1,
+"i": "2DItems/Belts/Uniques/mageblood.webp"
+},
+"charm1": {
+"n": "The Fall of the Axe",
+"u": 1,
+"i": "2DItems/Charms/Uniques/SilverUniqueCharm.webp"
+},
+"charm2": {
+"n": "Rite of Passage",
+"u": 1,
+"i": "2DItems/Charms/Uniques/GoldenUniqueCharm.webp"
+},
+"charm3": {
+"n": "Nascent Hope",
+"u": 1,
+"i": "2DItems/Charms/Uniques/ThawingUniqueCharm.webp"
+},
+"flask1": {
+"n": "Ultimate Life Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskLife09.webp",
+"m": [
+"28% of Recovery applied Instantly",
+"33% increased Charges"
+]
+},
+"flask2": {
+"n": "Lavianga's Spirits",
+"u": 1,
+"i": "2DItems/Flasks/Uniques/LaviangasSpirit.webp"
+},
+"mainHand_set2": {
+"n": "Sinister Quarterstaff",
+"u": 0,
+"i": "2DItems/Weapons/TwoHandWeapons/WarStaves/Warstaff03.webp",
+"m": [
+"+3.62% to Critical Hit Chance",
+"Adds 121 to 167 Fire Damage",
+"Adds 19 to 357 Lightning Damage",
+"+22% to Critical Damage Bonus",
+"+5 to Level of all Melee Skills",
+"Adds 117 to 188 Cold Damage"
+],
+"r": [
+"soulcore-runespecial6",
+"soulcore-soulcoreenlighten"
+]
+}
+},
+"gems": [
+{
+"k": "Hollow Focus",
+"g": "hollowfocusplayer",
+"l": 20,
+"i": "2DItems/Gems/New/BlankGem.webp",
+"si": "2DArt/SkillIcons/MartialArtistSpectralBellSkill.webp",
+"w": null,
+"sup": [
+[
+"supportcooldownrecoveryplayertwo",
+"2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp"
+],
+[
+"supportoisinsoathplayer",
+"2DItems/Gems/New/NewSupport/Lineage/WalkeroftheWilds.webp"
+],
+[
+"supportlivinglightningplayertwo",
+"2DItems/Gems/New/NewSupport/LivingLightningSupportGem.webp"
+],
+[
+"supportculminationplayertwo",
+"2DItems/Gems/New/NewSupport/CulminationSupportGem.webp"
+],
+[
+"supportailithlineageplayer",
+"2DItems/Gems/New/NewSupport/Lineage/Monastic.webp"
+]
+]
+},
+{
+"k": "Trinity",
+"g": "trinityplayer",
+"l": 20,
+"i": "2DItems/Gems/New/HuntressTrinitySkillGem.webp",
+"si": "2DArt/SkillIcons/HuntressTrinitySkillIcon.webp",
+"w": null,
+"sup": []
+},
+{
+"k": "Ghost Dance",
+"g": "ghostdanceplayer",
+"l": 18,
+"i": "2DItems/Gems/New/GhostDanceSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkGhostDance.webp",
+"w": null,
+"sup": [
+[
+"supportcooldownrecoveryplayertwo",
+"2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp"
+],
+[
+"supportclarityplayer",
+"2DItems/Gems/New/NewSupport/ClaritySupportGem.webp"
+]
+]
+},
+{
+"k": "Charged Staff",
+"g": "chargedstaffplayer",
+"l": 18,
+"i": "2DItems/Gems/New/ChargedStaffSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkChargedStaff.webp",
+"w": null,
+"sup": [
+[
+"prolongeddurationsupportplayertwo",
+"2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+],
+[
+"supportcullingstrikeplayertwo",
+"2DItems/Gems/New/NewSupport/CullingStrikeSupportGem.webp"
+],
+[
+"supportinnervateplayer",
+"2DItems/Gems/New/NewSupport/InnervateSupportGem.webp"
+],
+[
+"supportembitterplayer",
+"2DItems/Gems/New/NewSupport/EmbitterSupportGem.webp"
+],
+[
+"supportblazingcriticalplayer",
+"2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+]
+]
+},
+{
+"k": "Killing Palm",
+"g": "killingpalmplayer",
+"l": 12,
+"i": "2DItems/Gems/New/KillingPalmSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkKillingPalm.webp",
+"w": null,
+"sup": [
+[
+"supportthrillofthekillplayertwo",
+"2DItems/Gems/New/NewSupport/ThrilloftheKillSupportGem.webp"
+],
+[
+"supportchargeprofusionplayertwo",
+"2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.webp"
+],
+[
+"supportblazingcriticalplayer",
+"2DItems/Gems/New/NewSupport/BlazingCritsSupportGem.webp"
+],
+[
+"supportrageplayerthree",
+"2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+]
+]
+},
+{
+"k": "Herald of Ash",
+"g": "heraldofashplayer",
+"l": 4,
+"i": "2DItems/Gems/New/HeraldofAshSkillGem.webp",
+"si": "2DArt/SkillIcons/HeraldOfAshSkill.webp",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayertwo",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+]
+]
+},
+{
+"k": "Tempest Flurry",
+"g": "tempestflurryplayer",
+"l": 5,
+"i": "2DItems/Gems/New/TempestFlurrySkillGem.webp",
+"si": "2DArt/SkillIcons/MonkTempestFlurry.webp",
+"w": null,
+"sup": [
+[
+"supportcrescendoplayertwo",
+"2DItems/Gems/New/NewSupport/ExtendedComboSupportGem.webp"
+],
+[
+"supportrapidattacksplayerthree",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+],
+[
+"supportefficiencyplayertwo",
+"2DItems/Gems/New/NewSupport/InspirationSupportGem.webp"
+],
+[
+"supportmedvedsfelling",
+"2DItems/Gems/New/NewSupport/Lineage/MedvedsFelling.webp"
+],
+[
+"supportrigwaldsferocityplayer",
+"2DItems/Gems/New/NewSupport/Lineage/Rigwald.webp"
+],
+[
+"supportrageplayerthree",
+"2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+]
+]
+},
+{
+"k": "Falling Thunder",
+"g": "fallingthunderplayer",
+"l": 20,
+"i": "2DItems/Gems/New/LightningStrikeSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkLightningStrike.webp",
+"w": null,
+"sup": [
+[
+"supportpinpointcriticalplayer",
+"2DItems/Gems/New/NewSupport/PinpointCriticalSupportGem.webp"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+],
+[
+"supportelementalfocusplayer",
+"2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp"
+],
+[
+"supportrakiatasflowplayer",
+"2DItems/Gems/New/NewSupport/Lineage/Rakiata.webp"
+],
+[
+"supportvoltplayer",
+"2DItems/Gems/New/NewSupport/VoltSupportGem.webp"
+]
+]
+},
+{
+"k": "Staggering Palm",
+"g": "staggeringpalmplayer",
+"l": 20,
+"i": "2DItems/Gems/New/WindPalmSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkWindPalm.webp",
+"w": null,
+"sup": [
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+],
+[
+"supportexecuteplayertwo",
+"2DItems/Gems/New/NewSupport/ExecuteSupportGem.webp"
+],
+[
+"supportgarukhansresolveplayer",
+"2DItems/Gems/New/NewSupport/Lineage/Garukhan.webp"
+],
+[
+"supportmultishotplayertwo",
+"2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+],
+[
+"supportretreatplayertwo",
+"2DItems/Gems/New/NewSupport/RetreatingAssaultSupportGem.webp"
+]
+]
+},
+{
+"k": "Wind Dancer",
+"g": "winddancerplayer",
+"l": 15,
+"i": "2DItems/Gems/New/WindDancerSkillGem.webp",
+"si": "2DArt/SkillIcons/RangerWindDancerSkill.webp",
+"w": null,
+"sup": [
+[
+"supportblindplayertwo",
+"2DItems/Gems/New/NewSupport/BlindSupportGem.webp"
+],
+[
+"supportmaimplayer",
+"2DItems/Gems/New/NewSupport/MaimSupportGem.webp"
+]
+]
+}
+],
+"req": {
+"dex": 80,
+"str": 35,
+"int": 55
+},
+"m": [
+10364,
+42857,
+20024,
+44223,
+49220,
+21336,
+62984,
+14725,
+34233,
+32545,
+61196,
+56045,
+24647,
+43691,
+21746,
+46782,
+53698,
+20916,
+32701,
+29517,
+18818,
+49461,
+50912,
+11604,
+17088,
+61834,
+24958,
+41877,
+64601,
+9050,
+37691,
+56453,
+50635,
+25971,
+51741,
+57821,
+31765,
+59538,
+47976,
+14446,
+61403,
+56349,
+17602,
+21984,
+722,
+15775,
+30808,
+14267,
+32763,
+14262,
+21945,
+61718,
+38342,
+26572,
+47514,
+41017,
+45012,
+64462,
+17589,
+36085,
+48773,
+38493,
+23040,
+13407,
+2936,
+39369,
+54983,
+38537,
+3640,
+17724,
+17101,
+25362,
+11598,
+44516,
+2113,
+29959,
+6891,
+56265,
+15343,
+60239,
+49356,
+36231,
+3336,
+30615,
+65204,
+26034,
+42805,
+56838,
+34324,
+16705,
+34621,
+535,
+20677,
+4346,
+4519,
+13724,
+42379,
+3463,
+4328,
+38676,
+27910,
+53938,
+36931,
+13419,
+630,
+17548,
+55088,
+34168
+],
+"s1": [
+4552,
+7888,
+43877,
+44628,
+17668,
+53150,
+40166,
+28963,
+17215,
+29306,
+56493,
+51522,
+20820,
+17101,
+64462,
+17589,
+32701,
+42379,
+4328
+],
+"s2": [
+31449,
+9782,
+61601,
+45702,
+28021,
+326,
+31692,
+9444,
+38541,
+59694,
+46197,
+60362,
+52399,
+34621,
+20677,
+14446,
+29959,
+2113,
+3463,
+56265
+],
+"a": [
+34081,
+19370,
+53280,
+41751,
+20437,
+39552,
+52295,
+39595
+],
+"attr": [
+"s21746",
+"d48773",
+"d41017",
+"d56045",
+"d61196",
+"d59538",
+"d15775",
+"d61403",
+"d3463",
+"d47976",
+"d24958",
+"d14446",
+"d43691",
+"d30808",
+"d29517",
+"i42379",
+"i14262",
+"i11604",
+"i51741",
+"i32701",
+"i16705",
+"i4328",
+"i722",
+"i57821",
+"i41877",
+"i24647",
+"i14267",
+"i31765",
+"i17088"
+],
+"jw": [
+{
+"isUnique": false,
+"jewelSlug": "jewel-jeweldiamond",
+"nodeSlug": "node-62152",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent2"
+],
+"suffixSlugs": [
+"AttackCriticalStrikeMultiplier6",
+"CriticalStrikeChance3",
+"IncreasedAttackSpeed1"
+]
+},
+{
+"isUnique": false,
+"jewelSlug": "jewel-jewelradiusdex",
+"nodeSlug": "node-32763",
+"prefixSlugs": [
+"JewelRadiusAttackDamage"
+],
+"suffixSlugs": [
+"JewelRadiusAttackCriticalDamage",
+"JewelRadiusAttackSpeed",
+"JewelRadiusNotableEffectNew"
+]
+},
+{
+"isUnique": true,
+"jewelSlug": "jewel-fouruniquejewel12-heart-of-the-well",
+"nodeSlug": "node-21984",
+"prefixSlugs": null,
+"suffixSlugs": null
+},
+{
+"isUnique": false,
+"jewelSlug": "jewel-jeweldiamond",
+"nodeSlug": "node-11184",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent2"
+],
+"suffixSlugs": [
+"AttackCriticalStrikeChance4",
+"AttackCriticalStrikeMultiplier4",
+"IncreasedAttackSpeed1"
+]
+},
+{
+"isUnique": false,
+"jewelSlug": "jewel-jeweldiamond",
+"nodeSlug": "node-61834",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent2"
+],
+"suffixSlugs": [
+"AttackCriticalStrikeMultiplier6",
+"CriticalStrikeChance3",
+"IncreasedAttackSpeed1"
+]
+},
+{
+"isUnique": false,
+"jewelSlug": "jewel-jewelint",
+"nodeSlug": "node-26178",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent5",
+"JewelAttackDamage",
+"JewelEnergyShieldDelay"
+],
+"suffixSlugs": [
+"JewelManaonKill"
+]
+}
+]
+},
+{
+"id": "default-variant",
+"it": {
+"boots": {
+"n": "Wrapped Sandals",
+"u": 0,
+"i": "2DItems/Armours/Boots/Basetypes/BootsInt02.avif",
+"m": [
+"10% increased Movement Speed"
+]
+},
+"amulet": {
+"n": "Azure Amulet",
+"u": 0,
+"i": "2DItems/Amulets/Basetypes/AzureAmulet.avif",
+"m": [
+"+20 to maximum Life"
+]
+},
+"leftRing": {
+"n": "Iron Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/IronRing.avif",
+"m": [
+"Adds 1 to 4 Lightning damage to Attacks"
+]
+},
+"rightRing": {
+"n": "Iron Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/IronRing.avif",
+"m": [
+"Adds 1 to 4 Lightning damage to Attacks"
+]
+},
+"charm1": {
+"n": "Sapphire Charm",
+"u": 0,
+"i": "2DItems/Charms/Basetypes/SapphireCharm.avif"
+},
+"mainHand_set1": {
+"n": "Ironhead Spear",
+"u": 0,
+"i": "2DItems/Weapons/OneHandWeapons/OneHandSpears/1HSpear02.webp",
+"m": [
+"Adds 1 to 4 Physical Damage"
+]
+},
+"mainHand_set2": {
+"skill": "Punch"
+}
+},
+"gems": [
+{
+"k": "Twister",
+"g": "twisterplayer",
+"l": null,
+"i": "2DItems/Gems/New/TwisterSkillGem.webp",
+"si": "2DArt/SkillIcons/TwisterSkillIcon.webp",
+"w": null,
+"sup": [
+[
+"supportretreatplayer",
+"2DItems/Gems/New/NewSupport/RetreatingAssaultSupportGem.webp"
+],
+[
+"prolongeddurationsupportplayer",
+"2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+]
+]
+},
+{
+"k": "Whirling Slash",
+"g": "whirlingslashplayer",
+"l": 1,
+"i": "2DItems/Gems/New/WhirlingSlashSkillGem.webp",
+"si": "2DArt/SkillIcons/HuntressWhirlingSlash.webp",
+"w": null,
+"sup": [
+[
+"supportrageplayer",
+"2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+],
+[
+"supportrapidattacksplayer",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+]
+]
+},
+{
+"k": "Frost Bomb",
+"g": "frostbombplayer",
+"l": null,
+"i": "2DItems/Gems/New/FrostBombSkillGem.avif",
+"si": "2DArt/SkillIcons/SorceressFrostBomb.avif",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayer",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+]
+]
+}
+],
+"req": {
+"dex": 10,
+"str": 10,
+"int": 5
+},
+"m": [
+10364,
+42857,
+7576,
+33866,
+49220,
+14725,
+34233,
+32545,
+61196,
+56045,
+11604,
+17088,
+42750,
+50635,
+25971,
+24958,
+41877,
+9050,
+38676,
+27910,
+53938,
+36931,
+37691,
+56453
+],
+"s1": [],
+"s2": [],
+"a": [],
+"attr": [
+"d24958",
+"d41877"
+],
+"jw": []
+},
+{
+"id": "1",
+"it": {
+"helmet": {
+"n": "Coral Circlet",
+"u": 0,
+"i": "2DItems/Armours/Helmets/Basetypes/HelmetInt07.avif",
+"m": [
+"+30 to maximum Life",
+"+42 to maximum Energy Shield"
+]
+},
+"body": {
+"n": "Strider Vest",
+"u": 0,
+"i": "2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+"m": [
+"+40 to maximum Life",
+"33% increased Evasion Rating"
+]
+},
+"gloves": {
+"n": "Hunting Bracers",
+"u": 0,
+"i": "2DItems/Armours/Gloves/Basetypes/GlovesDex02.avif",
+"m": [
+"+20 to maximum Life"
+]
+},
+"boots": {
+"n": "Bound Boots",
+"u": 0,
+"i": "2DItems/Armours/Boots/Basetypes/BootsDex02.avif",
+"m": [
+"10% increased Movement Speed"
+]
+},
+"amulet": {
+"n": "Bloodstone Amulet",
+"u": 0,
+"i": "2DItems/Amulets/Basetypes/BloodstoneAmulet.avif",
+"m": [
+"+2 to Level of all Melee Skills"
+]
+},
+"leftRing": {
+"n": "Sapphire Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/SapphireRing.avif",
+"m": [
+"Adds 1 to 20 Lightning Damage"
+]
+},
+"rightRing": {
+"n": "Ruby Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/RubyRing.avif",
+"m": [
+"Adds 1 to 16 Lightning damage to Attacks"
+]
+},
+"belt": {
+"n": "Rawhide Belt",
+"u": 0,
+"i": "2DItems/Belts/Basetypes/Belt01.avif",
+"m": [
+"+16% to Fire Resistance",
+"+16% to Cold Resistance"
+]
+},
+"flask1": {
+"n": "Giant Life Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskLife05.avif"
+},
+"flask2": {
+"n": "Giant Mana Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskMana05.avif"
+},
+"mainHand_set1": {
+"skill": "Punch"
+},
+"mainHand_set2": {
+"skill": "Punch"
+}
+},
+"gems": [
+{
+"k": "Tempest Flurry",
+"g": "tempestflurryplayer",
+"l": null,
+"i": "2DItems/Gems/New/TempestFlurrySkillGem.avif",
+"si": "2DArt/SkillIcons/MonkTempestFlurry.avif",
+"w": null,
+"sup": [
+[
+"supportrapidattacksplayer",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif"
+],
+[
+"supportrageplayer",
+"2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+]
+]
+},
+{
+"k": "Storm Wave",
+"g": "stormwaveplayer",
+"l": null,
+"i": "2DItems/Gems/New/StormWaveSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkStormWave.avif",
+"w": null,
+"sup": [
+[
+"supportupheavalplayer",
+"2DItems/Gems/New/NewSupport/UpheavalSupportGem.avif"
+],
+[
+"supportaddedlightningdamageplayer",
+"2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+],
+[
+"supportelementalarmamentplayer",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+]
+]
+},
+{
+"k": "Tempest Bell",
+"g": "tempestbellplayer",
+"l": null,
+"i": "2DItems/Gems/New/TempestBellSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkTempestBell.avif",
+"w": null,
+"sup": [
+[
+"supportincreaselimitplayer",
+"2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.avif"
+],
+[
+"supportclosecombatplayer",
+"2DItems/Gems/New/NewSupport/CloseCombatSupportGem.avif"
+]
+]
+},
+{
+"k": "Herald of Thunder",
+"g": "heraldofthunderplayer",
+"l": null,
+"i": "2DItems/Gems/New/HeraldofThunderSkillGem.avif",
+"si": "2DArt/SkillIcons/HeraldOfThunderSkill.avif",
+"w": null,
+"sup": [
+[
+"supportfarcombatplayer",
+"2DItems/Gems/New/NewSupport/FarCombatSupportGem.avif"
+],
+[
+"supportelectrocuteplayer",
+"2DItems/Gems/New/NewSupport/ElectrocuteSupportGem.avif"
+]
+]
+},
+{
+"k": "Charged Staff",
+"g": "chargedstaffplayer",
+"l": null,
+"i": "2DItems/Gems/New/ChargedStaffSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkChargedStaff.avif",
+"w": null,
+"sup": [
+[
+"supportshockplayer",
+"2DItems/Gems/New/NewSupport/ConductionSupportGem.avif"
+],
+[
+"supportinnervateplayer",
+"2DItems/Gems/New/NewSupport/InnervateSupportGem.avif"
+]
+]
+},
+{
+"k": "Frost Bomb",
+"g": "frostbombplayer",
+"l": null,
+"i": "2DItems/Gems/New/FrostBombSkillGem.avif",
+"si": "2DArt/SkillIcons/SorceressFrostBomb.avif",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayer",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+]
+]
+},
+{
+"k": "Elemental Weakness",
+"g": "elementalweaknessplayer",
+"l": null,
+"i": "2DItems/Gems/New/ElementalWeaknessSkillGem.avif",
+"si": "2DArt/SkillIcons/elementalweakness.avif",
+"w": null,
+"sup": [
+[
+"supportcurseeffectplayer",
+"2DItems/Gems/New/NewSupport/CurseEffectSupportGem.avif"
+]
+]
+}
+],
+"req": {
+"dex": 40,
+"str": 15,
+"int": 10
+},
+"m": [
+10364,
+42857,
+7576,
+33866,
+49220,
+34233,
+32545,
+61196,
+56045,
+11604,
+17088,
+42750,
+50635,
+25971,
+24958,
+41877,
+21336,
+62984,
+37691,
+56453,
+29408,
+31888,
+34300,
+38676,
+27910,
+53938,
+36931,
+64601,
+14725,
+9050,
+24647,
+43691,
+21746,
+46782,
+53698,
+20916
+],
+"s1": [],
+"s2": [],
+"a": [
+9994,
+11495,
+34081,
+19370
+],
+"attr": [
+"d24958",
+"d41877",
+"d51741",
+"d57821",
+"d31765",
+"d722",
+"i30808",
+"i15775",
+"i17088",
+"d11604",
+"i56045",
+"d61196",
+"i24647",
+"d43691",
+"i21746",
+"d32701",
+"i26598"
+],
+"jw": []
+},
+{
+"id": "2",
+"it": {
+"helmet": {
+"n": "Coral Circlet",
+"u": 0,
+"i": "2DItems/Armours/Helmets/Basetypes/HelmetInt07.avif",
+"m": [
+"+30 to maximum Life",
+"+42 to maximum Energy Shield"
+]
+},
+"body": {
+"n": "Strider Vest",
+"u": 0,
+"i": "2DItems/Armours/BodyArmours/Basetypes/BodyDex01.avif",
+"m": [
+"+40 to maximum Life",
+"33% increased Evasion Rating"
+]
+},
+"gloves": {
+"n": "Hunting Bracers",
+"u": 0,
+"i": "2DItems/Armours/Gloves/Basetypes/GlovesDex02.avif",
+"m": [
+"+2 to Level of all Melee Skills"
+]
+},
+"boots": {
+"n": "Bound Boots",
+"u": 0,
+"i": "2DItems/Armours/Boots/Basetypes/BootsDex02.avif",
+"m": [
+"10% increased Movement Speed"
+]
+},
+"amulet": {
+"n": "Bloodstone Amulet",
+"u": 0,
+"i": "2DItems/Amulets/Basetypes/BloodstoneAmulet.avif",
+"m": [
+"+2 to Level of all Melee Skills"
+]
+},
+"leftRing": {
+"n": "Sapphire Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/SapphireRing.avif",
+"m": [
+"Adds 1 to 20 Lightning Damage"
+]
+},
+"rightRing": {
+"n": "Ruby Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/RubyRing.avif",
+"m": [
+"Adds 1 to 16 Lightning damage to Attacks"
+]
+},
+"belt": {
+"n": "Rawhide Belt",
+"u": 0,
+"i": "2DItems/Belts/Basetypes/Belt01.avif",
+"m": [
+"+16% to Fire Resistance",
+"+16% to Cold Resistance"
+]
+},
+"flask1": {
+"n": "Giant Life Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskLife05.avif"
+},
+"flask2": {
+"n": "Giant Mana Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskMana05.avif"
+},
+"mainHand_set1": {
+"skill": "Punch"
+},
+"mainHand_set2": {
+"skill": "Punch"
+}
+},
+"gems": [
+{
+"k": "Tempest Flurry",
+"g": "tempestflurryplayer",
+"l": null,
+"i": "2DItems/Gems/New/TempestFlurrySkillGem.avif",
+"si": "2DArt/SkillIcons/MonkTempestFlurry.avif",
+"w": null,
+"sup": [
+[
+"supportrapidattacksplayer",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif"
+],
+[
+"supportrageplayerthree",
+"2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+],
+[
+"supportaddedlightningdamageplayer",
+"2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+]
+]
+},
+{
+"k": "Storm Wave",
+"g": "stormwaveplayer",
+"l": null,
+"i": "2DItems/Gems/New/StormWaveSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkStormWave.avif",
+"w": null,
+"sup": [
+[
+"supportbranchingfissuresplayer",
+"2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.avif"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+],
+[
+"supportaddedlightningdamageplayer",
+"2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+],
+[
+"supportrageplayerthree",
+"2DItems/Gems/New/NewSupport/RageSupportGem.avif"
+]
+]
+},
+{
+"k": "Tempest Bell",
+"g": "tempestbellplayer",
+"l": null,
+"i": "2DItems/Gems/New/TempestBellSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkTempestBell.avif",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayertwo",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+],
+[
+"supportincreaselimitplayer",
+"2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.avif"
+],
+[
+"supportclosecombatplayer",
+"2DItems/Gems/New/NewSupport/CloseCombatSupportGem.avif"
+]
+]
+},
+{
+"k": "Herald of Thunder",
+"g": "heraldofthunderplayer",
+"l": null,
+"i": "2DItems/Gems/New/HeraldofThunderSkillGem.avif",
+"si": "2DArt/SkillIcons/HeraldOfThunderSkill.avif",
+"w": null,
+"sup": [
+[
+"supportfarcombatplayer",
+"2DItems/Gems/New/NewSupport/FarCombatSupportGem.avif"
+],
+[
+"supportelectrocuteplayer",
+"2DItems/Gems/New/NewSupport/ElectrocuteSupportGem.avif"
+]
+]
+},
+{
+"k": "Lingering Illusion",
+"g": "lingeringillusionplayer",
+"l": null,
+"i": "2DItems/Gems/New/LingeringIllusionSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkLingeringIllusion.avif",
+"w": null,
+"sup": [
+[
+"supportchargeprofusionplayer",
+"2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.avif"
+]
+]
+},
+{
+"k": "Charged Staff",
+"g": "chargedstaffplayer",
+"l": null,
+"i": "2DItems/Gems/New/ChargedStaffSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkChargedStaff.avif",
+"w": null,
+"sup": [
+[
+"supportshockplayer",
+"2DItems/Gems/New/NewSupport/ConductionSupportGem.avif"
+],
+[
+"supportinnervateplayer",
+"2DItems/Gems/New/NewSupport/InnervateSupportGem.avif"
+]
+]
+},
+{
+"k": "Herald of Ash",
+"g": "heraldofashplayer",
+"l": null,
+"i": "2DItems/Gems/New/HeraldofAshSkillGem.avif",
+"si": "2DArt/SkillIcons/HeraldOfAshSkill.avif",
+"w": null,
+"sup": []
+},
+{
+"k": "Frost Bomb",
+"g": "frostbombplayer",
+"l": null,
+"i": "2DItems/Gems/New/FrostBombSkillGem.avif",
+"si": "2DArt/SkillIcons/SorceressFrostBomb.avif",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayer",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+]
+]
+},
+{
+"k": "Elemental Weakness",
+"g": "elementalweaknessplayer",
+"l": null,
+"i": "2DItems/Gems/New/ElementalWeaknessSkillGem.avif",
+"si": "2DArt/SkillIcons/elementalweakness.avif",
+"w": null,
+"sup": [
+[
+"supportcurseeffectplayer",
+"2DItems/Gems/New/NewSupport/CurseEffectSupportGem.avif"
+]
+]
+}
+],
+"req": {
+"dex": 50,
+"str": 25,
+"int": 15
+},
+"m": [
+10364,
+42857,
+7576,
+33866,
+49220,
+34233,
+32545,
+61196,
+56045,
+11604,
+17088,
+42750,
+50635,
+25971,
+24958,
+41877,
+24647,
+43691,
+21746,
+46782,
+53698,
+20916,
+61834,
+51741,
+57821,
+31765,
+722,
+25565,
+17420,
+18717,
+60483,
+7809,
+21336,
+62984,
+34168,
+55088,
+13419,
+14958,
+17548,
+37691,
+56453,
+29408,
+31888,
+34300,
+38676,
+27910,
+53938,
+36931,
+64601,
+58329,
+31950,
+7405,
+4850,
+35503,
+23764,
+8569,
+55507,
+38338,
+13748,
+9141,
+5703,
+26034,
+42805,
+56838,
+34324,
+15775,
+30808,
+14267,
+32763,
+14262,
+21945,
+61718,
+38342,
+7054,
+47009,
+37250,
+1420,
+4157,
+41017,
+45012,
+64462,
+17589,
+36085,
+26572,
+47514,
+15356,
+18815,
+40990
+],
+"s1": [],
+"s2": [],
+"a": [
+9994,
+11495,
+34081,
+19370,
+52295,
+39595
+],
+"attr": [
+"d24958",
+"d41877",
+"d51741",
+"d57821",
+"d31765",
+"d722",
+"i30808",
+"i15775",
+"i17088",
+"d11604",
+"i56045",
+"d61196",
+"i24647",
+"d43691",
+"i21746",
+"d32701",
+"i26598"
+],
+"jw": []
+},
+{
+"id": "621ff37e-fab2-433e-953f-6fe55d3dd36c",
+"it": {
+"helmet": {
+"n": "Ancestral Tiara",
+"u": 0,
+"i": "2DItems/Armours/Helmets/Basetypes/HelmetInt08.avif",
+"m": [
+"+33 to maximum Mana",
+"+31% to Fire Resistance",
+"+26 to maximum Energy Shield",
+"78% increased Energy Shield",
+"15% increased Energy Shield Recharge Rate"
+],
+"r": [
+"soulcore-runeenhancegreater"
+]
+},
+"body": {
+"n": "Sleek Jacket",
+"u": 0,
+"i": "2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.avif",
+"m": [
+"+182 to Evasion Rating",
+"+31% to Cold Resistance",
+"+36% to Lightning Resistance",
+"+56 to maximum Energy Shield",
+"39% increased Evasion and Energy Shield",
+"41% faster start of Energy Shield Recharge"
+],
+"r": [
+"soulcore-runeenhancegreater",
+"soulcore-runeenhancegreater"
+]
+},
+"gloves": {
+"n": "Opulent Gloves",
+"u": 0,
+"i": "2DItems/Armours/Gloves/Basetypes/GlovesInt04.avif",
+"m": [
+"Adds 1 to 4 Lightning damage to Attacks",
+"+26 to maximum Life",
+"+28 to Dexterity",
+"27% increased Energy Shield",
+"Adds 6 to 12 Physical Damage to Attacks",
+"+2 to Level of all Melee Skills",
+"14% increased Attack Speed"
+],
+"r": [
+"soulcore-talismanspecial1"
+]
+},
+"boots": {
+"n": "Sekhema Sandals",
+"u": 0,
+"i": "2DItems/Armours/Boots/Basetypes/BootsInt06.avif",
+"m": [
+"+31% to Fire Resistance",
+"+31% to Cold Resistance",
+"+36% to Lightning Resistance",
+"68% increased Energy Shield",
+"30% increased Movement Speed"
+],
+"r": [
+"soulcore-runeenhancegreater"
+]
+},
+"amulet": {
+"n": "Amber Amulet",
+"u": 0,
+"i": "2DItems/Amulets/Basetypes/AmberAmulet.avif",
+"m": [
+"35% increased Critical Hit Chance",
+"45% increased Evasion Rating",
+"15% increased Evasion Rating",
+"+3 to Level of all Melee Skills",
+"35% increased Critical Damage Bonus",
+"20% increased Global Armour, Evasion and Energy Shield"
+]
+},
+"leftRing": {
+"n": "Sapphire Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/SapphireRing.avif",
+"m": [
+"+11 to all Attributes",
+"Adds 1 to 4 Lightning damage to Attacks",
+"+31% to Cold Resistance",
+"+108 to Evasion Rating",
+"25% increased Fire Damage",
+"Leech 4% of Physical Attack Damage as Mana"
+]
+},
+"rightRing": {
+"n": "Ruby Ring",
+"u": 0,
+"i": "2DItems/Rings/Basetypes/RubyRing.avif",
+"m": [
+"Adds 1 to 33 Lightning damage to Attacks",
+"+17% to all Elemental Resistances",
+"+105 to maximum Mana",
+"+21% to Fire Resistance",
+"+41% to Lightning Resistance",
+"+80 to Evasion Rating"
+]
+},
+"belt": {
+"n": "Shavronne's Satchel",
+"u": 1,
+"i": "2DItems/Belts/Uniques/ShavronnesSatchel.webp"
+},
+"charm1": {
+"n": "Ngamahu's Chosen",
+"u": 1,
+"i": "2DItems/Charms/Uniques/RubyUniqueCharm.avif"
+},
+"charm2": {
+"n": "Silver Charm",
+"u": 0,
+"i": "2DItems/Charms/Basetypes/SilverCharm.avif",
+"m": [
+"29% reduced Charges per use"
+]
+},
+"charm3": {
+"n": "Golden Charm",
+"u": 0,
+"i": "2DItems/Charms/Basetypes/GoldenCharm.avif",
+"m": [
+"Gains 0.15 Charges per Second",
+"Also grants 205 Guard"
+]
+},
+"flask1": {
+"n": "Ultimate Life Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskLife09.avif",
+"m": [
+"39% increased Charges",
+"28% of Recovery applied Instantly"
+]
+},
+"flask2": {
+"n": "Ultimate Mana Flask",
+"u": 0,
+"i": "2DItems/Flasks/Basetypes/FlaskMana09.avif",
+"m": [
+"32% reduced Charges per use",
+"20% of Recovery applied Instantly"
+]
+}
+},
+"gems": [
+{
+"k": "Storm Wave",
+"g": "stormwaveplayer",
+"l": null,
+"i": "2DItems/Gems/New/StormWaveSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkStormWave.avif",
+"w": null,
+"sup": [
+[
+"supportaddedlightningdamageplayer",
+"2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+],
+[
+"supportbranchingfissuresplayertwo",
+"2DItems/Gems/New/NewSupport/BranchingFissuresSupportGem.avif"
+],
+[
+"supportrapidattacksplayertwo",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif"
+],
+[
+"supportdeliberationplayer",
+"2DItems/Gems/New/NewSupport/CessationSupportGem.avif"
+]
+]
+},
+{
+"k": "Wind Dancer",
+"g": "winddancerplayer",
+"l": null,
+"i": "2DItems/Gems/New/WindDancerSkillGem.avif",
+"si": "2DArt/SkillIcons/RangerWindDancerSkill.avif",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayer",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.avif"
+],
+[
+"supportmaimplayer",
+"2DItems/Gems/New/NewSupport/MaimSupportGem.avif"
+]
+]
+},
+{
+"k": "Herald of Ash",
+"g": "heraldofashplayer",
+"l": null,
+"i": "2DItems/Gems/New/HeraldofAshSkillGem.webp",
+"si": "2DArt/SkillIcons/HeraldOfAshSkill.webp",
+"w": null,
+"sup": [
+[
+"supportmagnifiedareaplayertwo",
+"2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp"
+]
+]
+},
+{
+"k": "Ghost Dance",
+"g": "ghostdanceplayer",
+"l": null,
+"i": "2DItems/Gems/New/GhostDanceSkillGem.avif",
+"si": "2DArt/SkillIcons/MonkGhostDance.avif",
+"w": null,
+"sup": [
+[
+"compresseddurationsupportplayer",
+"2DItems/Gems/New/NewSupport/LessDurationSupportGem.avif"
+]
+]
+},
+{
+"k": "Tempest Flurry",
+"g": "tempestflurryplayer",
+"l": null,
+"i": "2DItems/Gems/New/TempestFlurrySkillGem.webp",
+"si": "2DArt/SkillIcons/MonkTempestFlurry.webp",
+"w": null,
+"sup": [
+[
+"supportrapidattacksplayertwo",
+"2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+],
+[
+"supportrageplayerthree",
+"2DItems/Gems/New/NewSupport/RageSupportGem.webp"
+],
+[
+"supportaddedlightningdamageplayer",
+"2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp"
+],
+[
+"supportelementalarmamentplayertwo",
+"2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+]
+]
+},
+{
+"k": "Tempest Bell",
+"g": "tempestbellplayer",
+"l": null,
+"i": "2DItems/Gems/New/TempestBellSkillGem.webp",
+"si": "2DArt/SkillIcons/MonkTempestBell.webp",
+"w": null,
+"sup": [
+[
+"supportancestralcallplayertwo",
+"2DItems/Gems/New/NewSupport/AncestralCallSupportGem.webp"
+],
+[
+"supportmanaleechplayer",
+"2DItems/Gems/New/NewSupport/ManaLeechSupportGem.webp"
+],
+[
+"supportconcentratedareaplayer",
+"2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+],
+[
+"supportheftplayer",
+"2DItems/Gems/New/NewSupport/AddedHeftSupportGem.webp"
+]
+]
+}
+],
+"req": {
+"dex": 30,
+"str": 35,
+"int": 20
+},
+"m": [
+10364,
+42857,
+20024,
+44223,
+49220,
+21336,
+62984,
+4157,
+34168,
+55088,
+61196,
+56045,
+11604,
+17088,
+42750,
+37691,
+56453,
+61834,
+24958,
+41877,
+64601,
+51741,
+57821,
+31765,
+59538,
+47976,
+14446,
+61403,
+56349,
+21984,
+45702,
+31692,
+46197,
+722,
+15775,
+30808,
+14267,
+32763,
+14262,
+48773,
+38493,
+55621,
+38537,
+54983,
+39369,
+2936,
+13407,
+26034,
+42805,
+56838,
+34324,
+16705,
+34621,
+38541,
+61601,
+535,
+20677,
+4346,
+4519,
+13724,
+38676,
+27910,
+53938,
+36931,
+13419,
+14958,
+17548,
+58329,
+31950,
+8569,
+47177,
+11672,
+48030,
+62436,
+3215,
+39037,
+517,
+9642,
+22691,
+17973,
+40760,
+21779,
+57204,
+21945,
+61718,
+38342,
+65393,
+2732,
+16790,
+58115,
+50635,
+25971,
+26572,
+47514,
+7054,
+47009,
+37250,
+1420,
+7405,
+4850,
+35503,
+23764,
+62841,
+17367,
+12761,
+12249,
+15343,
+60239,
+49356,
+41017,
+45012,
+64462,
+17589,
+36085
+],
+"s1": [],
+"s2": [],
+"a": [
+9994,
+11495,
+34081,
+19370,
+20437,
+39552,
+52295,
+39595
+],
+"attr": [
+"d48773",
+"d14262",
+"d14267",
+"d30808",
+"d15775",
+"i11672",
+"i8569",
+"i59538",
+"i11604",
+"i39037",
+"i57821",
+"i3251",
+"i10131",
+"i16705",
+"i14446",
+"i62677",
+"i61403",
+"i61196",
+"i47976",
+"i24958",
+"i46554",
+"i722",
+"i47177",
+"i31950",
+"i51741",
+"i41877",
+"i58329",
+"i31765",
+"i56045",
+"i17088"
+],
+"jw": [
+{
+"isUnique": false,
+"jewelSlug": "jewel-jewelint",
+"nodeSlug": "node-21984",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent2",
+"JewelEnergyShieldRecharge"
+],
+"suffixSlugs": [
+"JewelManaonKill",
+"JewelStunThresholdfromEnergyShield"
+]
+},
+{
+"isUnique": false,
+"jewelSlug": "jewel-jewelint",
+"nodeSlug": "node-32763",
+"prefixSlugs": [
+"IncreasedEnergyShieldPercent2"
+],
+"suffixSlugs": [
+"CriticalMultiplier1",
+"JewelStunThresholdfromEnergyShield"
+]
+}
+]
+}
+]

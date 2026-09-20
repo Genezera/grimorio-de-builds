@@ -15,6 +15,7 @@
     legionnaire: { p: 'lg', name: 'Gemling Legionnaire', motes: 'storm' },
     whirling: { p: 'gw', name: 'Whirling Glacial Bolt', motes: 'wisp' },
     twister: { p: 'tw', name: 'Spear Twister', motes: 'storm' },
+    hyperspeed: { p: 'hs', name: 'Hyper Speed Monk', motes: 'storm' },
   };
   const build = BUILDS[root.dataset.build] ? root.dataset.build : 'silverfist';
   const CFG = BUILDS[build];
