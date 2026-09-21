@@ -100,12 +100,15 @@
     const size = () => { dpr = Math.min(2, devicePixelRatio || 1); W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); const n = count(); while (parts.length < n) parts.push(spawn(true)); parts.length = n; };
     size(); addEventListener('resize', size, { passive: true });
     document.addEventListener('visibilitychange', () => { running = !document.hidden; if (running) requestAnimationFrame(tick); });
-    let t = 0;
-    function tick() {
+    let t = 0, last = 0;
+    function tick(now) {
       if (!running) return;
+      requestAnimationFrame(tick);
+      if (now - last < 30) return;                       // ~30 quadros/s: as partículas derivam devagar e a página ganha folga
+      const k = Math.min(4, (now - last) / 16.67 || 1); last = now;   // a velocidade não depende da taxa de atualização da tela (60/144/165 Hz)
       t++; ctx.clearRect(0, 0, W, H); ctx.globalCompositeOperation = 'lighter';
       for (const p of parts) {
-        p.ph += p.sp; p.y += p.vy; p.x += p.vx + Math.sin(p.ph) * STYLE.sway;
+        p.ph += p.sp * k; p.y += p.vy * k; p.x += (p.vx + Math.sin(p.ph) * STYLE.sway) * k;
         if (p.y < -30 || p.x < -30 || p.x > W + 30) Object.assign(p, spawn(false));
         const a = p.a * (p.tw ? .45 + .55 * Math.abs(Math.sin(p.ph * 3)) : 1) * Math.min(1, (H - p.y) / 160);
         const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 7);
@@ -113,7 +116,6 @@
         ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 7, 0, 6.283); ctx.fill();
         if (p.tw) { ctx.fillStyle = `rgba(255,255,255,${a * .8})`; ctx.fillRect(p.x - .5, p.y - .5, 1, 1); }
       }
-      requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
   }

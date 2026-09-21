@@ -902,16 +902,17 @@ html[data-build] .totem .spine{width:6px;border-radius:3px;background:linear-gra
 html[data-build] .totem .spine::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:16px;transform:translateX(-50%);
   background:repeating-linear-gradient(180deg,transparent 0 calc(10% - 1px),color-mix(in srgb,var(--gild) 45%,transparent) calc(10% - 1px) 10%)}
 html[data-build] .totem .fillbar{width:6px;border-radius:3px;background:linear-gradient(180deg,var(--accent2),var(--accent) 70%,var(--accent-hi));box-shadow:0 0 10px var(--accent),0 0 26px -2px var(--accent);overflow:hidden;transition:height .9s var(--ease-out)}
-html[data-build] .totem .fillbar::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,transparent 0 14px,rgba(255,255,255,.55) 14px 18px,transparent 18px 32px);animation:flow 1.6s linear infinite;mix-blend-mode:overlay}
-@keyframes flow{from{background-position:0 -32px}to{background-position:0 0}}
+html[data-build] .totem .fillbar::after{content:"";position:absolute;inset:-32px 0 0;background:repeating-linear-gradient(180deg,transparent 0 14px,rgba(255,255,255,.55) 14px 18px,transparent 18px 32px);animation:flow 1.6s linear infinite;mix-blend-mode:overlay;will-change:transform}
+@keyframes flow{from{transform:translateY(0)}to{transform:translateY(32px)}}
 html[data-build] .totem button.node{width:16px;height:16px;border-radius:2px;border:1px solid var(--gild-lo);background:radial-gradient(circle,var(--stone3),#000 80%);box-shadow:inset 0 0 5px #000,0 0 0 3px var(--ground);transition:all .45s var(--ease-out)}
 html[data-build] .totem button.node::after{content:"";position:absolute;inset:3px;background:transparent;transition:background .45s,box-shadow .45s}
 html[data-build] .totem button.node:hover{border-color:var(--gild-hi);transform:translate(-50%,-50%) rotate(45deg) scale(1.25)}
 html[data-build] .totem button.node.done{border-color:var(--gild)}
 html[data-build] .totem button.node.done::after{background:radial-gradient(circle at 35% 30%,var(--accent-hi),var(--accent) 60%,color-mix(in srgb,var(--accent) 50%,#000));box-shadow:0 0 8px var(--accent)}
-html[data-build] .totem button.node.cur{width:24px;height:24px;border:1px solid var(--gild-hi);box-shadow:0 0 0 3px var(--ground),0 0 0 4px var(--gild),0 0 22px var(--accent2);animation:nodePulse 2.6s ease-in-out infinite}
+html[data-build] .totem button.node.cur{width:24px;height:24px;border:1px solid var(--gild-hi);box-shadow:0 0 0 3px var(--ground),0 0 0 4px var(--gild)}
+html[data-build] .totem button.node.cur::before{content:"";position:absolute;inset:-2px;border-radius:inherit;box-shadow:0 0 24px 3px var(--accent2);pointer-events:none;animation:nodePulse 2.6s ease-in-out infinite}
 html[data-build] .totem button.node.cur::after{inset:4px;background:radial-gradient(circle at 35% 30%,#fff,var(--accent2-hi) 25%,var(--accent2) 65%,#300);box-shadow:0 0 12px var(--accent2)}
-@keyframes nodePulse{0%,100%{box-shadow:0 0 0 3px var(--ground),0 0 0 4px var(--gild),0 0 14px var(--accent2)}50%{box-shadow:0 0 0 3px var(--ground),0 0 0 4px var(--gild-hi),0 0 30px 4px var(--accent2)}}
+@keyframes nodePulse{0%,100%{opacity:.35}50%{opacity:1}}
 html[data-build] .totem .tip{left:calc(50% + 24px);border-radius:var(--r);border-color:var(--gild-lo);background:linear-gradient(180deg,var(--stone3),var(--ground));color:var(--gild-hi);font-size:.8rem;padding:4px 10px;box-shadow:0 10px 24px -8px #000;transform:translate(-6px,-50%);transition:opacity .25s,transform .35s var(--ease-out)}
 html[data-build] .totem .tip::before{content:"";position:absolute;left:-5px;top:50%;width:8px;height:8px;background:var(--stone3);border-left:1px solid var(--gild-lo);border-bottom:1px solid var(--gild-lo);transform:translateY(-50%) rotate(45deg)}
 html[data-build] .totem button.node:hover + .tip,html[data-build] .totem button.node:focus-visible + .tip{transform:translate(0,-50%)}
@@ -924,12 +925,13 @@ html[data-build] .totem .you .you-lv{position:absolute;left:50%;top:50%;transfor
 .hrail{display:none;position:relative;height:46px;margin:4px 6px 2px}
 .hrail .hs{position:absolute;left:0;right:0;top:50%;height:6px;transform:translateY(-50%);border-radius:3px;background:linear-gradient(180deg,#000,color-mix(in srgb,var(--gild-lo) 80%,#000),#000);box-shadow:0 0 0 1px color-mix(in srgb,var(--gild) 18%,transparent)}
 .hrail .hf{position:absolute;left:0;top:50%;height:6px;transform:translateY(-50%);border-radius:3px;background:linear-gradient(90deg,var(--accent2),var(--accent) 70%,var(--accent-hi));box-shadow:0 0 12px var(--accent);transition:width .9s var(--ease-out);overflow:hidden}
-.hrail .hf::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 14px,rgba(255,255,255,.5) 14px 18px,transparent 18px 32px);animation:flowx 1.6s linear infinite;mix-blend-mode:overlay}
-@keyframes flowx{from{background-position:-32px 0}to{background-position:0 0}}
+.hrail .hf::after{content:"";position:absolute;inset:0 0 0 -32px;background:repeating-linear-gradient(90deg,transparent 0 14px,rgba(255,255,255,.5) 14px 18px,transparent 18px 32px);animation:flowx 1.6s linear infinite;mix-blend-mode:overlay;will-change:transform}
+@keyframes flowx{from{transform:translateX(0)}to{transform:translateX(32px)}}
 .hrail button{position:absolute;top:50%;width:14px;height:14px;padding:0;border:1px solid var(--gild-lo);border-radius:2px;background:radial-gradient(circle,var(--stone3),#000 80%);transform:translate(-50%,-50%) rotate(45deg);box-shadow:0 0 0 3px var(--ground);cursor:pointer;transition:all .45s var(--ease-out)}
 .hrail button::before{content:"";position:absolute;inset:-12px}
 .hrail button.done{border-color:var(--gild);background:radial-gradient(circle at 35% 30%,var(--accent-hi),var(--accent) 60%,#000)}
-.hrail button.cur{width:20px;height:20px;border-color:var(--gild-hi);background:radial-gradient(circle at 35% 30%,#fff,var(--accent2-hi) 25%,var(--accent2) 65%,#300);animation:nodePulse 2.6s ease-in-out infinite}
+.hrail button.cur{width:20px;height:20px;border-color:var(--gild-hi);background:radial-gradient(circle at 35% 30%,#fff,var(--accent2-hi) 25%,var(--accent2) 65%,#300)}
+.hrail button.cur::after{content:"";position:absolute;inset:-2px;border-radius:inherit;box-shadow:0 0 22px 3px var(--accent2);pointer-events:none;animation:nodePulse 2.6s ease-in-out infinite}
 .hrail .hy{position:absolute;top:50%;width:34px;height:34px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;transition:left .9s var(--ease-out);
   background:conic-gradient(transparent 0 12%,var(--accent) 12% 20%,transparent 20% 45%,var(--accent2) 45% 53%,transparent 53% 78%,var(--gild-hi) 78% 86%,transparent 86%);-webkit-mask:radial-gradient(closest-side,transparent 78%,#000 80%);mask:radial-gradient(closest-side,transparent 78%,#000 80%);animation:spin 9s linear infinite}
 .hrail .hl{position:absolute;bottom:-4px;font-family:var(--ui);font-size:.62rem;color:var(--faint);transform:translateX(-50%);white-space:nowrap}
@@ -1391,6 +1393,8 @@ html[data-build] .sb-fab.sb-fab-away,.sb-fab.sb-fab-away{opacity:0;transform:tra
 .build-art .skfx{left:50%;top:50%;transform:translate(-50%,-50%);width:var(--m,240px);height:var(--m,240px);z-index:0}
 .build-art .medal{z-index:1}
 @media (prefers-reduced-motion:reduce){.skfx,.skfx *{animation:none!important}}
+/* fora da tela não anima: economiza CPU/GPU (as classes são postas por fx.js e landing.js) */
+.skfx-off,.skfx-off *,.build.off *,.build.off *::before,.build.off *::after{animation-play-state:paused!important}
 
 /* SKIN v3 — camada final sobre guide.css + poe2.css + build-now.css, igual para todas as builds.
    Objetivo: menos ruído, mais leitura. Cabeçalho compacto, navegação em uma linha, painéis planos e uma animação de assinatura por classe.
@@ -2492,9 +2496,9 @@ function wisps() {
 <script src="../shared/craft.js?v=2083ad36"></script>
 <script src="../shared/weights.js?v=9f9c6d27"></script>
 <script src="../shared/guide.js?v=498112ae"></script>
-<script src="../shared/poe2.js?v=c7b48268"></script>
+<script src="../shared/poe2.js?v=0ccbaaaf"></script>
 <script src="../shared/build-now.js?v=5a480ac2"></script>
-<script src="../shared/fx.js?v=0ee314ad"></script>
+<script src="../shared/fx.js?v=9e01b81c"></script>
 <script src="../shared/skin.js?v=42045f49"></script>
 <script>
 /* ------------------------------------------------ boot */

@@ -8,6 +8,7 @@ window.skFx = kind => {
     const n = kind === 'void' ? 3 : kind === 'stars' ? 14 : kind === 'frost' ? 12 : 9;
     fx.innerHTML = Array.from({ length: n }, (_, i) => `<i style="--x:${(8 + (i * 83 / n + (i % 3) * 7)) % 92};--y:${(i * 37) % 90};--d:${((i * 0.53) % 3.6).toFixed(2)}s;--dx:${(i % 2 ? 1 : -1) * (8 + (i % 4) * 4)}px"></i>`).join('');
   }
+  if ('IntersectionObserver' in window) (window.__skfxIO = window.__skfxIO || new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('skfx-off', !e.isIntersecting)))).observe(fx);
   return fx;
 };
 window.SK_FX = { silverfist: 'spirit', oracle: 'stars', tactician: 'fire', infernalist: 'hell', acolyte: 'void', pathfinder: 'toxic', smith: 'forge', martial: 'lightning', shaman: 'lightning', legionnaire: 'lightning', whirling: 'frost', twister: 'lightning', hyperspeed: 'lightning',

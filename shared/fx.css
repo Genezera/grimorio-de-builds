@@ -41,3 +41,5 @@
 .build-art .skfx{left:50%;top:50%;transform:translate(-50%,-50%);width:var(--m,240px);height:var(--m,240px);z-index:0}
 .build-art .medal{z-index:1}
 @media (prefers-reduced-motion:reduce){.skfx,.skfx *{animation:none!important}}
+/* fora da tela não anima: economiza CPU/GPU (as classes são postas por fx.js e landing.js) */
+.skfx-off,.skfx-off *,.build.off *,.build.off *::before,.build.off *::after{animation-play-state:paused!important}
