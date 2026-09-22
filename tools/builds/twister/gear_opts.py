@@ -29,15 +29,20 @@ def O(n, kind, lv, s, why, cost=None, tip=None):
 
 GEAR_OPTS = {
  "spear": [
-  O(L("Spear branca do vendor (Hardwood Spear)", "White vendor spear (Hardwood Spear)"), "r", 1, 25, ("Só para o Twister e a Whirling Slash funcionarem: dano baixo. Vale até o nível 15.", "Just so Twister and Whirling Slash work: low damage. Good until level 15.")),
-  O(L("Spear rare com dano elemental e velocidade", "Rare spear with elemental damage and speed"), "r", 5, 50, ("Suba a base com o nível: Ironhead (5) → Hunting (10) → Winged (16) → War (21). Procure dano elemental adicionado e velocidade de ataque; a spear também dá a skill Spear Throw.", "Move the base up with your level: Ironhead (5) → Hunting (10) → Winged (16) → War (21). Look for added elemental damage and attack speed; the spear also grants Spear Throw.")),
-  O("Skysliver", "u", 16, 82, ("Winged Spear: dano de raio, +15–30% de velocidade de ataque e chance de Shock (alimenta o Herald of Thunder). Sua spear do 16 ao ~40.", "Winged Spear: lightning damage, +15–30% attack speed and Shock chance (feeds Herald of Thunder). Your spear from 16 to ~40.")),
-  O(L("Skysliver Runeforged", "Runeforged Skysliver"), "u", 40, 90, ("A mesma Skysliver na base Runeforged: mais slots de runa (Thrud's Might do PoB) (nível 40).", "The same Skysliver on the Runeforged base: more rune slots (the PoB's Thrud's Might) (level 40)."), cost="cheap"),
-  O(L("Soaring Spear rare ilvl 82 (Armageddon Edge)", "Rare Soaring Spear ilvl 82 (Armageddon Edge)"), "r", 70, 94, ("A spear do Set 1 do PoB (base nível 70): +36% de velocidade de ataque, dano físico adicionado, Spear Throw e mods de velocidade explícitos.", "The PoB's Set 1 spear (base level 70): +36% attack speed, added physical damage, Spear Throw and explicit-speed mods."), cost="value"),
+  O(L("Spear branca do vendor (Hardwood Spear)", "White vendor spear (Hardwood Spear)"), "r", 1, 25, ("Só para o Twister e a Whirling Slash funcionarem: dano baixo. Vale até o nível 5.", "Just so Twister and Whirling Slash work: low damage. Good until level 5.")),
+  O(L("Spear rare rápida (base leve)", "Fast rare spear (light base)"), "r", 5, 55, ("Suba a base com o nível: Ironhead (5) → Hunting (10) → Winged (16) → War (21). Procure velocidade de ataque: esta spear só prepara a Whirling Slash e o Barrage, dano não importa aqui.", "Move the base up with your level: Ironhead (5) → Hunting (10) → Winged (16) → War (21). Look for attack speed: this spear only readies Whirling Slash and Barrage, damage doesn't matter here.")),
+  O("Skysliver", "u", 16, 78, ("Winged Spear: dano de raio, +15–30% de velocidade de ataque e chance de Shock. Opção rápida e barata para QUALQUER um dos dois sets — ajuda, nunca é obrigatória.", "Winged Spear: lightning damage, +15–30% attack speed and Shock chance. A fast, cheap option for EITHER set — it helps, it's never mandatory.")),
+  O(L("Soaring Spear rare ilvl 82 (a base mais rápida)", "Rare Soaring Spear ilvl 82 (the fastest base)"), "r", 70, 88, ("A base mais rápida disponível: +velocidade de ataque explícita.", "The fastest base available: explicit +attack speed."), cost="value"),
  ],
- "set2": [
-  O(L("Akoyan Spear rare (Mind Edge)", "Rare Akoyan Spear (Mind Edge)"), "r", 78, 90, ("A spear do Set 2 do PoB (base nível 78): dano de raio e fogo adicionados, +4,4% de chance de crítico e Spear Throw.", "The PoB's Set 2 spear (base level 78): added lightning and fire damage, +4.4% crit chance and Spear Throw."), cost="value"),
-  O("Sacred Flame", "u", 84, 96, ("O sceptre do Set 2: +Spirit (138 no PoB), Ganha 60% do dano como fogo extra e a skill Purity of Fire. ~5 Divines.", "The Set 2 sceptre: +Spirit (138 in the PoB), gain 60% of damage as extra fire and the Purity of Fire skill. ~5 Divines."), cost="value"),
+ "spear2": [
+  O(L("Spear branca/rare barata (Set 2)", "Cheap white/rare spear (Set 2)"), "r", 1, 40, ("Até o Twister chegar (nível 4) é a mesma spear do Set 1. Depois, priorize físico/elemental adicionado sobre velocidade.", "Until Twister arrives (level 4) it's the same spear as Set 1. After that, prioritise added physical/elemental over speed.")),
+  O(L("Spear rare de dano (físico ou elemental adicionado)", "Rare damage spear (added physical or elemental)"), "r", 41, 85, ("É nela que o Twister é lançado: físico adicionado, % de dano físico, dano elemental adicionado e + nível de skills de projétil, nessa ordem.", "This is the one Twister is cast from: added physical, % physical damage, added elemental damage and + projectile skill levels, in that order."), cost="cheap"),
+  O("The Ordained", "u", 84, 96, ("Spear de crítico de altíssimo orçamento (~93 Divines): teto de dano da rota de crítico. Não planeje a liga em torno dela.", "Very-high-budget crit spear (~93 Divines): the crit route's damage ceiling. Don't plan your league around it."), cost="lux"),
+ ],
+ "offhand2": [
+  O(L("Shield qualquer (Ato 1)", "Any shield (Act 1)"), "r", 1, 20, ("Só até o fim do Ato 1: o Set 2 troca para Sceptre logo depois.", "Only until the end of Act 1: Set 2 swaps to a Sceptre right after.")),
+  O(L("Sceptre rare com Spirit", "Rare Spirit sceptre"), "r", 16, 70, ("Depois do Ato 1: Spirit paga War Banner e, mais tarde, Combat Frenzy.", "After Act 1: Spirit pays for War Banner and, later, Combat Frenzy."), cost="cheap"),
+  O("Sacred Flame", "u", 84, 96, ("+Spirit (até ~138), ganha 60% do dano como fogo extra e a skill Purity of Fire. ~5 Divines, luxo.", "+Spirit (up to ~138), gain 60% of damage as extra fire and the Purity of Fire skill. ~5 Divines, luxury."), cost="value"),
  ],
  "helmet": [
   O(L("Ancestral Tiara rare ilvl 80+ (Energy Shield)", "Rare Ancestral Tiara ilvl 80+ (Energy Shield)"), "r", 80, 90, ("A base do PoB (Foe Keep, nível 80): Energy Shield, Armour/Evasion/ES aumentados e resistências.", "The PoB's base (Foe Keep, level 80): Energy Shield, increased Armour/Evasion/ES and resistances."), cost="value"),
@@ -73,6 +78,7 @@ GEAR_OPTS = {
   O(L("Botas rare com movimento e vida", "Rare boots with movement and life"), "r", 1, 58, ("Movimento primeiro (a build gira o tempo todo), depois vida e resistências.", "Movement first (the build spins all the time), then life and resistances.")),
   O("Corpsewade", "u", 11, 60, ("10% de movimento, 30–50% de Armour e Força (Iron Greaves, nível 11).", "10% movement, 30–50% Armour and Strength (Iron Greaves, level 11).")),
   O("Wanderlust", "u", 11, 73, ("20% de movimento e imunidade à lentidão (Wrapped Sandals; a base exige 17 de Inteligência).", "20% movement and immunity to Slow (Wrapped Sandals; the base needs 17 Intelligence).")),
+  O("Wake of Destruction", "u", 16, 76, ("Dano de raio adicionado a ataques e Shocked Ground enquanto anda. Twink barato (~0,006 Divine): dano em vez de puro movimento.", "Added lightning damage to attacks and Shocked Ground while walking. Cheap twink gear (~0.006 Divine): damage instead of pure movement.")),
   O("The Infinite Pursuit", "u", 16, 74, ("10% de movimento, 100–150% de Armour e +80–100 de vida (Bronze Greaves, nível 16).", "10% movement, 100–150% Armour and +80–100 life (Bronze Greaves, level 16).")),
   O("Trampletoe", "u", 27, 68, ("15% de movimento e 50–100% de Armour (Trimmed Greaves, nível 27); a base exige mais atributos.", "15% movement and 50–100% Armour (Trimmed Greaves, level 27); it raises attribute requirements.")),
   O("Birth of Fury", "u", 33, 84, ("20% de movimento, +40–60 de vida e 20–30% de resistência a fogo (Stone Greaves, nível 33).", "20% movement, +40–60 life and 20–30% fire resistance (Stone Greaves, level 33).")),
@@ -83,10 +89,14 @@ GEAR_OPTS = {
   O("Idol of Uldurn", "u", 1, 66, ("+60–80 de vida e +Destreza (Crimson Amulet): vida por quase nada no Ato 2 e 3.", "+60–80 life and +Dexterity (Crimson Amulet): life for almost nothing in Acts 2 and 3.")),
   O("Ligurium Talisman", "u", 8, 70, ("+25–35 de Spirit e ES (Lapis Amulet): Spirit extra por quase nada.", "+25–35 Spirit and ES (Lapis Amulet): extra Spirit for almost nothing.")),
   O("Beacon of Azis", "u", 30, 74, ("+30 de Spirit e +60–99 de mana (Solar Amulet, nível 30).", "+30 Spirit and +60–99 mana (Solar Amulet, level 30).")),
+  O("Yoke of Suffering", "u", 18, 68, ("Dano de ataque aumenta com a diferença entre sua vida e a do inimigo: opção de dano temporária e barata nesta faixa.", "Attack damage increases with the difference between your life and the enemy's: a cheap temporary damage option in this range.")),
   O(L("Amuleto rare com Spirit, vida e resistências", "Rare amulet with Spirit, life and resistances"), "r", 30, 80, ("Spirit paga as reservas; procure +Spirit e vida (aba Crafting).", "Spirit pays for the reservations; look for +Spirit and life (Crafting tab)."), cost="cheap"),
  ],
  "rings": [
   O("The Taming", "u", 42, 92, ("Aumenta o dano a cada tipo de ailment elemental no inimigo e deixa as skills de Wind (o Twister!) usarem VÁRIAS superfícies elementais ao mesmo tempo. ~4 Divines.", "Increases damage per type of Elemental Ailment on the enemy and lets Wind skills (Twister!) use MULTIPLE elemental ground surfaces at once. ~4 Divines."), cost="value"),
+  O("Berek's Grip", "u", 42, 70, ("Dano de fogo adicionado e chão em chamas ao seu redor ao matar. Use o Berek's OPOSTO ao Trail do seu companion.", "Added fire damage and burning ground around you on kill. Use the Berek's ring OPPOSITE your companion's Trail.")),
+  O("Berek's Pass", "u", 42, 70, ("Dano de raio adicionado e chão eletrificado ao seu redor ao matar. Use o Berek's OPOSTO ao Trail do seu companion.", "Added lightning damage and electrified ground around you on kill. Use the Berek's ring OPPOSITE your companion's Trail.")),
+  O("Berek's Respite", "u", 42, 66, ("Dano de frio adicionado e chão gelado ao seu redor ao matar. Use o Berek's OPOSTO ao Trail do seu companion.", "Added cold damage and chilled ground around you on kill. Use the Berek's ring OPPOSITE your companion's Trail.")),
   O("Blackheart", "u", 1, 70, ("Regeneração de vida, dano de caos adicionado e Armour também aplicada a caos (Iron Ring). O do autor para o leveling: dois por ~0,01 Divine.", "Life regeneration, added chaos damage and Armour also applied to chaos (Iron Ring). The author's leveling pick: two for ~0.01 Divine.")),
   O("Blistering Bond", "u", 8, 58, ("+40–60 de vida e 20–30% de fogo, mas −10–15% de frio (Ruby Ring, nível 8).", "+40–60 life and 20–30% fire, but −10–15% cold (Ruby Ring, level 8).")),
   O("Whisper of the Brotherhood", "u", 12, 66, ("5–10% de velocidade de skill e +Destreza (Sapphire Ring, nível 12).", "5–10% skill speed and +Dexterity (Sapphire Ring, level 12).")),
@@ -119,4 +129,4 @@ GEAR_OPTS["flasks"] = [
   O("Ultimate Life Flask", "r", 60, 84, ("A base do autor no endgame (nível 60): vida recuperada e cargas ganhas altas.", "The author's endgame base (level 60): high life recovered and charges gained."), cost="cheap"),
   O("Lavianga's Spirits", "u", 49, 88, ("Flask de mana que não se usa: o efeito fica sempre ativo (~0,1 Divine, nível 49). Base Gargantuan Mana Flask.", "A mana flask you don't use: its effect is always on (~0.1 Divine, level 49). Gargantuan Mana Flask base.")),
 ]
-SLOT_OPTS = ["spear", "set2", "helmet", "body", "gloves", "boots", "amulet", "rings", "belt", "charms", "flasks"]
+SLOT_OPTS = ["spear", "spear2", "offhand2", "helmet", "body", "gloves", "boots", "amulet", "rings", "belt", "charms", "flasks"]

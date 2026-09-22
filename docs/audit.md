@@ -1,6 +1,6 @@
-# Auditoria das builds — 2026-09-21
+# Auditoria das builds — 2026-09-22
 
-**0 erros · 0 avisos · 105 informações**
+**0 erros · 0 avisos · 128 informações**
 
 ## Informações
 
@@ -74,32 +74,55 @@
 - `whirling` **support-orphan** — Shock: explicado em SUPWHY mas nunca usado
 - `whirling` **tree-respec** — endgame: a árvore tem 2 nós a menos que a fase anterior (respec)
 - `twister` **support-orphan** — Ahn's Citadel: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Ambush: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Armour Break III: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Armour Demolisher I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Armour Demolisher II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Armour Explosion: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Biting Frost II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Blazing Critical: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Blind II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Boundless Energy II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Charge Profusion II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Charged Mark: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Close Combat I: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Close Combat II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Concentrated Area: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Deliberation: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Dialla's Desire: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Direstrike I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Direstrike II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Echoing Cry: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Efficiency II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Elemental Armament I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Elemental Armament II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Elemental Focus: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Embitter: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Empowered Sparks I: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Enraged Warcry II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Execute I: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Execute II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Execute III: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Expanse: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Freeze: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Frozen Spite: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Kaom's Madness: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Knockback: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Longshot II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Magnified Area II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Mark of Siphoning II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Minion Mastery: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Morrigan's Insight: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Multishot I: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Multishot II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Pierce III: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Pinpoint Critical: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Prolonged Duration II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Rage II: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Rage III: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Raging Cry: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Rakiata's Flow: explicado em SUPWHY mas nunca usado
+- `twister` **support-orphan** — Rapid Attacks III: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Rapid Casting II: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Rigwald's Ferocity: explicado em SUPWHY mas nunca usado
 - `twister` **support-orphan** — Ritualistic Curse: explicado em SUPWHY mas nunca usado

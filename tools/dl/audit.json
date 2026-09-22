@@ -1,8 +1,8 @@
 {
- "date": "2026-09-21",
+ "date": "2026-09-22",
  "errors": 0,
  "warnings": 0,
- "info": 105,
+ "info": 128,
  "issues": [
   {
    "level": "I",
@@ -428,13 +428,61 @@
    "level": "I",
    "build": "twister",
    "code": "support-orphan",
+   "msg": "Ambush: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Armour Break III: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
    "msg": "Armour Demolisher I: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
    "build": "twister",
    "code": "support-orphan",
+   "msg": "Armour Demolisher II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Armour Explosion: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
    "msg": "Biting Frost II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Blazing Critical: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Blind II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Boundless Energy II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Charge Profusion II: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -476,7 +524,25 @@
    "level": "I",
    "build": "twister",
    "code": "support-orphan",
+   "msg": "Direstrike I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Direstrike II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
    "msg": "Echoing Cry: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Efficiency II: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -488,7 +554,25 @@
    "level": "I",
    "build": "twister",
    "code": "support-orphan",
+   "msg": "Elemental Armament II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
    "msg": "Elemental Focus: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Embitter: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Empowered Sparks I: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -500,7 +584,31 @@
    "level": "I",
    "build": "twister",
    "code": "support-orphan",
+   "msg": "Execute I: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Execute II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Execute III: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
    "msg": "Expanse: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Freeze: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -525,6 +633,12 @@
    "build": "twister",
    "code": "support-orphan",
    "msg": "Longshot II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Magnified Area II: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -566,7 +680,25 @@
    "level": "I",
    "build": "twister",
    "code": "support-orphan",
+   "msg": "Pinpoint Critical: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
    "msg": "Prolonged Duration II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Rage II: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Rage III: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
@@ -579,6 +711,12 @@
    "build": "twister",
    "code": "support-orphan",
    "msg": "Rakiata's Flow: explicado em SUPWHY mas nunca usado"
+  },
+  {
+   "level": "I",
+   "build": "twister",
+   "code": "support-orphan",
+   "msg": "Rapid Attacks III: explicado em SUPWHY mas nunca usado"
   },
   {
    "level": "I",
