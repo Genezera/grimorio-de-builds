@@ -5,8 +5,11 @@
    - Lite mode (phones, touch tablets, weak devices): no prerender, blur, particles or infinite animations. */
 (() => {
   const root = document.documentElement;
+  /* clickjacking: o GitHub Pages não manda X-Frame-Options e o CSP em <meta> ignora frame-ancestors; então o site se recusa a rodar dentro de outro site */
+  if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) {} root.style.display = 'none'; return; }
   const qs = new URLSearchParams(location.search);
   const src = document.currentScript && document.currentScript.src;
+  const isEn = /(^|\/)en(\.html)?$/.test(location.pathname);      // /pasta/en.html ou /pasta/en (URL limpa)
   const siteBase = src ? new URL('../', src) : new URL('./', location.href);   // .../trilha-silverfist/
   const art = new URL('shared/art/', siteBase).href;
 
@@ -35,7 +38,7 @@
     const rules = lite ? { prefetch: [{ source: 'document', where: site, eagerness: 'conservative' }] }
                        : { prerender: [{ source: 'document', where: site, eagerness: 'moderate' }], prefetch: [{ source: 'document', where: site, eagerness: 'conservative' }] };
     const inSubfolder = location.pathname.replace(/[^/]*$/, '') !== siteBase.pathname;
-    if (inSubfolder && !lite) rules.prerender.push({ source: 'list', urls: [new URL(/en\.html$/.test(location.pathname) ? 'en.html' : 'index.html', siteBase).href], eagerness: 'eager' });
+    if (inSubfolder && !lite) rules.prerender.push({ source: 'list', urls: [new URL(isEn ? 'en.html' : './', siteBase).href], eagerness: 'eager' });
     const s = document.createElement('script'); s.type = 'speculationrules'; s.textContent = JSON.stringify(rules);
     document.head.appendChild(s);
   }
@@ -58,8 +61,9 @@
     infernalist: ['#0a0505', '#ff5b1f', '#d9a36b', '#f6d8b0'], acolyte: ['#07050b', '#b35cff', '#c3b2e6', '#efe7ff'], pathfinder: ['#060906', '#7fd957', '#cdbb7c', '#f0e3b4'],
     smith: ['#09070a', '#ff6a13', '#d08a47', '#f5cf9f'], martial: ['#05070b', '#4cc3ff', '#e0b25c', '#f7deaa'], shaman: ['#080607', '#2fd9c0', '#d1a75f', '#f6dcab'], legionnaire: ['#060709', '#ffd23f', '#b9a27a', '#f1e2bd'], whirling: ['#05080c', '#6fd6ff', '#9fb6c9', '#e3f4ff'], twister: ['#070a08', '#9be564', '#b9c9a0', '#eef7d6'], hyperspeed: ['#06070d', '#8ea2ff', '#d9c48a', '#f6ecc4'],
     home: ['#07070a', '#c3a066', '#c3a066', '#ecd6a3'], rites: ['#07050c', '#9b6bff', '#f1b35c', '#ffd894'] };
-  const en = /(^|\/)en\.html$/.test(location.pathname);
-  const dir = location.pathname.split('/').filter(Boolean).slice(-2, -1)[0] || '';
+  const en = isEn;
+  const segs = location.pathname.replace(/\/(index\.html|en\.html|en)$/, '/').split('/').filter(Boolean);
+  const dir = segs[segs.length - 1] || '';
   const key = BUILDS[dir] ? dir : dir === 'rites' ? 'rites' : 'home';
   const [p, name, sub] = BUILDS[key] || (key === 'rites' ? ['', en ? 'Challenge Grimoire' : 'Grimório das Challenges', 'Forbidden Rites · 0.5.5'] : ['', en ? 'Build Grimoire' : 'Grimório de Builds', 'Path of Exile 2 · Forbidden Rites']);
   const c = PAL[key];
@@ -69,14 +73,14 @@
 
   const discSize = () => Math.ceil(2 * Math.hypot(innerWidth / 2, innerHeight * .54) + 4) + 'px';
   const esc = s => String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]);
-  const born = performance.now(), minShow = reduce ? 0 : internal ? 750 : 1000;   // dentro do site: só cobre o carregamento
+  const born = performance.now(), minShow = reduce ? 0 : internal ? 350 : 650;   // dentro do site: só cobre o carregamento
   let el = null, done = false;
   const progress = v => { if (el) el.style.setProperty('--pl-p', v); };
   const mount = () => {
     if (el || done) return;
     el = document.createElement('div');
     el.className = 'poe-loader'; el.setAttribute('aria-hidden', 'true');
-    [['--pl-ground', c[0]], ['--pl-acc', c[1]], ['--pl-gold', c[2]], ['--pl-hi', c[3]], ['--pl-d', discSize()]].forEach(([k, v]) => el.style.setProperty(k, v));
+    [['--pl-ground', c[0]], ['--pl-acc', c[1]], ['--pl-gold', c[2]], ['--pl-hi', c[3]], ['--pl-d', '160vmax']].forEach(([k, v]) => el.style.setProperty(k, v));
     if (p) el.style.setProperty('--pl-bg', `url("${art}${p}-asc-bg.webp")`);
     el.innerHTML = `<div class="pl-disc"></div><div class="pl-stage">
       <div class="pl-medal"><span class="pl-ring r1"></span><span class="pl-ring r2"></span><span class="pl-ring r3"></span>
@@ -87,7 +91,7 @@
     if (im) { const ok = () => im.classList.add('ok'); if (im.complete && im.naturalWidth) ok(); else { im.addEventListener('load', ok, { once: true }); im.addEventListener('error', ok, { once: true }); } }
     document.body.prepend(el);
     root.classList.remove('ld');
-    requestAnimationFrame(() => requestAnimationFrame(() => el && el.classList.add('on')));
+    requestAnimationFrame(() => { if (el) el.style.setProperty('--pl-d', discSize()); requestAnimationFrame(() => el && el.classList.add('on')); });
     progress(document.readyState === 'complete' ? 1 : document.readyState === 'interactive' ? .62 : .3);
   };
   const finish = () => {

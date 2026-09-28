@@ -83,3 +83,5 @@ def scan(o):
 scan(DATA_EN); scan(A_EN_TXT)
 print("EN data leftovers:", len(left)); [print("  -", x) for x in sorted(left)[:40]]
 print("sizes:", {f: os.path.getsize(OUT + "/" + f) for f in ["index.html", "en.html", "assets/assets.js"]})
+
+import harden; harden.run()   # segurança, URLs limpas, fontes próprias (idempotente)

@@ -123,6 +123,8 @@ tools/
   build_all.py                full rebuild
   update_all.py               weekly cycle (collect → classify → discover → rebuild → audit → test)
   audit.py, deepcheck.py      coherence audit and tree-damage measurement
+  harden.py                   final pass over every page (CSP/referrer meta, absolute hreflang, clean folder links, self-hosted fonts, contrast); every build script calls it
+  selfhost_fonts.py           downloads the Google Fonts used by the pages into shared/fonts/ + shared/fonts.css
   registry.py, ninja_meta.py, discover.py     rankings and candidate discovery
   kit/                        generic build kit: pobxml, ninja, kassets, kpatch, kbuild, treescore, jewels, craftkit, ...
   builds/<build>/             per-build data: bdata.py, bcraft.py, gear_opts.py, mkvariants.py

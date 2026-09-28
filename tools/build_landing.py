@@ -52,3 +52,5 @@ from landing_v2 import render
 for l, fn in (("pt", "index.html"), ("en", "en.html")):
     open(os.path.join(OUT, fn), "w", encoding="utf-8").write(render(l, TXT[l], IC))
 print("landing ok", {k: len(v) for k, v in IC.items()})
+
+import harden; harden.run()   # segurança, URLs limpas, fontes próprias (idempotente)

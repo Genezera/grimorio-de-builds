@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'inline-speculation-rules'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://web.poecdn.com https://cdn.poe2db.tw; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://genezera.github.io/grimorio-de-builds/shaman/en"><link rel="alternate" hreflang="pt-BR" href="https://genezera.github.io/grimorio-de-builds/shaman/"><link rel="alternate" hreflang="en" href="https://genezera.github.io/grimorio-de-builds/shaman/en"><link rel="alternate" hreflang="x-default" href="https://genezera.github.io/grimorio-de-builds/shaman/">
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌩</text></svg>">
 <script>document.documentElement.dataset.build='shaman'</script>
 <meta name="theme-color" content="#080607">
-<link rel="stylesheet" href="../shared/loader.css?v=9108b0b0"><script src="../shared/loader.js?v=c9fdfc97"></script>
+<link rel="stylesheet" href="../shared/fonts.css?v=ee1b0ed3"><link rel="stylesheet" href="../shared/loader.css?v=f81f8ed4"><script src="../shared/loader.js?v=c671c6d6"></script>
 <title>Mana Storm</title>
 <meta name="description" content="Interactive Druid Shaman Archmage Spark + Comet (Cast on Critical) guide — PoE 2 Forbidden Rites">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Oxanium:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
 :root{
   --ground:#07080B; --ground2:#0B0C11; --stone:#0E0F16; --stone2:#11141D; --stone3:#161925;
   --edge:#21263D; --edge2:#2C3760; --gild:#7292CA; --gild-hi:#ACC0E3; --gild-g:rgba(114,146,202,.14);
-  --text:#B4C5E3; --mute:#597FC0; --faint:#474F70;
+  --text:#B4C5E3; --mute:#597FC0; --faint:#7781a9;
   --unique:#AF6025; --rare:#FFFF77; --magic:#8888FF; --gem:#1BA29B; --normal:#C8C8C8; --corrupt:#D20000;
   --wisp:#7FD7D8; --wisp-g:rgba(127,215,216,.14); --bear:#AA7BE0; --bear-g:rgba(170,123,224,.16);
   --set1:#D9544A; --set2:#62B462; --danger:#E0664F; --danger-g:rgba(224,102,79,.14);
@@ -650,7 +652,7 @@ html[data-build="silverfist"]{
   --accent:#5fe3c1; --accent-hi:#b6f5e2; --accent-g:rgba(95,227,193,.15);
   --accent2:#d0443a; --accent2-hi:#ff8a78; --accent2-g:rgba(208,68,58,.16);
   --wisp:#5fe3c1; --wisp-g:rgba(95,227,193,.14);
-  --text:#e0d9c8; --mute:#a99f8b; --faint:#766c5b;
+  --text:#e0d9c8; --mute:#a99f8b; --faint:#8d816d;
   --scene-tint:rgba(10,24,20,.55);
 }
 html[data-build="oracle"]{
@@ -661,7 +663,7 @@ html[data-build="oracle"]{
   --accent:#a58dff; --accent-hi:#d9ceff; --accent-g:rgba(165,141,255,.16);
   --accent2:#e2465f; --accent2-hi:#ff9aa9; --accent2-g:rgba(226,70,95,.16);
   --wisp:#73d9ff; --wisp-g:rgba(115,217,255,.14);
-  --text:#dfdeea; --mute:#a3a2bb; --faint:#6f6e88;
+  --text:#dfdeea; --mute:#a3a2bb; --faint:#828199;
   --scene-tint:rgba(18,12,40,.55);
 }
 
@@ -673,7 +675,7 @@ html[data-build="tactician"]{
   --accent:#ff8a3d; --accent-hi:#ffc18f; --accent-g:rgba(255,138,61,.16);
   --accent2:#9fd24b; --accent2-hi:#cdf28a; --accent2-g:rgba(159,210,75,.15);
   --wisp:#ffb84d; --wisp-g:rgba(255,184,77,.14);
-  --text:#e3ddd2; --mute:#aaa190; --faint:#77705f;
+  --text:#e3ddd2; --mute:#aaa190; --faint:#89816e;
   --scene-tint:rgba(30,16,6,.55);
 }
 html[data-build="infernalist"]{
@@ -684,7 +686,7 @@ html[data-build="infernalist"]{
   --accent:#ff5b1f; --accent-hi:#ffae84; --accent-g:rgba(255,91,31,.17);
   --accent2:#c3163f; --accent2-hi:#ff7d99; --accent2-g:rgba(195,22,63,.17);
   --wisp:#ffbe3d; --wisp-g:rgba(255,190,61,.14);
-  --text:#ecdcd3; --mute:#b39b8f; --faint:#7c665b;
+  --text:#ecdcd3; --mute:#b39b8f; --faint:#977d71;
   --scene-tint:rgba(48,10,4,.55);
 }
 html[data-build="acolyte"]{
@@ -695,7 +697,7 @@ html[data-build="acolyte"]{
   --accent:#b35cff; --accent-hi:#dcb6ff; --accent-g:rgba(179,92,255,.17);
   --accent2:#63e07c; --accent2-hi:#b3f5bf; --accent2-g:rgba(99,224,124,.15);
   --wisp:#ff6ad5; --wisp-g:rgba(255,106,213,.14);
-  --text:#e2ddf0; --mute:#a69dbd; --faint:#6f6788;
+  --text:#e2ddf0; --mute:#a69dbd; --faint:#867f9e;
   --scene-tint:rgba(24,8,42,.58);
 }
 html[data-build="pathfinder"]{
@@ -706,7 +708,7 @@ html[data-build="pathfinder"]{
   --accent:#7fd957; --accent-hi:#c1f2a6; --accent-g:rgba(127,217,87,.16);
   --accent2:#d9a53a; --accent2-hi:#f5d38d; --accent2-g:rgba(217,165,58,.16);
   --wisp:#a6f06a; --wisp-g:rgba(166,240,106,.14);
-  --text:#dfe3d2; --mute:#a3a88f; --faint:#6d735c;
+  --text:#dfe3d2; --mute:#a3a88f; --faint:#7e856b;
   --scene-tint:rgba(10,26,8,.55);
 }
 html[data-build="smith"]{
@@ -717,7 +719,7 @@ html[data-build="smith"]{
   --accent:#ff6a13; --accent-hi:#ffb07a; --accent-g:rgba(255,106,19,.17);
   --accent2:#e8c547; --accent2-hi:#f7e39a; --accent2-g:rgba(232,197,71,.15);
   --wisp:#ff9a3d; --wisp-g:rgba(255,154,61,.14);
-  --text:#ebe0d6; --mute:#b1a191; --faint:#7a6a5c;
+  --text:#ebe0d6; --mute:#b1a191; --faint:#927f6f;
   --scene-tint:rgba(40,16,4,.55);
 }
 
@@ -729,7 +731,7 @@ html[data-build="martial"]{
   --accent:#4cc3ff; --accent-hi:#b3e6ff; --accent-g:rgba(76,195,255,.16);
   --accent2:#ffa62b; --accent2-hi:#ffd28f; --accent2-g:rgba(255,166,43,.16);
   --wisp:#8fe3ff; --wisp-g:rgba(143,227,255,.14);
-  --text:#dde5ee; --mute:#9eabbb; --faint:#687587;
+  --text:#dde5ee; --mute:#9eabbb; --faint:#768395;
   --scene-tint:rgba(6,18,34,.56);
 }
 html[data-build="shaman"]{
@@ -740,7 +742,7 @@ html[data-build="shaman"]{
   --accent:#2fd9c0; --accent-hi:#a6f3e6; --accent-g:rgba(47,217,192,.16);
   --accent2:#ff7a2f; --accent2-hi:#ffb387; --accent2-g:rgba(255,122,47,.16);
   --wisp:#7ef0dd; --wisp-g:rgba(126,240,221,.14);
-  --text:#ece2da; --mute:#b3a094; --faint:#7c6a60;
+  --text:#ece2da; --mute:#b3a094; --faint:#927e73;
   --scene-tint:rgba(36,12,6,.55);
 }
 
@@ -752,7 +754,7 @@ html[data-build="legionnaire"]{
   --accent:#ffd23f; --accent-hi:#fff0a8; --accent-g:rgba(255,210,63,.16);
   --accent2:#4db8ff; --accent2-hi:#a9dcff; --accent2-g:rgba(77,184,255,.16);
   --wisp:#ffe98a; --wisp-g:rgba(255,233,138,.14);
-  --text:#e8eaee; --mute:#a5abb5; --faint:#6c737f;
+  --text:#e8eaee; --mute:#a5abb5; --faint:#7b828f;
   --scene-tint:rgba(24,20,6,.5);
 }
 
@@ -764,7 +766,7 @@ html[data-build="whirling"]{
   --accent:#6fd6ff; --accent-hi:#c4efff; --accent-g:rgba(111,214,255,.16);
   --accent2:#c6a3ff; --accent2-hi:#e4d3ff; --accent2-g:rgba(198,163,255,.16);
   --wisp:#a8e6ff; --wisp-g:rgba(168,230,255,.14);
-  --text:#e6eef5; --mute:#a3b1bf; --faint:#6a7887;
+  --text:#e6eef5; --mute:#a3b1bf; --faint:#758393;
   --scene-tint:rgba(6,18,30,.52);
 }
 
@@ -1288,7 +1290,7 @@ html[data-build="twister"]{
   --accent:#9be564; --accent-hi:#d3f5b0; --accent-g:rgba(155,229,100,.16);
   --accent2:#ffb347; --accent2-hi:#ffd9a0; --accent2-g:rgba(255,179,71,.16);
   --wisp:#c4f19a; --wisp-g:rgba(196,241,154,.14);
-  --text:#e9f0e2; --mute:#a9b7a0; --faint:#6f7d66;
+  --text:#e9f0e2; --mute:#a9b7a0; --faint:#78876e;
   --scene-tint:rgba(8,22,10,.5);
 }
 
@@ -1300,7 +1302,7 @@ html[data-build="hyperspeed"]{
   --accent:#8ea2ff; --accent-hi:#c9d2ff; --accent-g:rgba(142,162,255,.16);
   --accent2:#ffe066; --accent2-hi:#fff0a8; --accent2-g:rgba(255,224,102,.16);
   --wisp:#b7c2ff; --wisp-g:rgba(183,194,255,.14);
-  --text:#e8ebf7; --mute:#a3abc9; --faint:#6b7394;
+  --text:#e8ebf7; --mute:#a3abc9; --faint:#7a819f;
   --scene-tint:rgba(10,12,34,.5);
 }
 
@@ -1523,7 +1525,7 @@ html[data-build] .gem.frame:hover,html[data-build] .ucard:hover{transform:transl
   <main>
     <header class="console">
       <div class="brand">
-        <div class="eyebrow"><a class="homebtn" href="../en.html">← Builds</a><span class="pill league" id="league"></span><span class="pill">Druid · Shaman</span><nav class="langsw" aria-label="Idioma / Language"><span class="lg" aria-hidden="true">🌐</span><a href="index.html" class="" hreflang="pt-BR" title="Ver em português">Português</a><a href="en.html" class="on" hreflang="en" title="View in English">English</a></nav></div>
+        <div class="eyebrow"><a class="homebtn" href="../en.html">← Builds</a><span class="pill league" id="league"></span><span class="pill">Druid · Shaman</span><nav class="langsw" aria-label="Idioma / Language"><span class="lg" aria-hidden="true">🌐</span><a href="./" class="" hreflang="pt-BR" title="Ver em português">Português</a><a href="en.html" class="on" hreflang="en" title="View in English">English</a></nav></div>
         <h1 class="orh1"><small>Spark from level 1 · automatic Comet in maps · one mana bar that is both damage and life</small>The Mana Storm</h1>
         <div class="divider orn" style="max-width:520px"></div>
         <p>A one-button build: your mana becomes lightning damage (Archmage), Spark covers the whole screen and Comet falls on its own with every crit. Tell it your level, your act and what you already have.</p>
@@ -2494,15 +2496,15 @@ function wisps() {
 }
 
 </script>
-<script src="../shared/craft-data.js?v=81c044d7"></script>
-<script src="../shared/craft-detail.js?v=15f89d3d"></script>
-<script src="../shared/craft.js?v=ab500692"></script>
+<script src="../shared/craft-data.js?v=da84c5f0"></script>
+<script src="../shared/craft-detail.js?v=8c2dfc5b"></script>
+<script src="../shared/craft.js?v=2083ad36"></script>
 <script src="../shared/weights.js?v=9f9c6d27"></script>
-<script src="../shared/guide.js?v=498112ae"></script>
-<script src="../shared/poe2.js?v=cfadcb03"></script>
-<script src="../shared/build-now.js?v=bc690dda"></script>
-<script src="../shared/fx.js?v=18644787"></script>
-<script src="../shared/skin.js?v=2c631d0c"></script>
+<script src="../shared/guide.js?v=08994318"></script>
+<script src="../shared/poe2.js?v=f319d85e"></script>
+<script src="../shared/build-now.js?v=5a480ac2"></script>
+<script src="../shared/fx.js?v=9e01b81c"></script>
+<script src="../shared/skin.js?v=42045f49"></script>
 <script>
 /* ------------------------------------------------ boot */
 $("#league").textContent = D.league + " league · 0.5.5";

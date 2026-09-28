@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://genezera.github.io/grimorio-de-builds/sitemap.xml

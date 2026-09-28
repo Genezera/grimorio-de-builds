@@ -207,7 +207,7 @@
   function ritesLink() {
     const home = document.querySelector('.homebtn'); if (!home || document.querySelector('.rites-link')) return;
     const a = document.createElement('a'); a.className = 'homebtn rites-link';
-    a.href = '../rites/' + (typeof LANG !== 'undefined' && LANG === 'en' ? 'en.html' : 'index.html');
+    a.href = '../rites/' + (typeof LANG !== 'undefined' && LANG === 'en' ? 'en.html' : './');
     a.textContent = typeof T === 'function' ? T('Challenges da liga', 'League challenges') : 'Forbidden Rites';
     home.after(a);
   }

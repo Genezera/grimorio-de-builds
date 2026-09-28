@@ -51,7 +51,10 @@ html.ld::before{content:"";position:fixed;inset:0;z-index:2147483000;pointer-eve
 /* ---------- modo leve (html.lite, definido no <head> por loader.js): celular, tablet touch e aparelhos fracos.
    Blur de fundo e animações infinitas são redesenhados a cada frame de rolagem sobre o cenário: no celular isso derruba o FPS. */
 html.lite body *,html.lite body *::before,html.lite body *::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-html.lite body :not(.poe-loader):not(.poe-loader *),html.lite body :not(.poe-loader):not(.poe-loader *)::before,html.lite body :not(.poe-loader):not(.poe-loader *)::after{animation:none!important}
+/* No celular ficam as animações baratas (só transform/opacity: giro do medalhão, flutuar, entradas e feedback de toque) e saem as que repintam a tela toda:
+   cenário com máscara em deriva, brilho/hue de texto, box-shadow pulsante, barras com gradiente animado e partículas. */
+html.lite .scene .half,html.lite #poeScene .art,html.lite .fog,html.lite .skfx,html.lite .skfx *,html.lite .brand>span::after,html.lite h1 em,html.lite .totem .fillbar::after,html.lite .totem button.node.cur::before,html.lite .hrail .hf::after,html.lite .hrail button.cur::after,html.lite .kicker .dia,html.lite .hero-sigil .circle,html.lite .hero-sigil .totem{animation:none!important}
+html.lite .skfx{display:none}
 html.lite[data-build]{--glass:1}
 html.lite #poeScene .art{will-change:auto}
 html.lite #poeScene,html.lite .scene{transform:translateZ(0)}

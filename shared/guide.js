@@ -41,9 +41,12 @@ renderTab = function(id) {
   if (id === 'fontes') $('#v-fontes').insertAdjacentHTML('afterbegin', `<div class="craft-note">${T('Notas oficiais do patch-alvo:','Official target patch notes:')} <a href="https://www.pathofexile.com/forum/view-thread/4000864" target="_blank" rel="noopener">0.5.5</a> · <a href="https://www.pathofexile.com/forum/view-thread/4004106" target="_blank" rel="noopener">0.5.5b</a>. ${T('Veja as fontes de cada método na aba Crafting. Os caches antigos de preço não registram a liga nem a hora de coleta.','See each method’s sources in Crafting. Older price caches do not record the league or collection time.')}</div>`);
 };
 function guideGroup(id) { return GUIDE_GROUPS.findIndex(g=>g[1].includes(id)); }
+/* URL limpa: a barra de endereço mostra só a pasta (…/silverfist/ ou …/silverfist/en), sem index.html nem #aba. A aba fica no history.state e no localStorage;
+   um link com #aba (vindo de fora ou do botão Link) é lido uma vez e limpo. */
+const guideUrl = () => location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '') + location.search;
 function guideGo(id, push = true) {
   if (!VIEWS[id]) return;
-  if (push && location.hash !== '#' + id) history.pushState(null, '', '#' + id);
+  if (push && !(history.state && history.state.tab === id && !location.hash)) history.pushState({ tab: id }, '', guideUrl());
   S.tab = id; store.set('tab', id); showTab();
 }
 function buildTabs() {
@@ -66,11 +69,11 @@ function buildTabs() {
   $('#navGroups').innerHTML=GUIDE_GROUPS.map(([label],i)=>`<button type="button" data-group="${i}" aria-pressed="false" aria-label="${label}"><span class="ng-long">${label}</span><span class="ng-short" aria-hidden="true">${GUIDE_SHORT[i]||label}</span></button>`).join('');
   $('#navGroups').onclick=e=>{const b=e.target.closest('[data-group]');if(b){const g=GUIDE_GROUPS[+b.dataset.group];guideGo(g[1].find(id=>VIEWS[id]));}};
   document.querySelectorAll('section.view').forEach(el=>{el.setAttribute('role','tabpanel');el.setAttribute('aria-labelledby','tab-'+el.id.slice(2));el.tabIndex=0;});
-  $('#guideTools').innerHTML=`<div class="guide-search"><label class="sr-only" for="guideSearch">${T('Buscar no guia','Search the guide')}</label><input id="guideSearch" type="search" placeholder="${T('Buscar…','Search…')}" autocomplete="off" aria-controls="guideResults" aria-expanded="false"></div><div class="guide-tools-actions"><button type="button" id="guidePrint" title="${T('Imprimir a seção aberta','Print the open section')}">${T('Imprimir','Print')}</button><button type="button" id="guideLink" title="${T('Copiar link desta seção','Copy this section’s link')}">${T('Link','Link')}</button></div><div class="search-results" id="guideResults" hidden></div>`;
+  $('#guideTools').innerHTML=`<div class="guide-search"><label class="sr-only" for="guideSearch">${T('Buscar no guia','Search the guide')}</label><input id="guideSearch" type="search" role="combobox" aria-autocomplete="list" placeholder="${T('Buscar…','Search…')}" autocomplete="off" aria-controls="guideResults" aria-expanded="false"></div><div class="guide-tools-actions"><button type="button" id="guidePrint" title="${T('Imprimir a seção aberta','Print the open section')}">${T('Imprimir','Print')}</button><button type="button" id="guideLink" title="${T('Copiar link desta seção','Copy this section’s link')}">${T('Link','Link')}</button></div><div class="search-results" id="guideResults" hidden></div>`;
   $('#guideSearch').addEventListener('input',guideSearch);
   $('#guideSearch').addEventListener('keydown',e=>{if(e.key==='ArrowDown'){$('#guideResults button')?.focus();e.preventDefault();}});
   $('#guidePrint').onclick=()=>window.print();
-  $('#guideLink').onclick=()=>guideCopy(location.href,T('Link copiado.','Link copied.'));
+  $('#guideLink').onclick=()=>guideCopy(location.origin+guideUrl()+'#'+S.tab,T('Link copiado.','Link copied.'));
   document.body.insertAdjacentHTML('afterbegin',`<a class="guide-skip" href="#readingGuide">${T('Pular para o conteúdo','Skip to content')}</a>`);
 }
 function showTab() {
@@ -79,7 +82,7 @@ function showTab() {
   document.querySelectorAll('#tabs button').forEach(b=>{const active=b.dataset.tab===S.tab;b.setAttribute('aria-selected',active);b.tabIndex=active?0:-1;b.hidden=guideGroup(b.dataset.tab)!==group;});
   document.querySelectorAll('#navGroups button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.group===group));
   document.querySelectorAll('section.view').forEach(el=>{const active=el.id==='v-'+S.tab;el.classList.toggle('on',active);el.hidden=!active;});
-  if(location.hash!== '#'+S.tab) history.replaceState(null,'','#'+S.tab);
+  history.replaceState({ tab: S.tab }, '', guideUrl());
   document.querySelectorAll('.langsw a').forEach(a=>{a.href=a.getAttribute('href').split('#')[0]+'#'+S.tab;});
   renderTab(S.tab);
 }
@@ -112,7 +115,7 @@ document.addEventListener('click',e=>{
   else if(!e.target.closest('#guideTools')){$('#guideResults').hidden=true;$('#guideSearch').setAttribute('aria-expanded','false');}
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#guideResults').hidden=true;$('#guideSearch').setAttribute('aria-expanded','false');if(document.activeElement.closest('#guideResults'))$('#guideSearch').focus();}if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();$('#guideSearch').focus();}});
-addEventListener('popstate',()=>{const id=location.hash.slice(1);if(VIEWS[id])guideGo(id,false);});
+addEventListener('popstate',e=>{const id=(e.state&&e.state.tab)||location.hash.slice(1);if(VIEWS[id]&&S.tab!==id)guideGo(id,false);});
 addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(VIEWS[id]&&S.tab!==id)guideGo(id,false);});
 
 /* Tab switch while scrolled down: bring the start of the new content just below the sticky header (phones and tablets included). */

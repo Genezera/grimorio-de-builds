@@ -107,3 +107,5 @@ print("EN leftovers:", len(left))
 for x in left[:80]:
     print("  -", x.strip()[:150])
 print("sizes:", {f: os.path.getsize(OUT + "/" + f) for f in ["index.html", "en.html", "assets/assets.js"]})
+
+import harden; harden.run()   # segurança, URLs limpas, fontes próprias (idempotente)

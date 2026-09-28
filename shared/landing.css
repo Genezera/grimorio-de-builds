@@ -2,7 +2,7 @@
 :root{color-scheme:dark;
   --bg:#07070a;--stone:#101012;--stone2:#16161a;--edge:#2c2a28;--edge2:#4b4535;
   --gild:#c3a066;--gild-hi:#ecd6a3;--gild-lo:#6f5733;
-  --text:#e2dccd;--mute:#a79e8c;--faint:#766d5d;
+  --text:#e2dccd;--mute:#a79e8c;--faint:#8b816e;
   --sf:#5fe3c1;--sf2:#d0443a;--or:#a58dff;--or2:#73d9ff;
   --display:"Cinzel","Trajan Pro",Georgia,serif;--ui:"Alegreya SC",Georgia,serif;--body:"Alegreya",Georgia,serif;
   --ease:cubic-bezier(.16,1,.3,1)}
@@ -235,3 +235,5 @@ footer a:hover{color:var(--gild-hi)}
 .build.tw{--acc:#9be564;--acc2:#ffb347;--metal:#b9c9a0;--metal-hi:#eef7d6;--surface:rgba(9,14,10,.86);border-color:#3a4f3a}
 .build.hs{--acc:#8ea2ff;--acc2:#ffe066;--metal:#d9c48a;--metal-hi:#f6ecc4;--surface:rgba(9,10,18,.86);border-color:#3a4166}
 .build.sh{--acc:#2fd9c0;--acc2:#d1a75f;--metal:#d1a75f;--metal-hi:#f6dcab;--surface:rgba(12,9,9,.86);border-color:#4a3a2a}
+
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}

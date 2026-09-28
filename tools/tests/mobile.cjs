@@ -6,9 +6,9 @@ const { chromium } = require('playwright');
 const fs = require('node:fs'), path = require('node:path'), http = require('node:http');
 const root = path.resolve(__dirname, '../..');
 const server = http.createServer((req, res) => {
-  const rel = decodeURIComponent(new URL(req.url, 'http://x').pathname), file = path.resolve(root, '.' + rel + (rel.endsWith('/') ? 'index.html' : ''));
+  const rel = decodeURIComponent(new URL(req.url, 'http://x').pathname), file = path.resolve(root, '.' + rel + (rel.endsWith('/') ? 'index.html' : /\.[a-z0-9]+$/i.test(rel) ? '' : '.html'));
   if (!file.startsWith(root + path.sep)) { res.writeHead(403).end(); return; }
-  fs.readFile(file, (err, data) => { if (err) { res.writeHead(404).end(); return; } res.setHeader('Content-Type', ({ '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp' })[path.extname(file)] || 'application/octet-stream'); res.end(data); });
+  fs.readFile(file, (err, data) => { if (err) { res.writeHead(404).end(); return; } res.setHeader('Content-Type', ({ '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp', '.woff2': 'font/woff2' })[path.extname(file)] || 'application/octet-stream'); res.end(data); });
 });
 const SIZES = (process.env.SIZES || '360x780,390x844,412x915,844x390,768x1024,820x1180,1024x768,1180x820').split(',').map(s => s.split('x').map(Number));
 const BUILDS = ['silverfist', 'oracle', 'tactician', 'infernalist', 'acolyte', 'pathfinder', 'smith', 'martial', 'shaman', 'legionnaire', 'whirling','twister','hyperspeed'];

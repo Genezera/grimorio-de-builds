@@ -82,3 +82,5 @@ def page(lang):
 for lang, fn in (("pt", "index.html"), ("en", "en.html")):
     open(os.path.join(OUT, fn), "w", encoding="utf-8").write(page(lang))
 print("rites ok", {f: os.path.getsize(os.path.join(OUT, f)) for f in ("index.html", "en.html")})
+
+import harden; harden.run()   # segurança, URLs limpas, fontes próprias (idempotente)

@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
 const fs=require('node:fs'), path=require('node:path'), http=require('node:http'), assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'../..');
 const server=http.createServer((req,res)=>{
-  const rel=decodeURIComponent(new URL(req.url,'http://localhost').pathname),file=path.resolve(root,'.'+rel+(rel.endsWith('/')?'index.html':''));
+  const rel=decodeURIComponent(new URL(req.url,'http://localhost').pathname),file=path.resolve(root,'.'+rel+(rel.endsWith('/') ? 'index.html' : /\.[a-z0-9]+$/i.test(rel) ? '' : '.html'));
   if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
   fs.readFile(file,(err,data)=>{if(err){res.writeHead(404).end();return;}res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript'})[path.extname(file)]||'application/octet-stream');res.end(data);});
 });
