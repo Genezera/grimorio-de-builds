@@ -1,10 +1,10 @@
 {
  "snapshot": {
   "league": "Forbidden Rites",
-  "snapshot": "1053-20260921-12846",
-  "fetched": "2026-09-21",
+  "snapshot": "1137-20260928-08283",
+  "fetched": "2026-09-28",
   "passiveTree": "PassiveTree-0.5",
-  "characters": 124098
+  "characters": 124105
  },
  "builds": [
   {
@@ -14,12 +14,12 @@
    "asc": "Spirit Walker",
    "title": "Mighty Silverfist",
    "ninja": {
-    "ascShare": 8.16,
-    "ascN": 10132,
+    "ascShare": 7.56,
+    "ascN": 9383,
     "skill": "Azmerian Wolf",
-    "skillShare": 60.4,
-    "dps": 169000.0,
-    "ehp": 77000.0,
+    "skillShare": 61.7,
+    "dps": 207000.0,
+    "ehp": 86000.0,
     "top": 100
    },
    "tags": [
@@ -31,17 +31,17 @@
    "boss": 4,
    "ease0": 3,
    "ranks": {},
-   "dmgPct": 0.8212290502793296,
-   "ehpPct": 0.9608938547486033,
+   "dmgPct": 0.7966101694915254,
+   "ehpPct": 0.943502824858757,
    "ease": 3,
    "easeSrc": "editorial",
-   "damage": 5,
+   "damage": 4,
    "damageSrc": "poe.ninja",
    "survival": 5,
    "scores": {
     "ease": 3,
     "hard": 3,
-    "damage": 5,
+    "damage": 4,
     "clear": 4,
     "boss": 4,
     "clearboss": 4.0,
@@ -57,13 +57,13 @@
    "asc": "Oracle",
    "title": "Oracle Spell Totem",
    "ninja": {
-    "ascShare": 7.21,
-    "ascN": 8945,
+    "ascShare": 7.08,
+    "ascN": 8787,
     "skill": "Grim Pillars",
-    "skillShare": 63.2,
-    "dps": 92000.0,
-    "ehp": 20000.0,
-    "top": 100
+    "skillShare": 59.6,
+    "dps": 134000.0,
+    "ehp": 22000.0,
+    "top": 99
    },
    "tags": [
     "totems",
@@ -74,13 +74,13 @@
    "boss": 4,
    "ease0": 3,
    "ranks": {},
-   "dmgPct": 0.6815642458100558,
-   "ehpPct": 0.39106145251396646,
+   "dmgPct": 0.7062146892655368,
+   "ehpPct": 0.4293785310734463,
    "ease": 3,
    "easeSrc": "editorial",
    "damage": 4,
    "damageSrc": "poe.ninja",
-   "survival": 2,
+   "survival": 3,
    "scores": {
     "ease": 3,
     "hard": 3,
@@ -88,7 +88,7 @@
     "clear": 4,
     "boss": 4,
     "clearboss": 4.0,
-    "survival": 2
+    "survival": 3
    },
    "meta": "meta",
    "status": "ativa"
@@ -100,13 +100,13 @@
    "asc": "Tactician",
    "title": "Tactician Pin2Win",
    "ninja": {
-    "ascShare": 1.55,
-    "ascN": 1922,
+    "ascShare": 1.39,
+    "ascN": 1728,
     "skill": "Explosive Grenade",
-    "skillShare": 4.1,
-    "dps": 17000.0,
-    "ehp": 9800.0,
-    "top": 78
+    "skillShare": 4.7,
+    "dps": 16000.0,
+    "ehp": 11000.0,
+    "top": 82
    },
    "tags": [
     "grenades",
@@ -128,8 +128,8 @@
     "tricks": 14,
     "score": 43.4
    },
-   "dmgPct": 0.39664804469273746,
-   "ehpPct": 0.05027932960893855,
+   "dmgPct": 0.327683615819209,
+   "ehpPct": 0.07909604519774012,
    "ease": 4,
    "easeSrc": "guia",
    "damage": 2,
@@ -154,12 +154,12 @@
    "asc": "Infernalist",
    "title": "Infernalist Comet",
    "ninja": {
-    "ascShare": 3.41,
-    "ascN": 4227,
+    "ascShare": 3.76,
+    "ascN": 4662,
     "skill": "Comet",
-    "skillShare": 57.3,
-    "dps": 653000.0,
-    "ehp": 2900.0,
+    "skillShare": 64.3,
+    "dps": 1000000.0,
+    "ehp": 3200.0,
     "top": 100
    },
    "tags": [
@@ -182,8 +182,8 @@
     "tricks": 11,
     "score": 59.4
    },
-   "dmgPct": 0.9553072625698324,
-   "ehpPct": 0.0223463687150838,
+   "dmgPct": 0.96045197740113,
+   "ehpPct": 0.03389830508474576,
    "ease": 1,
    "easeSrc": "guia",
    "damage": 5,
@@ -208,12 +208,12 @@
    "asc": "Acolyte of Chayula",
    "title": "Poisonburst → Tornado Sprinkler",
    "ninja": {
-    "ascShare": 1.52,
-    "ascN": 1885,
+    "ascShare": 1.51,
+    "ascN": 1872,
     "skill": "Molten Shower",
-    "skillShare": 6.0,
-    "dps": 19000.0,
-    "ehp": 16000.0,
+    "skillShare": 5.7,
+    "dps": 18000.0,
+    "ehp": 15000.0,
     "top": 100
    },
    "tags": [
@@ -236,21 +236,21 @@
     "tricks": 8,
     "score": 48.1
    },
-   "dmgPct": 0.4245810055865922,
-   "ehpPct": 0.24581005586592178,
+   "dmgPct": 0.3502824858757062,
+   "ehpPct": 0.192090395480226,
    "ease": 2,
    "easeSrc": "guia",
-   "damage": 3,
+   "damage": 2,
    "damageSrc": "poe.ninja",
-   "survival": 2,
+   "survival": 1,
    "scores": {
     "ease": 2,
     "hard": 4,
-    "damage": 3,
+    "damage": 2,
     "clear": 4,
-    "boss": 4,
-    "clearboss": 4.0,
-    "survival": 2
+    "boss": 3,
+    "clearboss": 3.5,
+    "survival": 1
    },
    "meta": "alternativa",
    "status": "ativa"
@@ -262,12 +262,12 @@
    "asc": "Pathfinder",
    "title": "Pathfinder Decompose",
    "ninja": {
-    "ascShare": 0.93,
-    "ascN": 1153,
+    "ascShare": 1.05,
+    "ascN": 1298,
     "skill": "Poisonburst Arrow",
-    "skillShare": 16.2,
-    "dps": 105000.0,
-    "ehp": 22000.0,
+    "skillShare": 15.8,
+    "dps": 115000.0,
+    "ehp": 27000.0,
     "top": 100
    },
    "tags": [
@@ -281,17 +281,17 @@
    "kit": true,
    "ranks": {},
    "complexity": {
-    "phases": 8,
+    "phases": 14,
     "gems": 12,
     "rotation": 4,
-    "reservations": 10,
+    "reservations": 9,
     "supports": 44,
-    "uniques": 8,
+    "uniques": 17,
     "tricks": 11,
-    "score": 56.4
+    "score": 56.2
    },
-   "dmgPct": 0.7206703910614525,
-   "ehpPct": 0.4692737430167598,
+   "dmgPct": 0.6666666666666666,
+   "ehpPct": 0.5254237288135594,
    "ease": 2,
    "easeSrc": "guia",
    "damage": 4,
@@ -316,13 +316,13 @@
    "asc": "Smith of Kitava",
    "title": "Smith of Kitava Shield Wall",
    "ninja": {
-    "ascShare": 0.67,
-    "ascN": 832,
+    "ascShare": 0.73,
+    "ascN": 903,
     "skill": "Shield Wall",
     "skillShare": 49.5,
-    "dps": 102000.0,
-    "ehp": 28000.0,
-    "top": 100
+    "dps": 119000.0,
+    "ehp": 21000.0,
+    "top": 99
    },
    "tags": [
     "tank",
@@ -344,13 +344,13 @@
     "tricks": 14,
     "score": 47.1
    },
-   "dmgPct": 0.6983240223463687,
-   "ehpPct": 0.6312849162011173,
+   "dmgPct": 0.672316384180791,
+   "ehpPct": 0.3785310734463277,
    "ease": 3,
    "easeSrc": "guia",
    "damage": 4,
    "damageSrc": "poe.ninja",
-   "survival": 4,
+   "survival": 2,
    "scores": {
     "ease": 3,
     "hard": 3,
@@ -358,7 +358,7 @@
     "clear": 3,
     "boss": 4,
     "clearboss": 3.5,
-    "survival": 4
+    "survival": 2
    },
    "meta": "meta",
    "status": "ativa"
@@ -370,13 +370,13 @@
    "asc": "Martial Artist",
    "title": "Oil Barrage Teleport",
    "ninja": {
-    "ascShare": 9.6,
-    "ascN": 11910,
+    "ascShare": 10.02,
+    "ascN": 12438,
     "skill": "Storm Wave",
-    "skillShare": 1.9,
-    "dps": 65000.0,
-    "ehp": 31000.0,
-    "top": 100
+    "skillShare": 1.8,
+    "dps": 76000.0,
+    "ehp": 42000.0,
+    "top": 98
    },
    "tags": [
     "crit",
@@ -398,17 +398,17 @@
     "tricks": 9,
     "score": 50.4
    },
-   "dmgPct": 0.6145251396648045,
-   "ehpPct": 0.6871508379888268,
+   "dmgPct": 0.5875706214689266,
+   "ehpPct": 0.7344632768361582,
    "ease": 2,
    "easeSrc": "guia",
-   "damage": 4,
+   "damage": 3,
    "damageSrc": "poe.ninja",
    "survival": 4,
    "scores": {
     "ease": 2,
     "hard": 4,
-    "damage": 4,
+    "damage": 3,
     "clear": 5,
     "boss": 4,
     "clearboss": 4.5,
@@ -424,13 +424,13 @@
    "asc": "Shaman",
    "title": "Mana Storm",
    "ninja": {
-    "ascShare": 0.95,
-    "ascN": 1177,
+    "ascShare": 1.11,
+    "ascN": 1372,
     "skill": "Spark",
-    "skillShare": 29.5,
-    "dps": 786000.0,
-    "ehp": 22000.0,
-    "top": 100
+    "skillShare": 32.4,
+    "dps": 1500000.0,
+    "ehp": 23000.0,
+    "top": 99
    },
    "tags": [
     "spells",
@@ -452,8 +452,8 @@
     "tricks": 9,
     "score": 39.9
    },
-   "dmgPct": 0.9664804469273743,
-   "ehpPct": 0.4692737430167598,
+   "dmgPct": 0.9774011299435028,
+   "ehpPct": 0.4519774011299435,
    "ease": 4,
    "easeSrc": "guia",
    "damage": 5,
@@ -478,13 +478,13 @@
    "asc": "Gemling Legionnaire",
    "title": "Cleaving Thunder",
    "ninja": {
-    "ascShare": 37.03,
-    "ascN": 45957,
+    "ascShare": 36.6,
+    "ascN": 45421,
     "skill": "Falling Thunder",
-    "skillShare": 2.2,
-    "dps": 383000.0,
-    "ehp": 41000.0,
-    "top": 99
+    "skillShare": 2.8,
+    "dps": 509000.0,
+    "ehp": 50000.0,
+    "top": 98
    },
    "tags": [
     "quarterstaff",
@@ -506,8 +506,8 @@
     "tricks": 9,
     "score": 28.1
    },
-   "dmgPct": 0.9217877094972067,
-   "ehpPct": 0.8491620111731844,
+   "dmgPct": 0.9209039548022598,
+   "ehpPct": 0.8248587570621468,
    "ease": 5,
    "easeSrc": "guia",
    "damage": 5,
@@ -532,13 +532,13 @@
    "asc": "Gemling Legionnaire",
    "title": "Frost Cyclone",
    "ninja": {
-    "ascShare": 37.03,
-    "ascN": 45957,
+    "ascShare": 36.6,
+    "ascN": 45421,
     "skill": "Whirling Slash",
-    "skillShare": 31.1,
-    "dps": 17000.0,
-    "ehp": 53000.0,
-    "top": 100
+    "skillShare": 31.3,
+    "dps": 23000.0,
+    "ehp": 66000.0,
+    "top": 99
    },
    "tags": [
     "crossbow",
@@ -560,16 +560,16 @@
     "tricks": 9,
     "score": 38.0
    },
-   "dmgPct": 0.39664804469273746,
-   "ehpPct": 0.9162011173184358,
-   "ease": 5,
+   "dmgPct": 0.3954802259887006,
+   "ehpPct": 0.8983050847457628,
+   "ease": 4,
    "easeSrc": "guia",
    "damage": 2,
    "damageSrc": "poe.ninja",
    "survival": 5,
    "scores": {
-    "ease": 5,
-    "hard": 1,
+    "ease": 4,
+    "hard": 2,
     "damage": 2,
     "clear": 5,
     "boss": 3,
@@ -586,13 +586,13 @@
    "asc": "Martial Artist",
    "title": "Hyper Speed Monk",
    "ninja": {
-    "ascShare": 9.6,
-    "ascN": 11910,
+    "ascShare": 10.02,
+    "ascN": 12438,
     "skill": "Tempest Flurry",
     "skillShare": 1.6,
-    "dps": 63000.0,
-    "ehp": 41000.0,
-    "top": 99
+    "dps": 82000.0,
+    "ehp": 49000.0,
+    "top": 98
    },
    "tags": [
     "unarmed",
@@ -614,16 +614,16 @@
     "tricks": 12,
     "score": 44.0
    },
-   "dmgPct": 0.6033519553072626,
-   "ehpPct": 0.8491620111731844,
-   "ease": 4,
+   "dmgPct": 0.6045197740112994,
+   "ehpPct": 0.8135593220338984,
+   "ease": 3,
    "easeSrc": "guia",
    "damage": 4,
    "damageSrc": "poe.ninja",
    "survival": 5,
    "scores": {
-    "ease": 4,
-    "hard": 2,
+    "ease": 3,
+    "hard": 3,
     "damage": 4,
     "clear": 5,
     "boss": 4,
@@ -640,12 +640,12 @@
    "asc": "Gemling Legionnaire",
    "title": "Spear Twister",
    "ninja": {
-    "ascShare": 37.03,
-    "ascN": 45957,
+    "ascShare": 36.6,
+    "ascN": 45421,
     "skill": "Twister",
-    "skillShare": 27.3,
-    "dps": 664000.0,
-    "ehp": 49000.0,
+    "skillShare": 26.6,
+    "dps": 897000.0,
+    "ehp": 66000.0,
     "top": 100
    },
    "tags": [
@@ -659,25 +659,25 @@
    "kit": true,
    "ranks": {},
    "complexity": {
-    "phases": 7,
-    "gems": 13,
+    "phases": 10,
+    "gems": 8,
     "rotation": 3,
-    "reservations": 7,
-    "supports": 35,
-    "uniques": 16,
+    "reservations": 4,
+    "supports": 11,
+    "uniques": 21,
     "tricks": 7,
-    "score": 48.0
+    "score": 29.9
    },
-   "dmgPct": 0.9608938547486033,
-   "ehpPct": 0.888268156424581,
-   "ease": 3,
+   "dmgPct": 0.9491525423728814,
+   "ehpPct": 0.8983050847457628,
+   "ease": 5,
    "easeSrc": "guia",
    "damage": 5,
    "damageSrc": "poe.ninja",
    "survival": 5,
    "scores": {
-    "ease": 3,
-    "hard": 3,
+    "ease": 5,
+    "hard": 1,
     "damage": 5,
     "clear": 5,
     "boss": 4,
@@ -691,14 +691,14 @@
  "order": {
   "ease": [
    "lg",
-   "gw",
+   "tw",
    "ta",
    "sh",
-   "hs",
+   "gw",
    "sf",
    "or",
    "sk",
-   "tw",
+   "hs",
    "ac",
    "pf",
    "ma",
@@ -712,26 +712,26 @@
    "sf",
    "or",
    "sk",
-   "tw",
+   "hs",
    "ta",
    "sh",
-   "hs",
+   "gw",
    "lg",
-   "gw"
+   "tw"
   ],
   "damage": [
-   "sf",
    "in",
    "sh",
    "lg",
    "tw",
+   "sf",
    "or",
    "pf",
    "sk",
-   "ma",
    "hs",
-   "ac",
+   "ma",
    "ta",
+   "ac",
    "gw"
   ],
   "clear": [
@@ -754,7 +754,6 @@
    "or",
    "ta",
    "in",
-   "ac",
    "pf",
    "sk",
    "ma",
@@ -762,6 +761,7 @@
    "lg",
    "hs",
    "tw",
+   "ac",
    "gw"
   ],
   "clearboss": [
@@ -772,11 +772,11 @@
    "or",
    "ta",
    "in",
-   "ac",
    "pf",
    "sh",
    "lg",
    "gw",
+   "ac",
    "sk"
   ],
   "survival": [
@@ -785,14 +785,14 @@
    "gw",
    "hs",
    "tw",
-   "sk",
    "ma",
+   "or",
    "pf",
    "sh",
-   "or",
-   "ac",
+   "sk",
    "ta",
-   "in"
+   "in",
+   "ac"
   ],
   "offmeta": [
    "hs",
@@ -802,12 +802,12 @@
    "ac",
    "pf",
    "tw",
-   "sh",
    "gw",
+   "sh",
    "sk",
-   "in",
+   "or",
    "sf",
-   "or"
+   "in"
   ]
  }
 }
