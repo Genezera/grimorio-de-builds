@@ -52,17 +52,22 @@ def layer(cards, lang):
                  + "".join(f' data-r-{k}="{pos[k][key]}"' for k in pos))
         html = html.replace(f'<article class="build {key}">', f'<article class="build {key}"{attrs}>', 1).replace('<div class="build-facts">', rate + '<div class="build-facts">', 1)
         out.append(html); shown.append(b)
-    classes = sorted({b["cls"] for b in shown})
-    ascs = sorted({b["asc"] for b in shown})
-    tags = sorted({t for b in shown for t in b["tags"]}, key=lambda t: TAGS.get(t, (t, t))[1 if en else 0])
+    # seletor de classe/ascendência: um quadradinho por ascendência, com a arte e o nome (foto = primeira build daquela ascendência)
+    groups = {}
+    for b in shown:
+        g = groups.setdefault((b["cls"], b["asc"]), {"key": b["key"], "n": 0})
+        g["n"] += 1
+    tile = lambda cls, asc, key, n: (f'<button type="button" class="cls-tile" data-asc="{escape(asc)}" data-class="{escape(cls)}" aria-pressed="false" title="{escape(cls)} · {escape(asc)}">'
+                                     f'<span class="cls-art"><img src="shared/art/{key}-asc-sm.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
+                                     f'<b>{escape(asc)}</b><small>{escape(cls)}</small><i>{n}</i></button>')
+    tiles = "".join(tile(c, a_, g["key"], g["n"]) for (c, a_), g in sorted(groups.items()))
+    all_tile = (f'<button type="button" class="cls-tile cls-all" data-all="1" aria-pressed="true"><span class="cls-art"><span class="cls-glyph">◇</span></span>'
+                f'<b>{L("Todas", "All")}</b><small>{L("as classes", "classes")}</small><i>{len(shown)}</i></button>')
     opt = lambda v, t: f'<option value="{escape(v)}">{escape(t)}</option>'
-    bar = (f'<form class="build-filter" aria-label="{L("Filtrar e ordenar as builds", "Filter and sort the builds")}" onsubmit="return false">'
-           f'<label><span>{L("Classe", "Class")}</span><select id="fClass"><option value="">{L("Todas", "All")}</option>{"".join(opt(c, c) for c in classes)}</select></label>'
-           f'<label><span>{L("Ascendência", "Ascendancy")}</span><select id="fAsc"><option value="">{L("Todas", "All")}</option>{"".join(opt(a, a) for a in ascs)}</select></label>'
-           f'<label><span>{L("Estilo", "Style")}</span><select id="fTag"><option value="">{L("Todos", "All")}</option>{"".join(opt(t, TAGS.get(t, (t, t))[1 if en else 0]) for t in tags)}</select></label>'
-           f'<label><span>{L("Ordenar por", "Sort by")}</span><select id="fSort">{"".join(opt(k, e if en else p) for k, p, e in RANKS)}</select></label>'
-           f'<label><span>{L("Uso no poe.ninja", "poe.ninja usage")}</span><select id="fMeta"><option value="">{L("Qualquer", "Any")}</option>{"".join(opt(k, v[1 if en else 0]) for k, v in META.items() if k != "sem dados")}</select></label>'
-           f'<output id="fCount" aria-live="polite"></output></form>')
+    bar = (f'<form class="build-filter" aria-label="{L("Filtrar as builds por classe e ascendência", "Filter builds by class and ascendancy")}" onsubmit="return false">'
+           f'<div class="cls-picker" role="group" aria-label="{L("Classe / ascendência", "Class / ascendancy")}">{all_tile}{tiles}</div>'
+           f'<div class="build-filter-row"><label><span>{L("Ordenar por", "Sort by")}</span><select id="fSort">{"".join(opt(k, e if en else p) for k, p, e in RANKS)}</select></label>'
+           f'<output id="fCount" aria-live="polite"></output></div></form>')
     snap = reg.get("snapshot")
     note = ""
     if snap:

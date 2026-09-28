@@ -208,9 +208,22 @@ footer a:hover{color:var(--gild-hi)}
 .build{border-radius:18px}
 
 /* ---------- classificador: filtros, ordenação e notas por build (landing_registry.py + landing-filter.js) ---------- */
-.build-filter{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end;margin:0 0 14px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(10,10,16,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.build-filter{display:grid;gap:14px;margin:0 0 14px;padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(10,10,16,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.cls-picker{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.cls-tile{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 8px 9px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(13,13,20,.8);color:#f2ecdf;font:inherit;text-align:center;cursor:pointer;transition:transform .25s var(--ease),border-color .25s,box-shadow .25s,background .25s}
+.cls-tile:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.35)}
+.cls-tile:focus-visible{outline:2px solid var(--gild-hi,#e8c66a);outline-offset:2px}
+.cls-tile[aria-pressed="true"]{border-color:#e8c66a;background:rgba(232,198,106,.12);box-shadow:0 0 0 1px #e8c66a,0 8px 22px -10px #e8c66a}
+.cls-art{display:grid;place-items:center;width:64px;height:64px;border-radius:10px;overflow:hidden;background:#07070a;border:1px solid rgba(255,255,255,.12)}
+.cls-art img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) brightness(.85);transition:filter .25s}
+.cls-tile:hover .cls-art img,.cls-tile[aria-pressed="true"] .cls-art img{filter:none}
+.cls-glyph{font-size:1.8rem;color:#e8c66a}
+.cls-tile b{font-size:.8rem;line-height:1.15;font-weight:700}
+.cls-tile small{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.cls-tile i{position:absolute;top:6px;right:8px;font-style:normal;font-size:.68rem;padding:0 6px;border-radius:999px;background:rgba(0,0,0,.6);color:rgba(255,255,255,.75)}
+.build-filter-row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end}
 .build-filter label{display:grid;gap:4px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.build-filter select{min-width:150px;max-width:100%;padding:9px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:#0d0d14;color:#f2ecdf;font:inherit;font-size:.92rem;letter-spacing:0;text-transform:none}
+.build-filter select{min-width:180px;max-width:100%;padding:9px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:#0d0d14;color:#f2ecdf;font:inherit;font-size:.92rem;letter-spacing:0;text-transform:none}
 .build-filter output{margin-left:auto;font-size:.85rem;color:rgba(255,255,255,.7);align-self:center}
 .rank-note{margin:0 0 18px;font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.55)}
 .build-rate{display:flex;flex-wrap:wrap;gap:6px 12px;margin:2px 0 12px;font-size:.78rem;color:rgba(255,255,255,.7)}
@@ -218,7 +231,7 @@ footer a:hover{color:var(--gild-hi)}
 .build-rate em{font-style:normal;padding:1px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
 .build-rate em.meta-meta{color:#f0a36a;border-color:rgba(240,163,106,.5)} .build-rate em.meta-alternativa{color:#8fd0a8;border-color:rgba(143,208,168,.5)} .build-rate em.meta-fora-do-meta{color:#b9a3ff;border-color:rgba(185,163,255,.55)}
 .build[hidden]{display:none!important}
-@media (max-width:640px){.build-filter select{min-width:0;width:100%}.build-filter label{flex:1 1 44%}}
+@media (max-width:640px){.cls-picker{grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}.cls-art{width:52px;height:52px}.build-filter select{min-width:0;width:100%}.build-filter label{flex:1 1 100%}}
 .build.tw{--acc:#9be564;--acc2:#ffb347;--metal:#b9c9a0;--metal-hi:#eef7d6;--surface:rgba(9,14,10,.86);border-color:#3a4f3a}
 .build.hs{--acc:#8ea2ff;--acc2:#ffe066;--metal:#d9c48a;--metal-hi:#f6ecc4;--surface:rgba(9,10,18,.86);border-color:#3a4166}
 .build.sh{--acc:#2fd9c0;--acc2:#d1a75f;--metal:#d1a75f;--metal-hi:#f6dcab;--surface:rgba(12,9,9,.86);border-color:#4a3a2a}
