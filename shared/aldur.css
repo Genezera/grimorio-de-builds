@@ -1,5 +1,5 @@
 /* Runes of Aldur shares the Forbidden Rites layout and components. */
-:root{--void:#050d0f;--night:#0b1719;--stone:#102124;--stone2:#173033;--edge:#294749;--edge2:#557878;--bone:#efe5cd;--bone-dim:#c2c9bb;--faint:#8ea6a3;--candle:#d7aa67;--candle-hi:#f6d397;--candle-g:rgba(215,170,103,.18);--ritual:#54bfb0;--ritual-hi:#a0ebd9;--ritual-g:rgba(84,191,176,.18);--blood:#bd714d;--blood-hi:#f2ae80;--ok:#93e2b7}
+:root{--void:#030814;--night:#091324;--stone:#0d1c32;--stone2:#142747;--edge:#294667;--edge2:#527da9;--bone:#e8f1ff;--bone-dim:#b9c9df;--faint:#8da8c7;--candle:#72b7ff;--candle-hi:#c8e8ff;--candle-g:rgba(103,171,255,.2);--ritual:#518feb;--ritual-hi:#a8d8ff;--ritual-g:rgba(81,143,235,.2);--blood:#7767c8;--blood-hi:#b6a6ff;--ok:#91d9ff}
 ::selection{background:var(--ritual);color:#071719}
 .void{background:radial-gradient(90% 70% at 72% 24%,#143334 0,transparent 64%),radial-gradient(70% 60% at 0 100%,rgba(135,87,47,.16),transparent 60%),var(--void)}
 .totem-bg{top:-10vh;right:-8vw;width:min(1130px,92vw);aspect-ratio:1437/776;background-image:url('art/aldur/hero.jpg');opacity:.37;filter:saturate(.8) sepia(.13)}
@@ -17,3 +17,32 @@
 @media(max-width:860px){.hero h1{font-size:clamp(2.5rem,11vw,5.4rem)}.totem-bg{right:-38vw;width:120vw}.ch-prog{grid-column:1/-1}}
 @media(max-width:640px){.hero h1{font-size:clamp(2.45rem,10.5vw,4rem)}.hero h1 .h1b{padding-left:.35em}.aldur-checks{grid-template-columns:1fr}.ch-prog{min-height:55px}.ch-prog .ring{width:55px;height:55px}.hero-sigil .totem{width:100%;height:100%}.count{z-index:2}}
 @media(prefers-reduced-motion:reduce){.hero-sigil::before{animation:none}}
+
+/* Aldur's cold runic light over the shared Rites geometry. */
+body{background:#030814}
+.void{background:radial-gradient(80% 70% at 71% 24%,#10254b 0,transparent 65%),radial-gradient(75% 55% at 0 100%,rgba(55,81,159,.22),transparent 66%),#030814}
+.totem-bg{filter:saturate(.8) hue-rotate(166deg);opacity:.26}
+.fog{background:radial-gradient(40% 30% at 30% 40%,rgba(72,133,255,.2),transparent 70%),radial-gradient(35% 25% at 70% 70%,rgba(32,187,247,.17),transparent 70%)}
+.fog.f2{background:radial-gradient(30% 25% at 60% 30%,rgba(80,83,210,.18),transparent 70%),radial-gradient(45% 30% at 20% 80%,rgba(92,178,255,.16),transparent 70%)}
+.vignette{background:radial-gradient(120% 90% at 50% 40%,transparent 47%,rgba(1,4,13,.88) 100%),linear-gradient(90deg,rgba(3,8,20,.68),transparent 60%)}
+.homelink,.lang{background:rgba(6,15,32,.76)}.lang a[aria-current]{color:#071a32}.sibling{color:#ceb5f6;border-color:#5c4d84;background:rgba(19,13,42,.8)}
+.frame{background:linear-gradient(180deg,rgba(18,35,64,.92),rgba(6,14,31,.96))}.btn{background:linear-gradient(180deg,#1c3b66,#0c1e3b)}.btn.primary{color:#071629;background:linear-gradient(180deg,#d2eeff,#78c0ff 55%,#387fc3);border-color:#bce4ff;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 12px 30px -10px #59aaff}.btn.primary:hover{color:#071629}
+.hero h1 span{background:linear-gradient(180deg,#fff 0%,#d6efff 23%,#9bcbfa 56%,#477ec9 84%,#244a94 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 23px rgba(79,151,255,.56)) drop-shadow(0 7px 12px #000)}
+.kicker,.sub,.rewards h2,.order h2,.mechs>h2,.foot h2{color:var(--candle-hi)}
+.hero-sigil::before{background:radial-gradient(circle,rgba(58,138,253,.34),transparent 67%)}
+.hero-sigil .circle{stroke:rgba(143,198,255,.54);filter:drop-shadow(0 0 8px rgba(62,139,255,.8))}.hero-sigil .circle line{stroke:rgba(150,217,255,.67)}.hero-sigil .circle polygon{stroke:rgba(112,112,239,.5)}
+.hero-sigil .circle text{fill:#a9dcff;font:700 18px Georgia,serif;letter-spacing:.04em;filter:drop-shadow(0 0 6px #69bcff)}
+.hero-sigil .totem{filter:saturate(.83) contrast(1.2) hue-rotate(175deg)}
+.count{background:radial-gradient(circle,rgba(19,39,78,.98),rgba(3,10,25,.98));box-shadow:0 0 44px -5px #4b9bf1}
+.track figure,.order li{background:rgba(4,13,31,.6)}.track li.got .step{color:#09172b;background:radial-gradient(circle at 35% 30%,#e2f5ff,#83c7ff);border-color:#c8e8ff;box-shadow:0 0 18px #69adff}
+.ch-art::after{background:linear-gradient(90deg,rgba(3,8,20,.9) 0,rgba(3,8,20,.2) 45%,rgba(3,8,20,.77)),linear-gradient(180deg,transparent 35%,rgba(9,19,36,1))}
+.ico.sigil{background:radial-gradient(circle,#274f92,#071528 75%);box-shadow:0 0 0 4px var(--void),0 0 0 5px rgba(143,208,255,.66),0 0 32px -3px #5ba9ff}
+.ch-title h2{text-shadow:0 0 20px rgba(81,157,255,.6)}.req{color:#bcdfff}.chip{background:rgba(5,17,39,.74)}
+.aldur-check{background:rgba(4,14,35,.73)}.aldur-check:hover{background:#183761}.aldur-check.on{border-color:#87c8ff;background:#183d73}.aldur-number-controls input{background:#08172e}.mgrid .mech{background:linear-gradient(180deg,#102440,#08142a)}
+.chk .gem{background:radial-gradient(circle,#142e56,#050c1d)}.chk.on .gem{background:radial-gradient(circle at 35% 30%,#fff,#b9e5ff 25%,#518feb 70%);border-color:#b9e5ff;box-shadow:0 0 16px #518feb}
+.chnav{background:linear-gradient(180deg,rgba(3,8,20,.97),rgba(3,8,20,.88))}.chnav a{background:rgba(13,28,54,.86)}
+.hero-sigil::after{content:"ᚱ   ᚢ   ᚾ   ᛖ   ᛋ";position:absolute;z-index:2;top:3%;left:50%;transform:translateX(-50%);white-space:nowrap;color:#b9e7ff;font:700 clamp(14px,1.4vw,20px) Georgia,serif;letter-spacing:.38em;text-shadow:0 0 9px #64baff,0 0 25px #2a72d9;animation:runePulse 4s ease-in-out infinite}
+.ch-art::before{content:attr(data-glyph);position:absolute;z-index:1;left:clamp(16px,3vw,40px);top:50%;transform:translateY(-55%);font:700 clamp(66px,9vw,116px)/1 Georgia,serif;color:rgba(150,211,255,.48);text-shadow:0 0 22px rgba(57,146,255,.8);pointer-events:none}
+@keyframes runePulse{50%{opacity:.52;text-shadow:0 0 5px #64baff,0 0 12px #2a72d9}}
+@media(max-width:640px){.hero-sigil::after{top:0;letter-spacing:.16em}.ch-art::before{font-size:63px}}
+@media(prefers-reduced-motion:reduce){.hero-sigil .circle text{filter:none}}

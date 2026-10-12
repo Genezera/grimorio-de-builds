@@ -87,7 +87,7 @@
 
   function challenge(c,i) {
     const p=progress(c), complete=done(c), [banner,emblem]=visuals[c.id];
-    return `<section class="ch frame ${complete?'complete':''}" id="${c.id}" aria-labelledby="title-${c.id}"><div class="ch-art" style="--art:url('${ART}${banner}')"><span class="num" aria-hidden="true">${String(i+1).padStart(2,'0')}</span></div>
+    return `<section class="ch frame ${complete?'complete':''}" id="${c.id}" aria-labelledby="title-${c.id}"><div class="ch-art" data-glyph="${esc(c.glyph)}" style="--art:url('${ART}${banner}')"><span class="num" aria-hidden="true">${String(i+1).padStart(2,'0')}</span></div>
       <header class="ch-head">${icon(emblem,'sigil')}<div class="ch-title"><h2 id="title-${c.id}">${esc(c.name)}</h2><p class="req"><span>${esc(L('Objetivo','Objective'))}:</span> ${esc(c.title)}</p><p class="reqpt">${esc(c.desc)}</p><div class="chips"><span class="chip">${esc(c.phase)}</span>${complete?`<span class="chip ok">✓ ${esc(L('Concluída','Completed'))}</span>`:''}</div></div><div class="ch-prog">${ring(p.value/p.goal,76)}<strong>${p.value}/${p.goal}</strong></div></header>
       <div class="ch-body"><div class="col steps"><h3>${esc(L('Como fazer','How to complete'))}</h3><ol>${steps[c.id].map(s=>`<li>${esc(s)}</li>`).join('')}</ol><h3 class="t2">${esc(L('Dica','Tip'))}</h3><ul class="tips"><li>${esc(c.tip)}</li></ul></div><div class="col tool"><h3>${esc(L('Acompanhe aqui','Track it here'))}</h3>${checklist(c)}</div></div></section>`;
   }

@@ -60,12 +60,12 @@
   const PAL = { silverfist: ['#07080a', '#5fe3c1', '#c3a066', '#ecd6a3'], oracle: ['#06060c', '#a58dff', '#b7bfd9', '#eef1fb'], tactician: ['#08080a', '#ff8a3d', '#c9a46a', '#f0dcb0'],
     infernalist: ['#0a0505', '#ff5b1f', '#d9a36b', '#f6d8b0'], acolyte: ['#07050b', '#b35cff', '#c3b2e6', '#efe7ff'], pathfinder: ['#060906', '#7fd957', '#cdbb7c', '#f0e3b4'],
     smith: ['#09070a', '#ff6a13', '#d08a47', '#f5cf9f'], martial: ['#05070b', '#4cc3ff', '#e0b25c', '#f7deaa'], shaman: ['#080607', '#2fd9c0', '#d1a75f', '#f6dcab'], legionnaire: ['#060709', '#ffd23f', '#b9a27a', '#f1e2bd'], whirling: ['#05080c', '#6fd6ff', '#9fb6c9', '#e3f4ff'], twister: ['#070a08', '#9be564', '#b9c9a0', '#eef7d6'], hyperspeed: ['#06070d', '#8ea2ff', '#d9c48a', '#f6ecc4'],
-    home: ['#07070a', '#c3a066', '#c3a066', '#ecd6a3'], rites: ['#07050c', '#9b6bff', '#f1b35c', '#ffd894'] };
+    home: ['#07070a', '#c3a066', '#c3a066', '#ecd6a3'], rites: ['#07050c', '#9b6bff', '#f1b35c', '#ffd894'], aldur: ['#030814', '#72b7ff', '#518feb', '#d5efff'] };
   const en = isEn;
   const segs = location.pathname.replace(/\/(index\.html|en\.html|en)$/, '/').split('/').filter(Boolean);
   const dir = segs[segs.length - 1] || '';
-  const key = BUILDS[dir] ? dir : dir === 'rites' ? 'rites' : 'home';
-  const [p, name, sub] = BUILDS[key] || (key === 'rites' ? ['', en ? 'Challenge Grimoire' : 'Grimório das Challenges', 'Forbidden Rites · 0.5.5'] : ['', en ? 'Build Grimoire' : 'Grimório de Builds', 'Path of Exile 2 · Forbidden Rites']);
+  const key = BUILDS[dir] ? dir : dir === 'rites' ? 'rites' : dir === 'aldur' ? 'aldur' : 'home';
+  const [p, name, sub] = BUILDS[key] || (key === 'rites' ? ['', en ? 'Challenge Grimoire' : 'Grimório das Challenges', 'Forbidden Rites · 0.5.5'] : key === 'aldur' ? ['', 'Runes of Aldur', en ? 'The Eight Challenges · 0.5' : 'As Oito Challenges · 0.5'] : ['', en ? 'Build Grimoire' : 'Grimório de Builds', 'Path of Exile 2 · Forbidden Rites']);
   const c = PAL[key];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   root.style.setProperty('--pl-ground', c[0]); root.style.setProperty('--pl-acc', c[1]);
