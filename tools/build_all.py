@@ -8,7 +8,7 @@ HERE = Path(__file__).resolve().parent
 KIT_BUILDS = ['tactician', 'infernalist', 'acolyte', 'pathfinder', 'smith', 'martial', 'shaman', 'legionnaire', 'whirling', 'twister', 'hyperspeed']
 steps = [[s] for s in ['craft/build_data.py', 'build_site.py', 'oracle/opatch.py', 'oracle/obuild.py']]
 steps += [[f'kit/{s}', bid] for bid in KIT_BUILDS for s in ('kassets.py', 'kpatch.py', 'kbuild.py')]
-steps += [['build_landing.py'], ['build_rites.py']]
+steps += [['build_landing.py'], ['build_rites.py'], ['build_aldur.py']]
 for script, *args in steps:
     subprocess.run([sys.executable, '-X', 'utf8', str(HERE / script), *args], cwd=HERE, check=True,
                    env={**os.environ, 'PYTHONUTF8': '1'})

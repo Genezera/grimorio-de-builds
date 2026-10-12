@@ -38,6 +38,7 @@ Design goals:
 | `whirling/` | **Frost Cyclone** | Mercenary · Gemling Legionnaire — Whirling Slash + Glacial Bolt (ice crossbow) | Phylaris POE (Mobalytics) |
 | `twister/` | **Spear Twister** | Mercenary · Gemling Legionnaire — Spear Throw Twister | Maxroll Path of Building |
 | `rites/` | **Forbidden Rites Challenges** | Forbidden Rites league guide — the 8 challenges (checklists, Omen planner, saved progress) | — |
+| `aldur/` | **Runes of Aldur Challenges** | Runes of Aldur league guide — the 8 challenges (checklists and saved progress) | PoE2DB game objectives |
 
 Every guide has a Portuguese page (`index.html`) and an English page (`en.html`); the landing page (`/index.html`, `/en.html`) lets visitors filter and rank the builds (easiest, hardest, damage, clear, boss, most durable, off-meta).
 
@@ -69,7 +70,7 @@ sources ──► extract ──► variants ──► assets ──► template
 3. **Build data** — `tools/builds/<build>/bdata.py` holds the guide itself as Python data: phases, gems per level, supports and why, uniques, gear rankings, tree stages, ascendancy, tricks, troubleshooting, timeline, sources. All text is bilingual (`L(pt, en)`).
 4. **Assets** — `kit/kassets.py` builds the icon set and computes the **allocation order** of the passive tree for every phase (each phase is a connected cut from the class start; nothing the player cannot actually click).
 5. **Template patch and build** — `kit/kpatch.py` generates the build's app template and applies the gear-ranking and jewel patches; `kit/kbuild.py` renders it; `tools/enhance.py` inlines CSS/JS and versions the shared assets.
-6. **Landing page and league page** — `tools/build_landing.py`, `landing_v2.py`, `landing_registry.py` and `build_rites.py`.
+6. **Landing page and league pages** — `tools/build_landing.py`, `landing_v2.py`, `landing_registry.py`, `build_rites.py` and `build_aldur.py`.
 
 `tools/build_all.py` runs the whole pipeline (about 4 minutes).
 
