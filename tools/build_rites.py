@@ -68,6 +68,7 @@ def page(lang):
 <div class="void" aria-hidden="true"><div class="totem-bg"></div><div class="fog f1"></div><div class="fog f2"></div><canvas id="embers"></canvas><div class="vignette"></div></div>
 <header class="top">
   <a class="homelink" href="{home}">{u['builds']}</a>
+  <a class="sibling" href="../aldur/{'en.html' if lang == 'en' else ''}">✦ Runes of Aldur</a>
   <nav class="lang" aria-label="Idioma / Language"><a href="index.html" {'aria-current="page"' if lang == 'pt' else ''}>PT</a><a href="en.html" {'aria-current="page"' if lang == 'en' else ''}>EN</a></nav>
 </header>
 <main id="app"></main>
