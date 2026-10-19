@@ -1,31 +1,31 @@
-# Candidatas a novas builds — Forbidden Rites (2026-10-12)
+# Candidatas a novas builds — Forbidden Rites (2026-10-19)
 
 Combinações ascendência + skill **fora do meta**, com DPS e EHP altos entre os personagens do topo e **sem guia neste site**. Números do poe.ninja; a decisão de escrever o guia (e o teste de "dá para seguir") é o passo seguinte.
 
 | # | Ascendência | Skill | Uso na asc. | DPS mediano (top) | EHP mediano (top) | Pct DPS | Pct EHP | Nota |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Oracle | Orb of Storms | 6.8% (603) | 768k | 21k | 87 | 35 | 0.713 |
-| 2 | Oracle | Comet | 17.1% (1524) | 2.5M | 20k | 97 | 31 | 0.71 |
-| 3 | Deadeye | Bow Shot | 11.6% (864) | 245k | 53k | 69 | 69 | 0.706 |
-| 4 | Martial Artist | Shattering Palm | 23.4% (2995) | 125k | 139k | 54 | 97 | 0.667 |
-| 5 | Spirit Walker | Companion: Quadrilla | 17.2% (1532) | 152k | 89k | 56 | 80 | 0.651 |
-| 6 | Titan | His Scattering Calamity | 16.8% (509) | 1.6M | 13k | 94 | 14 | 0.645 |
-| 7 | Spirit Walker | Companion: Diretusk Boar | 24.9% (2221) | 192k | 87k | 61 | 77 | 0.636 |
-| 8 | Deadeye | Lightning Arrow | 4.5% (333) | 194k | 35k | 62 | 48 | 0.636 |
-| 9 | Spirit Walker | Companion: Plague Harvester | 16.6% (1480) | 108k | 89k | 48 | 80 | 0.614 |
-| 10 | Blood Mage | Lightning Bolt | 10.4% (315) | 405k | 14k | 81 | 15 | 0.608 |
-| 11 | Martial Artist | Killing Palm | 22.2% (2835) | 76k | 124k | 42 | 94 | 0.603 |
-| 12 | Martial Artist | Whirling Assault | 22.0% (2812) | 102k | 99k | 46 | 84 | 0.594 |
-| 13 | Oracle | Thrashing Vines | 18.4% (1643) | 274k | 20k | 74 | 31 | 0.589 |
-| 14 | Titan | Shield Wall | 23.3% (705) | 110k | 55k | 49 | 70 | 0.562 |
-| 15 | Witchhunter | Stormblast Bolts | 19.0% (323) | 47k | 105k | 33 | 88 | 0.553 |
-| 16 | Blood Mage | Orb of Storms | 21.9% (663) | 270k | 18k | 72 | 26 | 0.55 |
-| 17 | Deadeye | Lightning Rod | 4.2% (310) | 90k | 35k | 44 | 48 | 0.547 |
-| 18 | Infernalist | Lightning Warp | 15.7% (880) | 304k | 3k | 77 | 6 | 0.54 |
-| 19 | Titan | Resonating Shield | 15.2% (462) | 107k | 44k | 47 | 55 | 0.539 |
-| 20 | Tactician | Crossbow Shot | 23.7% (361) | 223k | 21k | 65 | 35 | 0.535 |
-| 21 | Martial Artist | Tempest Bell | 24.7% (3154) | 64k | 87k | 38 | 77 | 0.522 |
-| 22 | Lich | Chaos Bolt | 18.0% (326) | 113k | 30k | 50 | 44 | 0.51 |
-| 23 | Witchhunter | Explosive Grenade | 20.5% (348) | 24k | 106k | 25 | 89 | 0.51 |
-| 24 | Titan | Leap Slam | 13.4% (407) | 28k | 48k | 26 | 65 | 0.471 |
-| 25 | Witchhunter | Galvanic Shards | 23.2% (394) | 21k | 98k | 23 | 83 | 0.471 |
+| 1 | Oracle | Comet | 17.9% (1611) | 3.5M | 21k | 98 | 35 | 0.723 |
+| 2 | Oracle | Orb of Storms | 7.1% (634) | 923k | 21k | 88 | 35 | 0.717 |
+| 3 | Deadeye | Bow Shot | 12.0% (882) | 262k | 55k | 69 | 71 | 0.71 |
+| 4 | Lich | Dark Consequences | 17.0% (310) | 765k | 29k | 86 | 44 | 0.694 |
+| 5 | Pathfinder | Bow Shot | 19.6% (305) | 506k | 44k | 81 | 54 | 0.689 |
+| 6 | Martial Artist | Shattering Palm | 23.5% (3027) | 167k | 159k | 56 | 97 | 0.682 |
+| 7 | Spirit Walker | Companion: Diretusk Boar | 24.4% (2143) | 217k | 102k | 62 | 84 | 0.664 |
+| 8 | Deadeye | Lightning Arrow | 4.9% (360) | 252k | 35k | 67 | 49 | 0.662 |
+| 9 | Titan | His Scattering Calamity | 16.9% (530) | 1.8M | 13k | 94 | 13 | 0.641 |
+| 10 | Spirit Walker | Companion: Quadrilla | 17.2% (1509) | 140k | 82k | 54 | 76 | 0.629 |
+| 11 | Martial Artist | Killing Palm | 22.3% (2879) | 110k | 127k | 46 | 93 | 0.62 |
+| 12 | Blood Mage | Lightning Bolt | 10.0% (312) | 433k | 14k | 79 | 16 | 0.603 |
+| 13 | Spirit Walker | Companion: Plague Harvester | 16.1% (1408) | 116k | 86k | 47 | 77 | 0.602 |
+| 14 | Martial Artist | Whirling Assault | 22.7% (2926) | 120k | 99k | 48 | 81 | 0.592 |
+| 15 | Titan | Shield Wall | 22.9% (717) | 125k | 55k | 50 | 71 | 0.571 |
+| 16 | Oracle | Thrashing Vines | 18.5% (1660) | 271k | 20k | 71 | 28 | 0.568 |
+| 17 | Witchhunter | Stormblast Bolts | 18.9% (326) | 49k | 113k | 32 | 89 | 0.551 |
+| 18 | Deadeye | Lightning Rod | 4.5% (335) | 100k | 35k | 44 | 49 | 0.549 |
+| 19 | Infernalist | Lightning Warp | 16.4% (1002) | 369k | 4k | 79 | 5 | 0.544 |
+| 20 | Titan | Resonating Shield | 15.3% (479) | 107k | 45k | 46 | 55 | 0.534 |
+| 21 | Martial Artist | Tempest Bell | 24.6% (3174) | 70k | 98k | 38 | 80 | 0.532 |
+| 22 | Blood Mage | Orb of Storms | 21.4% (669) | 264k | 17k | 71 | 21 | 0.532 |
+| 23 | Tactician | Crossbow Shot | 23.6% (347) | 239k | 21k | 64 | 35 | 0.531 |
+| 24 | Lich | Chaos Bolt | 18.6% (339) | 123k | 30k | 49 | 46 | 0.509 |
+| 25 | Witchhunter | Explosive Grenade | 19.5% (337) | 21k | 105k | 22 | 88 | 0.496 |

@@ -1,9 +1,15 @@
 {
- "date": "2026-10-12",
+ "date": "2026-10-19",
  "errors": 0,
- "warnings": 0,
+ "warnings": 1,
  "info": 128,
  "issues": [
+  {
+   "level": "W",
+   "build": "aldur",
+   "code": "orphan-folder",
+   "msg": "pasta 'aldur' tem index.html mas não está no registro"
+  },
   {
    "level": "I",
    "build": "tactician",

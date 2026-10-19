@@ -1,6 +1,10 @@
-# Auditoria das builds — 2026-10-12
+# Auditoria das builds — 2026-10-19
 
-**0 erros · 0 avisos · 128 informações**
+**0 erros · 1 avisos · 128 informações**
+
+## Avisos
+
+- `aldur` **orphan-folder** — pasta 'aldur' tem index.html mas não está no registro
 
 ## Informações
 

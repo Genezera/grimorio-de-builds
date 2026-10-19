@@ -1,5 +1,5 @@
 {
- "date": "2026-10-12 14:29",
+ "date": "2026-10-19 12:11",
  "passed": true,
  "steps": [
   {
@@ -35,7 +35,7 @@
  ],
  "audit": {
   "errors": 0,
-  "warnings": 0,
+  "warnings": 1,
   "info": 128
  }
 }
