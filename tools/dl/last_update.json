@@ -1,10 +1,10 @@
 {
- "date": "2026-11-16 14:50",
+ "date": "2026-11-23 17:24",
  "passed": true,
  "steps": [
   {
    "step": "coleta poe.ninja (ninja_meta)",
-   "ok": true,
+   "ok": false,
    "must": false
   },
   {
